@@ -5,6 +5,7 @@ from django.db.models import F
 
 
 from bookcovers.models import Authors
+from bookcovers.models import Artists
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
@@ -18,7 +19,39 @@ def author_books(request, author_id):
     return HttpResponse("You're looking at author %s." % author_id)
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
-class AuthorList(ListView):
+class SubjectList(ListView):
+    template_name = 'bookcovers/subject_list.html'
+
+    # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#making-friendly-template-contexts
+    # in template object_list is called item_list
+    context_object_name = 'item_list'
+
+    def get_context_data(self,**kwargs):
+        context = super(SubjectList,self).get_context_data(**kwargs)
+        context['title'] = self.title
+        print ("title is '{0}'".format(self.title))
+        return context
+
+    @property
+    def title(self):
+        return self._title
+
+    @title.setter
+    def title(self,value):
+        self._title = value
+
+class ArtistList(SubjectList):
+    def __init__(self):
+        self.title = "Artists"
+
+    artist_list = Artists.objects.order_by('name')
+    queryset = artist_list
+
+
+class AuthorList(SubjectList):
+    def __init__(self):
+        self.title = "Authors"
+
 # this on its own lists all authors with context_object_name = author_list
 #    model = Author
 
@@ -26,8 +59,6 @@ class AuthorList(ListView):
 #    queryset = Author.objects.order_by('name')
 #    context_object_name = 'author_list'
 #=========================================
-    
-    template_name = 'bookcovers/author_list.html'
 
     # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
     # If you only pass in a single field, you can also pass in the flat parameter. 
@@ -57,17 +88,14 @@ class AuthorList(ListView):
     # need to clean database
 
     # djabbic v1
-    # author_list=Author.objects.filter(author_id=F('book__author_id')).filter(book__book_id=F('book__edition__book_id')).filter(book__edition__book_edition_id__in=inner_queryset).values('name').order_by('name').distinct()
+    # author_list = Author.objects.filter(author_id=F('book__author_id')).filter(book__book_id=F('book__edition__book_id')).filter(book__edition__book_edition_id__in=inner_queryset).values('name').order_by('name').distinct()
 
     # djabbic_v2
-    author_list=Authors.objects.filter(author_id=F('book__author')).filter(book__book_id=F('book__edition__book')).filter(book__edition__edition_id__in=inner_queryset).values('name').order_by('name').distinct()
+    author_list = Authors.objects.filter(author_id=F('book__author')).filter(book__book_id=F('book__edition__book')).filter(book__edition__edition_id__in=inner_queryset).values('name').order_by('name').distinct()
     print (author_list.query)
     print (author_list.count())
-    queryset=author_list
+    queryset = author_list
 
 
-    # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#making-friendly-template-contexts
-    # in template object_list is called author_list
-    context_object_name = 'author_list'
 
 

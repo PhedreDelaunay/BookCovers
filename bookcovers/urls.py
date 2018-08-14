@@ -1,12 +1,14 @@
 from django.urls import path
 from bookcovers.views import AuthorList
+from bookcovers.views import ArtistList
 
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('author/<int:author_id>/', views.author_books, name='author_books'),
-    path('authors/', AuthorList.as_view()),
+    path('authors/', AuthorList.as_view(), name='authors'),
+    path('artists/', ArtistList.as_view(), name='artists'),
 
 
 ]
