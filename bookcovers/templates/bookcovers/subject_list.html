@@ -2,9 +2,14 @@
 
 {% block content %}
     <h2>{{ title }}</h2>
-    <ul>
-        {% for item in item_list %}
-            <li>{{ item.name }}</li>
-        {% endfor %}
-    </ul>
+    <div class="row">
+    {% for item in item_list %}
+        {% if forloop.first %}<div class="flex-column"><ul>{% endif %}
+        <li>{{ item.name }}</li>
+        {% if forloop.last %}</div>
+        {% elif forloop.counter|divisibleby:45 %}
+            </ul></div><div class="flex-column"><ul>
+        {% endif %}
+    {% endfor %}
+    </div>
 {% endblock %}

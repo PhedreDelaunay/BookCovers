@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% load static %}
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}My amazing site{% endblock %}</title>
+    <title>{% block title %}Science Fiction Cover Art{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bookcovers/style.css' %}">
 </head>
 
 <body>

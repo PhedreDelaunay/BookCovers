@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+}
+.flex-column {
+    flex: auto;
+    padding: 10px;
+}
+ul {
+  list-style: none;
+}
