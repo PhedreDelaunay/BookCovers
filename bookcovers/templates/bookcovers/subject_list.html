@@ -7,7 +7,7 @@
         {% if forloop.first %}<div class="flex-column"><ul>{% endif %}
         <li>{{ item.name }}</li>
         {% if forloop.last %}</div>
-        {% elif forloop.counter|divisibleby:45 %}
+        {% elif forloop.counter|divisibleby:40 %}
             </ul></div><div class="flex-column"><ul>
         {% endif %}
     {% endfor %}
