@@ -7,6 +7,10 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+# https://docs.djangoproject.com/en/2.0/intro/tutorial02/
+# It’s important to add __str__() methods to your models, 
+# not only for your own convenience when dealing with the interactive prompt, 
+# but also because objects’ representations are used throughout Django’s automatically-generated admin.
 
 class Criteriaheadings(models.Model):
     criteria_heading = models.CharField(db_column='CRITERIA_HEADING', max_length=50, blank=True, null=True)  # Field name made lowercase.
