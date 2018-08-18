@@ -30,6 +30,7 @@ class SubjectList(ListView):
         context = super(SubjectList,self).get_context_data(**kwargs)
         context['title'] = self.title
         print ("title is '{0}'".format(self.title))
+        self.get_num_rows(self.queryset, 4)
         return context
 
     @property
@@ -40,13 +41,18 @@ class SubjectList(ListView):
     def title(self,value):
         self._title = value
 
+    def get_num_rows(self, queryset, num_columns):
+        num_rows = queryset.count()/num_columns
+        print ("num_rows is {0}".format(num_rows))
+        return num_rows
+
+
 class ArtistList(SubjectList):
     def __init__(self):
         self.title = "Artists"
 
     artist_list = Artists.objects.order_by('name')
     queryset = artist_list
-
 
 class AuthorList(SubjectList):
     def __init__(self):
