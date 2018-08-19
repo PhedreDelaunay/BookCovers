@@ -5,7 +5,7 @@
     <div class="row">
     {% for item in item_list %}
         {% if forloop.first %}<div class="flex-column"><ul>{% endif %}
-        <li>{{ item.name }}</li>
+        <li><a href="{% url 'bookcovers:author_books' item.author_id %}">{{ item.name }}</li>
         {% if forloop.last %}</div>
         {% elif forloop.counter|divisibleby:40 %}
             </ul></div><div class="flex-column"><ul>
