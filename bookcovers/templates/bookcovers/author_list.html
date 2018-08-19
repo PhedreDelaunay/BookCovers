@@ -1,10 +1,5 @@
-{% extends "bookcovers/base.html" %}
+{% extends "bookcovers/subject_list.html" %}
 
-{% block content %}
-    <h2>Authors</h2>
-    <ul>
-        {% for author in author_list %}
-            <li>{{ author.name }}</li>
-        {% endfor %}
-    </ul>
+{% block link_item %}
+{% url 'bookcovers:author_books' item.author_id %}
 {% endblock %}

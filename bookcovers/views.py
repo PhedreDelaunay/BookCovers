@@ -58,6 +58,8 @@ class AuthorList(SubjectList):
     def __init__(self):
         self.title = "Authors"
 
+    template_name = 'bookcovers/author_list.html'
+
 # this on its own lists all authors with context_object_name = author_list
 #    model = Author
 
