@@ -97,7 +97,7 @@ class AuthorList(SubjectList):
     # author_list = Author.objects.filter(author_id=F('book__author_id')).filter(book__book_id=F('book__edition__book_id')).filter(book__edition__book_edition_id__in=inner_queryset).values('name').order_by('name').distinct()
 
     # djabbic_v2
-    author_list = Authors.objects.filter(author_id=F('book__author')).filter(book__book_id=F('book__edition__book')).filter(book__edition__edition_id__in=inner_queryset).values('name').order_by('name').distinct()
+    author_list = Authors.objects.filter(author_id=F('book__author')).filter(book__book_id=F('book__edition__book')).filter(book__edition__edition_id__in=inner_queryset).values('author_id','name').order_by('name').distinct()
     print (author_list.query)
     print (author_list.count())
     queryset = author_list
