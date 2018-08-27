@@ -1,0 +1,11 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+{% block content %}
+    <h2>{{ title }}</h2>
+    {% for cover in cover_list %}
+         <a href="{% url 'bookcovers:book' cover.book %}">
+         <IMG {% static "{{ cover.artist__cover_filepath }}/{{ cover.cover__cover_filename" %} alt="{{ cover.book__title }}"
+         </a>
+    {% endfor %}
+{% endblock %}

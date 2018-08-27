@@ -2,10 +2,13 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.views.generic import ListView
 from django.db.models import F
+from django.db.models import Q
 
 
 from bookcovers.models import Authors
 from bookcovers.models import Artists
+from bookcovers.models import ArtistAkas
+from bookcovers.models import Artworks
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
@@ -20,6 +23,31 @@ def index(request):
 def author_books(request, author_id):
     author = get_object_or_404(Authors, pk=author_id)
     return HttpResponse("You're looking at author %s." % author.name)
+
+def artist_books(request, artist_id):
+    template_name = 'bookcovers/cover_list.html'
+
+    artist = get_object_or_404(Artists, pk=artist_id)
+
+    aka_inner_queryset = Artists.objects.filter(artist_aka__artist_aka_id=artist_id)
+    #print (aka_inner_queryset.query)
+    #print (aka_inner_queryset)
+
+    cover_list = Artworks.objects. \
+        filter(Q(artist=artist_id) | Q(artist__in=aka_inner_queryset)). \
+        filter(cover__flags__lt=256).values('book','book__title','artist__cover_filepath','cover__cover_filename')
+# <a href="BookCoverDetail.php?filter=1&amp;ID=2&amp;bookID=82&amp;currentBook=14&amp;totalBooks=64&amp;currentEntry=12&amp;totalEntrys=115">
+# <IMG src="http://www.djabbic.co.uk/BookCovers/Images/BrucePennington/Thumbnails/DecisionAtDoona_1971.jpg" class="special" alt="book title"></a>
+    print (cover_list.query)
+    print (cover_list)
+
+    # render short cut
+    context = {'title': artist.name, 'cover_list': cover_list}
+    return render(request, template_name, context)
+
+def book_detail(request, book_id):
+    book = get_object_or_404(Books, pk=book_id)
+    return HttpResponse("You're looking at book %s." % book.title)
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):
@@ -55,6 +83,8 @@ class SubjectList(ListView):
 
 
 class ArtistList(SubjectList):
+    template_name = 'bookcovers/artist_list.html'
+
     def __init__(self):
         self.title = "Artists"
 
@@ -88,6 +118,8 @@ class AuthorList(SubjectList):
         filter(edition_id=F('covers__edition')). \
         filter(covers__flags__lt=256). \
         values_list('edition_id',flat=True)
+    # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
+    # flat=True returns a list of single items for a single field
 
     print (inner_queryset.query)
     print (inner_queryset.count())

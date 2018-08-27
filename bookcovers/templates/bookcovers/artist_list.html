@@ -1,0 +1,5 @@
+{% extends "bookcovers/subject_list.html" %}
+
+{% block link_item %}
+{% url 'bookcovers:artist_books' item.artist_id %}
+{% endblock %}
