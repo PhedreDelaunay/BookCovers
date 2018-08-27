@@ -60,14 +60,6 @@ class Artbooks(models.Model):
         db_table = 'artbooks'
 
 
-class ArtistAkas(models.Model):
-    artist_aka_id = models.IntegerField()
-    artist_id = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'artist_akas'
-
 
 class Artists(models.Model):
     artist_id = models.AutoField(primary_key=True)
@@ -86,22 +78,14 @@ class Artists(models.Model):
         db_table = 'artists'
 
 
-class Artworks(models.Model):
-    artwork_id = models.AutoField(primary_key=True)
-    artist_id = models.IntegerField(blank=True, null=True)
-    year = models.IntegerField(blank=True, null=True)
-    name = models.CharField(max_length=255, blank=True, null=True)
-    book_id = models.IntegerField(blank=True, null=True)
-    original = models.CharField(max_length=128, blank=True, null=True)
-    evidence = models.CharField(max_length=255, blank=True, null=True)
-    confidence_level = models.IntegerField(blank=True, null=True)
-    copyright = models.CharField(max_length=128, blank=True, null=True)
-    description = models.CharField(max_length=255, blank=True, null=True)
-    notes = models.CharField(max_length=255, blank=True, null=True)
+class ArtistAkas(models.Model):
+    artist_aka_id = models.IntegerField()
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artist_akas", related_query_name="artist_aka")
+    #artist = models.IntegerField(db_column='artist_id')
 
     class Meta:
         managed = False
-        db_table = 'artworks'
+        db_table = 'artist_akas'
 
 
 class AuthorAkas(models.Model):
@@ -159,6 +143,29 @@ class BooksSeries(models.Model):
         managed = False
         db_table = 'books_series'
 
+# https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
+# override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now artworks
+class Artworks(models.Model):
+    artwork_id = models.AutoField(primary_key=True)
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artworks", related_query_name="artwork")
+    #artist_id = models.IntegerField(blank=True, null=True)
+    year = models.IntegerField(blank=True, null=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="books", related_query_name="book")
+    #book_id = models.IntegerField(blank=True, null=True)
+    original = models.CharField(max_length=128, blank=True, null=True)
+    evidence = models.CharField(max_length=255, blank=True, null=True)
+    confidence_level = models.IntegerField(blank=True, null=True)
+    copyright = models.CharField(max_length=128, blank=True, null=True)
+    description = models.CharField(max_length=255, blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        managed = False
+        db_table = 'artworks'
 
 class Countries(models.Model):
     country_id = models.AutoField(primary_key=True)
@@ -194,8 +201,9 @@ class Editions(models.Model):
 
 class Covers(models.Model):
     cover_id = models.AutoField(primary_key=True)
-    book_id = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="covers", related_query_name="cover")
-    artwork_id = models.IntegerField(blank=True, null=True)
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="covers", related_query_name="cover")
+    #artwork_id = models.IntegerField(blank=True, null=True)
+    artwork = models.ForeignKey(Artworks, models.DO_NOTHING, blank=True, null=True, related_name="covers", related_query_name="cover")
     #edition_id = models.IntegerField(unique=True, blank=True, null=True)
     edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True)
 
