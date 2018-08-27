@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.views.generic import ListView
 from django.db.models import F
@@ -18,7 +18,8 @@ def index(request):
     return HttpResponse("Hello Django World")
 
 def author_books(request, author_id):
-    return HttpResponse("You're looking at author %s." % author_id)
+    author = get_object_or_404(Authors, pk=author_id)
+    return HttpResponse("You're looking at author %s." % author.name)
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):
@@ -83,7 +84,11 @@ class AuthorList(SubjectList):
     # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 
     # djabbic_v2
-    inner_queryset = Editions.objects.filter(edition_id=F('covers__edition')).filter(covers__flags__lt=256).values_list('edition_id',flat=True)
+    inner_queryset = Editions.objects. \
+        filter(edition_id=F('covers__edition')). \
+        filter(covers__flags__lt=256). \
+        values_list('edition_id',flat=True)
+
     print (inner_queryset.query)
     print (inner_queryset.count())
     print (inner_queryset)
@@ -105,7 +110,14 @@ class AuthorList(SubjectList):
     # author_list = Author.objects.filter(author_id=F('book__author_id')).filter(book__book_id=F('book__edition__book_id')).filter(book__edition__book_edition_id__in=inner_queryset).values('name').order_by('name').distinct()
 
     # djabbic_v2
-    author_list = Authors.objects.filter(author_id=F('book__author')).filter(book__book_id=F('book__edition__book')).filter(book__edition__edition_id__in=inner_queryset).values('author_id','name').order_by('name').distinct()
+    author_list = Authors.objects. \
+        filter(author_id=F('book__author')). \
+        filter(book__book_id=F('book__edition__book')). \
+        filter(book__edition__edition_id__in=inner_queryset). \
+        values('author_id','name'). \
+        order_by('name'). \
+        distinct()
+
     print (author_list.query)
     print (author_list.count())
     queryset = author_list
