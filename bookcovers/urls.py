@@ -13,12 +13,16 @@ app_name = 'bookcovers'
 urlpatterns = [
     # ex: /bookcovers/
     path('', views.index, name='index'),
-    # ex: /bookcovers/author/1/
-    path('author/<int:author_id>/', views.author_books, name='author_books'),
     # ex: /bookcovers/authors/
     path('authors/', AuthorList.as_view(), name='authors'),
+    # ex: /bookcovers/author/1/
+    path('author/<int:author_id>/', views.author_books, name='author_books'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
+    # ex: /bookcovers/artist/23/
+    path('artist/<int:artist_id>/', views.artist_books, name='artist_books'),
+    # ex: /bookcovers/book/467/
+    path('book/<int:book_id>/', views.book_detail, name='book'),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/
