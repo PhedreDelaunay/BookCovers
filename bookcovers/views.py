@@ -10,6 +10,8 @@ from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
 
+import math
+
 # Create your views here.
 
 def index(request):
@@ -20,6 +22,7 @@ def author_books(request, author_id):
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):
+    num_columns=6
     template_name = 'bookcovers/subject_list.html'
 
     # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#making-friendly-template-contexts
@@ -27,10 +30,12 @@ class SubjectList(ListView):
     context_object_name = 'item_list'
 
     def get_context_data(self,**kwargs):
+        print ("entering get_context_data")
         context = super(SubjectList,self).get_context_data(**kwargs)
         context['title'] = self.title
         print ("title is '{0}'".format(self.title))
-        self.get_num_rows(self.queryset, 4)
+        column_length=self.get_num_rows(self.queryset, self.num_columns)
+        context['column_length'] = column_length
         return context
 
     @property
@@ -42,7 +47,8 @@ class SubjectList(ListView):
         self._title = value
 
     def get_num_rows(self, queryset, num_columns):
-        num_rows = queryset.count()/num_columns
+        # round up
+        num_rows = math.ceil(queryset.count()/num_columns)
         print ("num_rows is {0}".format(num_rows))
         return num_rows
 

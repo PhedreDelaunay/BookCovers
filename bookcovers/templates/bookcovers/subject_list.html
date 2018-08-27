@@ -4,11 +4,11 @@
     <h2>{{ title }}</h2>
     <div class="row">
     {% for item in item_list %}
-        {% if forloop.first %}<div class="flex-column"><ul>{% endif %}
+        {% if forloop.first %}<div class="flex-column"><ol>{% endif %}
         <li><a href="{% block link_item %}{% endblock %}">{{ item.name }}</li>
         {% if forloop.last %}</div>
-        {% elif forloop.counter|divisibleby:40 %}
-            </ul></div><div class="flex-column"><ul>
+        {% elif forloop.counter|divisibleby:column_length %}
+            </ol></div><div class="flex-column"><ol>
         {% endif %}
     {% endfor %}
     </div>
