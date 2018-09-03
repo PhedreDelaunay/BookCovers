@@ -1,7 +1,6 @@
 from django.db import connection
 
-
-import math
+# https://docs.djangoproject.com/en/2.1/topics/db/sql/
 
 class OriginalRawQuerys:
 
