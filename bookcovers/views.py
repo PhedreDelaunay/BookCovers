@@ -14,6 +14,7 @@ from bookcovers.models import Covers
 from bookcovers.models import Editions
 
 from bookcovers.cover_querys import CoverQuerys
+from bookcovers.original_raw_querys import OriginalRawQuerys
 
 import math
 
@@ -31,6 +32,7 @@ def artist_books(request, artist_id):
 
     artist = get_object_or_404(Artists, pk=artist_id)
 
+    OriginalRawQuerys.artist_cover_list(artist_id)
     cover_list = CoverQuerys.artist_cover_list(artist_id)
 
     # render short cut
@@ -97,6 +99,7 @@ class AuthorList(SubjectList):
 #    context_object_name = 'author_list'
 #=========================================
 
+    #OriginalRawQuerys.author_list()
     queryset = CoverQuerys.author_list()
 
 
