@@ -22,7 +22,7 @@ class CoverQuerys:
 
         cover_list = Artworks.objects. \
             filter(Q(artist=artist_id) | Q(artist__in=aka_inner_queryset)). \
-            filter(cover__flags__lt=256).values('book','book__title','artist__cover_filepath','cover__cover_filename')
+            filter(cover__flags__lt=256).values('book','book__title','artist__cover_filepath','cover__cover_filename','year').order_by('year')
 # <a href="BookCoverDetail.php?filter=1&amp;ID=2&amp;bookID=82&amp;currentBook=14&amp;totalBooks=64&amp;currentEntry=12&amp;totalEntrys=115">
 # <IMG src="http://www.djabbic.co.uk/BookCovers/Images/BrucePennington/Thumbnails/DecisionAtDoona_1971.jpg" class="special" alt="book title"></a>
         print (cover_list.query)
