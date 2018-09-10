@@ -1,0 +1,82 @@
+[
+{
+    "model": "bookcovers.artistakas",
+    "pk": 1,
+    "fields": {
+        "artist_aka_id": 4,
+        "artist": 106
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 2,
+    "fields": {
+        "artist_aka_id": 106,
+        "artist": 4
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 3,
+    "fields": {
+        "artist_aka_id": 13,
+        "artist": 140
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 4,
+    "fields": {
+        "artist_aka_id": 140,
+        "artist": 13
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 5,
+    "fields": {
+        "artist_aka_id": 28,
+        "artist": 105
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 6,
+    "fields": {
+        "artist_aka_id": 105,
+        "artist": 28
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 7,
+    "fields": {
+        "artist_aka_id": 66,
+        "artist": 104
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 8,
+    "fields": {
+        "artist_aka_id": 104,
+        "artist": 66
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 9,
+    "fields": {
+        "artist_aka_id": 83,
+        "artist": 114
+    }
+},
+{
+    "model": "bookcovers.artistakas",
+    "pk": 10,
+    "fields": {
+        "artist_aka_id": 114,
+        "artist": 83
+    }
+}
+]

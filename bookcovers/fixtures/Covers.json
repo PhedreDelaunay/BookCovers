@@ -1,0 +1,7730 @@
+[
+{
+    "model": "bookcovers.covers",
+    "pk": 1,
+    "fields": {
+        "book": 1,
+        "artwork": 1,
+        "edition": 1,
+        "flags": 0,
+        "cover_filename": "DuneEncyclopedia.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 2,
+    "fields": {
+        "book": 2,
+        "artwork": 2,
+        "edition": 2,
+        "flags": 1,
+        "cover_filename": "PoliceYourPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 3,
+    "fields": {
+        "book": 3,
+        "artwork": 3,
+        "edition": 3,
+        "flags": 0,
+        "cover_filename": "ACanticleForLeibowitz.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 4,
+    "fields": {
+        "book": 4,
+        "artwork": 4,
+        "edition": 4,
+        "flags": 0,
+        "cover_filename": "GloryRoad_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 5,
+    "fields": {
+        "book": 5,
+        "artwork": 5,
+        "edition": 5,
+        "flags": 0,
+        "cover_filename": "DuneMessiah_FullCover.jpg",
+        "private_notes": "also edition 36 (unseen)"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 6,
+    "fields": {
+        "book": 7,
+        "artwork": 6,
+        "edition": 6,
+        "flags": 0,
+        "cover_filename": "Dune.jpg",
+        "private_notes": "The edition \"Reprinted January 1978\"  which is the edition I read has \"soon to be a major film\", much brighter colors, no illustration credit, blurb on the back cover, UK "
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 7,
+    "fields": {
+        "book": 6,
+        "artwork": 6,
+        "edition": 7,
+        "flags": 0,
+        "cover_filename": "Stigmata_Dune_FullCover.jpg",
+        "private_notes": "Kim Harries"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 8,
+    "fields": {
+        "book": 8,
+        "artwork": 7,
+        "edition": 8,
+        "flags": 0,
+        "cover_filename": "ChildrenOfDune_FullCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 9,
+    "fields": {
+        "book": 9,
+        "artwork": 8,
+        "edition": 18,
+        "flags": 0,
+        "cover_filename": "ChildrenOfTomorrow_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 11,
+    "fields": {
+        "book": 14,
+        "artwork": 9,
+        "edition": 9,
+        "flags": 0,
+        "cover_filename": "TheGoblinReservation_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 12,
+    "fields": {
+        "book": 15,
+        "artwork": 10,
+        "edition": 10,
+        "flags": 0,
+        "cover_filename": "SatansWorld_FullCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 13,
+    "fields": {
+        "book": 10,
+        "artwork": 23,
+        "edition": 30,
+        "flags": 0,
+        "cover_filename": "ThePawnsOfNullA.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 14,
+    "fields": {
+        "book": 16,
+        "artwork": 12,
+        "edition": 17,
+        "flags": 0,
+        "cover_filename": "TheWeaponMakers_FullCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 15,
+    "fields": {
+        "book": 11,
+        "artwork": 12,
+        "edition": 31,
+        "flags": 128,
+        "cover_filename": "TheChangeling_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 16,
+    "fields": {
+        "book": 13,
+        "artwork": 13,
+        "edition": 22,
+        "flags": 1,
+        "cover_filename": "QuestForTheFuture.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 17,
+    "fields": {
+        "book": 12,
+        "artwork": 14,
+        "edition": 32,
+        "flags": 128,
+        "cover_filename": "TheStoneGodAwakens1976_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 18,
+    "fields": {
+        "book": 12,
+        "artwork": 14,
+        "edition": 33,
+        "flags": 128,
+        "cover_filename": "TheStoneGodAwakens1979_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 19,
+    "fields": {
+        "book": 17,
+        "artwork": 15,
+        "edition": 35,
+        "flags": 0,
+        "cover_filename": "GodEmperorOfDune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 20,
+    "fields": {
+        "book": 18,
+        "artwork": 16,
+        "edition": 37,
+        "flags": 384,
+        "cover_filename": "WhippingStar_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 21,
+    "fields": {
+        "book": 18,
+        "artwork": 16,
+        "edition": 38,
+        "flags": 384,
+        "cover_filename": "WhippingStar_1972_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 22,
+    "fields": {
+        "book": 19,
+        "artwork": 16,
+        "edition": 39,
+        "flags": 384,
+        "cover_filename": "MastersOfTime_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 23,
+    "fields": {
+        "book": 20,
+        "artwork": 17,
+        "edition": 40,
+        "flags": 0,
+        "cover_filename": "BeyondThisHorizon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 24,
+    "fields": {
+        "book": 21,
+        "artwork": 18,
+        "edition": 41,
+        "flags": 0,
+        "cover_filename": "RevoltIn2100.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 25,
+    "fields": {
+        "book": 22,
+        "artwork": 19,
+        "edition": 11,
+        "flags": 0,
+        "cover_filename": "TheDarkTwin_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 26,
+    "fields": {
+        "book": 23,
+        "artwork": 20,
+        "edition": 12,
+        "flags": 0,
+        "cover_filename": "TheWizardOfAnharitte_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 27,
+    "fields": {
+        "book": 24,
+        "artwork": 21,
+        "edition": 13,
+        "flags": 0,
+        "cover_filename": "TheFabulousRiverboat_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 28,
+    "fields": {
+        "book": 25,
+        "artwork": 22,
+        "edition": 206,
+        "flags": 0,
+        "cover_filename": "TimeEnoughForLove_1977.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 29,
+    "fields": {
+        "book": 26,
+        "artwork": 11,
+        "edition": 42,
+        "flags": 0,
+        "cover_filename": "TheWeaponShopsOfIsher.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 30,
+    "fields": {
+        "book": 27,
+        "artwork": 24,
+        "edition": 43,
+        "flags": 0,
+        "cover_filename": "SpaceTimeAndNathaniel.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 31,
+    "fields": {
+        "book": 28,
+        "artwork": 25,
+        "edition": 44,
+        "flags": 0,
+        "cover_filename": "TheCanopyOfTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 32,
+    "fields": {
+        "book": 29,
+        "artwork": 30,
+        "edition": 15,
+        "flags": 64,
+        "cover_filename": "MachineriesOfJoy_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 33,
+    "fields": {
+        "book": 30,
+        "artwork": 31,
+        "edition": 45,
+        "flags": 192,
+        "cover_filename": "DandelionWine.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 34,
+    "fields": {
+        "book": 31,
+        "artwork": 32,
+        "edition": 72,
+        "flags": 0,
+        "cover_filename": "Indoctrinaire.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 36,
+    "fields": {
+        "book": 34,
+        "artwork": 33,
+        "edition": 46,
+        "flags": 384,
+        "cover_filename": "TheMoonIsAHarshMistress_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 37,
+    "fields": {
+        "book": 35,
+        "artwork": 34,
+        "edition": 47,
+        "flags": 384,
+        "cover_filename": "TheWizardOfLinn_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 38,
+    "fields": {
+        "book": 38,
+        "artwork": 35,
+        "edition": 19,
+        "flags": 0,
+        "cover_filename": "TheMoonsOfJupiter.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 39,
+    "fields": {
+        "book": 39,
+        "artwork": 36,
+        "edition": 48,
+        "flags": 384,
+        "cover_filename": "AllTheColoursOfDarkness_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 40,
+    "fields": {
+        "book": 40,
+        "artwork": 37,
+        "edition": 49,
+        "flags": 384,
+        "cover_filename": "OnAPlanetAlien_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 41,
+    "fields": {
+        "book": 41,
+        "artwork": 38,
+        "edition": 50,
+        "flags": 384,
+        "cover_filename": "TheSilkie_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 42,
+    "fields": {
+        "book": 42,
+        "artwork": 39,
+        "edition": 51,
+        "flags": 384,
+        "cover_filename": "NullAThree_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 43,
+    "fields": {
+        "book": 43,
+        "artwork": 40,
+        "edition": 20,
+        "flags": 0,
+        "cover_filename": "TheOmegaPoint_FullCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 44,
+    "fields": {
+        "book": 44,
+        "artwork": 41,
+        "edition": 21,
+        "flags": 0,
+        "cover_filename": "3ToTheHighestPower_FullCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 45,
+    "fields": {
+        "book": 45,
+        "artwork": 42,
+        "edition": 23,
+        "flags": 0,
+        "cover_filename": "Dragonflight_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 46,
+    "fields": {
+        "book": 45,
+        "artwork": 42,
+        "edition": 52,
+        "flags": 384,
+        "cover_filename": "Dragonflight_BlueCorgi_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 47,
+    "fields": {
+        "book": 46,
+        "artwork": 43,
+        "edition": 24,
+        "flags": 0,
+        "cover_filename": "MenLikeGods_FrontCover.jpg",
+        "private_notes": "Kim Harries"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 48,
+    "fields": {
+        "book": 47,
+        "artwork": 29,
+        "edition": 25,
+        "flags": 0,
+        "cover_filename": "Equator_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 49,
+    "fields": {
+        "book": 48,
+        "artwork": 26,
+        "edition": 26,
+        "flags": 0,
+        "cover_filename": "TheDarkLightYears_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 50,
+    "fields": {
+        "book": 49,
+        "artwork": 27,
+        "edition": 27,
+        "flags": 0,
+        "cover_filename": "TheAirsOfEarth_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 51,
+    "fields": {
+        "book": 50,
+        "artwork": 44,
+        "edition": 53,
+        "flags": 0,
+        "cover_filename": "Restoree.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 52,
+    "fields": {
+        "book": 51,
+        "artwork": 45,
+        "edition": 28,
+        "flags": 0,
+        "cover_filename": "ATimeOfChanges_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 53,
+    "fields": {
+        "book": 52,
+        "artwork": 46,
+        "edition": 54,
+        "flags": 0,
+        "cover_filename": "ThePastelCity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 54,
+    "fields": {
+        "book": 53,
+        "artwork": 47,
+        "edition": 97,
+        "flags": 0,
+        "cover_filename": "ChildhoodsEnd.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 55,
+    "fields": {
+        "book": 54,
+        "artwork": 48,
+        "edition": 56,
+        "flags": 384,
+        "cover_filename": "Doon1985_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 56,
+    "fields": {
+        "book": 55,
+        "artwork": 29,
+        "edition": 57,
+        "flags": 384,
+        "cover_filename": "TheVoyageOfTheSpaceBeagle1977_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 57,
+    "fields": {
+        "book": 56,
+        "artwork": 49,
+        "edition": 58,
+        "flags": 0,
+        "cover_filename": "TheShadowOfTheTorturer_1982.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 58,
+    "fields": {
+        "book": 57,
+        "artwork": 50,
+        "edition": 60,
+        "flags": 0,
+        "cover_filename": "TheClawOfTheConciliator_1982.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 59,
+    "fields": {
+        "book": 58,
+        "artwork": 51,
+        "edition": 59,
+        "flags": 0,
+        "cover_filename": "TheSwordOfTheLictor_1984.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 60,
+    "fields": {
+        "book": 59,
+        "artwork": 52,
+        "edition": 61,
+        "flags": 0,
+        "cover_filename": "TheCitadelOfTheAutarch.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 61,
+    "fields": {
+        "book": 60,
+        "artwork": 53,
+        "edition": 62,
+        "flags": 0,
+        "cover_filename": "StandOnZanzibar2001_Front.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 62,
+    "fields": {
+        "book": 7,
+        "artwork": 55,
+        "edition": 63,
+        "flags": 2,
+        "cover_filename": "Dune1987.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 63,
+    "fields": {
+        "book": 5,
+        "artwork": 56,
+        "edition": 64,
+        "flags": 2,
+        "cover_filename": "DuneMessiah1975.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 64,
+    "fields": {
+        "book": 8,
+        "artwork": 54,
+        "edition": 65,
+        "flags": 2,
+        "cover_filename": "ChildrenOfDune1977.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 65,
+    "fields": {
+        "book": 65,
+        "artwork": 57,
+        "edition": 70,
+        "flags": 0,
+        "cover_filename": "AWrinkleInTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 66,
+    "fields": {
+        "book": 66,
+        "artwork": 58,
+        "edition": 71,
+        "flags": 0,
+        "cover_filename": "TheShipWhoSang.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 67,
+    "fields": {
+        "book": 32,
+        "artwork": 32,
+        "edition": 34,
+        "flags": 384,
+        "cover_filename": "EmpireOfTheAtom_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 68,
+    "fields": {
+        "book": 62,
+        "artwork": 59,
+        "edition": 67,
+        "flags": 0,
+        "cover_filename": "TheInterpreter.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 69,
+    "fields": {
+        "book": 68,
+        "artwork": 60,
+        "edition": 74,
+        "flags": 0,
+        "cover_filename": "TheSnowQueen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 70,
+    "fields": {
+        "book": 68,
+        "artwork": 61,
+        "edition": 75,
+        "flags": 0,
+        "cover_filename": "TheSnowQueen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 71,
+    "fields": {
+        "book": 70,
+        "artwork": 62,
+        "edition": 76,
+        "flags": 0,
+        "cover_filename": "TheShipsOfEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 72,
+    "fields": {
+        "book": 71,
+        "artwork": 63,
+        "edition": 77,
+        "flags": 0,
+        "cover_filename": "TheMasksOfTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 73,
+    "fields": {
+        "book": 72,
+        "artwork": 64,
+        "edition": 78,
+        "flags": 0,
+        "cover_filename": "WhenTrueNightFalls.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 74,
+    "fields": {
+        "book": 73,
+        "artwork": 65,
+        "edition": 79,
+        "flags": 0,
+        "cover_filename": "EnemiesOfTheSystem.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 75,
+    "fields": {
+        "book": 74,
+        "artwork": 66,
+        "edition": 80,
+        "flags": 0,
+        "cover_filename": "PerryRhodan15.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 76,
+    "fields": {
+        "book": 75,
+        "artwork": 67,
+        "edition": 81,
+        "flags": 0,
+        "cover_filename": "TheGreatYears.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 77,
+    "fields": {
+        "book": 76,
+        "artwork": 71,
+        "edition": 82,
+        "flags": 0,
+        "cover_filename": "TheFlightOfTheHorse.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 78,
+    "fields": {
+        "book": 77,
+        "artwork": 69,
+        "edition": 84,
+        "flags": 0,
+        "cover_filename": "NeutronStar.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 79,
+    "fields": {
+        "book": 78,
+        "artwork": 70,
+        "edition": 83,
+        "flags": 0,
+        "cover_filename": "Protector.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 80,
+    "fields": {
+        "book": 79,
+        "artwork": 68,
+        "edition": 85,
+        "flags": 0,
+        "cover_filename": "OfTimeAndStars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 81,
+    "fields": {
+        "book": 80,
+        "artwork": 72,
+        "edition": 86,
+        "flags": 0,
+        "cover_filename": "TheMakeshiftRocket.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 82,
+    "fields": {
+        "book": 81,
+        "artwork": 73,
+        "edition": 87,
+        "flags": 0,
+        "cover_filename": "TheRowan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 83,
+    "fields": {
+        "book": 82,
+        "artwork": 74,
+        "edition": 89,
+        "flags": 0,
+        "cover_filename": "DecisionAtDoona_1981.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 84,
+    "fields": {
+        "book": 83,
+        "artwork": 75,
+        "edition": 90,
+        "flags": 0,
+        "cover_filename": "SpeakerForTheDead.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 85,
+    "fields": {
+        "book": 59,
+        "artwork": 76,
+        "edition": 92,
+        "flags": 0,
+        "cover_filename": "TheCitadelOfTheAutarch.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 86,
+    "fields": {
+        "book": 84,
+        "artwork": 77,
+        "edition": 93,
+        "flags": 0,
+        "cover_filename": "Dragonsdawn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 87,
+    "fields": {
+        "book": 85,
+        "artwork": 78,
+        "edition": 95,
+        "flags": 128,
+        "cover_filename": "TheSilverLocusts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 88,
+    "fields": {
+        "book": 86,
+        "artwork": 79,
+        "edition": 96,
+        "flags": 128,
+        "cover_filename": "SomethingWickedThisWayComes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 89,
+    "fields": {
+        "book": 67,
+        "artwork": 80,
+        "edition": 98,
+        "flags": 0,
+        "cover_filename": "OutOfTheirMinds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 90,
+    "fields": {
+        "book": 144,
+        "artwork": 81,
+        "edition": 99,
+        "flags": 0,
+        "cover_filename": "Fahrenheit451.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 91,
+    "fields": {
+        "book": 61,
+        "artwork": 82,
+        "edition": 66,
+        "flags": 0,
+        "cover_filename": "ComicInferno.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 92,
+    "fields": {
+        "book": 146,
+        "artwork": 83,
+        "edition": 101,
+        "flags": 0,
+        "cover_filename": "PiratesOfTheAsteroids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 93,
+    "fields": {
+        "book": 147,
+        "artwork": 84,
+        "edition": 105,
+        "flags": 0,
+        "cover_filename": "TheBigSunOfMercury.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 94,
+    "fields": {
+        "book": 148,
+        "artwork": 85,
+        "edition": 106,
+        "flags": 0,
+        "cover_filename": "OceansOfVenus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 95,
+    "fields": {
+        "book": 149,
+        "artwork": 86,
+        "edition": 107,
+        "flags": 128,
+        "cover_filename": "TheGoldenApplesOfTheSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 96,
+    "fields": {
+        "book": 150,
+        "artwork": 87,
+        "edition": 108,
+        "flags": 0,
+        "cover_filename": "OutOfTheSilentPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 97,
+    "fields": {
+        "book": 151,
+        "artwork": 88,
+        "edition": 109,
+        "flags": 0,
+        "cover_filename": "VoyageToVenus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 98,
+    "fields": {
+        "book": 152,
+        "artwork": 89,
+        "edition": 110,
+        "flags": 0,
+        "cover_filename": "ThatHideousStrength_1968.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 99,
+    "fields": {
+        "book": 150,
+        "artwork": 90,
+        "edition": 111,
+        "flags": 1,
+        "cover_filename": "OutOfTheSilentPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 100,
+    "fields": {
+        "book": 152,
+        "artwork": 91,
+        "edition": 112,
+        "flags": 1,
+        "cover_filename": "ThatHideousStrength.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 101,
+    "fields": {
+        "book": 153,
+        "artwork": 92,
+        "edition": 113,
+        "flags": 0,
+        "cover_filename": "TheManInTheHighCastle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 102,
+    "fields": {
+        "book": 154,
+        "artwork": 93,
+        "edition": 114,
+        "flags": 0,
+        "cover_filename": "FlowMyTearsThePolicemanSaid.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 103,
+    "fields": {
+        "book": 155,
+        "artwork": 94,
+        "edition": 115,
+        "flags": 0,
+        "cover_filename": "BlackpoolVanishes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 104,
+    "fields": {
+        "book": 156,
+        "artwork": 95,
+        "edition": 116,
+        "flags": 0,
+        "cover_filename": "Pilgrimage.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 105,
+    "fields": {
+        "book": 158,
+        "artwork": 96,
+        "edition": 118,
+        "flags": 0,
+        "cover_filename": "TheMidwichCuckoos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 106,
+    "fields": {
+        "book": 159,
+        "artwork": 100,
+        "edition": 123,
+        "flags": 0,
+        "cover_filename": "TheSeedsOfTime1969.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 107,
+    "fields": {
+        "book": 159,
+        "artwork": 100,
+        "edition": 122,
+        "flags": 0,
+        "cover_filename": "TheSeedsOfTime1975.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 108,
+    "fields": {
+        "book": 160,
+        "artwork": 99,
+        "edition": 121,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 109,
+    "fields": {
+        "book": 157,
+        "artwork": 97,
+        "edition": 119,
+        "flags": 0,
+        "cover_filename": "Chocky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 110,
+    "fields": {
+        "book": 157,
+        "artwork": 98,
+        "edition": 120,
+        "flags": 0,
+        "cover_filename": "Chocky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 111,
+    "fields": {
+        "book": 161,
+        "artwork": 102,
+        "edition": 124,
+        "flags": 2,
+        "cover_filename": "TheKrakenWakes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 112,
+    "fields": {
+        "book": 161,
+        "artwork": 101,
+        "edition": 125,
+        "flags": 0,
+        "cover_filename": "TheKrakenWakes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 113,
+    "fields": {
+        "book": 162,
+        "artwork": 103,
+        "edition": 126,
+        "flags": 0,
+        "cover_filename": "SpaceRanger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 114,
+    "fields": {
+        "book": 163,
+        "artwork": 104,
+        "edition": 127,
+        "flags": 0,
+        "cover_filename": "RobotDreams.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 115,
+    "fields": {
+        "book": 164,
+        "artwork": 105,
+        "edition": 128,
+        "flags": 0,
+        "cover_filename": "RobotVisions.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 116,
+    "fields": {
+        "book": 165,
+        "artwork": 106,
+        "edition": 129,
+        "flags": 0,
+        "cover_filename": "PhoenixInObsidian.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 117,
+    "fields": {
+        "book": 160,
+        "artwork": 107,
+        "edition": 130,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 118,
+    "fields": {
+        "book": 161,
+        "artwork": 108,
+        "edition": 131,
+        "flags": 0,
+        "cover_filename": "TheKrakenWakes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 119,
+    "fields": {
+        "book": 157,
+        "artwork": 109,
+        "edition": 132,
+        "flags": 2,
+        "cover_filename": "Chocky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 120,
+    "fields": {
+        "book": 167,
+        "artwork": 110,
+        "edition": 133,
+        "flags": 0,
+        "cover_filename": "ShallowsOfNight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 121,
+    "fields": {
+        "book": 168,
+        "artwork": 111,
+        "edition": 134,
+        "flags": 0,
+        "cover_filename": "DeepSpace.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 122,
+    "fields": {
+        "book": 169,
+        "artwork": 112,
+        "edition": 135,
+        "flags": 0,
+        "cover_filename": "DreamPark.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 123,
+    "fields": {
+        "book": 7,
+        "artwork": 116,
+        "edition": 139,
+        "flags": 256,
+        "cover_filename": "Dune_1985.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 124,
+    "fields": {
+        "book": 170,
+        "artwork": 113,
+        "edition": 136,
+        "flags": 0,
+        "cover_filename": "TheMagiciansGuild.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 125,
+    "fields": {
+        "book": 171,
+        "artwork": 114,
+        "edition": 137,
+        "flags": 0,
+        "cover_filename": "TheNovice.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 126,
+    "fields": {
+        "book": 8,
+        "artwork": 117,
+        "edition": 140,
+        "flags": 0,
+        "cover_filename": "ChildrenOfDune_1991.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 127,
+    "fields": {
+        "book": 8,
+        "artwork": 117,
+        "edition": 141,
+        "flags": 3,
+        "cover_filename": "ChildrenOfDune_34.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 128,
+    "fields": {
+        "book": 5,
+        "artwork": 119,
+        "edition": 142,
+        "flags": 0,
+        "cover_filename": "DuneMessiah_1992.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 129,
+    "fields": {
+        "book": 17,
+        "artwork": 120,
+        "edition": 143,
+        "flags": 0,
+        "cover_filename": "GodEmperorOfDune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 130,
+    "fields": {
+        "book": 173,
+        "artwork": 121,
+        "edition": 144,
+        "flags": 0,
+        "cover_filename": "HereticsOfDune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 131,
+    "fields": {
+        "book": 172,
+        "artwork": 115,
+        "edition": 138,
+        "flags": 0,
+        "cover_filename": "TheHighLord.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 132,
+    "fields": {
+        "book": 174,
+        "artwork": 122,
+        "edition": 145,
+        "flags": 0,
+        "cover_filename": "Golem100.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 133,
+    "fields": {
+        "book": 175,
+        "artwork": 123,
+        "edition": 146,
+        "flags": 0,
+        "cover_filename": "TheComputerConnection.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 134,
+    "fields": {
+        "book": 176,
+        "artwork": 124,
+        "edition": 147,
+        "flags": 0,
+        "cover_filename": "TheSummerQueen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 135,
+    "fields": {
+        "book": 177,
+        "artwork": 125,
+        "edition": 148,
+        "flags": 0,
+        "cover_filename": "ChroniclesOfTheStarKings.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 136,
+    "fields": {
+        "book": 178,
+        "artwork": 126,
+        "edition": 149,
+        "flags": 0,
+        "cover_filename": "Roadmarks.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 137,
+    "fields": {
+        "book": 179,
+        "artwork": 127,
+        "edition": 150,
+        "flags": 0,
+        "cover_filename": "ConsiderHerWaysAndOthers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 138,
+    "fields": {
+        "book": 180,
+        "artwork": 128,
+        "edition": 151,
+        "flags": 0,
+        "cover_filename": "TroubleWithLichen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 139,
+    "fields": {
+        "book": 7,
+        "artwork": 129,
+        "edition": 152,
+        "flags": 2,
+        "cover_filename": "Dune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 140,
+    "fields": {
+        "book": 181,
+        "artwork": 130,
+        "edition": 153,
+        "flags": 0,
+        "cover_filename": "TheRingworldEngineers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 141,
+    "fields": {
+        "book": 182,
+        "artwork": 131,
+        "edition": 154,
+        "flags": 0,
+        "cover_filename": "TheAdolescenceOfP1.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 142,
+    "fields": {
+        "book": 182,
+        "artwork": 132,
+        "edition": 155,
+        "flags": 0,
+        "cover_filename": "TheAdolescenceOfP1.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 143,
+    "fields": {
+        "book": 182,
+        "artwork": 133,
+        "edition": 156,
+        "flags": 0,
+        "cover_filename": "TheAdolescenceOfP1.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 144,
+    "fields": {
+        "book": 183,
+        "artwork": 134,
+        "edition": 157,
+        "flags": 1,
+        "cover_filename": "NoManFriday.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 145,
+    "fields": {
+        "book": 144,
+        "artwork": 135,
+        "edition": 159,
+        "flags": 1,
+        "cover_filename": "Fahrenheit451.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 146,
+    "fields": {
+        "book": 85,
+        "artwork": 136,
+        "edition": 160,
+        "flags": 1,
+        "cover_filename": "TheSilverLocusts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 147,
+    "fields": {
+        "book": 144,
+        "artwork": 137,
+        "edition": 161,
+        "flags": 0,
+        "cover_filename": "Fahrenheit451.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 148,
+    "fields": {
+        "book": 85,
+        "artwork": 138,
+        "edition": 162,
+        "flags": 0,
+        "cover_filename": "TheSilverLocusts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 149,
+    "fields": {
+        "book": 160,
+        "artwork": 139,
+        "edition": 163,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 150,
+    "fields": {
+        "book": 184,
+        "artwork": 140,
+        "edition": 165,
+        "flags": 2,
+        "cover_filename": "EndersGame.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 151,
+    "fields": {
+        "book": 185,
+        "artwork": 141,
+        "edition": 167,
+        "flags": 0,
+        "cover_filename": "UpTheWallsOfTheWorld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 152,
+    "fields": {
+        "book": 186,
+        "artwork": 142,
+        "edition": 168,
+        "flags": 0,
+        "cover_filename": "RoadsidePicnic.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 153,
+    "fields": {
+        "book": 187,
+        "artwork": 143,
+        "edition": 169,
+        "flags": 0,
+        "cover_filename": "Castleview.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 154,
+    "fields": {
+        "book": 152,
+        "artwork": 145,
+        "edition": 170,
+        "flags": 0,
+        "cover_filename": "ThatHideousStrength_1955.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 155,
+    "fields": {
+        "book": 53,
+        "artwork": 144,
+        "edition": 171,
+        "flags": 1,
+        "cover_filename": "ChildhoodsEnd.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 156,
+    "fields": {
+        "book": 58,
+        "artwork": 146,
+        "edition": 172,
+        "flags": 0,
+        "cover_filename": "TheSwordOfTheLictor_1986.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 157,
+    "fields": {
+        "book": 188,
+        "artwork": 147,
+        "edition": 173,
+        "flags": 0,
+        "cover_filename": "BeyondThePale.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 158,
+    "fields": {
+        "book": 189,
+        "artwork": 148,
+        "edition": 174,
+        "flags": 0,
+        "cover_filename": "TheKeepOfFire_1999.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 159,
+    "fields": {
+        "book": 189,
+        "artwork": 148,
+        "edition": 175,
+        "flags": 0,
+        "cover_filename": "TheKeepOfFire_2000.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 160,
+    "fields": {
+        "book": 190,
+        "artwork": 149,
+        "edition": 176,
+        "flags": 1,
+        "cover_filename": "TheIllustratedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 161,
+    "fields": {
+        "book": 190,
+        "artwork": 150,
+        "edition": 177,
+        "flags": 0,
+        "cover_filename": "TheIllustratedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 162,
+    "fields": {
+        "book": 190,
+        "artwork": 151,
+        "edition": 178,
+        "flags": 0,
+        "cover_filename": "TheIllustratedMan_1974.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 163,
+    "fields": {
+        "book": 191,
+        "artwork": 152,
+        "edition": 179,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 164,
+    "fields": {
+        "book": 191,
+        "artwork": 153,
+        "edition": 180,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 165,
+    "fields": {
+        "book": 191,
+        "artwork": 157,
+        "edition": 181,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 166,
+    "fields": {
+        "book": 157,
+        "artwork": 154,
+        "edition": 182,
+        "flags": 0,
+        "cover_filename": "Chocky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 167,
+    "fields": {
+        "book": 161,
+        "artwork": 155,
+        "edition": 184,
+        "flags": 0,
+        "cover_filename": "TheKrakenWakes.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 168,
+    "fields": {
+        "book": 158,
+        "artwork": 156,
+        "edition": 183,
+        "flags": 0,
+        "cover_filename": "TheMidwichCuckoos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 169,
+    "fields": {
+        "book": 160,
+        "artwork": 158,
+        "edition": 185,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 170,
+    "fields": {
+        "book": 191,
+        "artwork": 159,
+        "edition": 186,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 171,
+    "fields": {
+        "book": 160,
+        "artwork": 160,
+        "edition": 187,
+        "flags": 0,
+        "cover_filename": "1966_TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 172,
+    "fields": {
+        "book": 159,
+        "artwork": 161,
+        "edition": 188,
+        "flags": 0,
+        "cover_filename": "TheSeedsOfTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 173,
+    "fields": {
+        "book": 179,
+        "artwork": 162,
+        "edition": 189,
+        "flags": 0,
+        "cover_filename": "ConsiderHerWaysAndOthers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 174,
+    "fields": {
+        "book": 328,
+        "artwork": 163,
+        "edition": 190,
+        "flags": 0,
+        "cover_filename": "ThePanchroniconPlot.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 175,
+    "fields": {
+        "book": 321,
+        "artwork": 164,
+        "edition": 191,
+        "flags": 0,
+        "cover_filename": "PlanetOfTheDreamers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 176,
+    "fields": {
+        "book": 365,
+        "artwork": 165,
+        "edition": 192,
+        "flags": 0,
+        "cover_filename": "EndersShadow.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 177,
+    "fields": {
+        "book": 384,
+        "artwork": 166,
+        "edition": 193,
+        "flags": 0,
+        "cover_filename": "ShadowOfTheHegemon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 178,
+    "fields": {
+        "book": 158,
+        "artwork": 167,
+        "edition": 194,
+        "flags": 2,
+        "cover_filename": "TheMidwichCuckoos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 179,
+    "fields": {
+        "book": 7,
+        "artwork": 116,
+        "edition": 195,
+        "flags": 0,
+        "cover_filename": "Dune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 180,
+    "fields": {
+        "book": 151,
+        "artwork": 168,
+        "edition": 196,
+        "flags": 1,
+        "cover_filename": "VoyageToVenus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 181,
+    "fields": {
+        "book": 385,
+        "artwork": 169,
+        "edition": 198,
+        "flags": 0,
+        "cover_filename": "TheUrthOfTheNewSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 182,
+    "fields": {
+        "book": 386,
+        "artwork": 170,
+        "edition": 199,
+        "flags": 0,
+        "cover_filename": "ShadowPuppets.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 183,
+    "fields": {
+        "book": 190,
+        "artwork": 171,
+        "edition": 200,
+        "flags": 0,
+        "cover_filename": "TheIllustratedMan_1972.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 184,
+    "fields": {
+        "book": 7,
+        "artwork": 172,
+        "edition": 201,
+        "flags": 3,
+        "cover_filename": "Dune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 185,
+    "fields": {
+        "book": 149,
+        "artwork": 173,
+        "edition": 202,
+        "flags": 1,
+        "cover_filename": "TheGoldenApplesOfTheSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 186,
+    "fields": {
+        "book": 387,
+        "artwork": 174,
+        "edition": 203,
+        "flags": 1,
+        "cover_filename": "PrisonerInTheSkull.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 187,
+    "fields": {
+        "book": 388,
+        "artwork": 175,
+        "edition": 204,
+        "flags": 1,
+        "cover_filename": "TheTideWentOut.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 188,
+    "fields": {
+        "book": 389,
+        "artwork": 176,
+        "edition": 205,
+        "flags": 1,
+        "cover_filename": "CountDown.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 189,
+    "fields": {
+        "book": 25,
+        "artwork": 22,
+        "edition": 14,
+        "flags": 0,
+        "cover_filename": "TimeEnoughForLove_FrontCover.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 190,
+    "fields": {
+        "book": 190,
+        "artwork": 177,
+        "edition": 207,
+        "flags": 0,
+        "cover_filename": "TheIllustratedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 191,
+    "fields": {
+        "book": 390,
+        "artwork": 178,
+        "edition": 208,
+        "flags": 0,
+        "cover_filename": "ThereIsNoDarkness.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 192,
+    "fields": {
+        "book": 83,
+        "artwork": 179,
+        "edition": 210,
+        "flags": 0,
+        "cover_filename": "SpeakerForTheDead.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 193,
+    "fields": {
+        "book": 445,
+        "artwork": 338,
+        "edition": 214,
+        "flags": 1,
+        "cover_filename": "TheShoresOfSpace.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 194,
+    "fields": {
+        "book": 446,
+        "artwork": 339,
+        "edition": 215,
+        "flags": 0,
+        "cover_filename": "Web.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 195,
+    "fields": {
+        "book": 7,
+        "artwork": 116,
+        "edition": 441,
+        "flags": 3,
+        "cover_filename": "Dune_56.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 198,
+    "fields": {
+        "book": 7,
+        "artwork": 345,
+        "edition": 443,
+        "flags": 2,
+        "cover_filename": "Dune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 199,
+    "fields": {
+        "book": 275,
+        "artwork": 350,
+        "edition": 395,
+        "flags": 2,
+        "cover_filename": "FarmerInTheSky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 200,
+    "fields": {
+        "book": 401,
+        "artwork": 351,
+        "edition": 432,
+        "flags": 2,
+        "cover_filename": "ToSailBeyondTheSunset.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 201,
+    "fields": {
+        "book": 401,
+        "artwork": 302,
+        "edition": 651,
+        "flags": 0,
+        "cover_filename": "ToSailBeyondTheSunset.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 202,
+    "fields": {
+        "book": 93,
+        "artwork": 332,
+        "edition": 448,
+        "flags": 0,
+        "cover_filename": "StrangerInAStrangeLand.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 203,
+    "fields": {
+        "book": 93,
+        "artwork": 352,
+        "edition": 449,
+        "flags": 0,
+        "cover_filename": "StrangerInAStrangeLand.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 204,
+    "fields": {
+        "book": 193,
+        "artwork": 180,
+        "edition": 216,
+        "flags": 512,
+        "cover_filename": "MasqueWorld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 205,
+    "fields": {
+        "book": 195,
+        "artwork": 181,
+        "edition": 218,
+        "flags": 512,
+        "cover_filename": "Partnership.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 206,
+    "fields": {
+        "book": 196,
+        "artwork": 182,
+        "edition": 219,
+        "flags": 512,
+        "cover_filename": "Acorna.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 207,
+    "fields": {
+        "book": 199,
+        "artwork": 183,
+        "edition": 222,
+        "flags": 0,
+        "cover_filename": "Foundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 208,
+    "fields": {
+        "book": 200,
+        "artwork": 184,
+        "edition": 223,
+        "flags": 0,
+        "cover_filename": "FoundationAndEmpire_1979.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 209,
+    "fields": {
+        "book": 202,
+        "artwork": 185,
+        "edition": 225,
+        "flags": 512,
+        "cover_filename": "PreludeToFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 210,
+    "fields": {
+        "book": 203,
+        "artwork": 186,
+        "edition": 226,
+        "flags": 512,
+        "cover_filename": "Kinsman.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 211,
+    "fields": {
+        "book": 204,
+        "artwork": 187,
+        "edition": 227,
+        "flags": 512,
+        "cover_filename": "Colony.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 212,
+    "fields": {
+        "book": 205,
+        "artwork": 188,
+        "edition": 228,
+        "flags": 512,
+        "cover_filename": "MoreausOtherIsland.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 213,
+    "fields": {
+        "book": 206,
+        "artwork": 189,
+        "edition": 229,
+        "flags": 512,
+        "cover_filename": "ReturnToMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 214,
+    "fields": {
+        "book": 254,
+        "artwork": 218,
+        "edition": 276,
+        "flags": 512,
+        "cover_filename": "ADarkAndHungryGodArises.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 215,
+    "fields": {
+        "book": 211,
+        "artwork": 194,
+        "edition": 233,
+        "flags": 0,
+        "cover_filename": "MidshipmansHope.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 216,
+    "fields": {
+        "book": 212,
+        "artwork": 195,
+        "edition": 234,
+        "flags": 0,
+        "cover_filename": "ChallengersHope.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 217,
+    "fields": {
+        "book": 213,
+        "artwork": 196,
+        "edition": 235,
+        "flags": 0,
+        "cover_filename": "PrisonersHope.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 218,
+    "fields": {
+        "book": 214,
+        "artwork": 197,
+        "edition": 236,
+        "flags": 0,
+        "cover_filename": "FishermansHope.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 219,
+    "fields": {
+        "book": 216,
+        "artwork": 198,
+        "edition": 238,
+        "flags": 0,
+        "cover_filename": "OnceAHero.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 220,
+    "fields": {
+        "book": 217,
+        "artwork": 199,
+        "edition": 239,
+        "flags": 0,
+        "cover_filename": "SportingChance.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 221,
+    "fields": {
+        "book": 218,
+        "artwork": 200,
+        "edition": 240,
+        "flags": 0,
+        "cover_filename": "HuntingParty.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 222,
+    "fields": {
+        "book": 219,
+        "artwork": 201,
+        "edition": 241,
+        "flags": 0,
+        "cover_filename": "RulesOfEngagement.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 223,
+    "fields": {
+        "book": 220,
+        "artwork": 202,
+        "edition": 242,
+        "flags": 512,
+        "cover_filename": "RemnantPopulation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 224,
+    "fields": {
+        "book": 222,
+        "artwork": 203,
+        "edition": 244,
+        "flags": 512,
+        "cover_filename": "Phases.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 225,
+    "fields": {
+        "book": 230,
+        "artwork": 205,
+        "edition": 252,
+        "flags": 0,
+        "cover_filename": "Heatseeker.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 226,
+    "fields": {
+        "book": 242,
+        "artwork": 213,
+        "edition": 264,
+        "flags": 512,
+        "cover_filename": "TheDreamthiefsDaughter.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 227,
+    "fields": {
+        "book": 251,
+        "artwork": 215,
+        "edition": 273,
+        "flags": 512,
+        "cover_filename": "TimeTravelersStrictlyCash.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 228,
+    "fields": {
+        "book": 208,
+        "artwork": 191,
+        "edition": 230,
+        "flags": 512,
+        "cover_filename": "TheIonWar.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 229,
+    "fields": {
+        "book": 237,
+        "artwork": 211,
+        "edition": 259,
+        "flags": 0,
+        "cover_filename": "TheAbominationsOfYondo.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 230,
+    "fields": {
+        "book": 244,
+        "artwork": 214,
+        "edition": 265,
+        "flags": 512,
+        "cover_filename": "PasqualesAngel.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 231,
+    "fields": {
+        "book": 209,
+        "artwork": 192,
+        "edition": 231,
+        "flags": 512,
+        "cover_filename": "BrightnessReef.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 232,
+    "fields": {
+        "book": 210,
+        "artwork": 193,
+        "edition": 232,
+        "flags": 512,
+        "cover_filename": "Sundiver.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 233,
+    "fields": {
+        "book": 228,
+        "artwork": 204,
+        "edition": 250,
+        "flags": 512,
+        "cover_filename": "TheSquaresOfTheCity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 234,
+    "fields": {
+        "book": 231,
+        "artwork": 206,
+        "edition": 253,
+        "flags": 0,
+        "cover_filename": "20000LeaguesUnderTheSea.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 235,
+    "fields": {
+        "book": 207,
+        "artwork": 190,
+        "edition": 403,
+        "flags": 512,
+        "cover_filename": "PerryRhodan9.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 236,
+    "fields": {
+        "book": 236,
+        "artwork": 210,
+        "edition": 258,
+        "flags": 512,
+        "cover_filename": "PerryRhodan14.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 237,
+    "fields": {
+        "book": 233,
+        "artwork": 207,
+        "edition": 255,
+        "flags": 512,
+        "cover_filename": "GreenMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 238,
+    "fields": {
+        "book": 234,
+        "artwork": 208,
+        "edition": 256,
+        "flags": 512,
+        "cover_filename": "ShortSharpShock.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 239,
+    "fields": {
+        "book": 235,
+        "artwork": 209,
+        "edition": 257,
+        "flags": 512,
+        "cover_filename": "TheMartians.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 240,
+    "fields": {
+        "book": 256,
+        "artwork": 220,
+        "edition": 278,
+        "flags": 0,
+        "cover_filename": "BuyJupiter.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 241,
+    "fields": {
+        "book": 258,
+        "artwork": 221,
+        "edition": 281,
+        "flags": 0,
+        "cover_filename": "TheMachineCrusade.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 242,
+    "fields": {
+        "book": 259,
+        "artwork": 222,
+        "edition": 282,
+        "flags": 512,
+        "cover_filename": "HouseOfAtreides.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 243,
+    "fields": {
+        "book": 718,
+        "artwork": 223,
+        "edition": 283,
+        "flags": 512,
+        "cover_filename": "TheButlerianJihad.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 244,
+    "fields": {
+        "book": 258,
+        "artwork": 224,
+        "edition": 285,
+        "flags": 512,
+        "cover_filename": "TheMachineCrusade.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 245,
+    "fields": {
+        "book": 262,
+        "artwork": 225,
+        "edition": 287,
+        "flags": 0,
+        "cover_filename": "TheLeftHandOfDarkness.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 246,
+    "fields": {
+        "book": 264,
+        "artwork": 226,
+        "edition": 289,
+        "flags": 512,
+        "cover_filename": "AlteredCarbon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 247,
+    "fields": {
+        "book": 265,
+        "artwork": 227,
+        "edition": 290,
+        "flags": 512,
+        "cover_filename": "CeresStorm.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 248,
+    "fields": {
+        "book": 266,
+        "artwork": 228,
+        "edition": 291,
+        "flags": 0,
+        "cover_filename": "TheMartianWay.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 249,
+    "fields": {
+        "book": 271,
+        "artwork": 229,
+        "edition": 296,
+        "flags": 512,
+        "cover_filename": "ADarknessInMySoul.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 250,
+    "fields": {
+        "book": 273,
+        "artwork": 230,
+        "edition": 298,
+        "flags": 512,
+        "cover_filename": "TheElvenbane.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 251,
+    "fields": {
+        "book": 274,
+        "artwork": 231,
+        "edition": 299,
+        "flags": 512,
+        "cover_filename": "InTheBalance.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 252,
+    "fields": {
+        "book": 277,
+        "artwork": 232,
+        "edition": 304,
+        "flags": 512,
+        "cover_filename": "TheRealStory.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 253,
+    "fields": {
+        "book": 278,
+        "artwork": 233,
+        "edition": 305,
+        "flags": 512,
+        "cover_filename": "MerchantersLuck.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 254,
+    "fields": {
+        "book": 287,
+        "artwork": 235,
+        "edition": 315,
+        "flags": 0,
+        "cover_filename": "DeathIsALonelyBusiness.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 255,
+    "fields": {
+        "book": 440,
+        "artwork": 236,
+        "edition": 318,
+        "flags": 512,
+        "cover_filename": "TheWarOfTheWorlds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 256,
+    "fields": {
+        "book": 291,
+        "artwork": 237,
+        "edition": 320,
+        "flags": 0,
+        "cover_filename": "TheUfonauts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 257,
+    "fields": {
+        "book": 284,
+        "artwork": 234,
+        "edition": 311,
+        "flags": 512,
+        "cover_filename": "PerryRhodan5.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 258,
+    "fields": {
+        "book": 292,
+        "artwork": 238,
+        "edition": 321,
+        "flags": 512,
+        "cover_filename": "TheHollowMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 259,
+    "fields": {
+        "book": 293,
+        "artwork": 239,
+        "edition": 322,
+        "flags": 0,
+        "cover_filename": "InvasionFrom2500.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 260,
+    "fields": {
+        "book": 294,
+        "artwork": 240,
+        "edition": 323,
+        "flags": 512,
+        "cover_filename": "NickAndTheGlimmung",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 261,
+    "fields": {
+        "book": 295,
+        "artwork": 241,
+        "edition": 324,
+        "flags": 512,
+        "cover_filename": "PrisonerOfThePlanets.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 262,
+    "fields": {
+        "book": 296,
+        "artwork": 242,
+        "edition": 325,
+        "flags": 512,
+        "cover_filename": "WitchWorld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 263,
+    "fields": {
+        "book": 297,
+        "artwork": 243,
+        "edition": 326,
+        "flags": 512,
+        "cover_filename": "AHeritageOfStars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 264,
+    "fields": {
+        "book": 298,
+        "artwork": 244,
+        "edition": 327,
+        "flags": 512,
+        "cover_filename": "BrotherAndOtherStories.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 265,
+    "fields": {
+        "book": 300,
+        "artwork": 245,
+        "edition": 329,
+        "flags": 512,
+        "cover_filename": "CitiesInFlight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 266,
+    "fields": {
+        "book": 301,
+        "artwork": 246,
+        "edition": 330,
+        "flags": 512,
+        "cover_filename": "AStainlessSteelRatIsBorn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 267,
+    "fields": {
+        "book": 79,
+        "artwork": 247,
+        "edition": 331,
+        "flags": 512,
+        "cover_filename": "OfTimeAndStars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 268,
+    "fields": {
+        "book": 305,
+        "artwork": 248,
+        "edition": 336,
+        "flags": 512,
+        "cover_filename": "WarOfTheWingMen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 269,
+    "fields": {
+        "book": 310,
+        "artwork": 249,
+        "edition": 341,
+        "flags": 0,
+        "cover_filename": "Juxtaposition.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 270,
+    "fields": {
+        "book": 312,
+        "artwork": 250,
+        "edition": 343,
+        "flags": 512,
+        "cover_filename": "Salt.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 271,
+    "fields": {
+        "book": 315,
+        "artwork": 251,
+        "edition": 346,
+        "flags": 512,
+        "cover_filename": "OurLadyOfDarkness.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 272,
+    "fields": {
+        "book": 316,
+        "artwork": 252,
+        "edition": 347,
+        "flags": 512,
+        "cover_filename": "Dayworld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 273,
+    "fields": {
+        "book": 317,
+        "artwork": 253,
+        "edition": 348,
+        "flags": 512,
+        "cover_filename": "GreenPhoenix.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 274,
+    "fields": {
+        "book": 319,
+        "artwork": 254,
+        "edition": 350,
+        "flags": 512,
+        "cover_filename": "TheAmazonsOfSomelon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 275,
+    "fields": {
+        "book": 322,
+        "artwork": 255,
+        "edition": 352,
+        "flags": 0,
+        "cover_filename": "TheRestOfTheRobots.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 276,
+    "fields": {
+        "book": 55,
+        "artwork": 256,
+        "edition": 356,
+        "flags": 512,
+        "cover_filename": "TheVoyageOfTheSpaceBeagle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 277,
+    "fields": {
+        "book": 325,
+        "artwork": 257,
+        "edition": 357,
+        "flags": 512,
+        "cover_filename": "TheRegimentsOfNight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 278,
+    "fields": {
+        "book": 326,
+        "artwork": 258,
+        "edition": 358,
+        "flags": 512,
+        "cover_filename": "TheRMaster.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 279,
+    "fields": {
+        "book": 329,
+        "artwork": 260,
+        "edition": 359,
+        "flags": 512,
+        "cover_filename": "PermutationCity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 280,
+    "fields": {
+        "book": 330,
+        "artwork": 261,
+        "edition": 360,
+        "flags": 512,
+        "cover_filename": "TheAdversary.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 281,
+    "fields": {
+        "book": 331,
+        "artwork": 262,
+        "edition": 361,
+        "flags": 512,
+        "cover_filename": "TheGoldenTorc.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 282,
+    "fields": {
+        "book": 332,
+        "artwork": 263,
+        "edition": 362,
+        "flags": 512,
+        "cover_filename": "TheNonBornKing.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 283,
+    "fields": {
+        "book": 799,
+        "artwork": 264,
+        "edition": 363,
+        "flags": 512,
+        "cover_filename": "TheManyColouredLand.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 284,
+    "fields": {
+        "book": 334,
+        "artwork": 265,
+        "edition": 364,
+        "flags": 512,
+        "cover_filename": "TheAgeOfThePussyfoot.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 285,
+    "fields": {
+        "book": 337,
+        "artwork": 266,
+        "edition": 365,
+        "flags": 512,
+        "cover_filename": "RobotsAndEmpire.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 286,
+    "fields": {
+        "book": 338,
+        "artwork": 267,
+        "edition": 368,
+        "flags": 512,
+        "cover_filename": "TheWindsTwelveQuarters.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 287,
+    "fields": {
+        "book": 339,
+        "artwork": 268,
+        "edition": 369,
+        "flags": 512,
+        "cover_filename": "Dreamsnake.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 288,
+    "fields": {
+        "book": 341,
+        "artwork": 269,
+        "edition": 371,
+        "flags": 512,
+        "cover_filename": "StarflightToFaroul.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 289,
+    "fields": {
+        "book": 350,
+        "artwork": 270,
+        "edition": 380,
+        "flags": 512,
+        "cover_filename": "HalfPastHuman.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 290,
+    "fields": {
+        "book": 353,
+        "artwork": 271,
+        "edition": 383,
+        "flags": 512,
+        "cover_filename": "Hothouse.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 291,
+    "fields": {
+        "book": 354,
+        "artwork": 272,
+        "edition": 384,
+        "flags": 512,
+        "cover_filename": "RedStarRising.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 292,
+    "fields": {
+        "book": 356,
+        "artwork": 273,
+        "edition": 386,
+        "flags": 512,
+        "cover_filename": "TalismanOfDeath.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 293,
+    "fields": {
+        "book": 357,
+        "artwork": 274,
+        "edition": 387,
+        "flags": 512,
+        "cover_filename": "StarshipTraveller.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 294,
+    "fields": {
+        "book": 411,
+        "artwork": 353,
+        "edition": 457,
+        "flags": 512,
+        "cover_filename": "CloudWarrior.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 295,
+    "fields": {
+        "book": 360,
+        "artwork": 275,
+        "edition": 390,
+        "flags": 512,
+        "cover_filename": "GuernicaNight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 296,
+    "fields": {
+        "book": 361,
+        "artwork": 276,
+        "edition": 391,
+        "flags": 512,
+        "cover_filename": "LostFiftySuns.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 297,
+    "fields": {
+        "book": 362,
+        "artwork": 277,
+        "edition": 392,
+        "flags": 512,
+        "cover_filename": "TheFountainsOfParadise.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 298,
+    "fields": {
+        "book": 367,
+        "artwork": 279,
+        "edition": 397,
+        "flags": 512,
+        "cover_filename": "ManPlus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 299,
+    "fields": {
+        "book": 368,
+        "artwork": 280,
+        "edition": 398,
+        "flags": 512,
+        "cover_filename": "FreewayFighter.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 300,
+    "fields": {
+        "book": 369,
+        "artwork": 281,
+        "edition": 399,
+        "flags": 512,
+        "cover_filename": "ThePalaceOfEternity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 301,
+    "fields": {
+        "book": 370,
+        "artwork": 282,
+        "edition": 400,
+        "flags": 512,
+        "cover_filename": "Terraplane.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 302,
+    "fields": {
+        "book": 371,
+        "artwork": 283,
+        "edition": 401,
+        "flags": 512,
+        "cover_filename": "PerryRhodan18.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 303,
+    "fields": {
+        "book": 372,
+        "artwork": 284,
+        "edition": 402,
+        "flags": 512,
+        "cover_filename": "PerryRhodan17.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 304,
+    "fields": {
+        "book": 374,
+        "artwork": 285,
+        "edition": 405,
+        "flags": 512,
+        "cover_filename": "NimishasShip.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 305,
+    "fields": {
+        "book": 375,
+        "artwork": 286,
+        "edition": 408,
+        "flags": 512,
+        "cover_filename": "TheSunborn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 306,
+    "fields": {
+        "book": 377,
+        "artwork": 287,
+        "edition": 410,
+        "flags": 512,
+        "cover_filename": "GodsOfTheRiverworld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 307,
+    "fields": {
+        "book": 379,
+        "artwork": 288,
+        "edition": 414,
+        "flags": 512,
+        "cover_filename": "DarkIsTheSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 308,
+    "fields": {
+        "book": 202,
+        "artwork": 289,
+        "edition": 418,
+        "flags": 0,
+        "cover_filename": "PreludeToFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 309,
+    "fields": {
+        "book": 200,
+        "artwork": 290,
+        "edition": 419,
+        "flags": 0,
+        "cover_filename": "FoundationAndEmpire.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 310,
+    "fields": {
+        "book": 383,
+        "artwork": 291,
+        "edition": 420,
+        "flags": 0,
+        "cover_filename": "FoundationsEdge.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 311,
+    "fields": {
+        "book": 146,
+        "artwork": 292,
+        "edition": 422,
+        "flags": 0,
+        "cover_filename": "PiratesOfTheAsteroids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 312,
+    "fields": {
+        "book": 147,
+        "artwork": 293,
+        "edition": 423,
+        "flags": 0,
+        "cover_filename": "TheBigSunOfMercury.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 313,
+    "fields": {
+        "book": 45,
+        "artwork": 294,
+        "edition": 425,
+        "flags": 512,
+        "cover_filename": "Dragonflight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 314,
+    "fields": {
+        "book": 395,
+        "artwork": 295,
+        "edition": 426,
+        "flags": 512,
+        "cover_filename": "Dragonquest.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 315,
+    "fields": {
+        "book": 396,
+        "artwork": 296,
+        "edition": 427,
+        "flags": 0,
+        "cover_filename": "DaiSan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 316,
+    "fields": {
+        "book": 397,
+        "artwork": 297,
+        "edition": 428,
+        "flags": 512,
+        "cover_filename": "KrisposRising.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 317,
+    "fields": {
+        "book": 399,
+        "artwork": 300,
+        "edition": 430,
+        "flags": 512,
+        "cover_filename": "TheDispossessed.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 318,
+    "fields": {
+        "book": 400,
+        "artwork": 301,
+        "edition": 431,
+        "flags": 512,
+        "cover_filename": "LyonsPride.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 319,
+    "fields": {
+        "book": 403,
+        "artwork": 303,
+        "edition": 434,
+        "flags": 512,
+        "cover_filename": "PrinceOfChaos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 320,
+    "fields": {
+        "book": 407,
+        "artwork": 304,
+        "edition": 453,
+        "flags": 512,
+        "cover_filename": "TheBetrayal.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 321,
+    "fields": {
+        "book": 408,
+        "artwork": 306,
+        "edition": 454,
+        "flags": 512,
+        "cover_filename": "Armageddon2419AD.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 322,
+    "fields": {
+        "book": 409,
+        "artwork": 307,
+        "edition": 455,
+        "flags": 512,
+        "cover_filename": "TheOakAndTheRam.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 323,
+    "fields": {
+        "book": 410,
+        "artwork": 308,
+        "edition": 456,
+        "flags": 0,
+        "cover_filename": "FlowersForAlgernon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 324,
+    "fields": {
+        "book": 288,
+        "artwork": 309,
+        "edition": 317,
+        "flags": 0,
+        "cover_filename": "TheSpaceMerchants.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 325,
+    "fields": {
+        "book": 411,
+        "artwork": 310,
+        "edition": 389,
+        "flags": 512,
+        "cover_filename": "CloudWarrior.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 326,
+    "fields": {
+        "book": 412,
+        "artwork": 311,
+        "edition": 458,
+        "flags": 512,
+        "cover_filename": "MoreThanSuperHuman.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 327,
+    "fields": {
+        "book": 413,
+        "artwork": 312,
+        "edition": 459,
+        "flags": 512,
+        "cover_filename": "TheFarOutWorlds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 328,
+    "fields": {
+        "book": 414,
+        "artwork": 313,
+        "edition": 460,
+        "flags": 512,
+        "cover_filename": "Ringworld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 329,
+    "fields": {
+        "book": 416,
+        "artwork": 314,
+        "edition": 462,
+        "flags": 512,
+        "cover_filename": "TheKnightOfSwords.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 330,
+    "fields": {
+        "book": 417,
+        "artwork": 315,
+        "edition": 463,
+        "flags": 0,
+        "cover_filename": "Gormenghast.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 331,
+    "fields": {
+        "book": 418,
+        "artwork": 316,
+        "edition": 465,
+        "flags": 512,
+        "cover_filename": "EarthIsRoomEnough.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 332,
+    "fields": {
+        "book": 383,
+        "artwork": 317,
+        "edition": 466,
+        "flags": 2,
+        "cover_filename": "FoundationsEdge_1986.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 333,
+    "fields": {
+        "book": 383,
+        "artwork": 318,
+        "edition": 467,
+        "flags": 0,
+        "cover_filename": "FoundationsEdge.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 334,
+    "fields": {
+        "book": 201,
+        "artwork": 319,
+        "edition": 468,
+        "flags": 0,
+        "cover_filename": "FoundationAndEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 335,
+    "fields": {
+        "book": 419,
+        "artwork": 320,
+        "edition": 469,
+        "flags": 512,
+        "cover_filename": "AshesAndStars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 336,
+    "fields": {
+        "book": 444,
+        "artwork": 321,
+        "edition": 471,
+        "flags": 512,
+        "cover_filename": "TarzanAndTheForbiddenCity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 337,
+    "fields": {
+        "book": 3,
+        "artwork": 354,
+        "edition": 472,
+        "flags": 0,
+        "cover_filename": "ACanticleForLeibowitz.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 338,
+    "fields": {
+        "book": 421,
+        "artwork": 322,
+        "edition": 473,
+        "flags": 512,
+        "cover_filename": "TheBestFromGalaxyIV.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 339,
+    "fields": {
+        "book": 422,
+        "artwork": 323,
+        "edition": 474,
+        "flags": 512,
+        "cover_filename": "ByDaybreakTheEagle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 340,
+    "fields": {
+        "book": 276,
+        "artwork": 326,
+        "edition": 302,
+        "flags": 0,
+        "cover_filename": "TheJesusIncident.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 341,
+    "fields": {
+        "book": 430,
+        "artwork": 327,
+        "edition": 483,
+        "flags": 512,
+        "cover_filename": "TheMasterHarperOfPern.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 342,
+    "fields": {
+        "book": 431,
+        "artwork": 328,
+        "edition": 484,
+        "flags": 0,
+        "cover_filename": "TheSunsetWarrior.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 343,
+    "fields": {
+        "book": 327,
+        "artwork": 298,
+        "edition": 486,
+        "flags": 0,
+        "cover_filename": "SecondFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 344,
+    "fields": {
+        "book": 424,
+        "artwork": 324,
+        "edition": 476,
+        "flags": 512,
+        "cover_filename": "TheMemoryOfEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 345,
+    "fields": {
+        "book": 433,
+        "artwork": 330,
+        "edition": 517,
+        "flags": 512,
+        "cover_filename": "NewWorldsOfFantasy.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 346,
+    "fields": {
+        "book": 434,
+        "artwork": 331,
+        "edition": 487,
+        "flags": 512,
+        "cover_filename": "IslandsInTheSky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 347,
+    "fields": {
+        "book": 438,
+        "artwork": 28,
+        "edition": 491,
+        "flags": 0,
+        "cover_filename": "APrincessOfMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 348,
+    "fields": {
+        "book": 439,
+        "artwork": 334,
+        "edition": 492,
+        "flags": 512,
+        "cover_filename": "TheWorldSwappers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 349,
+    "fields": {
+        "book": 392,
+        "artwork": 299,
+        "edition": 212,
+        "flags": 512,
+        "cover_filename": "Zodiac.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 350,
+    "fields": {
+        "book": 441,
+        "artwork": 335,
+        "edition": 496,
+        "flags": 512,
+        "cover_filename": "TheRiseOfEndymion.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 351,
+    "fields": {
+        "book": 122,
+        "artwork": 355,
+        "edition": 497,
+        "flags": 0,
+        "cover_filename": "2001ASpaceOdyssey_1982.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 352,
+    "fields": {
+        "book": 442,
+        "artwork": 336,
+        "edition": 498,
+        "flags": 0,
+        "cover_filename": "2010OdysseyTwo.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 353,
+    "fields": {
+        "book": 443,
+        "artwork": 337,
+        "edition": 499,
+        "flags": 512,
+        "cover_filename": "TheRealityDysfunction_1996.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 354,
+    "fields": {
+        "book": 837,
+        "artwork": 356,
+        "edition": 501,
+        "flags": 0,
+        "cover_filename": "TheDayAfterJudgement.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 355,
+    "fields": {
+        "book": 838,
+        "artwork": 333,
+        "edition": 502,
+        "flags": 512,
+        "cover_filename": "InOurHandsTheStars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 356,
+    "fields": {
+        "book": 194,
+        "artwork": 357,
+        "edition": 503,
+        "flags": 512,
+        "cover_filename": "NerilkasStoryAndTheCoelura.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 357,
+    "fields": {
+        "book": 835,
+        "artwork": 348,
+        "edition": 504,
+        "flags": 512,
+        "cover_filename": "IRobot.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 358,
+    "fields": {
+        "book": 832,
+        "artwork": 346,
+        "edition": 505,
+        "flags": 512,
+        "cover_filename": "RedProphet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 359,
+    "fields": {
+        "book": 672,
+        "artwork": 358,
+        "edition": 506,
+        "flags": 512,
+        "cover_filename": "CrystalLine.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 360,
+    "fields": {
+        "book": 240,
+        "artwork": 359,
+        "edition": 509,
+        "flags": 512,
+        "cover_filename": "QuatermassII.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 361,
+    "fields": {
+        "book": 427,
+        "artwork": 360,
+        "edition": 480,
+        "flags": 512,
+        "cover_filename": "TheHandOfOberon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 362,
+    "fields": {
+        "book": 391,
+        "artwork": 361,
+        "edition": 510,
+        "flags": 512,
+        "cover_filename": "TheStainlessSteelRatGoesToHell.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 363,
+    "fields": {
+        "book": 840,
+        "artwork": 362,
+        "edition": 511,
+        "flags": 512,
+        "cover_filename": "TheAndromedaStrain.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 364,
+    "fields": {
+        "book": 327,
+        "artwork": 363,
+        "edition": 512,
+        "flags": 0,
+        "cover_filename": "SecondFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 365,
+    "fields": {
+        "book": 834,
+        "artwork": 349,
+        "edition": 513,
+        "flags": 512,
+        "cover_filename": "Xenocide.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 366,
+    "fields": {
+        "book": 833,
+        "artwork": 347,
+        "edition": 515,
+        "flags": 512,
+        "cover_filename": "BrokenAngels.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 367,
+    "fields": {
+        "book": 843,
+        "artwork": 364,
+        "edition": 520,
+        "flags": 512,
+        "cover_filename": "IronMaster.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 368,
+    "fields": {
+        "book": 848,
+        "artwork": 365,
+        "edition": 525,
+        "flags": 0,
+        "cover_filename": "TigerTiger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 369,
+    "fields": {
+        "book": 849,
+        "artwork": 366,
+        "edition": 526,
+        "flags": 512,
+        "cover_filename": "MovingMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 370,
+    "fields": {
+        "book": 255,
+        "artwork": 367,
+        "edition": 527,
+        "flags": 512,
+        "cover_filename": "AWizardOfEarthsea.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 371,
+    "fields": {
+        "book": 850,
+        "artwork": 368,
+        "edition": 528,
+        "flags": 512,
+        "cover_filename": "ForbiddenKnowledge.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 372,
+    "fields": {
+        "book": 851,
+        "artwork": 369,
+        "edition": 529,
+        "flags": 0,
+        "cover_filename": "ABlackbirdInTwilight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 373,
+    "fields": {
+        "book": 852,
+        "artwork": 370,
+        "edition": 530,
+        "flags": 512,
+        "cover_filename": "WokenFuries.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 374,
+    "fields": {
+        "book": 405,
+        "artwork": 371,
+        "edition": 535,
+        "flags": 512,
+        "cover_filename": "KnightOfShadows.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 375,
+    "fields": {
+        "book": 853,
+        "artwork": 372,
+        "edition": 534,
+        "flags": 512,
+        "cover_filename": "HuntersOfDune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 376,
+    "fields": {
+        "book": 718,
+        "artwork": 373,
+        "edition": 532,
+        "flags": 2,
+        "cover_filename": "TheButlerianJihad.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 377,
+    "fields": {
+        "book": 855,
+        "artwork": 374,
+        "edition": 536,
+        "flags": 512,
+        "cover_filename": "MasksOfTheMartyrs.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 378,
+    "fields": {
+        "book": 856,
+        "artwork": 375,
+        "edition": 537,
+        "flags": 512,
+        "cover_filename": "WarriorsOfTheStorm.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 379,
+    "fields": {
+        "book": 313,
+        "artwork": 376,
+        "edition": 344,
+        "flags": 0,
+        "cover_filename": "BrothersInArms.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 380,
+    "fields": {
+        "book": 276,
+        "artwork": 329,
+        "edition": 301,
+        "flags": 0,
+        "cover_filename": "TheJesusIncident_1985.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 381,
+    "fields": {
+        "book": 794,
+        "artwork": 377,
+        "edition": 569,
+        "flags": 0,
+        "cover_filename": "TheRingsOfSaturn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 382,
+    "fields": {
+        "book": 243,
+        "artwork": 118,
+        "edition": 262,
+        "flags": 512,
+        "cover_filename": "TheSwordOfTheDawn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 383,
+    "fields": {
+        "book": 241,
+        "artwork": 378,
+        "edition": 263,
+        "flags": 512,
+        "cover_filename": "TheTimeDweller.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 384,
+    "fields": {
+        "book": 728,
+        "artwork": 379,
+        "edition": 570,
+        "flags": 0,
+        "cover_filename": "Distress_1995.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 385,
+    "fields": {
+        "book": 728,
+        "artwork": 379,
+        "edition": 571,
+        "flags": 0,
+        "cover_filename": "Distress_1996.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 386,
+    "fields": {
+        "book": 158,
+        "artwork": 380,
+        "edition": 572,
+        "flags": 0,
+        "cover_filename": "TheMidwichCuckoos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 387,
+    "fields": {
+        "book": 171,
+        "artwork": 114,
+        "edition": 573,
+        "flags": 0,
+        "cover_filename": "TheNovice_atom.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 388,
+    "fields": {
+        "book": 884,
+        "artwork": 381,
+        "edition": 574,
+        "flags": 512,
+        "cover_filename": "Next.jpg",
+        "private_notes": "Christian Farley"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 389,
+    "fields": {
+        "book": 885,
+        "artwork": 383,
+        "edition": 575,
+        "flags": 0,
+        "cover_filename": "TheLazarusEffect.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 390,
+    "fields": {
+        "book": 886,
+        "artwork": 382,
+        "edition": 576,
+        "flags": 0,
+        "cover_filename": "ThePriestsOfPsi.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 391,
+    "fields": {
+        "book": 394,
+        "artwork": 384,
+        "edition": 424,
+        "flags": 0,
+        "cover_filename": "ToRidePegasus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 393,
+    "fields": {
+        "book": 394,
+        "artwork": 385,
+        "edition": 577,
+        "flags": 512,
+        "cover_filename": "ToRidePegasus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 394,
+    "fields": {
+        "book": 288,
+        "artwork": 386,
+        "edition": 316,
+        "flags": 0,
+        "cover_filename": "TheSpaceMerchants.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 395,
+    "fields": {
+        "book": 56,
+        "artwork": 387,
+        "edition": 578,
+        "flags": 0,
+        "cover_filename": "TheShadowOfTheTorturer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 396,
+    "fields": {
+        "book": 57,
+        "artwork": 388,
+        "edition": 579,
+        "flags": 0,
+        "cover_filename": "TheClawOfTheConciliator.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 397,
+    "fields": {
+        "book": 186,
+        "artwork": 389,
+        "edition": 580,
+        "flags": 2,
+        "cover_filename": "RoadsidePicnic.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 398,
+    "fields": {
+        "book": 6,
+        "artwork": 390,
+        "edition": 581,
+        "flags": 0,
+        "cover_filename": "TheThreeStigmataOfPalmerEldritch.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 399,
+    "fields": {
+        "book": 612,
+        "artwork": 391,
+        "edition": 582,
+        "flags": 0,
+        "cover_filename": "DoAndroidsDreamOfElectricSheep.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 400,
+    "fields": {
+        "book": 603,
+        "artwork": 392,
+        "edition": 583,
+        "flags": 0,
+        "cover_filename": "OurFriendsFromFrolix8.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 401,
+    "fields": {
+        "book": 660,
+        "artwork": 393,
+        "edition": 584,
+        "flags": 0,
+        "cover_filename": "TheDemolishedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 402,
+    "fields": {
+        "book": 660,
+        "artwork": 394,
+        "edition": 585,
+        "flags": 0,
+        "cover_filename": "TheDemolishedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 403,
+    "fields": {
+        "book": 660,
+        "artwork": 395,
+        "edition": 586,
+        "flags": 0,
+        "cover_filename": "TheDemolishedMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 404,
+    "fields": {
+        "book": 202,
+        "artwork": 396,
+        "edition": 587,
+        "flags": 0,
+        "cover_filename": "PreludeToFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 405,
+    "fields": {
+        "book": 191,
+        "artwork": 159,
+        "edition": 590,
+        "flags": 0,
+        "cover_filename": "TheChrysalids_1969.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 406,
+    "fields": {
+        "book": 199,
+        "artwork": 397,
+        "edition": 591,
+        "flags": 2,
+        "cover_filename": "Foundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 407,
+    "fields": {
+        "book": 327,
+        "artwork": 399,
+        "edition": 592,
+        "flags": 2,
+        "cover_filename": "SecondFoundation_1986.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 408,
+    "fields": {
+        "book": 327,
+        "artwork": 259,
+        "edition": 596,
+        "flags": 0,
+        "cover_filename": "SecondFoundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 409,
+    "fields": {
+        "book": 887,
+        "artwork": 401,
+        "edition": 597,
+        "flags": 0,
+        "cover_filename": "ChristmasOnARationalPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 410,
+    "fields": {
+        "book": 888,
+        "artwork": 402,
+        "edition": 598,
+        "flags": 0,
+        "cover_filename": "WarGames.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 411,
+    "fields": {
+        "book": 889,
+        "artwork": 403,
+        "edition": 599,
+        "flags": 0,
+        "cover_filename": "ThePriceYouPay.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 412,
+    "fields": {
+        "book": 890,
+        "artwork": 404,
+        "edition": 600,
+        "flags": 0,
+        "cover_filename": "IronFist.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 413,
+    "fields": {
+        "book": 893,
+        "artwork": 406,
+        "edition": 601,
+        "flags": 0,
+        "cover_filename": "ClansOfTheAlphaneMoon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 414,
+    "fields": {
+        "book": 876,
+        "artwork": 407,
+        "edition": 560,
+        "flags": 1,
+        "cover_filename": "Vor.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 415,
+    "fields": {
+        "book": 653,
+        "artwork": 408,
+        "edition": 602,
+        "flags": 0,
+        "cover_filename": "TheStarsMyDestination.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 416,
+    "fields": {
+        "book": 882,
+        "artwork": 409,
+        "edition": 567,
+        "flags": 0,
+        "cover_filename": "Grounded.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 417,
+    "fields": {
+        "book": 7,
+        "artwork": 411,
+        "edition": 603,
+        "flags": 2,
+        "cover_filename": "Dune_putnam_hc.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 418,
+    "fields": {
+        "book": 895,
+        "artwork": 412,
+        "edition": 604,
+        "flags": 0,
+        "cover_filename": "TheDisappearingFuture.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 419,
+    "fields": {
+        "book": 896,
+        "artwork": 413,
+        "edition": 605,
+        "flags": 0,
+        "cover_filename": "TheSpearOfMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 420,
+    "fields": {
+        "book": 897,
+        "artwork": 414,
+        "edition": 606,
+        "flags": 0,
+        "cover_filename": "TheCompleteRobot.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 421,
+    "fields": {
+        "book": 718,
+        "artwork": 415,
+        "edition": 284,
+        "flags": 0,
+        "cover_filename": "TheButlerianJihad.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 422,
+    "fields": {
+        "book": 802,
+        "artwork": 416,
+        "edition": 607,
+        "flags": 0,
+        "cover_filename": "Titan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 423,
+    "fields": {
+        "book": 898,
+        "artwork": 417,
+        "edition": 608,
+        "flags": 0,
+        "cover_filename": "WarriorWoman.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 424,
+    "fields": {
+        "book": 900,
+        "artwork": 419,
+        "edition": 612,
+        "flags": 0,
+        "cover_filename": "TheEarlyAsimov1.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 425,
+    "fields": {
+        "book": 593,
+        "artwork": 420,
+        "edition": 609,
+        "flags": 0,
+        "cover_filename": "FreedomsLanding.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 426,
+    "fields": {
+        "book": 596,
+        "artwork": 421,
+        "edition": 610,
+        "flags": 0,
+        "cover_filename": "FreedomsChoice.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 427,
+    "fields": {
+        "book": 605,
+        "artwork": 422,
+        "edition": 611,
+        "flags": 0,
+        "cover_filename": "FreedomsChallenge.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 428,
+    "fields": {
+        "book": 902,
+        "artwork": 431,
+        "edition": 613,
+        "flags": 0,
+        "cover_filename": "TheSleepEaters.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 429,
+    "fields": {
+        "book": 901,
+        "artwork": 423,
+        "edition": 618,
+        "flags": 0,
+        "cover_filename": "ThePlanetBuyer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 430,
+    "fields": {
+        "book": 290,
+        "artwork": 428,
+        "edition": 319,
+        "flags": 0,
+        "cover_filename": "TheOtherSideOfTheSky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 431,
+    "fields": {
+        "book": 903,
+        "artwork": 430,
+        "edition": 617,
+        "flags": 0,
+        "cover_filename": "PreludeToSpace.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 432,
+    "fields": {
+        "book": 904,
+        "artwork": 427,
+        "edition": 616,
+        "flags": 0,
+        "cover_filename": "TheMutants.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 433,
+    "fields": {
+        "book": 905,
+        "artwork": 426,
+        "edition": 615,
+        "flags": 0,
+        "cover_filename": "CenterForce.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 434,
+    "fields": {
+        "book": 420,
+        "artwork": 424,
+        "edition": 470,
+        "flags": 0,
+        "cover_filename": "WorldInEclipse.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 435,
+    "fields": {
+        "book": 906,
+        "artwork": 425,
+        "edition": 614,
+        "flags": 0,
+        "cover_filename": "OneAgainstTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 436,
+    "fields": {
+        "book": 329,
+        "artwork": 432,
+        "edition": 619,
+        "flags": 0,
+        "cover_filename": "PermutationCity_2003.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 437,
+    "fields": {
+        "book": 768,
+        "artwork": 429,
+        "edition": 620,
+        "flags": 0,
+        "cover_filename": "Millennium.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 438,
+    "fields": {
+        "book": 760,
+        "artwork": 434,
+        "edition": 621,
+        "flags": 0,
+        "cover_filename": "ChildrenOfGod.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 439,
+    "fields": {
+        "book": 744,
+        "artwork": 433,
+        "edition": 622,
+        "flags": 0,
+        "cover_filename": "Andra.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 440,
+    "fields": {
+        "book": 769,
+        "artwork": 435,
+        "edition": 623,
+        "flags": 0,
+        "cover_filename": "BrokenSymmetries.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 441,
+    "fields": {
+        "book": 908,
+        "artwork": 436,
+        "edition": 624,
+        "flags": 0,
+        "cover_filename": "WinningColours.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 442,
+    "fields": {
+        "book": 722,
+        "artwork": 410,
+        "edition": 625,
+        "flags": 0,
+        "cover_filename": "FreedomsRansom.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 443,
+    "fields": {
+        "book": 5,
+        "artwork": 119,
+        "edition": 557,
+        "flags": 3,
+        "cover_filename": "DuneMessiah_54.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 444,
+    "fields": {
+        "book": 909,
+        "artwork": 437,
+        "edition": 626,
+        "flags": 0,
+        "cover_filename": "DestinationVoid.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 445,
+    "fields": {
+        "book": 260,
+        "artwork": 438,
+        "edition": 627,
+        "flags": 0,
+        "cover_filename": "TheGodBox.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 446,
+    "fields": {
+        "book": 910,
+        "artwork": 439,
+        "edition": 628,
+        "flags": 0,
+        "cover_filename": "TheCuckoosEgg.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 447,
+    "fields": {
+        "book": 911,
+        "artwork": 441,
+        "edition": 630,
+        "flags": 0,
+        "cover_filename": "Context.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 448,
+    "fields": {
+        "book": 892,
+        "artwork": 440,
+        "edition": 629,
+        "flags": 0,
+        "cover_filename": "TheTraveller.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 449,
+    "fields": {
+        "book": 383,
+        "artwork": 447,
+        "edition": 635,
+        "flags": 0,
+        "cover_filename": "FoundationsEdge.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 450,
+    "fields": {
+        "book": 199,
+        "artwork": 442,
+        "edition": 631,
+        "flags": 0,
+        "cover_filename": "Foundation.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 451,
+    "fields": {
+        "book": 200,
+        "artwork": 443,
+        "edition": 632,
+        "flags": 0,
+        "cover_filename": "FoundationAndEmpire.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 452,
+    "fields": {
+        "book": 199,
+        "artwork": 445,
+        "edition": 633,
+        "flags": 0,
+        "cover_filename": "Foundation_1969.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 453,
+    "fields": {
+        "book": 327,
+        "artwork": 446,
+        "edition": 634,
+        "flags": 0,
+        "cover_filename": "SecondFoundation_1968.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 454,
+    "fields": {
+        "book": 373,
+        "artwork": 444,
+        "edition": 404,
+        "flags": 0,
+        "cover_filename": "TheGreenHillsOfEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 455,
+    "fields": {
+        "book": 249,
+        "artwork": 448,
+        "edition": 270,
+        "flags": 0,
+        "cover_filename": "RedPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 456,
+    "fields": {
+        "book": 198,
+        "artwork": 449,
+        "edition": 221,
+        "flags": 0,
+        "cover_filename": "AFallOfMoondust.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 457,
+    "fields": {
+        "book": 275,
+        "artwork": 278,
+        "edition": 300,
+        "flags": 0,
+        "cover_filename": "FarmerInTheSky.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 458,
+    "fields": {
+        "book": 7,
+        "artwork": 450,
+        "edition": 636,
+        "flags": 2,
+        "cover_filename": "Dune.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 459,
+    "fields": {
+        "book": 508,
+        "artwork": 451,
+        "edition": 637,
+        "flags": 2,
+        "cover_filename": "Neuromancer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 460,
+    "fields": {
+        "book": 508,
+        "artwork": 452,
+        "edition": 638,
+        "flags": 0,
+        "cover_filename": "Neuromancer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 461,
+    "fields": {
+        "book": 45,
+        "artwork": 454,
+        "edition": 639,
+        "flags": 2,
+        "cover_filename": "Dragonflight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 462,
+    "fields": {
+        "book": 82,
+        "artwork": 453,
+        "edition": 640,
+        "flags": 2,
+        "cover_filename": "DecisionAtDoona_1971.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 463,
+    "fields": {
+        "book": 912,
+        "artwork": 455,
+        "edition": 641,
+        "flags": 0,
+        "cover_filename": "FlightIntoSpace.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 464,
+    "fields": {
+        "book": 913,
+        "artwork": 456,
+        "edition": 642,
+        "flags": 0,
+        "cover_filename": "Earthlight.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 465,
+    "fields": {
+        "book": 914,
+        "artwork": 457,
+        "edition": 36,
+        "flags": 0,
+        "cover_filename": "20000LeaguesUnderTheSea.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 466,
+    "fields": {
+        "book": 758,
+        "artwork": 458,
+        "edition": 643,
+        "flags": 0,
+        "cover_filename": "Tron.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 467,
+    "fields": {
+        "book": 907,
+        "artwork": 459,
+        "edition": 102,
+        "flags": 0,
+        "cover_filename": "WhenTheStarKingsDie.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 468,
+    "fields": {
+        "book": 508,
+        "artwork": 460,
+        "edition": 644,
+        "flags": 0,
+        "cover_filename": "Neuromancer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 469,
+    "fields": {
+        "book": 917,
+        "artwork": 465,
+        "edition": 645,
+        "flags": 0,
+        "cover_filename": "GladiatorAtLaw.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 470,
+    "fields": {
+        "book": 288,
+        "artwork": 461,
+        "edition": 646,
+        "flags": 0,
+        "cover_filename": "TheSpaceMerchants.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 471,
+    "fields": {
+        "book": 410,
+        "artwork": 464,
+        "edition": 647,
+        "flags": 0,
+        "cover_filename": "FlowersForAlgernon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 472,
+    "fields": {
+        "book": 916,
+        "artwork": 463,
+        "edition": 648,
+        "flags": 0,
+        "cover_filename": "ShadowsInThePit.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 473,
+    "fields": {
+        "book": 915,
+        "artwork": 462,
+        "edition": 649,
+        "flags": 0,
+        "cover_filename": "TheOctoberCountry.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 474,
+    "fields": {
+        "book": 366,
+        "artwork": 468,
+        "edition": 396,
+        "flags": 0,
+        "cover_filename": "RocketshipGalileo.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 475,
+    "fields": {
+        "book": 629,
+        "artwork": 467,
+        "edition": 451,
+        "flags": 0,
+        "cover_filename": "HaveSpaceSuitWillTravel.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 476,
+    "fields": {
+        "book": 808,
+        "artwork": 466,
+        "edition": 444,
+        "flags": 0,
+        "cover_filename": "Friday.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 477,
+    "fields": {
+        "book": 160,
+        "artwork": 469,
+        "edition": 652,
+        "flags": 128,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 478,
+    "fields": {
+        "book": 446,
+        "artwork": 470,
+        "edition": 653,
+        "flags": 128,
+        "cover_filename": "Web.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 479,
+    "fields": {
+        "book": 918,
+        "artwork": 471,
+        "edition": 654,
+        "flags": 0,
+        "cover_filename": "PodkayneOfMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 480,
+    "fields": {
+        "book": 919,
+        "artwork": 472,
+        "edition": 655,
+        "flags": 0,
+        "cover_filename": "Riverworld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 481,
+    "fields": {
+        "book": 180,
+        "artwork": 473,
+        "edition": 656,
+        "flags": 0,
+        "cover_filename": "TroubleWithLichen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 482,
+    "fields": {
+        "book": 201,
+        "artwork": 476,
+        "edition": 224,
+        "flags": 2,
+        "cover_filename": "FoundationAndEarth_1987.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 483,
+    "fields": {
+        "book": 921,
+        "artwork": 475,
+        "edition": 658,
+        "flags": 0,
+        "cover_filename": "ChangeOfCommand.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 484,
+    "fields": {
+        "book": 920,
+        "artwork": 474,
+        "edition": 659,
+        "flags": 0,
+        "cover_filename": "AgainstTheOdds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 485,
+    "fields": {
+        "book": 922,
+        "artwork": 477,
+        "edition": 660,
+        "flags": 0,
+        "cover_filename": "Dragonsong_1981.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 486,
+    "fields": {
+        "book": 922,
+        "artwork": 477,
+        "edition": 661,
+        "flags": 0,
+        "cover_filename": "Dragonsong_1993.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 487,
+    "fields": {
+        "book": 923,
+        "artwork": 478,
+        "edition": 662,
+        "flags": 2,
+        "cover_filename": "Dragonsinger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 488,
+    "fields": {
+        "book": 520,
+        "artwork": 479,
+        "edition": 663,
+        "flags": 0,
+        "cover_filename": "TheWhiteDragon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 489,
+    "fields": {
+        "book": 412,
+        "artwork": 482,
+        "edition": 664,
+        "flags": 0,
+        "cover_filename": "MoreThanSuperhuman.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 490,
+    "fields": {
+        "book": 924,
+        "artwork": 483,
+        "edition": 665,
+        "flags": 0,
+        "cover_filename": "TheTechnicolorTimeMachine.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 491,
+    "fields": {
+        "book": 925,
+        "artwork": 484,
+        "edition": 666,
+        "flags": 0,
+        "cover_filename": "TheDarkRiver.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 492,
+    "fields": {
+        "book": 926,
+        "artwork": 485,
+        "edition": 667,
+        "flags": 0,
+        "cover_filename": "TheBookOfPhilipJoseFarmer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 493,
+    "fields": {
+        "book": 927,
+        "artwork": 486,
+        "edition": 668,
+        "flags": 0,
+        "cover_filename": "CalibansHour.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 494,
+    "fields": {
+        "book": 928,
+        "artwork": 487,
+        "edition": 669,
+        "flags": 0,
+        "cover_filename": "SpectrumOfAForgottenSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 495,
+    "fields": {
+        "book": 218,
+        "artwork": 488,
+        "edition": 670,
+        "flags": 0,
+        "cover_filename": "HuntingParty.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 496,
+    "fields": {
+        "book": 216,
+        "artwork": 489,
+        "edition": 671,
+        "flags": 0,
+        "cover_filename": "OnceAHero.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 497,
+    "fields": {
+        "book": 219,
+        "artwork": 490,
+        "edition": 672,
+        "flags": 0,
+        "cover_filename": "RulesOfEngagement.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 498,
+    "fields": {
+        "book": 184,
+        "artwork": 491,
+        "edition": 673,
+        "flags": 0,
+        "cover_filename": "EndersGame.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 499,
+    "fields": {
+        "book": 184,
+        "artwork": 492,
+        "edition": 674,
+        "flags": 2,
+        "cover_filename": "EndersGame.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 500,
+    "fields": {
+        "book": 706,
+        "artwork": 494,
+        "edition": 531,
+        "flags": 0,
+        "cover_filename": "WorldsEnd.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 501,
+    "fields": {
+        "book": 706,
+        "artwork": 493,
+        "edition": 675,
+        "flags": 2,
+        "cover_filename": "WorldsEnd.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 502,
+    "fields": {
+        "book": 775,
+        "artwork": 495,
+        "edition": 676,
+        "flags": 0,
+        "cover_filename": "TheEyreAffair.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 503,
+    "fields": {
+        "book": 748,
+        "artwork": 496,
+        "edition": 677,
+        "flags": 0,
+        "cover_filename": "LostInAGoodBook.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 504,
+    "fields": {
+        "book": 929,
+        "artwork": 497,
+        "edition": 678,
+        "flags": 0,
+        "cover_filename": "TheWellOfLostPlots.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 505,
+    "fields": {
+        "book": 930,
+        "artwork": null,
+        "edition": 679,
+        "flags": 256,
+        "cover_filename": null,
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 506,
+    "fields": {
+        "book": 775,
+        "artwork": 498,
+        "edition": 680,
+        "flags": 0,
+        "cover_filename": "TheEyreAffair.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 507,
+    "fields": {
+        "book": 748,
+        "artwork": 499,
+        "edition": 681,
+        "flags": 0,
+        "cover_filename": "LostInAGoodBook.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 508,
+    "fields": {
+        "book": 929,
+        "artwork": 500,
+        "edition": 682,
+        "flags": 0,
+        "cover_filename": "TheWellOfLostPlots.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 509,
+    "fields": {
+        "book": 930,
+        "artwork": 501,
+        "edition": 684,
+        "flags": 0,
+        "cover_filename": "SomethingRotten.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 510,
+    "fields": {
+        "book": 931,
+        "artwork": 502,
+        "edition": 685,
+        "flags": 0,
+        "cover_filename": "TheBigOverEasy.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 511,
+    "fields": {
+        "book": 932,
+        "artwork": 503,
+        "edition": 686,
+        "flags": 0,
+        "cover_filename": "TheFourthBear.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 512,
+    "fields": {
+        "book": 347,
+        "artwork": 504,
+        "edition": 377,
+        "flags": 0,
+        "cover_filename": "TheFifthHeadOfCerberus.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 513,
+    "fields": {
+        "book": 933,
+        "artwork": 505,
+        "edition": 687,
+        "flags": 0,
+        "cover_filename": "TradingInDanger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 514,
+    "fields": {
+        "book": 864,
+        "artwork": 507,
+        "edition": 547,
+        "flags": 0,
+        "cover_filename": "Cetaganda.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 515,
+    "fields": {
+        "book": 865,
+        "artwork": 508,
+        "edition": 548,
+        "flags": 0,
+        "cover_filename": "DiplomaticImmunity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 516,
+    "fields": {
+        "book": 934,
+        "artwork": 506,
+        "edition": 689,
+        "flags": 0,
+        "cover_filename": "BordersOfInfinity.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 517,
+    "fields": {
+        "book": 935,
+        "artwork": 509,
+        "edition": 690,
+        "flags": 0,
+        "cover_filename": "Barrayar.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 518,
+    "fields": {
+        "book": 936,
+        "artwork": 510,
+        "edition": 691,
+        "flags": 0,
+        "cover_filename": "ShardsOfHonour.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 519,
+    "fields": {
+        "book": 834,
+        "artwork": 512,
+        "edition": 514,
+        "flags": 0,
+        "cover_filename": "Xenocide.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 520,
+    "fields": {
+        "book": 937,
+        "artwork": 511,
+        "edition": 692,
+        "flags": 0,
+        "cover_filename": "FeersumEndjinn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 521,
+    "fields": {
+        "book": 314,
+        "artwork": 513,
+        "edition": 345,
+        "flags": 0,
+        "cover_filename": "CampConcentration.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 522,
+    "fields": {
+        "book": 863,
+        "artwork": 514,
+        "edition": 546,
+        "flags": 0,
+        "cover_filename": "UnderCompulsion.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 523,
+    "fields": {
+        "book": 938,
+        "artwork": 515,
+        "edition": 693,
+        "flags": 0,
+        "cover_filename": "GardensOfTheMoon.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 524,
+    "fields": {
+        "book": 940,
+        "artwork": 517,
+        "edition": 694,
+        "flags": 0,
+        "cover_filename": "TheNanoFlower.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 525,
+    "fields": {
+        "book": 941,
+        "artwork": 518,
+        "edition": 697,
+        "flags": 0,
+        "cover_filename": "TheNakedGod.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 526,
+    "fields": {
+        "book": 154,
+        "artwork": 519,
+        "edition": 696,
+        "flags": 0,
+        "cover_filename": "FlowMyTearsThePolicemanSaid.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 527,
+    "fields": {
+        "book": 941,
+        "artwork": 518,
+        "edition": 695,
+        "flags": 0,
+        "cover_filename": "TheNakedGod_1999.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 528,
+    "fields": {
+        "book": 303,
+        "artwork": 520,
+        "edition": 333,
+        "flags": 0,
+        "cover_filename": "DinosaurPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 529,
+    "fields": {
+        "book": 303,
+        "artwork": 481,
+        "edition": 507,
+        "flags": 0,
+        "cover_filename": "DinosaurPlanet.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 530,
+    "fields": {
+        "book": 839,
+        "artwork": 480,
+        "edition": 508,
+        "flags": 0,
+        "cover_filename": "DinosaurPlanetII.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 531,
+    "fields": {
+        "book": 82,
+        "artwork": 521,
+        "edition": 334,
+        "flags": 0,
+        "cover_filename": "DecisionAtDoona.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 532,
+    "fields": {
+        "book": 942,
+        "artwork": 522,
+        "edition": 698,
+        "flags": 0,
+        "cover_filename": "DragonsKin.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 533,
+    "fields": {
+        "book": 943,
+        "artwork": 523,
+        "edition": 699,
+        "flags": 0,
+        "cover_filename": "TheGrayPrince.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 534,
+    "fields": {
+        "book": 944,
+        "artwork": 525,
+        "edition": 700,
+        "flags": 0,
+        "cover_filename": "Omnivore.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 535,
+    "fields": {
+        "book": 945,
+        "artwork": 524,
+        "edition": 701,
+        "flags": 0,
+        "cover_filename": "Orn.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 536,
+    "fields": {
+        "book": 946,
+        "artwork": 526,
+        "edition": 702,
+        "flags": 0,
+        "cover_filename": "TheBullAndTheSpear.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 537,
+    "fields": {
+        "book": 409,
+        "artwork": 529,
+        "edition": 703,
+        "flags": 0,
+        "cover_filename": "TheOakAndTheRam.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 538,
+    "fields": {
+        "book": 947,
+        "artwork": 534,
+        "edition": 704,
+        "flags": 0,
+        "cover_filename": "TheSwordAndTheStallion.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 539,
+    "fields": {
+        "book": 948,
+        "artwork": 530,
+        "edition": 708,
+        "flags": 0,
+        "cover_filename": "JourneyToTheCentreOfTheEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 540,
+    "fields": {
+        "book": 949,
+        "artwork": 531,
+        "edition": 709,
+        "flags": 0,
+        "cover_filename": "ClipperOfTheClouds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 541,
+    "fields": {
+        "book": 950,
+        "artwork": 532,
+        "edition": 705,
+        "flags": 0,
+        "cover_filename": "TheLionGame.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 542,
+    "fields": {
+        "book": 292,
+        "artwork": 533,
+        "edition": 706,
+        "flags": 0,
+        "cover_filename": "TheHollowMan.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 543,
+    "fields": {
+        "book": 951,
+        "artwork": 535,
+        "edition": 707,
+        "flags": 0,
+        "cover_filename": "FrankensteinUnbound.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 544,
+    "fields": {
+        "book": 923,
+        "artwork": 536,
+        "edition": 711,
+        "flags": 0,
+        "cover_filename": "Dragonsinger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 545,
+    "fields": {
+        "book": 596,
+        "artwork": 421,
+        "edition": 712,
+        "flags": 0,
+        "cover_filename": "FreedomsChoice_6.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 546,
+    "fields": {
+        "book": 70,
+        "artwork": 538,
+        "edition": null,
+        "flags": 2,
+        "cover_filename": "TheShipsOfEarth.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 547,
+    "fields": {
+        "book": 954,
+        "artwork": 539,
+        "edition": null,
+        "flags": 0,
+        "cover_filename": "ShadowOfTheGiant.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 548,
+    "fields": {
+        "book": 959,
+        "artwork": 540,
+        "edition": 713,
+        "flags": 512,
+        "cover_filename": "Damia.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 549,
+    "fields": {
+        "book": 443,
+        "artwork": 337,
+        "edition": 714,
+        "flags": 512,
+        "cover_filename": "TheRealityDysfunction_1997.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 550,
+    "fields": {
+        "book": 443,
+        "artwork": 337,
+        "edition": 715,
+        "flags": 512,
+        "cover_filename": "TheRealityDysfunction_Emergence.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 551,
+    "fields": {
+        "book": 867,
+        "artwork": 541,
+        "edition": 550,
+        "flags": 512,
+        "cover_filename": "TheNeutroniumAlchemist.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 552,
+    "fields": {
+        "book": 973,
+        "artwork": 542,
+        "edition": 716,
+        "flags": 0,
+        "cover_filename": "TheSantarogaBarrier.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 553,
+    "fields": {
+        "book": 974,
+        "artwork": 543,
+        "edition": 717,
+        "flags": 0,
+        "cover_filename": "NightOfTheSaucers.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 554,
+    "fields": {
+        "book": 975,
+        "artwork": 544,
+        "edition": 718,
+        "flags": 0,
+        "cover_filename": "Profundis.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 555,
+    "fields": {
+        "book": 977,
+        "artwork": 546,
+        "edition": 721,
+        "flags": 0,
+        "cover_filename": "TheCrystalSinger.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 556,
+    "fields": {
+        "book": 149,
+        "artwork": 548,
+        "edition": 724,
+        "flags": 0,
+        "cover_filename": "TheGoldenApplesOfTheSun.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 557,
+    "fields": {
+        "book": 30,
+        "artwork": 547,
+        "edition": 725,
+        "flags": 0,
+        "cover_filename": "DandelionWine.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 558,
+    "fields": {
+        "book": 85,
+        "artwork": 549,
+        "edition": 726,
+        "flags": 0,
+        "cover_filename": "TheSilverLocusts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 559,
+    "fields": {
+        "book": 978,
+        "artwork": 550,
+        "edition": 727,
+        "flags": 0,
+        "cover_filename": "TheAccidentalSorcerer.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 560,
+    "fields": {
+        "book": 979,
+        "artwork": 551,
+        "edition": 728,
+        "flags": 0,
+        "cover_filename": "WitchesIncorporated.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 561,
+    "fields": {
+        "book": 980,
+        "artwork": 552,
+        "edition": 729,
+        "flags": 0,
+        "cover_filename": "TheAtrocityArchives.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 562,
+    "fields": {
+        "book": 981,
+        "artwork": 553,
+        "edition": 730,
+        "flags": 0,
+        "cover_filename": "Onslaught.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 563,
+    "fields": {
+        "book": 982,
+        "artwork": 554,
+        "edition": 731,
+        "flags": 0,
+        "cover_filename": "Ruin.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 564,
+    "fields": {
+        "book": 680,
+        "artwork": 555,
+        "edition": 732,
+        "flags": 0,
+        "cover_filename": "TheReturnOfTheKing.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 565,
+    "fields": {
+        "book": 847,
+        "artwork": 556,
+        "edition": 733,
+        "flags": 0,
+        "cover_filename": "Stargate.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 566,
+    "fields": {
+        "book": 983,
+        "artwork": 557,
+        "edition": 734,
+        "flags": 0,
+        "cover_filename": "Macroscope.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 567,
+    "fields": {
+        "book": 281,
+        "artwork": 558,
+        "edition": 308,
+        "flags": 0,
+        "cover_filename": "PlanetOfTheApes_DelRey.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 568,
+    "fields": {
+        "book": 281,
+        "artwork": 558,
+        "edition": 736,
+        "flags": 0,
+        "cover_filename": "PlanetOfTheApes_Penguin.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 569,
+    "fields": {
+        "book": 854,
+        "artwork": 559,
+        "edition": 533,
+        "flags": 0,
+        "cover_filename": "MonkeyPlanet.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 570,
+    "fields": {
+        "book": 984,
+        "artwork": 560,
+        "edition": 737,
+        "flags": 0,
+        "cover_filename": "2061OdysseyThree.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 571,
+    "fields": {
+        "book": 985,
+        "artwork": 561,
+        "edition": 739,
+        "flags": 512,
+        "cover_filename": "SplitInfinity.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 572,
+    "fields": {
+        "book": 986,
+        "artwork": 562,
+        "edition": 740,
+        "flags": 0,
+        "cover_filename": "BlueAdept.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 573,
+    "fields": {
+        "book": 987,
+        "artwork": 563,
+        "edition": 741,
+        "flags": 0,
+        "cover_filename": "Ghost.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 574,
+    "fields": {
+        "book": 108,
+        "artwork": 564,
+        "edition": 742,
+        "flags": 0,
+        "cover_filename": "TheMistsOfAvalon.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 575,
+    "fields": {
+        "book": 320,
+        "artwork": 565,
+        "edition": 351,
+        "flags": 0,
+        "cover_filename": "TheFirebrand.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 576,
+    "fields": {
+        "book": 565,
+        "artwork": 566,
+        "edition": 743,
+        "flags": 0,
+        "cover_filename": "Headcrash.jpg",
+        "private_notes": "NULL"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 577,
+    "fields": {
+        "book": 122,
+        "artwork": 355,
+        "edition": 744,
+        "flags": 0,
+        "cover_filename": "2001ASpaceOdyssey_1984.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 578,
+    "fields": {
+        "book": 988,
+        "artwork": 567,
+        "edition": 746,
+        "flags": 0,
+        "cover_filename": "LordFoulsBane.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 579,
+    "fields": {
+        "book": 989,
+        "artwork": 568,
+        "edition": 747,
+        "flags": 0,
+        "cover_filename": "LordOfTheRings.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 580,
+    "fields": {
+        "book": 990,
+        "artwork": 569,
+        "edition": 748,
+        "flags": 0,
+        "cover_filename": "TheTemporalVoid.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 581,
+    "fields": {
+        "book": 991,
+        "artwork": 570,
+        "edition": 749,
+        "flags": 0,
+        "cover_filename": "TheEvolutionaryVoid.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 582,
+    "fields": {
+        "book": 992,
+        "artwork": 571,
+        "edition": 750,
+        "flags": 0,
+        "cover_filename": "TheSwordOfShannara.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 583,
+    "fields": {
+        "book": 993,
+        "artwork": 572,
+        "edition": 751,
+        "flags": 0,
+        "cover_filename": "CubeRoute.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 584,
+    "fields": {
+        "book": 994,
+        "artwork": 573,
+        "edition": 752,
+        "flags": 0,
+        "cover_filename": "Greenmantle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 585,
+    "fields": {
+        "book": 200,
+        "artwork": 574,
+        "edition": 753,
+        "flags": 0,
+        "cover_filename": "FoundationAndEmpire_1972.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 586,
+    "fields": {
+        "book": 995,
+        "artwork": 575,
+        "edition": 754,
+        "flags": 0,
+        "cover_filename": "Kirinya.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 587,
+    "fields": {
+        "book": 664,
+        "artwork": 576,
+        "edition": 755,
+        "flags": 0,
+        "cover_filename": "RedMars.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 588,
+    "fields": {
+        "book": 996,
+        "artwork": 577,
+        "edition": 756,
+        "flags": 0,
+        "cover_filename": "TheBewitchments.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 589,
+    "fields": {
+        "book": 997,
+        "artwork": 578,
+        "edition": 757,
+        "flags": 0,
+        "cover_filename": "TheFulfilmentsOfFateAndDesire.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 590,
+    "fields": {
+        "book": 998,
+        "artwork": 579,
+        "edition": 758,
+        "flags": 0,
+        "cover_filename": "DarkStar.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 591,
+    "fields": {
+        "book": 999,
+        "artwork": 580,
+        "edition": 759,
+        "flags": 0,
+        "cover_filename": "TheHourOfTheGate.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 592,
+    "fields": {
+        "book": 1000,
+        "artwork": 581,
+        "edition": 760,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheDissonance.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 593,
+    "fields": {
+        "book": 1001,
+        "artwork": 582,
+        "edition": 761,
+        "flags": 0,
+        "cover_filename": "ChorusSkating.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 594,
+    "fields": {
+        "book": 1002,
+        "artwork": 583,
+        "edition": 762,
+        "flags": 0,
+        "cover_filename": "ForLoveOfMotherNot.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 595,
+    "fields": {
+        "book": 1003,
+        "artwork": 584,
+        "edition": 763,
+        "flags": 0,
+        "cover_filename": "HarryPotterAndTheSorcerersStone.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 596,
+    "fields": {
+        "book": 1004,
+        "artwork": 585,
+        "edition": 764,
+        "flags": 0,
+        "cover_filename": "TheJesusFactor.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 597,
+    "fields": {
+        "book": 824,
+        "artwork": 586,
+        "edition": 765,
+        "flags": 0,
+        "cover_filename": "TheRaggedAstronauts.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 598,
+    "fields": {
+        "book": 862,
+        "artwork": 587,
+        "edition": 545,
+        "flags": 0,
+        "cover_filename": "TheIronDream.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 599,
+    "fields": {
+        "book": 1005,
+        "artwork": 588,
+        "edition": 766,
+        "flags": 0,
+        "cover_filename": "CamelotInOrbit.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 600,
+    "fields": {
+        "book": 289,
+        "artwork": 589,
+        "edition": 493,
+        "flags": 0,
+        "cover_filename": "TheWarOfTheWorlds.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 601,
+    "fields": {
+        "book": 1006,
+        "artwork": 590,
+        "edition": 767,
+        "flags": 0,
+        "cover_filename": "TheImmortals.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 602,
+    "fields": {
+        "book": 1007,
+        "artwork": 591,
+        "edition": 768,
+        "flags": 0,
+        "cover_filename": "Slaughterhouse5.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 603,
+    "fields": {
+        "book": 1007,
+        "artwork": 592,
+        "edition": 769,
+        "flags": 0,
+        "cover_filename": "Slaughterhouse-5.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 604,
+    "fields": {
+        "book": 1008,
+        "artwork": 593,
+        "edition": 770,
+        "flags": 0,
+        "cover_filename": "Deepsix.jpg",
+        "private_notes": "Book Design by Kellan Peck, Cover shows only a part of the original artwork"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 605,
+    "fields": {
+        "book": 1009,
+        "artwork": 594,
+        "edition": 771,
+        "flags": 0,
+        "cover_filename": "Ox.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 606,
+    "fields": {
+        "book": 1010,
+        "artwork": 595,
+        "edition": 772,
+        "flags": 0,
+        "cover_filename": "TheBlackCloud.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 607,
+    "fields": {
+        "book": 1011,
+        "artwork": 596,
+        "edition": 773,
+        "flags": 0,
+        "cover_filename": "AtTheMountainsOfMadness.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 608,
+    "fields": {
+        "book": 1012,
+        "artwork": 597,
+        "edition": 774,
+        "flags": 0,
+        "cover_filename": "DagonAndOtherMacabreTales.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 609,
+    "fields": {
+        "book": 1013,
+        "artwork": 598,
+        "edition": 775,
+        "flags": 0,
+        "cover_filename": "TheHaunterOfTheDark.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 610,
+    "fields": {
+        "book": 1014,
+        "artwork": 599,
+        "edition": 776,
+        "flags": 0,
+        "cover_filename": "BurningChrome.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 611,
+    "fields": {
+        "book": 425,
+        "artwork": 325,
+        "edition": 477,
+        "flags": 0,
+        "cover_filename": "Vurt.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 612,
+    "fields": {
+        "book": 639,
+        "artwork": 600,
+        "edition": 777,
+        "flags": 0,
+        "cover_filename": "Software.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 613,
+    "fields": {
+        "book": 641,
+        "artwork": 601,
+        "edition": 778,
+        "flags": 0,
+        "cover_filename": "Wetware.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 614,
+    "fields": {
+        "book": 1015,
+        "artwork": 602,
+        "edition": 779,
+        "flags": 0,
+        "cover_filename": "MurphysGambit.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 615,
+    "fields": {
+        "book": 1016,
+        "artwork": 603,
+        "edition": 780,
+        "flags": 0,
+        "cover_filename": "TheDemonLord.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 616,
+    "fields": {
+        "book": 1017,
+        "artwork": 604,
+        "edition": 781,
+        "flags": 0,
+        "cover_filename": "Thoughtworld.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 617,
+    "fields": {
+        "book": 1018,
+        "artwork": 605,
+        "edition": 782,
+        "flags": 0,
+        "cover_filename": "BornWithTheDead.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 618,
+    "fields": {
+        "book": 1020,
+        "artwork": 606,
+        "edition": 783,
+        "flags": 0,
+        "cover_filename": "Nemesis.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 619,
+    "fields": {
+        "book": 1021,
+        "artwork": 607,
+        "edition": 784,
+        "flags": 0,
+        "cover_filename": "NightfallOne.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 620,
+    "fields": {
+        "book": 1022,
+        "artwork": 608,
+        "edition": 524,
+        "flags": 0,
+        "cover_filename": "GeisOfTheGargoyle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 621,
+    "fields": {
+        "book": 616,
+        "artwork": 609,
+        "edition": 540,
+        "flags": 0,
+        "cover_filename": "Options.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 622,
+    "fields": {
+        "book": 1023,
+        "artwork": 610,
+        "edition": 785,
+        "flags": 0,
+        "cover_filename": "UpTheLine.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 623,
+    "fields": {
+        "book": 857,
+        "artwork": 611,
+        "edition": 538,
+        "flags": 0,
+        "cover_filename": "Nightfall.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 624,
+    "fields": {
+        "book": 1024,
+        "artwork": 612,
+        "edition": 786,
+        "flags": 0,
+        "cover_filename": "PriestessOfTheWhite.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 625,
+    "fields": {
+        "book": 1025,
+        "artwork": 613,
+        "edition": 787,
+        "flags": 0,
+        "cover_filename": "Cosmopath.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 626,
+    "fields": {
+        "book": 1026,
+        "artwork": 614,
+        "edition": 788,
+        "flags": 0,
+        "cover_filename": "TheHitchhikersGuideToTheGalaxy.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 627,
+    "fields": {
+        "book": 1027,
+        "artwork": 615,
+        "edition": 789,
+        "flags": 0,
+        "cover_filename": "TheNightOfThePuudly.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 628,
+    "fields": {
+        "book": 1028,
+        "artwork": 616,
+        "edition": 790,
+        "flags": 0,
+        "cover_filename": "IdealWar.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 629,
+    "fields": {
+        "book": 1029,
+        "artwork": 617,
+        "edition": 791,
+        "flags": 0,
+        "cover_filename": "LegionOfTheDamned.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 630,
+    "fields": {
+        "book": 1030,
+        "artwork": 618,
+        "edition": 792,
+        "flags": 0,
+        "cover_filename": "TheFinalBattle.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 631,
+    "fields": {
+        "book": 1031,
+        "artwork": 619,
+        "edition": 793,
+        "flags": 512,
+        "cover_filename": "MisterMonday.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 632,
+    "fields": {
+        "book": 1032,
+        "artwork": 620,
+        "edition": 794,
+        "flags": 512,
+        "cover_filename": "GrimTuesday.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 633,
+    "fields": {
+        "book": 351,
+        "artwork": 621,
+        "edition": 381,
+        "flags": 0,
+        "cover_filename": "EarthmanComeHome.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 634,
+    "fields": {
+        "book": 467,
+        "artwork": 622,
+        "edition": 795,
+        "flags": 0,
+        "cover_filename": "AndAllTheStarsAStage.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 635,
+    "fields": {
+        "book": 1033,
+        "artwork": 623,
+        "edition": 796,
+        "flags": 0,
+        "cover_filename": "TheDarknessOnDiamondia.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 636,
+    "fields": {
+        "book": 951,
+        "artwork": 624,
+        "edition": 797,
+        "flags": 0,
+        "cover_filename": "FrankensteinUnbound.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 637,
+    "fields": {
+        "book": 658,
+        "artwork": 625,
+        "edition": 104,
+        "flags": 0,
+        "cover_filename": "HelliconiaSpring.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 638,
+    "fields": {
+        "book": 692,
+        "artwork": 626,
+        "edition": 798,
+        "flags": 0,
+        "cover_filename": "TheDeathRaysOfArdilla.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 639,
+    "fields": {
+        "book": 468,
+        "artwork": 627,
+        "edition": 799,
+        "flags": 0,
+        "cover_filename": "Resolution.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 640,
+    "fields": {
+        "book": 508,
+        "artwork": 460,
+        "edition": null,
+        "flags": 0,
+        "cover_filename": "Neuromancer7.jpg",
+        "private_notes": "edition 800, leaving it out means it doesn't show up in title list but does in cover list"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 641,
+    "fields": {
+        "book": 757,
+        "artwork": 628,
+        "edition": 801,
+        "flags": 0,
+        "cover_filename": "SwordAndCitadel.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 642,
+    "fields": {
+        "book": 158,
+        "artwork": 629,
+        "edition": 802,
+        "flags": 0,
+        "cover_filename": "TheMidwichCuckoos.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 643,
+    "fields": {
+        "book": 159,
+        "artwork": 630,
+        "edition": 803,
+        "flags": 0,
+        "cover_filename": "TheSeedsOfTime.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 644,
+    "fields": {
+        "book": 180,
+        "artwork": 631,
+        "edition": 804,
+        "flags": 0,
+        "cover_filename": "TroubleWithLichen.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 645,
+    "fields": {
+        "book": 191,
+        "artwork": 632,
+        "edition": 805,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 646,
+    "fields": {
+        "book": 191,
+        "artwork": 632,
+        "edition": null,
+        "flags": 0,
+        "cover_filename": "TheChrysalids.jpg",
+        "private_notes": "edition 806, leaving it out means it doesn't show up in title list but does in cover list"
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 647,
+    "fields": {
+        "book": 160,
+        "artwork": 633,
+        "edition": 807,
+        "flags": 0,
+        "cover_filename": "TheDayOfTheTriffids.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 648,
+    "fields": {
+        "book": 976,
+        "artwork": 545,
+        "edition": 720,
+        "flags": 0,
+        "cover_filename": "TheCompassRose.jpg",
+        "private_notes": null
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 649,
+    "fields": {
+        "book": 453,
+        "artwork": 634,
+        "edition": 808,
+        "flags": 0,
+        "cover_filename": "SargassoOfSpace.jpg",
+        "private_notes": null
+    }
+}
+]

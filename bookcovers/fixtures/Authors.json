@@ -1,0 +1,7817 @@
+[
+{
+    "model": "bookcovers.authors",
+    "pk": 1,
+    "fields": {
+        "name": "Dr Willis E. McNelly",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 2,
+    "fields": {
+        "name": "Lester Del Rey and Erik Van Lhin",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 3,
+    "fields": {
+        "name": "Walter M. Miller, Jr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 4,
+    "fields": {
+        "name": "Robert Heinlein",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.heinleinsociety.org/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 5,
+    "fields": {
+        "name": "Frank Herbert",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1907-07-07",
+        "date_of_death": "1988-05-08",
+        "birthplace": "Butler, Bates County, Missouri",
+        "nationality": null,
+        "notes": "http://www.wegrokit.com/museum.htm; http://www.wegrokit.com/rah_faq.htm"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 6,
+    "fields": {
+        "name": "Philip K. Dick",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 7,
+    "fields": {
+        "name": "A. E. van Vogt",
+        "fullname": "Alfred Elton van Vogt",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": "anitoba, Canada",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 8,
+    "fields": {
+        "name": "Philip Jos\u00e9 Farmer",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 9,
+    "fields": {
+        "name": "Clifford D. Simak",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 10,
+    "fields": {
+        "name": "Poul Anderson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 11,
+    "fields": {
+        "name": "Robert A. Heinlein",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 12,
+    "fields": {
+        "name": "Marion Campbell",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 13,
+    "fields": {
+        "name": "Colin Kapp",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 14,
+    "fields": {
+        "name": "Brian Aldiss",
+        "fullname": "Brian Wilson Aldiss",
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1925-08-18",
+        "date_of_death": null,
+        "birthplace": "Dereham, Norfolk, England",
+        "nationality": "British",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 15,
+    "fields": {
+        "name": "Ray Bradbury",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 16,
+    "fields": {
+        "name": "Christopher Priest",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 17,
+    "fields": {
+        "name": "Peter Haining",
+        "fullname": null,
+        "flags": 16,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 18,
+    "fields": {
+        "name": "Isaac Asimov",
+        "fullname": "Isaak Iudich Azimov",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 19,
+    "fields": {
+        "name": "Lloyd Biggle Jr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 20,
+    "fields": {
+        "name": "Barry Malzberg",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 21,
+    "fields": {
+        "name": "George Zebrowski",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 22,
+    "fields": {
+        "name": "WilliamFNolan",
+        "fullname": null,
+        "flags": 16,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 23,
+    "fields": {
+        "name": "Anne McCaffrey",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 24,
+    "fields": {
+        "name": "H. G. Wells",
+        "fullname": "Herbert George Wells",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 25,
+    "fields": {
+        "name": "Robert Silverberg",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 26,
+    "fields": {
+        "name": "M. John Harrison",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 27,
+    "fields": {
+        "name": "Arthur C. Clarke",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 28,
+    "fields": {
+        "name": "EllisWeiner",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 29,
+    "fields": {
+        "name": "Gene Wolfe",
+        "fullname": "Gene Rodman Wolfe",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 30,
+    "fields": {
+        "name": "John Brunner",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 31,
+    "fields": {
+        "name": "A. Bertram Chandler",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": "Aldershot, England",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 32,
+    "fields": {
+        "name": "Madeleine L'Engle",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 33,
+    "fields": {
+        "name": "Joan D. Vinge",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 34,
+    "fields": {
+        "name": "Orson Scott Card",
+        "fullname": null,
+        "flags": null,
+        "website": "www.hatrack.com",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 35,
+    "fields": {
+        "name": "C.S.Friedman",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 36,
+    "fields": {
+        "name": "Clark Darlton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 37,
+    "fields": {
+        "name": "Larry Niven",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 38,
+    "fields": {
+        "name": "Carol and Frederik Pohl",
+        "fullname": null,
+        "flags": 16,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 39,
+    "fields": {
+        "name": "Larry Niven & Jerry Pournelle",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 40,
+    "fields": {
+        "name": "Jerry Pournelle",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 41,
+    "fields": {
+        "name": "Meira Chand",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 42,
+    "fields": {
+        "name": "Chris Morgan",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 43,
+    "fields": {
+        "name": "Ken Blake",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 44,
+    "fields": {
+        "name": "Fay Weldon",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 45,
+    "fields": {
+        "name": "Nancy Cato",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 46,
+    "fields": {
+        "name": "Betty Smith",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 47,
+    "fields": {
+        "name": "Ron De Christoforo",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 48,
+    "fields": {
+        "name": "James Clavell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 49,
+    "fields": {
+        "name": "John Grant",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 50,
+    "fields": {
+        "name": "Robert Sheckley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 51,
+    "fields": {
+        "name": "Nigel Kneale",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 52,
+    "fields": {
+        "name": "Charles Dickens",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 53,
+    "fields": {
+        "name": "Virginia Andrews",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 54,
+    "fields": {
+        "name": "Mary Wesley",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 55,
+    "fields": {
+        "name": "Robert Lindsey",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 56,
+    "fields": {
+        "name": "John Minahan",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 57,
+    "fields": {
+        "name": "Jill Tweedie",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 58,
+    "fields": {
+        "name": "Marion Bradley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 59,
+    "fields": {
+        "name": "Marion Zimmer Bradley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 60,
+    "fields": {
+        "name": "John Irving",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 61,
+    "fields": {
+        "name": "R. F. Delderfield",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 62,
+    "fields": {
+        "name": "Dorothy Uhnak",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 63,
+    "fields": {
+        "name": "D.M. Thomas",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 64,
+    "fields": {
+        "name": "Harry Harrison",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 65,
+    "fields": {
+        "name": "Jane Austen",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 66,
+    "fields": {
+        "name": "Janet Sacks",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 67,
+    "fields": {
+        "name": "L. P. Hartley",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 68,
+    "fields": {
+        "name": "George Mann",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 69,
+    "fields": {
+        "name": "D. H. Lawrence",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 70,
+    "fields": {
+        "name": "Molly Keane (M.J. Farrell)",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 71,
+    "fields": {
+        "name": "Lynne Reid Banks",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 72,
+    "fields": {
+        "name": "Doris Grant & Jean Joice",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 73,
+    "fields": {
+        "name": "Jean M. Auel",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 74,
+    "fields": {
+        "name": "Diana Athill",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 75,
+    "fields": {
+        "name": "Robert Anton Wilson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 76,
+    "fields": {
+        "name": "Keri Hulme",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 77,
+    "fields": {
+        "name": "Colleen McCullough",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 78,
+    "fields": {
+        "name": "Clive Barker",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 79,
+    "fields": {
+        "name": "Milan Kundera",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 80,
+    "fields": {
+        "name": "L.M. Montgomery",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 81,
+    "fields": {
+        "name": "Marguerite Duras",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 82,
+    "fields": {
+        "name": "Ruth Rendell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 83,
+    "fields": {
+        "name": "Rachel Billington",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 84,
+    "fields": {
+        "name": "Norma Klein",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 85,
+    "fields": {
+        "name": "James A. Michener",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 86,
+    "fields": {
+        "name": "J. R. R. Tolkien",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 87,
+    "fields": {
+        "name": "C. S. Lewis",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 88,
+    "fields": {
+        "name": "Richard H. Francis",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 89,
+    "fields": {
+        "name": "Zenna Henderson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 90,
+    "fields": {
+        "name": "John Wyndham",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 91,
+    "fields": {
+        "name": "Greg Egan",
+        "fullname": null,
+        "flags": null,
+        "website": "http://gregegan.customer.netspace.net.au/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 92,
+    "fields": {
+        "name": "Michael Moorcock",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.multiverse.org/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 93,
+    "fields": {
+        "name": "Eric Van Lustbader",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 94,
+    "fields": {
+        "name": "Larry Niven & Steve Barnes",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 95,
+    "fields": {
+        "name": "Trudi Canavan",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.trudicanavan.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 96,
+    "fields": {
+        "name": "Alfred Bester",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 97,
+    "fields": {
+        "name": "Edmond Hamilton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 98,
+    "fields": {
+        "name": "Roger Zelazny",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 99,
+    "fields": {
+        "name": "Thomas J. Ryan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 100,
+    "fields": {
+        "name": "Rex Gordon",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 101,
+    "fields": {
+        "name": "James Tiptree Jr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "(alias of Alice Sheldon)"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 102,
+    "fields": {
+        "name": "Arkady & Boris Strugatsky",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 103,
+    "fields": {
+        "name": "Mark Anthony",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 104,
+    "fields": {
+        "name": "Elizabeth Moon",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 105,
+    "fields": {
+        "name": "Ursula Le Guin",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.ursulakleguin.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 106,
+    "fields": {
+        "name": "Stephen Donaldson",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.stephenrdonaldson.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 107,
+    "fields": {
+        "name": "Alexei Panshin",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 108,
+    "fields": {
+        "name": "Ben Bova",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 109,
+    "fields": {
+        "name": "Captain W. E. Johns",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 110,
+    "fields": {
+        "name": "David Brin",
+        "fullname": null,
+        "flags": null,
+        "website": "www.davidbrin.com",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 111,
+    "fields": {
+        "name": "David Feintuch",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": "2006-03-16",
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 112,
+    "fields": {
+        "name": "Frederik Pohl",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 113,
+    "fields": {
+        "name": "Jack L Chalker",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.jackchalker.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 114,
+    "fields": {
+        "name": "Jack Vance",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 115,
+    "fields": {
+        "name": "John Christopher",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 116,
+    "fields": {
+        "name": "John Shirley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 117,
+    "fields": {
+        "name": "Jules Verne",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 118,
+    "fields": {
+        "name": "K H Scheer",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 119,
+    "fields": {
+        "name": "Kim Stanley Robinson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 120,
+    "fields": {
+        "name": "Kurt Mahr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 121,
+    "fields": {
+        "name": "Clark Ashton Smith",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 122,
+    "fields": {
+        "name": "Lindsay Gutteridge",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 123,
+    "fields": {
+        "name": "Paul J McAuley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 124,
+    "fields": {
+        "name": "Peake/Ballard/Aldiss",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 125,
+    "fields": {
+        "name": "Spider Robinson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 126,
+    "fields": {
+        "name": "Stephen Baxter",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 127,
+    "fields": {
+        "name": "Charles Platt",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 128,
+    "fields": {
+        "name": "Brian Herbert & Kevin J. Anderson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 129,
+    "fields": {
+        "name": "Richard Morgan",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.richardkmorgan.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 130,
+    "fields": {
+        "name": "David Herter",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 131,
+    "fields": {
+        "name": "Andr\u00e9 Norton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 132,
+    "fields": {
+        "name": "Dean R. Koontz",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 133,
+    "fields": {
+        "name": "Andre Norton & Mercedes Lackey",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 134,
+    "fields": {
+        "name": "Harry Turtledove",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 135,
+    "fields": {
+        "name": "Frank Herbert & Bill Ransom",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 136,
+    "fields": {
+        "name": "C. J. Cherryh",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 137,
+    "fields": {
+        "name": "Frena Bloomfield",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 138,
+    "fields": {
+        "name": "Richard Avery",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 139,
+    "fields": {
+        "name": "Pierre Boulle",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 140,
+    "fields": {
+        "name": "Jon Courteney Grimwood",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 141,
+    "fields": {
+        "name": "Walter Ernsting & Kurt Mahr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 142,
+    "fields": {
+        "name": "Frederik Pohl & C.M. Kornbluth",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 143,
+    "fields": {
+        "name": "Professor Hans Holzer P.h.D.",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 144,
+    "fields": {
+        "name": "Dan Simmons",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 145,
+    "fields": {
+        "name": "Norman Edwards",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 146,
+    "fields": {
+        "name": "Jonathan Fast",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 147,
+    "fields": {
+        "name": "William Gibson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 148,
+    "fields": {
+        "name": "James Blish",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 149,
+    "fields": {
+        "name": "Richard A. Lupoff",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 150,
+    "fields": {
+        "name": "Piers Anthony",
+        "fullname": "Piers Anthony Dillingham Jacob",
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1934-08-06",
+        "date_of_death": null,
+        "birthplace": "Oxford, England",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 151,
+    "fields": {
+        "name": "Octavia E. Butler",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 152,
+    "fields": {
+        "name": "Adam Roberts",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 153,
+    "fields": {
+        "name": "Ben Weaver",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "pseudonym of Peter Telep, aka Pete Callahan, P W Storm"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 154,
+    "fields": {
+        "name": "Thomas M. Disch",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 155,
+    "fields": {
+        "name": "Fritz Leiber",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 156,
+    "fields": {
+        "name": "Thomas Burnett Swann",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 157,
+    "fields": {
+        "name": "Raymond Kiminski",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 158,
+    "fields": {
+        "name": "John D MacDonald",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 159,
+    "fields": {
+        "name": "Brian N. Ball",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 160,
+    "fields": {
+        "name": "Ron Goulart",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 161,
+    "fields": {
+        "name": "Julian May",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 162,
+    "fields": {
+        "name": "Marge Piercy",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 163,
+    "fields": {
+        "name": "Vonda N. McIntyre",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 164,
+    "fields": {
+        "name": "Kurt Brand",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 165,
+    "fields": {
+        "name": "Patrick Dearen",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 166,
+    "fields": {
+        "name": "Brian M. Stableford",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 167,
+    "fields": {
+        "name": "Saul Dunn",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 168,
+    "fields": {
+        "name": "T.J. Bass",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 169,
+    "fields": {
+        "name": "Fred Saberhagen",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 170,
+    "fields": {
+        "name": "Steve Jackson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 171,
+    "fields": {
+        "name": "Steve Jackson & Ian Livingstone",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 172,
+    "fields": {
+        "name": "Patrick Tilley",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.patrick-tilley.com/;http://www.patricktilley.co.uk/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 173,
+    "fields": {
+        "name": "Ian Livingstone",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 174,
+    "fields": {
+        "name": "Bob Shaw",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 175,
+    "fields": {
+        "name": "Jack Womack",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 176,
+    "fields": {
+        "name": "Gregory Benford",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 177,
+    "fields": {
+        "name": "Anne McCaffrey & Margaret Ball",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 178,
+    "fields": {
+        "name": "James White",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 179,
+    "fields": {
+        "name": "Paul McCauley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 180,
+    "fields": {
+        "name": "Edward E. Smith, Ph. D",
+        "fullname": "Edward Elmer Smith",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 181,
+    "fields": {
+        "name": "E. E. 'Doc' Smith",
+        "fullname": "Edward Elmer Smith",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 182,
+    "fields": {
+        "name": "Roger Zelazny & Jane Lindskold",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 183,
+    "fields": {
+        "name": "K H Scheer & Kurt Mahr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 184,
+    "fields": {
+        "name": "Gordon R. Dickson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 185,
+    "fields": {
+        "name": "Barry N. Malzberg",
+        "fullname": "Barry Norman Malzberg",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 186,
+    "fields": {
+        "name": "Charles Eric Maine",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 187,
+    "fields": {
+        "name": "Charles Dye",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 188,
+    "fields": {
+        "name": "Joe Haldeman & Jack Haldeman II",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 189,
+    "fields": {
+        "name": "Neal Stephenson",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.nealstephenson.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 190,
+    "fields": {
+        "name": "Philip Francis Nowlan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 191,
+    "fields": {
+        "name": "Daniel Keyes",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 192,
+    "fields": {
+        "name": "Mervyn Peake",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 193,
+    "fields": {
+        "name": "William Dexter",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 194,
+    "fields": {
+        "name": "Edgar Rice Burroughs",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 195,
+    "fields": {
+        "name": "James Baen",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 196,
+    "fields": {
+        "name": "Nancy and Francis Dorer",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 197,
+    "fields": {
+        "name": "William Morris",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 198,
+    "fields": {
+        "name": "Jeff Noon",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 199,
+    "fields": {
+        "name": "Fred Hoyle & John Elliot",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 200,
+    "fields": {
+        "name": "Audrey Niffenegger",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 201,
+    "fields": {
+        "name": "Samuel R. Delaney",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 202,
+    "fields": {
+        "name": "Terry Carr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 203,
+    "fields": {
+        "name": "William F Nolan & George Clayton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 204,
+    "fields": {
+        "name": "Peter F. Hamilton",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.peterfhamilton.co.uk/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 205,
+    "fields": {
+        "name": "Lucy Irvine",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 206,
+    "fields": {
+        "name": "Flora Rheta Screiber",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 207,
+    "fields": {
+        "name": "Greg Bear",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 208,
+    "fields": {
+        "name": "Mary McCarthy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 209,
+    "fields": {
+        "name": "Randy M. Dannenfelser",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 210,
+    "fields": {
+        "name": "Paul Zindel",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 211,
+    "fields": {
+        "name": "Helen MacInnes",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 212,
+    "fields": {
+        "name": "Robert Shea & Robert Anton Wilson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 213,
+    "fields": {
+        "name": "Patrick Woodroffe",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 214,
+    "fields": {
+        "name": "Peter Tilbury & Colin Bostock-Smith",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 215,
+    "fields": {
+        "name": "John Jay Osborn",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 216,
+    "fields": {
+        "name": "Christopher Matthew",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 217,
+    "fields": {
+        "name": "John Grant and Elizabeth Humphrey",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 218,
+    "fields": {
+        "name": "Jackie Collins",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 219,
+    "fields": {
+        "name": "Jane Frank",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 220,
+    "fields": {
+        "name": "Nigel Suckling",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 221,
+    "fields": {
+        "name": "Marilyn French",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 222,
+    "fields": {
+        "name": "Malcolm Bradbury",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 223,
+    "fields": {
+        "name": "Nina Bawden",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 224,
+    "fields": {
+        "name": "Stephen Youll",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 225,
+    "fields": {
+        "name": "H. B. Gilmour",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 226,
+    "fields": {
+        "name": "Iain Banks",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 227,
+    "fields": {
+        "name": "Leo Tolstoy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 228,
+    "fields": {
+        "name": "Steven Heller & Terry Steele",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 229,
+    "fields": {
+        "name": "Edna O'Brien",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 230,
+    "fields": {
+        "name": "Henry James",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 231,
+    "fields": {
+        "name": "Jim Burns",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 232,
+    "fields": {
+        "name": "Edith Wharton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 233,
+    "fields": {
+        "name": "Eckart Sackmann",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 234,
+    "fields": {
+        "name": "Fran\u00e7oise Sagan",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 235,
+    "fields": {
+        "name": "Tom Wolfe",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 236,
+    "fields": {
+        "name": "Carlos Castaneda",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 237,
+    "fields": {
+        "name": "Muriel Spark",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 238,
+    "fields": {
+        "name": "Nevil Shute",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 239,
+    "fields": {
+        "name": "H. E. Bates",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 240,
+    "fields": {
+        "name": "Frank Rose",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 241,
+    "fields": {
+        "name": "Susan Hill",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 242,
+    "fields": {
+        "name": "Matthew Stawicki",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 243,
+    "fields": {
+        "name": "Tim White",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 244,
+    "fields": {
+        "name": "Luke Rhinehart",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 245,
+    "fields": {
+        "name": "Bill Cosby",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 246,
+    "fields": {
+        "name": "Jay McInerney",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 247,
+    "fields": {
+        "name": "Ron Tiner",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 248,
+    "fields": {
+        "name": "David Leavitt",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 249,
+    "fields": {
+        "name": "Larry McMurtry",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 250,
+    "fields": {
+        "name": "Bram Stoker",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 251,
+    "fields": {
+        "name": "William C. Dear",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 252,
+    "fields": {
+        "name": "John Clute",
+        "fullname": null,
+        "flags": 512,
+        "website": "encyclopedia",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 253,
+    "fields": {
+        "name": "Penelope Farmer",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 254,
+    "fields": {
+        "name": "Katherine Neville",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 255,
+    "fields": {
+        "name": "Forrest J Ackerman",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 256,
+    "fields": {
+        "name": "Seth Morgan",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 257,
+    "fields": {
+        "name": "Terry Pratchett",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 258,
+    "fields": {
+        "name": "Sally Burton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 259,
+    "fields": {
+        "name": "Bruce Sterling",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 260,
+    "fields": {
+        "name": "Susan Elizabeth Phillips",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 261,
+    "fields": {
+        "name": "Trudi Pacter",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 262,
+    "fields": {
+        "name": "Tess Stimson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 263,
+    "fields": {
+        "name": "Margaret Atwood",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 264,
+    "fields": {
+        "name": "Douglas Rushkoff",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 265,
+    "fields": {
+        "name": "Harper Lee",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 266,
+    "fields": {
+        "name": "Steven Levy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 267,
+    "fields": {
+        "name": "P. G. Wodehouse",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 268,
+    "fields": {
+        "name": "R. A. MacAvoy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 269,
+    "fields": {
+        "name": "Michael Carson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 270,
+    "fields": {
+        "name": "Paul Scott",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 271,
+    "fields": {
+        "name": "Richard Leakey and Roger Lewin",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 272,
+    "fields": {
+        "name": "George Orwell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 273,
+    "fields": {
+        "name": "Patricia Cornwell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 274,
+    "fields": {
+        "name": "Martin McKenna",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 275,
+    "fields": {
+        "name": "Jack Mingo",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 276,
+    "fields": {
+        "name": "Paullina Simons",
+        "fullname": null,
+        "flags": 512,
+        "website": "http://www.paullinasimons.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 277,
+    "fields": {
+        "name": "Richard North Patterson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 278,
+    "fields": {
+        "name": "Michael Lewis",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 279,
+    "fields": {
+        "name": "Thomas Hardy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 280,
+    "fields": {
+        "name": "W. Somerset Maugham",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 281,
+    "fields": {
+        "name": "G. Pascal Zachary",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 282,
+    "fields": {
+        "name": "Liane Jones",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 283,
+    "fields": {
+        "name": "Bruce Bethke",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 284,
+    "fields": {
+        "name": "John Hamilton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "anonymous - believed to be"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 285,
+    "fields": {
+        "name": "Jack E. Norton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 286,
+    "fields": {
+        "name": "Stephen Bury",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "Neal Stephenson & Frederick George"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 287,
+    "fields": {
+        "name": "Diana Morgan",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 288,
+    "fields": {
+        "name": "Kevin J. Anderson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 289,
+    "fields": {
+        "name": "Christopher Hilton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 290,
+    "fields": {
+        "name": "Richard Bandler",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 291,
+    "fields": {
+        "name": "James Wallace & Jim Erickson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 292,
+    "fields": {
+        "name": "Jill Morrell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 293,
+    "fields": {
+        "name": "Leon Uris",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 294,
+    "fields": {
+        "name": "Jean Plaidy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 295,
+    "fields": {
+        "name": "Carl Bernstein & Bob Woodward",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 296,
+    "fields": {
+        "name": "Jostein Gaarder",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 297,
+    "fields": {
+        "name": "Diana Maychick",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 298,
+    "fields": {
+        "name": "Melanie McGrath",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 299,
+    "fields": {
+        "name": "Jane Owen",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 300,
+    "fields": {
+        "name": "Philippa Gregory",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 301,
+    "fields": {
+        "name": "Helen Fielding",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 302,
+    "fields": {
+        "name": "Nick Hornby",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 303,
+    "fields": {
+        "name": "Po Bronson",
+        "fullname": null,
+        "flags": 512,
+        "website": "http://www.pobronson.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 304,
+    "fields": {
+        "name": "Fred Moody",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 305,
+    "fields": {
+        "name": "Steven Bach",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 306,
+    "fields": {
+        "name": "Rupert Everett",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 307,
+    "fields": {
+        "name": "David J Howe",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 308,
+    "fields": {
+        "name": "Joseph Heller",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 309,
+    "fields": {
+        "name": "Thornton Wilder",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 310,
+    "fields": {
+        "name": "Bill Bryson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 311,
+    "fields": {
+        "name": "Dava Sobel",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 312,
+    "fields": {
+        "name": "John Birmingham",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 313,
+    "fields": {
+        "name": "Bob Judd",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 314,
+    "fields": {
+        "name": "Dick Jude",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 315,
+    "fields": {
+        "name": "Peter Hedges",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 316,
+    "fields": {
+        "name": "Christian Jacq",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 317,
+    "fields": {
+        "name": "Louise Bagshawe",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 318,
+    "fields": {
+        "name": "Jill Mansell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 319,
+    "fields": {
+        "name": "Lorna Hill",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 321,
+    "fields": {
+        "name": "William F. Nolan & George Clayton Johnson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 322,
+    "fields": {
+        "name": "Harriet Frank",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 323,
+    "fields": {
+        "name": "Rupert Thomson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 324,
+    "fields": {
+        "name": "J. K. Rowling",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 325,
+    "fields": {
+        "name": "Todd Grimson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 326,
+    "fields": {
+        "name": "George Foy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 327,
+    "fields": {
+        "name": "William Goldman",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 328,
+    "fields": {
+        "name": "Trever Grove",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 329,
+    "fields": {
+        "name": "Nicholas Evans",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 330,
+    "fields": {
+        "name": "Louis de Berni\u00e9res",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 331,
+    "fields": {
+        "name": "Naomi Campbell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 332,
+    "fields": {
+        "name": "Tim Moore",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 333,
+    "fields": {
+        "name": "Rudy Rucker",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 334,
+    "fields": {
+        "name": "Oscar Wilde",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 335,
+    "fields": {
+        "name": "matt beaumont",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 336,
+    "fields": {
+        "name": "Chuck Palahniuk",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 337,
+    "fields": {
+        "name": "Douglas Coupland",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 338,
+    "fields": {
+        "name": "Tim Berners-Lee",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 339,
+    "fields": {
+        "name": "Paul Coelho",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 340,
+    "fields": {
+        "name": "Tony Hawks",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 341,
+    "fields": {
+        "name": "Rosie Thomas",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 342,
+    "fields": {
+        "name": "Ha Jin",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 343,
+    "fields": {
+        "name": "Jeremy Dyson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 344,
+    "fields": {
+        "name": "Carole C. Carlson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 345,
+    "fields": {
+        "name": "Candace Bushnell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 346,
+    "fields": {
+        "name": "Dale Carnegie",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 347,
+    "fields": {
+        "name": "Philip Pullman",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 348,
+    "fields": {
+        "name": "Steve Gallagher",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 349,
+    "fields": {
+        "name": "Jenny Colgan",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 350,
+    "fields": {
+        "name": "Michael Crichton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 351,
+    "fields": {
+        "name": "Kathleen Winsor",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 352,
+    "fields": {
+        "name": "Jennifer Weiner",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 353,
+    "fields": {
+        "name": "Rachel Armstrong",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 354,
+    "fields": {
+        "name": "David Baddiel",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 355,
+    "fields": {
+        "name": "lury.gibson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "(Adam Lury & Simon Gibson)"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 356,
+    "fields": {
+        "name": "Ian Summers",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 357,
+    "fields": {
+        "name": "Chris Evans",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 358,
+    "fields": {
+        "name": "David R. Palmer",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 359,
+    "fields": {
+        "name": "L. P. Davies",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 360,
+    "fields": {
+        "name": "Arthur Golden",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 361,
+    "fields": {
+        "name": "Michael Ende",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 362,
+    "fields": {
+        "name": "John King",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 363,
+    "fields": {
+        "name": "Jessica Adams",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 364,
+    "fields": {
+        "name": "Wiktor Bukato",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 365,
+    "fields": {
+        "name": "Nicholas Corder",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 366,
+    "fields": {
+        "name": "Available",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 367,
+    "fields": {
+        "name": "Kurt Vonnegut Jr",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 368,
+    "fields": {
+        "name": "Michael Moore",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 369,
+    "fields": {
+        "name": "K. M. Peyton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 370,
+    "fields": {
+        "name": "James Wallace",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 371,
+    "fields": {
+        "name": "Paul C. Chafe",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 372,
+    "fields": {
+        "name": "Vincent Di Fate",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 373,
+    "fields": {
+        "name": "Richard Matheson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 374,
+    "fields": {
+        "name": "Vernor Vinge",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 375,
+    "fields": {
+        "name": "Shyam Bhatia and Daniel McGrory",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 376,
+    "fields": {
+        "name": "Jerry Weist",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 377,
+    "fields": {
+        "name": "Carol Clewlow",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 378,
+    "fields": {
+        "name": "Maggie O'Farrell",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 379,
+    "fields": {
+        "name": "David Sheff",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 380,
+    "fields": {
+        "name": "David Yallop",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 381,
+    "fields": {
+        "name": "Whitley Strieber",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 382,
+    "fields": {
+        "name": "M. S. Dobbs-Higginson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 383,
+    "fields": {
+        "name": "Ian Stewart & Jack Cohen",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 384,
+    "fields": {
+        "name": "Mil Millington",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 385,
+    "fields": {
+        "name": "Boris Johnson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 386,
+    "fields": {
+        "name": "Nicholas Sparks",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 387,
+    "fields": {
+        "name": "Martin Plimmer",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 388,
+    "fields": {
+        "name": "Robyn Sisman",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 389,
+    "fields": {
+        "name": "Stephen King",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 390,
+    "fields": {
+        "name": "Frank Kelly Freas & Laura Brodian Freas",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 391,
+    "fields": {
+        "name": "Nick Varley",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 392,
+    "fields": {
+        "name": "Gene Brewer",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 393,
+    "fields": {
+        "name": "Imogen Parker",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 394,
+    "fields": {
+        "name": "Mavis Cheek",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 395,
+    "fields": {
+        "name": "Jasper Fforde",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.jasperfforde.com/bookstack.html",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 396,
+    "fields": {
+        "name": "Mary Doria Russell",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 397,
+    "fields": {
+        "name": "Dan Brown",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 398,
+    "fields": {
+        "name": "Robert Rankin",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 399,
+    "fields": {
+        "name": "Junichir? Tanizaki",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 400,
+    "fields": {
+        "name": "Gideon Defoe",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 401,
+    "fields": {
+        "name": "Brian Daley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 402,
+    "fields": {
+        "name": "Rochelle Morton",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 403,
+    "fields": {
+        "name": "marcus du sautoy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 404,
+    "fields": {
+        "name": "Iain M. Banks",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 405,
+    "fields": {
+        "name": "Catherine Ryan Hyde",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 406,
+    "fields": {
+        "name": "Lewis Perdue",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 407,
+    "fields": {
+        "name": "John Varley",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.varley.net/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 408,
+    "fields": {
+        "name": "Paul Preuss",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 409,
+    "fields": {
+        "name": "Lawrence Robinson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 410,
+    "fields": {
+        "name": "John Gribbin",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 411,
+    "fields": {
+        "name": "Kate Adie",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 412,
+    "fields": {
+        "name": "Yann Martel",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 413,
+    "fields": {
+        "name": "John Perkins",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 414,
+    "fields": {
+        "name": "Jennifer Lynch",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 415,
+    "fields": {
+        "name": "Jeremy Clarkson",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 416,
+    "fields": {
+        "name": "Monique Truong",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 417,
+    "fields": {
+        "name": "Frank M. Robinson",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 418,
+    "fields": {
+        "name": "Susanna Kaysen",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 419,
+    "fields": {
+        "name": "Jane and Howard Frank",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 420,
+    "fields": {
+        "name": "Latifa",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 421,
+    "fields": {
+        "name": "Various",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 422,
+    "fields": {
+        "name": "David Langford",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 423,
+    "fields": {
+        "name": "jeffrey steingarten",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 424,
+    "fields": {
+        "name": "Trevor Grove",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 425,
+    "fields": {
+        "name": "Gary Lovisi",
+        "fullname": null,
+        "flags": 512,
+        "website": "artbook",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 426,
+    "fields": {
+        "name": "Louise Lawrence",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 427,
+    "fields": {
+        "name": "Robert Holdstock",
+        "fullname": null,
+        "flags": 512,
+        "website": "encylopedia",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 428,
+    "fields": {
+        "name": "John Crowley",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 429,
+    "fields": {
+        "name": "Patricia A. McKillip",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 430,
+    "fields": {
+        "name": "Tom Reamy",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 431,
+    "fields": {
+        "name": "Donald Kingsbury",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 432,
+    "fields": {
+        "name": "George R. R. Martin",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 433,
+    "fields": {
+        "name": "L. Ron Hubbard",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 434,
+    "fields": {
+        "name": "George Alec Effinger",
+        "fullname": null,
+        "flags": 512,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 435,
+    "fields": {
+        "name": "Jamie Thomson & Mark Smith",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 436,
+    "fields": {
+        "name": "Dean Devlin and Roland Emmerich",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 437,
+    "fields": {
+        "name": "Freda Warrington",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 438,
+    "fields": {
+        "name": "Isaac Asimov & Robert Silverberg",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 439,
+    "fields": {
+        "name": "Mike Resnick",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 440,
+    "fields": {
+        "name": "Norman Spinrad",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 441,
+    "fields": {
+        "name": "Lois McMaster Bujold",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.dendarii.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 442,
+    "fields": {
+        "name": "Terry Brooks",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.terrybrooks.net/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 443,
+    "fields": {
+        "name": "Michael Moorcock & Storm Constantine",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 444,
+    "fields": {
+        "name": "Chris Claremont",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 445,
+    "fields": {
+        "name": "Peter Telep",
+        "fullname": null,
+        "flags": null,
+        "website": "http://web.mac.com/ptelep/iWeb/Site/Welcome.html",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 446,
+    "fields": {
+        "name": "Lawrence Miles",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 447,
+    "fields": {
+        "name": "David Bischoff",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 448,
+    "fields": {
+        "name": "Ashley McConnell",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 449,
+    "fields": {
+        "name": "Aaron Allston",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 450,
+    "fields": {
+        "name": "Dave Wolverton",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 451,
+    "fields": {
+        "name": "John Twelve Hawks",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 452,
+    "fields": {
+        "name": "Richard Dawkins",
+        "fullname": null,
+        "flags": null,
+        "website": "http://richarddawkins.net/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 453,
+    "fields": {
+        "name": "David I. Masson",
+        "fullname": "David Irvine Masson",
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1917-11-06",
+        "date_of_death": "2007-02-27",
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 454,
+    "fields": {
+        "name": "Perry A. Chapdelaine",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 455,
+    "fields": {
+        "name": "Anthony Haden-Guest",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.anthonyhadenguest.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": "Paris",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 456,
+    "fields": {
+        "name": "George Hay",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 457,
+    "fields": {
+        "name": "Reginald Bretnor",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1911-07-30",
+        "date_of_death": "1992-07-22",
+        "birthplace": "Vladivostok, Russia",
+        "nationality": null,
+        "notes": "birthname: Alfred Reginald Kahn"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 458,
+    "fields": {
+        "name": "Cordwainer Smith",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 459,
+    "fields": {
+        "name": "John Lymington",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 460,
+    "fields": {
+        "name": "Astron del Martia",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "pseudonym of John Russell Fearn, anagram of martian lodestar"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 461,
+    "fields": {
+        "name": "T.A. Waters",
+        "fullname": "Thomas Allen Waters",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 462,
+    "fields": {
+        "name": "Kris Neville",
+        "fullname": "Kris Ottman Neville",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 463,
+    "fields": {
+        "name": "John Meaney",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 464,
+    "fields": {
+        "name": "Barry B. Longyear",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 465,
+    "fields": {
+        "name": "Clifford Stoll",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 466,
+    "fields": {
+        "name": "Jonathan Norton Leonard",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 467,
+    "fields": {
+        "name": "John Jakes",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 468,
+    "fields": {
+        "name": "Robin Chambers",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 469,
+    "fields": {
+        "name": "Tad Williams",
+        "fullname": null,
+        "flags": null,
+        "website": "http://www.tadwilliams.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 470,
+    "fields": {
+        "name": "E. C. Tubb",
+        "fullname": "Edwin Charles Tubb",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 471,
+    "fields": {
+        "name": "Duncan Kyle",
+        "fullname": "John Franklin Broxholme",
+        "flags": null,
+        "website": null,
+        "date_of_birth": "1930-06-11",
+        "date_of_death": null,
+        "birthplace": "Bradford",
+        "nationality": "UK",
+        "notes": "http://bearalley.blogspot.com/2008_06_01_archive.html"
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 472,
+    "fields": {
+        "name": "Steven Erikson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 473,
+    "fields": {
+        "name": "Anne & Todd McCaffrey",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 474,
+    "fields": {
+        "name": "James H. Schmitz",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 475,
+    "fields": {
+        "name": "Julian Jay Savarin",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 476,
+    "fields": {
+        "name": "Piers Morgan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 477,
+    "fields": {
+        "name": "Rob Grant",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 478,
+    "fields": {
+        "name": "Steven D. Levitt & Stephen J. Dubner",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 479,
+    "fields": {
+        "name": "Joanne Harris",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 480,
+    "fields": {
+        "name": "J.D. Salinger",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 481,
+    "fields": {
+        "name": "Grace Metalious",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 482,
+    "fields": {
+        "name": "Eando Binder",
+        "fullname": "Earl Andrew Binder and Otto Binder",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 483,
+    "fields": {
+        "name": "Richard Cowper",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 484,
+    "fields": {
+        "name": "Ursula K. Le Guin",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 485,
+    "fields": {
+        "name": "K.E.Mills",
+        "fullname": "Karen Miller",
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 486,
+    "fields": {
+        "name": "Charles Stross",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 487,
+    "fields": {
+        "name": "Michael A. Stackpole",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 488,
+    "fields": {
+        "name": "Charles de Lint",
+        "fullname": null,
+        "flags": null,
+        "website": "www.charlesdelint.com",
+        "date_of_birth": "1951-12-22",
+        "date_of_death": null,
+        "birthplace": "Netherlands",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 489,
+    "fields": {
+        "name": "Ian McDonald",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": "Manchester, UK",
+        "nationality": "British",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 490,
+    "fields": {
+        "name": "Storm Constantine",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 491,
+    "fields": {
+        "name": "Alan Dean Foster",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 492,
+    "fields": {
+        "name": "Edwin Corley",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 493,
+    "fields": {
+        "name": "Arthur H. Landis",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 494,
+    "fields": {
+        "name": "James Gunn",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 495,
+    "fields": {
+        "name": "Jack McDevitt",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 496,
+    "fields": {
+        "name": "Fred Hoyle",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 497,
+    "fields": {
+        "name": "H.P. Lovecraft",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 498,
+    "fields": {
+        "name": "Syne Mitchell",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 499,
+    "fields": {
+        "name": "Peter Morwood",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 500,
+    "fields": {
+        "name": "Terry Greenhough",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 501,
+    "fields": {
+        "name": "Eric Brown",
+        "fullname": null,
+        "flags": null,
+        "website": "www.ericbrown.co.uk",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 502,
+    "fields": {
+        "name": "Douglas Adams",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 503,
+    "fields": {
+        "name": "Christopher Kubasik",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 504,
+    "fields": {
+        "name": "William C. Dietz",
+        "fullname": null,
+        "flags": null,
+        "website": "williamcdietz.com/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 505,
+    "fields": {
+        "name": "Garth Nix",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 506,
+    "fields": {
+        "name": "Steven L. Kent",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 507,
+    "fields": {
+        "name": "Mary Corran",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 508,
+    "fields": {
+        "name": "Dave Duncan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 509,
+    "fields": {
+        "name": "Justina Robson",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 510,
+    "fields": {
+        "name": "Timothy A. Madden",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 511,
+    "fields": {
+        "name": "Jane Gaskell",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 512,
+    "fields": {
+        "name": "Cherry Wilder",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 513,
+    "fields": {
+        "name": "Dan Morgan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 514,
+    "fields": {
+        "name": "David Weber",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 515,
+    "fields": {
+        "name": "Jacqueline Carey",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 516,
+    "fields": {
+        "name": "James Silke",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 517,
+    "fields": {
+        "name": "John Barnes",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 518,
+    "fields": {
+        "name": "L. Sprague De Camp & Fletcher Pratt",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 519,
+    "fields": {
+        "name": "Margaret Weis",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 520,
+    "fields": {
+        "name": "Richard Reinsmith",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 521,
+    "fields": {
+        "name": "Susan Torian Olan",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.authors",
+    "pk": 522,
+    "fields": {
+        "name": "Tara K. Harper",
+        "fullname": null,
+        "flags": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+}
+]
