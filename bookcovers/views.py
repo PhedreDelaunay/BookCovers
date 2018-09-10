@@ -21,6 +21,7 @@ import math
 # Create your views here.
 
 def index(request):
+    print ("index: hello page")
     return HttpResponse("Hello Django World")
 
 def author_books(request, author_id):
@@ -57,7 +58,7 @@ class SubjectList(ListView):
         context = super(SubjectList,self).get_context_data(**kwargs)
         context['title'] = self.title
         print ("title is '{0}'".format(self.title))
-        column_length=self.get_num_rows(self.queryset, self.num_columns)
+        column_length=self.get_num_rows(self.get_queryset(), self.num_columns)
         context['column_length'] = column_length
         return context
 
@@ -70,7 +71,9 @@ class SubjectList(ListView):
         self._title = value
 
     def get_num_rows(self, queryset, num_columns):
-        # round up
+        # TODO remind yourself of the benefits of length vs count
+        # and write up the reason for your choice here
+        # round up the result
         num_rows = math.ceil(queryset.count()/num_columns)
         print ("num_rows is {0}".format(num_rows))
         return num_rows
@@ -82,25 +85,35 @@ class ArtistList(SubjectList):
     def __init__(self):
         self.title = "Artists"
 
-    artist_list = Artists.objects.order_by('name')
-    queryset = artist_list
+    def get_queryset(self):
+        print ("ArtistList::get_queryset: all artists queryset")
+        artist_list = Artists.objects.order_by('name')
+        return artist_list
 
 class AuthorList(SubjectList):
+    template_name = 'bookcovers/author_list.html'
+
     def __init__(self):
         self.title = "Authors"
 
-    template_name = 'bookcovers/author_list.html'
+    def get_queryset(self):
+        #OriginalRawQuerys.author_list()
+        print ("AuthorList: calling CoverQuerys.author_list")
+        queryset = CoverQuerys.author_list()
+        return queryset
 
+#=========================================
+# the simplest of generic class views simply provide the model
 # this on its own lists all authors with context_object_name = author_list
 #    model = Author
 
-    # sort authors
+# To list a subset of the model object specify the list of objects 
+# using queryset
+# sort authors
 #    queryset = Author.objects.order_by('name')
 #    context_object_name = 'author_list'
 #=========================================
 
-    #OriginalRawQuerys.author_list()
-    queryset = CoverQuerys.author_list()
 
 
 

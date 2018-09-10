@@ -74,7 +74,7 @@ class Artists(models.Model):
     notes = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+    #    managed = False
         db_table = 'artists'
 
 
