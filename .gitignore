@@ -1,0 +1,17 @@
+# https://www.packtpub.com/mapt/book/web_development/9781787121386/13/ch01lvl1sec0021/creating-the-git-ignore-file
+# https://www.gitignore.io/api/pycharm,python,django
+
+# macos
+.DS_STORE
+
+# Project files and directories
+/djabbic/settings/djabbic_dev.py
+
+# Created by https://www.gitignore.io/api/pycharm,python,django
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
