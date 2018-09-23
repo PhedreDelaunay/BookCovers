@@ -61,7 +61,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 6,
+    "pk": 7,
     "fields": {
         "book": 7,
         "artwork": 6,
@@ -73,7 +73,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 7,
+    "pk": 6,
     "fields": {
         "book": 6,
         "artwork": 6,
@@ -145,7 +145,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 14,
+    "pk": 15,
     "fields": {
         "book": 16,
         "artwork": 12,
@@ -157,7 +157,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 15,
+    "pk": 14,
     "fields": {
         "book": 11,
         "artwork": 12,
@@ -1477,7 +1477,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 126,
+    "pk": 127,
     "fields": {
         "book": 8,
         "artwork": 117,
@@ -1489,7 +1489,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 127,
+    "pk": 126,
     "fields": {
         "book": 8,
         "artwork": 117,
@@ -1501,7 +1501,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 128,
+    "pk": 443,
     "fields": {
         "book": 5,
         "artwork": 119,
@@ -2113,7 +2113,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 179,
+    "pk": 195,
     "fields": {
         "book": 7,
         "artwork": 116,
@@ -2305,7 +2305,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 195,
+    "pk": 179,
     "fields": {
         "book": 7,
         "artwork": 116,
@@ -5245,7 +5245,7 @@
 },
 {
     "model": "bookcovers.covers",
-    "pk": 443,
+    "pk": 128,
     "fields": {
         "book": 5,
         "artwork": 119,
