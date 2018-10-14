@@ -1,4 +1,5 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView
 from django.db.models import F
@@ -24,20 +25,40 @@ def index(request):
     print ("index: hello page")
     return HttpResponse("Hello Django World")
 
-def author_books(request, author_id):
+
+def author_books(request, author_id=None, name=None, slug=None):
+    template_name = 'bookcovers/cover_list.html'
+
+    if author_id:
+        kwargs = {'pk': author_id}
+    elif name:
+        kwargs = {'name': name}
+    elif slug:
+        slug = slug.replace('-', ' ')
+        kwargs = {'name': slug}
     author = get_object_or_404(Authors, pk=author_id)
     return HttpResponse("You're looking at author %s." % author.name)
 
-def artist_books(request, artist_id):
+def artist_books(request, artist_id=None, name=None, slug=None):
     template_name = 'bookcovers/cover_list.html'
 
-    artist = get_object_or_404(Artists, pk=artist_id)
+    if artist_id:
+        kwargs = {'pk': artist_id}
+    elif name:
+        kwargs = {'name': name}
+    elif slug:
+        slug = slug.replace('-', ' ')
+        kwargs = {'name': slug}
 
-    OriginalRawQuerys.artist_cover_list(artist_id)
-    cover_list = CoverQuerys.artist_cover_list(artist_id)
+    artist = get_object_or_404(Artists, **kwargs)
+    cover_list = CoverQuerys.artist_cover_list(artist)
 
     # render short cut
-    context = {'title': artist.name, 'cover_list': cover_list}
+    #context = {'title': artist.name, 'cover_list': cover_list}
+    # cover_list.object.html context = {'artist': artist, 'artwork_list': cover_list}
+    print("cover_filepath is {}".format(artist.cover_filepath))
+    context = {'artist': artist, 'cover_list': cover_list}
+
     return render(request, template_name, context)
 
 def book_detail(request, book_id):
@@ -49,8 +70,9 @@ class SubjectList(ListView):
     num_columns=6
     template_name = 'bookcovers/subject_list.html'
 
-    # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#making-friendly-template-contexts
-    # in template object_list is called item_list
+    # make "friendly" template context
+    # https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/#making-friendly-template-contexts
+    # in template use item_list instead of object_list
     context_object_name = 'item_list'
 
     def get_context_data(self,**kwargs):
@@ -71,8 +93,10 @@ class SubjectList(ListView):
         self._title = value
 
     def get_num_rows(self, queryset, num_columns):
-        # TODO remind yourself of the benefits of length vs count
-        # and write up the reason for your choice here
+        # https://docs.djangoproject.com/en/2.1/ref/models/querysets/
+        # A count() call performs a SELECT COUNT(*) behind the scenes, so you should always use count() rather
+        # than loading all of the record into Python objects and calling len() on the result
+        # (unless you need to load the objects into memory anyway, in which case len() will be faster).
         # round up the result
         num_rows = math.ceil(queryset.count()/num_columns)
         print ("num_rows is {0}".format(num_rows))
@@ -86,9 +110,10 @@ class ArtistList(SubjectList):
         self.title = "Artists"
 
     def get_queryset(self):
-        print ("ArtistList::get_queryset: all artists queryset")
-        artist_list = Artists.objects.order_by('name')
-        return artist_list
+        print ("ArtistList: calling CoverQuerys.artist_list")
+        #artist_list = Artists.objects.order_by('name')
+        queryset = CoverQuerys.artist_list()
+        return queryset
 
 class AuthorList(SubjectList):
     template_name = 'bookcovers/author_list.html'
@@ -97,7 +122,6 @@ class AuthorList(SubjectList):
         self.title = "Authors"
 
     def get_queryset(self):
-        #OriginalRawQuerys.author_list()
         print ("AuthorList: calling CoverQuerys.author_list")
         queryset = CoverQuerys.author_list()
         return queryset
