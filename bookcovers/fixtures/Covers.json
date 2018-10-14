@@ -8,7 +8,8 @@
         "edition": 1,
         "flags": 0,
         "cover_filename": "DuneEncyclopedia.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -20,7 +21,8 @@
         "edition": 2,
         "flags": 1,
         "cover_filename": "PoliceYourPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -32,7 +34,8 @@
         "edition": 3,
         "flags": 0,
         "cover_filename": "ACanticleForLeibowitz.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -44,7 +47,8 @@
         "edition": 4,
         "flags": 0,
         "cover_filename": "GloryRoad_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -56,31 +60,34 @@
         "edition": 5,
         "flags": 0,
         "cover_filename": "DuneMessiah_FullCover.jpg",
-        "private_notes": "also edition 36 (unseen)"
-    }
-},
-{
-    "model": "bookcovers.covers",
-    "pk": 7,
-    "fields": {
-        "book": 7,
-        "artwork": 6,
-        "edition": 6,
-        "flags": 0,
-        "cover_filename": "Dune.jpg",
-        "private_notes": "The edition \"Reprinted January 1978\"  which is the edition I read has \"soon to be a major film\", much brighter colors, no illustration credit, blurb on the back cover, UK "
+        "private_notes": "also edition 36 (unseen)",
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
     "pk": 6,
     "fields": {
+        "book": 7,
+        "artwork": 6,
+        "edition": 6,
+        "flags": 0,
+        "cover_filename": "Dune.jpg",
+        "private_notes": "The edition \"Reprinted January 1978\"  which is the edition I read has \"soon to be a major film\", much brighter colors, no illustration credit, blurb on the back cover, UK ",
+        "is_variant": false
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 7,
+    "fields": {
         "book": 6,
         "artwork": 6,
         "edition": 7,
         "flags": 0,
         "cover_filename": "Stigmata_Dune_FullCover.jpg",
-        "private_notes": "Kim Harries"
+        "private_notes": "Kim Harries",
+        "is_variant": true
     }
 },
 {
@@ -92,7 +99,8 @@
         "edition": 8,
         "flags": 0,
         "cover_filename": "ChildrenOfDune_FullCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -104,7 +112,8 @@
         "edition": 18,
         "flags": 0,
         "cover_filename": "ChildrenOfTomorrow_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -116,7 +125,8 @@
         "edition": 9,
         "flags": 0,
         "cover_filename": "TheGoblinReservation_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -128,7 +138,8 @@
         "edition": 10,
         "flags": 0,
         "cover_filename": "SatansWorld_FullCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -140,31 +151,34 @@
         "edition": 30,
         "flags": 0,
         "cover_filename": "ThePawnsOfNullA.jpg",
-        "private_notes": null
-    }
-},
-{
-    "model": "bookcovers.covers",
-    "pk": 15,
-    "fields": {
-        "book": 16,
-        "artwork": 12,
-        "edition": 17,
-        "flags": 0,
-        "cover_filename": "TheWeaponMakers_FullCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
     "pk": 14,
     "fields": {
+        "book": 16,
+        "artwork": 12,
+        "edition": 17,
+        "flags": 0,
+        "cover_filename": "TheWeaponMakers_FullCover.jpg",
+        "private_notes": null,
+        "is_variant": false
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 15,
+    "fields": {
         "book": 11,
         "artwork": 12,
         "edition": 31,
         "flags": 128,
         "cover_filename": "TheChangeling_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -176,7 +190,8 @@
         "edition": 22,
         "flags": 1,
         "cover_filename": "QuestForTheFuture.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -188,7 +203,8 @@
         "edition": 32,
         "flags": 128,
         "cover_filename": "TheStoneGodAwakens1976_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -200,7 +216,8 @@
         "edition": 33,
         "flags": 128,
         "cover_filename": "TheStoneGodAwakens1979_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -212,7 +229,8 @@
         "edition": 35,
         "flags": 0,
         "cover_filename": "GodEmperorOfDune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -224,7 +242,8 @@
         "edition": 37,
         "flags": 384,
         "cover_filename": "WhippingStar_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -236,7 +255,8 @@
         "edition": 38,
         "flags": 384,
         "cover_filename": "WhippingStar_1972_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -248,7 +268,8 @@
         "edition": 39,
         "flags": 384,
         "cover_filename": "MastersOfTime_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -260,7 +281,8 @@
         "edition": 40,
         "flags": 0,
         "cover_filename": "BeyondThisHorizon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -272,7 +294,8 @@
         "edition": 41,
         "flags": 0,
         "cover_filename": "RevoltIn2100.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -284,7 +307,8 @@
         "edition": 11,
         "flags": 0,
         "cover_filename": "TheDarkTwin_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -296,7 +320,8 @@
         "edition": 12,
         "flags": 0,
         "cover_filename": "TheWizardOfAnharitte_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -308,7 +333,8 @@
         "edition": 13,
         "flags": 0,
         "cover_filename": "TheFabulousRiverboat_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -320,7 +346,8 @@
         "edition": 206,
         "flags": 0,
         "cover_filename": "TimeEnoughForLove_1977.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -332,7 +359,8 @@
         "edition": 42,
         "flags": 0,
         "cover_filename": "TheWeaponShopsOfIsher.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -344,7 +372,8 @@
         "edition": 43,
         "flags": 0,
         "cover_filename": "SpaceTimeAndNathaniel.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -356,7 +385,8 @@
         "edition": 44,
         "flags": 0,
         "cover_filename": "TheCanopyOfTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -368,7 +398,8 @@
         "edition": 15,
         "flags": 64,
         "cover_filename": "MachineriesOfJoy_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -380,7 +411,8 @@
         "edition": 45,
         "flags": 192,
         "cover_filename": "DandelionWine.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -392,7 +424,8 @@
         "edition": 72,
         "flags": 0,
         "cover_filename": "Indoctrinaire.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -404,7 +437,8 @@
         "edition": 46,
         "flags": 384,
         "cover_filename": "TheMoonIsAHarshMistress_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -416,7 +450,8 @@
         "edition": 47,
         "flags": 384,
         "cover_filename": "TheWizardOfLinn_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -428,7 +463,8 @@
         "edition": 19,
         "flags": 0,
         "cover_filename": "TheMoonsOfJupiter.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -440,7 +476,8 @@
         "edition": 48,
         "flags": 384,
         "cover_filename": "AllTheColoursOfDarkness_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -452,7 +489,8 @@
         "edition": 49,
         "flags": 384,
         "cover_filename": "OnAPlanetAlien_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -464,7 +502,8 @@
         "edition": 50,
         "flags": 384,
         "cover_filename": "TheSilkie_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -476,7 +515,8 @@
         "edition": 51,
         "flags": 384,
         "cover_filename": "NullAThree_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -488,7 +528,8 @@
         "edition": 20,
         "flags": 0,
         "cover_filename": "TheOmegaPoint_FullCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -500,7 +541,8 @@
         "edition": 21,
         "flags": 0,
         "cover_filename": "3ToTheHighestPower_FullCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -512,7 +554,8 @@
         "edition": 23,
         "flags": 0,
         "cover_filename": "Dragonflight_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -524,7 +567,8 @@
         "edition": 52,
         "flags": 384,
         "cover_filename": "Dragonflight_BlueCorgi_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -536,7 +580,8 @@
         "edition": 24,
         "flags": 0,
         "cover_filename": "MenLikeGods_FrontCover.jpg",
-        "private_notes": "Kim Harries"
+        "private_notes": "Kim Harries",
+        "is_variant": false
     }
 },
 {
@@ -548,7 +593,8 @@
         "edition": 25,
         "flags": 0,
         "cover_filename": "Equator_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -560,7 +606,8 @@
         "edition": 26,
         "flags": 0,
         "cover_filename": "TheDarkLightYears_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -572,7 +619,8 @@
         "edition": 27,
         "flags": 0,
         "cover_filename": "TheAirsOfEarth_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -584,7 +632,8 @@
         "edition": 53,
         "flags": 0,
         "cover_filename": "Restoree.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -596,7 +645,8 @@
         "edition": 28,
         "flags": 0,
         "cover_filename": "ATimeOfChanges_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -608,7 +658,8 @@
         "edition": 54,
         "flags": 0,
         "cover_filename": "ThePastelCity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -620,7 +671,8 @@
         "edition": 97,
         "flags": 0,
         "cover_filename": "ChildhoodsEnd.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -632,7 +684,8 @@
         "edition": 56,
         "flags": 384,
         "cover_filename": "Doon1985_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -644,7 +697,8 @@
         "edition": 57,
         "flags": 384,
         "cover_filename": "TheVoyageOfTheSpaceBeagle1977_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -656,7 +710,8 @@
         "edition": 58,
         "flags": 0,
         "cover_filename": "TheShadowOfTheTorturer_1982.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -668,7 +723,8 @@
         "edition": 60,
         "flags": 0,
         "cover_filename": "TheClawOfTheConciliator_1982.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -680,7 +736,8 @@
         "edition": 59,
         "flags": 0,
         "cover_filename": "TheSwordOfTheLictor_1984.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -692,7 +749,8 @@
         "edition": 61,
         "flags": 0,
         "cover_filename": "TheCitadelOfTheAutarch.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -704,7 +762,8 @@
         "edition": 62,
         "flags": 0,
         "cover_filename": "StandOnZanzibar2001_Front.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -716,7 +775,8 @@
         "edition": 63,
         "flags": 2,
         "cover_filename": "Dune1987.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -728,7 +788,8 @@
         "edition": 64,
         "flags": 2,
         "cover_filename": "DuneMessiah1975.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -740,7 +801,8 @@
         "edition": 65,
         "flags": 2,
         "cover_filename": "ChildrenOfDune1977.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -752,7 +814,8 @@
         "edition": 70,
         "flags": 0,
         "cover_filename": "AWrinkleInTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -764,7 +827,8 @@
         "edition": 71,
         "flags": 0,
         "cover_filename": "TheShipWhoSang.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -776,7 +840,8 @@
         "edition": 34,
         "flags": 384,
         "cover_filename": "EmpireOfTheAtom_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -788,7 +853,8 @@
         "edition": 67,
         "flags": 0,
         "cover_filename": "TheInterpreter.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -800,7 +866,8 @@
         "edition": 74,
         "flags": 0,
         "cover_filename": "TheSnowQueen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -812,7 +879,8 @@
         "edition": 75,
         "flags": 0,
         "cover_filename": "TheSnowQueen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -824,7 +892,8 @@
         "edition": 76,
         "flags": 0,
         "cover_filename": "TheShipsOfEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -836,7 +905,8 @@
         "edition": 77,
         "flags": 0,
         "cover_filename": "TheMasksOfTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -848,7 +918,8 @@
         "edition": 78,
         "flags": 0,
         "cover_filename": "WhenTrueNightFalls.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -860,7 +931,8 @@
         "edition": 79,
         "flags": 0,
         "cover_filename": "EnemiesOfTheSystem.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -872,7 +944,8 @@
         "edition": 80,
         "flags": 0,
         "cover_filename": "PerryRhodan15.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -884,7 +957,8 @@
         "edition": 81,
         "flags": 0,
         "cover_filename": "TheGreatYears.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -896,7 +970,8 @@
         "edition": 82,
         "flags": 0,
         "cover_filename": "TheFlightOfTheHorse.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -908,7 +983,8 @@
         "edition": 84,
         "flags": 0,
         "cover_filename": "NeutronStar.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -920,7 +996,8 @@
         "edition": 83,
         "flags": 0,
         "cover_filename": "Protector.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -932,7 +1009,8 @@
         "edition": 85,
         "flags": 0,
         "cover_filename": "OfTimeAndStars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -944,7 +1022,8 @@
         "edition": 86,
         "flags": 0,
         "cover_filename": "TheMakeshiftRocket.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -956,7 +1035,8 @@
         "edition": 87,
         "flags": 0,
         "cover_filename": "TheRowan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -968,7 +1048,8 @@
         "edition": 89,
         "flags": 0,
         "cover_filename": "DecisionAtDoona_1981.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -980,7 +1061,8 @@
         "edition": 90,
         "flags": 0,
         "cover_filename": "SpeakerForTheDead.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -992,7 +1074,8 @@
         "edition": 92,
         "flags": 0,
         "cover_filename": "TheCitadelOfTheAutarch.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1004,7 +1087,8 @@
         "edition": 93,
         "flags": 0,
         "cover_filename": "Dragonsdawn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1016,7 +1100,8 @@
         "edition": 95,
         "flags": 128,
         "cover_filename": "TheSilverLocusts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1028,7 +1113,8 @@
         "edition": 96,
         "flags": 128,
         "cover_filename": "SomethingWickedThisWayComes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1040,7 +1126,8 @@
         "edition": 98,
         "flags": 0,
         "cover_filename": "OutOfTheirMinds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1052,7 +1139,8 @@
         "edition": 99,
         "flags": 0,
         "cover_filename": "Fahrenheit451.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1064,7 +1152,8 @@
         "edition": 66,
         "flags": 0,
         "cover_filename": "ComicInferno.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1076,7 +1165,8 @@
         "edition": 101,
         "flags": 0,
         "cover_filename": "PiratesOfTheAsteroids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1088,7 +1178,8 @@
         "edition": 105,
         "flags": 0,
         "cover_filename": "TheBigSunOfMercury.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1100,7 +1191,8 @@
         "edition": 106,
         "flags": 0,
         "cover_filename": "OceansOfVenus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1112,7 +1204,8 @@
         "edition": 107,
         "flags": 128,
         "cover_filename": "TheGoldenApplesOfTheSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1124,7 +1217,8 @@
         "edition": 108,
         "flags": 0,
         "cover_filename": "OutOfTheSilentPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1136,7 +1230,8 @@
         "edition": 109,
         "flags": 0,
         "cover_filename": "VoyageToVenus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1148,7 +1243,8 @@
         "edition": 110,
         "flags": 0,
         "cover_filename": "ThatHideousStrength_1968.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1160,7 +1256,8 @@
         "edition": 111,
         "flags": 1,
         "cover_filename": "OutOfTheSilentPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1172,7 +1269,8 @@
         "edition": 112,
         "flags": 1,
         "cover_filename": "ThatHideousStrength.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1184,7 +1282,8 @@
         "edition": 113,
         "flags": 0,
         "cover_filename": "TheManInTheHighCastle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1196,7 +1295,8 @@
         "edition": 114,
         "flags": 0,
         "cover_filename": "FlowMyTearsThePolicemanSaid.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1208,7 +1308,8 @@
         "edition": 115,
         "flags": 0,
         "cover_filename": "BlackpoolVanishes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1220,7 +1321,8 @@
         "edition": 116,
         "flags": 0,
         "cover_filename": "Pilgrimage.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1232,7 +1334,8 @@
         "edition": 118,
         "flags": 0,
         "cover_filename": "TheMidwichCuckoos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1244,7 +1347,8 @@
         "edition": 123,
         "flags": 0,
         "cover_filename": "TheSeedsOfTime1969.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1256,7 +1360,8 @@
         "edition": 122,
         "flags": 0,
         "cover_filename": "TheSeedsOfTime1975.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -1268,7 +1373,8 @@
         "edition": 121,
         "flags": 0,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1280,7 +1386,8 @@
         "edition": 119,
         "flags": 0,
         "cover_filename": "Chocky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1292,7 +1399,8 @@
         "edition": 120,
         "flags": 0,
         "cover_filename": "Chocky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1304,7 +1412,8 @@
         "edition": 124,
         "flags": 2,
         "cover_filename": "TheKrakenWakes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1316,7 +1425,8 @@
         "edition": 125,
         "flags": 0,
         "cover_filename": "TheKrakenWakes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1328,7 +1438,8 @@
         "edition": 126,
         "flags": 0,
         "cover_filename": "SpaceRanger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1340,7 +1451,8 @@
         "edition": 127,
         "flags": 0,
         "cover_filename": "RobotDreams.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1352,7 +1464,8 @@
         "edition": 128,
         "flags": 0,
         "cover_filename": "RobotVisions.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1364,7 +1477,8 @@
         "edition": 129,
         "flags": 0,
         "cover_filename": "PhoenixInObsidian.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1376,7 +1490,8 @@
         "edition": 130,
         "flags": 0,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1388,7 +1503,8 @@
         "edition": 131,
         "flags": 0,
         "cover_filename": "TheKrakenWakes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1400,7 +1516,8 @@
         "edition": 132,
         "flags": 2,
         "cover_filename": "Chocky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1412,7 +1529,8 @@
         "edition": 133,
         "flags": 0,
         "cover_filename": "ShallowsOfNight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1424,7 +1542,8 @@
         "edition": 134,
         "flags": 0,
         "cover_filename": "DeepSpace.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1436,7 +1555,8 @@
         "edition": 135,
         "flags": 0,
         "cover_filename": "DreamPark.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1448,7 +1568,8 @@
         "edition": 139,
         "flags": 256,
         "cover_filename": "Dune_1985.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1460,7 +1581,8 @@
         "edition": 136,
         "flags": 0,
         "cover_filename": "TheMagiciansGuild.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1472,19 +1594,8 @@
         "edition": 137,
         "flags": 0,
         "cover_filename": "TheNovice.jpg",
-        "private_notes": null
-    }
-},
-{
-    "model": "bookcovers.covers",
-    "pk": 127,
-    "fields": {
-        "book": 8,
-        "artwork": 117,
-        "edition": 140,
-        "flags": 0,
-        "cover_filename": "ChildrenOfDune_1991.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1493,22 +1604,37 @@
     "fields": {
         "book": 8,
         "artwork": 117,
-        "edition": 141,
-        "flags": 3,
-        "cover_filename": "ChildrenOfDune_34.jpg",
-        "private_notes": null
+        "edition": 140,
+        "flags": 0,
+        "cover_filename": "ChildrenOfDune_1991.jpg",
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
-    "pk": 443,
+    "pk": 127,
+    "fields": {
+        "book": 8,
+        "artwork": 117,
+        "edition": 141,
+        "flags": 3,
+        "cover_filename": "ChildrenOfDune_34.jpg",
+        "private_notes": null,
+        "is_variant": true
+    }
+},
+{
+    "model": "bookcovers.covers",
+    "pk": 128,
     "fields": {
         "book": 5,
         "artwork": 119,
         "edition": 142,
         "flags": 0,
         "cover_filename": "DuneMessiah_1992.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1520,7 +1646,8 @@
         "edition": 143,
         "flags": 0,
         "cover_filename": "GodEmperorOfDune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1532,7 +1659,8 @@
         "edition": 144,
         "flags": 0,
         "cover_filename": "HereticsOfDune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1544,7 +1672,8 @@
         "edition": 138,
         "flags": 0,
         "cover_filename": "TheHighLord.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1556,7 +1685,8 @@
         "edition": 145,
         "flags": 0,
         "cover_filename": "Golem100.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1568,7 +1698,8 @@
         "edition": 146,
         "flags": 0,
         "cover_filename": "TheComputerConnection.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1580,7 +1711,8 @@
         "edition": 147,
         "flags": 0,
         "cover_filename": "TheSummerQueen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1592,7 +1724,8 @@
         "edition": 148,
         "flags": 0,
         "cover_filename": "ChroniclesOfTheStarKings.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1604,7 +1737,8 @@
         "edition": 149,
         "flags": 0,
         "cover_filename": "Roadmarks.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1616,7 +1750,8 @@
         "edition": 150,
         "flags": 0,
         "cover_filename": "ConsiderHerWaysAndOthers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1628,7 +1763,8 @@
         "edition": 151,
         "flags": 0,
         "cover_filename": "TroubleWithLichen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1640,7 +1776,8 @@
         "edition": 152,
         "flags": 2,
         "cover_filename": "Dune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1652,7 +1789,8 @@
         "edition": 153,
         "flags": 0,
         "cover_filename": "TheRingworldEngineers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1664,7 +1802,8 @@
         "edition": 154,
         "flags": 0,
         "cover_filename": "TheAdolescenceOfP1.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1676,7 +1815,8 @@
         "edition": 155,
         "flags": 0,
         "cover_filename": "TheAdolescenceOfP1.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1688,7 +1828,8 @@
         "edition": 156,
         "flags": 0,
         "cover_filename": "TheAdolescenceOfP1.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1700,7 +1841,8 @@
         "edition": 157,
         "flags": 1,
         "cover_filename": "NoManFriday.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1712,7 +1854,8 @@
         "edition": 159,
         "flags": 1,
         "cover_filename": "Fahrenheit451.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1724,7 +1867,8 @@
         "edition": 160,
         "flags": 1,
         "cover_filename": "TheSilverLocusts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1736,7 +1880,8 @@
         "edition": 161,
         "flags": 0,
         "cover_filename": "Fahrenheit451.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1748,7 +1893,8 @@
         "edition": 162,
         "flags": 0,
         "cover_filename": "TheSilverLocusts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1760,7 +1906,8 @@
         "edition": 163,
         "flags": 0,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1772,7 +1919,8 @@
         "edition": 165,
         "flags": 2,
         "cover_filename": "EndersGame.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1784,7 +1932,8 @@
         "edition": 167,
         "flags": 0,
         "cover_filename": "UpTheWallsOfTheWorld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1796,7 +1945,8 @@
         "edition": 168,
         "flags": 0,
         "cover_filename": "RoadsidePicnic.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1808,7 +1958,8 @@
         "edition": 169,
         "flags": 0,
         "cover_filename": "Castleview.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1820,7 +1971,8 @@
         "edition": 170,
         "flags": 0,
         "cover_filename": "ThatHideousStrength_1955.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1832,7 +1984,8 @@
         "edition": 171,
         "flags": 1,
         "cover_filename": "ChildhoodsEnd.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1844,7 +1997,8 @@
         "edition": 172,
         "flags": 0,
         "cover_filename": "TheSwordOfTheLictor_1986.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1856,7 +2010,8 @@
         "edition": 173,
         "flags": 0,
         "cover_filename": "BeyondThePale.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1868,7 +2023,8 @@
         "edition": 174,
         "flags": 0,
         "cover_filename": "TheKeepOfFire_1999.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -1880,7 +2036,8 @@
         "edition": 175,
         "flags": 0,
         "cover_filename": "TheKeepOfFire_2000.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1892,7 +2049,8 @@
         "edition": 176,
         "flags": 1,
         "cover_filename": "TheIllustratedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1904,7 +2062,8 @@
         "edition": 177,
         "flags": 0,
         "cover_filename": "TheIllustratedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1916,7 +2075,8 @@
         "edition": 178,
         "flags": 0,
         "cover_filename": "TheIllustratedMan_1974.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1928,7 +2088,8 @@
         "edition": 179,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1940,7 +2101,8 @@
         "edition": 180,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1952,7 +2114,8 @@
         "edition": 181,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1964,7 +2127,8 @@
         "edition": 182,
         "flags": 0,
         "cover_filename": "Chocky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1976,7 +2140,8 @@
         "edition": 184,
         "flags": 0,
         "cover_filename": "TheKrakenWakes.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -1988,7 +2153,8 @@
         "edition": 183,
         "flags": 0,
         "cover_filename": "TheMidwichCuckoos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2000,7 +2166,8 @@
         "edition": 185,
         "flags": 0,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2012,7 +2179,8 @@
         "edition": 186,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -2024,7 +2192,8 @@
         "edition": 187,
         "flags": 0,
         "cover_filename": "1966_TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2036,7 +2205,8 @@
         "edition": 188,
         "flags": 0,
         "cover_filename": "TheSeedsOfTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2048,7 +2218,8 @@
         "edition": 189,
         "flags": 0,
         "cover_filename": "ConsiderHerWaysAndOthers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2060,7 +2231,8 @@
         "edition": 190,
         "flags": 0,
         "cover_filename": "ThePanchroniconPlot.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2072,7 +2244,8 @@
         "edition": 191,
         "flags": 0,
         "cover_filename": "PlanetOfTheDreamers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2084,7 +2257,8 @@
         "edition": 192,
         "flags": 0,
         "cover_filename": "EndersShadow.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2096,7 +2270,8 @@
         "edition": 193,
         "flags": 0,
         "cover_filename": "ShadowOfTheHegemon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2108,19 +2283,21 @@
         "edition": 194,
         "flags": 2,
         "cover_filename": "TheMidwichCuckoos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
-    "pk": 195,
+    "pk": 179,
     "fields": {
         "book": 7,
         "artwork": 116,
         "edition": 195,
         "flags": 0,
         "cover_filename": "Dune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2132,7 +2309,8 @@
         "edition": 196,
         "flags": 1,
         "cover_filename": "VoyageToVenus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2144,7 +2322,8 @@
         "edition": 198,
         "flags": 0,
         "cover_filename": "TheUrthOfTheNewSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2156,7 +2335,8 @@
         "edition": 199,
         "flags": 0,
         "cover_filename": "ShadowPuppets.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2168,7 +2348,8 @@
         "edition": 200,
         "flags": 0,
         "cover_filename": "TheIllustratedMan_1972.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2180,7 +2361,8 @@
         "edition": 201,
         "flags": 3,
         "cover_filename": "Dune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2192,7 +2374,8 @@
         "edition": 202,
         "flags": 1,
         "cover_filename": "TheGoldenApplesOfTheSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2204,7 +2387,8 @@
         "edition": 203,
         "flags": 1,
         "cover_filename": "PrisonerInTheSkull.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2216,7 +2400,8 @@
         "edition": 204,
         "flags": 1,
         "cover_filename": "TheTideWentOut.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2228,7 +2413,8 @@
         "edition": 205,
         "flags": 1,
         "cover_filename": "CountDown.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2240,7 +2426,8 @@
         "edition": 14,
         "flags": 0,
         "cover_filename": "TimeEnoughForLove_FrontCover.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -2252,7 +2439,8 @@
         "edition": 207,
         "flags": 0,
         "cover_filename": "TheIllustratedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2264,7 +2452,8 @@
         "edition": 208,
         "flags": 0,
         "cover_filename": "ThereIsNoDarkness.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2276,7 +2465,8 @@
         "edition": 210,
         "flags": 0,
         "cover_filename": "SpeakerForTheDead.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2288,7 +2478,8 @@
         "edition": 214,
         "flags": 1,
         "cover_filename": "TheShoresOfSpace.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2300,19 +2491,21 @@
         "edition": 215,
         "flags": 0,
         "cover_filename": "Web.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
-    "pk": 179,
+    "pk": 195,
     "fields": {
         "book": 7,
         "artwork": 116,
         "edition": 441,
-        "flags": 3,
+        "flags": 7,
         "cover_filename": "Dune_56.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -2324,7 +2517,8 @@
         "edition": 443,
         "flags": 2,
         "cover_filename": "Dune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2336,7 +2530,8 @@
         "edition": 395,
         "flags": 2,
         "cover_filename": "FarmerInTheSky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2348,7 +2543,8 @@
         "edition": 432,
         "flags": 2,
         "cover_filename": "ToSailBeyondTheSunset.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2360,7 +2556,8 @@
         "edition": 651,
         "flags": 0,
         "cover_filename": "ToSailBeyondTheSunset.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2372,7 +2569,8 @@
         "edition": 448,
         "flags": 0,
         "cover_filename": "StrangerInAStrangeLand.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2384,7 +2582,8 @@
         "edition": 449,
         "flags": 0,
         "cover_filename": "StrangerInAStrangeLand.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2396,7 +2595,8 @@
         "edition": 216,
         "flags": 512,
         "cover_filename": "MasqueWorld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2408,7 +2608,8 @@
         "edition": 218,
         "flags": 512,
         "cover_filename": "Partnership.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2420,7 +2621,8 @@
         "edition": 219,
         "flags": 512,
         "cover_filename": "Acorna.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2432,7 +2634,8 @@
         "edition": 222,
         "flags": 0,
         "cover_filename": "Foundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2444,7 +2647,8 @@
         "edition": 223,
         "flags": 0,
         "cover_filename": "FoundationAndEmpire_1979.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2456,7 +2660,8 @@
         "edition": 225,
         "flags": 512,
         "cover_filename": "PreludeToFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2468,7 +2673,8 @@
         "edition": 226,
         "flags": 512,
         "cover_filename": "Kinsman.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2480,7 +2686,8 @@
         "edition": 227,
         "flags": 512,
         "cover_filename": "Colony.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2492,7 +2699,8 @@
         "edition": 228,
         "flags": 512,
         "cover_filename": "MoreausOtherIsland.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2504,7 +2712,8 @@
         "edition": 229,
         "flags": 512,
         "cover_filename": "ReturnToMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2516,7 +2725,8 @@
         "edition": 276,
         "flags": 512,
         "cover_filename": "ADarkAndHungryGodArises.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2528,7 +2738,8 @@
         "edition": 233,
         "flags": 0,
         "cover_filename": "MidshipmansHope.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2540,7 +2751,8 @@
         "edition": 234,
         "flags": 0,
         "cover_filename": "ChallengersHope.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2552,7 +2764,8 @@
         "edition": 235,
         "flags": 0,
         "cover_filename": "PrisonersHope.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2564,7 +2777,8 @@
         "edition": 236,
         "flags": 0,
         "cover_filename": "FishermansHope.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2576,7 +2790,8 @@
         "edition": 238,
         "flags": 0,
         "cover_filename": "OnceAHero.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2588,7 +2803,8 @@
         "edition": 239,
         "flags": 0,
         "cover_filename": "SportingChance.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2600,7 +2816,8 @@
         "edition": 240,
         "flags": 0,
         "cover_filename": "HuntingParty.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2612,7 +2829,8 @@
         "edition": 241,
         "flags": 0,
         "cover_filename": "RulesOfEngagement.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2624,7 +2842,8 @@
         "edition": 242,
         "flags": 512,
         "cover_filename": "RemnantPopulation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2636,7 +2855,8 @@
         "edition": 244,
         "flags": 512,
         "cover_filename": "Phases.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2648,7 +2868,8 @@
         "edition": 252,
         "flags": 0,
         "cover_filename": "Heatseeker.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2660,7 +2881,8 @@
         "edition": 264,
         "flags": 512,
         "cover_filename": "TheDreamthiefsDaughter.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2672,7 +2894,8 @@
         "edition": 273,
         "flags": 512,
         "cover_filename": "TimeTravelersStrictlyCash.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2684,7 +2907,8 @@
         "edition": 230,
         "flags": 512,
         "cover_filename": "TheIonWar.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2696,7 +2920,8 @@
         "edition": 259,
         "flags": 0,
         "cover_filename": "TheAbominationsOfYondo.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2708,7 +2933,8 @@
         "edition": 265,
         "flags": 512,
         "cover_filename": "PasqualesAngel.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2720,7 +2946,8 @@
         "edition": 231,
         "flags": 512,
         "cover_filename": "BrightnessReef.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2732,7 +2959,8 @@
         "edition": 232,
         "flags": 512,
         "cover_filename": "Sundiver.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2744,7 +2972,8 @@
         "edition": 250,
         "flags": 512,
         "cover_filename": "TheSquaresOfTheCity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2756,7 +2985,8 @@
         "edition": 253,
         "flags": 0,
         "cover_filename": "20000LeaguesUnderTheSea.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2768,7 +2998,8 @@
         "edition": 403,
         "flags": 512,
         "cover_filename": "PerryRhodan9.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2780,7 +3011,8 @@
         "edition": 258,
         "flags": 512,
         "cover_filename": "PerryRhodan14.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2792,7 +3024,8 @@
         "edition": 255,
         "flags": 512,
         "cover_filename": "GreenMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2804,7 +3037,8 @@
         "edition": 256,
         "flags": 512,
         "cover_filename": "ShortSharpShock.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2816,7 +3050,8 @@
         "edition": 257,
         "flags": 512,
         "cover_filename": "TheMartians.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2828,7 +3063,8 @@
         "edition": 278,
         "flags": 0,
         "cover_filename": "BuyJupiter.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2840,7 +3076,8 @@
         "edition": 281,
         "flags": 0,
         "cover_filename": "TheMachineCrusade.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2852,7 +3089,8 @@
         "edition": 282,
         "flags": 512,
         "cover_filename": "HouseOfAtreides.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2864,7 +3102,8 @@
         "edition": 283,
         "flags": 512,
         "cover_filename": "TheButlerianJihad.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2876,7 +3115,8 @@
         "edition": 285,
         "flags": 512,
         "cover_filename": "TheMachineCrusade.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2888,7 +3128,8 @@
         "edition": 287,
         "flags": 0,
         "cover_filename": "TheLeftHandOfDarkness.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2900,7 +3141,8 @@
         "edition": 289,
         "flags": 512,
         "cover_filename": "AlteredCarbon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2912,7 +3154,8 @@
         "edition": 290,
         "flags": 512,
         "cover_filename": "CeresStorm.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2924,7 +3167,8 @@
         "edition": 291,
         "flags": 0,
         "cover_filename": "TheMartianWay.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2936,7 +3180,8 @@
         "edition": 296,
         "flags": 512,
         "cover_filename": "ADarknessInMySoul.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2948,7 +3193,8 @@
         "edition": 298,
         "flags": 512,
         "cover_filename": "TheElvenbane.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2960,7 +3206,8 @@
         "edition": 299,
         "flags": 512,
         "cover_filename": "InTheBalance.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2972,7 +3219,8 @@
         "edition": 304,
         "flags": 512,
         "cover_filename": "TheRealStory.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2984,7 +3232,8 @@
         "edition": 305,
         "flags": 512,
         "cover_filename": "MerchantersLuck.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -2996,7 +3245,8 @@
         "edition": 315,
         "flags": 0,
         "cover_filename": "DeathIsALonelyBusiness.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3008,7 +3258,8 @@
         "edition": 318,
         "flags": 512,
         "cover_filename": "TheWarOfTheWorlds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3020,7 +3271,8 @@
         "edition": 320,
         "flags": 0,
         "cover_filename": "TheUfonauts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3032,7 +3284,8 @@
         "edition": 311,
         "flags": 512,
         "cover_filename": "PerryRhodan5.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3044,7 +3297,8 @@
         "edition": 321,
         "flags": 512,
         "cover_filename": "TheHollowMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3056,7 +3310,8 @@
         "edition": 322,
         "flags": 0,
         "cover_filename": "InvasionFrom2500.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3068,7 +3323,8 @@
         "edition": 323,
         "flags": 512,
         "cover_filename": "NickAndTheGlimmung",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3080,7 +3336,8 @@
         "edition": 324,
         "flags": 512,
         "cover_filename": "PrisonerOfThePlanets.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3092,7 +3349,8 @@
         "edition": 325,
         "flags": 512,
         "cover_filename": "WitchWorld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3104,7 +3362,8 @@
         "edition": 326,
         "flags": 512,
         "cover_filename": "AHeritageOfStars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3116,7 +3375,8 @@
         "edition": 327,
         "flags": 512,
         "cover_filename": "BrotherAndOtherStories.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3128,7 +3388,8 @@
         "edition": 329,
         "flags": 512,
         "cover_filename": "CitiesInFlight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3140,7 +3401,8 @@
         "edition": 330,
         "flags": 512,
         "cover_filename": "AStainlessSteelRatIsBorn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3152,7 +3414,8 @@
         "edition": 331,
         "flags": 512,
         "cover_filename": "OfTimeAndStars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3164,7 +3427,8 @@
         "edition": 336,
         "flags": 512,
         "cover_filename": "WarOfTheWingMen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3176,7 +3440,8 @@
         "edition": 341,
         "flags": 0,
         "cover_filename": "Juxtaposition.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3188,7 +3453,8 @@
         "edition": 343,
         "flags": 512,
         "cover_filename": "Salt.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3200,7 +3466,8 @@
         "edition": 346,
         "flags": 512,
         "cover_filename": "OurLadyOfDarkness.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3212,7 +3479,8 @@
         "edition": 347,
         "flags": 512,
         "cover_filename": "Dayworld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3224,7 +3492,8 @@
         "edition": 348,
         "flags": 512,
         "cover_filename": "GreenPhoenix.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3236,7 +3505,8 @@
         "edition": 350,
         "flags": 512,
         "cover_filename": "TheAmazonsOfSomelon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3248,7 +3518,8 @@
         "edition": 352,
         "flags": 0,
         "cover_filename": "TheRestOfTheRobots.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3260,7 +3531,8 @@
         "edition": 356,
         "flags": 512,
         "cover_filename": "TheVoyageOfTheSpaceBeagle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3272,7 +3544,8 @@
         "edition": 357,
         "flags": 512,
         "cover_filename": "TheRegimentsOfNight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3284,7 +3557,8 @@
         "edition": 358,
         "flags": 512,
         "cover_filename": "TheRMaster.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3296,7 +3570,8 @@
         "edition": 359,
         "flags": 512,
         "cover_filename": "PermutationCity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3308,7 +3583,8 @@
         "edition": 360,
         "flags": 512,
         "cover_filename": "TheAdversary.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3320,7 +3596,8 @@
         "edition": 361,
         "flags": 512,
         "cover_filename": "TheGoldenTorc.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3332,7 +3609,8 @@
         "edition": 362,
         "flags": 512,
         "cover_filename": "TheNonBornKing.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3344,7 +3622,8 @@
         "edition": 363,
         "flags": 512,
         "cover_filename": "TheManyColouredLand.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3356,7 +3635,8 @@
         "edition": 364,
         "flags": 512,
         "cover_filename": "TheAgeOfThePussyfoot.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3368,7 +3648,8 @@
         "edition": 365,
         "flags": 512,
         "cover_filename": "RobotsAndEmpire.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3380,7 +3661,8 @@
         "edition": 368,
         "flags": 512,
         "cover_filename": "TheWindsTwelveQuarters.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3392,7 +3674,8 @@
         "edition": 369,
         "flags": 512,
         "cover_filename": "Dreamsnake.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3404,7 +3687,8 @@
         "edition": 371,
         "flags": 512,
         "cover_filename": "StarflightToFaroul.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3416,7 +3700,8 @@
         "edition": 380,
         "flags": 512,
         "cover_filename": "HalfPastHuman.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3428,7 +3713,8 @@
         "edition": 383,
         "flags": 512,
         "cover_filename": "Hothouse.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3440,7 +3726,8 @@
         "edition": 384,
         "flags": 512,
         "cover_filename": "RedStarRising.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3452,7 +3739,8 @@
         "edition": 386,
         "flags": 512,
         "cover_filename": "TalismanOfDeath.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3464,7 +3752,8 @@
         "edition": 387,
         "flags": 512,
         "cover_filename": "StarshipTraveller.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3476,7 +3765,8 @@
         "edition": 457,
         "flags": 512,
         "cover_filename": "CloudWarrior.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3488,7 +3778,8 @@
         "edition": 390,
         "flags": 512,
         "cover_filename": "GuernicaNight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3500,7 +3791,8 @@
         "edition": 391,
         "flags": 512,
         "cover_filename": "LostFiftySuns.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3512,7 +3804,8 @@
         "edition": 392,
         "flags": 512,
         "cover_filename": "TheFountainsOfParadise.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3524,7 +3817,8 @@
         "edition": 397,
         "flags": 512,
         "cover_filename": "ManPlus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3536,7 +3830,8 @@
         "edition": 398,
         "flags": 512,
         "cover_filename": "FreewayFighter.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3548,7 +3843,8 @@
         "edition": 399,
         "flags": 512,
         "cover_filename": "ThePalaceOfEternity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3560,7 +3856,8 @@
         "edition": 400,
         "flags": 512,
         "cover_filename": "Terraplane.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3572,7 +3869,8 @@
         "edition": 401,
         "flags": 512,
         "cover_filename": "PerryRhodan18.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3584,7 +3882,8 @@
         "edition": 402,
         "flags": 512,
         "cover_filename": "PerryRhodan17.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3596,7 +3895,8 @@
         "edition": 405,
         "flags": 512,
         "cover_filename": "NimishasShip.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3608,7 +3908,8 @@
         "edition": 408,
         "flags": 512,
         "cover_filename": "TheSunborn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3620,7 +3921,8 @@
         "edition": 410,
         "flags": 512,
         "cover_filename": "GodsOfTheRiverworld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3632,7 +3934,8 @@
         "edition": 414,
         "flags": 512,
         "cover_filename": "DarkIsTheSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3644,7 +3947,8 @@
         "edition": 418,
         "flags": 0,
         "cover_filename": "PreludeToFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3656,7 +3960,8 @@
         "edition": 419,
         "flags": 0,
         "cover_filename": "FoundationAndEmpire.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3668,7 +3973,8 @@
         "edition": 420,
         "flags": 0,
         "cover_filename": "FoundationsEdge.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3680,7 +3986,8 @@
         "edition": 422,
         "flags": 0,
         "cover_filename": "PiratesOfTheAsteroids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3692,7 +3999,8 @@
         "edition": 423,
         "flags": 0,
         "cover_filename": "TheBigSunOfMercury.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3704,7 +4012,8 @@
         "edition": 425,
         "flags": 512,
         "cover_filename": "Dragonflight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3716,7 +4025,8 @@
         "edition": 426,
         "flags": 512,
         "cover_filename": "Dragonquest.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3728,7 +4038,8 @@
         "edition": 427,
         "flags": 0,
         "cover_filename": "DaiSan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3740,7 +4051,8 @@
         "edition": 428,
         "flags": 512,
         "cover_filename": "KrisposRising.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3752,7 +4064,8 @@
         "edition": 430,
         "flags": 512,
         "cover_filename": "TheDispossessed.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3764,7 +4077,8 @@
         "edition": 431,
         "flags": 512,
         "cover_filename": "LyonsPride.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3776,7 +4090,8 @@
         "edition": 434,
         "flags": 512,
         "cover_filename": "PrinceOfChaos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3788,7 +4103,8 @@
         "edition": 453,
         "flags": 512,
         "cover_filename": "TheBetrayal.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3800,7 +4116,8 @@
         "edition": 454,
         "flags": 512,
         "cover_filename": "Armageddon2419AD.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3812,7 +4129,8 @@
         "edition": 455,
         "flags": 512,
         "cover_filename": "TheOakAndTheRam.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3824,7 +4142,8 @@
         "edition": 456,
         "flags": 0,
         "cover_filename": "FlowersForAlgernon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3836,7 +4155,8 @@
         "edition": 317,
         "flags": 0,
         "cover_filename": "TheSpaceMerchants.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3848,7 +4168,8 @@
         "edition": 389,
         "flags": 512,
         "cover_filename": "CloudWarrior.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3860,7 +4181,8 @@
         "edition": 458,
         "flags": 512,
         "cover_filename": "MoreThanSuperHuman.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3872,7 +4194,8 @@
         "edition": 459,
         "flags": 512,
         "cover_filename": "TheFarOutWorlds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3884,7 +4207,8 @@
         "edition": 460,
         "flags": 512,
         "cover_filename": "Ringworld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3896,7 +4220,8 @@
         "edition": 462,
         "flags": 512,
         "cover_filename": "TheKnightOfSwords.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3908,7 +4233,8 @@
         "edition": 463,
         "flags": 0,
         "cover_filename": "Gormenghast.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3920,7 +4246,8 @@
         "edition": 465,
         "flags": 512,
         "cover_filename": "EarthIsRoomEnough.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3932,7 +4259,8 @@
         "edition": 466,
         "flags": 2,
         "cover_filename": "FoundationsEdge_1986.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3944,7 +4272,8 @@
         "edition": 467,
         "flags": 0,
         "cover_filename": "FoundationsEdge.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3956,7 +4285,8 @@
         "edition": 468,
         "flags": 0,
         "cover_filename": "FoundationAndEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3968,7 +4298,8 @@
         "edition": 469,
         "flags": 512,
         "cover_filename": "AshesAndStars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3980,7 +4311,8 @@
         "edition": 471,
         "flags": 512,
         "cover_filename": "TarzanAndTheForbiddenCity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -3992,7 +4324,8 @@
         "edition": 472,
         "flags": 0,
         "cover_filename": "ACanticleForLeibowitz.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4004,7 +4337,8 @@
         "edition": 473,
         "flags": 512,
         "cover_filename": "TheBestFromGalaxyIV.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4016,7 +4350,8 @@
         "edition": 474,
         "flags": 512,
         "cover_filename": "ByDaybreakTheEagle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4028,7 +4363,8 @@
         "edition": 302,
         "flags": 0,
         "cover_filename": "TheJesusIncident.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4040,7 +4376,8 @@
         "edition": 483,
         "flags": 512,
         "cover_filename": "TheMasterHarperOfPern.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4052,7 +4389,8 @@
         "edition": 484,
         "flags": 0,
         "cover_filename": "TheSunsetWarrior.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4064,7 +4402,8 @@
         "edition": 486,
         "flags": 0,
         "cover_filename": "SecondFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4076,7 +4415,8 @@
         "edition": 476,
         "flags": 512,
         "cover_filename": "TheMemoryOfEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4088,7 +4428,8 @@
         "edition": 517,
         "flags": 512,
         "cover_filename": "NewWorldsOfFantasy.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4100,7 +4441,8 @@
         "edition": 487,
         "flags": 512,
         "cover_filename": "IslandsInTheSky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4112,7 +4454,8 @@
         "edition": 491,
         "flags": 0,
         "cover_filename": "APrincessOfMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4124,7 +4467,8 @@
         "edition": 492,
         "flags": 512,
         "cover_filename": "TheWorldSwappers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4136,7 +4480,8 @@
         "edition": 212,
         "flags": 512,
         "cover_filename": "Zodiac.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4148,7 +4493,8 @@
         "edition": 496,
         "flags": 512,
         "cover_filename": "TheRiseOfEndymion.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4160,7 +4506,8 @@
         "edition": 497,
         "flags": 0,
         "cover_filename": "2001ASpaceOdyssey_1982.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4172,7 +4519,8 @@
         "edition": 498,
         "flags": 0,
         "cover_filename": "2010OdysseyTwo.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4184,7 +4532,8 @@
         "edition": 499,
         "flags": 512,
         "cover_filename": "TheRealityDysfunction_1996.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4196,7 +4545,8 @@
         "edition": 501,
         "flags": 0,
         "cover_filename": "TheDayAfterJudgement.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4208,7 +4558,8 @@
         "edition": 502,
         "flags": 512,
         "cover_filename": "InOurHandsTheStars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4220,7 +4571,8 @@
         "edition": 503,
         "flags": 512,
         "cover_filename": "NerilkasStoryAndTheCoelura.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4232,7 +4584,8 @@
         "edition": 504,
         "flags": 512,
         "cover_filename": "IRobot.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4244,7 +4597,8 @@
         "edition": 505,
         "flags": 512,
         "cover_filename": "RedProphet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4256,7 +4610,8 @@
         "edition": 506,
         "flags": 512,
         "cover_filename": "CrystalLine.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4268,7 +4623,8 @@
         "edition": 509,
         "flags": 512,
         "cover_filename": "QuatermassII.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4280,7 +4636,8 @@
         "edition": 480,
         "flags": 512,
         "cover_filename": "TheHandOfOberon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4292,7 +4649,8 @@
         "edition": 510,
         "flags": 512,
         "cover_filename": "TheStainlessSteelRatGoesToHell.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4304,7 +4662,8 @@
         "edition": 511,
         "flags": 512,
         "cover_filename": "TheAndromedaStrain.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4316,7 +4675,8 @@
         "edition": 512,
         "flags": 0,
         "cover_filename": "SecondFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4328,7 +4688,8 @@
         "edition": 513,
         "flags": 512,
         "cover_filename": "Xenocide.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4340,7 +4701,8 @@
         "edition": 515,
         "flags": 512,
         "cover_filename": "BrokenAngels.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4352,7 +4714,8 @@
         "edition": 520,
         "flags": 512,
         "cover_filename": "IronMaster.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4364,7 +4727,8 @@
         "edition": 525,
         "flags": 0,
         "cover_filename": "TigerTiger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4376,7 +4740,8 @@
         "edition": 526,
         "flags": 512,
         "cover_filename": "MovingMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4388,7 +4753,8 @@
         "edition": 527,
         "flags": 512,
         "cover_filename": "AWizardOfEarthsea.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4400,7 +4766,8 @@
         "edition": 528,
         "flags": 512,
         "cover_filename": "ForbiddenKnowledge.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4412,7 +4779,8 @@
         "edition": 529,
         "flags": 0,
         "cover_filename": "ABlackbirdInTwilight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4424,7 +4792,8 @@
         "edition": 530,
         "flags": 512,
         "cover_filename": "WokenFuries.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4436,7 +4805,8 @@
         "edition": 535,
         "flags": 512,
         "cover_filename": "KnightOfShadows.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4448,7 +4818,8 @@
         "edition": 534,
         "flags": 512,
         "cover_filename": "HuntersOfDune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4460,7 +4831,8 @@
         "edition": 532,
         "flags": 2,
         "cover_filename": "TheButlerianJihad.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4472,7 +4844,8 @@
         "edition": 536,
         "flags": 512,
         "cover_filename": "MasksOfTheMartyrs.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4484,7 +4857,8 @@
         "edition": 537,
         "flags": 512,
         "cover_filename": "WarriorsOfTheStorm.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4496,7 +4870,8 @@
         "edition": 344,
         "flags": 0,
         "cover_filename": "BrothersInArms.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4508,7 +4883,8 @@
         "edition": 301,
         "flags": 0,
         "cover_filename": "TheJesusIncident_1985.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4520,7 +4896,8 @@
         "edition": 569,
         "flags": 0,
         "cover_filename": "TheRingsOfSaturn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4532,7 +4909,8 @@
         "edition": 262,
         "flags": 512,
         "cover_filename": "TheSwordOfTheDawn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4544,7 +4922,8 @@
         "edition": 263,
         "flags": 512,
         "cover_filename": "TheTimeDweller.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4556,7 +4935,8 @@
         "edition": 570,
         "flags": 0,
         "cover_filename": "Distress_1995.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4568,7 +4948,8 @@
         "edition": 571,
         "flags": 0,
         "cover_filename": "Distress_1996.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -4580,7 +4961,8 @@
         "edition": 572,
         "flags": 0,
         "cover_filename": "TheMidwichCuckoos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4592,7 +4974,8 @@
         "edition": 573,
         "flags": 0,
         "cover_filename": "TheNovice_atom.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -4604,7 +4987,8 @@
         "edition": 574,
         "flags": 512,
         "cover_filename": "Next.jpg",
-        "private_notes": "Christian Farley"
+        "private_notes": "Christian Farley",
+        "is_variant": false
     }
 },
 {
@@ -4616,7 +5000,8 @@
         "edition": 575,
         "flags": 0,
         "cover_filename": "TheLazarusEffect.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4628,7 +5013,8 @@
         "edition": 576,
         "flags": 0,
         "cover_filename": "ThePriestsOfPsi.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4640,7 +5026,8 @@
         "edition": 424,
         "flags": 0,
         "cover_filename": "ToRidePegasus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4652,7 +5039,8 @@
         "edition": 577,
         "flags": 512,
         "cover_filename": "ToRidePegasus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4664,7 +5052,8 @@
         "edition": 316,
         "flags": 0,
         "cover_filename": "TheSpaceMerchants.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4676,7 +5065,8 @@
         "edition": 578,
         "flags": 0,
         "cover_filename": "TheShadowOfTheTorturer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4688,7 +5078,8 @@
         "edition": 579,
         "flags": 0,
         "cover_filename": "TheClawOfTheConciliator.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4700,7 +5091,8 @@
         "edition": 580,
         "flags": 2,
         "cover_filename": "RoadsidePicnic.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4712,7 +5104,8 @@
         "edition": 581,
         "flags": 0,
         "cover_filename": "TheThreeStigmataOfPalmerEldritch.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4724,7 +5117,8 @@
         "edition": 582,
         "flags": 0,
         "cover_filename": "DoAndroidsDreamOfElectricSheep.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4736,7 +5130,8 @@
         "edition": 583,
         "flags": 0,
         "cover_filename": "OurFriendsFromFrolix8.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4748,7 +5143,8 @@
         "edition": 584,
         "flags": 0,
         "cover_filename": "TheDemolishedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4760,7 +5156,8 @@
         "edition": 585,
         "flags": 0,
         "cover_filename": "TheDemolishedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4772,7 +5169,8 @@
         "edition": 586,
         "flags": 0,
         "cover_filename": "TheDemolishedMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4784,7 +5182,8 @@
         "edition": 587,
         "flags": 0,
         "cover_filename": "PreludeToFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4796,7 +5195,8 @@
         "edition": 590,
         "flags": 0,
         "cover_filename": "TheChrysalids_1969.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4808,7 +5208,8 @@
         "edition": 591,
         "flags": 2,
         "cover_filename": "Foundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4820,7 +5221,8 @@
         "edition": 592,
         "flags": 2,
         "cover_filename": "SecondFoundation_1986.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4832,7 +5234,8 @@
         "edition": 596,
         "flags": 0,
         "cover_filename": "SecondFoundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4844,7 +5247,8 @@
         "edition": 597,
         "flags": 0,
         "cover_filename": "ChristmasOnARationalPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4856,7 +5260,8 @@
         "edition": 598,
         "flags": 0,
         "cover_filename": "WarGames.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4868,7 +5273,8 @@
         "edition": 599,
         "flags": 0,
         "cover_filename": "ThePriceYouPay.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4880,7 +5286,8 @@
         "edition": 600,
         "flags": 0,
         "cover_filename": "IronFist.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4892,7 +5299,8 @@
         "edition": 601,
         "flags": 0,
         "cover_filename": "ClansOfTheAlphaneMoon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4904,7 +5312,8 @@
         "edition": 560,
         "flags": 1,
         "cover_filename": "Vor.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4916,7 +5325,8 @@
         "edition": 602,
         "flags": 0,
         "cover_filename": "TheStarsMyDestination.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4928,7 +5338,8 @@
         "edition": 567,
         "flags": 0,
         "cover_filename": "Grounded.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4940,7 +5351,8 @@
         "edition": 603,
         "flags": 2,
         "cover_filename": "Dune_putnam_hc.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4952,7 +5364,8 @@
         "edition": 604,
         "flags": 0,
         "cover_filename": "TheDisappearingFuture.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4964,7 +5377,8 @@
         "edition": 605,
         "flags": 0,
         "cover_filename": "TheSpearOfMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4976,7 +5390,8 @@
         "edition": 606,
         "flags": 0,
         "cover_filename": "TheCompleteRobot.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -4988,7 +5403,8 @@
         "edition": 284,
         "flags": 0,
         "cover_filename": "TheButlerianJihad.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5000,7 +5416,8 @@
         "edition": 607,
         "flags": 0,
         "cover_filename": "Titan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5012,7 +5429,8 @@
         "edition": 608,
         "flags": 0,
         "cover_filename": "WarriorWoman.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5024,7 +5442,8 @@
         "edition": 612,
         "flags": 0,
         "cover_filename": "TheEarlyAsimov1.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5036,7 +5455,8 @@
         "edition": 609,
         "flags": 0,
         "cover_filename": "FreedomsLanding.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5048,7 +5468,8 @@
         "edition": 610,
         "flags": 0,
         "cover_filename": "FreedomsChoice.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5060,7 +5481,8 @@
         "edition": 611,
         "flags": 0,
         "cover_filename": "FreedomsChallenge.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5072,7 +5494,8 @@
         "edition": 613,
         "flags": 0,
         "cover_filename": "TheSleepEaters.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5084,7 +5507,8 @@
         "edition": 618,
         "flags": 0,
         "cover_filename": "ThePlanetBuyer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5096,7 +5520,8 @@
         "edition": 319,
         "flags": 0,
         "cover_filename": "TheOtherSideOfTheSky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5108,7 +5533,8 @@
         "edition": 617,
         "flags": 0,
         "cover_filename": "PreludeToSpace.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5120,7 +5546,8 @@
         "edition": 616,
         "flags": 0,
         "cover_filename": "TheMutants.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5132,7 +5559,8 @@
         "edition": 615,
         "flags": 0,
         "cover_filename": "CenterForce.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5144,7 +5572,8 @@
         "edition": 470,
         "flags": 0,
         "cover_filename": "WorldInEclipse.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5156,7 +5585,8 @@
         "edition": 614,
         "flags": 0,
         "cover_filename": "OneAgainstTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5168,7 +5598,8 @@
         "edition": 619,
         "flags": 0,
         "cover_filename": "PermutationCity_2003.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5180,7 +5611,8 @@
         "edition": 620,
         "flags": 0,
         "cover_filename": "Millennium.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5192,7 +5624,8 @@
         "edition": 621,
         "flags": 0,
         "cover_filename": "ChildrenOfGod.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5204,7 +5637,8 @@
         "edition": 622,
         "flags": 0,
         "cover_filename": "Andra.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5216,7 +5650,8 @@
         "edition": 623,
         "flags": 0,
         "cover_filename": "BrokenSymmetries.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5228,7 +5663,8 @@
         "edition": 624,
         "flags": 0,
         "cover_filename": "WinningColours.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5240,19 +5676,21 @@
         "edition": 625,
         "flags": 0,
         "cover_filename": "FreedomsRansom.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
     "model": "bookcovers.covers",
-    "pk": 128,
+    "pk": 443,
     "fields": {
         "book": 5,
         "artwork": 119,
         "edition": 557,
         "flags": 3,
         "cover_filename": "DuneMessiah_54.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -5264,7 +5702,8 @@
         "edition": 626,
         "flags": 0,
         "cover_filename": "DestinationVoid.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5276,7 +5715,8 @@
         "edition": 627,
         "flags": 0,
         "cover_filename": "TheGodBox.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5288,7 +5728,8 @@
         "edition": 628,
         "flags": 0,
         "cover_filename": "TheCuckoosEgg.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5300,7 +5741,8 @@
         "edition": 630,
         "flags": 0,
         "cover_filename": "Context.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5312,7 +5754,8 @@
         "edition": 629,
         "flags": 0,
         "cover_filename": "TheTraveller.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5324,7 +5767,8 @@
         "edition": 635,
         "flags": 0,
         "cover_filename": "FoundationsEdge.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5336,7 +5780,8 @@
         "edition": 631,
         "flags": 0,
         "cover_filename": "Foundation.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5348,7 +5793,8 @@
         "edition": 632,
         "flags": 0,
         "cover_filename": "FoundationAndEmpire.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5360,7 +5806,8 @@
         "edition": 633,
         "flags": 0,
         "cover_filename": "Foundation_1969.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5372,7 +5819,8 @@
         "edition": 634,
         "flags": 0,
         "cover_filename": "SecondFoundation_1968.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5384,7 +5832,8 @@
         "edition": 404,
         "flags": 0,
         "cover_filename": "TheGreenHillsOfEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5396,7 +5845,8 @@
         "edition": 270,
         "flags": 0,
         "cover_filename": "RedPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5408,7 +5858,8 @@
         "edition": 221,
         "flags": 0,
         "cover_filename": "AFallOfMoondust.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5420,7 +5871,8 @@
         "edition": 300,
         "flags": 0,
         "cover_filename": "FarmerInTheSky.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5432,7 +5884,8 @@
         "edition": 636,
         "flags": 2,
         "cover_filename": "Dune.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5444,7 +5897,8 @@
         "edition": 637,
         "flags": 2,
         "cover_filename": "Neuromancer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5456,7 +5910,8 @@
         "edition": 638,
         "flags": 0,
         "cover_filename": "Neuromancer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5468,7 +5923,8 @@
         "edition": 639,
         "flags": 2,
         "cover_filename": "Dragonflight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5480,7 +5936,8 @@
         "edition": 640,
         "flags": 2,
         "cover_filename": "DecisionAtDoona_1971.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5492,7 +5949,8 @@
         "edition": 641,
         "flags": 0,
         "cover_filename": "FlightIntoSpace.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5504,7 +5962,8 @@
         "edition": 642,
         "flags": 0,
         "cover_filename": "Earthlight.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5516,7 +5975,8 @@
         "edition": 36,
         "flags": 0,
         "cover_filename": "20000LeaguesUnderTheSea.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5528,7 +5988,8 @@
         "edition": 643,
         "flags": 0,
         "cover_filename": "Tron.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5540,7 +6001,8 @@
         "edition": 102,
         "flags": 0,
         "cover_filename": "WhenTheStarKingsDie.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5552,7 +6014,8 @@
         "edition": 644,
         "flags": 0,
         "cover_filename": "Neuromancer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5564,7 +6027,8 @@
         "edition": 645,
         "flags": 0,
         "cover_filename": "GladiatorAtLaw.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5576,7 +6040,8 @@
         "edition": 646,
         "flags": 0,
         "cover_filename": "TheSpaceMerchants.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5588,7 +6053,8 @@
         "edition": 647,
         "flags": 0,
         "cover_filename": "FlowersForAlgernon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5600,7 +6066,8 @@
         "edition": 648,
         "flags": 0,
         "cover_filename": "ShadowsInThePit.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5612,7 +6079,8 @@
         "edition": 649,
         "flags": 0,
         "cover_filename": "TheOctoberCountry.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5624,7 +6092,8 @@
         "edition": 396,
         "flags": 0,
         "cover_filename": "RocketshipGalileo.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5636,7 +6105,8 @@
         "edition": 451,
         "flags": 0,
         "cover_filename": "HaveSpaceSuitWillTravel.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5648,7 +6118,8 @@
         "edition": 444,
         "flags": 0,
         "cover_filename": "Friday.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5660,7 +6131,8 @@
         "edition": 652,
         "flags": 128,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5672,7 +6144,8 @@
         "edition": 653,
         "flags": 128,
         "cover_filename": "Web.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5684,7 +6157,8 @@
         "edition": 654,
         "flags": 0,
         "cover_filename": "PodkayneOfMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5696,7 +6170,8 @@
         "edition": 655,
         "flags": 0,
         "cover_filename": "Riverworld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5708,7 +6183,8 @@
         "edition": 656,
         "flags": 0,
         "cover_filename": "TroubleWithLichen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5720,7 +6196,8 @@
         "edition": 224,
         "flags": 2,
         "cover_filename": "FoundationAndEarth_1987.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5732,7 +6209,8 @@
         "edition": 658,
         "flags": 0,
         "cover_filename": "ChangeOfCommand.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5744,7 +6222,8 @@
         "edition": 659,
         "flags": 0,
         "cover_filename": "AgainstTheOdds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5756,7 +6235,8 @@
         "edition": 660,
         "flags": 0,
         "cover_filename": "Dragonsong_1981.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5768,7 +6248,8 @@
         "edition": 661,
         "flags": 0,
         "cover_filename": "Dragonsong_1993.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -5780,7 +6261,8 @@
         "edition": 662,
         "flags": 2,
         "cover_filename": "Dragonsinger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5792,7 +6274,8 @@
         "edition": 663,
         "flags": 0,
         "cover_filename": "TheWhiteDragon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5804,7 +6287,8 @@
         "edition": 664,
         "flags": 0,
         "cover_filename": "MoreThanSuperhuman.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5816,7 +6300,8 @@
         "edition": 665,
         "flags": 0,
         "cover_filename": "TheTechnicolorTimeMachine.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5828,7 +6313,8 @@
         "edition": 666,
         "flags": 0,
         "cover_filename": "TheDarkRiver.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5840,7 +6326,8 @@
         "edition": 667,
         "flags": 0,
         "cover_filename": "TheBookOfPhilipJoseFarmer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5852,7 +6339,8 @@
         "edition": 668,
         "flags": 0,
         "cover_filename": "CalibansHour.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5864,7 +6352,8 @@
         "edition": 669,
         "flags": 0,
         "cover_filename": "SpectrumOfAForgottenSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5876,7 +6365,8 @@
         "edition": 670,
         "flags": 0,
         "cover_filename": "HuntingParty.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5888,7 +6378,8 @@
         "edition": 671,
         "flags": 0,
         "cover_filename": "OnceAHero.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5900,7 +6391,8 @@
         "edition": 672,
         "flags": 0,
         "cover_filename": "RulesOfEngagement.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5912,7 +6404,8 @@
         "edition": 673,
         "flags": 0,
         "cover_filename": "EndersGame.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5924,7 +6417,8 @@
         "edition": 674,
         "flags": 2,
         "cover_filename": "EndersGame.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5936,7 +6430,8 @@
         "edition": 531,
         "flags": 0,
         "cover_filename": "WorldsEnd.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5948,7 +6443,8 @@
         "edition": 675,
         "flags": 2,
         "cover_filename": "WorldsEnd.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5960,7 +6456,8 @@
         "edition": 676,
         "flags": 0,
         "cover_filename": "TheEyreAffair.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5972,7 +6469,8 @@
         "edition": 677,
         "flags": 0,
         "cover_filename": "LostInAGoodBook.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5984,7 +6482,8 @@
         "edition": 678,
         "flags": 0,
         "cover_filename": "TheWellOfLostPlots.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -5996,7 +6495,8 @@
         "edition": 679,
         "flags": 256,
         "cover_filename": null,
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6008,7 +6508,8 @@
         "edition": 680,
         "flags": 0,
         "cover_filename": "TheEyreAffair.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6020,7 +6521,8 @@
         "edition": 681,
         "flags": 0,
         "cover_filename": "LostInAGoodBook.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6032,7 +6534,8 @@
         "edition": 682,
         "flags": 0,
         "cover_filename": "TheWellOfLostPlots.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6044,7 +6547,8 @@
         "edition": 684,
         "flags": 0,
         "cover_filename": "SomethingRotten.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6056,7 +6560,8 @@
         "edition": 685,
         "flags": 0,
         "cover_filename": "TheBigOverEasy.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6068,7 +6573,8 @@
         "edition": 686,
         "flags": 0,
         "cover_filename": "TheFourthBear.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6080,7 +6586,8 @@
         "edition": 377,
         "flags": 0,
         "cover_filename": "TheFifthHeadOfCerberus.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6092,7 +6599,8 @@
         "edition": 687,
         "flags": 0,
         "cover_filename": "TradingInDanger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6104,7 +6612,8 @@
         "edition": 547,
         "flags": 0,
         "cover_filename": "Cetaganda.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6116,7 +6625,8 @@
         "edition": 548,
         "flags": 0,
         "cover_filename": "DiplomaticImmunity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6128,7 +6638,8 @@
         "edition": 689,
         "flags": 0,
         "cover_filename": "BordersOfInfinity.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6140,7 +6651,8 @@
         "edition": 690,
         "flags": 0,
         "cover_filename": "Barrayar.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6152,7 +6664,8 @@
         "edition": 691,
         "flags": 0,
         "cover_filename": "ShardsOfHonour.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6164,7 +6677,8 @@
         "edition": 514,
         "flags": 0,
         "cover_filename": "Xenocide.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6176,7 +6690,8 @@
         "edition": 692,
         "flags": 0,
         "cover_filename": "FeersumEndjinn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6188,7 +6703,8 @@
         "edition": 345,
         "flags": 0,
         "cover_filename": "CampConcentration.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6200,7 +6716,8 @@
         "edition": 546,
         "flags": 0,
         "cover_filename": "UnderCompulsion.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6212,7 +6729,8 @@
         "edition": 693,
         "flags": 0,
         "cover_filename": "GardensOfTheMoon.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6224,7 +6742,8 @@
         "edition": 694,
         "flags": 0,
         "cover_filename": "TheNanoFlower.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6236,7 +6755,8 @@
         "edition": 697,
         "flags": 0,
         "cover_filename": "TheNakedGod.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6248,7 +6768,8 @@
         "edition": 696,
         "flags": 0,
         "cover_filename": "FlowMyTearsThePolicemanSaid.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6260,7 +6781,8 @@
         "edition": 695,
         "flags": 0,
         "cover_filename": "TheNakedGod_1999.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -6272,7 +6794,8 @@
         "edition": 333,
         "flags": 0,
         "cover_filename": "DinosaurPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6284,7 +6807,8 @@
         "edition": 507,
         "flags": 0,
         "cover_filename": "DinosaurPlanet.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6296,7 +6820,8 @@
         "edition": 508,
         "flags": 0,
         "cover_filename": "DinosaurPlanetII.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6308,7 +6833,8 @@
         "edition": 334,
         "flags": 0,
         "cover_filename": "DecisionAtDoona.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6320,7 +6846,8 @@
         "edition": 698,
         "flags": 0,
         "cover_filename": "DragonsKin.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6332,7 +6859,8 @@
         "edition": 699,
         "flags": 0,
         "cover_filename": "TheGrayPrince.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6344,7 +6872,8 @@
         "edition": 700,
         "flags": 0,
         "cover_filename": "Omnivore.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6356,7 +6885,8 @@
         "edition": 701,
         "flags": 0,
         "cover_filename": "Orn.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6368,7 +6898,8 @@
         "edition": 702,
         "flags": 0,
         "cover_filename": "TheBullAndTheSpear.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6380,7 +6911,8 @@
         "edition": 703,
         "flags": 0,
         "cover_filename": "TheOakAndTheRam.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6392,7 +6924,8 @@
         "edition": 704,
         "flags": 0,
         "cover_filename": "TheSwordAndTheStallion.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6404,7 +6937,8 @@
         "edition": 708,
         "flags": 0,
         "cover_filename": "JourneyToTheCentreOfTheEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6416,7 +6950,8 @@
         "edition": 709,
         "flags": 0,
         "cover_filename": "ClipperOfTheClouds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6428,7 +6963,8 @@
         "edition": 705,
         "flags": 0,
         "cover_filename": "TheLionGame.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6440,7 +6976,8 @@
         "edition": 706,
         "flags": 0,
         "cover_filename": "TheHollowMan.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6452,7 +6989,8 @@
         "edition": 707,
         "flags": 0,
         "cover_filename": "FrankensteinUnbound.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6464,7 +7002,8 @@
         "edition": 711,
         "flags": 0,
         "cover_filename": "Dragonsinger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6476,7 +7015,8 @@
         "edition": 712,
         "flags": 0,
         "cover_filename": "FreedomsChoice_6.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -6488,7 +7028,8 @@
         "edition": null,
         "flags": 2,
         "cover_filename": "TheShipsOfEarth.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6500,7 +7041,8 @@
         "edition": null,
         "flags": 0,
         "cover_filename": "ShadowOfTheGiant.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6512,7 +7054,8 @@
         "edition": 713,
         "flags": 512,
         "cover_filename": "Damia.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6524,7 +7067,8 @@
         "edition": 714,
         "flags": 512,
         "cover_filename": "TheRealityDysfunction_1997.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6536,7 +7080,8 @@
         "edition": 715,
         "flags": 512,
         "cover_filename": "TheRealityDysfunction_Emergence.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6548,7 +7093,8 @@
         "edition": 550,
         "flags": 512,
         "cover_filename": "TheNeutroniumAlchemist.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6560,7 +7106,8 @@
         "edition": 716,
         "flags": 0,
         "cover_filename": "TheSantarogaBarrier.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6572,7 +7119,8 @@
         "edition": 717,
         "flags": 0,
         "cover_filename": "NightOfTheSaucers.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6584,7 +7132,8 @@
         "edition": 718,
         "flags": 0,
         "cover_filename": "Profundis.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6596,7 +7145,8 @@
         "edition": 721,
         "flags": 0,
         "cover_filename": "TheCrystalSinger.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6608,7 +7158,8 @@
         "edition": 724,
         "flags": 0,
         "cover_filename": "TheGoldenApplesOfTheSun.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6620,7 +7171,8 @@
         "edition": 725,
         "flags": 0,
         "cover_filename": "DandelionWine.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6632,7 +7184,8 @@
         "edition": 726,
         "flags": 0,
         "cover_filename": "TheSilverLocusts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6644,7 +7197,8 @@
         "edition": 727,
         "flags": 0,
         "cover_filename": "TheAccidentalSorcerer.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6656,7 +7210,8 @@
         "edition": 728,
         "flags": 0,
         "cover_filename": "WitchesIncorporated.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6668,7 +7223,8 @@
         "edition": 729,
         "flags": 0,
         "cover_filename": "TheAtrocityArchives.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6680,7 +7236,8 @@
         "edition": 730,
         "flags": 0,
         "cover_filename": "Onslaught.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6692,7 +7249,8 @@
         "edition": 731,
         "flags": 0,
         "cover_filename": "Ruin.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6704,7 +7262,8 @@
         "edition": 732,
         "flags": 0,
         "cover_filename": "TheReturnOfTheKing.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6716,7 +7275,8 @@
         "edition": 733,
         "flags": 0,
         "cover_filename": "Stargate.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6728,7 +7288,8 @@
         "edition": 734,
         "flags": 0,
         "cover_filename": "Macroscope.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6740,7 +7301,8 @@
         "edition": 308,
         "flags": 0,
         "cover_filename": "PlanetOfTheApes_DelRey.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": true
     }
 },
 {
@@ -6752,7 +7314,8 @@
         "edition": 736,
         "flags": 0,
         "cover_filename": "PlanetOfTheApes_Penguin.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6764,7 +7327,8 @@
         "edition": 533,
         "flags": 0,
         "cover_filename": "MonkeyPlanet.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6776,7 +7340,8 @@
         "edition": 737,
         "flags": 0,
         "cover_filename": "2061OdysseyThree.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6788,7 +7353,8 @@
         "edition": 739,
         "flags": 512,
         "cover_filename": "SplitInfinity.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6800,7 +7366,8 @@
         "edition": 740,
         "flags": 0,
         "cover_filename": "BlueAdept.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6812,7 +7379,8 @@
         "edition": 741,
         "flags": 0,
         "cover_filename": "Ghost.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6824,7 +7392,8 @@
         "edition": 742,
         "flags": 0,
         "cover_filename": "TheMistsOfAvalon.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6836,7 +7405,8 @@
         "edition": 351,
         "flags": 0,
         "cover_filename": "TheFirebrand.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6848,7 +7418,8 @@
         "edition": 743,
         "flags": 0,
         "cover_filename": "Headcrash.jpg",
-        "private_notes": "NULL"
+        "private_notes": "NULL",
+        "is_variant": false
     }
 },
 {
@@ -6860,7 +7431,8 @@
         "edition": 744,
         "flags": 0,
         "cover_filename": "2001ASpaceOdyssey_1984.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": true
     }
 },
 {
@@ -6872,7 +7444,8 @@
         "edition": 746,
         "flags": 0,
         "cover_filename": "LordFoulsBane.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6884,7 +7457,8 @@
         "edition": 747,
         "flags": 0,
         "cover_filename": "LordOfTheRings.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6896,7 +7470,8 @@
         "edition": 748,
         "flags": 0,
         "cover_filename": "TheTemporalVoid.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6908,7 +7483,8 @@
         "edition": 749,
         "flags": 0,
         "cover_filename": "TheEvolutionaryVoid.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6920,7 +7496,8 @@
         "edition": 750,
         "flags": 0,
         "cover_filename": "TheSwordOfShannara.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6932,7 +7509,8 @@
         "edition": 751,
         "flags": 0,
         "cover_filename": "CubeRoute.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6944,7 +7522,8 @@
         "edition": 752,
         "flags": 0,
         "cover_filename": "Greenmantle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6956,7 +7535,8 @@
         "edition": 753,
         "flags": 0,
         "cover_filename": "FoundationAndEmpire_1972.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6968,7 +7548,8 @@
         "edition": 754,
         "flags": 0,
         "cover_filename": "Kirinya.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6980,7 +7561,8 @@
         "edition": 755,
         "flags": 0,
         "cover_filename": "RedMars.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -6992,7 +7574,8 @@
         "edition": 756,
         "flags": 0,
         "cover_filename": "TheBewitchments.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7004,7 +7587,8 @@
         "edition": 757,
         "flags": 0,
         "cover_filename": "TheFulfilmentsOfFateAndDesire.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7016,7 +7600,8 @@
         "edition": 758,
         "flags": 0,
         "cover_filename": "DarkStar.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7028,7 +7613,8 @@
         "edition": 759,
         "flags": 0,
         "cover_filename": "TheHourOfTheGate.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7040,7 +7626,8 @@
         "edition": 760,
         "flags": 0,
         "cover_filename": "TheDayOfTheDissonance.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7052,7 +7639,8 @@
         "edition": 761,
         "flags": 0,
         "cover_filename": "ChorusSkating.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7064,7 +7652,8 @@
         "edition": 762,
         "flags": 0,
         "cover_filename": "ForLoveOfMotherNot.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7076,7 +7665,8 @@
         "edition": 763,
         "flags": 0,
         "cover_filename": "HarryPotterAndTheSorcerersStone.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7088,7 +7678,8 @@
         "edition": 764,
         "flags": 0,
         "cover_filename": "TheJesusFactor.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7100,7 +7691,8 @@
         "edition": 765,
         "flags": 0,
         "cover_filename": "TheRaggedAstronauts.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7112,7 +7704,8 @@
         "edition": 545,
         "flags": 0,
         "cover_filename": "TheIronDream.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7124,7 +7717,8 @@
         "edition": 766,
         "flags": 0,
         "cover_filename": "CamelotInOrbit.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7136,7 +7730,8 @@
         "edition": 493,
         "flags": 0,
         "cover_filename": "TheWarOfTheWorlds.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7148,7 +7743,8 @@
         "edition": 767,
         "flags": 0,
         "cover_filename": "TheImmortals.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7160,7 +7756,8 @@
         "edition": 768,
         "flags": 0,
         "cover_filename": "Slaughterhouse5.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7172,7 +7769,8 @@
         "edition": 769,
         "flags": 0,
         "cover_filename": "Slaughterhouse-5.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7184,7 +7782,8 @@
         "edition": 770,
         "flags": 0,
         "cover_filename": "Deepsix.jpg",
-        "private_notes": "Book Design by Kellan Peck, Cover shows only a part of the original artwork"
+        "private_notes": "Book Design by Kellan Peck, Cover shows only a part of the original artwork",
+        "is_variant": false
     }
 },
 {
@@ -7196,7 +7795,8 @@
         "edition": 771,
         "flags": 0,
         "cover_filename": "Ox.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7208,7 +7808,8 @@
         "edition": 772,
         "flags": 0,
         "cover_filename": "TheBlackCloud.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7220,7 +7821,8 @@
         "edition": 773,
         "flags": 0,
         "cover_filename": "AtTheMountainsOfMadness.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7232,7 +7834,8 @@
         "edition": 774,
         "flags": 0,
         "cover_filename": "DagonAndOtherMacabreTales.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7244,7 +7847,8 @@
         "edition": 775,
         "flags": 0,
         "cover_filename": "TheHaunterOfTheDark.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7256,7 +7860,8 @@
         "edition": 776,
         "flags": 0,
         "cover_filename": "BurningChrome.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7268,7 +7873,8 @@
         "edition": 477,
         "flags": 0,
         "cover_filename": "Vurt.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7280,7 +7886,8 @@
         "edition": 777,
         "flags": 0,
         "cover_filename": "Software.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7292,7 +7899,8 @@
         "edition": 778,
         "flags": 0,
         "cover_filename": "Wetware.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7304,7 +7912,8 @@
         "edition": 779,
         "flags": 0,
         "cover_filename": "MurphysGambit.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7316,7 +7925,8 @@
         "edition": 780,
         "flags": 0,
         "cover_filename": "TheDemonLord.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7328,7 +7938,8 @@
         "edition": 781,
         "flags": 0,
         "cover_filename": "Thoughtworld.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7340,7 +7951,8 @@
         "edition": 782,
         "flags": 0,
         "cover_filename": "BornWithTheDead.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7352,7 +7964,8 @@
         "edition": 783,
         "flags": 0,
         "cover_filename": "Nemesis.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7364,7 +7977,8 @@
         "edition": 784,
         "flags": 0,
         "cover_filename": "NightfallOne.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7376,7 +7990,8 @@
         "edition": 524,
         "flags": 0,
         "cover_filename": "GeisOfTheGargoyle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7388,7 +8003,8 @@
         "edition": 540,
         "flags": 0,
         "cover_filename": "Options.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7400,7 +8016,8 @@
         "edition": 785,
         "flags": 0,
         "cover_filename": "UpTheLine.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7412,7 +8029,8 @@
         "edition": 538,
         "flags": 0,
         "cover_filename": "Nightfall.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7424,7 +8042,8 @@
         "edition": 786,
         "flags": 0,
         "cover_filename": "PriestessOfTheWhite.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7436,7 +8055,8 @@
         "edition": 787,
         "flags": 0,
         "cover_filename": "Cosmopath.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7448,7 +8068,8 @@
         "edition": 788,
         "flags": 0,
         "cover_filename": "TheHitchhikersGuideToTheGalaxy.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7460,7 +8081,8 @@
         "edition": 789,
         "flags": 0,
         "cover_filename": "TheNightOfThePuudly.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7472,7 +8094,8 @@
         "edition": 790,
         "flags": 0,
         "cover_filename": "IdealWar.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7484,7 +8107,8 @@
         "edition": 791,
         "flags": 0,
         "cover_filename": "LegionOfTheDamned.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7496,7 +8120,8 @@
         "edition": 792,
         "flags": 0,
         "cover_filename": "TheFinalBattle.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7508,7 +8133,8 @@
         "edition": 793,
         "flags": 512,
         "cover_filename": "MisterMonday.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7520,7 +8146,8 @@
         "edition": 794,
         "flags": 512,
         "cover_filename": "GrimTuesday.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7532,7 +8159,8 @@
         "edition": 381,
         "flags": 0,
         "cover_filename": "EarthmanComeHome.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7544,7 +8172,8 @@
         "edition": 795,
         "flags": 0,
         "cover_filename": "AndAllTheStarsAStage.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7556,7 +8185,8 @@
         "edition": 796,
         "flags": 0,
         "cover_filename": "TheDarknessOnDiamondia.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7568,7 +8198,8 @@
         "edition": 797,
         "flags": 0,
         "cover_filename": "FrankensteinUnbound.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7580,7 +8211,8 @@
         "edition": 104,
         "flags": 0,
         "cover_filename": "HelliconiaSpring.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7592,7 +8224,8 @@
         "edition": 798,
         "flags": 0,
         "cover_filename": "TheDeathRaysOfArdilla.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7604,7 +8237,8 @@
         "edition": 799,
         "flags": 0,
         "cover_filename": "Resolution.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7616,7 +8250,8 @@
         "edition": null,
         "flags": 0,
         "cover_filename": "Neuromancer7.jpg",
-        "private_notes": "edition 800, leaving it out means it doesn't show up in title list but does in cover list"
+        "private_notes": "edition 800, leaving it out means it doesn't show up in title list but does in cover list",
+        "is_variant": true
     }
 },
 {
@@ -7628,7 +8263,8 @@
         "edition": 801,
         "flags": 0,
         "cover_filename": "SwordAndCitadel.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7640,7 +8276,8 @@
         "edition": 802,
         "flags": 0,
         "cover_filename": "TheMidwichCuckoos.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7652,7 +8289,8 @@
         "edition": 803,
         "flags": 0,
         "cover_filename": "TheSeedsOfTime.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7664,7 +8302,8 @@
         "edition": 804,
         "flags": 0,
         "cover_filename": "TroubleWithLichen.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7676,7 +8315,8 @@
         "edition": 805,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7688,7 +8328,8 @@
         "edition": null,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
-        "private_notes": "edition 806, leaving it out means it doesn't show up in title list but does in cover list"
+        "private_notes": "edition 806, leaving it out means it doesn't show up in title list but does in cover list",
+        "is_variant": true
     }
 },
 {
@@ -7700,7 +8341,8 @@
         "edition": 807,
         "flags": 0,
         "cover_filename": "TheDayOfTheTriffids.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7712,7 +8354,8 @@
         "edition": 720,
         "flags": 0,
         "cover_filename": "TheCompassRose.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 },
 {
@@ -7724,7 +8367,8 @@
         "edition": 808,
         "flags": 0,
         "cover_filename": "SargassoOfSpace.jpg",
-        "private_notes": null
+        "private_notes": null,
+        "is_variant": false
     }
 }
 ]

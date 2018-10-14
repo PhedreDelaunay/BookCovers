@@ -1,6 +1,8 @@
+import pprint
+
 from django.db.models import F
 from django.db.models import Q
-
+from django.db.models import Count
 
 from bookcovers.models import Authors
 from bookcovers.models import Artists
@@ -12,28 +14,54 @@ from bookcovers.models import Editions
 
 import math
 
+
 class CoverQuerys:
 
-    def artist_cover_list(artist_id):
+    @staticmethod
+    def artist_list():
+        inner_queryset = Artworks.objects. \
+            filter(artwork_id=F('cover__artwork')). \
+            filter(cover__flags__lt=256). \
+            values_list('artwork_id', flat=True)
 
-        aka_inner_queryset = Artists.objects.filter(artist_aka__artist_aka_id=artist_id)
-        #print (aka_inner_queryset.query)
-        #print (aka_inner_queryset)
+        artist_list = Artists.objects. \
+            filter(artist_id=F('artwork__artist')). \
+            filter(artwork__in=inner_queryset). \
+            values('artist_id', 'name'). \
+            order_by('name'). \
+            distinct()
+
+        print(artist_list.query)
+        print(artist_list.count())
+
+        return artist_list
+
+    @staticmethod
+    def artist_cover_list(artist):
+        print("artist is {}".format(artist.name))
+        aka_inner_queryset = Artists.objects.filter(artist_aka__artist_aka_id=artist.pk)
+        # print (aka_inner_queryset.query)
+        # print (aka_inner_queryset)
 
         cover_list = Artworks.objects. \
-            filter(Q(artist=artist_id) | Q(artist__in=aka_inner_queryset)). \
-            filter(cover__flags__lt=256).values('book','book__title','artist__cover_filepath','cover__cover_filename','year').order_by('year')
-# <a href="BookCoverDetail.php?filter=1&amp;ID=2&amp;bookID=82&amp;currentBook=14&amp;totalBooks=64&amp;currentEntry=12&amp;totalEntrys=115">
-# <IMG src="http://www.djabbic.co.uk/BookCovers/Images/BrucePennington/Thumbnails/DecisionAtDoona_1971.jpg" class="special" alt="book title"></a>
-        print (cover_list.query)
-        print (cover_list)
+            filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
+            filter(Q(cover__flags__lt=256) & Q(cover__is_variant=False) & Q(cover__book=F('book'))). \
+            values('cover__cover_id','book',
+                   'book__title',
+                   'cover__cover_filename',
+                   'year') \
+            .order_by('year', 'artwork_id')
+
+        # print(cover_list.query)
+        # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list
 
+    @staticmethod
     def author_list():
 
         # djabbic v1
-        #inner_queryset = BookEdition.objects.filter(book_edition_id=F('bookcover__book_edition_id')).filter(bookcover__flags__lt=256).values_list('book_edition_id',flat=True)
+        # inner_queryset = BookEdition.objects.filter(book_edition_id=F('bookcover__book_edition_id')).filter(bookcover__flags__lt=256).values_list('book_edition_id',flat=True)
         # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
@@ -41,17 +69,18 @@ class CoverQuerys:
         # If True, this will mean the returned results are single values, rather than one-tuples.
 
         # djabbic_v2
+        # covers -> editions is one-to-one
         inner_queryset = Editions.objects. \
             filter(edition_id=F('covers__edition')). \
             filter(covers__flags__lt=256). \
-            values_list('edition_id',flat=True)
+            values_list('edition_id', flat=True)
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
         # flat=True returns a list of single items for a single field
 
-        print (inner_queryset.query)
-        print ("count inner_queryset is", inner_queryset.count())
-        print ("len inner_queryset is", len(inner_queryset))
-        print (inner_queryset)
+        print(inner_queryset.query)
+        print("count inner_queryset is", inner_queryset.count())
+        print("len inner_queryset is", len(inner_queryset))
+        print(inner_queryset)
 
         # djabbic_v2
         # related_name vs related_query_name
@@ -71,20 +100,38 @@ class CoverQuerys:
 
         # djabbic_v2
 
-
         author_list = Authors.objects. \
             filter(author_id=F('book__author')). \
             filter(book__book_id=F('book__edition__book')). \
             filter(book__edition__edition_id__in=inner_queryset). \
-            values('author_id','name'). \
+            values('author_id', 'name'). \
             order_by('name'). \
             distinct()
 
-        print (author_list.query)
-        print (author_list.count())
+        print(author_list.query)
+        print(author_list.count())
 
         return author_list
 
+    @staticmethod
+    def author_cover_list(author):
+        print("author is {}".format(author.name))
+        aka_inner_queryset = Authors.objects.filter(author_aka__author_aka_id=author.pk)
 
+#                    "AND BE.edition_id = BC.edition_id " \
+#                    "AND AW.artwork_id = BC.artwork_id " \
+#                    "AND artists.artist_id = AW.artist_id " \
+        # TODO this query is not complete
+        cover_list = Books.objects. \
+            filter(Q(author=author) | Q(author__in=aka_inner_queryset)). \
+            filter(Q(cover__flags__lt=256) & Q(book=F('cover__book'))). \
+            values('cover__cover_id','book',
+                   'book__title',
+                   'cover__cover_filename',
+                   'copyright_year') \
+            .order_by('copyright_year', 'book_id')
 
+        # print(cover_list.query)
+        # print("len(cover_list) is {}".format(len(cover_list)))
 
+        return cover_list

@@ -12,54 +12,6 @@ from django.db import models
 # not only for your own convenience when dealing with the interactive prompt, 
 # but also because objects’ representations are used throughout Django’s automatically-generated admin.
 
-class Criteriaheadings(models.Model):
-    criteria_heading = models.CharField(db_column='CRITERIA_HEADING', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    criteria_order = models.IntegerField(db_column='CRITERIA_ORDER', blank=True, null=True)  # Field name made lowercase.
-    option_type = models.IntegerField(db_column='OPTION_TYPE', blank=True, null=True)  # Field name made lowercase.
-    criteria_option_table = models.CharField(db_column='CRITERIA_OPTION_TABLE', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    num_criteria_fields = models.IntegerField(db_column='NUM_CRITERIA_FIELDS', blank=True, null=True)  # Field name made lowercase.
-    criteria_option_field = models.CharField(db_column='CRITERIA_OPTION_FIELD', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    criteria_where_clause = models.CharField(db_column='CriteriaWhereClause', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    search_select_clause = models.CharField(db_column='SearchSelectClause', max_length=128, blank=True, null=True)  # Field name made lowercase.
-    search_option_table = models.CharField(db_column='SEARCH_OPTION_TABLE', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    num_search_fields = models.IntegerField(db_column='NUM_SEARCH_FIELDS', blank=True, null=True)  # Field name made lowercase.
-    search_option_field = models.CharField(db_column='SEARCH_OPTION_FIELD', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    search_where_clause = models.CharField(db_column='SearchWhereClause', max_length=128, blank=True, null=True)  # Field name made lowercase.
-    values_flag = models.IntegerField(db_column='VALUES_FLAG', blank=True, null=True)  # Field name made lowercase.
-
-    class Meta:
-        managed = False
-        db_table = 'CriteriaHeadings'
-
-
-class ArtbookIndex(models.Model):
-    artbook_index_id = models.AutoField(primary_key=True)
-    artbook_id = models.IntegerField(blank=True, null=True)
-    page = models.IntegerField(blank=True, null=True)
-    book_title = models.CharField(max_length=255, blank=True, null=True)
-    book_author = models.CharField(max_length=255, blank=True, null=True)
-    cover_year = models.CharField(max_length=50, blank=True, null=True)
-    cover = models.CharField(max_length=255, blank=True, null=True)
-    publisher = models.CharField(max_length=255, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'artbook_index'
-
-
-class Artbooks(models.Model):
-    artbook_id = models.AutoField(primary_key=True)
-    author_id = models.IntegerField(blank=True, null=True)
-    artist_id = models.IntegerField(blank=True, null=True)
-    title = models.CharField(max_length=100, blank=True, null=True)
-    subtitle = models.CharField(max_length=255, blank=True, null=True)
-    notes = models.CharField(max_length=255, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'artbooks'
-
-
 
 class Artists(models.Model):
     artist_id = models.AutoField(primary_key=True)
@@ -73,29 +25,24 @@ class Artists(models.Model):
     nationality = models.CharField(max_length=50, blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
-    #    managed = False
         db_table = 'artists'
 
 
 class ArtistAkas(models.Model):
     artist_aka_id = models.IntegerField()
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artist_akas", related_query_name="artist_aka")
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artist_akas",
+                               related_query_name="artist_aka")
     #artist = models.IntegerField(db_column='artist_id')
 
+    def __str__(self):
+        return self.artists.name
+
     class Meta:
-        managed = False
         db_table = 'artist_akas'
-
-
-class AuthorAkas(models.Model):
-    author_aka_id = models.IntegerField()
-    author_id = models.IntegerField()
-    real_name = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'author_akas'
 
 
 class Authors(models.Model):
@@ -110,9 +57,23 @@ class Authors(models.Model):
     nationality = models.CharField(max_length=50, blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
-        managed = False
         db_table = 'authors'
+
+class AuthorAkas(models.Model):
+    # pk=id is implied
+    author_aka_id = models.IntegerField()
+    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="author_akas")
+    real_name = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return self.authors.name
+
+    class Meta:
+        db_table = 'author_akas'
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # if a model has a ForeignKey, instances of the foreign-key model will have access to a Manager 
@@ -129,19 +90,12 @@ class Books(models.Model):
     synopsis = models.TextField(blank=True, null=True)
     quick_notes = models.CharField(max_length=128, blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
     class Meta:
-        managed = False
         db_table = 'books'
 
-
-class BooksSeries(models.Model):
-    series_id = models.IntegerField()
-    book_id = models.IntegerField()
-    volume = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'books_series'
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now artworks
@@ -163,8 +117,14 @@ class Artworks(models.Model):
     def __str__(self):
         return self.name
 
+    def get_first_cover_filename(self):
+        if self.covers:
+            cover = self.covers.filter(flags__lt=256).order_by('edition__print_year')[0]
+            # print("cover is {}".format(cover))
+            cover_filename = cover.cover_filename
+        return cover_filename
+
     class Meta:
-        managed = False
         db_table = 'artworks'
 
 class Countries(models.Model):
@@ -172,8 +132,10 @@ class Countries(models.Model):
     country = models.CharField(max_length=50, blank=True, null=True)
     display_order = models.IntegerField(blank=True, null=True)
 
+    def __str__(self):
+        return self.country
+
     class Meta:
-        managed = False
         db_table = 'countries'
 
 class Editions(models.Model):
@@ -195,8 +157,10 @@ class Editions(models.Model):
     notes = models.TextField(blank=True, null=True)
     designer = models.CharField(max_length=64, blank=True, null=True)
 
+    def __str__(self):
+        return self.books.title + "," + str(self.print_year)
+
     class Meta:
-        managed = False
         db_table = 'editions'
 
 class Covers(models.Model):
@@ -210,9 +174,12 @@ class Covers(models.Model):
     flags = models.IntegerField(blank=True, null=True)
     cover_filename = models.CharField(max_length=50, blank=True, null=True)
     private_notes = models.CharField(max_length=255, blank=True, null=True)
+    is_variant = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.cover_filename
 
     class Meta:
-        managed = False
         db_table = 'covers'
 
 
@@ -223,7 +190,6 @@ class Currencies(models.Model):
     notes = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'currencies'
 
 
@@ -231,8 +197,10 @@ class Formats(models.Model):
     format_id = models.AutoField(primary_key=True)
     format = models.CharField(max_length=50, blank=True, null=True)
 
+    def __str__(self):
+        return self.format
+
     class Meta:
-        managed = False
         db_table = 'formats'
 
 
@@ -242,100 +210,10 @@ class Genres(models.Model):
     description = models.CharField(max_length=50, blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return self.genre
+
     class Meta:
-        managed = False
         db_table = 'genres'
 
-
-class ImprintNames(models.Model):
-    imprint_name_id = models.AutoField(primary_key=True)
-    imprint_name = models.CharField(max_length=50, blank=True, null=True)
-    notes = models.CharField(max_length=50, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'imprint_names'
-
-
-class Imprints(models.Model):
-    imprint_id = models.AutoField(primary_key=True)
-    imprint_name_id = models.IntegerField(blank=True, null=True)
-    isbn = models.CharField(max_length=50, blank=True, null=True)
-    imprint_alternate_name = models.CharField(max_length=50, blank=True, null=True)
-    imprint_description = models.CharField(max_length=255, blank=True, null=True)
-    logo_id = models.IntegerField(blank=True, null=True)
-    publisher_relationship = models.CharField(max_length=50, blank=True, null=True)
-    publisher_id = models.IntegerField(blank=True, null=True)
-    year_founded = models.IntegerField(blank=True, null=True)
-    website = models.CharField(max_length=50, blank=True, null=True)
-    notes = models.CharField(max_length=128, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'imprints'
-
-
-class Panoramas(models.Model):
-    panorama_id = models.AutoField(primary_key=True)
-    filename = models.CharField(max_length=50, blank=True, null=True)
-    order = models.IntegerField(blank=True, null=True)
-    set_id = models.IntegerField(blank=True, null=True)
-    author_id = models.IntegerField(blank=True, null=True)
-    artist_id = models.IntegerField(blank=True, null=True)
-    imprint_id = models.IntegerField(blank=True, null=True)
-    description = models.CharField(max_length=50, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'panoramas'
-
-
-class PrintRuns(models.Model):
-    print_run_id = models.IntegerField()
-    order = models.IntegerField()
-    edition_id = models.IntegerField(blank=True, null=True)
-    cover_id = models.IntegerField(blank=True, null=True)
-    print = models.CharField(max_length=255, blank=True, null=True)
-    cover_price = models.CharField(max_length=255, blank=True, null=True)
-    num_pages = models.IntegerField(blank=True, null=True)
-    print_year = models.CharField(max_length=255, blank=True, null=True)
-    notes = models.CharField(max_length=255, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'print_runs'
-        unique_together = (('print_run_id', 'order'),)
-
-
-class Series(models.Model):
-    series_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=True)
-    synopsis = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'series'
-
-
-class SetExceptions(models.Model):
-    set_id = models.IntegerField()
-    cover_id = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'set_exceptions'
-
-
-class Sets(models.Model):
-    set_id = models.AutoField(primary_key=True)
-    series_id = models.IntegerField(blank=True, null=True)
-    author_id = models.IntegerField(blank=True, null=True)
-    artist_id = models.IntegerField(blank=True, null=True)
-    imprint_id = models.IntegerField(blank=True, null=True)
-    description = models.CharField(max_length=50, blank=True, null=True)
-    panorama_id = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'sets'
 
