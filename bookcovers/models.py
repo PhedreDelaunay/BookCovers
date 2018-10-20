@@ -44,6 +44,9 @@ class ArtistAkas(models.Model):
     class Meta:
         db_table = 'artist_akas'
 
+#class AuhtorManager(models.Manager):
+#    def get_by_natural_key(self, fullname):
+#        return self.get(fullname=fullname)
 
 class Authors(models.Model):
     author_id = models.AutoField(primary_key=True)
@@ -66,7 +69,8 @@ class Authors(models.Model):
 class AuthorAkas(models.Model):
     # pk=id is implied
     author_aka_id = models.IntegerField()
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="author_akas")
+    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="author_akas",
+                               related_query_name="author_aka")
     real_name = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
@@ -80,6 +84,7 @@ class AuthorAkas(models.Model):
 # that returns all instances of the first model. 
 # By default, this Manager is named FOO_set, where FOO is the source model name, lowercased
 # You can override the FOO_set name by setting the related_name parameter in the ForeignKey definition
+# related_query_name creates a relation from the related object back to this one. This allows querying and filtering from the related object.
 class Books(models.Model):
     book_id = models.AutoField(primary_key=True)
     author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="books", related_query_name="book")
@@ -105,7 +110,7 @@ class Artworks(models.Model):
     #artist_id = models.IntegerField(blank=True, null=True)
     year = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="books", related_query_name="book")
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="artworks", related_query_name="artwork")
     #book_id = models.IntegerField(blank=True, null=True)
     original = models.CharField(max_length=128, blank=True, null=True)
     evidence = models.CharField(max_length=255, blank=True, null=True)
