@@ -46,7 +46,8 @@ class CoverQuerys:
         cover_list = Artworks.objects. \
             filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
             filter(Q(cover__flags__lt=256) & Q(cover__is_variant=False) & Q(cover__book=F('book'))). \
-            values('cover__cover_id','book',
+            values('cover__cover_id',
+                   'book',
                    'book__title',
                    'cover__cover_filename',
                    'year') \
@@ -59,7 +60,6 @@ class CoverQuerys:
 
     @staticmethod
     def author_list():
-
         # djabbic v1
         # inner_queryset = BookEdition.objects.filter(book_edition_id=F('bookcover__book_edition_id')).filter(bookcover__flags__lt=256).values_list('book_edition_id',flat=True)
         # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
@@ -118,20 +118,21 @@ class CoverQuerys:
         print("author is {}".format(author.name))
         aka_inner_queryset = Authors.objects.filter(author_aka__author_aka_id=author.pk)
 
-#                    "AND BE.edition_id = BC.edition_id " \
-#                    "AND AW.artwork_id = BC.artwork_id " \
-#                    "AND artists.artist_id = AW.artist_id " \
-        # TODO this query is not complete
         cover_list = Books.objects. \
-            filter(Q(author=author) | Q(author__in=aka_inner_queryset)). \
-            filter(Q(cover__flags__lt=256) & Q(book=F('cover__book'))). \
-            values('cover__cover_id','book',
-                   'book__title',
+            filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
+            .values('book_id',
+                   'cover__artwork__artist__cover_filepath',
                    'cover__cover_filename',
-                   'copyright_year') \
-            .order_by('copyright_year', 'book_id')
+                   'title',
+                   'copyright_year',
+                   'cover__artwork__year') \
+            .order_by('copyright_year',
+                      'book_id',
+                      'cover__artwork__year')
 
-        # print(cover_list.query)
+        # print (cover_list)
+        print(f"django author cover_list query is\n{cover_list.query}")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list

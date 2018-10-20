@@ -53,17 +53,14 @@ class OriginalRawQuerys:
                 cover_list = OriginalRawQuerys.dictfetchall(cursor)
             else:
                 cover_list = cursor.fetchall()
-            print("Original cover list is")
-            print (cover_list)
-            print ("\n")
+            print(f"Original artist cover list is\n{cover_list}\n")
 
         return cover_list
 
     @staticmethod
-    def author_list():
+    def author_list(return_dict=False):
  
-        #strCoverAuthorsSQL = "SELECT A.author_id, A.name, B.book_id, B.author_id, BE.book_id, BE.edition_id " \
-        strCoverAuthorsSQL = "SELECT A.author_id, A.name " \
+        strCoverAuthorsSQL = "SELECT A.author_id, A.name, B.book_id, B.author_id, BE.book_id, BE.edition_id " \
                         "FROM authors As A, books AS B, editions AS BE " \
                         "WHERE A.author_id = B.author_id AND B.book_id = BE.book_id " \
                         "AND BE.edition_id IN " \
@@ -73,7 +70,10 @@ class OriginalRawQuerys:
 
         with connection.cursor() as cursor:
             cursor.execute(strCoverAuthorsSQL)
-            author_list = cursor.fetchall()
+            if return_dict:
+                author_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                author_list = cursor.fetchall()
 
         print (author_list)
 
@@ -83,20 +83,30 @@ class OriginalRawQuerys:
     # get all books by this author
     def author_cover_list(author_id, return_dict=False):
 
-        strAuthorSQL = "SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year," \
-                       " authors.author_id, BE.edition_id, AW.artist_id, AW.year " \
-                    "FROM artists, covers as BC, books, authors, editions as BE, artworks as AW " \
-                    "WHERE ((authors.author_id = %d) OR " \
-                            "authors.author_id IN "\
-                            "(SELECT AA.author_aka_id FROM author_akas as AA WHERE AA.author_id = %d)) " \
-                    "AND books.author_id = authors.author_id AND BC.book_id = books.book_id " \
-                    "AND BE.edition_id = BC.edition_id " \
-                    "AND AW.artwork_id = BC.artwork_id " \
-                    "AND artists.artist_id = AW.artist_id " \
-                    "AND BC.flags < 256 " \
-                    "GROUP BY books.book_id " \
-                    "ORDER BY books.copyright_year, books.book_id, AW.year"
+        # get all covers of all books by this author
+        strAuthorAllSQL = ("SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year, "
+                            "authors.name, BE.edition_id, AW.artwork_id, AW.year "
+                        "FROM artists, covers as BC, books, authors, editions as BE, artworks as AW "
+                        "WHERE ((authors.author_id = %s) OR "
+                                "authors.author_id IN "
+                                "(SELECT AA.author_aka_id FROM author_akas as AA WHERE AA.author_id = %s)) "
+                        "AND books.author_id = authors.author_id AND BC.book_id = books.book_id "
+                        "AND BE.edition_id = BC.edition_id "
+                        "AND AW.artwork_id = BC.artwork_id "
+                        "AND artists.artist_id = AW.artist_id "
+                        "AND BC.flags < 256 "
+                        "ORDER BY books.copyright_year, books.book_id, AW.year")
 
+        print (f"strAuthorSQL is\n{strAuthorAllSQL}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strAuthorAllSQL, [author_id, author_id])
+            if return_dict:
+                cover_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                cover_list = cursor.fetchall()
+            print(f"Original author cover list is\n{cover_list}\n")
+
+        return cover_list
 
     @staticmethod
     def dictfetchall(cursor):

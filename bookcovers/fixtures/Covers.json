@@ -7025,7 +7025,7 @@
     "fields": {
         "book": 70,
         "artwork": 538,
-        "edition": null,
+        "edition": 722,
         "flags": 2,
         "cover_filename": "TheShipsOfEarth.jpg",
         "private_notes": null,
@@ -7038,7 +7038,7 @@
     "fields": {
         "book": 954,
         "artwork": 539,
-        "edition": null,
+        "edition": 723,
         "flags": 0,
         "cover_filename": "ShadowOfTheGiant.jpg",
         "private_notes": null,
@@ -8247,7 +8247,7 @@
     "fields": {
         "book": 508,
         "artwork": 460,
-        "edition": null,
+        "edition": 800,
         "flags": 0,
         "cover_filename": "Neuromancer7.jpg",
         "private_notes": "edition 800, leaving it out means it doesn't show up in title list but does in cover list",
@@ -8325,7 +8325,7 @@
     "fields": {
         "book": 191,
         "artwork": 632,
-        "edition": null,
+        "edition": 806,
         "flags": 0,
         "cover_filename": "TheChrysalids.jpg",
         "private_notes": "edition 806, leaving it out means it doesn't show up in title list but does in cover list",

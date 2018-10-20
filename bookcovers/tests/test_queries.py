@@ -10,40 +10,14 @@ from bookcovers.cover_querys import CoverQuerys
 
 # Using the unittest framework to test the django queries against the original raw sql queries
 
-class AuthorQueryTests(TestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json']
+class SubjectQueryTest(TestCase):
 
-    def test_author_name(self):
-        author = Authors.objects.get(pk=6)
-        expected_author_name = "Philip K. Dick"
-        self.assertEqual(expected_author_name, author.name)
-
-
-class ArtistQueryTests(TestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'ArtistAkas.json']
-
-    def test_artist_name(self):
-        artist = Artists.objects.get(pk=83)
-        expected_artist_name = "Anthony Roberts"
-        self.assertEqual(expected_artist_name, artist.name)
-
-    def item_matches(self, expected_record, expected_key, actual_record, actual_key):
-        expected_value = expected_record[expected_key]
-        actual_value= actual_record.get(actual_key, actual_key)
-        print ("expected_value is '{}', actual_value is '{}'".format(expected_value, actual_value))
-        self.assertEqual(expected_value, actual_value)
+    def subject_matches(self, subject_pk, expected_subject, actual_subject):
+        # keys in dictionary returned from raw sql query
+        expected_keys = [subject_pk, "name"]
+        # keys in dictionary returned from django query
+        actual_keys = [subject_pk, "name"]
+        self.record_matches(expected_subject, expected_keys, actual_subject, actual_keys)
 
     def record_matches(self, expected_record, expected_keys, actual_record, actual_keys):
         # https://docs.python.org/3/library/functions.html#zip
@@ -59,14 +33,114 @@ class ArtistQueryTests(TestCase):
                 print ("================================================================================")
                 raise
 
-    # test artist list
-    def artist_matches(self, expected_artist, actual_artist):
-        # keys in dictionary returned from raw sql query
-        expected_keys = ["artist_id", "name"]
-        # keys in dictionary returned from django query
-        actual_keys = ["artist_id", "name"]
-        self.record_matches(expected_artist, expected_keys, actual_artist, actual_keys)
+    def print_cover_lists(self, raw_cover_list, cover_list):
+        for raw_cover in raw_cover_list:
+            print(f"raw book_id is {raw_cover['book_id']}")
+        for cover in cover_list:
+            cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
+            print(cover_dict)
 
+class AuthorQueryTests(SubjectQueryTest):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'AuthorAkas.json']
+
+    def test_author_name(self):
+        author = Authors.objects.get(pk=6)
+        expected_author_name = "Philip K. Dick"
+        self.assertEqual(expected_author_name, author.name)
+
+    # test author list
+    def test_author_alist(self):
+        raw_author_list = OriginalRawQuerys.author_list(True)
+        expected_num_authors = len(raw_author_list)
+
+        author_list = CoverQuerys.author_list()
+        # https: // docs.djangoproject.com / en / 2.1 / ref / models / querysets /
+        # A QuerySet  is evaluated when you call len() on it.
+        num_authors = len(author_list)
+
+        print(f"expected_num_authors is {expected_num_authors}, num_authors is {num_authors}")
+        try:
+            self.assertEqual(expected_num_authors, num_authors)
+        except AssertionError as e:
+            print(f"raw_author_list is\n{raw_author_list}")
+            print(f"authorlist is\n{author_list}")
+            raise
+
+        # for each author: compare expected name against actual name
+        for raw_author_list, author_list in zip(raw_author_list, author_list):
+            self.subject_matches("author_id", raw_author_list, author_list)
+
+    def cover_matches(self, expected_cover, actual_cover):
+        # keys in dictionary returned from raw sql query
+        expected_keys = ["book_id", "cover_filepath", "cover_filename", "copyright_year"]
+        # keys in dictionary returned from django query
+        actual_keys = ["book_id", "cover__artwork__artist__cover_filepath", "cover__cover_filename", "copyright_year"]
+        # print (f"Expected: {expected_cover}")
+        # print (f"Actual: {actual_cover}")
+
+        self.record_matches(expected_cover, expected_keys, actual_cover, actual_keys)
+        
+    # test author cover list
+    def author_cover_list_matches(self, author):
+        # return cover list as dictionary
+        raw_cover_list = OriginalRawQuerys.author_cover_list(author.pk, True)
+        expected_num_covers = len(raw_cover_list)
+
+        #print(f"cover_filepath is {artist.cover_filepath}")
+        cover_list = CoverQuerys.author_cover_list(author)
+        num_covers = len(cover_list)
+        print (f"author cover_list is:\n {cover_list}")
+
+        print (f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
+
+        self.print_cover_lists(raw_cover_list, cover_list)
+        try: self.assertEqual(expected_num_covers, num_covers)
+        except AssertionError as e:
+            print (f"author cover_list query is:\n{cover_list.query}")
+            raise
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(raw_cover_list, cover_list):
+            self.cover_matches(raw_cover, cover)
+
+    def author_cover(self, author_id=None):
+        the_author = get_object_or_404(Authors, pk=author_id)
+        self.author_cover_list_matches(the_author)
+
+    # def test_author_cover(self):
+    #     self.author_cover(6)
+
+    def test_author_cover_list(self):
+        author_list = CoverQuerys.author_list()
+
+        for author in author_list:
+            author_id = author['author_id']
+            print (f"author_id is {author_id}")
+            self.author_cover(author_id)
+
+
+
+class ArtistQueryTests(SubjectQueryTest):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'ArtistAkas.json']
+
+    def test_artist_name(self):
+        artist = Artists.objects.get(pk=83)
+        expected_artist_name = "Anthony Roberts"
+        self.assertEqual(expected_artist_name, artist.name)
+
+    # test artist list
     # tests are run in alphabetic order
     # tests are independent but I want this one to run first
     def test_artist_alist(self):
@@ -83,13 +157,12 @@ class ArtistQueryTests(TestCase):
         except AssertionError as e:
             print (f"raw_artist_list is\n{raw_artist_list}")
             print (f"artist_list is\n{artist_list}")
-
             raise
 
+        # for each artist: compare expected name against actual  name
         for raw_artist_list, artist_list in zip(raw_artist_list, artist_list):
-            self.artist_matches(raw_artist_list, artist_list)
+            self.subject_matches("artist_id", raw_artist_list, artist_list)
 
-    # test artist cover list
     def cover_matches(self, expected_cover, actual_cover):
         # keys in dictionary returned from raw sql query
         expected_keys = ["book_id", "cover_filename", "year"]
@@ -99,13 +172,6 @@ class ArtistQueryTests(TestCase):
         # print (f"Actual: {actual_cover}")
 
         self.record_matches(expected_cover, expected_keys, actual_cover, actual_keys)
-
-    def print_cover_lists(self, raw_cover_list, cover_list):
-        for raw_cover in raw_cover_list:
-            print(f"raw book_id is {raw_cover['book_id']}")
-        for cover in cover_list:
-            cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
-            print(cover_dict)
 
     def artist_cover_list_matches(self, artist):
         # return cover list as dictionary
