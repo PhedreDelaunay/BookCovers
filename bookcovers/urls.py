@@ -17,8 +17,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     # ex: /bookcovers/authors/
     path('authors/', AuthorList.as_view(), name='authors'),
-    # ex: /bookcovers/author/1/
+    # ex: /bookcovers/author/4/
     path('author/<int:author_id>/', views.author_books, name='author_books'),
+    # ex: /bookcovers/author/Robert-Heinlein/
+    path('author/<slug:slug>/', views.author_books, name='author_books'),
+    # ex: /bookcovers/artist/Robert%20Heinelein/
+    path('author/<name>/', views.author_books, name='author_books'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/

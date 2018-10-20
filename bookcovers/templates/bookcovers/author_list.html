@@ -1,5 +1,5 @@
 {% extends "bookcovers/subject_list.html" %}
 
 {% block link_item %}
-{% url 'bookcovers:author_books' item.author_id %}
+{% url 'bookcovers:author_books' item.name %}
 {% endblock %}

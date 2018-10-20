@@ -1,0 +1,53 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+
+{% block content_script %}
+<script LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+coverIndex[0] = 0;
+maxcovers[0] = 1;
+coverImg[0] = new Array ("");
+coverImg[0][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/TheManInTheHighCastle.jpg";
+coverIndex[1] = 0;
+maxcovers[1] = 2;
+coverImg[1] = new Array ("");
+coverImg[1][0] = "http://www.djabbic.co.uk/BookCovers/Images/BrucePennington/Thumbnails/Stigmata_Dune_FullCover.jpg";
+coverImg[1][1] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/TheThreeStigmataOfPalmerEldritch.jpg";
+coverIndex[2] = 0;
+maxcovers[2] = 1;
+coverImg[2] = new Array ("");
+coverImg[2][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/ClansOfTheAlphaneMoon.jpg";
+coverIndex[3] = 0;
+maxcovers[3] = 1;
+coverImg[3] = new Array ("");
+coverImg[3][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/DoAndroidsDreamOfElectricSheep.jpg";
+coverIndex[4] = 0;
+maxcovers[4] = 1;
+coverImg[4] = new Array ("");
+coverImg[4][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/OurFriendsFromFrolix8.jpg";
+coverIndex[5] = 0;
+maxcovers[5] = 2;
+coverImg[5] = new Array ("");
+coverImg[5][0] = "http://www.djabbic.co.uk/BookCovers/Images/RichardCliftonDey/Thumbnails/FlowMyTearsThePolicemanSaid.jpg";
+coverImg[5][1] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/FlowMyTearsThePolicemanSaid.jpg";
+numBooks = 6;
+numRotateBooks = 2;
+mostCovers = 2;
+	//-->
+	</script>
+
+{% endblock %}
+
+{% block content %}
+    <h2>{{ author }}</h2>
+    {% for cover in cover_list %}
+         {% ifchanged cover.book_id %}
+         <a href="{% url 'bookcovers:book' cover.book_id %}">
+            <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                alt="{{ cover.title }}"
+                title="{{ cover.book__title }}">
+         </a>
+         {% endifchanged %}
+    {% endfor %}
+{% endblock %}

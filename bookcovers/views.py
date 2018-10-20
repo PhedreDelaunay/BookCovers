@@ -25,40 +25,45 @@ def index(request):
     print ("index: hello page")
     return HttpResponse("Hello Django World")
 
+def transform_slug(slug):
+    slug = slug.replace('__', '%')
+    slug = slug.replace('-', ' ')
+    slug = slug.replace('%', '-')
+
+    return slug
 
 def author_books(request, author_id=None, name=None, slug=None):
-    template_name = 'bookcovers/cover_list.html'
+    template_name = 'bookcovers/author_book_list.html'
 
     if author_id:
         kwargs = {'pk': author_id}
     elif name:
         kwargs = {'name': name}
     elif slug:
-        slug = slug.replace('-', ' ')
+        slug = transform_slug(slug)
         kwargs = {'name': slug}
-    author = get_object_or_404(Authors, pk=author_id)
-    return HttpResponse("You're looking at author %s." % author.name)
+    author = get_object_or_404(Authors, **kwargs)
+    cover_list = CoverQuerys.author_cover_list(author)
+
+    #return HttpResponse("You're looking at author %s." % author.name)
+    context = {'author': author, 'cover_list': cover_list}
+    return render(request, template_name, context)
 
 def artist_books(request, artist_id=None, name=None, slug=None):
-    template_name = 'bookcovers/cover_list.html'
+    template_name = 'bookcovers/artist_cover_list.html'
 
     if artist_id:
         kwargs = {'pk': artist_id}
     elif name:
         kwargs = {'name': name}
     elif slug:
-        slug = slug.replace('-', ' ')
+        slug = transform_slug(slug)
         kwargs = {'name': slug}
 
     artist = get_object_or_404(Artists, **kwargs)
     cover_list = CoverQuerys.artist_cover_list(artist)
-
-    # render short cut
-    #context = {'title': artist.name, 'cover_list': cover_list}
-    # cover_list.object.html context = {'artist': artist, 'artwork_list': cover_list}
     print("cover_filepath is {}".format(artist.cover_filepath))
     context = {'artist': artist, 'cover_list': cover_list}
-
     return render(request, template_name, context)
 
 def book_detail(request, book_id):
