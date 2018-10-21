@@ -163,7 +163,7 @@ class CoverQuerys:
             .order_by('copyright_year',
                       'book_id',
                       'cover__artwork__year') \
-            .distinct ('book_id')
+            .distinct ()
 
         if test:
             cover_list = test_cover_list
