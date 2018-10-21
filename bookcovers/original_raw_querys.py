@@ -80,8 +80,14 @@ class OriginalRawQuerys:
         return author_list
 
 
-    # get all books by this author
+
     def author_cover_list(author_id, return_dict=False):
+        """
+        get all books by this author
+        :param: id of author to fetch book list for
+        :param return_dict: True = return results in a dictionary
+        :return:
+        """
 
         # get all books by this author
         strAuthorBooksSQL = ("SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year,"
@@ -122,7 +128,7 @@ class OriginalRawQuerys:
                 cover_list = OriginalRawQuerys.dictfetchall(cursor)
             else:
                 cover_list = cursor.fetchall()
-            print(f"Original author cover list is\n{cover_list}\n")
+            # print(f"Original author cover list is\n{cover_list}\n")
 
         return cover_list
 

@@ -89,20 +89,25 @@ class AuthorQueryTests(SubjectQueryTest):
     # test author cover list
     def author_cover_list_matches(self, author):
         # return cover list as dictionary
-        raw_cover_list = OriginalRawQuerys.author_cover_list(author.pk, True)
+        raw_cover_list = OriginalRawQuerys.author_cover_list(author_id=author.pk, return_dict=True)
         expected_num_covers = len(raw_cover_list)
 
         #print(f"cover_filepath is {artist.cover_filepath}")
         cover_list = CoverQuerys.author_cover_list(author, test=True)
         num_covers = len(cover_list)
-        print (f"author cover_list is:\n {cover_list}")
 
         print (f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
 
         self.print_cover_lists(raw_cover_list, cover_list)
         try: self.assertEqual(expected_num_covers, num_covers)
         except AssertionError as e:
+            print ("==============Expected (original raw)================")
+            print (f"Original query is\n{raw_cover_list.query}\n")
+            print (f"Original author cover list is\n{raw_cover_list}\n")
+            print ("=========================Actual=====================")
             print (f"author cover_list query is:\n{cover_list.query}")
+            print (f"author cover_list is:\n {cover_list}")
+            print ("====================================================")
             raise
 
         #  for each cover: check expected cover data matches actual cover data
