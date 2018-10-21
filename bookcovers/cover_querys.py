@@ -38,6 +38,11 @@ class CoverQuerys:
 
     @staticmethod
     def artist_cover_list(artist):
+        """
+
+        :param artist:
+        :return:
+        """
         print("artist is {}".format(artist.name))
         aka_inner_queryset = Artists.objects.filter(artist_aka__artist_aka_id=artist.pk)
         # print (aka_inner_queryset.query)
@@ -60,8 +65,13 @@ class CoverQuerys:
 
     @staticmethod
     def author_list():
-        # djabbic v1
-        # inner_queryset = BookEdition.objects.filter(book_edition_id=F('bookcover__book_edition_id')).filter(bookcover__flags__lt=256).values_list('book_edition_id',flat=True)
+        """
+        gets the list of authors that have books with covers in the database
+        filters out covers that aren't ready yet (eg data exists but not yet scanned)|
+        the database holds many authors that aren't relevant to this website - todo clean up database
+
+        :return: dict queryset of authors
+        """
         # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
@@ -114,11 +124,19 @@ class CoverQuerys:
         return author_list
 
     @staticmethod
-    def author_cover_list(author):
+    def author_cover_list(author, test=False):
+        """
+        gets all covers of all books for this author
+        :param author: author object to fetch covers for
+        :param test: True = use test query for running tests
+                     False = use query for web page display
+        :return: dict queryset to fetch all covers of all books for this author
+        """
         print("author is {}".format(author.name))
         aka_inner_queryset = Authors.objects.filter(author_aka__author_aka_id=author.pk)
 
-        cover_list = Books.objects. \
+        # this returns all covers for all books
+        test_cover_list = Books.objects. \
             filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
             .values('book_id',
@@ -131,8 +149,29 @@ class CoverQuerys:
                       'book_id',
                       'cover__artwork__year')
 
-        # print (cover_list)
-        print(f"django author cover_list query is\n{cover_list.query}")
+        # this eliminates duplicate cover entries, where the same file is used for multiple cover records
+        # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
+        real_cover_list = Books.objects. \
+            filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
+            .values('book_id',
+                   'cover__artwork__artist__cover_filepath',
+                   'cover__cover_filename',
+                   'title',
+                   'copyright_year',
+                   'cover__artwork__year') \
+            .order_by('copyright_year',
+                      'book_id',
+                      'cover__artwork__year') \
+            .distinct ('book_id')
+
+        if test:
+            cover_list = test_cover_list
+        else:
+            cover_list = real_cover_list
+
+        #print (cover_list)
+        #print(f"django author cover_list query is\n{cover_list.query}")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list

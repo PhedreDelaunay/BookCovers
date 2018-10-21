@@ -83,8 +83,23 @@ class OriginalRawQuerys:
     # get all books by this author
     def author_cover_list(author_id, return_dict=False):
 
+        # get all books by this author
+        strAuthorBooksSQL = ("SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year,"
+                             "authors.author_id, BE.edition_id, AW.artist_id, AW.year "
+                "FROM artists, covers as BC, books, authors, editions as BE, artworks as AW "
+                "WHERE ((authors.author_id = %s) OR "
+                    "authors.author_id IN "
+                    "(SELECT AA.author_aka_id FROM author_akas as AA WHERE AA.author_id = %s)) "
+                "AND books.author_id = authors.author_id AND BC.book_id = books.book_id "
+                "AND BE.edition_id = BC.edition_id "
+                "AND AW.artwork_id = BC.artwork_id "
+                "AND artists.artist_id = AW.artist_id "
+                "AND BC.flags < 256 "
+                "GROUP BY books.book_id "
+                "ORDER BY books.copyright_year, books.book_id, AW.year")
+
         # get all covers of all books by this author
-        strAuthorAllSQL = ("SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year, "
+        strAuthorCoversSQL = ("SELECT artists.cover_filepath, BC.*, books.book_id, books.author_id, books.copyright_year, "
                             "authors.name, BE.edition_id, AW.artwork_id, AW.year "
                         "FROM artists, covers as BC, books, authors, editions as BE, artworks as AW "
                         "WHERE ((authors.author_id = %s) OR "
@@ -97,9 +112,12 @@ class OriginalRawQuerys:
                         "AND BC.flags < 256 "
                         "ORDER BY books.copyright_year, books.book_id, AW.year")
 
-        print (f"strAuthorSQL is\n{strAuthorAllSQL}\n")
+        strAuthorSQL = strAuthorCoversSQL
+
+
+        print (f"strAuthorSQL is\n{strAuthorSQL}\n")
         with connection.cursor() as cursor:
-            cursor.execute(strAuthorAllSQL, [author_id, author_id])
+            cursor.execute(strAuthorSQL, [author_id, author_id])
             if return_dict:
                 cover_list = OriginalRawQuerys.dictfetchall(cursor)
             else:

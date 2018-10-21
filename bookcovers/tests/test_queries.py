@@ -93,7 +93,7 @@ class AuthorQueryTests(SubjectQueryTest):
         expected_num_covers = len(raw_cover_list)
 
         #print(f"cover_filepath is {artist.cover_filepath}")
-        cover_list = CoverQuerys.author_cover_list(author)
+        cover_list = CoverQuerys.author_cover_list(author, test=True)
         num_covers = len(cover_list)
         print (f"author cover_list is:\n {cover_list}")
 
