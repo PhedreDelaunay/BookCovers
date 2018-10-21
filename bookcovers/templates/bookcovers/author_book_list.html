@@ -47,7 +47,7 @@ mostCovers = 2;
 {% block content %}
     <h2>{{ author }}</h2>
     {% for cover in cover_list %}
-        { #
+        {# filter out variants of the same book. These will be rotated #}
          {% ifchanged cover.book_id %}
          <a href="{% url 'bookcovers:book' cover.book_id %}">
             <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
