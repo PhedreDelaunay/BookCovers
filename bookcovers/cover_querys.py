@@ -171,6 +171,14 @@ class CoverQuerys:
         else:
             cover_list = dedup_cover_list
 
+        if any(d['cover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for d in cover_list):
+            print (f"author {author.name}: has unknown cover")
+            author_directory = author.name.replace(" ", "").replace(".","")
+            for cover in cover_list:
+                if cover['cover__artwork__artist__cover_filepath'] == "BookCovers/Images/Unknown/":
+                    cover['cover__artwork__artist__cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"
+        else:
+            print (f"author {author.name}: has no unknown covers")
 
         #print (cover_list)
         #print(f"django author cover_list query is\n{cover_list.query}")
