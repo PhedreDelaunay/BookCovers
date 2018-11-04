@@ -59,10 +59,10 @@ class CoverQuerys:
                    'year') \
             .order_by('year', 'artwork_id')
 
-        #if artist.name.lower() == "artist unknown":
-        #    for cover in cover_list:
-        #        author_directory = cover['book__author__name'].replace(" ","").replace(".","")
-        #        cover['book__author__name'] = f"{author_directory}/"
+        if artist.name.lower() == "artist unknown":
+            for cover in cover_list:
+                author_directory = cover['book__author__name'].replace(" ","").replace(".","")
+                cover['book__author__name'] = f"{author_directory}/"
         # print(cover_list.query)
         # print("len(cover_list) is {}".format(len(cover_list)))
 
