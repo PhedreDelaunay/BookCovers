@@ -40,6 +40,7 @@ class SubjectQueryTest(TestCase):
             cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
             print(cover_dict)
 
+
 class AuthorQueryTests(SubjectQueryTest):
     fixtures = ['Artists.json',
                 'Artworks.json',
@@ -54,8 +55,8 @@ class AuthorQueryTests(SubjectQueryTest):
         expected_author_name = "Philip K. Dick"
         self.assertEqual(expected_author_name, author.name)
 
-    # test author list
     def test_author_alist(self):
+        """ test author list """
         raw_author_list = OriginalRawQuerys.author_list(True)
         expected_num_authors = len(raw_author_list)
 
@@ -93,7 +94,7 @@ class AuthorQueryTests(SubjectQueryTest):
         expected_num_covers = len(raw_cover_list)
 
         #print(f"cover_filepath is {artist.cover_filepath}")
-        cover_list = CoverQuerys.author_cover_list(author, test=True)
+        cover_list = CoverQuerys.author_cover_list(author, all=True)
         num_covers = len(cover_list)
 
         print (f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
@@ -128,7 +129,6 @@ class AuthorQueryTests(SubjectQueryTest):
             author_id = author['author_id']
             print (f"author_id is {author_id}")
             self.author_cover(author_id)
-
 
 
 class ArtistQueryTests(SubjectQueryTest):

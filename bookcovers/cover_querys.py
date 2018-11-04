@@ -53,6 +53,7 @@ class CoverQuerys:
             filter(Q(cover__flags__lt=256) & Q(cover__is_variant=False) & Q(cover__book=F('book'))). \
             values('cover__cover_id',
                    'book',
+                   'book__author__name',
                    'book__title',
                    'cover__cover_filename',
                    'year') \
@@ -124,7 +125,7 @@ class CoverQuerys:
         return author_list
 
     @staticmethod
-    def author_cover_list(author, test=False):
+    def author_cover_list(author, all=False):
         """
         gets all covers of all books for this author
         :param author: author object to fetch covers for
@@ -136,7 +137,7 @@ class CoverQuerys:
         aka_inner_queryset = Authors.objects.filter(author_aka__author_aka_id=author.pk)
 
         # this returns all covers for all books
-        test_cover_list = Books.objects. \
+        all_cover_list = Books.objects. \
             filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
             .values('book_id',
@@ -151,7 +152,7 @@ class CoverQuerys:
 
         # this eliminates duplicate cover entries, where the same file is used for multiple cover records
         # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
-        real_cover_list = Books.objects. \
+        dedup_cover_list = Books.objects. \
             filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
             .values('book_id',
@@ -165,10 +166,11 @@ class CoverQuerys:
                       'cover__artwork__year') \
             .distinct ()
 
-        if test:
-            cover_list = test_cover_list
+        if all:
+            cover_list = all_cover_list
         else:
-            cover_list = real_cover_list
+            cover_list = dedup_cover_list
+
 
         #print (cover_list)
         #print(f"django author cover_list query is\n{cover_list.query}")
