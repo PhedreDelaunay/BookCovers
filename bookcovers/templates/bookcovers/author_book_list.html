@@ -46,22 +46,55 @@ mostCovers = 2;
 
 {% block content %}
     <h2>{{ author }}</h2>
+    {% comment exclude duplicates, designed for use with javascript to rotate images %}
     {% for cover in cover_list %}
         {# filter out variants of the same book. These will be rotated #}
-         {% ifchanged cover.book_id %}
-         <a href="{% url 'bookcovers:book' cover.book_id %}">
-            <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
-                alt="{{ cover.title }}"
-                title="{{ cover.book__title }}">
-         </a>
+        {% ifchanged cover.book_id %}
+            {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
+                {% with wauthor=author|cut:" " %}
+                    <a href="{% url 'bookcovers:book' cover.book_id %}">
+                        <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.cover__cover_filename %}"
+                             alt="{{ cover.title }}"
+                             title="{{ cover.title }}">
+                    </a>
+                {% endwith %}
+            {% else %}
+                <a href="{% url 'bookcovers:book' cover.book_id %}">
+                    <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                         alt="{{ cover.title }}"
+                         title="{{ cover.title }}">
+                </a>
+            {% endif %}
          {% endifchanged %}
     {% endfor %}
-    <BR>Test with duplicates<BR>
+    {% endcomment %}
+    <BR>Include duplicates<BR>
+    {% comment "test for unknown author" %}
     {% for cover in cover_list %}
-         <a href="{% url 'bookcovers:book' cover.book_id %}">
-            <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
-                alt="{{ cover.title }}"
-                title="{{ cover.book__title }}">
-         </a>
+        {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
+            {% with wauthor=author|cut:" " %}
+            <a href="{% url 'bookcovers:book' cover.book_id %}">
+                <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.cover__cover_filename %}"
+                    alt="{{ cover.title }}"
+                    title="{{ cover.title }}">
+                 </a>
+            {% endwith %}
+         {% else %}
+            <a href="{% url 'bookcovers:book' cover.book_id %}">
+                <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                     alt="{{ cover.title }}"
+                     title="{{ cover.title }}">
+             </a>
+         {% endif %}
     {% endfor %}
+    {% endcomment %}
+    {% for cover in cover_list %}
+        <a href="{% url 'bookcovers:book' cover.book_id %}">
+            <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                 alt="{{ cover.title }}"
+                 title="{{ cover.title }}">
+        </a>
+    {% endfor %}
+
+
 {% endblock %}
