@@ -6,7 +6,7 @@
     <h2>{{ artist }}</h2>
     {% for cover in cover_list %}
         {% if artist.cover_filepath == "BookCovers/Images/Unknown/" %}
-            {% with wauthor=cover.book__author__name|cut:" " %}
+            {% with wauthor=cover.book__author__name|cut:" "|cut:"." %}
                 <a href="{% url 'bookcovers:book' cover.book %}">
                     <IMG src="{% static artist.cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.cover__cover_filename %}"
                         alt="{{ cover.book__title }}"

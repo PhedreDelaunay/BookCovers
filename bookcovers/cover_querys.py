@@ -59,6 +59,10 @@ class CoverQuerys:
                    'year') \
             .order_by('year', 'artwork_id')
 
+        #if artist.name.lower() == "artist unknown":
+        #    for cover in cover_list:
+        #        author_directory = cover['book__author__name'].replace(" ","").replace(".","")
+        #        cover['book__author__name'] = f"{author_directory}/"
         # print(cover_list.query)
         # print("len(cover_list) is {}".format(len(cover_list)))
 
@@ -171,7 +175,9 @@ class CoverQuerys:
         else:
             cover_list = dedup_cover_list
 
-        if any(d['cover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for d in cover_list):
+        # https://stackoverflow.com/questions/3897499/check-if-value-already-exists-within-list-of-dictionaries
+        # use list comprehension to test if there are any unknown artists in this author's cover collection
+        if any(cover['cover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for cover in cover_list):
             print (f"author {author.name}: has unknown cover")
             author_directory = author.name.replace(" ", "").replace(".","")
             for cover in cover_list:
