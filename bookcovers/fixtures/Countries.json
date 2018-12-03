@@ -1,0 +1,34 @@
+[
+  {
+    "model": "bookcovers.countries",
+    "pk": 0,
+    "fields": {
+        "country": "Unknown",
+        "display_order": 4
+    }
+},
+{
+    "model": "bookcovers.countries",
+    "pk": 1,
+    "fields": {
+        "country": "United Kingdom",
+        "display_order": 1
+    }
+},
+{
+    "model": "bookcovers.countries",
+    "pk": 2,
+    "fields": {
+        "country": "USA",
+        "display_order": 2
+    }
+},
+{
+    "model": "bookcovers.countries",
+    "pk": 3,
+    "fields": {
+        "country": "Australia",
+        "display_order": 3
+    }
+}
+]

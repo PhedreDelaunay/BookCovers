@@ -34,8 +34,8 @@ class Artists(models.Model):
 
 class ArtistAkas(models.Model):
     artist_aka_id = models.IntegerField()
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artist_akas",
-                               related_query_name="artist_aka")
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtist_akas", related_query_name="theArtist_aka")
     #artist = models.IntegerField(db_column='artist_id')
 
     def __str__(self):
@@ -69,8 +69,8 @@ class Authors(models.Model):
 class AuthorAkas(models.Model):
     # pk=id is implied
     author_aka_id = models.IntegerField()
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="author_akas",
-                               related_query_name="author_aka")
+    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theAuthor_akas", related_query_name="theAuthor_aka")
     real_name = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
@@ -87,7 +87,8 @@ class AuthorAkas(models.Model):
 # related_query_name creates a relation from the related object back to this one. This allows querying and filtering from the related object.
 class Books(models.Model):
     book_id = models.AutoField(primary_key=True)
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True, related_name="books", related_query_name="book")
+    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theBooks", related_query_name="theBook")
     title = models.CharField(unique=True, max_length=50, blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     copyright_year = models.IntegerField(blank=True, null=True)
@@ -106,11 +107,13 @@ class Books(models.Model):
 # override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now artworks
 class Artworks(models.Model):
     artwork_id = models.AutoField(primary_key=True)
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True, related_name="artworks", related_query_name="artwork")
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtworks", related_query_name="theArtwork")
     #artist_id = models.IntegerField(blank=True, null=True)
     year = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="artworks", related_query_name="artwork")
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+                             related_name="theArtworks", related_query_name="theArtwork")
     #book_id = models.IntegerField(blank=True, null=True)
     original = models.CharField(max_length=128, blank=True, null=True)
     evidence = models.CharField(max_length=255, blank=True, null=True)
@@ -146,7 +149,8 @@ class Countries(models.Model):
 class Editions(models.Model):
     edition_id = models.AutoField(primary_key=True)
     print_run_id = models.IntegerField(blank=True, null=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="editions", related_query_name="edition")
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+                             related_name="theEditions", related_query_name="theEdition")
     imprint_id = models.IntegerField(blank=True, null=True)
     genre_id = models.IntegerField(blank=True, null=True)
     format_id = models.IntegerField(blank=True, null=True)
@@ -154,7 +158,9 @@ class Editions(models.Model):
     isbn13 = models.CharField(max_length=20, blank=True, null=True)
     catalog_number = models.CharField(max_length=50, blank=True, null=True)
     print_year = models.SmallIntegerField(blank=True, null=True)
-    country_id = models.IntegerField(blank=True, null=True)
+    #country_id = models.IntegerField(blank=True, null=True)
+    country = models.ForeignKey(Countries, models.DO_NOTHING, blank=True, null=True,
+                                related_name="theEditions", related_query_name="theEdition")
     purchase_year = models.IntegerField(blank=True, null=True)
     purchase_price = models.FloatField(blank=True, null=True)
     currency_id = models.IntegerField(blank=True, null=True)
@@ -170,9 +176,11 @@ class Editions(models.Model):
 
 class Covers(models.Model):
     cover_id = models.AutoField(primary_key=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True, related_name="covers", related_query_name="cover")
+    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+                             related_name="theCovers", related_query_name="theCover")
     #artwork_id = models.IntegerField(blank=True, null=True)
-    artwork = models.ForeignKey(Artworks, models.DO_NOTHING, blank=True, null=True, related_name="covers", related_query_name="cover")
+    artwork = models.ForeignKey(Artworks, models.DO_NOTHING, blank=True, null=True,
+                                related_name="theCovers", related_query_name="theCover")
     #edition_id = models.IntegerField(unique=True, blank=True, null=True)
     edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True)
 

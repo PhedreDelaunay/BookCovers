@@ -26,6 +26,12 @@ class OriginalRawQuerys:
 
     @staticmethod
     def artist_cover_list(artist_id, return_dict=False):
+        """
+        lists covers for this artist
+        :param artist_id:
+        :param return_dict:
+        :return:
+        """
 
         #strArtistSQL = "SELECT artists.cover_filepath, covers.*, AW.year " \
 
@@ -59,7 +65,9 @@ class OriginalRawQuerys:
 
     @staticmethod
     def author_list(return_dict=False):
- 
+        """
+        list all authors with a book cover to display
+        """
         strCoverAuthorsSQL = "SELECT A.author_id, A.name, B.book_id, B.author_id, BE.book_id, BE.edition_id " \
                         "FROM authors As A, books AS B, editions AS BE " \
                         "WHERE A.author_id = B.author_id AND B.book_id = BE.book_id " \
@@ -80,7 +88,7 @@ class OriginalRawQuerys:
         return author_list
 
 
-
+    @staticmethod
     def author_cover_list(author_id, return_dict=False):
         """
         get all books by this author
@@ -131,6 +139,52 @@ class OriginalRawQuerys:
             # print(f"Original author cover list is\n{cover_list}\n")
 
         return cover_list
+
+    @staticmethod
+    def author_covers_for_title(book_id, return_dict=False):
+        """
+        list all covers for this title
+        :param book_id:
+        :return:
+        """
+        strAuthorCoverSQL = ("SELECT artists.cover_filepath, AW.artwork_id, BC.*, BE.print_year, C.country_id, C.display_order "
+                            "FROM artists, artworks as AW, covers AS BC, editions AS BE, countries AS C "
+                            "WHERE BC.flags < 256 AND BC.book_id = %s AND BC.book_id = BE.book_id "
+                            "AND BC.edition_id = BE.edition_id "
+                            "AND AW.artwork_id = BC.artwork_id AND artists.artist_id = AW.artist_id "
+                            "AND C.country_id = BE.country_id "
+                            "ORDER BY C.display_order, BE.print_year")
+
+        #print(f"strAuthorCoverSQL is\n{strAuthorCoverSQL}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strAuthorCoverSQL, [book_id])
+            if return_dict:
+                cover_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                cover_list = cursor.fetchall()
+            # print(f"Original book title cover list is\n{cover_list}\n")
+
+        return cover_list
+
+    @staticmethod
+    def adhoc_query(sql_query, return_dict=False):
+        """
+        runs an adhoc query without parameters
+        :param sql_query:
+        :param return_dict:
+        :return:
+        """
+
+        with connection.cursor() as cursor:
+            cursor.execute(sql_query)
+            if return_dict:
+                book_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                book_list = cursor.fetchall()
+            # print(f"Original book title cover list is\n{cover_list}\n")
+
+        return book_list
+
 
     @staticmethod
     def dictfetchall(cursor):

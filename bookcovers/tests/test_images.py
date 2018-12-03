@@ -16,7 +16,8 @@ class ImageTests(TestCase):
                 'Books.json',
                 'Editions.json',
                 'Covers.json',
-                'ArtistAkas.json']
+                'ArtistAkas.json',
+                'Countries.json']
 
     # test that cover images are there
     def image_exists(self,absolute_image_filepath):
@@ -41,12 +42,12 @@ class ImageTests(TestCase):
     def cover_images_exist(self, artist):
         cover_list = CoverQuerys.artist_cover_list(artist)
         for cover in cover_list:
-            thumbnail = "".join([artist.cover_filepath,"Thumbnails/",cover['cover__cover_filename']])
+            thumbnail = "".join([artist.cover_filepath,"Thumbnails/",cover['theCover__cover_filename']])
             # print ("thumbnail is {}".format(thumbnail))
             absolute_image_filepath = self.get_absolute_path(thumbnail)
             self.image_exists(absolute_image_filepath)
 
-            cover_image = "".join([artist.cover_filepath,cover['cover__cover_filename']])
+            cover_image = "".join([artist.cover_filepath,cover['theCover__cover_filename']])
             # print ("cover_image is {}".format(cover_image))
             absolute_image_filepath = self.get_absolute_path(cover_image)
             self.image_exists(absolute_image_filepath)

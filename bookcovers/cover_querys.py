@@ -11,6 +11,7 @@ from bookcovers.models import Artworks
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
+from bookcovers.models import Countries
 
 import math
 
@@ -20,13 +21,11 @@ class CoverQuerys:
     @staticmethod
     def artist_list():
         inner_queryset = Artworks.objects. \
-            filter(artwork_id=F('cover__artwork')). \
-            filter(cover__flags__lt=256). \
+            filter(theCover__flags__lt=256). \
             values_list('artwork_id', flat=True)
 
         artist_list = Artists.objects. \
-            filter(artist_id=F('artwork__artist')). \
-            filter(artwork__in=inner_queryset). \
+            filter(theArtwork__in=inner_queryset). \
             values('artist_id', 'name'). \
             order_by('name'). \
             distinct()
@@ -44,18 +43,18 @@ class CoverQuerys:
         :return:
         """
         print("artist is {}".format(artist.name))
-        aka_inner_queryset = Artists.objects.filter(artist_aka__artist_aka_id=artist.pk)
+        aka_inner_queryset = Artists.objects.filter(theArtist_aka__artist_aka_id=artist.pk)
         # print (aka_inner_queryset.query)
         # print (aka_inner_queryset)
 
         cover_list = Artworks.objects. \
             filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
-            filter(Q(cover__flags__lt=256) & Q(cover__is_variant=False) & Q(cover__book=F('book'))). \
-            values('cover__cover_id',
+            filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
+            values('theCover__cover_id',
                    'book',
                    'book__author__name',
                    'book__title',
-                   'cover__cover_filename',
+                   'theCover__cover_filename',
                    'year') \
             .order_by('year', 'artwork_id')
 
@@ -85,10 +84,10 @@ class CoverQuerys:
 
         # djabbic_v2
         # covers -> editions is one-to-one
-        inner_queryset = Editions.objects. \
-            filter(edition_id=F('covers__edition')). \
-            filter(covers__flags__lt=256). \
-            values_list('edition_id', flat=True)
+        # can one-to-one field in model have related name and related query name?
+        inner_queryset = Editions.objects \
+            .filter(covers__flags__lt=256) \
+            .values_list('edition_id', flat=True)
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
         # flat=True returns a list of single items for a single field
 
@@ -97,31 +96,16 @@ class CoverQuerys:
         print("len inner_queryset is", len(inner_queryset))
         print(inner_queryset)
 
-        # djabbic_v2
-        # related_name vs related_query_name
-        # why is above covers and gives error for cover
-        # django.core.exceptions.FieldError: Cannot resolve keyword 'cover' into field. 
-        # Choices are: book, book_id, catalog_number, country_id, covers, currency_id, designer, edition_id, flags, 
-        # format_id, genre_id, imprint_id, isbn, isbn13, notes, print_run_id, print_year, purchase_price, purchase_year
-        # yet below is book and gives error for books
-        # django.core.exceptions.FieldError: Cannot resolve keyword 'books' into field. 
-        # Choices are: author_id, birthplace, book, date_of_birth, date_of_death, flags, fullname, name, nationality, notes, website
-
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/#in
         # need to clean database
 
-        # djabbic v1
-        # author_list = Author.objects.filter(author_id=F('book__author_id')).filter(book__book_id=F('book__edition__book_id')).filter(book__edition__book_edition_id__in=inner_queryset).values('name').order_by('name').distinct()
+        author_list = Authors.objects \
+            .filter(author_id=F('theBook__author')) \
+            .filter(theBook__theEdition__edition_id__in=inner_queryset) \
+            .values('author_id', 'name') \
+            .order_by('name') \
+            .distinct()
 
-        # djabbic_v2
-
-        author_list = Authors.objects. \
-            filter(author_id=F('book__author')). \
-            filter(book__book_id=F('book__edition__book')). \
-            filter(book__edition__edition_id__in=inner_queryset). \
-            values('author_id', 'name'). \
-            order_by('name'). \
-            distinct()
 
         print(author_list.query)
         print(author_list.count())
@@ -129,7 +113,7 @@ class CoverQuerys:
         return author_list
 
     @staticmethod
-    def author_cover_list(author, all=False):
+    def all_covers_of_all_books_for_author(author, all=False):
         """
         gets all covers of all books for this author
         :param author: author object to fetch covers for
@@ -138,36 +122,38 @@ class CoverQuerys:
         :return: dict queryset to fetch all covers of all books for this author
         """
         print("author is {}".format(author.name))
-        aka_inner_queryset = Authors.objects.filter(author_aka__author_aka_id=author.pk)
+        aka_inner_queryset = Authors.objects.filter(theAuthor_aka__author_aka_id=author.pk)
 
         # this returns all covers for all books
-        all_cover_list = Books.objects. \
-            filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
-            .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
+        all_cover_list = Books.objects \
+            .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
-                   'cover__artwork__artist__cover_filepath',
-                   'cover__cover_filename',
+                   'theCover__artwork__artist__cover_filepath',
+                   'theCover__cover_filename',
                    'title',
                    'copyright_year',
-                   'cover__artwork__year') \
+                   'theCover__artwork__year') \
             .order_by('copyright_year',
                       'book_id',
-                      'cover__artwork__year')
+                      'theCover__artwork__year')
+
+        # .filter(Q(theCover__flags__lt=256) & Q(pk=F('theCover__book'))) \
 
         # this eliminates duplicate cover entries, where the same file is used for multiple cover records
         # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
-        dedup_cover_list = Books.objects. \
-            filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
-            .filter(Q(cover__flags__lt=256) & Q(pk=F('cover__book'))) \
+        dedup_cover_list = Books.objects \
+            .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
-                   'cover__artwork__artist__cover_filepath',
-                   'cover__cover_filename',
+                   'theCover__artwork__artist__cover_filepath',
+                   'theCover__cover_filename',
                    'title',
                    'copyright_year',
-                   'cover__artwork__year') \
+                   'theCover__artwork__year') \
             .order_by('copyright_year',
                       'book_id',
-                      'cover__artwork__year') \
+                      'theCover__artwork__year') \
             .distinct ()
 
         if all:
@@ -177,12 +163,12 @@ class CoverQuerys:
 
         # https://stackoverflow.com/questions/3897499/check-if-value-already-exists-within-list-of-dictionaries
         # use list comprehension to test if there are any unknown artists in this author's cover collection
-        if any(cover['cover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for cover in cover_list):
+        if any(cover['theCover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for cover in cover_list):
             print (f"author {author.name}: has unknown cover")
             author_directory = author.name.replace(" ", "").replace(".","")
             for cover in cover_list:
-                if cover['cover__artwork__artist__cover_filepath'] == "BookCovers/Images/Unknown/":
-                    cover['cover__artwork__artist__cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"
+                if cover['theCover__artwork__artist__cover_filepath'] == "BookCovers/Images/Unknown/":
+                    cover['theCover__artwork__artist__cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"
         else:
             print (f"author {author.name}: has no unknown covers")
 
@@ -191,3 +177,42 @@ class CoverQuerys:
         # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list
+
+    @staticmethod
+    def all_covers_for_title(book):
+        """
+        list all covers for this title
+        :param book_id:
+        :return:
+        """
+
+        #strAuthorCoverSQL = ("SELECT artists.cover_filepath, AW.artwork_id, BC.*, BE.print_year, C.country_id, C.display_order "
+        #                    "FROM artists, artworks as AW, covers AS BC, editions AS BE, countries AS C "
+        #
+        #                    "WHERE BC.flags < 256 AND BC.book_id = %s AND BC.book_id = BE.book_id "
+        #                    "AND BC.edition_id = BE.edition_id "
+        #                    "AND AW.artwork_id = BC.artwork_id AND artists.artist_id = AW.artist_id "
+        #                    "AND C.country_id = BE.country_id "
+        #                    "ORDER BY C.display_order, BE.print_year")
+
+        inner_queryset = Books.objects.filter(Q(book_id=book.book_id)).values_list('theEdition__edition_id', flat=True)
+
+        # pk is book_id
+        title_cover_list = Covers.objects \
+            .filter(book=book, flags__lt=256) \
+            .filter(edition__in=inner_queryset) \
+            .values('artwork__artist__cover_filepath',
+                    'cover_filename',
+                    'edition__country',
+                    'edition__country__display_order',
+                    'edition__print_year') \
+            .order_by('edition__country__display_order','edition__print_year')
+
+        return title_cover_list
+
+    @staticmethod
+    def book_list():
+        book_list = Books.objects.filter(theCover__flags__lt=256).values('book_id')
+
+        return book_list
+

@@ -53,14 +53,14 @@ mostCovers = 2;
             {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
                 {% with wauthor=author|cut:" " %}
                     <a href="{% url 'bookcovers:book' cover.book_id %}">
-                        <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.cover__cover_filename %}"
+                        <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.theCover__cover_filename %}"
                              alt="{{ cover.title }}"
                              title="{{ cover.title }}">
                     </a>
                 {% endwith %}
             {% else %}
                 <a href="{% url 'bookcovers:book' cover.book_id %}">
-                    <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                    <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
                          alt="{{ cover.title }}"
                          title="{{ cover.title }}">
                 </a>
@@ -69,19 +69,19 @@ mostCovers = 2;
     {% endfor %}
     {% endcomment %}
     <BR>Include duplicates<BR>
-    {% comment "test for unknown author" %}
+    {% comment "test for unknown artist" %}
     {% for cover in cover_list %}
         {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
             {% with wauthor=author|cut:" " %}
             <a href="{% url 'bookcovers:book' cover.book_id %}">
-                <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.cover__cover_filename %}"
+                <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.theCover__cover_filename %}"
                     alt="{{ cover.title }}"
                     title="{{ cover.title }}">
                  </a>
             {% endwith %}
          {% else %}
             <a href="{% url 'bookcovers:book' cover.book_id %}">
-                <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+                <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
                      alt="{{ cover.title }}"
                      title="{{ cover.title }}">
              </a>
@@ -90,7 +90,7 @@ mostCovers = 2;
     {% endcomment %}
     {% for cover in cover_list %}
         <a href="{% url 'bookcovers:book' cover.book_id %}">
-            <IMG src="{% static cover.cover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover__cover_filename %}"
+            <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
                  alt="{{ cover.title }}"
                  title="{{ cover.title }}">
         </a>
