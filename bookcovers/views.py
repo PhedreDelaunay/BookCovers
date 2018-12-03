@@ -43,7 +43,7 @@ def author_books(request, author_id=None, name=None, slug=None):
         slug = transform_slug(slug)
         kwargs = {'name': slug}
     author = get_object_or_404(Authors, **kwargs)
-    cover_list = CoverQuerys.author_cover_list(author)
+    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author)
 
     #return HttpResponse("You're looking at author %s." % author.name)
     context = {'author': author, 'cover_list': cover_list}
@@ -66,9 +66,26 @@ def artist_books(request, artist_id=None, name=None, slug=None):
     context = {'artist': artist, 'cover_list': cover_list}
     return render(request, template_name, context)
 
-def book_detail(request, book_id):
+
+def book_cover_list(request, book_id):
+    """
+    displays all the covers for the same title
+    :param request:
+    :param book_id:
+    :return:
+    """
     book = get_object_or_404(Books, pk=book_id)
-    return HttpResponse("You're looking at book %s." % book.title)
+    return HttpResponse("Book Title: You're looking at book %s." % book.title)
+
+def artwork_cover_list(request, book_id):
+    """
+    displays all covers using the same artwork
+    :param request:
+    :param book_id:
+    :return:
+    """
+    book = get_object_or_404(Books, pk=book_id)
+    return HttpResponse("Artwork: You're looking at book %s." % book.title)
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):

@@ -32,7 +32,9 @@ urlpatterns = [
     # ex: /bookcovers/artist/Jim%20Burns/
     path('artist/<name>/', views.artist_books, name='artist_books'),
     # ex: /bookcovers/book/467/
-    path('book/<int:book_id>/', views.book_detail, name='book'),
+    path('book/<int:book_id>/', views.book_cover_list, name='book'),
+    # ex: /bookcovers/artwork/467/
+    path('artwork/<int:book_id>/', views.artwork_cover_list, name='artwork'),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/
