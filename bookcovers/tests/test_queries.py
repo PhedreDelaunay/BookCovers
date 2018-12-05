@@ -52,7 +52,7 @@ class SubjectQueryTest(TestCase):
             cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
             print(cover_dict)
 
-    def query_list_of_covers_for_subject(self):
+    def validate_list_of_covers_for_subject(self):
         """
         :param cover_query: CoverQuerys.<subject>_list method returning query to list all subjects
         :return:
@@ -156,11 +156,7 @@ class AuthorQueryTests(SubjectQueryTest):
         """
         test list of book covers for each author in db
         """
-        self.query_list_of_covers_for_subject()
-
-    # def test_author_cover(self):
-    #     self.author_cover(6)
-
+        self.validate_list_of_covers_for_subject()
 
 
 class ArtistQueryTests(SubjectQueryTest):
@@ -181,9 +177,9 @@ class ArtistQueryTests(SubjectQueryTest):
         self.original_raw_query = OriginalRawQuerys.artist_cover_list
         self.all_covers_for_subject = CoverQuerys.artist_cover_list
         # keys in dictionary returned from raw sql query
-        self.expected_keys = ["book_id", "cover_filename", "year"]
+        self.expected_keys = ["book_id", "cover_filename", "artwork_id", "year"]
         # keys in dictionary returned from django query
-        self.actual_keys = ["book", "theCover__cover_filename", "year"]
+        self.actual_keys = ["book", "theCover__cover_filename", "artwork_id", "year"]
 
     def test_artist_name(self):
         artist = Artists.objects.get(pk=83)
@@ -217,7 +213,7 @@ class ArtistQueryTests(SubjectQueryTest):
         """
         test list of book covers for each artist in db
         """
-        self.query_list_of_covers_for_subject()
+        self.validate_list_of_covers_for_subject()
 
 
 class BookQueryTests(SubjectQueryTest):
@@ -272,5 +268,22 @@ class BookQueryTests(SubjectQueryTest):
         """
         test list of covers for each book title in db
         """
-        self.query_list_of_covers_for_subject()
+        self.validate_list_of_covers_for_subject()
 
+class ArtworkQueryTests(SubjectQueryTest):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'Countries.json']
+
+    def test_artworks_cover_list(self):
+        """
+        test list of covers for each book title in db
+        """
+        #self.validate_list_of_covers_for_subject()
+
+        # uo to here
+        OriginalRawQuerys.artwork_cover_list(16,2,2)

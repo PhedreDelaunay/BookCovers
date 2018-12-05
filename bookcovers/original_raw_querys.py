@@ -39,7 +39,7 @@ class OriginalRawQuerys:
         # Added "AND covers.is_variant = false " to force correct order
         # this is a new column added to get correct order in django query
         # needed here to match order in test
-        strArtistSQL = "SELECT covers.book_id, artists.cover_filepath, covers.cover_filename, AW.year " \
+        strArtistSQL = "SELECT covers.book_id, artists.cover_filepath, covers.cover_filename, AW.artwork_id, AW.year " \
                 "FROM artists, covers, artworks as AW " \
                 "WHERE ((AW.artist_id = %s) OR " \
                 "AW.artist_id IN (SELECT AA.artist_aka_id FROM artist_akas as AA WHERE AA.artist_id = %s)) " \
@@ -71,7 +71,7 @@ class OriginalRawQuerys:
         strCoverAuthorsSQL = "SELECT A.author_id, A.name, B.book_id, B.author_id, BE.book_id, BE.edition_id " \
                         "FROM authors As A, books AS B, editions AS BE " \
                         "WHERE A.author_id = B.author_id AND B.book_id = BE.book_id " \
-                        "AND BE.edition_id IN " \
+                        "AND BE.edi tion_id IN " \
                         "(SELECT BC.edition_id FROM covers as BC " \
                             "WHERE BC.edition_id = BE.edition_id And BC.flags < 256) " \
                         "group by A.name"
@@ -163,6 +163,28 @@ class OriginalRawQuerys:
             else:
                 cover_list = cursor.fetchall()
             # print(f"Original book title cover list is\n{cover_list}\n")
+
+        return cover_list
+
+    @staticmethod
+    def artwork_cover_list(book_id, artist_id, return_dict=False):
+        strArtworkCoverSQL = ("SELECT artists.cover_filepath, covers. *, artworks.artist_id "
+                    "FROM artists, covers, artworks "
+                    "WHERE covers.flags < 256 "
+                       "AND covers.artwork_id IN (SELECT DISTINCT artwork_id FROM covers WHERE covers.book_id = %s) "
+                       "AND ((artworks.artist_id = %s) OR artworks.artist_id IN ("
+                            "SELECT AA.artist_aka_id FROM artist_akas AS AA WHERE AA.artist_id = %s)) "
+                       "AND artists.artist_id = artworks.artist_id "
+                       "AND covers.artwork_id = artworks.artwork_id")
+
+        #print(f"strArtworkCoverSQL is\n{strArtworkCoverSQL}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strArtworkCoverSQL, [book_id, artist_id, artist_id])
+            if return_dict:
+                cover_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                cover_list = cursor.fetchall()
+            print(f"Original artwork cover list is\n{cover_list}\n")
 
         return cover_list
 

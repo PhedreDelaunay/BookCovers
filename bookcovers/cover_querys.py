@@ -52,6 +52,7 @@ class CoverQuerys:
             filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
             values('theCover__cover_id',
                    'book',
+                   'artwork_id',
                    'book__author__name',
                    'book__title',
                    'theCover__cover_filename',
@@ -62,7 +63,7 @@ class CoverQuerys:
             for cover in cover_list:
                 author_directory = cover['book__author__name'].replace(" ","").replace(".","")
                 cover['book__author__name'] = f"{author_directory}/"
-        # print(cover_list.query)
+        print(f"artist_cover_list.query is '{cover_list.query}'")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list

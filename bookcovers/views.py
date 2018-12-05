@@ -77,15 +77,21 @@ def book_cover_list(request, book_id):
     book = get_object_or_404(Books, pk=book_id)
     return HttpResponse("Book Title: You're looking at book %s." % book.title)
 
-def artwork_cover_list(request, book_id):
+def artwork_cover_list(request, artwork_id):
     """
     displays all covers using the same artwork
     :param request:
-    :param book_id:
+    :param artwork_id:
     :return:
     """
-    book = get_object_or_404(Books, pk=book_id)
-    return HttpResponse("Artwork: You're looking at book %s." % book.title)
+    try:
+        cover = get_object_or_404(Covers, artwork_id=artwork_id)
+        return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
+    except Covers.MultipleObjectsReturned:
+        covers = Covers.objects.filter(artwork_id=artwork_id)
+        num_covers = len(covers)
+        # TODO maybe redirect to artwork cover list display
+        return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):
