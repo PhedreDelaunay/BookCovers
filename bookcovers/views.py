@@ -43,7 +43,7 @@ def author_books(request, author_id=None, name=None, slug=None):
         slug = transform_slug(slug)
         kwargs = {'name': slug}
     author = get_object_or_404(Authors, **kwargs)
-    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author)
+    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
 
     #return HttpResponse("You're looking at author %s." % author.name)
     context = {'author': author, 'cover_list': cover_list}

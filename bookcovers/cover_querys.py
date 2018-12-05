@@ -113,12 +113,12 @@ class CoverQuerys:
         return author_list
 
     @staticmethod
-    def all_covers_of_all_books_for_author(author, all=False):
+    def all_covers_of_all_books_for_author(author, all=True):
         """
         gets all covers of all books for this author
         :param author: author object to fetch covers for
-        :param test: True = use test query for running tests
-                     False = use query for web page display
+        :param all: True = return all covers for all books
+                    False = eliminates duplicate cover entries, where the same file is used for multiple cover records
         :return: dict queryset to fetch all covers of all books for this author
         """
         print("author is {}".format(author.name))
