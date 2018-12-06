@@ -7,6 +7,7 @@ from django.conf import settings
 from bookcovers.models import Artists
 from bookcovers.models import Authors
 from bookcovers.models import Books
+from bookcovers.models import Covers
 
 from bookcovers.original_raw_querys import OriginalRawQuerys
 from bookcovers.cover_querys import CoverQuerys
@@ -69,8 +70,7 @@ class SubjectQueryTest(TestCase):
             self.subject_cover_list_matches(the_subject, self.original_raw_query)
 
     def subject_cover_list_matches(self, subject, original_raw_query):
-        print(f"subject is {subject}")
-        raw_cover_list = original_raw_query(subject.pk, return_dict=True)
+        raw_cover_list = self.subject_original_query(subject, original_raw_query)
         expected_num_covers = len(raw_cover_list)
 
         subject_cover_list = self.all_covers_for_subject(subject)
@@ -98,6 +98,10 @@ class SubjectQueryTest(TestCase):
                     raw_cover['cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"
             self.record_matches(raw_cover, self.expected_keys, cover, self.actual_keys)
 
+    def subject_original_query(self, subject, original_raw_query):
+        print(f"subject is {subject}")
+        raw_cover_list = original_raw_query(subject.pk, return_dict=True)
+        return raw_cover_list
 
 class AuthorQueryTests(SubjectQueryTest):
     fixtures = ['Artists.json',
@@ -279,11 +283,32 @@ class ArtworkQueryTests(SubjectQueryTest):
                 'Covers.json',
                 'Countries.json']
 
+    def setUp(self):
+        self.subject_model = Books
+        self.subject_name = "book"
+        self.pk_name = "book_id"
+        self.cover_query = CoverQuerys.book_list
+        self.original_raw_query = OriginalRawQuerys.artwork_cover_list
+        self.all_covers_for_subject = CoverQuerys.all_covers_for_title
+        # keys in dictionary returned from raw sql query
+        self.expected_keys = ["cover_filepath", "cover_filename", "print_year", "country_id", "display_order"]
+        # keys in dictionary returned from django query
+        self.actual_keys = ["artwork__artist__cover_filepath", "cover_filename", "edition__print_year",
+                            "edition__country", "edition__country__display_order"]
+
     def test_artworks_cover_list(self):
         """
         test list of covers for each book title in db
         """
         #self.validate_list_of_covers_for_subject()
 
-        # uo to here
-        OriginalRawQuerys.artwork_cover_list(16,2,2)
+        # up to here
+        the_subject = get_object_or_404(self.subject_model, pk=16)
+        print (f"the_subject is {the_subject}")
+        self.subject_original_query(the_subject, self.original_raw_query)
+
+    def subject_original_query(self, subject, original_raw_query):
+        the_cover = get_object_or_404(Covers, book_id=subject)
+        print(f"ArtworkQueryTests: subject is {subject} subject.pk is {subject.pk} subject.cover.artwork.artist is {the_cover.artwork.artist}")
+        raw_cover_list = original_raw_query(subject.pk, the_cover.artwork.artist.pk, return_dict=True)
+        return raw_cover_list

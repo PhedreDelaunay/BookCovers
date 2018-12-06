@@ -71,7 +71,7 @@ class OriginalRawQuerys:
         strCoverAuthorsSQL = "SELECT A.author_id, A.name, B.book_id, B.author_id, BE.book_id, BE.edition_id " \
                         "FROM authors As A, books AS B, editions AS BE " \
                         "WHERE A.author_id = B.author_id AND B.book_id = BE.book_id " \
-                        "AND BE.edi tion_id IN " \
+                        "AND BE.edition_id IN " \
                         "(SELECT BC.edition_id FROM covers as BC " \
                             "WHERE BC.edition_id = BE.edition_id And BC.flags < 256) " \
                         "group by A.name"
@@ -168,6 +168,7 @@ class OriginalRawQuerys:
 
     @staticmethod
     def artwork_cover_list(book_id, artist_id, return_dict=False):
+        print (f"artwork_cover_list: book_id={book_id} artist_id={artist_id}")
         strArtworkCoverSQL = ("SELECT artists.cover_filepath, covers. *, artworks.artist_id "
                     "FROM artists, covers, artworks "
                     "WHERE covers.flags < 256 "
