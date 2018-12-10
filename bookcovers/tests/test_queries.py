@@ -8,6 +8,7 @@ from bookcovers.models import Artists
 from bookcovers.models import Authors
 from bookcovers.models import Books
 from bookcovers.models import Covers
+from bookcovers.models import Artworks
 
 from bookcovers.original_raw_querys import OriginalRawQuerys
 from bookcovers.cover_querys import CoverQuerys
@@ -20,7 +21,7 @@ class SubjectQueryTest(TestCase):
     """
         subject: subject model: Artists, Authors, Books
         pk_name: name of private key field for subject
-        cover_query: CoverQuerys.<subject>_list, method returning query to list all subjects
+        subject_query: CoverQuerys.<subject>_list, method returning query to list all subjects
         original_raw_query: OriginalRawQuerys.<subject>_cover_list
 
     """
@@ -54,20 +55,18 @@ class SubjectQueryTest(TestCase):
             print(cover_dict)
 
     def validate_list_of_covers_for_subject(self):
-        """
-        :param cover_query: CoverQuerys.<subject>_list method returning query to list all subjects
-        :return:
-        """
         print ("===========================================")
         print (f"Test List of Covers for each {self.subject_name}")
         print ("===========================================")
 
-        subject_list = self.cover_query()
+        subject_list = self.subject_query()
         for subject in subject_list:
-            print (f"subject_name is {self.subject_name}")
             subject_id = subject[self.pk_name]
+            print (f"subject:{self.subject_name} id:{subject_id}")
             the_subject = get_object_or_404(self.subject_model, pk=subject_id)
             self.subject_cover_list_matches(the_subject, self.original_raw_query)
+
+        print (f"num {self.subject_name}s is {len(subject_list)}")
 
     def subject_cover_list_matches(self, subject, original_raw_query):
         raw_cover_list = self.subject_original_query(subject, original_raw_query)
@@ -117,7 +116,7 @@ class AuthorQueryTests(SubjectQueryTest):
         self.subject_model = Authors
         self.subject_name = "author"
         self.pk_name = "author_id"
-        self.cover_query = CoverQuerys.author_list
+        self.subject_query = CoverQuerys.author_list
         self.original_raw_query = OriginalRawQuerys.author_cover_list
         self.all_covers_for_subject = CoverQuerys.all_covers_of_all_books_for_author
         # keys in dictionary returned from raw sql query
@@ -177,7 +176,7 @@ class ArtistQueryTests(SubjectQueryTest):
         self.subject_model = Artists
         self.subject_name = "artist"
         self.pk_name = "artist_id"
-        self.cover_query = CoverQuerys.artist_list
+        self.subject_query = CoverQuerys.artist_list
         self.original_raw_query = OriginalRawQuerys.artist_cover_list
         self.all_covers_for_subject = CoverQuerys.artist_cover_list
         # keys in dictionary returned from raw sql query
@@ -233,7 +232,7 @@ class BookQueryTests(SubjectQueryTest):
         self.subject_model = Books
         self.subject_name = "book"
         self.pk_name = "book_id"
-        self.cover_query = CoverQuerys.book_list
+        self.subject_query = CoverQuerys.book_list
         self.original_raw_query = OriginalRawQuerys.author_covers_for_title
         self.all_covers_for_subject = CoverQuerys.all_covers_for_title
         # keys in dictionary returned from raw sql query
@@ -245,7 +244,7 @@ class BookQueryTests(SubjectQueryTest):
 
     def test_book_list(self):
         book_query="select books.book_id, covers.flags from books, covers " \
-                   "where books.book_id = covers.book_id and covers.flags < 256;"
+                   "where books.book_id = covers.book_id and covers.flags < 256 order by books.book_id;"
         # return book list as dictionary
         raw_book_list = OriginalRawQuerys.adhoc_query(book_query, True)
         expected_num_books = len(raw_book_list)
@@ -284,31 +283,81 @@ class ArtworkQueryTests(SubjectQueryTest):
                 'Countries.json']
 
     def setUp(self):
-        self.subject_model = Books
-        self.subject_name = "book"
-        self.pk_name = "book_id"
-        self.cover_query = CoverQuerys.book_list
+        self.subject_model = Artworks
+        self.subject_name = "artwork"
+        self.pk_name = "artwork_id"
+        self.subject_query = CoverQuerys.book_list
         self.original_raw_query = OriginalRawQuerys.artwork_cover_list
-        self.all_covers_for_subject = CoverQuerys.all_covers_for_title
+        self.all_covers_for_subject = CoverQuerys.all_covers_for_artwork
         # keys in dictionary returned from raw sql query
-        self.expected_keys = ["cover_filepath", "cover_filename", "print_year", "country_id", "display_order"]
+        self.expected_keys = ["cover_filepath", "cover_filename", "cover_id", "book_id", "edition_id", "artist_id", "artwork_id"]
         # keys in dictionary returned from django query
-        self.actual_keys = ["artwork__artist__cover_filepath", "cover_filename", "edition__print_year",
-                            "edition__country", "edition__country__display_order"]
+        self.actual_keys = ["artwork__artist__cover_filepath", "cover_filename", "cover_id",
+                            "book__pk", "edition__pk", "artwork__artist__pk", "artwork__pk"]
 
     def test_artworks_cover_list(self):
         """
         test list of covers for each book title in db
         """
-        #self.validate_list_of_covers_for_subject()
+        self.validate_list_of_covers_for_book()
 
-        # up to here
-        the_subject = get_object_or_404(self.subject_model, pk=16)
-        print (f"the_subject is {the_subject}")
-        self.subject_original_query(the_subject, self.original_raw_query)
+        #the_book = get_object_or_404(Books, pk=16)
+        #print (f"the_book is {the_book}")
+        #self.subject_original_query(the_book, self.original_raw_query)
 
-    def subject_original_query(self, subject, original_raw_query):
-        the_cover = get_object_or_404(Covers, book_id=subject)
-        print(f"ArtworkQueryTests: subject is {subject} subject.pk is {subject.pk} subject.cover.artwork.artist is {the_cover.artwork.artist}")
-        raw_cover_list = original_raw_query(subject.pk, the_cover.artwork.artist.pk, return_dict=True)
+    def validate_list_of_covers_for_book(self):
+
+        print ("==============================================")
+        print (f"Test List of Covers for artwork for each book")
+        print ("==============================================")
+
+        book_list = CoverQuerys.book_list()
+        for the_book in book_list:
+            book_id = the_book['book_id']
+            print (f"ArtworkQueryTests: book_id is {book_id}")
+            the_book = get_object_or_404(Books, pk=book_id)
+            print (f"ArtworkQueryTests: the_book is {the_book}")
+            cover_list = Covers.objects.filter(book__pk=book_id)
+            for the_cover in cover_list:
+                the_artwork = get_object_or_404(Artworks, pk=the_cover.artwork.pk)
+                print (f"the_artwork is {the_artwork}")
+                # up to here
+                # python manage.py test bookcovers.tests.test_queries.ArtworkQueryTests --settings=djabbic.testsettings
+                # ArtworkQueryTests: book_id is 82
+                # ArtworkQueryTests: the_book is Decision at Doona
+                # the_artwork is Bruce Pennington, Decision At Doona, 1981
+                # AssertionError: 2 != 1
+                self.artwork_cover_list_matches(the_book, the_artwork, self.original_raw_query)
+
+        print (f"num books is {len(book_list)}")
+
+    def artwork_cover_list_matches(self, book, artwork, original_raw_query):
+        raw_cover_list = self.artwork_original_query(book, artwork, original_raw_query)
+        expected_num_covers = len(raw_cover_list)
+
+        subject_cover_list = self.all_covers_for_subject(artwork)
+        num_covers = len(subject_cover_list)
+
+        print(f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
+
+        self.print_cover_lists(raw_cover_list, subject_cover_list)
+        try:
+            self.assertEqual(expected_num_covers, num_covers)
+        except AssertionError as e:
+            print("==============Expected (original raw)================")
+            print(f"Original query is\n{self.raw_cover_list.query}\n")
+            print(f"Original {self.subject_name} cover list is\n{self.subject_cover_list}\n")
+            print("=========================Actual=====================")
+            print(f"{self.subject_name} cover_list query is:\n{cover_list.query}")
+            print(f"{self.subject_name} cover_list is:\n {cover_list}")
+            print("====================================================")
+            raise
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(raw_cover_list, subject_cover_list):
+            self.record_matches(raw_cover, self.expected_keys, cover, self.actual_keys)
+
+    def artwork_original_query(self, book, artwork, original_raw_query):
+        print(f"ArtworkQueryTests: book.pk is {book.pk} artwork.artist.pk is {artwork.artist.pk}")
+        raw_cover_list = original_raw_query(book.pk, artwork.artist.pk, return_dict=True)
         return raw_cover_list

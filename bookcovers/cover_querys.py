@@ -212,8 +212,31 @@ class CoverQuerys:
         return title_cover_list
 
     @staticmethod
+    def all_covers_for_artwork(artwork):
+        """
+        list all covers with this artwork
+        :param artwork:
+        :return:
+        """
+
+        artwork_cover_list = Covers.objects.filter(artwork=artwork, flags__lt=256) \
+            .values('cover_id',
+                    'book__pk',
+                    'artwork__pk',
+                    'edition__pk',
+                    'artwork__artist__pk',
+                    'cover_filename',
+                    'artwork__artist__cover_filepath')
+
+        print (f"artwork_cover_list is\n{artwork_cover_list}")
+        return artwork_cover_list
+
+    @staticmethod
     def book_list():
-        book_list = Books.objects.filter(theCover__flags__lt=256).values('book_id')
+        book_list = Books.objects.filter(theCover__flags__lt=256).values('book_id').order_by('book_id')
+        print (f"book_list.query is {book_list.query}")
 
         return book_list
+
+
 
