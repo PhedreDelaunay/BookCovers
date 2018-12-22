@@ -3,6 +3,7 @@ import itertools
 from django.test import TestCase
 from django.shortcuts import get_object_or_404
 from django.conf import settings
+from django.db.models import F
 
 from bookcovers.models import Artists
 from bookcovers.models import Authors
@@ -299,14 +300,9 @@ class ArtworkQueryTests(SubjectQueryTest):
         """
         test list of covers for each book title in db
         """
-        self.validate_list_of_covers_for_book()
+        self.validate_list_of_covers_for_all_books()
 
-        #the_book = get_object_or_404(Books, pk=16)
-        #print (f"the_book is {the_book}")
-        #self.subject_original_query(the_book, self.original_raw_query)
-
-    def validate_list_of_covers_for_book(self):
-
+    def validate_list_of_covers_for_all_books(self):
         print ("==============================================")
         print (f"Test List of Covers for artwork for each book")
         print ("==============================================")
@@ -314,47 +310,62 @@ class ArtworkQueryTests(SubjectQueryTest):
         book_list = CoverQuerys.book_list()
         for the_book in book_list:
             book_id = the_book['book_id']
-            print (f"ArtworkQueryTests: book_id is {book_id}")
-            the_book = get_object_or_404(Books, pk=book_id)
-            print (f"ArtworkQueryTests: the_book is {the_book}")
-            cover_list = Covers.objects.filter(book__pk=book_id)
-            for the_cover in cover_list:
-                the_artwork = get_object_or_404(Artworks, pk=the_cover.artwork.pk)
-                print (f"the_artwork is {the_artwork}")
-                # up to here
-                # python manage.py test bookcovers.tests.test_queries.ArtworkQueryTests --settings=djabbic.testsettings
-                # ArtworkQueryTests: book_id is 82
-                # ArtworkQueryTests: the_book is Decision at Doona
-                # the_artwork is Bruce Pennington, Decision At Doona, 1981
-                # AssertionError: 2 != 1
-                self.artwork_cover_list_matches(the_book, the_artwork, self.original_raw_query)
+            print("==============================================")
+            print (f"ArtworkQueryTests: book is {book_id}")
+            print("==============================================")
+            self.validate_list_of_covers_for_book(book_id)
 
         print (f"num books is {len(book_list)}")
 
-    def artwork_cover_list_matches(self, book, artwork, original_raw_query):
+    def validate_list_of_covers_for_book(self, book_id):
+        the_book = get_object_or_404(Books, pk=book_id)
+        # test covers per artist that did a cover for this book
+        artist_list = Artists.objects.filter(theArtwork__book__pk=book_id)
+        print (f"the_book is '{the_book}' artist_list is '{artist_list}''")
+        for artist in artist_list:
+            # we now have a book id and an artist id from which we can get the artwork id
+            try:
+                artwork = get_object_or_404(Artworks, book_id=book_id, artist_id=artist.pk)
+                print("==============================================")
+                print(f"artwork is'{artwork}")
+                print("==============================================")
+                self.artwork_cover_list_matches(the_book, artist, artwork, self.original_raw_query)
+            except Artworks.MultipleObjectsReturned:
+                # There is at least one instance in which the artist has created different covers for the same book
+                # Bruce Pennington, Decision at Doona
+                artwork_list = Artworks.objects.filter(book_id=book_id, artist_id=artist.pk)
+                # yes, this means we will test it twice
+                for artwork in artwork_list:
+                    print("==============================================")
+                    print(f"artwork is'{artwork}")
+                    print("==============================================")
+                    self.artwork_cover_list_matches(the_book, artist, artwork, self.original_raw_query)
+
+    def artwork_cover_list_matches(self, book, artist, artwork, original_raw_query):
         raw_cover_list = self.artwork_original_query(book, artwork, original_raw_query)
         expected_num_covers = len(raw_cover_list)
 
-        subject_cover_list = self.all_covers_for_subject(artwork)
-        num_covers = len(subject_cover_list)
+        artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
+        num_covers = len(artwork_cover_list)
 
         print(f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
 
-        self.print_cover_lists(raw_cover_list, subject_cover_list)
+        self.print_cover_lists(raw_cover_list, artwork_cover_list)
+
         try:
             self.assertEqual(expected_num_covers, num_covers)
         except AssertionError as e:
             print("==============Expected (original raw)================")
-            print(f"Original query is\n{self.raw_cover_list.query}\n")
-            print(f"Original {self.subject_name} cover list is\n{self.subject_cover_list}\n")
+            #print(f"Original query is\n{raw_cover_list.query}\n")
+            print(f"Original {self.subject_name} cover list is\n{raw_cover_list}\n")
             print("=========================Actual=====================")
-            print(f"{self.subject_name} cover_list query is:\n{cover_list.query}")
-            print(f"{self.subject_name} cover_list is:\n {cover_list}")
+            print(f"{self.subject_name} cover_list query is:\n{artwork_cover_list.query}")
+            print(f"{self.subject_name} cover_list is:\n {artwork_cover_list}")
             print("====================================================")
             raise
 
         #  for each cover: check expected cover data matches actual cover data
-        for raw_cover, cover in zip(raw_cover_list, subject_cover_list):
+        for raw_cover, cover in zip(raw_cover_list, artwork_cover_list):
             self.record_matches(raw_cover, self.expected_keys, cover, self.actual_keys)
 
     def artwork_original_query(self, book, artwork, original_raw_query):

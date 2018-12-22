@@ -80,18 +80,31 @@ def book_cover_list(request, book_id):
 def artwork_cover_list(request, artwork_id):
     """
     displays all covers using the same artwork
+    or all covers by same artist for the same title
     :param request:
     :param artwork_id:
     :return:
     """
-    try:
-        cover = get_object_or_404(Covers, artwork_id=artwork_id)
-        return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
-    except Covers.MultipleObjectsReturned:
-        covers = Covers.objects.filter(artwork_id=artwork_id)
-        num_covers = len(covers)
-        # TODO maybe redirect to artwork cover list display
-        return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
+
+    # if decide we don't need to display both BP variants of Decision at Doona
+    # then can simply get covers for artwork id
+    #try:
+    #    cover = get_object_or_404(Covers, artwork_id=artwork_id)
+    #    return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
+    #except Covers.MultipleObjectsReturned:
+    #    covers = Covers.objects.filter(artwork_id=artwork_id)
+    #    num_covers = len(covers)
+    #   # maybe redirect to artwork cover list display
+    #   return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
+
+    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+    artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
+    num_covers = len(artwork_cover_list)
+    response = "You are looking at<BR>"
+    for cover in artwork_cover_list:
+        response += f"{cover['artwork__artist__cover_filepath']}/{cover['cover_filename']} <BR>"
+    return HttpResponse(response)
+
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):

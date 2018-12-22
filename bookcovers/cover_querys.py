@@ -219,17 +219,27 @@ class CoverQuerys:
         :return:
         """
 
-        artwork_cover_list = Covers.objects.filter(artwork=artwork, flags__lt=256) \
-            .values('cover_id',
-                    'book__pk',
-                    'artwork__pk',
-                    'edition__pk',
-                    'artwork__artist__pk',
-                    'cover_filename',
-                    'artwork__artist__cover_filepath')
+        # we need to cover all these scenarios
+        # list covers for artwork/title
+        # Time Enough for Love, book_id=25, artist_id=2; artwork_id=22, edition id = 206, 14
+        # Decision at Doona, book_id=82, artist_id=2, artwork_id=74, 452, edition_id=89,640
+        # Dune, book_id=7, artist_id=2; artwork_id=6 edition|-id=6, book_id=6 artwork_id=6, edition_id=7
 
-        print (f"artwork_cover_list is\n{artwork_cover_list}")
-        return artwork_cover_list
+        covers = Covers.objects \
+                .filter(Q(artwork_id=artwork.pk) |
+                        Q(artwork__artist_id=artwork.artist_id, artwork__book_id=artwork.book_id)) \
+                .filter(flags__lt = 256) \
+                .values('cover_id',
+                        'book__pk',
+                        'artwork__pk',
+                        'edition__pk',
+                        'artwork__artist__pk',
+                        'cover_filename',
+                        'artwork__artist__cover_filepath')
+
+        print (f"all_covers_for_artwork: covers.query is\n{covers.query}")
+
+        return covers
 
     @staticmethod
     def book_list():
