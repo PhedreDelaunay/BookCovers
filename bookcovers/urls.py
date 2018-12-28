@@ -1,6 +1,7 @@
 from django.urls import path
 from bookcovers.views import AuthorList
 from bookcovers.views import ArtistList
+from bookcovers.views import BookCoverDetail
 
 from . import views
 
@@ -32,9 +33,11 @@ urlpatterns = [
     # ex: /bookcovers/artist/Jim%20Burns/
     path('artist/<name>/', views.artist_books, name='artist_books'),
     # ex: /bookcovers/book/467/
-    path('book/<int:book_id>/', views.book_cover_list, name='book'),
+    path('book/<int:book_id>/', views.book_cover_list, name='book_covers'),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', views.artwork_cover_list, name='artwork'),
+    # ex: /bookcovers/edition/6
+    path('edition/<pk>/', BookCoverDetail.as_view(), name="edition"),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/

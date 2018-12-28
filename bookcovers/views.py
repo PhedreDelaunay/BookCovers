@@ -1,7 +1,10 @@
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.views.generic import ListView
+from django.views.generic import DetailView
+from django.views.generic import RedirectView
 from django.db.models import F
 from django.db.models import Q
 
@@ -31,80 +34,6 @@ def transform_slug(slug):
     slug = slug.replace('%', '-')
 
     return slug
-
-def author_books(request, author_id=None, name=None, slug=None):
-    template_name = 'bookcovers/author_book_list.html'
-
-    if author_id:
-        kwargs = {'pk': author_id}
-    elif name:
-        kwargs = {'name': name}
-    elif slug:
-        slug = transform_slug(slug)
-        kwargs = {'name': slug}
-    author = get_object_or_404(Authors, **kwargs)
-    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-
-    #return HttpResponse("You're looking at author %s." % author.name)
-    context = {'author': author, 'cover_list': cover_list}
-    return render(request, template_name, context)
-
-def artist_books(request, artist_id=None, name=None, slug=None):
-    template_name = 'bookcovers/artist_cover_list.html'
-
-    if artist_id:
-        kwargs = {'pk': artist_id}
-    elif name:
-        kwargs = {'name': name}
-    elif slug:
-        slug = transform_slug(slug)
-        kwargs = {'name': slug}
-
-    artist = get_object_or_404(Artists, **kwargs)
-    cover_list = CoverQuerys.artist_cover_list(artist)
-    print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist, 'cover_list': cover_list}
-    return render(request, template_name, context)
-
-
-def book_cover_list(request, book_id):
-    """
-    displays all the covers for the same title
-    :param request:
-    :param book_id:
-    :return:
-    """
-    book = get_object_or_404(Books, pk=book_id)
-    return HttpResponse("Book Title: You're looking at book %s." % book.title)
-
-def artwork_cover_list(request, artwork_id):
-    """
-    displays all covers using the same artwork
-    or all covers by same artist for the same title
-    :param request:
-    :param artwork_id:
-    :return:
-    """
-
-    # if decide we don't need to display both BP variants of Decision at Doona
-    # then can simply get covers for artwork id
-    #try:
-    #    cover = get_object_or_404(Covers, artwork_id=artwork_id)
-    #    return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
-    #except Covers.MultipleObjectsReturned:
-    #    covers = Covers.objects.filter(artwork_id=artwork_id)
-    #    num_covers = len(covers)
-    #   # maybe redirect to artwork cover list display
-    #   return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
-
-    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-    artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
-    num_covers = len(artwork_cover_list)
-    response = "You are looking at<BR>"
-    for cover in artwork_cover_list:
-        response += f"{cover['artwork__artist__cover_filepath']}/{cover['cover_filename']} <BR>"
-    return HttpResponse(response)
-
 
 # https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/
 class SubjectList(ListView):
@@ -156,6 +85,71 @@ class ArtistList(SubjectList):
         queryset = CoverQuerys.artist_list()
         return queryset
 
+
+def artist_books(request, artist_id=None, name=None, slug=None):
+    """
+    displays thumbnails of books with covers by this artist
+    :param request:
+    :param artist_id:   ex: /bookcovers/artist/6/
+    :param name:        ex: /bookcovers/artist/Jim%20Burns/
+    :param slug:        ex: /bookcovers/artist/Jim-Burns/
+    :return:
+    """
+    template_name = 'bookcovers/artist_cover_list.html'
+
+    if artist_id:
+        kwargs = {'pk': artist_id}
+    elif name:
+        kwargs = {'name': name}
+    elif slug:
+        slug = transform_slug(slug)
+        kwargs = {'name': slug}
+
+    artist = get_object_or_404(Artists, **kwargs)
+    cover_list = CoverQuerys.artist_cover_list(artist)
+    print("cover_filepath is {}".format(artist.cover_filepath))
+    context = {'artist': artist, 'cover_list': cover_list}
+    return render(request, template_name, context)
+
+def artwork_cover_list(request, artwork_id):
+    """
+    displays all covers using the same artwork
+    or all covers by same artist for the same title
+    :param request:
+    :param artwork_id:
+    :return:
+    """
+
+    # if decide we don't need to display both BP variants of Decision at Doona
+    # also the illustrated man
+    # then can simply get covers for artwork id
+    #try:
+    #    cover = get_object_or_404(Covers, artwork_id=artwork_id)
+    #    return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
+    #except Covers.MultipleObjectsReturned:
+    #    covers = Covers.objects.filter(artwork_id=artwork_id)
+    #    num_covers = len(covers)
+    #   # maybe redirect to artwork cover list display
+    #   return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
+
+    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+    artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
+    response = "You are looking at<BR>"
+    num_covers = len(artwork_cover_list)
+    if num_covers == 1:
+        return redirect('bookcovers:edition', pk=artwork_cover_list[0]['edition__pk'])
+
+    #for cover in artwork_cover_list:
+    #    response += f"editon {cover['edition__pk']}, {cover['artwork__artist__cover_filepath']}/{cover['cover_filename']} <BR>"
+    #return HttpResponse(response)
+
+    template_name = 'bookcovers/book_cover_list.html'
+    context = {'cover_list': artwork_cover_list}
+    return render(request, template_name, context)
+
+class ArtworkCoverList(RedirectView):
+    url = f"/bookcovers/edition/107"
+
 class AuthorList(SubjectList):
     template_name = 'bookcovers/author_list.html'
 
@@ -166,6 +160,47 @@ class AuthorList(SubjectList):
         print ("AuthorList: calling CoverQuerys.author_list")
         queryset = CoverQuerys.author_list()
         return queryset
+
+def author_books(request, author_id=None, name=None, slug=None):
+    """
+    displays thumbnails of books by this author
+    :param request:
+    :param author_id:   ex: /bookcovers/author/4/
+    :param name:        ex: /bookcovers/artist/Robert%20Heinelein/
+    :param slug:        ex: /bookcovers/author/Robert-Heinlein/
+    :return:
+    """
+    template_name = 'bookcovers/author_book_list.html'
+
+    if author_id:
+        kwargs = {'pk': author_id}
+    elif name:
+        kwargs = {'name': name}
+    elif slug:
+        slug = transform_slug(slug)
+        kwargs = {'name': slug}
+    author = get_object_or_404(Authors, **kwargs)
+    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
+
+    #return HttpResponse("You're looking at author %s." % author.name)
+    context = {'author': author, 'cover_list': cover_list}
+    return render(request, template_name, context)
+
+def book_cover_list(request, book_id):
+    """
+    displays all the covers for the same title
+    :param request:
+    :param book_id:
+    :return:
+    """
+    book = get_object_or_404(Books, pk=book_id)
+    return HttpResponse("Book Title: You're looking at book %s." % book.title)
+
+
+class BookCoverDetail(DetailView):
+    model=Editions
+    template_name = 'bookcovers/book_cover_detail.html'
+
 
 #=========================================
 # the simplest of generic class views simply provide the model
