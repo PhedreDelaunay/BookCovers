@@ -231,6 +231,7 @@ class CoverQuerys:
                 .filter(flags__lt = 256) \
                 .values('cover_id',
                         'book__pk',
+                        'book__title',
                         'artwork__pk',
                         'edition__pk',
                         'artwork__artist__pk',
