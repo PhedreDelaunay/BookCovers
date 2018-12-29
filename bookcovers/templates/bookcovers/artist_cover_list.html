@@ -2,6 +2,9 @@
 
 {% load static %}
 
+{% block second_level_menu %}
+{% include 'bookcovers/artist_menu.html' %}
+{% endblock %}
 {% block content %}
     <h2>{{ artist }}</h2>
     {% for cover in cover_list %}

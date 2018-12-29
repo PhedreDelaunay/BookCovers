@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    {% include 'bookcovers/main_menu.html' %}
+    <div id="slm">
+        {% block second_level_menu %}{% endblock %}
+    </div>
     <div id="content">
         {% block content %}{% endblock %}
     </div>
