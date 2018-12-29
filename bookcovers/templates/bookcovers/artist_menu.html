@@ -1,4 +1,17 @@
-<TABLE>
-    <TR><TD><a href="BookCover.php?filter=1&amp;currentEntry=11&amp;totalEntrys=11p5">prev artist</a></TD>
-        <TD><a href="BookCover.ph?filter=1&amp;currentEntry=13&amp;totalEntrys=115">next artist</a></TD>
-</TD></TR></TABLE>
+<div class="pagination">
+    <span class="step-links">
+        {% if artist_page.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ artist_page.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Artist {{ artist_page.number }} of {{ artist_page.paginator.num_pages }}.
+        </span>
+
+        {% if artist_page.has_next %}
+            <a href="?page={{ artist_page.next_page_number }}">next</a>
+            <a href="?page={{ artist_page.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>

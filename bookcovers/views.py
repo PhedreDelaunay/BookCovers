@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import RedirectView
+from django.core.paginator import Paginator
 from django.db.models import F
 from django.db.models import Q
 
@@ -97,6 +98,21 @@ def artist_books(request, artist_id=None, name=None, slug=None):
     """
     template_name = 'bookcovers/artist_cover_list.html'
 
+    # pagination for artist second level menu
+    # TODO can queries be cached between pages?
+    artist_list = CoverQuerys.artist_list()
+
+    # have we got here by paging?
+    page = request.GET.get('page')
+
+    # Show 1 artist's work per page
+    paginator = Paginator(artist_list, 1)
+
+    print (f"page is {page}")
+    if page:
+        print (f"artist_list[{page}-1] is {artist_list[int(page)-1]}")
+        artist_id = artist_list[int(page)-1]['artist_id']
+
     if artist_id:
         kwargs = {'pk': artist_id}
     elif name:
@@ -106,9 +122,17 @@ def artist_books(request, artist_id=None, name=None, slug=None):
         kwargs = {'name': slug}
 
     artist = get_object_or_404(Artists, **kwargs)
+    if not page:
+        # Which page is the requested artist?
+        page = [count for count, record in enumerate(artist_list, 1) if record['artist_id'] == artist.artist_id]
+        page = int(page[0])
+        print (f"figured out that page is {page}")
+
+    artist_page = paginator.get_page(page)
+
     cover_list = CoverQuerys.artist_cover_list(artist)
     print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist, 'cover_list': cover_list}
+    context = {'artist': artist, 'cover_list': cover_list, 'artist_page': artist_page}
     return render(request, template_name, context)
 
 def artwork_cover_list(request, artwork_id):
@@ -119,19 +143,6 @@ def artwork_cover_list(request, artwork_id):
     :param artwork_id:
     :return:
     """
-
-    # if decide we don't need to display both BP variants of Decision at Doona
-    # also the illustrated man
-    # then can simply get covers for artwork id
-    #try:
-    #    cover = get_object_or_404(Covers, artwork_id=artwork_id)
-    #    return HttpResponse(f"Artwork: You're looking at book {cover.book.title} with artwork {artwork_id}")
-    #except Covers.MultipleObjectsReturned:
-    #    covers = Covers.objects.filter(artwork_id=artwork_id)
-    #    num_covers = len(covers)
-    #   # maybe redirect to artwork cover list display
-    #   return HttpResponse(f"Artwork: You're looking at {num_covers} books with artwork {artwork_id}")
-
     artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
     artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
     num_covers = len(artwork_cover_list)
