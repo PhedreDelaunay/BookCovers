@@ -104,7 +104,7 @@ class Books(models.Model):
 
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
-# override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now artworks
+# override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now theArtworks
 class Artworks(models.Model):
     artwork_id = models.AutoField(primary_key=True)
     artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
