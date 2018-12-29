@@ -134,21 +134,15 @@ def artwork_cover_list(request, artwork_id):
 
     artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
     artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
-    response = "You are looking at<BR>"
     num_covers = len(artwork_cover_list)
     if num_covers == 1:
+        # display the book detail
         return redirect('bookcovers:edition', pk=artwork_cover_list[0]['edition__pk'])
 
-    #for cover in artwork_cover_list:
-    #    response += f"editon {cover['edition__pk']}, {cover['artwork__artist__cover_filepath']}/{cover['cover_filename']} <BR>"
-    #return HttpResponse(response)
-
+    # display thumbnails of all covers for this artwork
     template_name = 'bookcovers/book_cover_list.html'
     context = {'cover_list': artwork_cover_list}
     return render(request, template_name, context)
-
-class ArtworkCoverList(RedirectView):
-    url = f"/bookcovers/edition/107"
 
 class AuthorList(SubjectList):
     template_name = 'bookcovers/author_list.html'
