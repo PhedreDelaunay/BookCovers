@@ -195,6 +195,25 @@ class Covers(models.Model):
     class Meta:
         db_table = 'covers'
 
+class PrintRuns(models.Model):
+    print_run_id = models.IntegerField()
+    order = models.IntegerField()
+    #edition_id = models.IntegerField(blank=True, null=True)
+    edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True,
+                                   related_name='thePrintRun', related_query_name="thePrintRun")
+    #cover_id = models.IntegerField(blank=True, null=True)
+    # one cover can be used by multiple print runs
+    cover = models.ForeignKey(Covers, models.DO_NOTHING, blank=True, null=True,
+                                related_name="thePrintRuns", related_query_name="thePrintRun")
+    print = models.CharField(max_length=255, blank=True, null=True)
+    cover_price = models.CharField(max_length=255, blank=True, null=True)
+    num_pages = models.IntegerField(blank=True, null=True)
+    print_year = models.CharField(max_length=255, blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        db_table = 'print_runs'
+        unique_together = (('print_run_id', 'order'),)
 
 class Currencies(models.Model):
     currency_id = models.AutoField(primary_key=True)
