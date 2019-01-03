@@ -107,10 +107,11 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
     :return:
     """
     template_name = 'bookcovers/artist_book_covers.html'
-    page = request.GET.get('page')
-    print(f"artist_book_covers: page is '{page}'")
+    subject = 'artist'
+    artist_page = request.GET.get(subject)
+    print(f"artist_book_covers: artist_page is '{artist_page}'")
 
-    pager = SubjectPager(page, subject_id=artist_id, name=name, slug=slug)
+    pager = SubjectPager(artist_page, subject_id=artist_id, name=name, slug=slug)
     artist_pager = pager.pager(cover_query=CoverQuerys.artist_list,
                                subject_id_key="artist_id",
                                subject_model=Artists)
@@ -118,7 +119,7 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
 
     cover_list = CoverQuerys.artist_cover_list(artist=artist)
     print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist, 'cover_list': cover_list, 'subject_pager': artist_pager}
+    context = {'artist': artist, 'cover_list': cover_list, 'subject_pager': artist_pager, 'subject': subject}
     return render(request, template_name, context)
 
 def books_per_artwork(request, artwork_id):
@@ -146,13 +147,10 @@ def books_per_artwork(request, artwork_id):
     if num_covers == 1:
          # display the book detail
          edition = get_object_or_404(Editions, edition_id=artwork_cover_list[0]['edition__pk'])
-    #     # is redirection a good idea? with pagers it is quite confusing
-    #     # should we make template handle it instead
-    #     # yes i think so, 1 template for book detail which can show multiples
+    #     # maybe can have 1 template for book detail which can show multiples
     #     # rather than 3 templates with BookPager; books_per_artwork, covers_per_book, book_cover_detail
     #     # remember that when multiple covers we go down yet another level with cover pager as well
     #     # get subject pager working first to understand
-    #     return redirect('bookcovers:edition', edition_id=artwork_cover_list[0]['edition__pk'])
     else:
         edition = None
 
@@ -175,15 +173,16 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     :return:
     """
     template_name = 'bookcovers/author_book_covers.html'
-    page = request.GET.get('page')
-    print(f"author_book_covers: page is '{page}'")
+    subject = 'author'
+    author_page = request.GET.get(subject)
+    print(f"author_book_covers: author_page is '{author_page}'")
 
-    pager = SubjectPager(page, subject_id=author_id, name=name, slug=slug)
+    pager = SubjectPager(author_page, subject_id=author_id, name=name, slug=slug)
     author_pager = pager.pager(cover_query=CoverQuerys.author_list, subject_id_key="author_id", subject_model=Authors)
     author = pager.get_entry()
 
     cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-    context = {'author': author, 'cover_list': cover_list, 'subject_pager': author_pager}
+    context = {'author': author, 'cover_list': cover_list, 'subject_pager': author_pager, 'subject': subject}
     return render(request, template_name, context)
 
 def book_cover_list(request, book_id):
