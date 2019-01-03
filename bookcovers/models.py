@@ -169,7 +169,7 @@ class Editions(models.Model):
     designer = models.CharField(max_length=64, blank=True, null=True)
 
     def __str__(self):
-        return self.books.title + "," + str(self.print_year)
+        return self.book.title + "," + str(self.print_year)
 
     class Meta:
         db_table = 'editions'
@@ -182,8 +182,8 @@ class Covers(models.Model):
     artwork = models.ForeignKey(Artworks, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theCovers", related_query_name="theCover")
     #edition_id = models.IntegerField(unique=True, blank=True, null=True)
-    edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True)
-
+    edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True,
+                                   related_name='theCover', related_query_name="theCover")
     flags = models.IntegerField(blank=True, null=True)
     cover_filename = models.CharField(max_length=50, blank=True, null=True)
     private_notes = models.CharField(max_length=255, blank=True, null=True)

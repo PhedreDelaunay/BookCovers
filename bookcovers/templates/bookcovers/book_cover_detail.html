@@ -1,6 +1,18 @@
-{% extends "bookcovers/base.html" %}
+{% load static %}
 
-{% block content %}
-    <h2>{{ object.book.title }}</h2>
 
-{% endblock %}
+<h2>{{ edition.book.title }}</h2>
+<table><tr><td>
+<IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:edition.theCover.cover_filename %}"
+    alt="{{ edition.book.title }}"
+    title="{{ edition.book.title }}">
+</td><td>
+    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_books' edition.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
+    <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level }}<BR/>
+    <B>Evidence: </B>{{ edition.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
+    <B>author: </B><a href="{% url 'bookcovers:author_books' edition.book.author.author_id %}" title="Select for all books for this author">{{ edition.book.author.name }}</a><BR/>
+    <B>title: </B><a href="{% url 'bookcovers:book_covers' edition.book.book_id %}" title="Select for all covers for this book">{{ edition.book.title}}</a><BR/>
+    Copyright: {{ edition.book.copyright_year }}<BR/>
+    This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID=7','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ edition.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
+</td></tr>
+</table>

@@ -19,25 +19,26 @@ urlpatterns = [
     # ex: /bookcovers/authors/
     path('authors/', AuthorList.as_view(), name='authors'),
     # ex: /bookcovers/author/4/
-    path('author/<int:author_id>/', views.author_books, name='author_books'),
+    path('author/<int:author_id>/', views.author_book_covers, name='author_books'),
     # ex: /bookcovers/author/Robert-Heinlein/
-    path('author/<slug:slug>/', views.author_books, name='author_books'),
+    path('author/<slug:slug>/', views.author_book_covers, name='author_books'),
     # ex: /bookcovers/artist/Robert%20Heinelein/
-    path('author/<name>/', views.author_books, name='author_books'),
+    path('author/<name>/', views.author_book_covers, name='author_books'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
-    path('artist/<int:artist_id>/', views.artist_books, name='artist_books'),
+    path('artist/<int:artist_id>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/artist/Jim-Burns/
-    path('artist/<slug:slug>/', views.artist_books, name='artist_books'),
+    path('artist/<slug:slug>/',  views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/artist/Jim%20Burns/
-    path('artist/<name>/', views.artist_books, name='artist_books'),
+    path('artist/<name>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/book/467/
     path('book/<int:book_id>/', views.book_cover_list, name='book_covers'),
     # ex: /bookcovers/artwork/12/
-    path('artwork/<int:artwork_id>/', views.artwork_cover_list, name='artwork'),
+    path('artwork/<int:artwork_id>/', views.books_per_artwork, name='artwork'),
     # ex: /bookcovers/edition/6
-    path('edition/<pk>/', BookCoverDetail.as_view(), name="edition"),
+    #path('edition/<pk>/', BookCoverDetail.as_view(), name="edition"),
+    path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/

@@ -38,7 +38,6 @@ class CoverQuerys:
     @staticmethod
     def artist_cover_list(artist):
         """
-
         :param artist:
         :return:
         """
@@ -83,11 +82,9 @@ class CoverQuerys:
         # If you only pass in a single field, you can also pass in the flat parameter.
         # If True, this will mean the returned results are single values, rather than one-tuples.
 
-        # djabbic_v2
         # covers -> editions is one-to-one
-        # can one-to-one field in model have related name and related query name?
         inner_queryset = Editions.objects \
-            .filter(covers__flags__lt=256) \
+            .filter(theCover__flags__lt=256) \
             .values_list('edition_id', flat=True)
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
         # flat=True returns a list of single items for a single field
@@ -204,6 +201,9 @@ class CoverQuerys:
             .filter(edition__in=inner_queryset) \
             .values('artwork__artist__cover_filepath',
                     'cover_filename',
+                    'book__title',
+                    'book__author__name',       # needed for unknown artists
+                    'edition__pk',
                     'edition__country',
                     'edition__country__display_order',
                     'edition__print_year') \

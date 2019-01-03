@@ -1,0 +1,17 @@
+<div class="pagination">
+    <span class="step-links">
+        {% if subject_pager.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ subject_pager.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            {% block pager_title %}{% endblock %} {{ subject_pager.number }} of {{ subject_pager.paginator.num_pages }}.
+        </span>
+
+        {% if subject_pager.has_next %}
+            <a href="?page={{ subject_pager.next_page_number }}">next</a>
+            <a href="?page={{ subject_pager.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
