@@ -11,7 +11,34 @@ def transform_slug(slug):
 
     return slug
 
-class SubjectPager():
+class MenuPager():
+
+    def __init__(self):
+        self.query_page = "page"
+        # Show 1 cover work per page
+        self.per_page = 1
+
+    @property
+    def query_page(self):
+        return self._query_page
+
+    @query_page.setter
+    def query_page(self,value):
+        self._query_page = value
+
+    @property
+    def subject_title(self):
+        return self._subject_title
+
+    @subject_title.setter
+    def subject_title(self,value):
+        self._subject_title = value
+
+    def meta_page(self):
+        meta ={'query_page': self.query_page, 'subject_title': self.subject_title}
+        return meta
+
+class SubjectPager(MenuPager):
     """
     Pager for top level subject, ie artist, author,
     """
@@ -23,6 +50,7 @@ class SubjectPager():
         :param name:            artist or author name
         :param slug:            artist or author slug
         """
+        super(SubjectPager, self).__init__()
         self.page = page
         self.subject_id = subject_id
         self.name = name
@@ -38,8 +66,7 @@ class SubjectPager():
         # TODO can queries be cached between pages?
         subject_list = cover_query()
 
-        # Show 1 cover work per page
-        paginator = Paginator(subject_list, 1)
+        paginator = Paginator(object_list=subject_list, per_page=self.per_page)
 
         # have we got here by paging?
         if self.page:
@@ -71,7 +98,7 @@ class SubjectPager():
         return self.entry
 
 
-class BookPager():
+class BookPager(MenuPager):
     """
     Pager for second level book list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
@@ -82,6 +109,7 @@ class BookPager():
         one of
         :param subject_id:      artwork or book id
         """
+        super(MenuPager, self).__init__()
         self.page = page
         self.subject_id = subject_id
 

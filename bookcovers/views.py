@@ -112,6 +112,8 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
     print(f"artist_book_covers: artist_page is '{artist_page}'")
 
     pager = SubjectPager(artist_page, subject_id=artist_id, name=name, slug=slug)
+    pager.query_page = "artist"
+    pager.subject_title = "Artist"
     artist_pager = pager.pager(cover_query=CoverQuerys.artist_list,
                                subject_id_key="artist_id",
                                subject_model=Artists)
@@ -119,7 +121,7 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
 
     cover_list = CoverQuerys.artist_cover_list(artist=artist)
     print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist, 'cover_list': cover_list, 'subject_pager': artist_pager, 'subject': subject}
+    context = {'artist': artist, 'cover_list': cover_list, 'subject_pager': artist_pager, 'meta_page':  pager.meta_page()}
     return render(request, template_name, context)
 
 def books_per_artwork(request, artwork_id):
@@ -173,16 +175,18 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     :return:
     """
     template_name = 'bookcovers/author_book_covers.html'
-    subject = 'author'
+    subject = "author"
     author_page = request.GET.get(subject)
     print(f"author_book_covers: author_page is '{author_page}'")
 
     pager = SubjectPager(author_page, subject_id=author_id, name=name, slug=slug)
+    pager.query_page = subject
+    pager.subject_title = "Author"
     author_pager = pager.pager(cover_query=CoverQuerys.author_list, subject_id_key="author_id", subject_model=Authors)
     author = pager.get_entry()
 
     cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-    context = {'author': author, 'cover_list': cover_list, 'subject_pager': author_pager, 'subject': subject}
+    context = {'author': author, 'cover_list': cover_list, 'subject_pager': author_pager,  'meta_page':  pager.meta_page()}
     return render(request, template_name, context)
 
 def book_cover_list(request, book_id):
