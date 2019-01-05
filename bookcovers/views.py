@@ -20,6 +20,7 @@ from bookcovers.cover_querys import CoverQuerys
 from bookcovers.original_raw_querys import OriginalRawQuerys
 
 from bookcovers.pagers import SubjectPager
+from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import BookPager
 
 import math
@@ -95,7 +96,6 @@ class AuthorList(SubjectList):
         queryset = CoverQuerys.author_list()
         return queryset
 
-
 def artist_book_covers(request, artist_id=None, name=None, slug=None):
     """
     displays thumbnails of books with covers by this artist
@@ -107,21 +107,17 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
     :return:
     """
     template_name = 'bookcovers/artist_book_covers.html'
-    subject = 'artist'
-    artist_page = request.GET.get(subject)
-    print(f"artist_book_covers: artist_page is '{artist_page}'")
 
-    pager = SubjectPager(artist_page, subject_id=artist_id, name=name, slug=slug)
-    pager.query_page = "artist"
-    pager.subject_title = "Artist"
-    artist_pager = pager.pager(cover_query=CoverQuerys.artist_list,
-                               subject_id_key="artist_id",
-                               subject_model=Artists)
-    artist = pager.get_entry()
+    artist_pager = ArtistPager(request,  artist_id=artist_id, name=name, slug=slug)
+    artist = artist_pager.get_entry()
+
 
     cover_list = CoverQuerys.artist_cover_list(artist=artist)
     print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist, 'cover_list': cover_list, 'subject_pager': artist_pager, 'meta_page':  pager.meta_page()}
+    context = {'artist': artist,
+               'cover_list': cover_list,
+               'subject_pager': artist_pager.get_subject_pager(),
+               'meta_page':  artist_pager.meta_page()}
     return render(request, template_name, context)
 
 def books_per_artwork(request, artwork_id):
@@ -132,10 +128,16 @@ def books_per_artwork(request, artwork_id):
     :param artwork_id:
     :return:
     """
+    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+    artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
+    artist = artist_pager.get_entry()
+    if artist_pager.get_request_page():
+        # move on to the next or previous artist
+        return redirect(to='bookcovers:artist_books', permanent=False, artist_id=artist.artist_id)
+
     page = request.GET.get('page')
     print(f"artwork cover_list: page is '{page}'")
 
-    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
     query_kwargs = {'artist': artwork.artist_id}
     pager = BookPager(page=page, subject_id=artwork_id)
     book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
@@ -160,6 +162,8 @@ def books_per_artwork(request, artwork_id):
     template_name = 'bookcovers/books_per_artwork.html'
     context = {'artwork': artwork,
                'cover_list': artwork_cover_list,
+               'subject_pager': artist_pager.get_subject_pager(),
+               'meta_page': artist_pager.meta_page(),
                'book_pager': book_pager,
                'edition': edition}
     return render(request, template_name, context)

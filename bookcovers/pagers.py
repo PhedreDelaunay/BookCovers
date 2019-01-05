@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 
 from bookcovers.models import Artists
 from bookcovers.models import Artworks
+from bookcovers.cover_querys import CoverQuerys
 
 def transform_slug(slug):
     slug = slug.replace('__', '%')
@@ -91,12 +92,40 @@ class SubjectPager(MenuPager):
             self.page = int(page[0])
             print (f"SubjectPager figured out that page is {self.page}")
 
-        subject_pager = paginator.get_page(self.page)
-        return subject_pager
+        self.subject_pager = paginator.get_page(self.page)
+        return self.subject_pager
 
     def get_entry(self):
         return self.entry
 
+    def get_subject_pager(self):
+        return self.subject_pager
+
+
+class ArtistPager(SubjectPager):
+
+    def __init__(self, request, artist_id=None, name=None, slug=None):
+        """
+        :param request:
+        one of
+        :param artist_id:      artist id
+        :param name:           artist name
+        :param slug:           artist slug
+        """
+        subject = 'artist'
+        self.request_page = request.GET.get(subject)
+        print(f"ArtistPager: request_page is '{self.request_page}'")
+        super(ArtistPager, self).__init__(page=self.request_page, subject_id=artist_id, name=name, slug=slug)
+
+        self.query_page = subject
+        self.subject_title = "Artist"
+
+        self.pager(cover_query=CoverQuerys.artist_list,
+                               subject_id_key="artist_id",
+                               subject_model=Artists)
+
+    def get_request_page(self):
+        return self.request_page
 
 class BookPager(MenuPager):
     """
