@@ -127,59 +127,88 @@ class ArtistPager(SubjectPager):
     def get_request_page(self):
         return self.request_page
 
+class AuthorPager(SubjectPager):
+
+    def __init__(self, request, author_id=None, name=None, slug=None):
+        """
+        :param request:
+        one of
+        :param author_id:      author id
+        :param name:           author name
+        :param slug:           author slug
+        """
+        subject = 'author'
+        self.request_page = request.GET.get(subject)
+        print(f"AuthorPager: request_page is '{self.request_page}'")
+        super(AuthorPager, self).__init__(page=self.request_page, subject_id=author_id, name=name, slug=slug)
+
+        self.query_page = subject
+        self.subject_title = "Author"
+
+        self.pager(cover_query=CoverQuerys.artist_list,
+                               subject_id_key="author_id",
+                               subject_model=Authors)
+
+    def get_request_page(self):
+        return self.request_page
+
 class BookPager(MenuPager):
     """
     Pager for second level book list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
-    def __init__(self, page=None, subject_id=None):
+    def __init__(self, page=None, item_id=None):
         """
         :param page:            current page if set
         one of
-        :param subject_id:      artwork or book id
+        :param item_id:      artwork or book id
         """
         super(MenuPager, self).__init__()
         self.page = page
-        self.subject_id = subject_id
+        self.item_id = item_id
 
-    def pager(self, book_cover_query, query_kwargs, subject_id_key, subject_model):
+    def pager(self, book_cover_query, item_id_key, item_model, subject_id_key, subject_model):
         """
         :param book_cover_query:    query to get list of book covers to page
-        :param subject_id_key:      string key of id; artwork_id, book_id
-        :param subject_model:       model for item; Artworks, Books
+        :param item_id_key:         string key of item id; artwork_id, book_id
+        :param item_model:          model for item; Artworks, Books
+        :param subject_id_key:      string key of subject id; artist_id, subject_id
+        :param subject_model:       model for subject; Artists, Authors
         :return:
         """
         # have we got here by paging?
         if not self.page:
-            if self.subject_id:
-                kwargs = {'pk': self.subject_id}
+            if self.item_id:
+                kwargs = {'pk': self.item_id}
                 #self.entry = get_object_or_404(subject_model, **kwargs)
-                print (f"self.subject_id is '{self.subject_id}'")
+                print (f"self.item_id is '{self.item_id}'")
 
+        # item is artwork or book
+        kwargs = {item_id_key: self.item_id}
+        item = get_object_or_404(item_model, **kwargs)
+        #kwargs = {subject_id_key: item.artist.pk}
+        kwargs = {subject_id_key: item.author.pk}
+        subject = get_object_or_404(subject_model, **kwargs)
 
-        # book_cover_list = CoverQuerys.artist_cover_list(artist=artist)
-        # artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-        # book_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-        # book = get_object_or_404(Books, pk=book_id)
-        #book_cover_list = book_cover_query(**query_kwargs)
-        artwork = get_object_or_404(Artworks, artwork_id=self.subject_id)
-        artist = get_object_or_404(Artists, artist_id=artwork.artist.pk)
-        book_cover_list = book_cover_query(artist=artist)
+        #artwork = get_object_or_404(Artworks, artwork_id=self.item_id)
+        #artist = get_object_or_404(Artists, artist_id=artwork.artist.pk)
+        #artist = get_object_or_404(Artists, **kwargs)
+        book_cover_list = book_cover_query(subject)
 
         print (f"BookPager page is {self.page}")
         if self.page:
             print(f"book_cover_list[{self.page}-1] is {book_cover_list[int(self.page)-1]}")
-            kwargs = {'pk': book_cover_list[int(self.page) - 1][subject_id_key]}
-            self.entry = get_object_or_404(subject_model, **kwargs)
+            kwargs = {'pk': book_cover_list[int(self.page) - 1][item_id_key]}
+            self.entry = get_object_or_404(item_model, **kwargs)
         else:
-            self.entry = artwork
+            self.entry = item
 
         # Show 1 book title per page
         paginator = Paginator(book_cover_list, 1)
 
         if not self.page:
             # Which page is the requested entry?
-            page = [count for count, record in enumerate(book_cover_list, 1) if record[subject_id_key] == artwork.pk]
+            page = [count for count, record in enumerate(book_cover_list, 1) if record[item_id_key] == item.pk]
             self.page = int(page[0])
             print (f"BookPager figured out that page is {self.page}")
 

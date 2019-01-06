@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block menu_pagers %}
+{% include 'bookcovers/subject_pager.html' %}
+{% include 'bookcovers/book_pager.html' %}
+{% endblock %}
 {% block content %}
     <h2>{{ book.title }}</h2>
     {% for cover in cover_list %}
