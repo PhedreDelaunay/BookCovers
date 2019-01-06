@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 
 from bookcovers.models import Artists
 from bookcovers.models import Artworks
+from bookcovers.models import Authors
 from bookcovers.cover_querys import CoverQuerys
 
 def transform_slug(slug):
@@ -86,6 +87,7 @@ class SubjectPager(MenuPager):
             print (f"key {key} is '{value}'")
 
         self.entry = get_object_or_404(subject_model, **kwargs)
+        print (f"SubjectPager: pager entry is '{self.entry}'")
         if not self.page:
             # Which page is the requested entry?
             page = [count for count, record in enumerate(subject_list, 1) if record[subject_id_key] == self.entry.pk]
@@ -145,7 +147,7 @@ class AuthorPager(SubjectPager):
         self.query_page = subject
         self.subject_title = "Author"
 
-        self.pager(cover_query=CoverQuerys.artist_list,
+        self.pager(cover_query=CoverQuerys.author_list,
                                subject_id_key="author_id",
                                subject_model=Authors)
 
@@ -186,8 +188,11 @@ class BookPager(MenuPager):
         # item is artwork or book
         kwargs = {item_id_key: self.item_id}
         item = get_object_or_404(item_model, **kwargs)
-        #kwargs = {subject_id_key: item.artist.pk}
-        kwargs = {subject_id_key: item.author.pk}
+        # TODO figure out how to determine between item.artist and item.author
+        if subject_model is Artists:
+            kwargs = {subject_id_key: item.artist.pk}
+        elif subject_model is Authors:
+            kwargs = {subject_id_key: item.author.pk}
         subject = get_object_or_404(subject_model, **kwargs)
 
         #artwork = get_object_or_404(Artworks, artwork_id=self.item_id)

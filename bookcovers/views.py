@@ -19,8 +19,8 @@ from bookcovers.models import Editions
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.original_raw_querys import OriginalRawQuerys
 
-from bookcovers.pagers import SubjectPager
 from bookcovers.pagers import ArtistPager
+from bookcovers.pagers import AuthorPager
 from bookcovers.pagers import BookPager
 
 import math
@@ -37,7 +37,6 @@ class SubjectList(ListView):
     Base class for top level list (author, artist, panoramas)
     """
     num_columns=6
-    template_name = 'bookcovers/subject_list.html'
 
     # make "friendly" template context
     # https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/#making-friendly-template-contexts
@@ -103,7 +102,6 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
 
     artist_pager = ArtistPager(request,  artist_id=artist_id, name=name, slug=slug)
     artist = artist_pager.get_entry()
-
 
     cover_list = CoverQuerys.artist_cover_list(artist=artist)
     print("cover_filepath is {}".format(artist.cover_filepath))
@@ -197,18 +195,19 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     author_page = request.GET.get(subject)
     print(f"author_book_covers: author_page is '{author_page}'")
 
-    pager = SubjectPager(author_page, subject_id=author_id, name=name, slug=slug)
-    pager.query_page = subject
-    pager.subject_title = "Author"
-    author_pager = pager.pager(cover_query=CoverQuerys.author_list, subject_id_key="author_id", subject_model=Authors)
-    author = pager.get_entry()
+    author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
+    author = author_pager.get_entry()
 
     cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-    context = {'author': author, 'cover_list': cover_list, 'subject_pager': author_pager,  'meta_page':  pager.meta_page()}
+    context = {'author': author,
+               'cover_list': cover_list,
+               'subject_pager': author_pager.get_subject_pager(),
+               'meta_page':  author_pager.meta_page()}
+
     return render(request, template_name, context)
 
 # http:<host>/bookcovers/book/<book_id>
-def book_cover_list(request, book_id):
+def covers_per_book(request, book_id):
     """
     displays all the covers for the same book title
     :param request:
@@ -218,11 +217,11 @@ def book_cover_list(request, book_id):
     book = get_object_or_404(Books, pk=book_id)
 
     # author pager
-    author_pager = ArtistPager(request, artist_id=book.author_id)
+    author_pager = AuthorPager(request, author_id=book.author_id)
     author = author_pager.get_entry()
     if author_pager.get_request_page():
-        # move on to the next or previous authhor
-        return redirect(to='bookcovers:author_books', permanent=False, author_id=book.author_id)
+        # move on to the next or previous author
+        return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
 
     # book cover pager
     page = request.GET.get('page')
