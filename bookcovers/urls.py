@@ -33,7 +33,7 @@ urlpatterns = [
     # ex: /bookcovers/artist/Jim%20Burns/
     path('artist/<name>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/book/467/
-    path('book/<int:book_id>/', views.book_cover_list, name='book_covers'),
+    path('book/<int:book_id>/', views.covers_per_book, name='book_covers'),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', views.books_per_artwork, name='artwork'),
     # ex: /bookcovers/edition/6
