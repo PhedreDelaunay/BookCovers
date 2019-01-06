@@ -50,6 +50,7 @@ mostCovers = 2;
 {% block content %}
     <h2>{{ author }}</h2>
     {% comment exclude duplicates, designed for use with javascript to rotate images %}
+    <BR>Exclude duplicates<BR>
     {% for cover in cover_list %}
         {# filter out variants of the same book. These will be rotated #}
         {% ifchanged cover.book_id %}

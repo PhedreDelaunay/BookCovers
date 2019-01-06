@@ -110,6 +110,21 @@ class CoverQuerys:
 
         return author_list
 
+
+    @staticmethod
+    def books_for_author(author):
+        print("author is {}".format(author.name))
+        aka_inner_queryset = Authors.objects.filter(theAuthor_aka__author_aka_id=author.pk)
+
+        book_list = Books.objects \
+            .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(theCover__flags__lt=256)) \
+            .values('book_id','title','copyright_year') \
+            .distinct() \
+            .order_by('copyright_year')
+
+        return book_list
+
     @staticmethod
     def all_covers_of_all_books_for_author(author, all=True):
         """

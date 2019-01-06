@@ -103,6 +103,7 @@ class SubjectQueryTest(TestCase):
         raw_cover_list = original_raw_query(subject.pk, return_dict=True)
         return raw_cover_list
 
+# python manage.py test bookcovers.tests.test_queries.AuthorQueryTests --settings=djabbic.testsettings
 class AuthorQueryTests(SubjectQueryTest):
     fixtures = ['Artists.json',
                 'Artworks.json',
@@ -158,8 +159,20 @@ class AuthorQueryTests(SubjectQueryTest):
 
     def test_authors_cover_list(self):
         """
-        test list of book covers for each author in db
+        test list of all covers for each author in db
         """
+        self.validate_list_of_covers_for_subject()
+
+    def test_authors_book_list(self):
+        """
+        test list of books for each author in db
+        """
+        self.original_raw_query = OriginalRawQuerys.author_book_list
+        self.all_covers_for_subject = CoverQuerys.books_for_author
+        # keys in dictionary returned from raw sql query
+        self.expected_keys = ["book_id", "copyright_year"]
+        # keys in dictionary returned from django query
+        self.actual_keys = ["book_id", "copyright_year"]
         self.validate_list_of_covers_for_subject()
 
 
@@ -372,3 +385,23 @@ class ArtworkQueryTests(SubjectQueryTest):
         print(f"ArtworkQueryTests: book.pk is {book.pk} artwork.artist.pk is {artwork.artist.pk}")
         raw_cover_list = original_raw_query(book.pk, artwork.artist.pk, return_dict=True)
         return raw_cover_list
+
+# python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
+class AdhocQueryTests(TestCase):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'Countries.json']
+
+    def test_author_books(self):
+        author_id = 5
+        author = get_object_or_404(Authors, pk=author_id)
+        book_list = CoverQuerys.books_for_author(author)
+        print(f"number of books is {len(book_list)}")
+        print(f"book_list is {book_list}")
+
+        for book in book_list:
+            print (f"book is '{book}'")
