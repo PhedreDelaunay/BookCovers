@@ -229,7 +229,7 @@ def covers_per_book(request, book_id):
 
     query_kwargs = {'author': book.author_id, 'all': False}
     pager = BookPager(page=page, item_id=book_id)
-    book_pager = pager.pager(book_cover_query=CoverQuerys.all_covers_of_all_books_for_author,
+    book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
                              item_id_key="book_id",
                              item_model=Books,
                              subject_id_key='author_id',

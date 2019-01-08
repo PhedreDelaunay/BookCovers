@@ -99,6 +99,9 @@ class Books(models.Model):
     def __str__(self):
         return self.title
 
+    def get_creator(self):
+        return self.author
+
     class Meta:
         db_table = 'books'
 
@@ -124,6 +127,9 @@ class Artworks(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_creator(self):
+        return self.artist
 
     def get_first_cover_filename(self):
         if self.covers:

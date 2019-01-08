@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator
 
+from django.apps import apps
+
 from bookcovers.models import Artists
 from bookcovers.models import Artworks
 from bookcovers.models import Authors
@@ -188,16 +190,11 @@ class BookPager(MenuPager):
         # item is artwork or book
         kwargs = {item_id_key: self.item_id}
         item = get_object_or_404(item_model, **kwargs)
-        # TODO figure out how to determine between item.artist and item.author
-        if subject_model is Artists:
-            kwargs = {subject_id_key: item.artist.pk}
-        elif subject_model is Authors:
-            kwargs = {subject_id_key: item.author.pk}
-        subject = get_object_or_404(subject_model, **kwargs)
+        kwargs = {subject_id_key: item.get_creator().pk}
+        for key, value in kwargs.items():
+            print (f"key '{key}': '{value}'")
 
-        #artwork = get_object_or_404(Artworks, artwork_id=self.item_id)
-        #artist = get_object_or_404(Artists, artist_id=artwork.artist.pk)
-        #artist = get_object_or_404(Artists, **kwargs)
+        subject = get_object_or_404(subject_model, **kwargs)
         book_cover_list = book_cover_query(subject)
 
         print (f"BookPager page is {self.page}")
