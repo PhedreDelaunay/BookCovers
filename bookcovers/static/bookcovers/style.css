@@ -1,3 +1,13 @@
+/* we want paginators in line */
+.pagination {
+    border: 1px solid black;
+  padding-top: 5px;
+  padding-right: 7px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  display: inline-block;
+}
+/* flex and flex-column used to display artist and author lists in columns */
 .row {
     display: flex;
 }
