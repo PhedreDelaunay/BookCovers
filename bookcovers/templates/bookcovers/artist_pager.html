@@ -1,5 +1,2 @@
 {% extends "bookcovers/subject_pager.html" %}
-
-{% this template is currently not used as the above pager is now more generic.
-However eventually we will want to use buttons for the pagers
-and we will possibly want different buttons per topic %}
+{% block subject_menu %}<a href="{% url 'bookcovers:artists' %}">Artists</a>{% endblock %}

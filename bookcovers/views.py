@@ -154,7 +154,7 @@ def books_per_artwork(request, artwork_id):
         edition = None
 
     # display thumbnails of all covers for this artwork
-    template_name = 'bookcovers/books_per_artwork.html'
+    template_name = 'bookcovers/artist_books_per_artwork.html'
     context = {'artwork': artwork,
                'cover_list': artwork_cover_list,
                'subject_pager': artist_pager.get_subject_pager(),
@@ -245,7 +245,7 @@ def covers_per_book(request, book_id):
         edition = None
 
     # display thumbnails of all covers for this book
-    template_name = 'bookcovers/covers_per_book.html'
+    template_name = 'bookcovers/author_covers_per_book.html'
     #context = {'book': book, 'cover_list': book_cover_list}
     context = {'book': book,
                'cover_list': book_cover_list,

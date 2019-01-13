@@ -10,9 +10,7 @@
 
 <body>
     {% include 'bookcovers/main_menu.html' %}
-    <div id="sub_menus">
-        {% block menu_pagers %}{% endblock %}
-    </div>
+    {% block menu_pagers %}{% endblock %}
     <div id="content">
         {% block content %}{% endblock %}
     </div>
