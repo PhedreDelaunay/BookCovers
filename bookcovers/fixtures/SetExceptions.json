@@ -1,0 +1,18 @@
+[
+{
+    "model": "bookcovers.setexceptions",
+    "pk": 1,
+    "fields": {
+        "set_id": 3,
+        "cover_id": 162
+    }
+},
+{
+    "model": "bookcovers.setexceptions",
+    "pk": 2,
+    "fields": {
+        "set_id": 4,
+        "cover_id": 147
+    }
+}
+]

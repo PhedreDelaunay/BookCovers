@@ -1,0 +1,442 @@
+[
+{
+    "model": "bookcovers.series",
+    "pk": 1,
+    "fields": {
+        "name": "Dune",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 2,
+    "fields": {
+        "name": "The Book of the New Sun",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 3,
+    "fields": {
+        "name": "The Eternal Champion",
+        "synopsis": "Erekose"
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 4,
+    "fields": {
+        "name": "The Sunset Warrior",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 5,
+    "fields": {
+        "name": "SF Masterworks",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 6,
+    "fields": {
+        "name": "Corgi SF Collectors Library",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 7,
+    "fields": {
+        "name": "Worldwar",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 8,
+    "fields": {
+        "name": "Cities in Flight",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 9,
+    "fields": {
+        "name": "Perry Rhodan",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 10,
+    "fields": {
+        "name": "The Amtrak Wars",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 11,
+    "fields": {
+        "name": "The Omega Point Trilogy",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 12,
+    "fields": {
+        "name": "Lucky Starr",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 13,
+    "fields": {
+        "name": "The Snow Queen",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 14,
+    "fields": {
+        "name": "The Last Rune",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 15,
+    "fields": {
+        "name": "The Amber Chronicles",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 16,
+    "fields": {
+        "name": "Barsoom",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 17,
+    "fields": {
+        "name": "The Gap Series",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 18,
+    "fields": {
+        "name": "Seafort Saga",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 19,
+    "fields": {
+        "name": "The Serrano Legacy",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 20,
+    "fields": {
+        "name": "Company Wars",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 21,
+    "fields": {
+        "name": "In Arms",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 22,
+    "fields": {
+        "name": "The Saga Of The Exiles",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 23,
+    "fields": {
+        "name": "Fighting Fantasy",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 24,
+    "fields": {
+        "name": "Ambient",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 25,
+    "fields": {
+        "name": "Cyteen",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 26,
+    "fields": {
+        "name": "Takeshi Kovacs",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 27,
+    "fields": {
+        "name": "Blackbird Series",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 28,
+    "fields": {
+        "name": "The Rings of the Master",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 29,
+    "fields": {
+        "name": "The Vorkosigan Saga",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 30,
+    "fields": {
+        "name": "Nights Dawn Trilogy (Confederation Universe)",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 31,
+    "fields": {
+        "name": "Baroque Cycle; Quicksilver",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 32,
+    "fields": {
+        "name": "Baroque Cycle",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 33,
+    "fields": {
+        "name": "The Rampart Worlds",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 34,
+    "fields": {
+        "name": "The Magic Kingdom of Landover",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 35,
+    "fields": {
+        "name": "Ray Bradbury",
+        "synopsis": "Corgi or Panther editions"
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 36,
+    "fields": {
+        "name": "Penguin John Wyndham",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 37,
+    "fields": {
+        "name": "Foundation",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 38,
+    "fields": {
+        "name": "Star Wars: X-Wing",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 39,
+    "fields": {
+        "name": "Legends of Dune",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 40,
+    "fields": {
+        "name": "Gollancz Classic SF",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 41,
+    "fields": {
+        "name": "The Fourth Realm Trilogy",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 42,
+    "fields": {
+        "name": "The Dumarest Saga",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 43,
+    "fields": {
+        "name": "Thursday Next",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 44,
+    "fields": {
+        "name": "Nursery Crimes",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 45,
+    "fields": {
+        "name": "The Ender Saga",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 46,
+    "fields": {
+        "name": "The Shadow Series",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 47,
+    "fields": {
+        "name": "Homecoming Saga",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 48,
+    "fields": {
+        "name": "The Snow Queen",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 49,
+    "fields": {
+        "name": "The Books of Corum",
+        "synopsis": "First Trilogy: The Swords of Corum; Second Trilogy: The Chronicles of Corum"
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 50,
+    "fields": {
+        "name": "Of Man and Manta",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 51,
+    "fields": {
+        "name": "Star Wars: The New Jedi Order",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 52,
+    "fields": {
+        "name": "The Lord of the Rings",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 53,
+    "fields": {
+        "name": "Shannara",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 54,
+    "fields": {
+        "name": "Xanth",
+        "synopsis": null
+    }
+},
+{
+    "model": "bookcovers.series",
+    "pk": 55,
+    "fields": {
+        "name": "H.P. Lovecraft Omnibus",
+        "synopsis": null
+    }
+}
+]

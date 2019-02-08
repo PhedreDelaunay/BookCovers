@@ -1,0 +1,386 @@
+[
+{
+    "model": "bookcovers.sets",
+    "pk": 1,
+    "fields": {
+        "series": 2,
+        "author_id": 29,
+        "artist_id": 2,
+        "imprint_id": null,
+        "description": "BP, New Sun",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 2,
+    "fields": {
+        "series": 2,
+        "author_id": 29,
+        "artist_id": 4,
+        "imprint_id": null,
+        "description": "PAJ, New Sun",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 3,
+    "fields": {
+        "series": 35,
+        "author_id": 15,
+        "artist_id": 2,
+        "imprint_id": null,
+        "description": "BP, Corgi, Bradbury",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 4,
+    "fields": {
+        "series": 35,
+        "author_id": 15,
+        "artist_id": 35,
+        "imprint_id": null,
+        "description": "Josh Kirby, Corgi, Bradbury",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 5,
+    "fields": {
+        "series": 35,
+        "author_id": 15,
+        "artist_id": 34,
+        "imprint_id": null,
+        "description": "John Richards, Corgi, Bradbury",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 6,
+    "fields": {
+        "series": 1,
+        "author_id": 5,
+        "artist_id": 2,
+        "imprint_id": null,
+        "description": "BP, Dune",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 7,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 36,
+        "imprint_id": null,
+        "description": "john griffiths, John Wyndham",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 8,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 23,
+        "imprint_id": null,
+        "description": "Harry Willock, John Wyndham",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 9,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 26,
+        "imprint_id": null,
+        "description": "Peter Lord, John Wyndham",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 10,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 17,
+        "imprint_id": null,
+        "description": "Mark Salwowski, John Wyndham",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 11,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 24,
+        "imprint_id": null,
+        "description": "Spencer Wilson, John Wyndham",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 12,
+    "fields": {
+        "series": 37,
+        "author_id": 18,
+        "artist_id": 79,
+        "imprint_id": null,
+        "description": "Chris Foss, Foundation",
+        "panorama_id": 3
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 13,
+    "fields": {
+        "series": 37,
+        "author_id": 18,
+        "artist_id": 30,
+        "imprint_id": null,
+        "description": "Tim White, Foundation",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 14,
+    "fields": {
+        "series": 1,
+        "author_id": 5,
+        "artist_id": 28,
+        "imprint_id": 0,
+        "description": "Gerry Grace, Dune",
+        "panorama_id": 1
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 15,
+    "fields": {
+        "series": 37,
+        "author_id": 18,
+        "artist_id": 45,
+        "imprint_id": 0,
+        "description": "Fred Gambino, Foundation",
+        "panorama_id": 2
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 16,
+    "fields": {
+        "series": 19,
+        "author_id": 104,
+        "artist_id": 45,
+        "imprint_id": 0,
+        "description": "Fred Gambino, Serrano",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 17,
+    "fields": {
+        "series": 37,
+        "author_id": 18,
+        "artist_id": 13,
+        "imprint_id": 0,
+        "description": "Stephen Youll, Foundation",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 18,
+    "fields": {
+        "series": 12,
+        "author_id": 18,
+        "artist_id": 2,
+        "imprint_id": 2,
+        "description": "NEL, Lucky Starr",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 19,
+    "fields": {
+        "series": 12,
+        "author_id": 18,
+        "artist_id": 70,
+        "imprint_id": 0,
+        "description": "Danny Flynn, Lucky Starr",
+        "panorama_id": null
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 20,
+    "fields": {
+        "series": 40,
+        "author_id": 0,
+        "artist_id": 0,
+        "imprint_id": null,
+        "description": null,
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 21,
+    "fields": {
+        "series": 36,
+        "author_id": 90,
+        "artist_id": 139,
+        "imprint_id": null,
+        "description": "Brian Cronin, John Wyndham",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 22,
+    "fields": {
+        "series": 4,
+        "author_id": 93,
+        "artist_id": 2,
+        "imprint_id": null,
+        "description": "BP, The Sunset Warrior",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 23,
+    "fields": {
+        "series": 45,
+        "author_id": 34,
+        "artist_id": 17,
+        "imprint_id": 0,
+        "description": "Mark Salwowski, Ender",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 24,
+    "fields": {
+        "series": 46,
+        "author_id": 34,
+        "artist_id": 71,
+        "imprint_id": 0,
+        "description": "Bob Warner, Ender's Shadow",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 25,
+    "fields": {
+        "series": 13,
+        "author_id": 33,
+        "artist_id": 11,
+        "imprint_id": 0,
+        "description": "Mick Posen, Snow Queen",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 26,
+    "fields": {
+        "series": 19,
+        "author_id": 104,
+        "artist_id": 142,
+        "imprint_id": 0,
+        "description": "Gary Ruddell, Serrano",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 27,
+    "fields": {
+        "series": 49,
+        "author_id": 92,
+        "artist_id": 84,
+        "imprint_id": 0,
+        "description": "Paul Damon, The Chronicles of Corum",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 28,
+    "fields": {
+        "series": 50,
+        "author_id": 150,
+        "artist_id": 81,
+        "imprint_id": 0,
+        "description": "Patrick Woodroffe, Of Man and Manta",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 29,
+    "fields": {
+        "series": 35,
+        "author_id": 15,
+        "artist_id": 42,
+        "imprint_id": 0,
+        "description": "Peter Goodfellow, Panther, Bradbury",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 30,
+    "fields": {
+        "series": 18,
+        "author_id": 111,
+        "artist_id": 13,
+        "imprint_id": 0,
+        "description": "Stephen Youll, Seafort Saga",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 31,
+    "fields": {
+        "series": 14,
+        "author_id": 103,
+        "artist_id": 13,
+        "imprint_id": 0,
+        "description": "Stephen Youll, The Last Rune",
+        "panorama_id": 0
+    }
+},
+{
+    "model": "bookcovers.sets",
+    "pk": 32,
+    "fields": {
+        "series": 55,
+        "author_id": 497,
+        "artist_id": 30,
+        "imprint_id": 0,
+        "description": "Tim White, H.P. Lovecraft Omnibus",
+        "panorama_id": 0
+    }
+}
+]
