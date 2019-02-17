@@ -1,0 +1,1514 @@
+[
+{
+    "model": "bookcovers.booksseries",
+    "pk": 1,
+    "fields": {
+        "series_id": 1,
+        "book_id": 5,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 2,
+    "fields": {
+        "series_id": 1,
+        "book_id": 7,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 3,
+    "fields": {
+        "series_id": 1,
+        "book_id": 8,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 4,
+    "fields": {
+        "series_id": 1,
+        "book_id": 17,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 5,
+    "fields": {
+        "series_id": 1,
+        "book_id": 173,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 6,
+    "fields": {
+        "series_id": 2,
+        "book_id": 56,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 7,
+    "fields": {
+        "series_id": 2,
+        "book_id": 57,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 8,
+    "fields": {
+        "series_id": 2,
+        "book_id": 58,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 9,
+    "fields": {
+        "series_id": 2,
+        "book_id": 59,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 10,
+    "fields": {
+        "series_id": 3,
+        "book_id": 165,
+        "volume": null
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 11,
+    "fields": {
+        "series_id": 4,
+        "book_id": 167,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 12,
+    "fields": {
+        "series_id": 4,
+        "book_id": 396,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 13,
+    "fields": {
+        "series_id": 4,
+        "book_id": 431,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 14,
+    "fields": {
+        "series_id": 5,
+        "book_id": 60,
+        "volume": null
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 15,
+    "fields": {
+        "series_id": 5,
+        "book_id": 186,
+        "volume": null
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 16,
+    "fields": {
+        "series_id": 5,
+        "book_id": 288,
+        "volume": 54
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 17,
+    "fields": {
+        "series_id": 5,
+        "book_id": 410,
+        "volume": 25
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 18,
+    "fields": {
+        "series_id": 5,
+        "book_id": 653,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 19,
+    "fields": {
+        "series_id": 5,
+        "book_id": 660,
+        "volume": 14
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 20,
+    "fields": {
+        "series_id": 6,
+        "book_id": 190,
+        "volume": 0
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 21,
+    "fields": {
+        "series_id": 7,
+        "book_id": 274,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 22,
+    "fields": {
+        "series_id": 7,
+        "book_id": 323,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 23,
+    "fields": {
+        "series_id": 7,
+        "book_id": 324,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 24,
+    "fields": {
+        "series_id": 8,
+        "book_id": 300,
+        "volume": null
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 25,
+    "fields": {
+        "series_id": 8,
+        "book_id": 318,
+        "volume": null
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 26,
+    "fields": {
+        "series_id": 9,
+        "book_id": 74,
+        "volume": 15
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 27,
+    "fields": {
+        "series_id": 9,
+        "book_id": 283,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 28,
+    "fields": {
+        "series_id": 9,
+        "book_id": 284,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 29,
+    "fields": {
+        "series_id": 9,
+        "book_id": 285,
+        "volume": 7
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 30,
+    "fields": {
+        "series_id": 9,
+        "book_id": 286,
+        "volume": 8
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 31,
+    "fields": {
+        "series_id": 9,
+        "book_id": 340,
+        "volume": 38
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 32,
+    "fields": {
+        "series_id": 9,
+        "book_id": 345,
+        "volume": 25
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 33,
+    "fields": {
+        "series_id": 9,
+        "book_id": 346,
+        "volume": 21
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 34,
+    "fields": {
+        "series_id": 9,
+        "book_id": 371,
+        "volume": 18
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 35,
+    "fields": {
+        "series_id": 9,
+        "book_id": 372,
+        "volume": 17
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 36,
+    "fields": {
+        "series_id": 9,
+        "book_id": 878,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 37,
+    "fields": {
+        "series_id": 10,
+        "book_id": 359,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 38,
+    "fields": {
+        "series_id": 10,
+        "book_id": 411,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 39,
+    "fields": {
+        "series_id": 10,
+        "book_id": 843,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 40,
+    "fields": {
+        "series_id": 10,
+        "book_id": 844,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 41,
+    "fields": {
+        "series_id": 10,
+        "book_id": 845,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 42,
+    "fields": {
+        "series_id": 10,
+        "book_id": 846,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 43,
+    "fields": {
+        "series_id": 11,
+        "book_id": 43,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 44,
+    "fields": {
+        "series_id": 11,
+        "book_id": 419,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 45,
+    "fields": {
+        "series_id": 12,
+        "book_id": 38,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 46,
+    "fields": {
+        "series_id": 12,
+        "book_id": 146,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 47,
+    "fields": {
+        "series_id": 12,
+        "book_id": 147,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 48,
+    "fields": {
+        "series_id": 12,
+        "book_id": 148,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 49,
+    "fields": {
+        "series_id": 12,
+        "book_id": 162,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 50,
+    "fields": {
+        "series_id": 12,
+        "book_id": 794,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 51,
+    "fields": {
+        "series_id": 13,
+        "book_id": 68,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 52,
+    "fields": {
+        "series_id": 13,
+        "book_id": 176,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 53,
+    "fields": {
+        "series_id": 13,
+        "book_id": 706,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 54,
+    "fields": {
+        "series_id": 14,
+        "book_id": 188,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 55,
+    "fields": {
+        "series_id": 14,
+        "book_id": 189,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 56,
+    "fields": {
+        "series_id": 14,
+        "book_id": 665,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 57,
+    "fields": {
+        "series_id": 14,
+        "book_id": 699,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 58,
+    "fields": {
+        "series_id": 14,
+        "book_id": 747,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 59,
+    "fields": {
+        "series_id": 14,
+        "book_id": 831,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 60,
+    "fields": {
+        "series_id": 15,
+        "book_id": 403,
+        "volume": 10
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 61,
+    "fields": {
+        "series_id": 15,
+        "book_id": 404,
+        "volume": 7
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 62,
+    "fields": {
+        "series_id": 15,
+        "book_id": 405,
+        "volume": 9
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 63,
+    "fields": {
+        "series_id": 15,
+        "book_id": 427,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 64,
+    "fields": {
+        "series_id": 16,
+        "book_id": 435,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 65,
+    "fields": {
+        "series_id": 16,
+        "book_id": 436,
+        "volume": 9
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 66,
+    "fields": {
+        "series_id": 16,
+        "book_id": 437,
+        "volume": 11
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 67,
+    "fields": {
+        "series_id": 16,
+        "book_id": 438,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 68,
+    "fields": {
+        "series_id": 17,
+        "book_id": 254,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 69,
+    "fields": {
+        "series_id": 17,
+        "book_id": 277,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 70,
+    "fields": {
+        "series_id": 17,
+        "book_id": 850,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 71,
+    "fields": {
+        "series_id": 18,
+        "book_id": 211,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 72,
+    "fields": {
+        "series_id": 18,
+        "book_id": 212,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 73,
+    "fields": {
+        "series_id": 18,
+        "book_id": 213,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 74,
+    "fields": {
+        "series_id": 18,
+        "book_id": 214,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 75,
+    "fields": {
+        "series_id": 19,
+        "book_id": 216,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 76,
+    "fields": {
+        "series_id": 19,
+        "book_id": 217,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 77,
+    "fields": {
+        "series_id": 19,
+        "book_id": 218,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 78,
+    "fields": {
+        "series_id": 19,
+        "book_id": 219,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 79,
+    "fields": {
+        "series_id": 19,
+        "book_id": 908,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 80,
+    "fields": {
+        "series_id": 19,
+        "book_id": 920,
+        "volume": 7
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 81,
+    "fields": {
+        "series_id": 19,
+        "book_id": 921,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 82,
+    "fields": {
+        "series_id": 20,
+        "book_id": 278,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 83,
+    "fields": {
+        "series_id": 21,
+        "book_id": 313,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 84,
+    "fields": {
+        "series_id": 22,
+        "book_id": 330,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 85,
+    "fields": {
+        "series_id": 22,
+        "book_id": 331,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 86,
+    "fields": {
+        "series_id": 22,
+        "book_id": 332,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 87,
+    "fields": {
+        "series_id": 22,
+        "book_id": 799,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 88,
+    "fields": {
+        "series_id": 23,
+        "book_id": 356,
+        "volume": 11
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 89,
+    "fields": {
+        "series_id": 23,
+        "book_id": 357,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 90,
+    "fields": {
+        "series_id": 23,
+        "book_id": 368,
+        "volume": 13
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 91,
+    "fields": {
+        "series_id": 24,
+        "book_id": 370,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 92,
+    "fields": {
+        "series_id": 25,
+        "book_id": 407,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 93,
+    "fields": {
+        "series_id": 26,
+        "book_id": 264,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 94,
+    "fields": {
+        "series_id": 26,
+        "book_id": 833,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 95,
+    "fields": {
+        "series_id": 26,
+        "book_id": 852,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 96,
+    "fields": {
+        "series_id": 27,
+        "book_id": 851,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 97,
+    "fields": {
+        "series_id": 28,
+        "book_id": 224,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 98,
+    "fields": {
+        "series_id": 28,
+        "book_id": 855,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 99,
+    "fields": {
+        "series_id": 28,
+        "book_id": 856,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 100,
+    "fields": {
+        "series_id": 29,
+        "book_id": 864,
+        "volume": 13
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 101,
+    "fields": {
+        "series_id": 29,
+        "book_id": 865,
+        "volume": 18
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 102,
+    "fields": {
+        "series_id": 30,
+        "book_id": 443,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 103,
+    "fields": {
+        "series_id": 30,
+        "book_id": 867,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 104,
+    "fields": {
+        "series_id": 31,
+        "book_id": 869,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 105,
+    "fields": {
+        "series_id": 31,
+        "book_id": 870,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 106,
+    "fields": {
+        "series_id": 32,
+        "book_id": 841,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 107,
+    "fields": {
+        "series_id": 33,
+        "book_id": 871,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 108,
+    "fields": {
+        "series_id": 34,
+        "book_id": 872,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 109,
+    "fields": {
+        "series_id": 34,
+        "book_id": 873,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 110,
+    "fields": {
+        "series_id": 35,
+        "book_id": 29,
+        "volume": 7
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 111,
+    "fields": {
+        "series_id": 35,
+        "book_id": 30,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 112,
+    "fields": {
+        "series_id": 35,
+        "book_id": 85,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 113,
+    "fields": {
+        "series_id": 35,
+        "book_id": 86,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 114,
+    "fields": {
+        "series_id": 35,
+        "book_id": 144,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 115,
+    "fields": {
+        "series_id": 35,
+        "book_id": 149,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 116,
+    "fields": {
+        "series_id": 35,
+        "book_id": 190,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 117,
+    "fields": {
+        "series_id": 35,
+        "book_id": 915,
+        "volume": 8
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 118,
+    "fields": {
+        "series_id": 36,
+        "book_id": 157,
+        "volume": 8
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 119,
+    "fields": {
+        "series_id": 36,
+        "book_id": 158,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 120,
+    "fields": {
+        "series_id": 36,
+        "book_id": 159,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 121,
+    "fields": {
+        "series_id": 36,
+        "book_id": 160,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 122,
+    "fields": {
+        "series_id": 36,
+        "book_id": 161,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 123,
+    "fields": {
+        "series_id": 36,
+        "book_id": 179,
+        "volume": 7
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 124,
+    "fields": {
+        "series_id": 36,
+        "book_id": 180,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 125,
+    "fields": {
+        "series_id": 36,
+        "book_id": 191,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 126,
+    "fields": {
+        "series_id": 36,
+        "book_id": 446,
+        "volume": 9
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 127,
+    "fields": {
+        "series_id": 37,
+        "book_id": 199,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 128,
+    "fields": {
+        "series_id": 37,
+        "book_id": 200,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 129,
+    "fields": {
+        "series_id": 37,
+        "book_id": 201,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 130,
+    "fields": {
+        "series_id": 37,
+        "book_id": 202,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 131,
+    "fields": {
+        "series_id": 37,
+        "book_id": 327,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 132,
+    "fields": {
+        "series_id": 37,
+        "book_id": 383,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 133,
+    "fields": {
+        "series_id": 38,
+        "book_id": 890,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 134,
+    "fields": {
+        "series_id": 39,
+        "book_id": 258,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 135,
+    "fields": {
+        "series_id": 39,
+        "book_id": 718,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 136,
+    "fields": {
+        "series_id": 40,
+        "book_id": 410,
+        "volume": 14
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 137,
+    "fields": {
+        "series_id": 41,
+        "book_id": 892,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 138,
+    "fields": {
+        "series_id": 41,
+        "book_id": 925,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 139,
+    "fields": {
+        "series_id": 42,
+        "book_id": 928,
+        "volume": 15
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 140,
+    "fields": {
+        "series_id": 45,
+        "book_id": 83,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 141,
+    "fields": {
+        "series_id": 45,
+        "book_id": 184,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 142,
+    "fields": {
+        "series_id": 45,
+        "book_id": 834,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 143,
+    "fields": {
+        "series_id": 46,
+        "book_id": 365,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 144,
+    "fields": {
+        "series_id": 46,
+        "book_id": 384,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 145,
+    "fields": {
+        "series_id": 46,
+        "book_id": 386,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 146,
+    "fields": {
+        "series_id": 47,
+        "book_id": 70,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 147,
+    "fields": {
+        "series_id": 47,
+        "book_id": 424,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 148,
+    "fields": {
+        "series_id": 48,
+        "book_id": 68,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 149,
+    "fields": {
+        "series_id": 48,
+        "book_id": 176,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 150,
+    "fields": {
+        "series_id": 48,
+        "book_id": 706,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 151,
+    "fields": {
+        "series_id": 49,
+        "book_id": 409,
+        "volume": 5
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 152,
+    "fields": {
+        "series_id": 49,
+        "book_id": 416,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 153,
+    "fields": {
+        "series_id": 49,
+        "book_id": 946,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 154,
+    "fields": {
+        "series_id": 49,
+        "book_id": 947,
+        "volume": 6
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 155,
+    "fields": {
+        "series_id": 49,
+        "book_id": 953,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 156,
+    "fields": {
+        "series_id": 50,
+        "book_id": 944,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 157,
+    "fields": {
+        "series_id": 50,
+        "book_id": 945,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 158,
+    "fields": {
+        "series_id": 51,
+        "book_id": 981,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 159,
+    "fields": {
+        "series_id": 51,
+        "book_id": 982,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 160,
+    "fields": {
+        "series_id": 52,
+        "book_id": 678,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 161,
+    "fields": {
+        "series_id": 52,
+        "book_id": 679,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 162,
+    "fields": {
+        "series_id": 52,
+        "book_id": 680,
+        "volume": 3
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 163,
+    "fields": {
+        "series_id": 46,
+        "book_id": 954,
+        "volume": 4
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 164,
+    "fields": {
+        "series_id": 53,
+        "book_id": 992,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 165,
+    "fields": {
+        "series_id": 54,
+        "book_id": 993,
+        "volume": 27
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 166,
+    "fields": {
+        "series_id": 55,
+        "book_id": 1011,
+        "volume": 1
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 167,
+    "fields": {
+        "series_id": 55,
+        "book_id": 1012,
+        "volume": 2
+    }
+},
+{
+    "model": "bookcovers.booksseries",
+    "pk": 168,
+    "fields": {
+        "series_id": 55,
+        "book_id": 1013,
+        "volume": 3
+    }
+}
+]

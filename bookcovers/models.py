@@ -44,7 +44,7 @@ class ArtistAkas(models.Model):
     class Meta:
         db_table = 'artist_akas'
 
-#class AuhtorManager(models.Manager):
+#class AuthorManager(models.Manager):
 #    def get_by_natural_key(self, fullname):
 #        return self.get(fullname=fullname)
 
@@ -286,11 +286,15 @@ class SetExceptions(models.Model):
 
 class Sets(models.Model):
     set_id = models.AutoField(primary_key=True)
-    #series_id = models.IntegerField(blank=True, null=True)
     series = models.ForeignKey(Series, models.DO_NOTHING, blank=True, null=True,
-                                related_name="theSeries", related_query_name="theSeries")
-    author_id = models.IntegerField(blank=True, null=True)
-    artist_id = models.IntegerField(blank=True, null=True)
+                                related_name="theSets", related_query_name="theSet")
+    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theSets", related_query_name="theSet")
+    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theSets", related_query_name="theSet")
+    # series_id = models.IntegerField(blank=True, null=True)
+    # author_id = models.IntegerField(blank=True, null=True)
+    # artist_id = models.IntegerField(blank=True, null=True)
     imprint_id = models.IntegerField(blank=True, null=True)
     description = models.CharField(max_length=50, blank=True, null=True)
     panorama_id = models.IntegerField(blank=True, null=True)
@@ -298,3 +302,10 @@ class Sets(models.Model):
     class Meta:
         db_table = 'sets'
 
+class BooksSeries(models.Model):
+    series_id = models.IntegerField()
+    book_id = models.IntegerField()
+    volume = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'books_series'
