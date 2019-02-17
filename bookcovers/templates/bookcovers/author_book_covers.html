@@ -48,7 +48,9 @@ mostCovers = 2;
 {% include 'bookcovers/author_pager.html' %}
 {% endblock %}
 {% block content %}
-    <h2>{{ author }}</h2>
+    <h2 style="display:inline";>{{ author }}</h2>
+    {% if set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' author %}">View sets of books by artist</a>
+    {% endif %}
     {% comment exclude duplicates, designed for use with javascript to rotate images %}
     <BR>Exclude duplicates<BR>
     {% for cover in cover_list %}

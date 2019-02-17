@@ -1,5 +1,7 @@
 {% load static %}
 
+artwork: {{ edition.theCover.artwork.pk }}
+book: {{ edition.book.pk }}
 
 <h2>{{ edition.book.title }}</h2>
 <table><tr><td>
