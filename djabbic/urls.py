@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 
+# https://docs.djangoproject.com/en/2.1/ref/contrib/admin/#hooking-adminsite-to-urlconf
 urlpatterns = [
     path('bookcovers/', include('bookcovers.urls')),
     path('admin/', admin.site.urls),
