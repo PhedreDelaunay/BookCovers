@@ -212,6 +212,24 @@ class OriginalRawQuerys:
         return cover_list
 
     @staticmethod
+    def author_set_list(author_id,  return_dict=False):
+        #print (f"author_set_list: author_id={author_id}")
+        strAuthorSetList = ("SELECT sets.*, authors.name FROM sets, authors "
+                "WHERE sets.author_id = %s AND sets.author_id = authors.author_id")
+
+        #print(f"strAuthorSetList is\n{strAuthorSetList}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strAuthorSetList, [author_id])
+            if return_dict:
+                set_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                set_list = cursor.fetchall()
+            #print(f"Original author set list is\n{set_list}\n")
+
+        return set_list
+
+
+    @staticmethod
     def adhoc_query(sql_query, return_dict=False):
         """
         runs an adhoc query without parameters
@@ -239,3 +257,4 @@ class OriginalRawQuerys:
             dict(zip(columns, row))
             for row in cursor.fetchall()
         ]
+

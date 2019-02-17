@@ -112,7 +112,9 @@ class AuthorQueryTests(SubjectQueryTest):
                 'Editions.json',
                 'Covers.json',
                 'AuthorAkas.json',
-                'Countries.json']
+                'Countries.json',
+                'Sets.json',
+                'Series.json',]
 
     def setUp(self):
         self.subject_model = Authors
@@ -174,6 +176,39 @@ class AuthorQueryTests(SubjectQueryTest):
         # keys in dictionary returned from django query
         self.actual_keys = ["book_id", "copyright_year"]
         self.validate_list_of_covers_for_subject()
+
+    def test_author_sets_list(self):
+        print ("===========================================")
+        print (f"Test List of Sets for each author")
+        print ("===========================================")
+
+        subject_list = self.subject_query()
+        for subject in subject_list:
+            subject_id = subject[self.pk_name]
+            self.check_author_set_list(subject_id)
+
+        print (f"num {self.subject_name}s is {len(subject_list)}")
+
+    def check_author_set_list(self, author_id):
+        print("==============================================")
+        print(f"Test Sets for author {author_id}")
+        print("==============================================")
+
+        # return set list as dictionary
+        raw_set_list = OriginalRawQuerys.author_set_list(author_id, return_dict=True)
+        expected_num_sets = len(raw_set_list)
+
+        author_set_list = CoverQuerys.author_set_list(author_id)
+        actual_num_sets = len(author_set_list)
+
+        self.assertEqual(expected_num_sets, actual_num_sets)
+
+        if expected_num_sets > 0:
+            expected_keys = ["set_id", "series_id", "author_id", "imprint_id", "description", "panorama_id"]
+
+            #  for each set: check expected data matches actual data
+            for raw_set, set in zip(raw_set_list, author_set_list):
+                self.record_matches(raw_set, expected_keys, set, expected_keys)
 
 
 class ArtistQueryTests(SubjectQueryTest):
@@ -279,7 +314,6 @@ class BookQueryTests(SubjectQueryTest):
                 print (f"Actual: {actual}")
                 print ("================================================================================")
                 raise
-
 
     def test_books_cover_list(self):
         """
@@ -394,10 +428,33 @@ class AdhocQueryTests(TestCase):
                 'Books.json',
                 'Editions.json',
                 'Covers.json',
-                'Countries.json']
+                'Countries.json',
+                'Sets.json',
+                'Series.json',]
+
+    def test_author_set_list(self):
+        author_id = 15
+        print ("==============================================")
+        print (f"Test Sets for author {author_id}")
+        print ("==============================================")
+        set_query=f"SELECT sets.*, authors.name FROM sets, authors " \
+                  f"WHERE sets.author_id = {author_id} AND sets.author_id = authors.author_id"
+
+        # return set list as dictionary
+        original_set_list = OriginalRawQuerys.adhoc_query(set_query, True)
+        print(f"number of sets is {len(original_set_list)}")
+        print(f"original_set_list is {original_set_list}")
+
+        author_set_list = CoverQuerys.author_set_list(author_id)
+        print(f"number of sets is {len(author_set_list)}")
+        print(f"author_set_list is {author_set_list}")
+
 
     def test_author_books(self):
         author_id = 5
+        print ("==============================================")
+        print (f"Test List of Books for author {author_id}")
+        print ("==============================================")
         author = get_object_or_404(Authors, pk=author_id)
         book_list = CoverQuerys.books_for_author(author)
         print(f"number of books is {len(book_list)}")

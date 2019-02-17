@@ -12,6 +12,7 @@ from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
 from bookcovers.models import Countries
+from bookcovers.models import Sets
 
 import math
 
@@ -46,10 +47,55 @@ class CoverQuerys:
         # print (aka_inner_queryset.query)
         # print (aka_inner_queryset)
 
+        # up to here -
+        # tried setting a high bit field on these covers in fixtures to see if it helps
+        # have edited fixtures to set to 1028
+        # the problem is that the artwork_id ends up in the exclusion list and so is excluded
+        #         cover_list = Artworks.objects. \
+        #             filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
+        #             filter(theCover__flags__lt=256). \
+        #             filter(theCover__book=F('book')). \
+        #             exclude(theCover__flags=F('theCover__flags').bitor(4)). \
+        #             values('theCover__cover_id',
+        #                    'theCover__edition',
+        #                    'theCover__flags',
+        #                    'theCover__flags',
+        #                    'book',
+        #                    'artwork_id',
+        #                    'book__author__name',
+        #                    'book__title',
+        #                    'theCover__cover_filename',
+        #                    'year') \
+        #             .order_by('year', 'artwork_id') \
+        #             .distinct()
+
+        # edition_id not null in fixtures because model set to one-to-one
+        # problem is exacerbated by 2 cover records with edition=NULL
+        # 646/632 TheChrysalids, 640/460 Neuromancer7
+        # these are minor variants of the cover not the artwork
+        # functionality is that both covers are shown in artist list but not title list
+        # can't see any difference in TheChrysalids,
+        # Neuromancer is slight difference in colours which is interesting but not important
+        # how do we want to handle this
+
+        # currently have cover->edition one-to-one
+        # multiple editions will use same cover - how is this currently handled from a data point of view?
+        # print runs I think
+        #
+        # Have abandoned the attempt.  Either keep using isvariant or replace 4 with 1024
+
+
+    # this is the working filter without the bitflags
+    #    filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
+    #    filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
+
         cover_list = Artworks.objects. \
             filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
             filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
             values('theCover__cover_id',
+                   'theCover__edition',
+                   'theCover__flags',
+                   'theCover__flags',
                    'book',
                    'artwork_id',
                    'book__author__name',
@@ -263,6 +309,14 @@ class CoverQuerys:
         print (f"book_list.query is {book_list.query}")
 
         return book_list
+
+
+    @staticmethod
+    def author_set_list(author):
+        # use .values to return ValuesQuerySet which looks like list of dictionaries
+        set_list = Sets.objects.filter(author_id=author).values()
+        return set_list
+
 
 
 

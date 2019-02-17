@@ -1,0 +1,106 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+
+{% block content_script %}
+<script LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+{% for cover in cover_list %}
+coverIndex[{{ forloop.counter0 }}]
+         {% ifchanged cover.book_id %}
+         {% endifchanged %}
+{% endfor %}
+coverIndex[0] = 0;
+maxcovers[0] = 1;
+coverImg[0] = new Array ("");
+coverImg[0][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/TheManInTheHighCastle.jpg";
+coverIndex[1] = 0;
+maxcovers[1] = 2;
+coverImg[1] = new Array ("");
+coverImg[1][0] = "http://www.djabbic.co.uk/BookCovers/Images/BrucePennington/Thumbnails/Stigmata_Dune_FullCover.jpg";
+coverImg[1][1] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/TheThreeStigmataOfPalmerEldritch.jpg";
+coverIndex[2] = 0;
+maxcovers[2] = 1;
+coverImg[2] = new Array ("");
+coverImg[2][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/ClansOfTheAlphaneMoon.jpg";
+coverIndex[3] = 0;
+maxcovers[3] = 1;
+coverImg[3] = new Array ("");
+coverImg[3][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/DoAndroidsDreamOfElectricSheep.jpg";
+coverIndex[4] = 0;
+maxcovers[4] = 1;
+coverImg[4] = new Array ("");
+coverImg[4][0] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/OurFriendsFromFrolix8.jpg";
+coverIndex[5] = 0;
+maxcovers[5] = 2;
+coverImg[5] = new Array ("");
+coverImg[5][0] = "http://www.djabbic.co.uk/BookCovers/Images/RichardCliftonDey/Thumbnails/FlowMyTearsThePolicemanSaid.jpg";
+coverImg[5][1] = "http://www.djabbic.co.uk/BookCovers/Images/ChrisMoore/Thumbnails/FlowMyTearsThePolicemanSaid.jpg";
+numBooks = 6;
+numRotateBooks = 2;
+mostCovers = 2;
+	//-->
+	</script>
+
+{% endblock %}
+
+{% block menu_pagers %}
+{% include 'bookcovers/author_pager.html' %}
+{% endblock %}
+{% block content %}
+    <h2 style="display:inline";>{{ author }}</h2>
+    {% if set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' author %}">View sets of books by artist</a>
+    {% endif %}
+    {% comment exclude duplicates, designed for use with javascript to rotate images %}
+    <BR>Exclude duplicates<BR>
+    {% for cover in cover_list %}
+        {# filter out variants of the same book. These will be rotated #}
+        {% ifchanged cover.book_id %}
+            {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
+                {% with wauthor=author|cut:" " %}
+                    <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+                        <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.theCover__cover_filename %}"
+                             alt="{{ cover.title }}"
+                             title="{{ cover.title }}">
+                    </a>
+                {% endwith %}
+            {% else %}
+                <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+                    <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
+                         alt="{{ cover.title }}"
+                         title="{{ cover.title }}">
+                </a>
+            {% endif %}
+         {% endifchanged %}
+    {% endfor %}
+    {% endcomment %}
+    <BR>Include duplicates<BR>
+    {% comment "test for unknown artist" %}
+    {% for cover in cover_list %}
+        {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
+            {% with wauthor=author|cut:" " %}
+            <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+                <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:wauthor|add:'/Thumbnails/'|add:cover.theCover__cover_filename %}"
+                    alt="{{ cover.title }}"
+                    title="{{ cover.title }}">
+                 </a>
+            {% endwith %}
+         {% else %}
+            <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+                <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
+                     alt="{{ cover.title }}"
+                     title="{{ cover.title }}">
+             </a>
+         {% endif %}
+    {% endfor %}
+    {% endcomment %}
+    {% for cover in cover_list %}
+        <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+            <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
+                 alt="{{ cover.title }}"
+                 title="{{ cover.title }}">
+        </a>
+    {% endfor %}
+
+
+{% endblock %}
