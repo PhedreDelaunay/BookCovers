@@ -204,7 +204,7 @@ class AuthorQueryTests(SubjectQueryTest):
         self.assertEqual(expected_num_sets, actual_num_sets)
 
         if expected_num_sets > 0:
-            expected_keys = ["set_id", "series_id", "author_id", "imprint_id", "description", "panorama_id"]
+            expected_keys = ["set_id", "series_id", "author_id", "artist_id", "imprint_id", "description", "panorama_id"]
 
             #  for each set: check expected data matches actual data
             for raw_set, set in zip(raw_set_list, author_set_list):
