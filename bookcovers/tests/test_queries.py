@@ -430,7 +430,33 @@ class AdhocQueryTests(TestCase):
                 'Covers.json',
                 'Countries.json',
                 'Sets.json',
-                'Series.json',]
+                'Series.json',
+                'BooksSeries.json',
+                'SetExceptions.json',]
+
+    def test_author_artist_covers_list(self):
+        author_id = 15
+        artist_id = 2
+        print ("==============================================")
+        print (f"Test Set Covers for author {author_id} and artist {artist_id}")
+        print ("==============================================")
+
+        covers_query = f"SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id " \
+                        f"FROM artists, covers as BC, series as BS, books_series as BSL, " \
+                        f"sets, artworks as AW " \
+                        f"WHERE (sets.author_id = {author_id})" \
+                        f"AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id " \
+                        f"AND BC.flags < 256 AND BC.book_id = BSL.book_id AND AW.artist_id = {artist_id} " \
+                        f"AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id " \
+                        f"AND BC.artwork_id = AW.artwork_id " \
+                        f"AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) " \
+                        f"GROUP BY AW.artwork_id " \
+                        f"ORDER BY BSL.volume;"
+
+        # return cover list as dictionary
+        original_cover_list = OriginalRawQuerys.adhoc_query(covers_query, return_dict=True)
+        print(f"number of covers is {len(original_cover_list)}")
+        print(f"original_cover_list is {original_cover_list}")
 
     def test_author_set_list(self):
         author_id = 15
@@ -441,7 +467,7 @@ class AdhocQueryTests(TestCase):
                   f"WHERE sets.author_id = {author_id} AND sets.author_id = authors.author_id"
 
         # return set list as dictionary
-        original_set_list = OriginalRawQuerys.adhoc_query(set_query, True)
+        original_set_list = OriginalRawQuerys.adhoc_query(set_query, return_dict=True)
         print(f"number of sets is {len(original_set_list)}")
         print(f"original_set_list is {original_set_list}")
 
