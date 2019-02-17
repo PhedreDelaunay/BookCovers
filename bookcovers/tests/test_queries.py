@@ -454,7 +454,7 @@ class AdhocQueryTests(TestCase):
                         f"ORDER BY BSL.volume;"
 
         # return cover list as dictionary
-        original_cover_list = OriginalRawQuerys.adhoc_query(covers_query, return_dict=True)
+        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
         print(f"number of covers is {len(original_cover_list)}")
         print(f"original_cover_list is {original_cover_list}")
 
