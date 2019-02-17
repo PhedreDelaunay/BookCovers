@@ -65,6 +65,8 @@ class Authors(models.Model):
 
     class Meta:
         db_table = 'authors'
+        # sort alphabetically in admin
+        ordering = ('name',)
 
 class AuthorAkas(models.Model):
     # pk=id is implied
@@ -168,7 +170,7 @@ class Editions(models.Model):
     country = models.ForeignKey(Countries, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theEditions", related_query_name="theEdition")
     purchase_year = models.IntegerField(blank=True, null=True)
-    purchase_price = models.FloatField(blank=True, null=True)
+    purchase_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3)
     currency_id = models.IntegerField(blank=True, null=True)
     flags = models.IntegerField(blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
@@ -181,6 +183,17 @@ class Editions(models.Model):
         db_table = 'editions'
 
 class Covers(models.Model):
+    '''
+    flags
+    1 = Full Cover (displayed by front cover on edition page)
+    2 = Author Thumbnail (used in author rotation to even out space)
+    4 = variant cover for artwork
+    64 = attributed to
+    128 = not my cover
+    >=256 = don't display
+    512 = purchased
+    1024 = index ?unused
+    '''
     cover_id = models.AutoField(primary_key=True)
     book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
                              related_name="theCovers", related_query_name="theCover")
@@ -254,4 +267,34 @@ class Genres(models.Model):
     class Meta:
         db_table = 'genres'
 
+class Series(models.Model):
+    series_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    synopsis = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'series'
+
+
+class SetExceptions(models.Model):
+    set_id = models.IntegerField()
+    cover_id = models.IntegerField()
+
+    class Meta:
+        db_table = 'set_exceptions'
+
+
+class Sets(models.Model):
+    set_id = models.AutoField(primary_key=True)
+    #series_id = models.IntegerField(blank=True, null=True)
+    series = models.ForeignKey(Series, models.DO_NOTHING, blank=True, null=True,
+                                related_name="theSeries", related_query_name="theSeries")
+    author_id = models.IntegerField(blank=True, null=True)
+    artist_id = models.IntegerField(blank=True, null=True)
+    imprint_id = models.IntegerField(blank=True, null=True)
+    description = models.CharField(max_length=50, blank=True, null=True)
+    panorama_id = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'sets'
 
