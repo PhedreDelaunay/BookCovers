@@ -102,8 +102,13 @@ class SubjectPager(MenuPager):
     def get_entry(self):
         return self.entry
 
-    def get_subject_pager(self):
-        return self.subject_pager
+    @property
+    def subject_pager(self):
+        return self._subject_pager
+
+    @subject_pager.setter
+    def subject_pager(self, value):
+        self._subject_pager = value
 
 
 class ArtistPager(SubjectPager):

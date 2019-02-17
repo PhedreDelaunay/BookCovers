@@ -15,6 +15,7 @@ from bookcovers.models import Artworks
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Editions
+from bookcovers.models import Sets
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.original_raw_querys import OriginalRawQuerys
@@ -57,7 +58,7 @@ class SubjectList(ListView):
         return self._title
 
     @title.setter
-    def title(self,value):
+    def title(self, value):
         self._title = value
 
     def get_num_rows(self, queryset, num_columns):
@@ -107,26 +108,40 @@ def artist_book_covers(request, artist_id=None, name=None, slug=None):
     print("cover_filepath is {}".format(artist.cover_filepath))
     context = {'artist': artist,
                'cover_list': cover_list,
-               'subject_pager': artist_pager.get_subject_pager(),
-               'meta_page':  artist_pager.meta_page()}
+               'the_pager': artist_pager,}
     return render(request, template_name, context)
 
-# http:<host>/bookcovers/artist/<artwork_id>
+def _artist_pager(request, artwork_id):
+    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+
+    # artist pager
+    artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
+    if artist_pager.get_request_page():
+        # move on to the next or previous artist
+        artist = artist_pager.get_entry()
+        return redirect(to='bookcovers:artist_books', permanent=False, artist_id=artist.artist_id)
+    else:
+        return artist_pager
+
+# http:<host>/bookcovers/artwork/<artwork_id>
 def books_per_artwork(request, artwork_id):
     """
     displays all book covers using the same artwork, eg 'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
     or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
     :param request:
-    :param artwork_id:  ex: /bookcovers/artwork_id/178/
+    :param artwork_id:  ex: /bookcovers/artwork/178/
     :return:
     """
+    # up to here - trying to figure out how to turn this into function for re-use
+    #artist_pager = _artist_pager(request, artwork_id)
+
     artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
 
     # artist pager
     artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
-    artist = artist_pager.get_entry()
     if artist_pager.get_request_page():
         # move on to the next or previous artist
+        artist = artist_pager.get_entry()
         return redirect(to='bookcovers:artist_books', permanent=False, artist_id=artist.artist_id)
 
     # book cover pager
@@ -157,8 +172,7 @@ def books_per_artwork(request, artwork_id):
     template_name = 'bookcovers/artist_books_per_artwork.html'
     context = {'artwork': artwork,
                'cover_list': artwork_cover_list,
-               'subject_pager': artist_pager.get_subject_pager(),
-               'meta_page': artist_pager.meta_page(),
+               'the_pager': artist_pager,
                'book_pager': book_pager,
                'edition': edition}
     return render(request, template_name, context)
@@ -186,25 +200,53 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     :param request:
     one of
     :param author_id:   ex: /bookcovers/author/4/
-    :param name:        ex: /bookcovers/artist/Robert%20Heinelein/
+    :param name:        ex: /bookcovers/author/Robert%20Heinlein/
     :param slug:        ex: /bookcovers/author/Robert-Heinlein/
     :return:
     """
     template_name = 'bookcovers/author_book_covers.html'
     subject = "author"
     author_page = request.GET.get(subject)
-    print(f"author_book_covers: author_page is '{author_page}'")
+    #print(f"author_book_covers: author_page is '{author_page}'")
 
     author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
     author = author_pager.get_entry()
+    print (f"author is {author}")
+
+    set_list = CoverQuerys.author_set_list(author=author.pk)
 
     cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
     context = {'author': author,
                'cover_list': cover_list,
-               'subject_pager': author_pager.get_subject_pager(),
-               'meta_page':  author_pager.meta_page()}
+               'set_list': set_list,
+               'the_pager': author_pager,}
 
     return render(request, template_name, context)
+
+def author_book_sets(request, author_id=None, name=None, slug=None):
+    """
+    displays thumbnails of books by this author ordered in sets by artist
+    :param request:
+    one of
+    :param author_id:   ex: /bookcovers/author/15/sets
+    :param name:        ex: /bookcovers/author/Ray%20Bradbury/sets
+    :param slug:        ex: /bookcovers/author/Ray-Bradbury/sets
+    :return:
+    """
+    template_name = 'bookcovers/author_book_sets.html'
+    subject = "author"
+    author_page = request.GET.get(subject)
+    author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
+    author = author_pager.get_entry()
+
+    set_list = CoverQuerys.author_set_list(author=15)
+
+    context = {'author': author,
+               'set_list': set_list,
+               'the_pager': author_pager,}
+
+    return render(request, template_name, context)
+    #return HttpResponse("Book Sets: You're looking at sets for %s." % name)
 
 # http:<host>/bookcovers/book/<book_id>
 def covers_per_book(request, book_id):
@@ -218,9 +260,9 @@ def covers_per_book(request, book_id):
 
     # author pager
     author_pager = AuthorPager(request, author_id=book.author_id)
-    author = author_pager.get_entry()
     if author_pager.get_request_page():
         # move on to the next or previous author
+        author = author_pager.get_entry()
         return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
 
     # book cover pager
@@ -249,12 +291,17 @@ def covers_per_book(request, book_id):
     #context = {'book': book, 'cover_list': book_cover_list}
     context = {'book': book,
                'cover_list': book_cover_list,
-               'subject_pager': author_pager.get_subject_pager(),
-               'meta_page': author_pager.meta_page(),
+               'the_pager': author_pager,
                'book_pager': book_pager,
                'edition': edition}
     return render(request, template_name, context)
     # return HttpResponse("Book Title: You're looking at book %s." % book.title)
+
+def artwork_book_cover_detail(request, edition_id):
+    return book_cover_detail(request, edition_id)
+
+def book_book_cover_detail(request, edition_id):
+    return book_cover_detail(request, edition_id)
 
 def book_cover_detail(request, edition_id):
     # to consider: use this view for when go to edition without paging
