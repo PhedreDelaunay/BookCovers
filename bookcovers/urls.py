@@ -24,6 +24,8 @@ urlpatterns = [
     path('author/<slug:slug>/', views.author_book_covers, name='author_books'),
     # ex: /bookcovers/artist/Robert%20Heinelein/
     path('author/<name>/', views.author_book_covers, name='author_books'),
+    # ex: /bookcovers/artist/Ray%20Bradbury/sets/
+    path('author/<name>/sets', views.author_book_sets, name='author_book_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
@@ -34,8 +36,12 @@ urlpatterns = [
     path('artist/<name>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/book/467/
     path('book/<int:book_id>/', views.covers_per_book, name='book_covers'),
+    # ex: /bookcovers/author/edition/6/
+    path('book/edition/<int:edition_id>/', views.book_book_cover_detail, name="book_edition"),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', views.books_per_artwork, name='artwork'),
+    # ex: /bookcovers/artwork/edition/6/
+    path('artwork/edition/<int:edition_id>/', views.artwork_book_cover_detail, name="artwork_edition"),
     # ex: /bookcovers/edition/6
     #path('edition/<pk>/', BookCoverDetail.as_view(), name="edition"),
     path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
@@ -65,3 +71,6 @@ urlpatterns = [
 # This powerful feature allows you to make global changes to the URL patterns of your project while only touching a single file.
 # the 'name' value as called by the {% url %} template tag
 
+# thinking of better names
+# all_artists, all_covers_for_artist, all_books_for_artwork (dune and stigma) or all_artworks_by_artist_for_title (2 versions doona)
+# all_authors, all_books_for_author, all_artworks_for_book
