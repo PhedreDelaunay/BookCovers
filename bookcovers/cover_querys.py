@@ -314,7 +314,12 @@ class CoverQuerys:
     @staticmethod
     def author_set_list(author):
         # use .values to return ValuesQuerySet which looks like list of dictionaries
-        set_list = Sets.objects.filter(author_id=author).values()
+        #set_list = Sets.objects.filter(author_id=author).values()
+
+        set_list = Sets.objects.filter(author_id=author) \
+                     .values("set_id", "series_id", "author_id", "imprint_id", "description", "panorama_id", 'artist__name')
+        # SELECT sets.set_id, sets.series_id, sets.author_id, sets.artist_id, sets.imprint_id, sets.description, sets.panorama_id
+        # FROM sets LEFT OUTER JOIN artists on sets.artist_id = artists.artist_id WHERE sets.author_id = '15';
         return set_list
 
 

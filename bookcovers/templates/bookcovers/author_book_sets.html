@@ -9,7 +9,7 @@
 {% block content %}
     <h2 style="display:inline";>{{ author }}</h2>
     {% for set in set_list %}
-        Displaying set
+        <BR>Displaying set {{ set.artist__name }}
     {% endfor %}
 
 {% endblock %}

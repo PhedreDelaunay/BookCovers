@@ -232,8 +232,8 @@
     "pk": 20,
     "fields": {
         "series": 40,
-        "author_id": 0,
-        "artist_id": 0,
+        "author_id": null,
+        "artist_id": null,
         "imprint_id": null,
         "description": null,
         "panorama_id": 0

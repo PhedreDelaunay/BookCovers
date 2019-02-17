@@ -238,8 +238,9 @@ def author_book_sets(request, author_id=None, name=None, slug=None):
     author_page = request.GET.get(subject)
     author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
     author = author_pager.get_entry()
+    print (f"author is {author}")
 
-    set_list = CoverQuerys.author_set_list(author=15)
+    set_list = CoverQuerys.author_set_list(author=author.author_id)
 
     context = {'author': author,
                'set_list': set_list,
