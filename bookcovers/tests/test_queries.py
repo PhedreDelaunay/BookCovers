@@ -453,10 +453,14 @@ class AdhocQueryTests(TestCase):
                         f"GROUP BY AW.artwork_id " \
                         f"ORDER BY BSL.volume;"
 
-        # return cover list as dictionary
+        # return original cover list as dictionary
         original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
         print(f"number of covers is {len(original_cover_list)}")
         print(f"original_cover_list is {original_cover_list}")
+
+        set_cover_list = CoverQuerys.author_artist_set_cover_list(author=author_id, artist=artist_id)
+        print(f"number of covers is {len(set_cover_list)}")
+        print(f"set_cover_list is {set_cover_list}")
 
     def test_author_set_list(self):
         author_id = 15

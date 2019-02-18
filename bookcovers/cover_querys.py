@@ -3,6 +3,7 @@ import pprint
 from django.db.models import F
 from django.db.models import Q
 from django.db.models import Count
+from django.shortcuts import get_object_or_404
 
 from bookcovers.models import Authors
 from bookcovers.models import Artists
@@ -13,6 +14,8 @@ from bookcovers.models import Covers
 from bookcovers.models import Editions
 from bookcovers.models import Countries
 from bookcovers.models import Sets
+from bookcovers.models import SetExceptions
+from bookcovers.models import BooksSeries
 
 import math
 
@@ -254,7 +257,7 @@ class CoverQuerys:
         #                    "AND C.country_id = BE.country_id "
         #                    "ORDER BY C.display_order, BE.print_year")
 
-        inner_queryset = Books.objects.filter(Q(book_id=book.book_id)).values_list('theEdition__edition_id', flat=True)
+        inner_queryset = Books.objects.filter(book_id=book.book_id).values_list('theEdition__edition_id', flat=True)
 
         # pk is book_id
         title_cover_list = Covers.objects \
@@ -323,6 +326,50 @@ class CoverQuerys:
         # FROM sets LEFT OUTER JOIN artists on sets.artist_id = artists.artist_id WHERE sets.author_id = '15';
         return set_list
 
+    @staticmethod
+    def author_artist_set_cover_list(set=None, author=None, artist=None):
+        # up to here, need to exclude set_exception and order by BooksSeries volume
+        set_list = Sets.objects.filter(author=author, artist=artist).values()
+        # exception_list = SetExceptions.objects.filter(set_id__in=set_list).value_list('cover_id', flat=True)
 
+        # SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id)
 
+        # SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id)
+        set_cover_list = Covers.objects. \
+            filter(book__author=author, artwork__artist=artist). \
+            values('artwork__artist__cover_filepath','cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags',
+                   'cover_filename')
 
+        # get set record
+        if set:
+            set = get_object_or_404(Sets, pk=set)
+            author = set.author
+            artist = set.artist
+        else:
+            set = get_object_or_404(Sets, author=author, artist=artist)
+
+        # given set we can get the series
+        series = set.series
+
+        inner_queryset_book_list = BooksSeries.objects. \
+            filter(series_id=series.pk). \
+            values_list('book_id', flat=True). \
+            order_by('volume')
+        print (inner_queryset_book_list)
+
+        inner_queryset_exceptions = SetExceptions.objects. \
+            filter(set_id=set.pk). \
+            values_list('cover_id', flat=True)
+        print (inner_queryset_exceptions)
+
+        set_cover_list = Covers.objects. \
+            filter(book__author=author, artwork__artist=artist, artwork__artist__theSet=set.pk) . \
+            filter(book__in=inner_queryset_book_list). \
+            exclude(cover_id__in=inner_queryset_exceptions). \
+            values('artwork__artist__cover_filepath', 'cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags',
+                    'cover_filename','artwork__artist__theSet__series')
+        # set_cover_list = Covers.objects.filter(book__author=author, artwork__artist=artist) \
+        #     .values('artwork__artist__cover_filepath','cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags', 'cover_filename')
+        #
+
+        return set_cover_list
