@@ -302,9 +302,15 @@ class Sets(models.Model):
     class Meta:
         db_table = 'sets'
 
+# up to here - add foreign keys and related query names
+# https://stackoverflow.com/questions/29629484/django-link-multiple-tables
 class BooksSeries(models.Model):
-    series_id = models.IntegerField()
-    book_id = models.IntegerField()
+    # series_id = models.IntegerField()
+    # book_id = models.IntegerField()
+    series = models.ForeignKey(Series, models.DO_NOTHING,
+                                related_name="theBooksSeries", related_query_name="theBooksSeries")
+    book = models.ForeignKey(Books, models.DO_NOTHING,
+                             related_name="theBooksSeries", related_query_name="theBooksSeries")
     volume = models.IntegerField(blank=True, null=True)
 
     class Meta:
