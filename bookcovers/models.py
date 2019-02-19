@@ -275,15 +275,6 @@ class Series(models.Model):
     class Meta:
         db_table = 'series'
 
-
-class SetExceptions(models.Model):
-    set_id = models.IntegerField()
-    cover_id = models.IntegerField()
-
-    class Meta:
-        db_table = 'set_exceptions'
-
-
 class Sets(models.Model):
     set_id = models.AutoField(primary_key=True)
     series = models.ForeignKey(Series, models.DO_NOTHING, blank=True, null=True,
@@ -302,8 +293,18 @@ class Sets(models.Model):
     class Meta:
         db_table = 'sets'
 
-# up to here - add foreign keys and related query names
-# https://stackoverflow.com/questions/29629484/django-link-multiple-tables
+class SetExceptions(models.Model):
+    #set_id = models.IntegerField()
+    #cover_id = models.IntegerField()
+    set = models.ForeignKey(Sets, models.DO_NOTHING,
+                             related_name="theSetExceptions", related_query_name="theSetException")
+    cover = models.ForeignKey(Covers, models.DO_NOTHING,
+                             related_name="theSetExceptions", related_query_name="theSetException")
+
+    class Meta:
+        db_table = 'set_exceptions'
+
+# linking table listing all books in a series
 class BooksSeries(models.Model):
     # series_id = models.IntegerField()
     # book_id = models.IntegerField()
