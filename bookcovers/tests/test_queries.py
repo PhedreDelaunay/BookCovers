@@ -159,13 +159,13 @@ class AuthorQueryTests(SubjectQueryTest):
         for raw_author_list, author_list in zip(raw_author_list, author_list):
             self.subject_matches("author_id", raw_author_list, author_list)
 
-    def test_authors_cover_list(self):
+    def dont_test_authors_cover_list(self):
         """
         test list of all covers for each author in db
         """
         self.validate_list_of_covers_for_subject()
 
-    def test_authors_book_list(self):
+    def dont_test_authors_book_list(self):
         """
         test list of books for each author in db
         """
@@ -189,26 +189,52 @@ class AuthorQueryTests(SubjectQueryTest):
 
         print (f"num {self.subject_name}s is {len(subject_list)}")
 
+    # up to here - need to complete test and test that cover list matches
     def check_author_set_list(self, author_id):
-        print("==============================================")
-        print(f"Test Sets for author {author_id}")
-        print("==============================================")
-
         # return set list as dictionary
         raw_set_list = OriginalRawQuerys.author_set_list(author_id, return_dict=True)
         expected_num_sets = len(raw_set_list)
 
         author_set_list = CoverQuerys.author_set_list(author_id)
+        #print(f"author {author_id}, set list {author_set_list}")
         actual_num_sets = len(author_set_list)
 
         self.assertEqual(expected_num_sets, actual_num_sets)
 
         if expected_num_sets > 0:
+            print("=============================================")
+            print(f"Test {expected_num_sets} sets for author {author_id}")
+            print(f"author {author_id}, set list {author_set_list}")
+            print("==============================================")
+
             expected_keys = ["set_id", "series_id", "author_id", "artist_id", "imprint_id", "description", "panorama_id"]
 
             #  for each set: check expected data matches actual data
             for raw_set, set in zip(raw_set_list, author_set_list):
                 self.record_matches(raw_set, expected_keys, set, expected_keys)
+
+                # check set cover list
+                print (f"artist: {set['artist_id']}")
+                self.check_author_artist_covers_list(author=author_id, artist=set['artist_id'])
+
+    # up to here why are values empty and expected_num_covers 0?
+    def check_author_artist_covers_list(self, author=None, artist=None):
+        print ("==============================================")
+        print (f"Test Set Covers for author {author} and artist {artist}")
+        print ("==============================================")
+
+        # return original cover list as dictionary
+        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author, artist, return_dict=True)
+        expected_num_covers = len(original_cover_list)
+        print(f"expected number of covers is {expected_num_covers}")
+        print(f"original_cover_list is {original_cover_list}")
+
+        set_cover_list = CoverQuerys.author_artist_set_cover_list(author=author, artist=artist)
+        actual_num_covers = len(set_cover_list)
+        print(f"actual number of covers is {actual_num_covers}")
+        print(f"set_cover_list is {set_cover_list}")
+
+        self.assertEqual(expected_num_covers, actual_num_covers, msg="author={author}, artist={artist}")
 
 
 class ArtistQueryTests(SubjectQueryTest):
@@ -434,24 +460,29 @@ class AdhocQueryTests(TestCase):
                 'BooksSeries.json',
                 'SetExceptions.json',]
 
+    def test_sets(self):
+        author_id = 15
+
+        print("==============================================")
+        print(f"Test Set Covers for author {author_id}")
+        print("==============================================")
+        expected_num_covers = 18
+
+        all_list = CoverQuerys.set_covers(author=author_id)
+        num_covers = len(all_list)
+
+        # use list to avoid remaining elements truncated
+        # otherwise repr is used to represent queryset
+        #print(f"covers {list(all_list)}")
+
+        self.assertEqual(expected_num_covers, num_covers)
+
     def test_author_artist_covers_list(self):
         author_id = 15
         artist_id = 2
         print ("==============================================")
         print (f"Test Set Covers for author {author_id} and artist {artist_id}")
         print ("==============================================")
-
-        covers_query = f"SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id " \
-                        f"FROM artists, covers as BC, series as BS, books_series as BSL, " \
-                        f"sets, artworks as AW " \
-                        f"WHERE (sets.author_id = {author_id})" \
-                        f"AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id " \
-                        f"AND BC.flags < 256 AND BC.book_id = BSL.book_id AND AW.artist_id = {artist_id} " \
-                        f"AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id " \
-                        f"AND BC.artwork_id = AW.artwork_id " \
-                        f"AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) " \
-                        f"GROUP BY AW.artwork_id " \
-                        f"ORDER BY BSL.volume;"
 
         # return original cover list as dictionary
         original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
@@ -462,7 +493,7 @@ class AdhocQueryTests(TestCase):
         print(f"number of covers is {len(set_cover_list)}")
         print(f"set_cover_list is {set_cover_list}")
 
-    def test_author_set_list(self):
+    def dont_test_author_set_list(self):
         author_id = 15
         print ("==============================================")
         print (f"Test Sets for author {author_id}")
@@ -480,7 +511,7 @@ class AdhocQueryTests(TestCase):
         print(f"author_set_list is {author_set_list}")
 
 
-    def test_author_books(self):
+    def dont_test_author_books(self):
         author_id = 5
         print ("==============================================")
         print (f"Test List of Books for author {author_id}")

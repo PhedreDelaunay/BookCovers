@@ -327,49 +327,63 @@ class CoverQuerys:
         return set_list
 
     @staticmethod
+    def set_covers(author=None, artist=None):
+        """
+
+        :param author:      author to display sets for
+        :param artist:      when defined returns only covers by this artist
+                            else returns all covers by each artist
+        :return: cover list
+        """
+        series_list = Sets.objects.filter(author=author).values_list('series_id', flat=True).distinct()
+        print(f"number of sets in series {len(series_list)}")
+        print(f"sets {series_list}")
+
+        inner_queryset_book_list = BooksSeries.objects. \
+            filter(series__in=series_list). \
+            values_list('book_id', flat=True). \
+            order_by('volume')
+        print(f"number of books in series {len(inner_queryset_book_list)}")
+        print(f"books in series {inner_queryset_book_list}")
+
+        inner_queryset_exceptions = SetExceptions.objects. \
+            values_list('cover', flat=True)
+        print(f"number of exceptions {len(inner_queryset_exceptions)}")
+        print(f"exceptions {inner_queryset_exceptions}")
+
+        set_list = BooksSeries.objects. \
+            filter(series__in=series_list). \
+            select_related('book'). \
+            order_by('volume')
+
+        cover_list = Covers.objects. \
+            filter(book__in=inner_queryset_book_list). \
+            filter(book__theBooksSeries__series_id__in=series_list). \
+            exclude(cover_id__in=inner_queryset_exceptions)
+
+        if artist:
+            cover_list = cover_list.filter(artwork__artist=artist)
+
+        set_cover_list = cover_list. \
+            order_by('artwork__artist', 'book__theBooksSeries__volume'). \
+            values('cover_id', 'artwork__artist', 'book__theBooksSeries__id', 'book__theBooksSeries__series_id',
+                   'book__theBooksSeries__volume')
+
+        return set_cover_list
+
+    @staticmethod
     def author_artist_set_cover_list(set=None, author=None, artist=None):
-        # up to here, need to exclude set_exception and order by BooksSeries volume
-        set_list = Sets.objects.filter(author=author, artist=artist).values()
-        # exception_list = SetExceptions.objects.filter(set_id__in=set_list).value_list('cover_id', flat=True)
-
-        # SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id)
-
-        # SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id)
         set_cover_list = Covers.objects. \
             filter(book__author=author, artwork__artist=artist). \
             values('artwork__artist__cover_filepath','cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags',
                    'cover_filename')
 
         # get set record
-        if set:
+        if not author or not artist:
             set = get_object_or_404(Sets, pk=set)
             author = set.author
             artist = set.artist
-        else:
-            set = get_object_or_404(Sets, author=author, artist=artist)
 
-        # given set we can get the series
-        series = set.series
-
-        inner_queryset_book_list = BooksSeries.objects. \
-            filter(series_id=series.pk). \
-            values_list('book_id', flat=True). \
-            order_by('volume')
-        print (inner_queryset_book_list)
-
-        inner_queryset_exceptions = SetExceptions.objects. \
-            filter(set_id=set.pk). \
-            values_list('cover_id', flat=True)
-        print (inner_queryset_exceptions)
-
-        set_cover_list = Covers.objects. \
-            filter(book__author=author, artwork__artist=artist, artwork__artist__theSet=set.pk) . \
-            filter(book__in=inner_queryset_book_list). \
-            exclude(cover_id__in=inner_queryset_exceptions). \
-            values('artwork__artist__cover_filepath', 'cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags',
-                    'cover_filename','artwork__artist__theSet__series')
-        # set_cover_list = Covers.objects.filter(book__author=author, artwork__artist=artist) \
-        #     .values('artwork__artist__cover_filepath','cover_id', 'book_id', 'artwork_id', 'edition_id', 'flags', 'cover_filename')
-        #
+        set_cover_list = CoverQuerys.set_covers(author=author, artist=artist)
 
         return set_cover_list
