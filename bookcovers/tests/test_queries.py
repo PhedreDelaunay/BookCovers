@@ -480,39 +480,15 @@ class AdhocQueryTests(QueryTestCase):
         print("==============================================")
         expected_num_covers = 18
 
-        all_list = CoverQuerys.set_covers(author=author_id)
+        all_list = CoverQuerys.set_covers_by_artist(author=author_id)
         num_covers = len(all_list)
 
         # use list to avoid remaining elements truncated
         # otherwise repr is used to represent queryset
-        #print(f"covers {list(all_list)}")
+        print(f"covers {list(all_list)}")
 
         self.assertEqual(expected_num_covers, num_covers)
 
-    def test_author_artist_covers_list(self):
-        author_id = 5
-        artist_id = 28
-        print ("==============================================")
-        print (f"Test Set Covers for author {author_id} and artist {artist_id}")
-        print ("==============================================")
-
-        # return original cover list as dictionary
-        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
-        print(f"number of covers is {len(original_cover_list)}")
-        print(f"original_cover_list is {original_cover_list}")
-
-        set_cover_list = CoverQuerys.author_artist_set_cover_list(author=author_id, artist=artist_id)
-        print(f"number of covers is {len(set_cover_list)}")
-        print(f"set_cover_list is {set_cover_list}")
-
-        # keys in dictionary returned from raw sql query
-        expected_keys = ["cover_filepath", "cover_id", "cover_filename", "artwork_id"]
-        # keys in dictionary returned from django query
-        actual_keys = ['artwork__artist__cover_filepath', 'cover_id', 'cover_filename', 'artwork_id']
-
-        #  for each cover: check expected cover data matches actual cover data
-        for raw_cover, cover in zip(original_cover_list, set_cover_list):
-            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
     def dont_test_author_set_list(self):
         author_id = 15

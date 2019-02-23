@@ -49,7 +49,7 @@ mostCovers = 2;
 {% endblock %}
 {% block content %}
     <h2 style="display:inline";>{{ author }}</h2>
-    {% if set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' author %}">View sets of books by artist</a>
+    {% if set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' author %}">View sets of covers by artist</a>
     {% endif %}
     {% comment exclude duplicates, designed for use with javascript to rotate images %}
     <BR>Exclude duplicates<BR>

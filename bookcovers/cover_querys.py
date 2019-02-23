@@ -327,7 +327,7 @@ class CoverQuerys:
         return set_list
 
     @staticmethod
-    def set_covers(author=None, artist=None):
+    def set_covers_by_artist(author=None, artist=None, return_dict=True):
         """
 
         :param author:      author to display sets for
@@ -365,9 +365,19 @@ class CoverQuerys:
         if artist:
             cover_list = cover_list.filter(artwork__artist=artist)
 
-        set_cover_list = cover_list. \
-            order_by('artwork__artist', 'book__theBooksSeries__volume'). \
-            values('artwork__artist__cover_filepath', 'cover_id', 'cover_filename', 'artwork_id')
+        if return_dict:
+            # 1 query 0.45MS
+            set_cover_list = cover_list. \
+                order_by('artwork__artist', 'book__theBooksSeries__volume'). \
+                values('artwork__artist__name', 'artwork__artist__cover_filepath', 'cover_id',
+                       'cover_filename',
+                       'artwork_id',
+                       'book__pk', 'book__title')
+        else:
+            # 19 queries in 2.4MS
+            set_cover_list = cover_list. \
+                order_by('artwork__artist', 'book__theBooksSeries__volume'). \
+                select_related('book','artwork')
 
         return set_cover_list
 
@@ -384,6 +394,6 @@ class CoverQuerys:
             author = set.author
             artist = set.artist
 
-        set_cover_list = CoverQuerys.set_covers(author=author, artist=artist)
+        set_cover_list = CoverQuerys.set_covers_by_artist(author=author, artist=artist)
 
         return set_cover_list
