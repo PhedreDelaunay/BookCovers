@@ -359,15 +359,15 @@ class CoverQuerys:
         cover_list = Covers.objects. \
             filter(book__in=inner_queryset_book_list). \
             filter(book__theBooksSeries__series_id__in=series_list). \
-            exclude(cover_id__in=inner_queryset_exceptions)
+            exclude(cover_id__in=inner_queryset_exceptions). \
+            filter(is_variant=False, flags__lt=256)
 
         if artist:
             cover_list = cover_list.filter(artwork__artist=artist)
 
         set_cover_list = cover_list. \
             order_by('artwork__artist', 'book__theBooksSeries__volume'). \
-            values('cover_id', 'artwork__artist', 'book__theBooksSeries__id', 'book__theBooksSeries__series_id',
-                   'book__theBooksSeries__volume')
+            values('artwork__artist__cover_filepath', 'cover_id', 'cover_filename', 'artwork_id')
 
         return set_cover_list
 

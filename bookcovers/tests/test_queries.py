@@ -18,21 +18,7 @@ from bookcovers.cover_querys import CoverQuerys
 
 # Using the unittest framework to test the django queries against the original raw sql queries
 
-class SubjectQueryTest(TestCase):
-    """
-        subject: subject model: Artists, Authors, Books
-        pk_name: name of private key field for subject
-        subject_query: CoverQuerys.<subject>_list, method returning query to list all subjects
-        original_raw_query: OriginalRawQuerys.<subject>_cover_list
-
-    """
-
-    def subject_matches(self, subject_pk, expected_subject, actual_subject):
-        # keys in dictionary returned from raw sql query
-        expected_keys = [subject_pk, "name"]
-        # keys in dictionary returned from django query
-        actual_keys = [subject_pk, "name"]
-        self.record_matches(expected_subject, expected_keys, actual_subject, actual_keys)
+class QueryTestCase(TestCase):
 
     def record_matches(self, expected_record, expected_keys, actual_record, actual_keys):
         # https://docs.python.org/3/library/functions.html#zip
@@ -47,6 +33,23 @@ class SubjectQueryTest(TestCase):
                 print (f"Actual: {actual_record}")
                 print ("================================================================================")
                 raise
+
+
+class SubjectQueryTest(QueryTestCase):
+    """
+        subject: subject model: Artists, Authors, Books
+        pk_name: name of private key field for subject
+        subject_query: CoverQuerys.<subject>_list, method returning query to list all subjects
+        original_raw_query: OriginalRawQuerys.<subject>_cover_list
+
+    """
+
+    def subject_matches(self, subject_pk, expected_subject, actual_subject):
+        # keys in dictionary returned from raw sql query
+        expected_keys = [subject_pk, "name"]
+        # keys in dictionary returned from django query
+        actual_keys = [subject_pk, "name"]
+        self.record_matches(expected_subject, expected_keys, actual_subject, actual_keys)
 
     def print_cover_lists(self, raw_cover_list, cover_list):
         for raw_cover in raw_cover_list:
@@ -114,7 +117,9 @@ class AuthorQueryTests(SubjectQueryTest):
                 'AuthorAkas.json',
                 'Countries.json',
                 'Sets.json',
-                'Series.json',]
+                'Series.json',
+                'BooksSeries.json',
+                'SetExceptions.json',]
 
     def setUp(self):
         self.subject_model = Authors
@@ -217,7 +222,6 @@ class AuthorQueryTests(SubjectQueryTest):
                 print (f"artist: {set['artist_id']}")
                 self.check_author_artist_covers_list(author=author_id, artist=set['artist_id'])
 
-    # up to here why are values empty and expected_num_covers 0?
     def check_author_artist_covers_list(self, author=None, artist=None):
         print ("==============================================")
         print (f"Test Set Covers for author {author} and artist {artist}")
@@ -234,8 +238,16 @@ class AuthorQueryTests(SubjectQueryTest):
         print(f"actual number of covers is {actual_num_covers}")
         print(f"set_cover_list is {set_cover_list}")
 
-        self.assertEqual(expected_num_covers, actual_num_covers, msg="author={author}, artist={artist}")
+        self.assertEqual(expected_num_covers, actual_num_covers, msg=f"author={author}, artist={artist}")
 
+        # keys in dictionary returned from raw sql query
+        expected_keys = ["cover_filepath", "cover_id", "cover_filename", "artwork_id"]
+        # keys in dictionary returned from django query
+        actual_keys = ['artwork__artist__cover_filepath', 'cover_id', 'cover_filename', 'artwork_id']
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(original_cover_list, set_cover_list):
+            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
 class ArtistQueryTests(SubjectQueryTest):
     fixtures = ['Artists.json',
@@ -447,7 +459,7 @@ class ArtworkQueryTests(SubjectQueryTest):
         return raw_cover_list
 
 # python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
-class AdhocQueryTests(TestCase):
+class AdhocQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
@@ -478,8 +490,8 @@ class AdhocQueryTests(TestCase):
         self.assertEqual(expected_num_covers, num_covers)
 
     def test_author_artist_covers_list(self):
-        author_id = 15
-        artist_id = 2
+        author_id = 5
+        artist_id = 28
         print ("==============================================")
         print (f"Test Set Covers for author {author_id} and artist {artist_id}")
         print ("==============================================")
@@ -492,6 +504,15 @@ class AdhocQueryTests(TestCase):
         set_cover_list = CoverQuerys.author_artist_set_cover_list(author=author_id, artist=artist_id)
         print(f"number of covers is {len(set_cover_list)}")
         print(f"set_cover_list is {set_cover_list}")
+
+        # keys in dictionary returned from raw sql query
+        expected_keys = ["cover_filepath", "cover_id", "cover_filename", "artwork_id"]
+        # keys in dictionary returned from django query
+        actual_keys = ['artwork__artist__cover_filepath', 'cover_id', 'cover_filename', 'artwork_id']
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(original_cover_list, set_cover_list):
+            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
     def dont_test_author_set_list(self):
         author_id = 15

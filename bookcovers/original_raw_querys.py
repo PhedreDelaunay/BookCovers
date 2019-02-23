@@ -236,7 +236,7 @@ class OriginalRawQuerys:
                         "sets, artworks as AW "
                         "WHERE (sets.author_id = %s)"
                         "AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id "
-                        "AND BC.flags < 256 AND BC.book_id = BSL.book_id AND AW.artist_id = %s "
+                        "AND BC.flags < 256  AND BC.is_variant = False AND BC.book_id = BSL.book_id AND AW.artist_id = %s "
                         "AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id "
                         "AND BC.artwork_id = AW.artwork_id "
                         "AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) "
