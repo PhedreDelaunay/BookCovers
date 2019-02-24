@@ -18,17 +18,16 @@ def transform_slug(slug):
 class MenuPager():
 
     def __init__(self):
-        self.query_page = "page"
         # Show 1 cover work per page
         self.per_page = 1
 
     @property
-    def query_page(self):
-        return self._query_page
+    def subject(self):
+        return self._subject
 
-    @query_page.setter
-    def query_page(self,value):
-        self._query_page = value
+    @subject.setter
+    def subject(self,value):
+        self._subject = value
 
     @property
     def subject_title(self):
@@ -38,9 +37,7 @@ class MenuPager():
     def subject_title(self,value):
         self._subject_title = value
 
-    def meta_page(self):
-        meta ={'query_page': self.query_page, 'subject_title': self.subject_title}
-        return meta
+
 
 class SubjectPager(MenuPager):
     """
@@ -59,6 +56,23 @@ class SubjectPager(MenuPager):
         self.subject_id = subject_id
         self.name = name
         self.slug = slug
+        self.set_subject_identifier(subject_id=subject_id, name=name, slug=slug)
+
+    @property
+    def subject_identifier(self):
+        return self._subject_identifier
+
+    @subject_identifier.setter
+    def subject_identifier(self, value):
+        self._subject_identifier = value
+
+    def set_subject_identifier(self, subject_id=None, name=None, slug=None):
+        if subject_id:
+            self.subject_identifier = subject_id
+        elif name:
+            self.subject_identifier = name
+        elif slug:
+            self.subject_identifier = slug
 
     def pager(self, cover_query, subject_id_key, subject_model):
         """
@@ -121,12 +135,11 @@ class ArtistPager(SubjectPager):
         :param name:           artist name
         :param slug:           artist slug
         """
-        subject = 'artist'
-        self.request_page = request.GET.get(subject)
+        self.subject = 'artist'
+        self.request_page = request.GET.get(self.subject)
         print(f"ArtistPager: request_page is '{self.request_page}'")
         super(ArtistPager, self).__init__(page=self.request_page, subject_id=artist_id, name=name, slug=slug)
 
-        self.query_page = subject
         self.subject_title = "Artist"
 
         self.pager(cover_query=CoverQuerys.artist_list,
@@ -146,12 +159,11 @@ class AuthorPager(SubjectPager):
         :param name:           author name
         :param slug:           author slug
         """
-        subject = 'author'
-        self.request_page = request.GET.get(subject)
+        self.subject = 'author'
+        self.request_page = request.GET.get(self.subject)
         print(f"AuthorPager: request_page is '{self.request_page}'")
         super(AuthorPager, self).__init__(page=self.request_page, subject_id=author_id, name=name, slug=slug)
 
-        self.query_page = subject
         self.subject_title = "Author"
 
         self.pager(cover_query=CoverQuerys.author_list,

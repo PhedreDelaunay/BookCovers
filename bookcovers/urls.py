@@ -36,6 +36,8 @@ urlpatterns = [
     path('artist/<name>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/book/467/
     path('book/<int:book_id>/', views.covers_per_book, name='book_covers'),
+    # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
+    path('book/<title>/', views.covers_per_book, name='book_covers'),
     # ex: /bookcovers/author/edition/6/
     path('book/edition/<int:edition_id>/', views.book_book_cover_detail, name="book_edition"),
     # ex: /bookcovers/artwork/12/

@@ -255,17 +255,23 @@ def author_book_sets(request, author_id=None, name=None, slug=None):
     #return HttpResponse("Book Sets: You're looking at sets for %s." % name)
 
 # http:<host>/bookcovers/book/<book_id>
-def covers_per_book(request, book_id):
+# http:<host>/bookcovers/book/<the%20title>
+def covers_per_book(request, book_id=None, title=None):
     """
     displays all the covers for the same book title
     :param request:
     :param book_id:     ex: /bookcovers/book/93/
+    :param: title:      ex: /bookcovers/book/Machineries%20Of%20Joy/
+                        not yet implemented
     :return:
     """
-    book = get_object_or_404(Books, pk=book_id)
+    author_id=None
+    if book_id:
+        book = get_object_or_404(Books, pk=book_id)
+        author_id = book.author_id
 
     # author pager
-    author_pager = AuthorPager(request, author_id=book.author_id)
+    author_pager = AuthorPager(request, author_id=author_id)
     if author_pager.get_request_page():
         # move on to the next or previous author
         author = author_pager.get_entry()
