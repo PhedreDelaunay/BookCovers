@@ -1,3 +1,4 @@
+
 /* we want paginators in line */
 .pagination {
   border: 1px solid black;
@@ -17,4 +18,7 @@
 }
 ul {
   list-style: none;
+}
+p.greyed {
+    color: rgb(180,180,180);
 }
