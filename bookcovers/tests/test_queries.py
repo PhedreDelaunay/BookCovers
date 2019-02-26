@@ -6,7 +6,7 @@ from django.conf import settings
 from django.db.models import F
 
 from bookcovers.models import Artists
-from bookcovers.models import Authors
+from bookcovers.models import Author
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Artworks
@@ -122,7 +122,7 @@ class AuthorQueryTests(SubjectQueryTest):
                 'SetExceptions.json',]
 
     def setUp(self):
-        self.subject_model = Authors
+        self.subject_model = Author
         self.subject_name = "author"
         self.pk_name = "author_id"
         self.subject_query = CoverQuerys.author_list
@@ -135,7 +135,7 @@ class AuthorQueryTests(SubjectQueryTest):
                        "copyright_year"]
 
     def test_author_name(self):
-        author = Authors.objects.get(pk=6)
+        author = Author.objects.get(pk=6)
         expected_author_name = "Philip K. Dick"
         self.assertEqual(expected_author_name, author.name)
 
@@ -194,7 +194,6 @@ class AuthorQueryTests(SubjectQueryTest):
 
         print (f"num {self.subject_name}s is {len(subject_list)}")
 
-    # up to here - need to complete test and test that cover list matches
     def check_author_set_list(self, author_id):
         # return set list as dictionary
         raw_set_list = OriginalRawQuerys.author_set_list(author_id, return_dict=True)
@@ -513,7 +512,7 @@ class AdhocQueryTests(QueryTestCase):
         print ("==============================================")
         print (f"Test List of Books for author {author_id}")
         print ("==============================================")
-        author = get_object_or_404(Authors, pk=author_id)
+        author = get_object_or_404(Author, pk=author_id)
         book_list = CoverQuerys.books_for_author(author)
         print(f"number of books is {len(book_list)}")
         print(f"book_list is {book_list}")

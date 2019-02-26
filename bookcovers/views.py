@@ -8,7 +8,7 @@ from django.db.models import F
 from django.db.models import Q
 
 
-from bookcovers.models import Authors
+from bookcovers.models import Author
 from bookcovers.models import Artists
 from bookcovers.models import ArtistAkas
 from bookcovers.models import Artworks
@@ -287,7 +287,7 @@ def covers_per_book(request, book_id=None, title=None):
                              item_id_key="book_id",
                              item_model=Books,
                              subject_id_key='author_id',
-                             subject_model=Authors)
+                             subject_model=Author)
     book = pager.get_entry()
 
     book_cover_list = CoverQuerys.all_covers_for_title(book)

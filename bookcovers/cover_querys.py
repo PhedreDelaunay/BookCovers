@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
-from bookcovers.models import Authors
+from bookcovers.models import Author
 from bookcovers.models import Artists
 from bookcovers.models import ArtistAkas
 from bookcovers.models import Artworks
@@ -146,7 +146,7 @@ class CoverQuerys:
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/#in
         # need to clean database
 
-        author_list = Authors.objects \
+        author_list = Author.objects \
             .filter(author_id=F('theBook__author')) \
             .filter(theBook__theEdition__edition_id__in=inner_queryset) \
             .values('author_id', 'name') \
@@ -163,7 +163,7 @@ class CoverQuerys:
     @staticmethod
     def books_for_author(author):
         print("author is {}".format(author.name))
-        aka_inner_queryset = Authors.objects.filter(theAuthor_aka__author_aka_id=author.pk)
+        aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author.pk)
 
         book_list = Books.objects \
             .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
@@ -184,7 +184,7 @@ class CoverQuerys:
         :return: dict queryset to fetch all covers of all books for this author
         """
         print("author is {}".format(author.name))
-        aka_inner_queryset = Authors.objects.filter(theAuthor_aka__author_aka_id=author.pk)
+        aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author.pk)
 
         # this returns all covers for all books
         all_cover_list = Books.objects \

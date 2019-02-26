@@ -48,7 +48,7 @@ class ArtistAkas(models.Model):
 #    def get_by_natural_key(self, fullname):
 #        return self.get(fullname=fullname)
 
-class Authors(models.Model):
+class Author(models.Model):
     author_id = models.AutoField(primary_key=True)
     name = models.CharField(unique=True, max_length=255, blank=True, null=True)
     fullname = models.CharField(max_length=100, blank=True, null=True)
@@ -71,7 +71,7 @@ class Authors(models.Model):
 class AuthorAkas(models.Model):
     # pk=id is implied
     author_aka_id = models.IntegerField()
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+    author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theAuthor_akas", related_query_name="theAuthor_aka")
     real_name = models.IntegerField(blank=True, null=True)
 
@@ -89,7 +89,7 @@ class AuthorAkas(models.Model):
 # related_query_name creates a relation from the related object back to this one. This allows querying and filtering from the related object.
 class Books(models.Model):
     book_id = models.AutoField(primary_key=True)
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+    author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theBooks", related_query_name="theBook")
     title = models.CharField(unique=True, max_length=50, blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
@@ -279,7 +279,7 @@ class Sets(models.Model):
     set_id = models.AutoField(primary_key=True)
     series = models.ForeignKey(Series, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theSets", related_query_name="theSet")
-    author = models.ForeignKey(Authors, models.DO_NOTHING, blank=True, null=True,
+    author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theSets", related_query_name="theSet")
     artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
                                related_name="theSets", related_query_name="theSet")

@@ -5,7 +5,7 @@ from django.apps import apps
 
 from bookcovers.models import Artists
 from bookcovers.models import Artworks
-from bookcovers.models import Authors
+from bookcovers.models import Author
 from bookcovers.cover_querys import CoverQuerys
 
 def transform_slug(slug):
@@ -167,8 +167,8 @@ class AuthorPager(SubjectPager):
         self.subject_title = "Author"
 
         self.pager(cover_query=CoverQuerys.author_list,
-                               subject_id_key="author_id",
-                               subject_model=Authors)
+                   subject_id_key="author_id",
+                   subject_model=Author)
 
     def get_request_page(self):
         return self.request_page

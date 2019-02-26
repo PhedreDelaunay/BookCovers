@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from bookcovers.models import Authors
+from bookcovers.models import Author
 
 # Register your models here.
 
@@ -11,4 +11,4 @@ class AuthorAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['name',]
 
-admin.site.register(Authors, AuthorAdmin)
+admin.site.register(Author, AuthorAdmin)

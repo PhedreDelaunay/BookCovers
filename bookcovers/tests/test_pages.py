@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from bookcovers.models import Artists
-from bookcovers.models import Authors
+from bookcovers.models import Author
 from bookcovers.models import Books
 from bookcovers.models import Covers
 from bookcovers.models import Artworks
