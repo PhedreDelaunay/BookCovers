@@ -216,6 +216,8 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     set_list = CoverQuerys.author_set_list(author=author.pk)
 
     cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
+    #print (f"cover list query is {cover_list.query}")
+    #print (f"cover list for author {author.author_id} is {cover_list}")
     context = {'author': author,
                'cover_list': cover_list,
                'set_list': set_list,

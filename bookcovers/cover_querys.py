@@ -6,6 +6,7 @@ from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
 from bookcovers.models import Author
+from bookcovers.models import AuthorAkas
 from bookcovers.models import Artists
 from bookcovers.models import ArtistAkas
 from bookcovers.models import Artworks
@@ -227,7 +228,14 @@ class CoverQuerys:
         # use list comprehension to test if there are any unknown artists in this author's cover collection
         if any(cover['theCover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for cover in cover_list):
             print (f"author {author.name}: has unknown cover")
-            author_directory = author.name.replace(" ", "").replace(".","")
+
+            try:
+                real_author = Author.objects.get(Q(theAuthor_aka__real_name=1) & (Q(theAuthor_aka__author_aka_id=author.pk) | Q(theAuthor_aka__author_id=author.pk)))
+                print (f"real author name is {real_author.name}")
+            except Author.DoesNotExist as e:
+                real_author = author
+
+            author_directory = real_author.name.replace(" ", "").replace(".","")
             for cover in cover_list:
                 if cover['theCover__artwork__artist__cover_filepath'] == "BookCovers/Images/Unknown/":
                     cover['theCover__artwork__artist__cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"

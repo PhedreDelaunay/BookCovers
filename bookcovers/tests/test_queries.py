@@ -93,7 +93,7 @@ class SubjectQueryTest(QueryTestCase):
             print ("====================================================")
             raise
 
-        #  for each cover: check expected cover data matches actual cover dat
+        #  for each cover: check expected cover data matches actual cover data
         for raw_cover, cover in zip(raw_cover_list, subject_cover_list):
             if self.subject_name == "author":
                 if raw_cover['cover_filepath'] == "BookCovers/Images/Unknown/":
@@ -142,7 +142,7 @@ class AuthorQueryTests(SubjectQueryTest):
     # =====================================================
     # Test list of authors
     # =====================================================
-    def test_author_alist(self):
+    def dont_test_author_alist(self):
         """ test author list """
         raw_author_list = OriginalRawQuerys.author_list(True)
         expected_num_authors = len(raw_author_list)
@@ -182,7 +182,21 @@ class AuthorQueryTests(SubjectQueryTest):
         self.actual_keys = ["book_id", "copyright_year"]
         self.validate_list_of_covers_for_subject()
 
-    def test_author_sets_list(self):
+    def test_an_author_book_list(self):
+        """
+        test list of books for given author
+        """
+        author_id =11
+        author = get_object_or_404(Author, pk=author_id)
+        self.original_raw_query = OriginalRawQuerys.author_book_list
+        self.all_covers_for_subject = CoverQuerys.books_for_author
+        # keys in dictionary returned from raw sql query
+        self.expected_keys = ["book_id", "copyright_year"]
+        # keys in dictionary returned from django query
+        self.actual_keys = ["book_id", "copyright_year"]
+        self.subject_cover_list_matches(author, self.original_raw_query)
+
+    def dont_test_author_sets_list(self):
         print ("===========================================")
         print (f"Test List of Sets for each author")
         print ("===========================================")
@@ -344,7 +358,8 @@ class BookQueryTests(SubjectQueryTest):
             expected_value = expected['book_id']
             actual_value = actual['book_id']
             #print(f"expected '{expected}', actual '{actual}'")
-            try: self.assertEqual(expected_value, actual_value)
+            try:
+                self.assertEqual(expected_value, actual_value)
             except AssertionError as e:
                 print ("================================================================================")
                 print (f"Expected: {expected}")
@@ -519,3 +534,4 @@ class AdhocQueryTests(QueryTestCase):
 
         for book in book_list:
             print (f"book is '{book}'")
+

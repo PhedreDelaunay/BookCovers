@@ -76,7 +76,7 @@ class AuthorAkas(models.Model):
     real_name = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.authors.name
+        return self.author.name
 
     class Meta:
         db_table = 'author_akas'
