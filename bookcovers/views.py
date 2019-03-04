@@ -332,15 +332,8 @@ def book_cover_detail(request, edition_id):
     # or need specific pager and views
 
     # edition -> cover -> artwork
-    # TODO how to use get with filter rather than list?
-    editions = Editions.objects \
-        .filter(edition_id=edition_id) \
-        .filter(theCover__flags__lt=256) \
-        .values('edition_id',
-                'theCover__artwork__pk',
-                'book__title')
-    artwork_id = editions[0]['theCover__artwork__pk']
-    print (f"edition is {editions[0]['edition_id']}, artwork is {artwork_id}, book is '{editions[0]['book__title']}'")
+    edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
+    print (f"edition is {edition.pk}, artwork is {edition.theCover.artwork_id}, book is '{edition.book.title}'")
 
     # up to here - currently trying to use this for both artists and author book detail
     # artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
@@ -358,8 +351,6 @@ def book_cover_detail(request, edition_id):
     #         return redirect('bookcovers:artwork', artwork_id=artwork.pk)
     #     else:
     #         edition_id = aßrtwork_cover_list[0]['edition__pk']
-
-    edition = get_object_or_404(Editions, edition_id=edition_id)
 
     #context = {'edition': edition,  'book_pager': book_pager}
     context = {'edition': edition}

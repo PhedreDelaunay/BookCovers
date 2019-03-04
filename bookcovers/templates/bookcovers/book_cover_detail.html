@@ -5,9 +5,17 @@ book: {{ edition.book.pk }}
 
 <h2>{{ edition.book.title }}</h2>
 <table><tr><td>
-<IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:edition.theCover.cover_filename %}"
-    alt="{{ edition.book.title }}"
-    title="{{ edition.book.title }}">
+    {% if edition.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
+        {% with wauthor=edition.book.author.name|cut:" " %}
+            <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:wauthor|add:'/'|add:edition.theCover.cover_filename %}"
+                alt="{{ cover.book__title }}"
+                title="{{ cover.book__title }}">
+        {% endwith %}
+    {% else %}
+        <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:edition.theCover.cover_filename %}"
+            alt="{{ edition.book.title }}"
+            title="{{ edition.book.title }}">
+    {% endif %}
 </td><td>
     <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_books' edition.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
     <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level }}<BR/>
