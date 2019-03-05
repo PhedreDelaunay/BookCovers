@@ -35,15 +35,15 @@ urlpatterns = [
     # ex: /bookcovers/artist/Jim%20Burns/
     path('artist/<name>/', views.artist_book_covers, name='artist_books'),
     # ex: /bookcovers/book/467/
-    path('book/<int:book_id>/', views.covers_per_book, name='book_covers'),
+    path('book/<int:book_id>/', views.book, name='book_covers'),
     # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
-    path('book/<title>/', views.covers_per_book, name='book_covers'),
+    path('book/<title>/', views.book, name='book_covers'),
     # ex: /bookcovers/author/edition/6/
-    path('book/edition/<int:edition_id>/', views.book_book_cover_detail, name="book_edition"),
+    path('book/edition/<int:edition_id>/', views.book_edition, name="book_edition"),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', views.books_per_artwork, name='artwork'),
     # ex: /bookcovers/artwork/edition/6/
-    path('artwork/edition/<int:edition_id>/', views.artwork_book_cover_detail, name="artwork_edition"),
+    path('artwork/edition/<int:edition_id>/', views.artwork_edition, name="artwork_edition"),
     # ex: /bookcovers/edition/6
     #path('edition/<pk>/', BookCoverDetail.as_view(), name="edition"),
     path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),

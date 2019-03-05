@@ -7,7 +7,7 @@
             <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}=1">&laquo; first</a>
             <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}={{ the_pager.subject_pager.previous_page_number }}">previous</a>
         {% else %}
-            <p class="greyed" style="display:inline";>&laquo; first previous</p>
+            <p class="greyed" style="display:inline">&laquo; first previous</p>
         {% endif %}
 
         <span class="current">
@@ -18,7 +18,7 @@
             <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}={{ the_pager.subject_pager.next_page_number }}">next</a>
             <a href="../{{ the_pager.subject_identifier }}?{{ the_pager.subject }}={{ the_pager.subject_pager.paginator.num_pages }}">last &raquo;</a>
         {% else %}
-            <p class="greyed" style="display:inline";>next last &raquo;</p>
+            <p class="greyed" style="display:inline">next last &raquo;</p>
         {% endif %}
 
 

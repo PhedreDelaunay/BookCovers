@@ -160,6 +160,7 @@ def books_per_artwork(request, artwork_id):
     num_covers = len(artwork_cover_list)
     if num_covers == 1:
          # display the book detail
+         # the template includes template book_cover_detail.html
          edition = get_object_or_404(Editions, edition_id=artwork_cover_list[0]['edition__pk'])
     #     # maybe can have 1 template for book detail which can show multiples
     #     # rather than 3 templates with BookPager; books_per_artwork, covers_per_book, book_cover_detail
@@ -258,7 +259,7 @@ def author_book_sets(request, author_id=None, name=None, slug=None):
 
 # http:<host>/bookcovers/book/<book_id>
 # http:<host>/bookcovers/book/<the%20title>
-def covers_per_book(request, book_id=None, title=None):
+def book(request, book_id=None, title=None):
     """
     displays all the covers for the same book title
     :param request:
@@ -281,7 +282,7 @@ def covers_per_book(request, book_id=None, title=None):
 
     # book cover pager
     page = request.GET.get('page')
-    print(f"artwork cover_list: page is '{page}'")
+    print(f"views:book: page is '{page}'")
 
     query_kwargs = {'author': book.author_id, 'all': False}
     pager = BookPager(page=page, item_id=book_id)
@@ -296,13 +297,13 @@ def covers_per_book(request, book_id=None, title=None):
     num_books = len(book_cover_list)
     if num_books == 1:
         # display the book detail
+        # the template includes template book_cover_detail.html
         edition = get_object_or_404(Editions, edition_id=book_cover_list[0]['edition__pk'])
     else:
         edition = None
 
     # display thumbnails of all covers for this book
     template_name = 'bookcovers/author_covers_per_book.html'
-    #context = {'book': book, 'cover_list': book_cover_list}
     context = {'book': book,
                'cover_list': book_cover_list,
                'the_pager': author_pager,
@@ -311,15 +312,50 @@ def covers_per_book(request, book_id=None, title=None):
     return render(request, template_name, context)
     # return HttpResponse("Book Title: You're looking at book %s." % book.title)
 
-def artwork_book_cover_detail(request, edition_id):
+def artwork_edition(request, edition_id):
+    # up to here see book_edition
     return book_cover_detail(request, edition_id)
 
-def book_book_cover_detail(request, edition_id):
-    return book_cover_detail(request, edition_id)
+def book_edition(request, edition_id):
+    author_id=None
 
-def book_cover_detail(request, edition_id):
+    edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
+
+    book = get_object_or_404(Books, pk=edition.book.pk)
+    author_id = book.author_id
+
+    # author pager
+    author_pager = AuthorPager(request, author_id=author_id)
+    if author_pager.get_request_page():
+        # move on to the next or previous author
+        author = author_pager.get_entry()
+        return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
+
+    # book cover pager
+    page = request.GET.get('page')
+    print(f"artwork cover_list: page is '{page}'")
+
+    query_kwargs = {'author': book.author_id, 'all': False}
+    pager = BookPager(page=page, item_id=book.pk)
+    book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
+                             item_id_key="book_id",
+                             item_model=Books,
+                             subject_id_key='author_id',
+                             subject_model=Author)
+    book = pager.get_entry()
+
+    # up to here need a cover pager
+
+    context = {'book': book,
+               'the_pager': author_pager,
+               'book_pager': book_pager,
+               'edition': edition}
+
+    return book_cover_detail(request, edition_id, context)
+
+def book_cover_detail(request, edition_id, context):
     # to consider: use this view for when go to edition without paging
-    template_name = 'bookcovers/book_cover_detail.html'
+    template_name = 'bookcovers/edition.html'
 
     page = request.GET.get('page')
     print(f"book_cover_detail: page is '{page}'")
@@ -335,25 +371,7 @@ def book_cover_detail(request, edition_id):
     edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
     print (f"edition is {edition.pk}, artwork is {edition.theCover.artwork_id}, book is '{edition.book.title}'")
 
-    # up to here - currently trying to use this for both artists and author book detail
-    # artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-    # query_kwargs = {'artist': artwork.artist_id}
-    # pager = BookPager(page=page, item_id=artwork_id)
-    # book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
-    #                          subject_id_key="artwork_id",
-    #                          subject_model=Artworks)
-
-    # if page:
-    #     artwork = pager.get_entry()
-    #     artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
-    #     num_covers = len(artwork_cover_list)
-    #     if num_covers > 1:
-    #         return redirect('bookcovers:artwork', artwork_id=artwork.pk)
-    #     else:
-    #         edition_id = aßrtwork_cover_list[0]['edition__pk']
-
-    #context = {'edition': edition,  'book_pager': book_pager}
-    context = {'edition': edition}
+    #context = {'edition': edition}
     return render(request, template_name, context)
 
 class BookCoverDetail(DetailView):
