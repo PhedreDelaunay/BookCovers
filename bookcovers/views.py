@@ -313,8 +313,8 @@ def book(request, book_id=None, title=None):
     # return HttpResponse("Book Title: You're looking at book %s." % book.title)
 
 def artwork_edition(request, edition_id):
-    # up to here see book_edition
-    return book_cover_detail(request, edition_id)
+
+    return book_edition(request, edition_id)
 
 def book_edition(request, edition_id):
     author_id=None
