@@ -8,6 +8,13 @@
   padding-left: 5px;
   display: inline-block;
 }
+
+/* display multiple covers smaller than full size */
+.cover_list
+{
+height:300px;
+}
+
 /* flex and flex-column used to display artist and author lists in columns */
 .row {
     display: flex;
