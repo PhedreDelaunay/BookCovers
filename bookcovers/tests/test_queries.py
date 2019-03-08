@@ -35,18 +35,11 @@ class QueryTestCase(TestCase):
                 print ("================================================================================")
                 raise
 
-class SubjectQueryTest(QueryTestCase):
-    """
-        subject may be Artists, Authors, Books
-
-    """
-
-    #  refactor to take key dicts and move to QueryTestCase
-    def subject_matches(self, subject_pk, expected_subject, actual_subject):
+    def item_matches(self, primary_key, field_name, expected_subject, actual_subject):
         # keys in dictionary returned from raw sql query
-        expected_keys = [subject_pk, "name"]
+        expected_keys = [primary_key, field_name]
         # keys in dictionary returned from django query
-        actual_keys = [subject_pk, "name"]
+        actual_keys = [primary_key, field_name]
         self.record_matches(expected_subject, expected_keys, actual_subject, actual_keys)
 
     def print_cover_lists(self, raw_cover_list, cover_list):
@@ -56,8 +49,7 @@ class SubjectQueryTest(QueryTestCase):
             cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
             print(cover_dict)
 
-
-class CoverListQueryTest(SubjectQueryTest):
+class CoverListQueryTest(QueryTestCase):
     """
     Tests lists of covers for an individual artist, author, or book
     """
@@ -146,7 +138,7 @@ class CoverListQueryTest(SubjectQueryTest):
 
 
 # python manage.py test bookcovers.tests.test_queries.AuthorQueryTests --settings=djabbic.testsettings
-class AuthorQueryTests(SubjectQueryTest):
+class AuthorQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
@@ -191,7 +183,7 @@ class AuthorQueryTests(SubjectQueryTest):
 
         # for each author: compare expected name against actual name
         for raw_author_list, author_list in zip(raw_author_list, author_list):
-            self.subject_matches("author_id", raw_author_list, author_list)
+            self.item_matches("author_id", "name", raw_author_list, author_list)
 
     def test_authors_cover_list(self):
         """
@@ -313,7 +305,7 @@ class AuthorQueryTests(SubjectQueryTest):
             self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
 
-class ArtistQueryTests(SubjectQueryTest):
+class ArtistQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
@@ -353,7 +345,7 @@ class ArtistQueryTests(SubjectQueryTest):
 
         # for each artist: compare expected name against actual  name
         for raw_artist_list, artist_list in zip(raw_artist_list, artist_list):
-            self.subject_matches("artist_id", raw_artist_list, artist_list)
+            self.item_matches("artist_id", "name", raw_artist_list, artist_list)
 
     def test_artists_cover_list(self):
         """
@@ -372,7 +364,7 @@ class ArtistQueryTests(SubjectQueryTest):
         cover_list_test.validate_all_lists_of_covers()
 
 
-class BookQueryTests(SubjectQueryTest):
+class BookQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
@@ -441,7 +433,7 @@ class BookQueryTests(SubjectQueryTest):
 
         cover_list_test.validate_all_lists_of_covers()
 
-class ArtworkQueryTests(SubjectQueryTest):
+class ArtworkQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
