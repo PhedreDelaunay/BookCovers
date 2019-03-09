@@ -360,13 +360,6 @@ def book_cover_detail(request, edition_id, context):
     page = request.GET.get('page')
     print(f"book_cover_detail: page is '{page}'")
 
-    # up to here
-    # need subject pager here as well
-    # need some kind of function for pagers
-    # book pager and this view currently coded for artist book covers
-    # ideally make generic for both artist book covers and author book covers
-    # or need specific pager and views
-
     # edition -> cover -> artwork
     edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
     print (f"edition is {edition.pk}, artwork is {edition.theCover.artwork_id}, book is '{edition.book.title}'")
