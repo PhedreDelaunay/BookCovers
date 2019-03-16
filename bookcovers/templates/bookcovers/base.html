@@ -3,7 +3,7 @@
 
 {% load static %}
 <head>
-    <title>{% block title %}Science Fiction Cover Art{% endblock %}</title>
+    <title>Science Fiction Cover Art - {% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'bookcovers/style.css' %}">
     {% block content_script %}{% endblock %}
 </head>

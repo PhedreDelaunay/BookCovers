@@ -1,0 +1,32 @@
+{# temporary file until converted views to class based view using setup #}
+<div class="pagination">
+    {% block subject_menu %}{% endblock %}
+    <span class="step-links">
+
+        {% comment %}
+           the subject_identifer identifies the entry point into the list
+           it is needed to maintain the url pattern and page correctly at different levels
+           eg from sets or book. this only works if sets doesn't end with a /
+           to fix this we would need to test for sets url here and adjust the url as appropriate
+        {% endcomment %}
+        {% if the_pager.subject_pager.has_previous %}
+            <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}=1">&laquo; first</a>
+            <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}={{ the_pager.subject_pager.previous_page_number }}">previous</a>
+        {% else %}
+            <p class="greyed" style="display:inline">&laquo; first previous</p>
+        {% endif %}
+
+        <span class="current">
+            {{ the_pager.subject_title }} {{ the_pager.subject_pager.number }} of {{ the_pager.subject_pager.paginator.num_pages }}.
+        </span>
+
+        {% if the_pager.subject_pager.has_next %}
+            <a href="../{{ the_pager.subject_identifier }}/?{{ the_pager.subject }}={{ the_pager.subject_pager.next_page_number }}">next</a>
+            <a href="../{{ the_pager.subject_identifier }}?{{ the_pager.subject }}={{ the_pager.subject_pager.paginator.num_pages }}">last &raquo;</a>
+        {% else %}
+            <p class="greyed" style="display:inline">next last &raquo;</p>
+        {% endif %}
+
+
+    </span>
+</div>

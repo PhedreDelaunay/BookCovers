@@ -65,15 +65,15 @@ class ArtistPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
         self.test_class_name = "ArtistPageTest"
-        self.reverse_url = reverse('bookcovers:artist_books', kwargs={'artist_id': 6})
-        self.template_url = 'bookcovers/artist_book_covers.html'
+        self.reverse_url = reverse('bookcovers:artist_covers', kwargs={'artist_id': 6})
+        self.template_url = 'bookcovers/artist_covers.html'
 
     def test_status_code_name(self):
-        reverse_url = reverse('bookcovers:artist_books', kwargs={'name': 'Jim Burns'})
+        reverse_url = reverse('bookcovers:artist_covers', kwargs={'name': 'Jim Burns'})
         self.check_status_code(reverse_url=reverse_url)
 
     def test_status_code_slug(self):
-        reverse_url = reverse('bookcovers:artist_books', kwargs={'slug': 'Jim-Burns'})
+        reverse_url = reverse('bookcovers:artist_covers', kwargs={'slug': 'Jim-Burns'})
         self.check_status_code(reverse_url=reverse_url)
 
 class ArtworkPageTest(PageTestCases.PageTestCase):
@@ -96,7 +96,7 @@ class AuthorPageTest(PageTestCases.PageTestCase):
     def setUp(self):
         self.test_class_name = "AuthorPageTest"
         self.reverse_url = reverse('bookcovers:author_books', kwargs={'author_id': 4})
-        self.template_url = 'bookcovers/author_book_covers.html'
+        self.template_url = 'bookcovers/author_books.html'
 
     # test sets link appears in author, Ray Bradbury, known to have sets
     # https://docs.djangoproject.com/en/2.1/topics/testing/tools/

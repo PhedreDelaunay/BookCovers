@@ -2,6 +2,7 @@
 
 {% load static %}
 
+{% block title %}{{ view.web_title }}{% endblock %}
 {% block content_script %}
 <script LANGUAGE="JavaScript" TYPE="text/javascript">
 <!--
@@ -48,8 +49,8 @@ mostCovers = 2;
 {% include 'bookcovers/author_pager.html' %}
 {% endblock %}
 {% block content %}
-    <h2 style="display:inline";>{{ author }}</h2>
-    {% if set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' author %}">View sets of covers by artist</a>
+    <h2 style="display:inline";>{{ view.author }}</h2>
+    {% if view.set_list %}<a style="display:inline;" href="{% url 'bookcovers:author_book_sets' view.author %}">View sets of covers by artist</a>
     {% endif %}
     {% comment exclude duplicates, designed for use with javascript to rotate images %}
     <BR>Exclude duplicates<BR>

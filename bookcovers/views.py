@@ -2,10 +2,13 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
+from django.views.generic import TemplateView
+from django.views import View
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.db.models import F
 from django.db.models import Q
+from django.template import RequestContext
 
 
 from bookcovers.models import Author
@@ -23,6 +26,7 @@ from bookcovers.original_raw_querys import OriginalRawQuerys
 from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import AuthorPager
 from bookcovers.pagers import BookPager
+from bookcovers.record_helper import *
 
 import math
 
@@ -44,6 +48,8 @@ class SubjectList(ListView):
     # in template use item_list instead of object_list
     context_object_name = 'item_list'
 
+    # https://reinout.vanrees.org/weblog/2014/05/19/context.html
+    # this is the old way of doing things as can reference view in template
     def get_context_data(self,**kwargs):
         print ("entering get_context_data")
         context = super(SubjectList,self).get_context_data(**kwargs)
@@ -81,47 +87,20 @@ class ArtistList(SubjectList):
         self.title = "Artists"
 
     def get_queryset(self):
-        print ("ArtistList: calling CoverQuerys.artist_list")
-        #artist_list = Artists.objects.order_by('name')
         queryset = CoverQuerys.artist_list()
         return queryset
 
-# http:<host>/bookcovers/artist/<artist_id>
-# http:<host>/bookcovers/artist/<artist%20name>
-# http:<host>/bookcovers/artist/<artist-slug>
-def artist_book_covers(request, artist_id=None, name=None, slug=None):
-    """
-    displays thumbnails of books with covers by this artist
-    :param request:
-    one of
-    :param artist_id:   ex: /bookcovers/artist/6/
-    :param name:        ex: /bookcovers/artist/Jim%20Burns/
-    :param slug:        ex: /bookcovers/artist/Jim-Burns/
-    :return:
-    """
-    template_name = 'bookcovers/artist_book_covers.html'
+# AuthorList -> author_book_cover
+# http:<host>/bookcovers/authors/
+class AuthorList(SubjectList):
+    template_name = 'bookcovers/author_list.html'
 
-    artist_pager = ArtistPager(request,  artist_id=artist_id, name=name, slug=slug)
-    artist = artist_pager.get_entry()
+    def __init__(self):
+        self.title = "Authors"
 
-    cover_list = CoverQuerys.artist_cover_list(artist=artist)
-    print("cover_filepath is {}".format(artist.cover_filepath))
-    context = {'artist': artist,
-               'cover_list': cover_list,
-               'the_pager': artist_pager,}
-    return render(request, template_name, context)
-
-def _artist_pager(request, artwork_id):
-    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-
-    # artist pager
-    artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
-    if artist_pager.get_request_page():
-        # move on to the next or previous artist
-        artist = artist_pager.get_entry()
-        return redirect(to='bookcovers:artist_books', permanent=False, artist_id=artist.artist_id)
-    else:
-        return artist_pager
+    def get_queryset(self):
+        queryset = CoverQuerys.author_list()
+        return queryset
 
 # http:<host>/bookcovers/artwork/<artwork_id>
 def books_per_artwork(request, artwork_id):
@@ -132,8 +111,6 @@ def books_per_artwork(request, artwork_id):
     :param artwork_id:  ex: /bookcovers/artwork/178/
     :return:
     """
-    # up to here - trying to figure out how to turn this into function for re-use
-    #artist_pager = _artist_pager(request, artwork_id)
 
     artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
 
@@ -142,7 +119,7 @@ def books_per_artwork(request, artwork_id):
     if artist_pager.get_request_page():
         # move on to the next or previous artist
         artist = artist_pager.get_entry()
-        return redirect(to='bookcovers:artist_books', permanent=False, artist_id=artist.artist_id)
+        return redirect(to='bookcovers:artist_covers', permanent=False, artist_id=artist.artist_id)
 
     # book cover pager
     page = request.GET.get('page')
@@ -179,25 +156,32 @@ def books_per_artwork(request, artwork_id):
     return render(request, template_name, context)
 
 
-# AuthorList -> author_book_cover
-# http:<host>/bookcovers/authors/
-class AuthorList(SubjectList):
-    template_name = 'bookcovers/author_list.html'
+# https://reinout.vanrees.org/weblog/2011/08/24/class-based-views-walkthrough.html
+class BaseListView(ListView):
+    context_object_name = 'cover_list'      # template context
 
-    def __init__(self):
-        self.title = "Authors"
+    @property
+    def web_title(self):
+        return self._web_title
 
-    def get_queryset(self):
-        print ("AuthorList: calling CoverQuerys.author_list")
-        queryset = CoverQuerys.author_list()
-        return queryset
+    @web_title.setter
+    def web_title(self, value):
+        self._web_title = value
 
-# http:<host>/bookcovers/author/<author_id>
-# http:<host>/bookcovers/author/<author%20name>
-# http:<host>/bookcovers/author/<author-slug>
-def author_book_covers(request, author_id=None, name=None, slug=None):
+    @property
+    def the_pager(self):
+        return self._the_pager
+
+    @the_pager.setter
+    def the_pager(self, value):
+        self._the_pager = value
+
+# http:<host>/bookcovers/author/<author_id>/
+# http:<host>/bookcovers/author/<author%20name>/
+# http:<host>/bookcovers/author/<author-slug>/
+class AuthorBooks(BaseListView):
     """
-    displays thumbnails of books by this author
+    displays a list of books by this author as thumbnails
     :param request:
     one of
     :param author_id:   ex: /bookcovers/author/4/
@@ -205,27 +189,102 @@ def author_book_covers(request, author_id=None, name=None, slug=None):
     :param slug:        ex: /bookcovers/author/Robert-Heinlein/
     :return:
     """
-    template_name = 'bookcovers/author_book_covers.html'
-    subject = "author"
-    author_page = request.GET.get(subject)
-    #print(f"author_book_covers: author_page is '{author_page}'")
+    template_name = 'bookcovers/author_books.html'
 
-    author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
-    author = author_pager.get_entry()
-    print (f"author is {author}")
+    # setup is called when the class instance is created
+    # note: not in 2.1, added in 2.2
+    # /Users/tarbetn/Virtualenvs/djabbic/lib/python3.7/site-packages/django/views/generic/base.py
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.author_id = kwargs.get("author_id", None)
+        self.name = kwargs.get("name", None)
+        self.slug = kwargs.get("slug", None)
+        self._author = None
 
-    set_list = CoverQuerys.author_set_list(author=author.pk)
+    @property
+    def author(self):
+        return self._author
 
-    cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, all=False)
-    #print (f"cover list query is {cover_list.query}")
-    #print (f"cover list for author {author.author_id} is {cover_list}")
-    context = {'author': author,
-               'cover_list': cover_list,
-               'set_list': set_list,
-               'the_pager': author_pager,}
+    @author.setter
+    def author(self, value):
+        self._author = value
 
-    return render(request, template_name, context)
+    def set_list(self):
+        set_list = CoverQuerys.author_set_list(author_id=self.author.pk)
+        return set_list
 
+    def create_the_pager(self):
+        author_pager = AuthorPager(self.request,  author_id=self.author_id, name=self.name, slug=self.slug)
+        return author_pager
+
+    def get_queryset(self):
+        self.the_pager = self.create_the_pager()
+        self.author = self.the_pager.get_entry()
+        self.web_title = self.author.name
+        queryset = CoverQuerys.all_covers_of_all_books_for_author(author=self.author, all=False)
+        return queryset
+
+    # def dispatch(self, request, *args, **kwargs):
+    #
+    #     #print(**kwargs)
+    #
+    #     self.author_id = kwargs['author_id']
+    #     print(f"in dispatch function {self.author_id}")
+    #     # needed to have an HttpResponse
+    #     return super(AuthorBooks, self).dispatch(request, *args, **kwargs)
+
+# http:<host>/bookcovers/artist/<artist_id>
+# http:<host>/bookcovers/artist/<artist%20name>
+# http:<host>/bookcovers/artist/<artist-slug>
+class ArtistCovers(BaseListView):
+    """
+    displays list of books with covers by this artist as thumbnailse
+    :param request:
+    one of
+    :param artist_id:   ex: /bookcovers/artist/6/
+    :param name:        ex: /bookcovers/artist/Jim%20Burns/
+    :param slug:        ex: /bookcovers/artist/Jim-Burns/
+    :return:
+    """
+    template_name = 'bookcovers/artist_covers.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.artist_id = kwargs.get("artist_id", None)
+        self.name = kwargs.get("name", None)
+        self.slug = kwargs.get("slug", None)
+        self._artist = None
+        print (f"in setup: artist-id={self.artist_id}")
+
+    @property
+    def artist(self):
+        return self._artist
+
+    @artist.setter
+    def artist(self, value):
+        print (f"artist_setter: value is {value}")
+        self._artist = value
+
+    def set_list(self):
+        # TODO
+        set_list = None
+        return set_list
+
+    def create_the_pager(self):
+        artist_pager = ArtistPager(self.request,  artist_id=self.artist_id, name=self.name, slug=self.slug)
+        return artist_pager
+
+    def get_queryset(self):
+        self.the_pager = self.create_the_pager()
+        self.artist = self.the_pager.get_entry()
+        self.web_title = self.artist.name
+        queryset = CoverQuerys.artist_cover_list(artist=self.artist)
+        return queryset
+
+
+# http:<host>/bookcovers/author/<author_id>/sets
+# http:<host>/bookcovers/author/<author%20name>/sets
+# http:<host>/bookcovers/author/<author-slug>/sets
 def author_book_sets(request, author_id=None, name=None, slug=None):
     """
     displays thumbnails of books by this author ordered in sets by artist

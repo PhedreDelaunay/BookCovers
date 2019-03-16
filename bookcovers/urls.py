@@ -1,6 +1,8 @@
 from django.urls import path
 from bookcovers.views import AuthorList
 from bookcovers.views import ArtistList
+from bookcovers.views import AuthorBooks
+from bookcovers.views import ArtistCovers
 from bookcovers.views import BookCoverDetail
 
 from . import views
@@ -19,21 +21,22 @@ urlpatterns = [
     # ex: /bookcovers/authors/
     path('authors/', AuthorList.as_view(), name='authors'),
     # ex: /bookcovers/author/4/
-    path('author/<int:author_id>/', views.author_book_covers, name='author_books'),
+    path('author/<int:author_id>/', AuthorBooks.as_view(), name='author_books'),
     # ex: /bookcovers/author/Robert-Heinlein/
-    path('author/<slug:slug>/', views.author_book_covers, name='author_books'),
-    # ex: /bookcovers/artist/Robert%20Heinelein/
-    path('author/<name>/', views.author_book_covers, name='author_books'),
-    # ex: /bookcovers/artist/Ray%20Bradbury/sets/
+    path('author/<slug:slug>/', AuthorBooks.as_view(), name='author_books'),
+    # ex: /bookcovers/author/Robert%20Heinelein/
+    path('author/<name>/', AuthorBooks.as_view(), name='author_books'),
+    # ex: /bookcovers/artist/Ray%20Bradbury/sets
+    # do not add a / at the end of sets it will break paging; else fix subject_pager.html to handle it
     path('author/<name>/sets', views.author_book_sets, name='author_book_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
-    path('artist/<int:artist_id>/', views.artist_book_covers, name='artist_books'),
+    path('artist/<int:artist_id>/', ArtistCovers.as_view(), name='artist_covers'),
     # ex: /bookcovers/artist/Jim-Burns/
-    path('artist/<slug:slug>/',  views.artist_book_covers, name='artist_books'),
+    path('artist/<slug:slug>/',  ArtistCovers.as_view(), name='artist_covers'),
     # ex: /bookcovers/artist/Jim%20Burns/
-    path('artist/<name>/', views.artist_book_covers, name='artist_books'),
+    path('artist/<name>/', ArtistCovers.as_view(), name='artist_covers'),
     # ex: /bookcovers/book/467/
     path('book/<int:book_id>/', views.book, name='book_covers'),
     # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
