@@ -7,13 +7,7 @@ from bookcovers.models import Artists
 from bookcovers.models import Artworks
 from bookcovers.models import Author
 from bookcovers.cover_querys import CoverQuerys
-
-def transform_slug(slug):
-    slug = slug.replace('__', '%')
-    slug = slug.replace('-', ' ')
-    slug = slug.replace('%', '-')
-
-    return slug
+from bookcovers.record_helper import *
 
 class MenuPager():
 
@@ -90,19 +84,10 @@ class SubjectPager(MenuPager):
         if self.page:
             print(f"subject_list[{self.page}-1] is {subject_list[int(self.page)-1]}")
             kwargs = {'pk': subject_list[int(self.page) - 1][subject_id_key]}
+            self.entry = get_object_or_404(subject_model, **kwargs)
         else:
-            if self.subject_id:
-                kwargs = {'pk': self.subject_id}
-            elif self.name:
-                kwargs = {'name': self.name}
-            elif self.slug:
-                slug = transform_slug(self.slug)
-                kwargs = {'name': slug}
+            self.entry = get_subject_record(model=subject_model, subject_id=self.subject_id, name=self.name, slug=self.slug)
 
-        for key, value in kwargs.items():
-            print (f"key {key} is '{value}'")
-
-        self.entry = get_object_or_404(subject_model, **kwargs)
         print (f"SubjectPager: pager entry is '{self.entry}'")
         if not self.page:
             # Which page is the requested entry?
