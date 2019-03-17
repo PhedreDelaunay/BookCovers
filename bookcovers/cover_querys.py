@@ -43,7 +43,7 @@ class CoverQuerys:
     @staticmethod
     def artist_cover_list(artist):
         """
-        :param artist:
+        :param artist:   artist model instance
         :return:
         """
         print("artist is {}".format(artist.name))
@@ -112,7 +112,7 @@ class CoverQuerys:
             for cover in cover_list:
                 author_directory = cover['book__author__name'].replace(" ","").replace(".","")
                 cover['book__author__name'] = f"{author_directory}/"
-        print(f"artist_cover_list.query is '{cover_list.query}'")
+        #print(f"artist_cover_list.query is '{cover_list.query}'")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
         return cover_list
@@ -323,11 +323,11 @@ class CoverQuerys:
 
 
     @staticmethod
-    def author_set_list(author):
+    def author_set_list(author_id):
         # use .values to return ValuesQuerySet which looks like list of dictionaries
         #set_list = Sets.objects.filter(author_id=author).values()
 
-        set_list = Sets.objects.filter(author_id=author) \
+        set_list = Sets.objects.filter(author_id=author_id) \
                      .values("set_id", "series_id", "author_id", "artist_id", "imprint_id",
                              "description", "panorama_id", 'artist__name')
         # SELECT sets.set_id, sets.series_id, sets.author_id, sets.artist_id, sets.imprint_id, sets.description, sets.panorama_id
