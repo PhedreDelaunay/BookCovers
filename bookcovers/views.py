@@ -78,7 +78,7 @@ class SubjectList(ListView):
         return num_rows
 
 
-# ArtistList -> artist_book_covers -> books_per_artwork
+# ArtistList -> ArtistCovers -> books_per_artwork
 # http:<host>/bookcovers/artists/
 class ArtistList(SubjectList):
     template_name = 'bookcovers/artist_list.html'
@@ -90,7 +90,7 @@ class ArtistList(SubjectList):
         queryset = CoverQuerys.artist_list()
         return queryset
 
-# AuthorList -> author_book_cover
+# AuthorList -> AuthorCovers
 # http:<host>/bookcovers/authors/
 class AuthorList(SubjectList):
     template_name = 'bookcovers/author_list.html'
@@ -101,60 +101,6 @@ class AuthorList(SubjectList):
     def get_queryset(self):
         queryset = CoverQuerys.author_list()
         return queryset
-
-# http:<host>/bookcovers/artwork/<artwork_id>
-def books_per_artwork(request, artwork_id):
-    """
-    displays all book covers using the same artwork, eg 'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
-    or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
-    :param request:
-    :param artwork_id:  ex: /bookcovers/artwork/178/
-    :return:
-    """
-
-    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-
-    # artist pager
-    artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
-    if artist_pager.get_request_page():
-        # move on to the next or previous artist
-        artist = artist_pager.get_entry()
-        return redirect(to='bookcovers:artist_covers', permanent=False, artist_id=artist.artist_id)
-
-    # book cover pager
-    page = request.GET.get('page')
-    print(f"artwork cover_list: page is '{page}'")
-
-    pager = BookPager(page=page, item_id=artwork_id)
-    book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
-                             item_id_key="artwork_id",
-                             item_model=Artworks,
-                             subject_id_key='artist_id',
-                             subject_model=Artists)
-    artwork = pager.get_entry()
-
-    artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
-    num_covers = len(artwork_cover_list)
-    if num_covers == 1:
-         # display the book detail
-         # the template includes template book_cover_detail.html
-         edition = get_object_or_404(Editions, edition_id=artwork_cover_list[0]['edition__pk'])
-    #     # maybe can have 1 template for book detail which can show multiples
-    #     # rather than 3 templates with BookPager; books_per_artwork, covers_per_book, book_cover_detail
-    #     # remember that when multiple covers we go down yet another level with cover pager as well
-    #     # get subject pager working first to understand
-    else:
-        edition = None
-
-    # display thumbnails of all covers for this artwork
-    template_name = 'bookcovers/artist_books_per_artwork.html'
-    context = {'artwork': artwork,
-               'cover_list': artwork_cover_list,
-               'the_pager': artist_pager,
-               'book_pager': book_pager,
-               'edition': edition}
-    return render(request, template_name, context)
-
 
 # https://reinout.vanrees.org/weblog/2011/08/24/class-based-views-walkthrough.html
 class BaseListView(ListView):
@@ -238,7 +184,7 @@ class AuthorBooks(BaseListView):
 # http:<host>/bookcovers/artist/<artist-slug>
 class ArtistCovers(BaseListView):
     """
-    displays list of books with covers by this artist as thumbnailse
+    displays list of books with covers by this artist as thumbnails
     :param request:
     one of
     :param artist_id:   ex: /bookcovers/artist/6/
@@ -254,7 +200,7 @@ class ArtistCovers(BaseListView):
         self.name = kwargs.get("name", None)
         self.slug = kwargs.get("slug", None)
         self._artist = None
-        print (f"in setup: artist-id={self.artist_id}")
+        print (f"in setup: artist_id={self.artist_id}")
 
     @property
     def artist(self):
@@ -281,6 +227,127 @@ class ArtistCovers(BaseListView):
         queryset = CoverQuerys.artist_cover_list(artist=self.artist)
         return queryset
 
+class BaseBookView(DetailView):
+
+    @property
+    def web_title(self):
+        return self._web_title
+
+    @web_title.setter
+    def web_title(self, value):
+        self._web_title = value
+
+    @property
+    def the_pager(self):
+        return self._the_pager
+
+    @the_pager.setter
+    def the_pager(self, value):
+        self._the_pager = value
+
+    def get(self, request, **kwargs):
+        return super().get(request, **kwargs)
+
+
+class Artwork(BaseBookView):
+    """
+        display a single book cover using this artwork (the most common scenario)
+        redirect to ArtworkList when multiple covers are returned
+    """
+    template_name = 'bookcovers/edition_detail.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.artwork_id = kwargs.get("artwork_id", None)
+        self.artwork = get_object_or_404(Artworks, artwork_id=self.artwork_id)
+        print (f"in setup: artwork_id={self.artwork_id}")
+
+    @property
+    def artwork(self):
+        return self._artwork
+
+    @artwork.setter
+    def artwork(self, value):
+        print (f"artwork_setter: value is {value}")
+        self._artwork = value
+
+    def create_the_pager(self):
+        artist_pager = ArtistPager(self.request,  artist_id=self.artwork.artist_id, name=self.name, slug=self.slug)
+        return artist_pager
+
+    def get_object(self, queryset=None):
+        # if multiple covers are returned exception will be caught and redirect to artwork list view
+        cover = Covers.objects.get(artwork_id=self.artwork.pk, flags__lt=256)
+        print (f"cover is {cover}")
+        edition = get_object_or_404(Editions, edition_id=cover.edition.pk)
+        return edition
+
+    def get(self, request, **kwargs):
+        try:
+            return super().get(request, **kwargs)
+        except Covers.MultipleObjectsReturned:
+            return redirect(to='bookcovers:artwork_list', permanent=False, artwork_id=self.artwork_id)
+
+# class ArtworkList(BaseListView):
+#     """
+#         displays all book covers using the same artwork, eg
+#         'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
+#         or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
+#     """
+
+# http:<host>/bookcovers/artworks/<artwork_id>
+def books_per_artwork(request, artwork_id):
+    """
+    displays all book covers using the same artwork, eg 'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
+    or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
+    :param request:
+    :param artwork_id:  ex: /bookcovers/artwork/178/
+    :return:
+    """
+    print (f"books_per_artwork: artwork_id={artwork_id}")
+    artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+
+    # artist pager
+    artist_pager = ArtistPager(request,  artist_id=artwork.artist_id)
+    if artist_pager.get_request_page():
+        # move on to the next or previous artist
+        artist = artist_pager.get_entry()
+        return redirect(to='bookcovers:artist_covers', permanent=False, artist_id=artist.artist_id)
+
+    # book cover pager
+    page = request.GET.get('page')
+    print(f"artwork cover_list: page is '{page}'")
+
+    pager = BookPager(page=page, item_id=artwork_id)
+    book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
+                             item_id_key="artwork_id",
+                             item_model=Artworks,
+                             subject_id_key='artist_id',
+                             subject_model=Artists)
+    artwork = pager.get_entry()
+
+    artwork_cover_list = CoverQuerys.all_covers_for_artwork(artwork)
+    num_covers = len(artwork_cover_list)
+    if num_covers == 1:
+         # display the book detail
+         # the template includes template book_cover_detail.html
+         edition = get_object_or_404(Editions, edition_id=artwork_cover_list[0]['edition__pk'])
+         # maybe can have 1 template for book detail which can show multiples
+         # rather than 3 templates with BookPager; books_per_artwork, covers_per_book, book_cover_detail
+         # remember that when multiple covers we go down yet another level with cover pager as well
+         # get subject pager working first to understand
+         #return redirect(to='bookcovers:edition', permanent=False, edition_id=edition.pk)
+    else:
+        edition = None
+
+    # display thumbnails of all covers for this artwork
+    template_name = 'bookcovers/artist_books_per_artwork.html'
+    context = {'artwork': artwork,
+               'cover_list': artwork_cover_list,
+               'the_pager': artist_pager,
+               'book_pager': book_pager,
+               'edition': edition}
+    return render(request, template_name, context)
 
 # http:<host>/bookcovers/author/<author_id>/sets
 # http:<host>/bookcovers/author/<author%20name>/sets
@@ -423,12 +490,12 @@ def book_cover_detail(request, edition_id, context):
     edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
     print (f"edition is {edition.pk}, artwork is {edition.theCover.artwork_id}, book is '{edition.book.title}'")
 
-    #context = {'edition': edition}
     return render(request, template_name, context)
 
-class BookCoverDetail(DetailView):
+class EditionDetail(DetailView):
     model=Editions
-    template_name = 'bookcovers/book_cover_detail.html'
+    print ("Edition detail")
+    template_name = 'bookcovers/edition_detail.html'
 
 
 #=========================================
