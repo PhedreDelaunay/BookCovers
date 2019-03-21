@@ -2,31 +2,37 @@
     {% block book_menu %}{% endblock %}
     <span class="step-links">
         url name is {{ request.resolver_match.url_name }}
-        {% if book_pager.has_previous %}
+        {% if view.book_pager.has_previous %}
             <a href="?page=1">&laquo; first</a>
             {# up to here probably want to test for book_edition and artwork_edition for alternate next/previous #}
             {% if request.resolver_match.url_name == "book_covers" or request.resolver_match.url_name == 'artwork' %}
-                <a href="?page={{ book_pager.previous_page_number }}">previous</a>
+                <a href="?page={{ view.book_pager.previous_page_number }}">previous</a>
+            {% elif request.resolver_match.url_name == 'artwork_list' %}
+                {#  up to here not always artwork do we want more pager templates? #}
+                 <a href="../../artwork/{{ view.artwork.pk }}/?page={{ view.book_pager.previous_page_number }}">previous</a>
             {% else %}
                 {# need to remove edition from /book/edition/id as it is not a valid path #}
-                <a href="../../{{ book.pk }}/?page={{ book_pager.previous_page_number }}">previous</a>
+                <a href="../../{{ view.book.pk }}/?page={{ view.book_pager.previous_page_number }}">previous</a>
             {% endif %}
         {% else %}
             <p class="greyed" style="display:inline">&laquo; first previous</p>
         {% endif %}
 
         <span class="current">
-            book {{ book_pager.number }} of {{ book_pager.paginator.num_pages }}.
+            book {{ view.book_pager.number }} of {{ view.book_pager.paginator.num_pages }}.
         </span>
 
-        {% if book_pager.has_next %}
+        {% if view.book_pager.has_next %}
             {% if request.resolver_match.url_name == "book_covers" or request.resolver_match.url_name == 'artwork' %}
-                <a href="?page={{ book_pager.next_page_number }}">next</a>
+                <a href="?page={{ view.book_pager.next_page_number }}">next</a>
+            {% elif request.resolver_match.url_name == 'artwork_list' %}
+                {#  up to here not always artwork #}
+                <a href="../../artwork/{{ view.artwork.pk }}/?page={{ view.book_pager.next_page_number }}">next</a>
             {% else %}
                 {# need to remove edition from /book/edition/id as it is not a valid path #}
-                <a href="../../{{ book.pk }}/?page={{ book_pager.next_page_number }}">next</a>
+                <a href="../../{{ view.book.pk }}/?page={{ view.book_pager.next_page_number }}">next</a>
             {% endif %}
-            <a href="?page={{ book_pager.paginator.num_pages }}">last &raquo;</a>
+            <a href="?page={{ view.book_pager.paginator.num_pages }}">last &raquo;</a>
         {% else %}
             <p class="greyed" style="display:inline">next last &raquo;</p>
         {% endif %}

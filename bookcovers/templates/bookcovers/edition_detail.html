@@ -1,8 +1,17 @@
+{% extends "bookcovers/base.html" %}
+
 {% load static %}
 
+{% block title %}{{ view.web_title }}{% endblock %}
+{% block menu_pagers %}
+{% include 'bookcovers/subject_pager.html' %}
+    {# up to here - need to include appropriate pager #}
+{% include 'bookcovers/artwork_pager.html' %}
+{% endblock %}
 artwork: {{ object.theCover.artwork.pk }}
 book: {{ object.book.pk }}
 
+{% block content %}
 <h2>{{ object.book.title }}</h2>
 <table><tr><td>
     {% if object.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
@@ -26,3 +35,4 @@ book: {{ object.book.pk }}
     This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID=7','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ object.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
 </td></tr>
 </table>
+{% endblock %}

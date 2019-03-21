@@ -21,12 +21,16 @@ from bookcovers.models import Editions
 from bookcovers.models import Sets
 
 from bookcovers.cover_querys import CoverQuerys
+from bookcovers.record_helper import *
 from bookcovers.original_raw_querys import OriginalRawQuerys
 
 from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import AuthorPager
 from bookcovers.pagers import BookPager
-from bookcovers.record_helper import *
+
+from bookcovers.view_mixin import AuthorMixin
+from bookcovers.view_mixin import ArtistMixin
+
 
 import math
 
@@ -102,30 +106,12 @@ class AuthorList(SubjectList):
         queryset = CoverQuerys.author_list()
         return queryset
 
-# https://reinout.vanrees.org/weblog/2011/08/24/class-based-views-walkthrough.html
-class BaseListView(ListView):
-    context_object_name = 'cover_list'      # template context
 
-    @property
-    def web_title(self):
-        return self._web_title
-
-    @web_title.setter
-    def web_title(self, value):
-        self._web_title = value
-
-    @property
-    def the_pager(self):
-        return self._the_pager
-
-    @the_pager.setter
-    def the_pager(self, value):
-        self._the_pager = value
 
 # http:<host>/bookcovers/author/<author_id>/
 # http:<host>/bookcovers/author/<author%20name>/
 # http:<host>/bookcovers/author/<author-slug>/
-class AuthorBooks(BaseListView):
+class AuthorBooks(AuthorMixin, ListView):
     """
     displays a list of books by this author as thumbnails
     :param request:
@@ -136,6 +122,7 @@ class AuthorBooks(BaseListView):
     :return:
     """
     template_name = 'bookcovers/author_books.html'
+    context_object_name = 'cover_list'      # template context
 
     # setup is called when the class instance is created
     # note: not in 2.1, added in 2.2
@@ -147,14 +134,6 @@ class AuthorBooks(BaseListView):
         self.slug = kwargs.get("slug", None)
         self._author = None
 
-    @property
-    def author(self):
-        return self._author
-
-    @author.setter
-    def author(self, value):
-        self._author = value
-
     def set_list(self):
         set_list = CoverQuerys.author_set_list(author_id=self.author.pk)
         return set_list
@@ -165,6 +144,7 @@ class AuthorBooks(BaseListView):
 
     def get_queryset(self):
         self.the_pager = self.create_the_pager()
+        # get the author to display
         self.author = self.the_pager.get_entry()
         self.web_title = self.author.name
         queryset = CoverQuerys.all_covers_of_all_books_for_author(author=self.author, all=False)
@@ -182,7 +162,7 @@ class AuthorBooks(BaseListView):
 # http:<host>/bookcovers/artist/<artist_id>
 # http:<host>/bookcovers/artist/<artist%20name>
 # http:<host>/bookcovers/artist/<artist-slug>
-class ArtistCovers(BaseListView):
+class ArtistCovers(ArtistMixin, ListView):
     """
     displays list of books with covers by this artist as thumbnails
     :param request:
@@ -193,6 +173,8 @@ class ArtistCovers(BaseListView):
     :return:
     """
     template_name = 'bookcovers/artist_covers.html'
+    context_object_name = 'cover_list'      # template context
+
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -202,54 +184,21 @@ class ArtistCovers(BaseListView):
         self._artist = None
         print (f"in setup: artist_id={self.artist_id}")
 
-    @property
-    def artist(self):
-        return self._artist
-
-    @artist.setter
-    def artist(self, value):
-        print (f"artist_setter: value is {value}")
-        self._artist = value
-
     def set_list(self):
         # TODO
         set_list = None
         return set_list
 
-    def create_the_pager(self):
-        artist_pager = ArtistPager(self.request,  artist_id=self.artist_id, name=self.name, slug=self.slug)
-        return artist_pager
-
     def get_queryset(self):
-        self.the_pager = self.create_the_pager()
+        self.the_pager = self.create_top_level_pager(artist_id=self.artist_id, name=self.name, slug=self.slug)
+        # get the artist to display
         self.artist = self.the_pager.get_entry()
         self.web_title = self.artist.name
         queryset = CoverQuerys.artist_cover_list(artist=self.artist)
         return queryset
 
-class BaseBookView(DetailView):
-
-    @property
-    def web_title(self):
-        return self._web_title
-
-    @web_title.setter
-    def web_title(self, value):
-        self._web_title = value
-
-    @property
-    def the_pager(self):
-        return self._the_pager
-
-    @the_pager.setter
-    def the_pager(self, value):
-        self._the_pager = value
-
-    def get(self, request, **kwargs):
-        return super().get(request, **kwargs)
-
-
-class Artwork(BaseBookView):
+# http:<host>/bookcovers/artwork/<artwork_id>
+class Artwork(ArtistMixin, DetailView):
     """
         display a single book cover using this artwork (the most common scenario)
         redirect to ArtworkList when multiple covers are returned
@@ -260,40 +209,62 @@ class Artwork(BaseBookView):
         super().setup(request, *args, **kwargs)
         self.artwork_id = kwargs.get("artwork_id", None)
         self.artwork = get_object_or_404(Artworks, artwork_id=self.artwork_id)
-        print (f"in setup: artwork_id={self.artwork_id}")
-
-    @property
-    def artwork(self):
-        return self._artwork
-
-    @artwork.setter
-    def artwork(self, value):
-        print (f"artwork_setter: value is {value}")
-        self._artwork = value
-
-    def create_the_pager(self):
-        artist_pager = ArtistPager(self.request,  artist_id=self.artwork.artist_id, name=self.name, slug=self.slug)
-        return artist_pager
+        print (f"Artwork: in setup: artwork_id={self.artwork_id}")
 
     def get_object(self, queryset=None):
         # if multiple covers are returned exception will be caught and redirect to artwork list view
         cover = Covers.objects.get(artwork_id=self.artwork.pk, flags__lt=256)
-        print (f"cover is {cover}")
+        print (f"Artwork: get_object; cover is {cover}")
         edition = get_object_or_404(Editions, edition_id=cover.edition.pk)
+        self.web_title = self.artwork.name
         return edition
 
     def get(self, request, **kwargs):
+        print (f"Artwork: get  - artist {self.artwork.artist_id}")
         try:
-            return super().get(request, **kwargs)
+            self.the_pager = self.create_top_level_pager(self.artwork.artist_id)
+            if self.the_pager.get_request_page():
+                # move on to the next or previous artist
+                artist = self.the_pager.get_entry()
+                return redirect(to='bookcovers:artist_covers', permanent=False, artist_id=artist.artist_id)
+            else:
+                self.book_pager = self.create_book_pager()
+                return super().get(request, **kwargs)
         except Covers.MultipleObjectsReturned:
-            return redirect(to='bookcovers:artwork_list', permanent=False, artwork_id=self.artwork_id)
+            return redirect(to='bookcovers:artwork_list', permanent=False, artwork_id=self.artwork.pk)
 
-# class ArtworkList(BaseListView):
-#     """
-#         displays all book covers using the same artwork, eg
-#         'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
-#         or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
-#     """
+
+# http:<host>/bookcovers/artworks/<artwork_id>
+class ArtworkList(ArtistMixin, ListView):
+    """
+        displays all book covers using the same artwork, eg
+        'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
+        or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
+    """
+    template_name = 'bookcovers/artist_books_per_artwork.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.artwork_id = kwargs.get("artwork_id", None)
+        print (f"ArtworkList: in setup: artwork_id={self.artwork_id}")
+        # get the artwork to display covers for
+        self.artwork = get_object_or_404(Artworks, artwork_id=self.artwork_id)
+
+    def get_queryset(self):
+        self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
+        self.book_pager = self.create_book_pager()
+        self.web_title = self.artwork.name
+        # up to here why is web_title not getting to web page?
+        print (f"ArtworkList: get_queryset artwork.name={self.artwork.name}")
+        queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
+        return queryset
+
+    # context = {'artwork': artwork,
+    #            'cover_list': artwork_cover_list,
+    #            'the_pager': artist_pager,
+    #            'book_pager': book_pager,
+    #            'edition': edition}
 
 # http:<host>/bookcovers/artworks/<artwork_id>
 def books_per_artwork(request, artwork_id):

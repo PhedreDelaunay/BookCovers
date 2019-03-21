@@ -3,12 +3,12 @@
 {% load static %}
 
 {% block menu_pagers %}
-{% include 'bookcovers/first_artist_pager.html' %}
-{% include 'bookcovers/artist_cover_pager.html' %}
+{% include 'bookcovers/subject_pager.html' %}
+{% include 'bookcovers/artwork_pager.html' %}
 {% endblock %}
 {% block content %}
     {% if cover_list|length > 1 %}
-        <h2>{{ artwork.book.title }}</h2>
+        <h2>{{ view.artwork.book.title }}</h2>
         {% for cover in cover_list %}
             <a href="{% url 'bookcovers:artwork_edition' cover.edition__pk %}">
                 <IMG class="cover_list" src="{% static cover.artwork__artist__cover_filepath|add:cover.cover_filename %}"

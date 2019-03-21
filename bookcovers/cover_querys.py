@@ -176,7 +176,7 @@ class CoverQuerys:
         return book_list
 
     @staticmethod
-    def all_covers_of_all_books_for_author(author, all=True):
+    def all_covers_of_all_books_for_author(author, author_id=None, all=True):
         """
         gets all covers of all books for this author
         :param author: author object to fetch covers for
@@ -184,12 +184,15 @@ class CoverQuerys:
                     False = eliminates duplicate cover entries, where the same file is used for multiple cover records
         :return: dict queryset to fetch all covers of all books for this author
         """
-        print("author is {}".format(author.name))
-        aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author.pk)
+        if not author_id:
+            author_id = author.pk
+            print("author is {}".format(author.name))
+        print (f"author_id is {author_id}")
+        aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author_id)
 
         # this returns all covers for all books
         all_cover_list = Books.objects \
-            .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
                    'theCover__artwork__artist__cover_filepath',
@@ -206,7 +209,7 @@ class CoverQuerys:
         # this eliminates duplicate cover entries, where the same file is used for multiple cover records
         # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
         dedup_cover_list = Books.objects \
-            .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
+            .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
                    'theCover__artwork__artist__cover_filepath',
@@ -230,7 +233,7 @@ class CoverQuerys:
             print (f"author {author.name}: has unknown cover")
 
             try:
-                real_author = Author.objects.get(Q(theAuthor_aka__real_name=1) & (Q(theAuthor_aka__author_aka_id=author.pk) | Q(theAuthor_aka__author_id=author.pk)))
+                real_author = Author.objects.get(Q(theAuthor_aka__real_name=1) & (Q(theAuthor_aka__author_aka_id=author_id) | Q(theAuthor_aka__author_id=author_id)))
                 print (f"real author name is {real_author.name}")
             except Author.DoesNotExist as e:
                 real_author = author
@@ -240,7 +243,8 @@ class CoverQuerys:
                 if cover['theCover__artwork__artist__cover_filepath'] == "BookCovers/Images/Unknown/":
                     cover['theCover__artwork__artist__cover_filepath'] = f"BookCovers/Images/Unknown/{author_directory}/"
         else:
-            print (f"author {author.name}: has no unknown covers")
+            #print (f"author {author.name}: has no unknown covers")
+            print (f"author {author_id}: has no unknown covers")
 
         #print (cover_list)
         #print(f"django author cover_list query is\n{cover_list.query}")
@@ -287,7 +291,7 @@ class CoverQuerys:
     def all_covers_for_artwork(artwork):
         """
         list all covers with this artwork
-        :param artwork:
+        :param artwork: model instance of artwork to fetch covers for
         :return:
         """
 
