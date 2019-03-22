@@ -7,7 +7,6 @@
 {% include 'bookcovers/artwork_pager.html' %}
 {% endblock %}
 {% block content %}
-    {% if cover_list|length > 1 %}
         <h2>{{ view.artwork.book.title }}</h2>
         {% for cover in cover_list %}
             <a href="{% url 'bookcovers:artwork_edition' cover.edition__pk %}">
@@ -15,9 +14,4 @@
                     alt="{{ cover.book__title }}"
                     title="{{ cover.book__title }}"/></a>
         {% endfor %}
-    {% else %}
-        {% for cover in cover_list %}
-            {% include 'bookcovers/book_cover_detail.html' %}
-        {% endfor %}
-    {% endif %}
 {% endblock %}
