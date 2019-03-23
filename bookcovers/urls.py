@@ -8,6 +8,7 @@ from bookcovers.views import ArtworkList
 from bookcovers.views import EditionDetail
 from bookcovers.views import Book
 from bookcovers.views import BookList
+from bookcovers.views import BookArtistSets
 
 from . import views
 
@@ -32,7 +33,7 @@ urlpatterns = [
     path('author/<name>/', AuthorBooks.as_view(), name='author_books'),
     # ex: /bookcovers/artist/Ray%20Bradbury/sets
     # do not add a / at the end of sets it will break paging; else fix subject_pager.html to handle it
-    path('author/<name>/sets', views.author_book_sets, name='author_book_sets'),
+    path('author/<name>/sets', BookArtistSets.as_view(), name='book_artist_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
@@ -42,7 +43,6 @@ urlpatterns = [
     # ex: /bookcovers/artist/Jim%20Burns/
     path('artist/<name>/', ArtistArtworks.as_view(), name='artist_artworks'),
     # ex: /bookcovers/book/467/
-    #path('book/<int:book_id>/', views.book, name='book_covers'),
     path('book/<int:book_id>/', Book.as_view(), name='book'),
     # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
     path('book/<title>/',  Book.as_view(), name='book'),
@@ -52,8 +52,8 @@ urlpatterns = [
     path('book/edition/<int:edition_id>/', views.book_edition, name="book_edition"),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
+    # ex: /bookcovers/artworks/6/
     path('artworks/<int:artwork_id>/', ArtworkList.as_view(), name='artwork_list'),
-    #path('artworks/<int:artwork_id>/', views.books_per_artwork, name='artwork_list'),
     # ex: /bookcovers/artwork/edition/6/
     path('artwork/edition/<int:edition_id>/', views.artwork_edition, name="artwork_edition"),
     # ex: /bookcovers/edition/6

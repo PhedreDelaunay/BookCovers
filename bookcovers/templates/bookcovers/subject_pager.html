@@ -1,6 +1,5 @@
 <div class="pagination">
     <a href="{% url 'bookcovers:'|add:view.top_level_menu %}">{{ view.top_level_menu|title }}</a>
-    {{ view.top_level_menu|title }}
     <span class="step-links">
 
         {# comment the subject_identifer is needed to maintain the url pattern and page correctly at different levels #}
@@ -12,7 +11,7 @@
         {% endif %}
 
         <span class="current">
-            {{ view.the_pager.subject_title }} {{ view.the_pager.subject_pager.number }} of {{ view.the_pager.subject_pager.paginator.num_pages }}.
+            {{ view.the_pager.subject_pager.number }} of {{ view.the_pager.subject_pager.paginator.num_pages }}.
         </span>
 
         {% if view.the_pager.subject_pager.has_next %}

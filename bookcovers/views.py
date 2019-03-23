@@ -224,7 +224,8 @@ class AuthorBooks(AuthorMixin, ListView):
         self.author_id = kwargs.get("author_id", None)
         self.name = kwargs.get("name", None)
         self.slug = kwargs.get("slug", None)
-        self._author = None
+        #self._author = None
+        print (f"AuthorBooks::setup: author_id='{self.author_id}', name='{self.name}', slug='{self.slug}'")
 
     def set_list(self):
         set_list = CoverQuerys.author_set_list(author_id=self.author.pk)
@@ -232,8 +233,8 @@ class AuthorBooks(AuthorMixin, ListView):
 
     def get_queryset(self):
         self.the_pager = self.create_top_level_pager(author_id=self.author_id, name=self.name, slug=self.slug)
-        # get the author to display
         self.author = self.the_pager.get_entry()
+        print (f"AuthorBooks:get_queryset: author is '{self.author.name}'")
         self.web_title = self.author.name
         queryset = CoverQuerys.all_covers_of_all_books_for_author(author=self.author, all=False)
         return queryset
@@ -299,57 +300,28 @@ class BookList(AuthorMixin, ListView):
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
 
+
 # http:<host>/bookcovers/author/<author%20name>/sets
-class BookArtistSets(ListView):
+class BookArtistSets(AuthorMixin, ListView):
     """
     displays thumbnails of books by this author ordered in sets by artist
     """
-    template_name = 'bookcovers/author_book_sets.html'
+    template_name = 'bookcovers/book_artist_sets.html'
+    context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.name = kwargs.get("name", None)
+        print (f"BookArtistSets::setup: author={self.name}")
 
     def get_queryset(self):
-        self.the_pager = self.create_top_level_pager(author_id=self.author_id)
-        self.book_pager = self.create_book_pager()
-        print (f"BookArtistSets: get_queryset author={self.name}")
-        queryset = CoverQuerys.set_covers_by_artist(author=author.author_id, return_dict=True)
+        self.the_pager = self.create_top_level_pager(name=self.name)
+        self.author = self.the_pager.get_entry()
+        self.web_title = self.author.name
+        #self.book_pager = self.create_book_pager()
+        print (f"BookArtistSets:get_queryset: author is '{self.author.name}'")
+        queryset = CoverQuerys.set_covers_by_artist(author=self.author.author_id, return_dict=True)
         return queryset
-
-# http:<host>/bookcovers/author/<author_id>/sets
-# http:<host>/bookcovers/author/<author%20name>/sets
-# http:<host>/bookcovers/author/<author-slug>/sets
-def author_book_sets(request, author_id=None, name=None, slug=None):
-    """
-    displays thumbnails of books by this author ordered in sets by artist
-    :param request:
-    one of
-    :param author_id:   ex: /bookcovers/author/15/sets
-    :param name:        ex: /bookcovers/author/Ray%20Bradbury/sets
-    :param slug:        ex: /bookcovers/author/Ray-Bradbury/sets
-    :return:
-    """
-    template_name = 'bookcovers/author_book_sets.html'
-    subject = "author"
-    author_page = request.GET.get(subject)
-    author_pager = AuthorPager(request,  author_id=author_id, name=name, slug=slug)
-    author = author_pager.get_entry()
-    print (f"author is {author}, {author.author_id}")
-
-    # return_dict=True, return ValuesQuerySet, 1 query in 0.45MS
-    # return_dict=False, return objects, 19 queries in 2.4MS
-    cover_list = CoverQuerys.set_covers_by_artist(author=author.author_id, return_dict=True)
-    num_covers = len(cover_list)
-    #print (f"num_covers is {num_covers}")
-    #print (f"cover_list is {cover_list}")
-
-    context = {'author': author,
-               'cover_list': cover_list,
-               'the_pager': author_pager,}
-
-    return render(request, template_name, context)
-    #return HttpResponse("Book Sets: You're looking at sets for %s." % name)
 
 
 def artwork_edition(request, edition_id):
