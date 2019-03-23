@@ -1,5 +1,5 @@
 <div class="pagination">
-    <a href="{% url 'bookcovers:artist_artworks' view.artwork.artist.pk %}">all covers</a>
+    <a href="{% url 'bookcovers:artist_artworks' view.artwork.artist.pk %}">all artworks</a>
     <span class="step-links">
         {% if view.book_pager.has_previous %}
             <a href="?page=1">&laquo; first</a>
