@@ -139,6 +139,7 @@ class CoverQuerys:
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
         # flat=True returns a list of single items for a single field
 
+        print ("author_list: inner_queryset is:")
         print(inner_queryset.query)
         print("count inner_queryset is", inner_queryset.count())
         print("len inner_queryset is", len(inner_queryset))
@@ -355,6 +356,8 @@ class CoverQuerys:
             filter(series__in=series_list). \
             values_list('book_id', flat=True). \
             order_by('volume')
+        print("set_covers_by_artist: inner_queryset_book_list is:")
+        print(inner_queryset_book_list.query)
         print(f"number of books in series {len(inner_queryset_book_list)}")
         print(f"books in series {inner_queryset_book_list}")
 
