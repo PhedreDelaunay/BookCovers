@@ -29,7 +29,9 @@ class PageTestCases:
                     'Covers.json',
                     'Countries.json',
                     'Sets.json',
-                    'Series.json']
+                    'Series.json',
+                    'SetExceptions.json',
+                    'BooksSeries.json',]
 
         def check_status_code(self, reverse_url):
             print ("----------------------------------")
