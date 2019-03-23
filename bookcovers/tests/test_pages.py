@@ -33,17 +33,18 @@ class PageTestCases:
 
         def check_status_code(self, reverse_url):
             print ("----------------------------------")
-            print (f"check_status_code: {self.test_class_name}")
+            print (f"check_status_code: {type(self).__name__}")
             print ("----------------------------------")
             response = self.client.get(reverse_url)
-            self.assertEquals(response.status_code, 200, msg=f"reverse_url: {reverse_url}")
+            self.assertEquals(response.status_code, self.expected_response_code, msg=f"reverse_url: {reverse_url}")
 
         def check_template(self, reverse_url, template_url):
             print ("----------------------------------")
-            print (f"check_template: {self.test_class_name}")
+            print (f"check_template: {type(self).__name__}")
             print ("----------------------------------")
             response = self.client.get(reverse_url)
-            self.assertEquals(response.status_code, 200)
+            print (f"response.status_code is {response.status_code}")
+            self.assertEquals(response.status_code, self.expected_response_code)
             self.assertTemplateUsed(response, template_url)
 
         def test_status_code(self):
@@ -56,46 +57,58 @@ class PageTestCases:
 class ArtistListPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "ArtistListPageTest"
         self.reverse_url = reverse('bookcovers:artists')
+        self.expected_response_code = 200
         self.template_url = 'bookcovers/artist_list.html'
 
 
 class ArtistPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "ArtistPageTest"
-        self.reverse_url = reverse('bookcovers:artist_covers', kwargs={'artist_id': 6})
-        self.template_url = 'bookcovers/artist_covers.html'
+        self.reverse_url = reverse('bookcovers:artist_artworks', kwargs={'artist_id': 6})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/artist_artworks.html'
 
     def test_status_code_name(self):
-        reverse_url = reverse('bookcovers:artist_covers', kwargs={'name': 'Jim Burns'})
+        reverse_url = reverse('bookcovers:artist_artworks', kwargs={'name': 'Jim Burns'})
         self.check_status_code(reverse_url=reverse_url)
 
     def test_status_code_slug(self):
-        reverse_url = reverse('bookcovers:artist_covers', kwargs={'slug': 'Jim-Burns'})
+        reverse_url = reverse('bookcovers:artist_artworks', kwargs={'slug': 'Jim-Burns'})
         self.check_status_code(reverse_url=reverse_url)
 
 class ArtworkPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "ArtworkPageTest"
         self.reverse_url = reverse('bookcovers:artwork', kwargs={'artwork_id': 178})
-        self.template_url = 'bookcovers/artist_books_per_artwork.html'
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/artwork.html'
+
+class ArtworkListPageTest(PageTestCases.PageTestCase):
+
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:artwork', kwargs={'artwork_id': 6})
+        self.expected_response_code = 302
+
+    def test_template(self):
+        self.reverse_url = reverse('bookcovers:artwork_list', kwargs={'artwork_id': 6})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/artwork_list.html'
+        super().test_template()
 
 class AuthorListPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "AuthorListPageTest"
         self.reverse_url = reverse('bookcovers:authors')
+        self.expected_response_code = 200
         self.template_url = 'bookcovers/author_list.html'
 
 
 class AuthorPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "AuthorPageTest"
         self.reverse_url = reverse('bookcovers:author_books', kwargs={'author_id': 4})
+        self.expected_response_code = 200
         self.template_url = 'bookcovers/author_books.html'
 
     # test sets link appears in author, Ray Bradbury, known to have sets
@@ -125,9 +138,9 @@ class AuthorPageTest(PageTestCases.PageTestCase):
 class AuthorSetsPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "AuthorSetsPageTest"
         self.reverse_url = reverse('bookcovers:author_book_sets', kwargs={'name': 'Ray Bradbury'})
         #self.reverse_url = reverse('bookcovers:author_book_sets', kwargs={'author_id': 15})
+        self.expected_response_code = 200
         self.template_url = 'bookcovers/author_book_sets.html'
 
     # def test_status_code_name(self):
@@ -142,6 +155,18 @@ class AuthorSetsPageTest(PageTestCases.PageTestCase):
 class BookPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.test_class_name = "BookPageTest"
-        self.reverse_url = reverse('bookcovers:book_covers', kwargs={'book_id': 93})
-        self.template_url = 'bookcovers/author_covers_per_book.html'
+        self.reverse_url = reverse('bookcovers:book', kwargs={'book_id': 174})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/book.html'
+
+class BookListPageTest(PageTestCases.PageTestCase):
+
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:book', kwargs={'book_id': 93})
+        self.expected_response_code = 302
+
+    def test_template(self):
+        self.reverse_url = reverse('bookcovers:book_list', kwargs={'book_id': 93})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/book_list.html'
+        super().test_template()

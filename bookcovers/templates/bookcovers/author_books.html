@@ -96,7 +96,7 @@ mostCovers = 2;
     {% endfor %}
     {% endcomment %}
     {% for cover in cover_list %}
-        <a href="{% url 'bookcovers:book_covers' cover.book_id %}">
+        <a href="{% url 'bookcovers:book' cover.book_id %}">
             <IMG src="{% static cover.theCover__artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.theCover__cover_filename %}"
                  alt="{{ cover.title }}"
                  title="{{ cover.title }}">

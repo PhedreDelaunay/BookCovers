@@ -7,7 +7,6 @@
 {% include 'bookcovers/book_pager.html' %}
 {% endblock %}
 {% block content %}
-    {% if cover_list|length > 1 %}
         <h2>{{ book.title }}</h2>
         {% for cover in cover_list %}
             {% if cover.artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
@@ -25,10 +24,5 @@
                         title="{{ cover.book__title }}"/></a>
            {% endif %}
         {% endfor %}
-    {% else %}
-        {% for cover in cover_list %}
-            {% include 'bookcovers/book_cover_detail.html' %}
-        {% endfor %}
-    {% endif %}
 {% endblock %}
 {# TODO would be good to display for alt and title book and cover artist #}

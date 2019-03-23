@@ -17,7 +17,7 @@ book: {{ edition.book.pk }}
             title="{{ edition.book.title }}">
     {% endif %}
 </td><td>
-    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_covers' edition.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
+    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_artworks' edition.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
     <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level }}<BR/>
     <B>Evidence: </B>{{ edition.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
     <B>author: </B><a href="{% url 'bookcovers:author_books' edition.book.author.author_id %}" title="Select author for all books by this author">{{ edition.book.author.name }}</a><BR/>

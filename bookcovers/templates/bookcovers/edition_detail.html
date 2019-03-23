@@ -3,11 +3,7 @@
 {% load static %}
 
 {% block title %}{{ view.web_title }}{% endblock %}
-{% block menu_pagers %}
-{% include 'bookcovers/subject_pager.html' %}
-    {# up to here - need to include appropriate pager #}
-{% include 'bookcovers/artwork_pager.html' %}
-{% endblock %}
+
 artwork: {{ object.theCover.artwork.pk }}
 book: {{ object.book.pk }}
 
@@ -26,11 +22,11 @@ book: {{ object.book.pk }}
             title="{{ object.book.title }}">
     {% endif %}
 </td><td>
-    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_covers' object.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ object.theCover.artwork.artist.name }}</a>
+    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_artworks' object.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ object.theCover.artwork.artist.name }}</a>
     <BR/><B>Year: </B>{{ object.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ object.theCover.artwork.confidence_level }}<BR/>
     <B>Evidence: </B>{{ object.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
     <B>author: </B><a href="{% url 'bookcovers:author_books' object.book.author.author_id %}" title="Select author for all books by this author">{{ object.book.author.name }}</a><BR/>
-    <B>title: </B><a href="{% url 'bookcovers:book_covers' object.book.book_id %}" title="Select title for all covers for this book">{{ object.book.title}}</a><BR/>
+    <B>title: </B><a href="{% url 'bookcovers:book' object.book.book_id %}" title="Select title for all covers for this book">{{ object.book.title}}</a><BR/>
     Copyright: {{ object.book.copyright_year }}<BR/>
     This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID=7','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ object.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
 </td></tr>

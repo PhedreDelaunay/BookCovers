@@ -2,10 +2,12 @@ from django.urls import path
 from bookcovers.views import AuthorList
 from bookcovers.views import ArtistList
 from bookcovers.views import AuthorBooks
-from bookcovers.views import ArtistCovers
+from bookcovers.views import ArtistArtworks
 from bookcovers.views import Artwork
 from bookcovers.views import ArtworkList
 from bookcovers.views import EditionDetail
+from bookcovers.views import Book
+from bookcovers.views import BookList
 
 from . import views
 
@@ -34,15 +36,18 @@ urlpatterns = [
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
-    path('artist/<int:artist_id>/', ArtistCovers.as_view(), name='artist_covers'),
+    path('artist/<int:artist_id>/', ArtistArtworks.as_view(), name='artist_artworks'),
     # ex: /bookcovers/artist/Jim-Burns/
-    path('artist/<slug:slug>/',  ArtistCovers.as_view(), name='artist_covers'),
+    path('artist/<slug:slug>/',  ArtistArtworks.as_view(), name='artist_artworks'),
     # ex: /bookcovers/artist/Jim%20Burns/
-    path('artist/<name>/', ArtistCovers.as_view(), name='artist_covers'),
+    path('artist/<name>/', ArtistArtworks.as_view(), name='artist_artworks'),
     # ex: /bookcovers/book/467/
-    path('book/<int:book_id>/', views.book, name='book_covers'),
+    #path('book/<int:book_id>/', views.book, name='book_covers'),
+    path('book/<int:book_id>/', Book.as_view(), name='book'),
     # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
-    path('book/<title>/', views.book, name='book_covers'),
+    path('book/<title>/',  Book.as_view(), name='book'),
+    # ex: /bookcovers/books/7/
+    path('books/<int:book_id>/', BookList.as_view(), name='book_list'),
     # ex: /bookcovers/author/edition/6/
     path('book/edition/<int:edition_id>/', views.book_edition, name="book_edition"),
     # ex: /bookcovers/artwork/12/
