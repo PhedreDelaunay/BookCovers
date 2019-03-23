@@ -115,8 +115,8 @@ class AuthorMixin(TopLevelPagerMixin):
         self.author_id = self.book.author_id
         print (f"AuthorkMixin: get_book: book_id={book_id}")
 
-    def create_top_level_pager(self, author_id):
-        author_pager = AuthorPager(self.request, author_id=author_id)
+    def create_top_level_pager(self, author_id=None, name=None, slug=None):
+        author_pager = AuthorPager(self.request, author_id=author_id, name=name, slug=slug)
         return author_pager
 
     def create_book_pager(self):
