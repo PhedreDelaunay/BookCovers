@@ -334,62 +334,6 @@ class BookList(AuthorMixin, ListView):
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
 
-# up to here - errors if we remove this
-# http:<host>/bookcovers/book/<book_id>
-# http:<host>/bookcovers/book/<the%20title>
-def book(request, book_id=None, title=None):
-    """
-    displays all the covers for the same book title
-    :param request:
-    :param book_id:     ex: /bookcovers/book/93/
-    :param: title:      ex: /bookcovers/book/Machineries%20Of%20Joy/
-                        not yet implemented
-    :return:
-    """
-    author_id=None
-    if book_id:
-        book = get_object_or_404(Books, pk=book_id)
-        author_id = book.author_id
-
-    # author pager
-    author_pager = AuthorPager(request, author_id=author_id)
-    if author_pager.get_request_page():
-        # move on to the next or previous author
-        author = author_pager.get_entry()
-        return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
-
-    # book cover pager
-    page = request.GET.get('page')
-    print(f"views:book: page is '{page}'")
-
-    query_kwargs = {'author': book.author_id, 'all': False}
-    pager = BookPager(page=page, item_id=book_id)
-    book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
-                             item_id_key="book_id",
-                             item_model=Books,
-                             subject_id_key='author_id',
-                             subject_model=Author)
-    book = pager.get_entry()
-
-    book_cover_list = CoverQuerys.all_covers_for_title(book)
-    num_books = len(book_cover_list)
-    if num_books == 1:
-        # display the book detail
-        # the template includes template book_cover_detail.html
-        edition = get_object_or_404(Editions, edition_id=book_cover_list[0]['edition__pk'])
-    else:
-        edition = None
-
-    # display thumbnails of all covers for this book
-    template_name = 'bookcovers/author_covers_per_book.html'
-    context = {'book': book,
-               'cover_list': book_cover_list,
-               'the_pager': author_pager,
-               'book_pager': book_pager,
-               'edition': edition}
-    return render(request, template_name, context)
-    # return HttpResponse("Book Title: You're looking at book %s." % book.title)
-
 def artwork_edition(request, edition_id):
 
     return book_edition(request, edition_id)
