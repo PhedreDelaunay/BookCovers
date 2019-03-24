@@ -261,8 +261,6 @@ class Book(AuthorMixin, DetailView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
-        # up to here do we really want to get book here. book pager gets actual book?
-        self.get_book(book_id=self.book_id)
 
     def get_object(self, queryset=None):
         # if multiple covers are returned exception will be caught and redirect to artwork list view
@@ -272,9 +270,10 @@ class Book(AuthorMixin, DetailView):
         return edition
 
     def get(self, request, **kwargs):
-        print (f"Book: get  - book {self.book_id}")
-        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
+        # order matters, get book pager (and book) first to ascertain the author
         self.book_pager = self.create_book_pager()
+        print (f"Book: get  - now book is {self.book_id}")
+        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         try:
             return super().get(request, **kwargs)
         except Covers.MultipleObjectsReturned:
@@ -291,11 +290,11 @@ class BookList(AuthorMixin, ListView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
-        self.get_book(book_id=self.book_id)
 
     def get_queryset(self):
-        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
+        # order matters, get book pager (and book) first to ascertain the author
         self.book_pager = self.create_book_pager()
+        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         print (f"BookList: get_queryset book.title={self.book.title}")
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
@@ -318,11 +317,11 @@ class BookArtistSets(AuthorMixin, ListView):
         self.the_pager = self.create_top_level_pager(name=self.name)
         self.author = self.the_pager.get_entry()
         self.web_title = self.author.name
-        #self.book_pager = self.create_book_pager()
         print (f"BookArtistSets:get_queryset: author is '{self.author.name}'")
         queryset = CoverQuerys.set_covers_by_artist(author=self.author.author_id, return_dict=True)
         return queryset
 
+#class Edition(ListView):
 
 def artwork_edition(request, edition_id):
 

@@ -109,11 +109,11 @@ class AuthorMixin(TopLevelPagerMixin):
         print(f"book_setter: value is {value}")
         self._book = value
 
-    def get_book(self, book_id):
-        self.book = get_object_or_404(Books, pk=book_id)
-        self.web_title = self.book.title
-        self.author_id = self.book.author_id
-        print (f"AuthorkMixin: get_book: book_id={book_id}")
+    def set_book_attributes(self, book):
+        self.book_id = book.pk
+        self.web_title = book.title
+        self.author_id = book.author_id
+        print (f"AuthorMixin: get_book: book_id={self.book_id}")
 
     def create_top_level_pager(self, author_id=None, name=None, slug=None):
         author_pager = AuthorPager(self.request, author_id=author_id, name=name, slug=slug)
@@ -131,6 +131,6 @@ class AuthorMixin(TopLevelPagerMixin):
                                  subject_id_key='author_id',
                                  subject_model=Author)
         self.book = pager.get_entry()
-        self.book_id = self.book.pk
+        self.set_book_attributes(self.book)
         print (f"AuthorkMixin: create-book_pager: book_id={self.book.pk}")
         return book_pager
