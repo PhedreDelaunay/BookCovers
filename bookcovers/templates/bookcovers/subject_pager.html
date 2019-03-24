@@ -4,8 +4,8 @@
 
         {# comment the subject_identifer is needed to maintain the url pattern and page correctly at different levels #}
         {% if view.the_pager.subject_pager.has_previous %}
-            <a href="../../{{ view.pager_path }}/{{ view.the_pager.subject_identifier }}/?{{ view.the_pager.subject }}=1">&laquo; first</a>
-            <a href="../../{{ view.pager_path }}/{{ view.the_pager.subject_identifier }}/?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.previous_page_number }}">previous</a>
+            <a href="{% url 'bookcovers:'|add:view.pager_url view.the_pager.subject_identifier %}?{{ view.the_pager.subject }}=1">&laquo; first</a>
+            <a href="{% url 'bookcovers:'|add:view.pager_url view.the_pager.subject_identifier %}?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.previous_page_number }}">previous</a>
         {% else %}
             <p class="greyed" style="display:inline">&laquo; first previous</p>
         {% endif %}
@@ -15,8 +15,8 @@
         </span>
 
         {% if view.the_pager.subject_pager.has_next %}
-            <a href="../../{{ view.pager_path }}/{{ view.the_pager.subject_identifier }}/?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.next_page_number }}">next</a>
-            <a href="../../{{ view.pager_path }}/{{ view.the_pager.subject_identifier }}/?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.paginator.num_pages }}">last &raquo;</a>
+            <a href="{% url 'bookcovers:'|add:view.pager_url view.the_pager.subject_identifier %}?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.next_page_number }}">next</a>
+            <a href="{% url 'bookcovers:'|add:view.pager_url view.the_pager.subject_identifier %}?{{ view.the_pager.subject }}={{ view.the_pager.subject_pager.paginator.num_pages }}">last &raquo;</a>
         {% else %}
             <p class="greyed" style="display:inline">next last &raquo;</p>
         {% endif %}

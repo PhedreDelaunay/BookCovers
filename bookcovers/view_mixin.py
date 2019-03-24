@@ -36,7 +36,7 @@ class TopLevelPagerMixin(TitleMixin):
 
 class ArtistMixin(TopLevelPagerMixin):
     top_level_menu = "artists"
-    pager_path="artist"
+    pager_url="artist_artworks"
 
     @property
     def artist(self):
@@ -90,7 +90,7 @@ class ArtistMixin(TopLevelPagerMixin):
 
 class AuthorMixin(TopLevelPagerMixin):
     top_level_menu = "authors"
-    pager_path = "author"
+    pager_url="author_books"
 
     # @property
     # def author(self):
