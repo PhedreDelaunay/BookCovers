@@ -41,11 +41,11 @@ class ArtistMixin(TopLevelPagerMixin):
     third_level_menu="artwork"
 
     @property
-    def second_level_parent(self):
+    def detail_parent(self):
         return self.artwork.artist
 
     @property
-    def second_level_object(self):
+    def detail_object(self):
         return self.artwork
 
     @property
@@ -106,11 +106,11 @@ class AuthorMixin(TopLevelPagerMixin):
 
 
     @property
-    def second_level_parent(self):
+    def detail_parent(self):
         return self.book.author
 
     @property
-    def second_level_object(self):
+    def detail_object(self):
         return self.book
 
     @property
