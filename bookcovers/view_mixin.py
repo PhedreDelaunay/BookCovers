@@ -36,7 +36,17 @@ class TopLevelPagerMixin(TitleMixin):
 
 class ArtistMixin(TopLevelPagerMixin):
     top_level_menu = "artists"
-    pager_url="artist_artworks"
+    second_level_menu="artist_artworks"
+    second_level_title="artworks"
+    third_level_menu="artwork"
+
+    @property
+    def second_level_parent(self):
+        return self.artwork.artist
+
+    @property
+    def second_level_object(self):
+        return self.artwork
 
     @property
     def artist(self):
@@ -90,15 +100,18 @@ class ArtistMixin(TopLevelPagerMixin):
 
 class AuthorMixin(TopLevelPagerMixin):
     top_level_menu = "authors"
-    pager_url="author_books"
+    second_level_menu="author_books"
+    second_level_title="books"
+    third_level_menu = "book"
 
-    # @property
-    # def author(self):
-    #     return self._author
-    #
-    # @author.setter
-    # def author(self, value):
-    #     self._author = value
+
+    @property
+    def second_level_parent(self):
+        return self.book.author
+
+    @property
+    def second_level_object(self):
+        return self.book
 
     @property
     def book(self):

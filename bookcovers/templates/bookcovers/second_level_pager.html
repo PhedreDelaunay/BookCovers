@@ -1,0 +1,22 @@
+<div class="pagination">
+    <a href="{% url 'bookcovers:'|add:view.second_level_menu view.second_level_parent %}">all {{ view.second_level_title }}</a>
+    <span class="step-links">
+        {% if view.book_pager.has_previous %}
+            <a href="{% url 'bookcovers:'|add:view.third_level_menu view.second_level_object.pk %}?page=1">&laquo; first</a>
+            <a href="{% url 'bookcovers:'|add:view.third_level_menu view.second_level_object.pk %}?page={{ view.book_pager.previous_page_number }}">previous</a>
+        {% else %}
+            <p class="greyed" style="display:inline">&laquo; first previous</p>
+        {% endif %}
+
+        <span class="current">
+            {{ view.book_pager.number }} of {{ view.book_pager.paginator.num_pages }}
+        </span>
+
+        {% if view.book_pager.has_next %}
+            <a href="{% url 'bookcovers:'|add:view.third_level_menu view.second_level_object.pk %}?page={{ view.book_pager.next_page_number }}">next</a>
+            <a href="{% url 'bookcovers:'|add:view.third_level_menu view.second_level_object.pk %}?page={{ view.book_pager.paginator.num_pages }}">last &raquo;</a>
+        {% else %}
+            <p class="greyed" style="display:inline">next last &raquo;</p>
+        {% endif %}
+    </span>
+</div>
