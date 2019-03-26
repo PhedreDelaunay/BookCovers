@@ -44,17 +44,20 @@ class TopLevelPagerMixin(TitleMixin):
 
 class ArtistMixin(TopLevelPagerMixin):
     subject_list = {
-        'name': 'artists',
+        'title': 'artists',
         'view_name': 'artists',
     }
     subject = {
-        'name': 'artworks',
+        'name': 'artist',
+        'title': 'artworks',
         'view_name': 'artist_artworks',
     }
     detail = {
         'view_name': 'artwork'
     }
 
+    #TODO make sure subject.object is set under all conditions
+    
     @property
     def artist(self):
         return self._artist
@@ -101,11 +104,12 @@ class ArtistMixin(TopLevelPagerMixin):
 
 class AuthorMixin(TopLevelPagerMixin):
     subject_list = {
-        'name': 'authors',
+        'title': 'authors',
         'view_name': 'authors',
     }
     subject = {
-        'name': 'books',
+        'name': 'author',
+        'title': 'books',
         'view_name': 'author_books',
     }
     detail = {

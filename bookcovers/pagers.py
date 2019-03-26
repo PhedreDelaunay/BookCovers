@@ -15,23 +15,6 @@ class MenuPager():
         # Show 1 cover work per page
         self.per_page = 1
 
-    @property
-    def subject(self):
-        return self._subject
-
-    @subject.setter
-    def subject(self,value):
-        self._subject = value
-
-    @property
-    def subject_title(self):
-        return self._subject_title
-
-    @subject_title.setter
-    def subject_title(self,value):
-        self._subject_title = value
-
-
 
 class SubjectPager(MenuPager):
     """
@@ -125,8 +108,6 @@ class ArtistPager(SubjectPager):
         print(f"ArtistPager: request_page is '{self.request_page}'")
         super(ArtistPager, self).__init__(page=self.request_page, subject_id=artist_id, name=name, slug=slug)
 
-        self.subject_title = "Artist"
-
         self.pager(cover_query=CoverQuerys.artist_list,
                                subject_id_key="artist_id",
                                subject_model=Artists)
@@ -148,8 +129,6 @@ class AuthorPager(SubjectPager):
         self.request_page = request.GET.get(self.subject)
         print(f"AuthorPager: request_page is '{self.request_page}'")
         super(AuthorPager, self).__init__(page=self.request_page, subject_id=author_id, name=name, slug=slug)
-
-        self.subject_title = "Author"
 
         self.pager(cover_query=CoverQuerys.author_list,
                    subject_id_key="author_id",

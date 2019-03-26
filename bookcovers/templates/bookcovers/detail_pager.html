@@ -1,5 +1,5 @@
 <div class="pagination">
-    <a href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">all {{ view.subject.name }}</a>
+    <a href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">all {{ view.subject.title }}</a>
     <span class="step-links">
         {% if view.book_pager.has_previous %}
             <a href="{% url 'bookcovers:'|add:view.detail.view_name view.detail.object.pk %}?page=1">&laquo; first</a>
