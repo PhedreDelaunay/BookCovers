@@ -34,19 +34,26 @@ class TopLevelPagerMixin(TitleMixin):
     def the_pager(self, value):
         self._the_pager = value
 
+    @property
+    def book_pager(self):
+        return self._book_pager
+
+    @book_pager.setter
+    def book_pager(self, value):
+        self._book_pager = value
+
 class ArtistMixin(TopLevelPagerMixin):
-    top_level_menu = "artists"
-    second_level_menu="artist_artworks"
-    second_level_title="artworks"
-    third_level_menu="artwork"
-
-    @property
-    def detail_parent(self):
-        return self.artwork.artist
-
-    @property
-    def detail_object(self):
-        return self.artwork
+    subject_list = {
+        'name': 'artists',
+        'view_name': 'artists',
+    }
+    subject = {
+        'name': 'artworks',
+        'view_name': 'artist_artworks',
+    }
+    detail = {
+        'view_name': 'artwork'
+    }
 
     @property
     def artist(self):
@@ -56,6 +63,7 @@ class ArtistMixin(TopLevelPagerMixin):
     def artist(self, value):
         print (f"artist_setter: value is {value}")
         self._artist = value
+        self.subject['object'] = self._artist
 
     @property
     def artwork(self):
@@ -65,14 +73,7 @@ class ArtistMixin(TopLevelPagerMixin):
     def artwork(self, value):
         print(f"artwork_setter: value is {value}")
         self._artwork = value
-
-    @property
-    def book_pager(self):
-        return self._book_pager
-
-    @book_pager.setter
-    def book_pager(self, value):
-        self._book_pager = value
+        self.detail['object'] = self._artwork
 
     def get_artwork(self, artwork_id):
         self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
@@ -99,19 +100,17 @@ class ArtistMixin(TopLevelPagerMixin):
         return book_pager
 
 class AuthorMixin(TopLevelPagerMixin):
-    top_level_menu = "authors"
-    second_level_menu="author_books"
-    second_level_title="books"
-    third_level_menu = "book"
-
-
-    @property
-    def detail_parent(self):
-        return self.book.author
-
-    @property
-    def detail_object(self):
-        return self.book
+    subject_list = {
+        'name': 'authors',
+        'view_name': 'authors',
+    }
+    subject = {
+        'name': 'books',
+        'view_name': 'author_books',
+    }
+    detail = {
+        'view_name': 'book'
+    }
 
     @property
     def book(self):
@@ -121,6 +120,8 @@ class AuthorMixin(TopLevelPagerMixin):
     def book(self, value):
         print(f"book_setter: value is {value}")
         self._book = value
+        self.subject['object'] = self._book.author
+        self.detail['object'] = self._book
 
     def set_book_attributes(self, book):
         self.book_id = book.pk
