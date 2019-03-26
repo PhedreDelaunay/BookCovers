@@ -56,8 +56,6 @@ class ArtistMixin(TopLevelPagerMixin):
         'view_name': 'artwork'
     }
 
-    #TODO make sure subject.object is set under all conditions
-    
     @property
     def artist(self):
         return self._artist
@@ -76,11 +74,15 @@ class ArtistMixin(TopLevelPagerMixin):
     def artwork(self, value):
         print(f"artwork_setter: value is {value}")
         self._artwork = value
-        self.detail['object'] = self._artwork
+        self.set_artwork_attributes(self._artwork)
+
+    def set_artwork_attributes(self, artwork):
+        self.web_title = self.artwork.name
+        self.detail['object'] = self.artwork
+        self.artist = self.artwork.artist
 
     def get_artwork(self, artwork_id):
         self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
-        self.web_title = self.artwork.name
         print (f"ArtworkMixin: get_artwork: artwork_id={artwork_id}")
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
@@ -117,6 +119,16 @@ class AuthorMixin(TopLevelPagerMixin):
     }
 
     @property
+    def author(self):
+        return self._author
+
+    @author.setter
+    def author(self, value):
+        print (f"author_setter: value is {value}")
+        self._author = value
+        self.subject['object'] = self._author
+
+    @property
     def book(self):
         return self._book
 
@@ -124,14 +136,14 @@ class AuthorMixin(TopLevelPagerMixin):
     def book(self, value):
         print(f"book_setter: value is {value}")
         self._book = value
-        self.subject['object'] = self._book.author
-        self.detail['object'] = self._book
+        self.set_book_attributes(self._book)
 
     def set_book_attributes(self, book):
+        self.detail['object'] = self.book
+        self.author = self.book.author
         self.book_id = book.pk
         self.web_title = book.title
         self.author_id = book.author_id
-        print (f"AuthorMixin: get_book: book_id={self.book_id}")
 
     def create_top_level_pager(self, author_id=None, name=None, slug=None):
         author_pager = AuthorPager(self.request, author_id=author_id, name=name, slug=slug)
@@ -149,6 +161,5 @@ class AuthorMixin(TopLevelPagerMixin):
                                  subject_id_key='author_id',
                                  subject_model=Author)
         self.book = pager.get_entry()
-        self.set_book_attributes(self.book)
         print (f"AuthorkMixin: create-book_pager: book_id={self.book.pk}")
         return book_pager
