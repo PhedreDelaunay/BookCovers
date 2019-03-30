@@ -5,7 +5,8 @@ from bookcovers.views import AuthorBooks
 from bookcovers.views import ArtistArtworks
 from bookcovers.views import Artwork
 from bookcovers.views import ArtworkList
-from bookcovers.views import EditionDetail
+from bookcovers.views import ArtworkCover
+from bookcovers.views import Edition
 from bookcovers.views import Book
 from bookcovers.views import BookList
 from bookcovers.views import BookArtistSets
@@ -31,9 +32,8 @@ urlpatterns = [
     path('author/<slug:slug>/', AuthorBooks.as_view(), name='author_books'),
     # ex: /bookcovers/author/Robert%20Heinelein/
     path('author/<name>/', AuthorBooks.as_view(), name='author_books'),
-    # ex: /bookcovers/artist/Ray%20Bradbury/sets
-    # do not add a / at the end of sets it will break paging; else fix subject_pager.html to handle it
-    path('author/<name>/sets', BookArtistSets.as_view(), name='book_artist_sets'),
+    # ex: /bookcovers/artist/Ray%20Bradbury/sets/
+    path('author/<name>/sets/', BookArtistSets.as_view(), name='book_artist_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
@@ -54,11 +54,11 @@ urlpatterns = [
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
     # ex: /bookcovers/artworks/6/
     path('artworks/<int:artwork_id>/', ArtworkList.as_view(), name='artwork_list'),
-    # ex: /bookcovers/artwork/edition/6/
-    path('artwork/edition/<int:edition_id>/', views.artwork_edition, name="artwork_edition"),
+    # ex: /bookcovers/artwork/covers/7/
+    path('artwork/cover/<int:edition_id>/', ArtworkCover.as_view(), name="artwork_cover"),
     # ex: /bookcovers/edition/6
-    path('edition/<pk>/', EditionDetail.as_view(), name="edition_test"),
-    path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
+    path('edition/<pk>/', Edition.as_view(), name="edition"),
+    #path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/

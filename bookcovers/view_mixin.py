@@ -46,6 +46,7 @@ class ArtistMixin(TopLevelPagerMixin):
     subject_list = {
         'title': 'artists',
         'view_name': 'artists',
+        'ojbect': None,
     }
     subject = {
         'name': 'artist',
@@ -53,7 +54,8 @@ class ArtistMixin(TopLevelPagerMixin):
         'view_name': 'artist_artworks',
     }
     detail = {
-        'view_name': 'artwork'
+        'view_name': 'artwork',
+        'object': None,
     }
 
     @property
@@ -82,8 +84,9 @@ class ArtistMixin(TopLevelPagerMixin):
         self.artist = self.artwork.artist
 
     def get_artwork(self, artwork_id):
-        self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
         print (f"ArtworkMixin: get_artwork: artwork_id={artwork_id}")
+        if artwork_id:
+            self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
         artist_pager = ArtistPager(self.request,  artist_id=artist_id, name=name, slug=slug)

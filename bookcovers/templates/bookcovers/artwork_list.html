@@ -9,7 +9,7 @@
 {% block content %}
         <h2>{{ view.artwork.book.title }}</h2>
         {% for cover in cover_list %}
-            <a href="{% url 'bookcovers:artwork_edition' cover.edition__pk %}">
+            <a href="{% url 'bookcovers:artwork_cover' cover.edition__pk %}">
                 <IMG class="cover_list" src="{% static cover.artwork__artist__cover_filepath|add:cover.cover_filename %}"
                     alt="{{ cover.book__title }}"
                     title="{{ cover.book__title }}"/></a>
