@@ -401,7 +401,7 @@ def book_edition(request, edition_id):
 
     # author pager
     author_pager = AuthorPager(request, author_id=author_id)
-    if author_pager.get_request_page():
+    if author_pager.get_page_number():
         # move on to the next or previous author
         author = author_pager.get_entry()
         return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)

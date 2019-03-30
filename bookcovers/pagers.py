@@ -9,6 +9,10 @@ from bookcovers.models import Author
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.record_helper import *
 
+# just in case
+# TODO read this
+# http://blog.appliedinformaticsinc.com/how-to-build-custom-pagination-in-django-to-overcome-django-paginator-drawbacks/
+
 class MenuPager():
 
     def __init__(self):
@@ -20,16 +24,16 @@ class SubjectPager(MenuPager):
     """
     Pager for top level subject, ie artist, author,
     """
-    def __init__(self, page=None, subject_id=None, name=None, slug=None):
+    def __init__(self, page_number=None, subject_id=None, name=None, slug=None):
         """
-        :param page:            current page if set
+        :param page_number:     current page if set
         one of
         :param subject_id:      artist or author id
         :param name:            artist or author name
         :param slug:            artist or author slug
         """
         super(SubjectPager, self).__init__()
-        self.page = page
+        self.page_number = page_number
         self.subject_id = subject_id
         self.name = name
         self.slug = slug
@@ -64,21 +68,19 @@ class SubjectPager(MenuPager):
         paginator = Paginator(object_list=subject_list, per_page=self.per_page)
 
         # have we got here by paging?
-        if self.page:
-            print(f"subject_list[{self.page}-1] is {subject_list[int(self.page)-1]}")
-            kwargs = {'pk': subject_list[int(self.page) - 1][subject_id_key]}
+        if self.page_number:
+            print(f"subject_list[{self.page_number}-1] is {subject_list[int(self.page_number)-1]}")
+            kwargs = {'pk': subject_list[int(self.page_number) - 1][subject_id_key]}
             self.entry = get_object_or_404(subject_model, **kwargs)
         else:
             self.entry = get_subject_record(model=subject_model, subject_id=self.subject_id, name=self.name, slug=self.slug)
+            # Which page is the requested entry?
+            page_number = [count for count, record in enumerate(subject_list, 1) if record[subject_id_key] == self.entry.pk]
+            self.page_number = int(page_number[0])
+            print (f"SubjectPager figured out that page is {self.page_number}")
 
         print (f"SubjectPager: pager entry is '{self.entry}'")
-        if not self.page:
-            # Which page is the requested entry?
-            page = [count for count, record in enumerate(subject_list, 1) if record[subject_id_key] == self.entry.pk]
-            self.page = int(page[0])
-            print (f"SubjectPager figured out that page is {self.page}")
-
-        self.subject_pager = paginator.get_page(self.page)
+        self.subject_pager = paginator.get_page(self.page_number)
         return self.subject_pager
 
     def get_entry(self):
@@ -104,16 +106,16 @@ class ArtistPager(SubjectPager):
         :param slug:           artist slug
         """
         self.subject = 'artist'
-        self.request_page = request.GET.get(self.subject)
-        print(f"ArtistPager: request_page is '{self.request_page}'")
-        super(ArtistPager, self).__init__(page=self.request_page, subject_id=artist_id, name=name, slug=slug)
+        self.page_number = request.GET.get(self.subject)
+        print(f"ArtistPager: page_number is '{self.page_number}'")
+        super(ArtistPager, self).__init__(page_number=self.page_number, subject_id=artist_id, name=name, slug=slug)
 
         self.pager(cover_query=CoverQuerys.artist_list,
                                subject_id_key="artist_id",
                                subject_model=Artists)
 
-    def get_request_page(self):
-        return self.request_page
+    def get_page_number(self):
+        return self.page_number
 
 class AuthorPager(SubjectPager):
 
@@ -126,30 +128,29 @@ class AuthorPager(SubjectPager):
         :param slug:           author slug
         """
         self.subject = 'author'
-        self.request_page = request.GET.get(self.subject)
-        print(f"AuthorPager: request_page is '{self.request_page}'")
-        super(AuthorPager, self).__init__(page=self.request_page, subject_id=author_id, name=name, slug=slug)
+        self.page_number = request.GET.get(self.subject)
+        print(f"AuthorPager: page_number is '{self.page_number}'")
+        super(AuthorPager, self).__init__(page_number=self.page_number, subject_id=author_id, name=name, slug=slug)
 
         self.pager(cover_query=CoverQuerys.author_list,
                    subject_id_key="author_id",
                    subject_model=Author)
 
-    def get_request_page(self):
-        return self.request_page
+    def get_page_number(self):
+        return self.page_number
 
 class BookPager(MenuPager):
     """
     Pager for second level book list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
-    def __init__(self, page=None, item_id=None):
+    def __init__(self, page_number=None, item_id=None):
         """
-        :param page:            current page if set
-        one of
+        :param page_number:  current page if set
         :param item_id:      artwork or book id
         """
         super(MenuPager, self).__init__()
-        self.page = page
+        self.page_number = page_number
         self.item_id = item_id
 
     def pager(self, book_cover_query, item_id_key, item_model, subject_id_key, subject_model):
@@ -162,7 +163,7 @@ class BookPager(MenuPager):
         :return:
         """
         # have we got here by paging?
-        if not self.page:
+        if not self.page_number:
             if self.item_id:
                 kwargs = {'pk': self.item_id}
                 #self.entry = get_object_or_404(subject_model, **kwargs)
@@ -178,10 +179,10 @@ class BookPager(MenuPager):
         subject = get_object_or_404(subject_model, **kwargs)
         book_cover_list = book_cover_query(subject)
 
-        print (f"BookPager page is {self.page}")
-        if self.page:
-            print(f"book_cover_list[{self.page}-1] is {book_cover_list[int(self.page)-1]}")
-            kwargs = {'pk': book_cover_list[int(self.page) - 1][item_id_key]}
+        print (f"BookPager page_number is {self.page_number}")
+        if self.page_number:
+            print(f"book_cover_list[{self.page_number}-1] is {book_cover_list[int(self.page_number)-1]}")
+            kwargs = {'pk': book_cover_list[int(self.page_number) - 1][item_id_key]}
             self.entry = get_object_or_404(item_model, **kwargs)
         else:
             self.entry = item
@@ -189,13 +190,13 @@ class BookPager(MenuPager):
         # Show 1 book title per page
         paginator = Paginator(book_cover_list, 1)
 
-        if not self.page:
+        if not self.page_number:
             # Which page is the requested entry?
-            page = [count for count, record in enumerate(book_cover_list, 1) if record[item_id_key] == item.pk]
-            self.page = int(page[0])
-            print (f"BookPager figured out that page is {self.page}")
+            page_number = [count for count, record in enumerate(book_cover_list, 1) if record[item_id_key] == item.pk]
+            self.page_number = int(page_number[0])
+            print (f"BookPager figured out that page_number is {self.page_number}")
 
-        book_pager = paginator.get_page(self.page)
+        book_pager = paginator.get_page(self.page_number)
         return book_pager
 
     def get_entry(self):
