@@ -94,10 +94,10 @@ class ArtistMixin(TopLevelPagerMixin):
 
     def create_book_pager(self):
         # book cover pager
-        page = self.request.GET.get('page')
-        print(f"ArtworkMixin: create_book_pager - page is '{page}'")
+        page_number = self.request.GET.get('page')
+        print(f"ArtworkMixin: create_book_pager - page number is '{page_number}'")
 
-        pager = BookPager(page=page, item_id=self.artwork.pk)
+        pager = BookPager(page_number=page_number, item_id=self.artwork.pk)
         book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
                                  item_id_key="artwork_id",
                                  item_model=Artworks,
