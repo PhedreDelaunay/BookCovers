@@ -141,6 +141,7 @@ class Artwork(ArtistMixin, DetailView):
         redirect to ArtworkList when multiple covers are returned
     """
     template_name = 'bookcovers/artwork.html'
+    context_object_name = "edition"
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -189,7 +190,8 @@ class ArtworkList(ArtistMixin, ListView):
 
 
 class ArtworkCover(ArtistMixin, DetailView):
-    template_name = 'bookcovers/artwork_covers.html'
+    template_name = 'bookcovers/artwork_cover.html'
+    context_object_name = "edition"
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -207,10 +209,10 @@ class ArtworkCover(ArtistMixin, DetailView):
         if page_number != 1:
             self.edition_id = queryset[page_number-1]['edition__pk']
             print(f"ArtworkCover: now edition id is '{self.edition_id}'")
-            self.edition = get_object_or_404(Editions, edition_id=self.edition_id)
-            print(f"ArtworkCovers: now artwork id is '{self.edition.theCover.artwork.pk}'")
-            self.get_artwork(self.edition.theCover.artwork.pk)
-        return self.edition
+            edition = get_object_or_404(Editions, edition_id=self.edition_id)
+            print(f"ArtworkCovers: now artwork id is '{edition.theCover.artwork.pk}'")
+            self.get_artwork(edition.theCover.artwork.pk)
+        return edition
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -235,7 +237,7 @@ class ArtworkCover(ArtistMixin, DetailView):
 # http://127.0.0.1:8000/bookcovers/artwork/covers/7/
 # class ArtworkCovers(ArtworkList):
 #     paginate_by = 1
-#     template_name = 'bookcovers/artwork_covers.html'
+#     template_name = 'bookcovers/artwork_cover.html'
 #
 #     def setup(self, request, *args, **kwargs):
 #         super().setup(request, *args, **kwargs)
@@ -316,6 +318,7 @@ class Book(AuthorMixin, DetailView):
         redirect to BookList when multiple covers are returned
     """
     template_name = 'bookcovers/book.html'
+    context_object_name = "edition"
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)

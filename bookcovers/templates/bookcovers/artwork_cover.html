@@ -1,0 +1,47 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+
+{% block menu_pagers %}
+{% include 'bookcovers/subject_pager.html' %}
+{% include 'bookcovers/detail_pager.html' %}
+{#  include 'bookcovers/cover_pager.html' #}
+{% endblock %}
+
+
+
+{% block content %}
+    <table><tr><td>
+    {% if object.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
+        {% with wauthor=object.book.author.name|cut:" " %}
+            <IMG src="{% static object.theCover.artwork.artist.cover_filepath|add:wauthor|add:'/'|add:object.theCover.cover_filename %}"
+                alt="{{ cover.book__title }}"
+                title="{{ cover.book__title }}">
+        {% endwith %}
+    {% else %}
+        <IMG src="{% static object.theCover.artwork.artist.cover_filepath|add:object.theCover.cover_filename %}"
+            alt="{{ object.book.title }}"
+            title="{{ object.book.title }}">
+    {% endif %}
+</td><td>
+    <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_artworks' object.theCover.artwork.artist.artist_id %}" title="Select for all the covers for this artist">{{ object.theCover.artwork.artist.name }}</a>
+    <BR/><B>Year: </B>{{ object.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ object.theCover.artwork.confidence_level }}<BR/>
+    <B>Evidence: </B>{{ object.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
+    <B>author: </B><a href="{% url 'bookcovers:author_books' object.book.author.author_id %}" title="Select author for all books by this author">{{ object.book.author.name }}</a><BR/>
+    <B>title: </B><a href="{% url 'bookcovers:book' object.book.book_id %}" title="Select title for all covers for this book">{{ object.book.title}}</a><BR/>
+    Copyright: {{ object.book.copyright_year }}<BR/>
+    This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID=7','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ object.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
+</td></tr>
+</table>
+
+<BR/>
+        {% for cover in cover_list %}
+             <a href="{% url 'bookcovers:artwork_cover' cover.edition__pk %}">
+                <IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
+                    alt="{{ cover.book__title }}"
+                    title="{{ cover.book__title }}"/></a>
+        {% endfor %}
+{% endblock %}
+
+
+
