@@ -370,13 +370,8 @@ class BookArtistSets(AuthorMixin, ListView):
 class Edition(DetailView):
     model=Editions
     print ("Edition")
-    template_name = 'bookcovers/edition_detail.html'
+    template_name = 'bookcovers/edition.html'
 
-
-
-def artwork_edition(request, edition_id):
-
-    return book_edition(request, edition_id)
 
 def book_edition(request, edition_id):
     author_id=None

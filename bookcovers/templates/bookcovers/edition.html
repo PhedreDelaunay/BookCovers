@@ -1,13 +1,6 @@
 {% extends "bookcovers/base.html" %}
 
-{% load static %}
-
-{% block menu_pagers %}
-{% include 'bookcovers/subject_pager.html' %}
-{% include 'bookcovers/book_pager.html' %}
-{% endblock %}
 {% block content %}
-
 {% include 'bookcovers/book_cover_detail.html' %}
 {% endblock %}
 
