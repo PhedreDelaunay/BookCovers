@@ -1,3 +1,4 @@
+{% if view.book_pager.paginator.num_pages > 1 %}
 <div class="pagination">
     <a href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">all {{ view.subject.title }}</a>
     <span class="step-links">
@@ -20,3 +21,4 @@
         {% endif %}
     </span>
 </div>
+{% endif %}
