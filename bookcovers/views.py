@@ -372,7 +372,7 @@ class Edition(DetailView):
     print ("Edition")
     template_name = 'bookcovers/edition.html'
 
-
+# up to here - replace with class based view
 def book_edition(request, edition_id):
     author_id=None
 
@@ -381,19 +381,19 @@ def book_edition(request, edition_id):
     book = get_object_or_404(Books, pk=edition.book.pk)
     author_id = book.author_id
 
-    # author pager
-    author_pager = AuthorPager(request, author_id=author_id)
-    if author_pager.get_page_number():
-        # move on to the next or previous author
-        author = author_pager.get_entry()
-        return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
+    # # author pager
+    # author_pager = AuthorPager(request, author_id=author_id)
+    # if author_pager.get_page_number():
+    #     # move on to the next or previous author
+    #     author = author_pager.get_entry()
+    #     return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
 
     # book cover pager
-    page = request.GET.get('page')
-    print(f"artwork cover_list: page is '{page}'")
+    page_number = request.GET.get('page')
+    print(f"artwork cover_list: page number is '{page_number}'")
 
     query_kwargs = {'author': book.author_id, 'all': False}
-    pager = BookPager(page=page, item_id=book.pk)
+    pager = BookPager(page_number=page_number, item_id=book.pk)
     book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
                              item_id_key="book_id",
                              item_model=Books,
@@ -403,10 +403,7 @@ def book_edition(request, edition_id):
 
     # up to here need a cover pager
 
-    context = {'book': book,
-               'the_pager': author_pager,
-               'book_pager': book_pager,
-               'edition': edition}
+    context = {'edition': edition}
 
     return book_cover_detail(request, edition_id, context)
 
