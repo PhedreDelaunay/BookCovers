@@ -196,22 +196,14 @@ class ArtworkCover(ArtistMixin, DetailView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
-        self.edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"ArtworkCover: artwork id is '{self.edition.theCover.artwork.pk}'")
-        self.get_artwork(self.edition.theCover.artwork.pk)
 
     def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"ArtworkCover: artwork id is '{edition.theCover.artwork.pk}'")
+        self.get_artwork(edition.theCover.artwork.pk)
         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
         self.book_pager = self.create_book_pager()
         print(f"ArtworkCover: get_object artwork.name={self.artwork.name}")
-        queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
-        page_number = self.get_page_number(queryset)
-        if page_number != 1:
-            self.edition_id = queryset[page_number-1]['edition__pk']
-            print(f"ArtworkCover: now edition id is '{self.edition_id}'")
-            edition = get_object_or_404(Editions, edition_id=self.edition_id)
-            print(f"ArtworkCovers: now artwork id is '{edition.theCover.artwork.pk}'")
-            self.get_artwork(edition.theCover.artwork.pk)
         return edition
 
     def get_context_data(self, **kwargs):
@@ -219,14 +211,6 @@ class ArtworkCover(ArtistMixin, DetailView):
         context['cover_list'] = CoverQuerys.all_covers_for_artwork(self.artwork)
         print ("ArtworkCover: get_context")
         return context
-
-    def get_page_number(self, cover_list):
-        page_number = 1
-        if self.edition_id != cover_list[0]['edition__pk']:
-            page_number = [count for count, record in enumerate(cover_list, 1) if record['edition__pk'] == self.edition_id]
-            page_number = int(page_number[0])
-        print(f"ArtworkCover: figured out that page_number is {page_number}")
-        return page_number
 
 
 # Use this for AuthorCovers but will need to provide own pager
