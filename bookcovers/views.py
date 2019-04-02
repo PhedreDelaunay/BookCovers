@@ -140,7 +140,7 @@ class Artwork(ArtistMixin, DetailView):
         display a single book cover using this artwork (the most common scenario)
         redirect to ArtworkList when multiple covers are returned
     """
-    template_name = 'bookcovers/artwork.html'
+    template_name = 'bookcovers/book.html'
     context_object_name = "edition"
 
     def setup(self, request, *args, **kwargs):
@@ -392,6 +392,7 @@ class BookArtistSets(AuthorMixin, ListView):
 
 class Edition(DetailView):
     model=Editions
+    context_object_name="edition"
     print ("Edition")
     template_name = 'bookcovers/edition.html'
 
