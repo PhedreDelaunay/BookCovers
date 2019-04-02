@@ -5,6 +5,7 @@
 {% block menu_pagers %}
 {% include 'bookcovers/subject_pager.html' %}
 {% include 'bookcovers/detail_pager.html' %}
+{#  include 'bookcovers/cover_pager.html' #}
 {% endblock %}
 
 
@@ -20,7 +21,7 @@
                     alt="{{ cover.book__title }}"
                     title="{{ cover.book__title }}"/></a>
             {% else %}
-              <IMG class="thumbnail" src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
+              <IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
                 alt="{{ cover.book__title }}"
                 title="{{ cover.book__title }}"/>
             {%  endif %}

@@ -15,7 +15,6 @@
                             <IMG class="cover_list" src="{% static cover.artwork__artist__cover_filepath|add:wauthor|add:cover.cover_filename %}"
                                  alt="{{ cover.book__title }}"
                                  title="{{ cover.book__title }}"/></a>
-                    </a>
                 {% endwith %}
             {% else %}
                  <a href="{% url 'bookcovers:book_edition' cover.edition__pk %}">
