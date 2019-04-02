@@ -209,7 +209,6 @@ class ArtworkCover(ArtistMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['cover_list'] = CoverQuerys.all_covers_for_artwork(self.artwork)
-        print ("ArtworkCover: get_context")
         return context
 
 
@@ -310,7 +309,7 @@ class Book(AuthorMixin, DetailView):
 
     def get_object(self, queryset=None):
         # order matters, get book pager (and book) first to ascertain the author
-        self.book_pager = self.create_book_pager()
+        self.book_pager = self.create_book_pager(book_id=self.book_id)
         print (f"Book: get  - now book is {self.book_id}")
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         # if multiple covers are returned exception will be caught and redirect to artwork list view
@@ -339,11 +338,34 @@ class BookList(AuthorMixin, ListView):
 
     def get_queryset(self):
         # order matters, get book pager (and book) first to ascertain the author
-        self.book_pager = self.create_book_pager()
+        self.book_pager = self.create_book_pager(book_id=self.book_id)
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         print (f"BookList: get_queryset book.title={self.book.title}")
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
+
+
+class BookEdition(AuthorMixin, DetailView):
+    template_name = 'bookcovers/book_edition.html'
+    context_object_name = "edition"
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"BookEdition: author id is '{edition.book.author_id}'")
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
+        self.book_pager = self.create_book_pager(book_id=edition.book.pk)
+        # TODO book_pager sets self.book but this is not obvious, make more explicit
+        return edition
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['cover_list'] = CoverQuerys.all_covers_for_title(self.book)
+        print ("BookEdition: get_context")
+        return context
 
 
 # http:<host>/bookcovers/author/<author%20name>/sets
@@ -367,60 +389,11 @@ class BookArtistSets(AuthorMixin, ListView):
         queryset = CoverQuerys.set_covers_by_artist(author=self.author.author_id, return_dict=True)
         return queryset
 
+
 class Edition(DetailView):
     model=Editions
     print ("Edition")
     template_name = 'bookcovers/edition.html'
-
-# up to here - replace with class based view
-def book_edition(request, edition_id):
-    author_id=None
-
-    edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
-
-    book = get_object_or_404(Books, pk=edition.book.pk)
-    author_id = book.author_id
-
-    # # author pager
-    # author_pager = AuthorPager(request, author_id=author_id)
-    # if author_pager.get_page_number():
-    #     # move on to the next or previous author
-    #     author = author_pager.get_entry()
-    #     return redirect(to='bookcovers:author_books', permanent=False, author_id=author.author_id)
-
-    # book cover pager
-    page_number = request.GET.get('page')
-    print(f"artwork cover_list: page number is '{page_number}'")
-
-    query_kwargs = {'author': book.author_id, 'all': False}
-    pager = BookPager(page_number=page_number, item_id=book.pk)
-    book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
-                             item_id_key="book_id",
-                             item_model=Books,
-                             subject_id_key='author_id',
-                             subject_model=Author)
-    book = pager.get_entry()
-
-    # up to here need a cover pager
-
-    context = {'edition': edition}
-
-    return book_cover_detail(request, edition_id, context)
-
-def book_cover_detail(request, edition_id, context):
-    # to consider: use this view for when go to edition without paging
-    template_name = 'bookcovers/edition.html'
-
-    page = request.GET.get('page')
-    print(f"book_cover_detail: page is '{page}'")
-
-    # edition -> cover -> artwork
-    edition = Editions.objects.get(edition_id=edition_id,theCover__flags__lt=256)
-    print (f"edition is {edition.pk}, artwork is {edition.theCover.artwork_id}, book is '{edition.book.title}'")
-
-    return render(request, template_name, context)
-
-
 
 
 #=========================================
