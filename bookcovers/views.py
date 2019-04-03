@@ -164,6 +164,28 @@ class Artwork(ArtistMixin, DetailView):
         except Covers.MultipleObjectsReturned:
             return redirect(to='bookcovers:artwork_list', permanent=False, artwork_id=self.artwork.pk)
 
+# class ArtworkCover(ArtistMixin, DetailView):
+#     template_name = 'bookcovers/artwork_cover.html'
+#     context_object_name = "edition"
+#
+#     def setup(self, request, *args, **kwargs):
+#         super().setup(request, *args, **kwargs)
+#         self.artwork_id = kwargs.get("artwork_id", None)
+#         print (f"ArtworkCover:setup artwork id is '{self.artwork.pk}'")
+#
+#     def get_object(self, queryset=None):
+#         self.get_artwork(self.artwork_id)
+#         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
+#         self.book_pager = self.create_book_pager()
+#         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
+#         edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition__pk'])
+#         print(f"ArtworkCover: get_object artwork.name={self.artwork.name}")
+#         return edition
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['cover_list'] = self.cover_list
+#         return context
 
 # http:<host>/bookcovers/artworks/<artwork_id>
 class ArtworkList(ArtistMixin, ListView):
@@ -176,7 +198,6 @@ class ArtworkList(ArtistMixin, ListView):
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
-        self.page_kwarg = "cover"
         super().setup(request, *args, **kwargs)
         self.artwork_id = kwargs.get("artwork_id", None)
         self.get_artwork(self.artwork_id)
@@ -187,7 +208,6 @@ class ArtworkList(ArtistMixin, ListView):
         print (f"ArtworkList: get_queryset artwork.name={self.artwork.name}")
         queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
         return queryset
-
 
 class ArtworkCover(ArtistMixin, DetailView):
     template_name = 'bookcovers/artwork_cover.html'
@@ -210,7 +230,6 @@ class ArtworkCover(ArtistMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['cover_list'] = CoverQuerys.all_covers_for_artwork(self.artwork)
         return context
-
 
 # Use this for AuthorCovers but will need to provide own pager
 # cos default pager assumes you are coming in from first page
@@ -292,14 +311,9 @@ class AuthorBooks(AuthorMixin, ListView):
     #     # needed to have an HttpResponse
     #     return super(AuthorBooks, self).dispatch(request, *args, **kwargs)
 
-
 # http:<host>/bookcovers/book/<book_id>
 # http:<host>/bookcovers/book/<the%20title> - not implemented
 class Book(AuthorMixin, DetailView):
-    """
-        display a single book title selected from an author's list
-        redirect to BookList when multiple covers are returned
-    """
     template_name = 'bookcovers/book.html'
     context_object_name = "edition"
 
@@ -308,21 +322,37 @@ class Book(AuthorMixin, DetailView):
         self.book_id = kwargs.get("book_id", None)
 
     def get_object(self, queryset=None):
-        # order matters, get book pager (and book) first to ascertain the author
+        # order matters, get book pager (and hence book) first to ascertain the author
+        # TODO book_pager sets self.book but this is not obvious, make more explicit
         self.book_pager = self.create_book_pager(book_id=self.book_id)
-        print (f"Book: get  - now book is {self.book_id}")
+        print (f"BookCover:get_object - now book is {self.book_id}, author is {self.book.author_id}")
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
-        # if multiple covers are returned exception will be caught and redirect to artwork list view
-        cover = Covers.objects.get(book=self.book_id, flags__lt=256)
-        print (f"Book: get_object; cover is {cover}")
-        edition = get_object_or_404(Editions, edition_id=cover.edition.pk)
+        self.cover_list = CoverQuerys.all_covers_for_title(self.book)
+        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition__pk'])
         return edition
 
-    def get(self, request, **kwargs):
-        try:
-            return super().get(request, **kwargs)
-        except Covers.MultipleObjectsReturned:
-            return redirect(to='bookcovers:book_list', permanent=False, book_id=self.book_id)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print ("Book: get_context")
+        context['cover_list'] = self.cover_list
+        return context
+
+
+# http:<host>/bookcovers/book/edition/<edition_id>
+class BookEdition(Book):
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"BookEdition:get_object author id is '{edition.book.author_id}'")
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
+        self.book_pager = self.create_book_pager(book_id=edition.book.pk)
+        # TODO book_pager sets self.book but this is not obvious, make more explicit
+        self.cover_list = CoverQuerys.all_covers_for_title(self.book)
+        return edition
 
 # http:<host>/bookcovers/books/<book_id>
 class BookList(AuthorMixin, ListView):
@@ -343,30 +373,6 @@ class BookList(AuthorMixin, ListView):
         print (f"BookList: get_queryset book.title={self.book.title}")
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
-
-
-class BookEdition(AuthorMixin, DetailView):
-    template_name = 'bookcovers/book_edition.html'
-    context_object_name = "edition"
-
-    def setup(self, request, *args, **kwargs):
-        super().setup(request, *args, **kwargs)
-        self.edition_id = kwargs.get("edition_id", None)
-
-    def get_object(self, queryset=None):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"BookEdition: author id is '{edition.book.author_id}'")
-        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
-        self.book_pager = self.create_book_pager(book_id=edition.book.pk)
-        # TODO book_pager sets self.book but this is not obvious, make more explicit
-        return edition
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['cover_list'] = CoverQuerys.all_covers_for_title(self.book)
-        print ("BookEdition: get_context")
-        return context
-
 
 # http:<host>/bookcovers/author/<author%20name>/sets
 class BookArtistSets(AuthorMixin, ListView):
