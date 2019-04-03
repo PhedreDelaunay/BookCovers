@@ -2,7 +2,7 @@
 
 <h2>{{ edition.book.title }}</h2>
 <table><tr><td>
-    <a href="{% url 'bookcovers:book_list' edition.book.book_id %}">
+     <a href="{% url 'bookcovers:'|add:view.detail.list_view_name view.detail.object.pk %}">
     {% if edition.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
         {% with wauthor=edition.book.author.name|cut:" " %}
             <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:wauthor|add:'/'|add:edition.theCover.cover_filename %}"

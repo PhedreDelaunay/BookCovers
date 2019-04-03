@@ -55,6 +55,7 @@ class ArtistMixin(TopLevelPagerMixin):
     }
     detail = {
         'view_name': 'artwork',
+        'list_view_name': 'artwork_list',
         'object': None,
     }
 
@@ -118,7 +119,9 @@ class AuthorMixin(TopLevelPagerMixin):
         'view_name': 'author_books',
     }
     detail = {
-        'view_name': 'book'
+        'view_name': 'book',
+        'list_view_name': 'book_list',
+        'object': None,
     }
 
     @property
