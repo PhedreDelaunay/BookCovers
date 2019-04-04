@@ -13,9 +13,10 @@
 {% include 'bookcovers/detail.html' %}
 
 <BR/>
+{% if cover_list|length > 1 %}
         {% for cover in cover_list %}
             {%  if cover.edition__pk != edition.pk %}
-             <a class="thumbnail_link" href="{% url 'bookcovers:artwork_cover' cover.edition__pk %}">
+             <a class="thumbnail_link" href="{% url 'bookcovers:artwork_edition' cover.edition__pk %}">
                 <IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
                     alt="{{ cover.book__title }}"
                     title="{{ cover.book__title }}"/></a>
@@ -23,8 +24,9 @@
               <IMG class="thumbnail" src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
                 alt="{{ cover.book__title }}"
                 title="{{ cover.book__title }}"/>
-            {%  endif %}
+            {% endif %}
         {% endfor %}
+{% endif %}
 {% endblock %}
 
 

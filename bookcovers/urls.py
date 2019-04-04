@@ -5,7 +5,7 @@ from bookcovers.views import AuthorBooks
 from bookcovers.views import ArtistArtworks
 from bookcovers.views import Artwork
 from bookcovers.views import ArtworkList
-from bookcovers.views import ArtworkCover
+from bookcovers.views import ArtworkEdition
 from bookcovers.views import Edition
 from bookcovers.views import Book
 from bookcovers.views import BookList
@@ -55,8 +55,8 @@ urlpatterns = [
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
     # ex: /bookcovers/artworks/6/
     path('artworks/<int:artwork_id>/', ArtworkList.as_view(), name='artwork_list'),
-    # ex: /bookcovers/artwork/covers/7/
-    path('artwork/cover/<int:edition_id>/', ArtworkCover.as_view(), name="artwork_cover"),
+    # ex: /bookcovers/artwork/edition/7/
+    path('artwork/edition/<int:edition_id>/', ArtworkEdition.as_view(), name="artwork_edition"),
     # ex: /bookcovers/edition/6
     path('edition/<pk>/', Edition.as_view(), name="edition"),
     #path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
