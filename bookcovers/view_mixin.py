@@ -84,21 +84,21 @@ class ArtistMixin(TopLevelPagerMixin):
         self.detail['object'] = self.artwork
         self.artist = self.artwork.artist
 
-    def get_artwork(self, artwork_id):
-        print (f"ArtworkMixin: get_artwork: artwork_id={artwork_id}")
-        if artwork_id:
-            self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
+    # def get_artwork(self, artwork_id):
+    #     print (f"ArtworkMixin: get_artwork: artwork_id={artwork_id}")
+    #     if artwork_id:
+    #         self.artwork = get_object_or_404(Artworks, artwork_id=artwork_id)
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
         artist_pager = ArtistPager(self.request,  artist_id=artist_id, name=name, slug=slug)
         return artist_pager
 
-    def create_book_pager(self):
+    def create_book_pager(self, artwork_id):
         # book cover pager
         page_number = self.request.GET.get('page')
         print(f"ArtworkMixin: create_book_pager - page number is '{page_number}'")
 
-        pager = BookPager(page_number=page_number, item_id=self.artwork.pk)
+        pager = BookPager(page_number=page_number, item_id=artwork_id)
         book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
                                  item_id_key="artwork_id",
                                  item_model=Artworks,
