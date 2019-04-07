@@ -196,6 +196,7 @@ class CoverQuerys:
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
+                    'theCover__edition__pk',
                    'theCover__artwork__artist__cover_filepath',
                    'theCover__cover_filename',
                    'title',
@@ -213,6 +214,7 @@ class CoverQuerys:
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
+                    'theCover__edition__pk',
                    'theCover__artwork__artist__cover_filepath',
                    'theCover__cover_filename',
                    'title',
@@ -247,7 +249,7 @@ class CoverQuerys:
             #print (f"author {author.name}: has no unknown covers")
             print (f"author {author_id}: has no unknown covers")
 
-        #print (cover_list)
+        print (list(cover_list))
         #print(f"django author cover_list query is\n{cover_list.query}")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
@@ -340,45 +342,39 @@ class CoverQuerys:
         return set_list
 
     @staticmethod
-    def set_covers_by_artist(author=None, artist=None, return_dict=True):
-        """
+    def set_covers_by_artist(author_id=None, return_dict=True):
+        series_list = Sets.objects.filter(author=author_id).values_list('series_id', flat=True).distinct()
+        if len(series_list) > 0:
+            print(f"set_covers_test: {list(series_list)})")
+            print(f"set_covers_test: length {len(series_list)}")
 
-        :param author:      author to display sets for
-        :param artist:      when defined returns only covers by this artist
-                            else returns all covers by each artist
-        :return: cover list
-        """
-        series_list = Sets.objects.filter(author=author).values_list('series_id', flat=True).distinct()
-        print(f"number of sets in series {len(series_list)}")
-        print(f"sets {series_list}")
-
+        # set includes artist,  we want covers with that artist
         inner_queryset_book_list = BooksSeries.objects. \
             filter(series__in=series_list). \
-            values_list('book_id', flat=True). \
+            filter(series__theSet__artist__pk=F('book__theCover__artwork__artist__pk')). \
+            values_list('book__theCover__pk', flat=True). \
             order_by('volume')
-        print("set_covers_by_artist: inner_queryset_book_list is:")
-        print(inner_queryset_book_list.query)
-        print(f"number of books in series {len(inner_queryset_book_list)}")
-        print(f"books in series {inner_queryset_book_list}")
+
+        if len(series_list) > 0:
+            print (f"set_covers_test: {inner_queryset_book_list.query}")
+            print (f"set_covers_test: {list(inner_queryset_book_list)})")
+            print(f"set_covers_test: length {len(inner_queryset_book_list)}")
 
         inner_queryset_exceptions = SetExceptions.objects. \
             values_list('cover', flat=True)
-        print(f"number of exceptions {len(inner_queryset_exceptions)}")
-        print(f"exceptions {inner_queryset_exceptions}")
 
-        set_list = BooksSeries.objects. \
-            filter(series__in=series_list). \
-            select_related('book'). \
-            order_by('volume')
 
         cover_list = Covers.objects. \
-            filter(book__in=inner_queryset_book_list). \
+            filter(cover_id__in=inner_queryset_book_list). \
             filter(book__theBooksSeries__series_id__in=series_list). \
             exclude(cover_id__in=inner_queryset_exceptions). \
             filter(is_variant=False, flags__lt=256)
 
-        if artist:
-            cover_list = cover_list.filter(artwork__artist=artist)
+
+        if len(series_list) > 0:
+            print (f"set_covers_test: {cover_list.query}")
+            print (f"set_covers_test: {list(cover_list)}")
+            print (f"set_covers_test: length {len(cover_list)}")
 
         if return_dict:
             # 1 query 0.45MS
@@ -394,6 +390,8 @@ class CoverQuerys:
                 order_by('artwork__artist', 'book__theBooksSeries__volume'). \
                 select_related('book','artwork')
 
+        if len(series_list) > 0:
+            print (f"set_covers_test: {list(set_cover_list)}")
         return set_cover_list
 
     @staticmethod

@@ -84,13 +84,13 @@ class ArtworkPageTest(PageTestCases.PageTestCase):
     def setUp(self):
         self.reverse_url = reverse('bookcovers:artwork', kwargs={'artwork_id': 178})
         self.expected_response_code = 200
-        self.template_url = 'bookcovers/book.html'
+        self.template_url = 'bookcovers/artwork_cover.html'
 
 class ArtworkListPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
         self.reverse_url = reverse('bookcovers:artwork', kwargs={'artwork_id': 6})
-        self.expected_response_code = 302
+        self.expected_response_code = 200
 
     def test_template(self):
         self.reverse_url = reverse('bookcovers:artwork_list', kwargs={'artwork_id': 6})
@@ -165,7 +165,7 @@ class BookListPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
         self.reverse_url = reverse('bookcovers:book', kwargs={'book_id': 93})
-        self.expected_response_code = 302
+        self.expected_response_code = 200
 
     def test_template(self):
         self.reverse_url = reverse('bookcovers:book_list', kwargs={'book_id': 93})

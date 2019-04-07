@@ -323,9 +323,9 @@ class BookArtistSets(AuthorMixin, ListView):
         self.author = self.the_pager.get_entry()
         self.web_title = self.author.name
         print (f"BookArtistSets:get_queryset: author is '{self.author.name}'")
-        queryset = CoverQuerys.set_covers_by_artist(author=self.author.author_id, return_dict=True)
+        queryset = CoverQuerys.set_covers_by_artist(author_id=self.author.author_id, return_dict=True)
         return queryset
-
+# is series data missing from database?
 
 class Edition(DetailView):
     model=Editions
