@@ -554,7 +554,7 @@ class BookQueryTests(QueryTestCase):
                                              django_cover_query=CoverQuerys.all_covers_for_title,
                                              expected_keys=["cover_filepath", "cover_filename", "print_year",
                                                             "country_id", "display_order"],
-                                             actual_keys=["artwork__artist__cover_filepath", "cover_filename",
+                                             actual_keys=["cover_filepath", "cover_filename",
                                                           "edition__print_year",
                                                           "edition__country", "edition__country__display_order"]
                                              )

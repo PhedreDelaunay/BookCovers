@@ -279,18 +279,32 @@ class CoverQuerys:
 
         inner_queryset = Books.objects.filter(book_id=book.book_id).values_list('theEdition__edition_id', flat=True)
 
+
+        # title_cover_list = Covers.objects \
+        #     .filter(book=book, flags__lt=256) \
+        #     .filter(edition__in=inner_queryset) \
+        #     .values('artwork__artist__cover_filepath',
+        #             'cover_filename',
+        #             'book__title',
+        #             'book__author__name',       # needed for unknown artists
+        #             'edition__pk',
+        #             'edition__country',
+        #             'edition__country__display_order',
+        #             'edition__print_year') \
+        #     .order_by('edition__country__display_order','edition__print_year')
+
         # pk is book_id
         title_cover_list = Covers.objects \
             .filter(book=book, flags__lt=256) \
             .filter(edition__in=inner_queryset) \
-            .values('artwork__artist__cover_filepath',
-                    'cover_filename',
-                    'book__title',
+            .values('cover_filename',
                     'book__author__name',       # needed for unknown artists
                     'edition__pk',
                     'edition__country',
                     'edition__country__display_order',
-                    'edition__print_year') \
+                    'edition__print_year',
+                    book_title=F('book__title'),
+                    cover_filepath=F('artwork__artist__cover_filepath')) \
             .order_by('edition__country__display_order','edition__print_year')
 
         return title_cover_list
