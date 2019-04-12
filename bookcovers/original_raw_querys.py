@@ -229,10 +229,16 @@ class OriginalRawQuerys:
         return set_list
 
     @staticmethod
-    def author_artist_set_cover_list(author_id, return_dict=False):
-        #print (f"author_artist_cover_set_list: author_id={author_id}")
+    def author_set_cover_list(author_id, return_dict=False):
+        """
+        gets all covers in all sets for this author
+        :param author_id:
+        :param return_dict:
+        :return:
+        """
+        #print (f"author_cover_set_list: author_id={author_id}")
 
-        strAASetCovers = ("SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id "
+        strAuthorSetCovers = ("SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id "
                         "FROM artists, covers as BC, series as BS, books_series as BSL, sets, artworks as AW "
                         "WHERE (sets.author_id = %s)"
                         "AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id "
@@ -244,7 +250,40 @@ class OriginalRawQuerys:
 
         #print(f"strAASetCovers is\n{strAASetCovers}\n")
         with connection.cursor() as cursor:
-            cursor.execute(strAASetCovers, [author_id])
+            cursor.execute(strAuthorSetCovers, [author_id])
+            if return_dict:
+                set_cover_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                set_cover_list = cursor.fetchall()
+            #print(f"Original author/artist set cover list is\n{set_cover_list}\n")
+
+        return set_cover_list
+
+    @staticmethod
+    def author_artist_set_cover_list(author_id, artist_id, return_dict=True):
+        """
+        gets covers from sets for this author and artist
+        assumes only 1 set will meet this criteria - which is probably true now but may not always be the case
+        :param author_id:
+        :param artist_id:
+        :param return_dict:
+        :return:
+        """
+        strAASetCovers = ("SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id "
+                            "FROM artists, covers as BC, series as BS, books_series as BSL, sets, artworks as AW "
+                            "WHERE (sets.author_id = %s) "
+                            "AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id "
+                            "AND BC.flags < 256 AND BC.is_variant = false "
+                            "AND BC.book_id = BSL.book_id AND AW.artist_id = %s "
+                            "AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id "
+                            "AND BC.artwork_id = AW.artwork_id "
+                            "AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) "
+                            "GROUP BY AW.artwork_id "
+                            "ORDER BY BSL.volume")
+
+        #print(f"strAASetCovers is\n{strAASetCovers}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strAASetCovers, [author_id, artist_id])
             if return_dict:
                 set_cover_list = OriginalRawQuerys.dictfetchall(cursor)
             else:
