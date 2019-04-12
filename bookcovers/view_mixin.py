@@ -120,7 +120,7 @@ class AuthorMixin(TopLevelPagerMixin):
     }
     detail = {
         'view_name': 'book',
-        'list_view_name': 'book_list',
+        'list_view_name': 'books',
         'object': None,
     }
 

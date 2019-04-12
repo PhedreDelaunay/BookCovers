@@ -116,7 +116,7 @@ class AuthorPageTest(PageTestCases.PageTestCase):
     # test sets link appears in author, Ray Bradbury, known to have sets
     # https://docs.djangoproject.com/en/2.1/topics/testing/tools/
     def test_page_contains_sets_link(self):
-        sets_reverse_url = reverse('bookcovers:book_artist_sets', kwargs={'name':'Ray Bradbury'})
+        sets_reverse_url = reverse('bookcovers:author_sets', kwargs={'name':'Ray Bradbury'})
         #print (f'reverse_url is "{reverse_url}"')
         response = self.client.get(reverse('bookcovers:author_books', kwargs={'name':'Ray Bradbury'}))
         self.assertContains(response, f'href="{sets_reverse_url}">', count=1, status_code=200, msg_prefix='', html=False)
@@ -124,7 +124,7 @@ class AuthorPageTest(PageTestCases.PageTestCase):
     # test sets link does not appear in author, Rex Gordon, known  not to have sets
     # https://docs.djangoproject.com/en/2.1/topics/testing/tools/
     def test_page_notcontains_sets_link(self):
-        sets_reverse_url = reverse('bookcovers:book_artist_sets', kwargs={'name':'Rex Gordon'})
+        sets_reverse_url = reverse('bookcovers:author_sets', kwargs={'name':'Rex Gordon'})
         response = self.client.get(reverse('bookcovers:author_books', kwargs={'name':'Rex Gordon'}))
         self.assertNotContains(response, f'href="{sets_reverse_url}">', status_code=200, msg_prefix='', html=False)
 
@@ -140,10 +140,10 @@ class AuthorPageTest(PageTestCases.PageTestCase):
 class AuthorSetsPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.reverse_url = reverse('bookcovers:book_artist_sets', kwargs={'name': 'Ray Bradbury'})
+        self.reverse_url = reverse('bookcovers:author_sets', kwargs={'name': 'Ray Bradbury'})
         #self.reverse_url = reverse('bookcovers:author_book_sets', kwargs={'author_id': 15})
         self.expected_response_code = 200
-        self.template_url = 'bookcovers/book_artist_sets.html'
+        self.template_url = 'bookcovers/author_sets.html'
 
     # def test_status_code_name(self):
     #     reverse_url = reverse('bookcovers:author_book_sets', kwargs={'name': 'Ray Bradbury'})
@@ -161,14 +161,14 @@ class BookPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/book.html'
 
-class BookListPageTest(PageTestCases.PageTestCase):
+class BooksPageTest(PageTestCases.PageTestCase):
 
     def setUp(self):
-        self.reverse_url = reverse('bookcovers:book', kwargs={'book_id': 93})
+        self.reverse_url = reverse('bookcovers:books', kwargs={'book_id': 93})
         self.expected_response_code = 200
 
     def test_template(self):
-        self.reverse_url = reverse('bookcovers:book_list', kwargs={'book_id': 93})
+        self.reverse_url = reverse('bookcovers:books', kwargs={'book_id': 93})
         self.expected_response_code = 200
-        self.template_url = 'bookcovers/book_list.html'
+        self.template_url = 'bookcovers/books.html'
         super().test_template()

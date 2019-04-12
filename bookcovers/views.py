@@ -251,6 +251,9 @@ class Book(AuthorMixin, DetailView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
+        self.detail['list_view_name'] = 'books'
+        # why does AuthorMixin not reset between views?
+        # cos it is class variable not instance variable
 
     def get_object(self, queryset=None):
         # order matters, get book pager (and hence book) first to ascertain the author
@@ -286,11 +289,11 @@ class BookEdition(Book):
         return edition
 
 # http:<host>/bookcovers/books/<book_id>
-class BookList(AuthorMixin, ListView):
+class Books(AuthorMixin, ListView):
     """
-        displays all the covers for the same book title
+        displays all the book covers for the same book title
     """
-    template_name = 'bookcovers/book_list.html'
+    template_name = 'bookcovers/books.html'
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
@@ -301,16 +304,17 @@ class BookList(AuthorMixin, ListView):
         # order matters, get book pager (and book) first to ascertain the author
         self.book_pager = self.create_book_pager(book_id=self.book_id)
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
-        print (f"BookList: get_queryset book.title={self.book.title}")
+        # TODO book_pager sets self.book but this is not obvious, make more explicit
+        print (f"Books: get_queryset book.title={self.book.title}")
         queryset = CoverQuerys.all_covers_for_title(self.book)
         return queryset
 
 # http:<host>/bookcovers/author/<author%20name>/sets
-class BookArtistSets(AuthorMixin, ListView):
+class AuthorSets(AuthorMixin, ListView):
     """
     displays thumbnails of books by this author ordered in sets by artist
     """
-    template_name = 'bookcovers/book_artist_sets.html'
+    template_name = 'bookcovers/author_sets.html'
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
@@ -323,9 +327,56 @@ class BookArtistSets(AuthorMixin, ListView):
         self.author = self.the_pager.get_entry()
         self.web_title = self.author.name
         print (f"BookArtistSets:get_queryset: author is '{self.author.name}'")
-        queryset = CoverQuerys.set_covers_by_artist(author_id=self.author.author_id, return_dict=True)
+        queryset = CoverQuerys.author_set_covers(author_id=self.author.author_id, return_dict=True)
         return queryset
-# is series data missing from database?
+
+# http:<host>/bookcovers/set/edition/<edition_id>
+class SetEdition(Book):
+    template_name = 'bookcovers/set_edition.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        self.detail['list_view_name'] = 'set_editions'
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
+        print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        self.book_pager = self.create_book_pager(book_id=edition.book.pk)
+        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
+        # TODO book_pager sets self.book and detail object but this is not obvious, make more explicit
+        self.detail['object'] = edition
+        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        return edition
+
+# http:<host>/bookcovers/set/editions/<edition_id>
+class SetEditions(AuthorMixin, ListView):
+    """
+        displays all the covers for the set
+    """
+    template_name = 'bookcovers/set_editions.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        print (f"SetEditions::setup: edition_id is {self.edition_id}")
+        self.detail['view_name'] = 'set_edition'
+
+
+    def get_queryset(self):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
+        print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        # order matters, get book pager (and book) first to ascertain the author
+        # up to here http://127.0.0.1:8000/bookcovers/book/set/edition/95/ pager returns wrong author
+        self.book_pager = self.create_book_pager(book_id=edition.book_id)
+        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
+        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        return queryset
 
 class Edition(DetailView):
     model=Editions

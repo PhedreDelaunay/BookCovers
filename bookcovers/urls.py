@@ -8,9 +8,11 @@ from bookcovers.views import ArtworkList
 from bookcovers.views import ArtworkEdition
 from bookcovers.views import Edition
 from bookcovers.views import Book
-from bookcovers.views import BookList
-from bookcovers.views import BookArtistSets
+from bookcovers.views import AuthorSets
 from bookcovers.views import BookEdition
+from bookcovers.views import Books
+from bookcovers.views import SetEdition
+from bookcovers.views import SetEditions
 
 from . import views
 
@@ -34,7 +36,7 @@ urlpatterns = [
     # ex: /bookcovers/author/Robert%20Heinelein/
     path('author/<name>/', AuthorBooks.as_view(), name='author_books'),
     # ex: /bookcovers/artist/Ray%20Bradbury/sets/
-    path('author/<name>/sets/', BookArtistSets.as_view(), name='book_artist_sets'),
+    path('author/<name>/sets/', AuthorSets.as_view(), name='author_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
     # ex: /bookcovers/artist/6/
@@ -48,9 +50,13 @@ urlpatterns = [
     # ex: /bookcovers/book/Machineries%20Of%20Joy/ - not yet implemented
     path('book/<title>/',  Book.as_view(), name='book'),
     # ex: /bookcovers/books/7/
-    path('books/<int:book_id>/', BookList.as_view(), name='book_list'),
+    path('books/<int:book_id>/', Books.as_view(), name='books'),
     # ex: /bookcovers/book/edition/6/
     path('book/edition/<int:edition_id>/', BookEdition.as_view(), name="book_edition"),
+    # ex: /bookcovers/set/edition/6/
+    path('book/set/edition/<int:edition_id>/', SetEdition.as_view(), name="set_edition"),
+    # ex: /bookcovers/book/set/editions/6/
+    path('book/set/editions/<int:edition_id>/', SetEditions.as_view(), name="set_editions"),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
     # ex: /bookcovers/artworks/6/
