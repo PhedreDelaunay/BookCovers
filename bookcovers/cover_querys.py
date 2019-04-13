@@ -299,7 +299,7 @@ class CoverQuerys:
             .filter(edition__in=inner_queryset) \
             .values('cover_filename',
                     'book__author__name',       # needed for unknown artists
-                    'edition__pk',
+                    'edition_id',
                     'edition__country',
                     'edition__country__display_order',
                     'edition__print_year',

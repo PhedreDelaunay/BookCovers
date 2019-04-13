@@ -124,6 +124,7 @@ class CoverListQueryTest(QueryTestCase):
 
         #  for each cover: check expected cover data matches actual cover data
         for raw_cover, cover in zip(raw_cover_list, cover_list):
+            #print (f"cover_list_matches: cover is '{cover}'")
             if self.item_desc == "author":
                 if raw_cover['cover_filepath'] == "BookCovers/Images/Unknown/":
                     try:

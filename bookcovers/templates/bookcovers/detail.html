@@ -3,6 +3,7 @@
 <h2>{{ edition.book.title }}</h2>
 <table><tr><td>
 list view is '{{ view.detail.list_view_name }}'
+view.detail.object is '{{  view.detail.object.pk }}'
      <a href="{% url 'bookcovers:'|add:view.detail.list_view_name view.detail.object.pk %}">
     {% if edition.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
         {% with wauthor=edition.book.author.name|cut:" " %}

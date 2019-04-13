@@ -252,6 +252,7 @@ class Book(AuthorMixin, DetailView):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
         self.detail['list_view_name'] = 'books'
+        self.detail['view_name'] = 'book'
         # why does AuthorMixin not reset between views?
         # cos it is class variable not instance variable
 
@@ -262,7 +263,7 @@ class Book(AuthorMixin, DetailView):
         print (f"BookCover:get_object - now book is {self.book_id}, author is {self.book.author_id}")
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         self.cover_list = CoverQuerys.all_covers_for_title(self.book)
-        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition__pk'])
+        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition_id'])
         return edition
 
     def get_context_data(self, **kwargs):
@@ -278,6 +279,7 @@ class BookEdition(Book):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
+        self.detail['view_name'] = 'book'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -299,6 +301,7 @@ class Books(AuthorMixin, ListView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
+        self.detail['view_name'] = 'book_edition'
 
     def get_queryset(self):
         # order matters, get book pager (and book) first to ascertain the author
@@ -346,9 +349,9 @@ class SetEdition(Book):
         self.book_pager = self.create_book_pager(book_id=edition.book.pk)
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         # TODO book_pager sets self.book and detail object but this is not obvious, make more explicit
-        self.detail['object'] = edition
         self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
+        self.detail['object'] = edition
         return edition
 
 # http:<host>/bookcovers/set/editions/<edition_id>
@@ -356,7 +359,7 @@ class SetEditions(AuthorMixin, ListView):
     """
         displays all the covers for the set
     """
-    template_name = 'bookcovers/set_editions.html'
+    template_name = 'bookcovers/books.html'
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):

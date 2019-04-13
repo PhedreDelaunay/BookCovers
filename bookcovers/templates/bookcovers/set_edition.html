@@ -5,7 +5,8 @@
 
 {% block menu_pagers %}
 {% include 'bookcovers/subject_pager.html' %}
-{% include 'bookcovers/detail_pager.html' %}
+{# include 'bookcovers/detail_pager.html' #}
+<a href="{% url 'bookcovers:author_sets' view.author %}">all sets</a>    include set pager here
 {% endblock %}
 
 {% load static %}

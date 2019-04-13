@@ -119,7 +119,7 @@ class AuthorMixin(TopLevelPagerMixin):
         'view_name': 'author_books',
     }
     detail = {
-        'view_name': 'book',
+        'view_name': 'book_edition',
         'list_view_name': 'books',
         'object': None,
     }
@@ -145,8 +145,8 @@ class AuthorMixin(TopLevelPagerMixin):
         self.set_book_attributes(self._book)
 
     def set_book_attributes(self, book):
-        self.detail['object'] = self.book
-        self.author = self.book.author
+        self.detail['object'] = book
+        self.author = book.author
         self.book_id = book.pk
         self.web_title = book.title
         self.author_id = book.author_id
