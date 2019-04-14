@@ -1,16 +1,9 @@
-{# Used to display book detail #}
 {% extends "bookcovers/base.html" %}
-
-{% block title %}{{ view.web_title }}{% endblock %}
 
 {% block menu_pagers %}
 {% include 'bookcovers/subject_pager.html' %}
 {% include 'bookcovers/set_pager.html' %}
 {% endblock %}
-
-{% load static %}
-
 {% block content %}
-{% include 'bookcovers/detail.html' %}
-{% include 'bookcovers/thumbnail_list.html' %}
+{% include 'bookcovers/book_list.html' %}
 {% endblock %}

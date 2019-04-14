@@ -1,0 +1,36 @@
+{# Displays thumbnails, with links on all but the current thumbnail #}
+{% load static %}
+detail view is '{{ view.detail.view_name }}'
+<BR/>
+{% if cover_list|length > 1 %}
+{% for cover in cover_list %}
+    {%  if cover.edition_id != edition.pk %}
+        {# detail view is '{{ view.detail.view_name }}' #}
+            {% if cover.cover_filepath == "BookCovers/Images/Unknown/" %}
+                {% with wauthor=author.name|cut:" " %}
+                    <a class="thumbnail_link" href="{% url 'bookcovers:'|add:view.detail.view_name cover.edition_id %}">
+                            <IMG src="{% static cover.cover_filepath|add:'Thumbnails/'|add:wauthor|add:cover.cover_filename %}"
+                                 alt="{{ cover.book_title }}"
+                                 title="{{ cover.book_title }}"/></a>
+                {% endwith %}
+            {% else %}
+                 <a class="thumbnail_link" href="{% url 'bookcovers:'|add:view.detail.view_name cover.edition_id %}">
+                    <IMG src="{% static cover.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
+                        alt="{{ cover.book_title }}"
+                        title="{{ cover.book_title }}"/></a>
+            {%  endif %}
+    {% else %}
+            {% if cover.cover_filepath == "BookCovers/Images/Unknown/" %}
+                {% with wauthor=author.name|cut:" " %}
+                    <IMG class="thumbnail" src="{% static cover.cover_filepath|add:'Thumbnails/'|add:wauthor|add:cover.cover_filename %}"
+                                 alt="{{ cover.book_title }}"
+                                 title="{{ cover.book_title }}"/>
+                {% endwith %}
+            {% else %}
+                    <IMG class="thumbnail" src="{% static cover.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
+                        alt="{{ cover.book_title }}"
+                        title="{{ cover.book_title }}"/>
+            {%  endif %}
+    {% endif %}
+{% endfor %}
+{% endif %}

@@ -3,8 +3,8 @@
     <a href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">all {{ view.subject.title }}</a>
     <span class="step-links">
         {% if view.book_pager.has_previous %}
-            <a href="{% url 'bookcovers:'|add:view.detail.view_name view.detail.object.pk %}?page=1">&laquo; first</a>
-            <a href="{% url 'bookcovers:'|add:view.detail.view_name view.detail.object.pk %}?page={{ view.book_pager.previous_page_number }}">previous</a>
+            <a href="{% url 'bookcovers:'|add:view.detail.to_page_view_name view.detail.object.pk %}?page=1">&laquo; first</a>
+            <a href="{% url 'bookcovers:'|add:view.detail.to_page_view_name view.detail.object.pk %}?page={{ view.book_pager.previous_page_number }}">previous</a>
         {% else %}
             <p class="greyed" style="display:inline">&laquo; first previous</p>
         {% endif %}
@@ -14,8 +14,8 @@
         </span>
 
         {% if view.book_pager.has_next %}
-            <a href="{% url 'bookcovers:'|add:view.detail.view_name view.detail.object.pk %}?page={{ view.book_pager.next_page_number }}">next</a>
-            <a href="{% url 'bookcovers:'|add:view.detail.view_name view.detail.object.pk %}?page={{ view.book_pager.paginator.num_pages }}">last &raquo;</a>
+            <a href="{% url 'bookcovers:'|add:view.detail.to_page_view_name view.detail.object.pk %}?page={{ view.book_pager.next_page_number }}">next</a>
+            <a href="{% url 'bookcovers:'|add:view.detail.to_page_view_name view.detail.object.pk %}?page={{ view.book_pager.paginator.num_pages }}">last &raquo;</a>
         {% else %}
             <p class="greyed" style="display:inline">next last &raquo;</p>
         {% endif %}

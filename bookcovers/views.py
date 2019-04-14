@@ -252,7 +252,6 @@ class Book(AuthorMixin, DetailView):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
         self.detail['list_view_name'] = 'books'
-        self.detail['view_name'] = 'book'
         # why does AuthorMixin not reset between views?
         # cos it is class variable not instance variable
 
@@ -279,7 +278,7 @@ class BookEdition(Book):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
-        self.detail['view_name'] = 'book'
+        self.detail['view_name'] = 'book_edition'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -301,7 +300,6 @@ class Books(AuthorMixin, ListView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
-        self.detail['view_name'] = 'book_edition'
 
     def get_queryset(self):
         # order matters, get book pager (and book) first to ascertain the author
@@ -341,6 +339,7 @@ class SetEdition(Book):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
         self.detail['list_view_name'] = 'set_editions'
+        self.detail['view_name'] = 'set_edition'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -359,15 +358,13 @@ class SetEditions(AuthorMixin, ListView):
     """
         displays all the covers for the set
     """
-    template_name = 'bookcovers/books.html'
+    template_name = 'bookcovers/set_editions.html'
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
         print (f"SetEditions::setup: edition_id is {self.edition_id}")
-        self.detail['view_name'] = 'set_edition'
-
 
     def get_queryset(self):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
