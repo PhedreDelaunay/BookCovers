@@ -6,7 +6,9 @@
 {% include 'bookcovers/subject_pager.html' %}
 {% endblock %}
 {% block content %}
-    <h2>{{ view.artist }}</h2>
+    <h2 style="display:inline";>{{ view.artist }}</h2>
+    {% if view.set_list %}<a style="display:inline;" href="{% url 'bookcovers:artist_sets' view.artist %}">View covers in pretty sets by author</a>
+    {% endif %}<BR>
     {% for cover in cover_list %}
         {% if view.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
                 <a href="{% url 'bookcovers:artwork' cover.artwork_id %}">

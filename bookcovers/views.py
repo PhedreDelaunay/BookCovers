@@ -101,8 +101,7 @@ class ArtistArtworks(ArtistMixin, ListView):
         print (f"in setup: artist_id={self.artist_id}")
 
     def set_list(self):
-        # TODO
-        set_list = None
+        set_list = CoverQuerys.artist_set_list(artist_id=self.artist.pk)
         return set_list
 
     def get_queryset(self):
@@ -178,6 +177,29 @@ class ArtworkList(ArtistMixin, ListView):
         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
         print (f"ArtworkList: get_queryset artwork.name={self.artwork.name}")
         queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
+        return queryset
+
+
+# http:<host>/bookcovers/artist/<artist%20name>/sets
+class ArtistSets(ArtistMixin, ListView):
+    """
+    displays thumbnails of books by this artist ordered in sets by author
+    """
+    template_name = 'bookcovers/artist_sets.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.name = kwargs.get("name", None)
+        print (f"ArtistSets::setup: artist={self.name}")
+
+    def get_queryset(self):
+        self.the_pager = self.create_top_level_pager(name=self.name)
+        self.artist = self.the_pager.get_entry()
+        # TODO pagers set objects but it is not obvious
+        self.web_title = self.artist.name
+        print (f"ArtistSets:get_queryset: artist is '{self.artist.name}'")
+        queryset = CoverQuerys.artist_set_covers(artist_id=self.artist.artist_id, return_dict=True)
         return queryset
 
 
@@ -321,13 +343,13 @@ class AuthorSets(AuthorMixin, ListView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.name = kwargs.get("name", None)
-        print (f"BookArtistSets::setup: author={self.name}")
+        print (f"AuthorSets::setup: author={self.name}")
 
     def get_queryset(self):
         self.the_pager = self.create_top_level_pager(name=self.name)
         self.author = self.the_pager.get_entry()
         self.web_title = self.author.name
-        print (f"BookArtistSets:get_queryset: author is '{self.author.name}'")
+        print (f"AuthorSets:get_queryset: author is '{self.author.name}'")
         queryset = CoverQuerys.author_set_covers(author_id=self.author.author_id, return_dict=True)
         return queryset
 
