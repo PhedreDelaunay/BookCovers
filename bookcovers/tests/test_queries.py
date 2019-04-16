@@ -46,6 +46,16 @@ class QueryTestCase(TestCase):
 
     def print_cover_lists(self, raw_cover_list, cover_list):
         for raw_cover in raw_cover_list:
+            print(f"raw author_id: {raw_cover['author_id']} , book_id: {raw_cover['book_id']}, cover_id: {raw_cover['cover_id']}, "
+                  f"edition_id: {raw_cover['edition_id']}, artwork_id: {raw_cover['artwork_id']},")
+        for cover in cover_list:
+            print(f"cover author_id: {cover['author_id']} , book_id: {cover['book_id']}, cover_id: {cover['cover_id']}, "
+                  f"edition_id: {cover['edition_id']}, artwork_id: {cover['artwork_id']},")
+            # cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
+            # print(cover_dict)
+
+    def print_cover_lists_simple(self, raw_cover_list, cover_list):
+        for raw_cover in raw_cover_list:
             print(f"raw book_id is {raw_cover['book_id']}")
         for cover in cover_list:
             cover_dict = "".join(str(key) + ':' + str(value) + ', ' for key, value in cover.items())
@@ -109,7 +119,7 @@ class CoverListQueryTest(QueryTestCase):
 
         print(f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
 
-        self.print_cover_lists(raw_cover_list, cover_list)
+        self.print_cover_lists_simple(raw_cover_list, cover_list)
         try:
             self.assertEqual(expected_num_covers, num_covers)
         except AssertionError as e:
@@ -139,6 +149,35 @@ class CoverListQueryTest(QueryTestCase):
 
             self.record_matches(raw_cover, self.expected_keys, cover, self.actual_keys)
 
+
+class SetQueryTest(QueryTestCase):
+
+    def check_author_artist_covers_list(self, author, artist):
+        print ("==============================================")
+        print (f"Test Set Covers for author {author} and artist {artist}")
+        print ("==============================================")
+
+        # return original cover list as dictionary
+        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author, artist, return_dict=True)
+        expected_num_covers = len(original_cover_list)
+        print(f"expected number of covers is {expected_num_covers}")
+        print(f"original_cover_list is {original_cover_list}")
+
+        set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author, artist_id=artist)
+        actual_num_covers = len(set_cover_list)
+        print(f"actual number of covers is {actual_num_covers}")
+        print(f"set_cover_list is {set_cover_list}")
+
+        self.assertEqual(expected_num_covers, actual_num_covers, msg=f"author={author}, artist={artist}")
+
+        # keys in dictionary returned from raw sql query
+        expected_keys = ["cover_filepath", "cover_id", "cover_filename", "artwork_id", "edition_id"]
+        # keys in dictionary returned from django query
+        actual_keys = ['cover_filepath', 'cover_id', 'cover_filename', 'artwork_id', 'edition_id']
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(original_cover_list, set_cover_list):
+            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
 # python manage.py test bookcovers.tests.test_queries.AuthorQueryTests --settings=djabbic.testsettings
 class AuthorQueryTests(QueryTestCase):
@@ -241,8 +280,8 @@ class AuthorQueryTests(QueryTestCase):
                                              )
         cover_list_test.cover_list_matches(author)
 
-    # python manage.py test bookcovers.tests.test_queries.AuthorSetQueryTests --settings=djabbic.testsettings
-class AuthorSetQueryTests(QueryTestCase):
+# python manage.py test bookcovers.tests.test_queries.AuthorSetQueryTests --settings=djabbic.testsettings
+class AuthorSetQueryTests(SetQueryTest):
     fixtures = ['Artists.json',
                 'Artworks.json',
                 'Authors.json',
@@ -259,15 +298,15 @@ class AuthorSetQueryTests(QueryTestCase):
     def setUp(self):
         self.author_list_query = CoverQuerys.author_list
 
-    def test_a_num_sets(self):
+    def test_a_num_author_sets(self):
         author_list = self.author_list_query()
         for author in author_list:
             author_id = author["author_id"]
             raw_set_list = OriginalRawQuerys.author_set_list(author_id, return_dict=True)
             expected_num_sets = len(raw_set_list)
 
-            set_list = CoverQuerys.author_set_list(author_id)
-            actual_num_sets = len(set_list)
+            author_set_list = CoverQuerys.author_set_list(author_id)
+            actual_num_sets = len(author_set_list)
 
             if expected_num_sets != 0 or actual_num_sets != 0:
                 print("==============================================")
@@ -278,11 +317,11 @@ class AuthorSetQueryTests(QueryTestCase):
             try: self.assertEqual(expected_num_sets, actual_num_sets)
             except AssertionError as e:
                 print("================================================================================")
-                print(f"covers {set_list}")
+                print(f"covers {author_set_list}")
                 print("================================================================================")
                 raise
 
-    def test_b_total_num_covers_in_sets(self):
+    def test_b_total_num_covers_in_author_sets(self):
         author_list = self.author_list_query()
         for author in author_list:
             author_id = author["author_id"]
@@ -371,7 +410,7 @@ class AuthorSetQueryTests(QueryTestCase):
                     self.record_matches(raw_set, expected_keys, set, expected_keys)
         print (f"num authors is {len(author_list)}")
 
-    def test_e_author_sets_list(self):
+    def test_e_author_sets_list_covers(self):
         print ("===========================================")
         print (f"Test Covers in each individual Set for each authoro")
         print ("===========================================")
@@ -405,92 +444,6 @@ class AuthorSetQueryTests(QueryTestCase):
                 artist_id = set['artist_id']
                 print (f"artist: {artist_id}")
                 self.check_author_artist_covers_list(author=author_id, artist=artist_id)
-
-    def check_author_artist_covers_list(self, author, artist):
-        print ("==============================================")
-        print (f"Test Set Covers for author {author} and artist {artist}")
-        print ("==============================================")
-
-        # return original cover list as dictionary
-        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author, artist, return_dict=True)
-        expected_num_covers = len(original_cover_list)
-        print(f"expected number of covers is {expected_num_covers}")
-        print(f"original_cover_list is {original_cover_list}")
-
-        set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author, artist_id=artist)
-        actual_num_covers = len(set_cover_list)
-        print(f"actual number of covers is {actual_num_covers}")
-        print(f"set_cover_list is {set_cover_list}")
-
-        self.assertEqual(expected_num_covers, actual_num_covers, msg=f"author={author}, artist={artist}")
-
-        # keys in dictionary returned from raw sql query
-        expected_keys = ["cover_filepath", "cover_id", "cover_filename", "artwork_id", "edition_id"]
-        # keys in dictionary returned from django query
-        actual_keys = ['cover_filepath', 'cover_id', 'cover_filename', 'artwork_id', 'edition_id']
-
-        #  for each cover: check expected cover data matches actual cover data
-        for raw_cover, cover in zip(original_cover_list, set_cover_list):
-            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
-
-
-class ArtistQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'ArtistAkas.json',
-                'Countries.json']
-
-    def setUp(self):
-        self.artist_list_query = CoverQuerys.artist_list
-
-
-    def test_artist_name(self):
-        artist = Artists.objects.get(pk=83)
-        expected_artist_name = "Anthony Roberts"
-        self.assertEqual(expected_artist_name, artist.name)
-
-    # test artist list
-    # tests are run in alphabetic order
-    # tests are independent but I want this one to run first
-    def test_aartist_list(self):
-        raw_artist_list = OriginalRawQuerys.artist_list(True)
-        expected_num_artists = len(raw_artist_list)
-
-        artist_list = CoverQuerys.artist_list()
-        # https: // docs.djangoproject.com / en / 2.1 / ref / models / querysets /
-        # A QuerySet  is evaluated when you call len() on it.
-        num_artists = len(artist_list)
-
-        print (f"expected_num_artists is {expected_num_artists}, num_artists is {num_artists}")
-        try: self.assertEqual(expected_num_artists, num_artists)
-        except AssertionError as e:
-            print (f"raw_artist_list is\n{raw_artist_list}")
-            print (f"artist_list is\n{artist_list}")
-            raise
-
-        # for each artist: compare expected name against actual  name
-        for raw_artist_list, artist_list in zip(raw_artist_list, artist_list):
-            self.item_matches("artist_id", "name", raw_artist_list, artist_list)
-
-    def test_artists_cover_list(self):
-        """
-        test list of book covers for each artist in db
-        """
-        cover_list_test = CoverListQueryTest(list_query=self.artist_list_query,
-                                             model=Artists,
-                                             item_desc="artist",
-                                             primary_key="artist_id",
-                                             raw_cover_query=OriginalRawQuerys.artist_cover_list,
-                                             django_cover_query=CoverQuerys.artist_cover_list,
-                                             expected_keys=["book_id", "cover_filename", "artwork_id", "year"],
-                                             actual_keys=["book", "theCover__cover_filename", "artwork_id", "year"]
-                                             )
-
-        cover_list_test.validate_all_lists_of_covers()
 
 
 class BookQueryTests(QueryTestCase):
@@ -561,6 +514,234 @@ class BookQueryTests(QueryTestCase):
                                              )
 
         cover_list_test.validate_all_lists_of_covers()
+
+
+class ArtistQueryTests(QueryTestCase):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'ArtistAkas.json',
+                'Countries.json']
+
+    def setUp(self):
+        self.artist_list_query = CoverQuerys.artist_list
+
+    def test_artist_name(self):
+        artist = Artists.objects.get(pk=83)
+        expected_artist_name = "Anthony Roberts"
+        self.assertEqual(expected_artist_name, artist.name)
+
+    # test artist list
+    # tests are run in alphabetic order
+    # tests are independent but I want this one to run first
+    def test_aartist_list(self):
+        raw_artist_list = OriginalRawQuerys.artist_list(True)
+        expected_num_artists = len(raw_artist_list)
+
+        artist_list = CoverQuerys.artist_list()
+        # https: // docs.djangoproject.com / en / 2.1 / ref / models / querysets /
+        # A QuerySet  is evaluated when you call len() on it.
+        num_artists = len(artist_list)
+
+        print (f"expected_num_artists is {expected_num_artists}, num_artists is {num_artists}")
+        try: self.assertEqual(expected_num_artists, num_artists)
+        except AssertionError as e:
+            print (f"raw_artist_list is\n{raw_artist_list}")
+            print (f"artist_list is\n{artist_list}")
+            raise
+
+        # for each artist: compare expected name against actual  name
+        for raw_artist_list, artist_list in zip(raw_artist_list, artist_list):
+            self.item_matches("artist_id", "name", raw_artist_list, artist_list)
+
+    def test_artists_cover_list(self):
+        """
+        test list of book covers for each artist in db
+        """
+        cover_list_test = CoverListQueryTest(list_query=self.artist_list_query,
+                                             model=Artists,
+                                             item_desc="artist",
+                                             primary_key="artist_id",
+                                             raw_cover_query=OriginalRawQuerys.artist_cover_list,
+                                             django_cover_query=CoverQuerys.artist_cover_list,
+                                             expected_keys=["book_id", "cover_filename", "artwork_id", "year"],
+                                             actual_keys=["book", "theCover__cover_filename", "artwork_id", "year"]
+                                             )
+
+        cover_list_test.validate_all_lists_of_covers()
+
+
+# python manage.py test bookcovers.tests.test_queries.AuthorSetQueryTests --settings=djabbic.testsettings
+class ArtistSetQueryTests(SetQueryTest):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'AuthorAkas.json',
+                'Countries.json',
+                'Sets.json',
+                'Series.json',
+                'BooksSeries.json',
+                'SetExceptions.json', ]
+
+    def setUp(self):
+        self.artist_list_query = CoverQuerys.artist_list
+
+    def test_a_num_artist_sets(self):
+        artist_list = self.artist_list_query()
+        for artist in artist_list:
+            artist_id = artist["artist_id"]
+            raw_set_list = OriginalRawQuerys.artist_set_list(artist_id, return_dict=True)
+            expected_num_sets = len(raw_set_list)
+
+            artist_set_list = CoverQuerys.artist_set_list(artist_id)
+            actual_num_sets = len(artist_set_list)
+
+            if expected_num_sets != 0 or actual_num_sets != 0:
+                print("==============================================")
+                print(f"Test Num sets for artist {artist_id}, {artist['name']}")
+                print("==============================================")
+                print(f"Expected: {expected_num_sets}, actual: {actual_num_sets}")
+
+            try:
+                self.assertEqual(expected_num_sets, actual_num_sets)
+            except AssertionError as e:
+                print("================================================================================")
+                print(f"covers {artist_set_list}")
+                print("================================================================================")
+                raise
+
+    def test_b_total_num_covers_in_artist_sets(self):
+        artist_list = self.artist_list_query()
+        for artist in artist_list:
+            artist_id = artist["artist_id"]
+
+            original_cover_list = OriginalRawQuerys.artist_set_cover_list(artist_id, return_dict=True)
+            expected_num_covers = len(original_cover_list)
+
+            all_list = CoverQuerys.artist_set_covers(artist_id=artist_id)
+            num_covers = len(all_list)
+
+            if expected_num_covers != 0 or num_covers != 0:
+                print("==============================================")
+                print(f"Test Total Covers in sets for artist {artist_id}, {artist['name']}")
+                print("==============================================")
+                print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+
+            try: self.assertEqual(expected_num_covers, num_covers)
+            except AssertionError as e:
+                # use list to avoid remaining elements truncated
+                # otherwise repr is used to represent queryset
+                print("================================================================================")
+                print(f"covers {list(all_list)}")
+                print("================================================================================")
+                raise
+
+    def test_c_artist_sets_covers(self):
+        """tests all the covers in all the sets for this artist"""
+        artist_list = self.artist_list_query()
+        for artist in artist_list:
+            artist_id = artist["artist_id"]
+
+            raw_cover_list = OriginalRawQuerys.artist_set_cover_list(artist_id, return_dict=True)
+            expected_num_covers = len(raw_cover_list)
+
+            cover_list = CoverQuerys.artist_set_covers(artist_id=artist_id)
+            num_covers = len(cover_list)
+
+            if expected_num_covers != 0 or num_covers != 0:
+                print (f"test_c: {raw_cover_list}")
+                print("==============================================")
+                print(f"Test all Covers in all Sets for Artist {artist_id}, {artist['name']}")
+                print("==============================================")
+                print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+
+            self.assertEqual(expected_num_covers, num_covers)
+            self.print_cover_lists(raw_cover_list, cover_list)
+
+            # keys in dictionary returned from raw sql query
+            expected_keys = ["author_id", "cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
+            # keys in dictionary returned from django query
+            actual_keys = ['author_id', 'cover_filepath', 'cover_id', 'book_id', 'artwork_id', 'edition_id', 'cover_filename']
+
+            #  for each cover: check expected cover data matches actual cover data
+            for raw_cover, cover in zip(raw_cover_list, cover_list):
+                self.record_matches(raw_cover, expected_keys, cover, actual_keys)
+
+    def test_d_artist_sets_list(self):
+        print("===========================================")
+        print(f"Test List of Sets for each artist")
+        print("===========================================")
+
+        artist_list = self.artist_list_query()
+        for artist in artist_list:
+            artist_id = artist["artist_id"]
+
+            # return set list as dictionary
+            raw_set_list = OriginalRawQuerys.artist_set_list(artist_id, return_dict=True)
+            expected_num_sets = len(raw_set_list)
+
+            artist_set_list = CoverQuerys.artist_set_list(artist_id)
+            # print(f"artist {artist_id}, set list {artist_set_list}")
+            actual_num_sets = len(artist_set_list)
+
+            self.assertEqual(expected_num_sets, actual_num_sets)
+
+            if expected_num_sets > 0:
+                print("=============================================")
+                print(f"Test {expected_num_sets} sets for artist {artist_id}")
+                print(f"artist {artist_id}, set list {artist_set_list}")
+                print("==============================================")
+
+                expected_keys = ["set_id", "series_id", "author_id", "artist_id", "imprint_id", "description",
+                                 "panorama_id"]
+
+                #  for each set: check expected data matches actual data
+                for raw_set, set in zip(raw_set_list, artist_set_list):
+                    self.record_matches(raw_set, expected_keys, set, expected_keys)
+
+        print(f"num artists is {len(artist_list)}")
+
+    def test_e_artist_sets_list_covers(self):
+        print ("===========================================")
+        print (f"Test Covers in each individual Set for each artist")
+        print ("===========================================")
+
+        artist_list = self.artist_list_query()
+        for artist in artist_list:
+            artist_id = artist["artist_id"]
+            self.check_artist_set_list(artist_id)
+
+        print (f"num artists is {len(artist_list)}")
+
+    def check_artist_set_list(self, artist_id):
+        # return set list as dictionary
+        raw_set_list = OriginalRawQuerys.artist_set_list(artist_id, return_dict=True)
+        expected_num_sets = len(raw_set_list)
+
+        artist_set_list = CoverQuerys.artist_set_list(artist_id)
+        #print(f"artist {artist_id}, set list {artist_set_list}")
+        actual_num_sets = len(artist_set_list)
+
+        self.assertEqual(expected_num_sets, actual_num_sets)
+
+        if expected_num_sets > 0:
+            print("=============================================")
+            print(f"Test {expected_num_sets} sets for artist {artist_id}")
+            print(f"author {artist_id}, set list {artist_set_list}")
+            print("==============================================")
+
+            #  for each set: check cover data matches actual data
+            for set in artist_set_list:
+                author_id = set['author_id']
+                print (f"author: {author_id}")
+                self.check_author_artist_covers_list(author=author_id, artist=artist_id)
+
 
 class ArtworkQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
@@ -638,7 +819,7 @@ class ArtworkQueryTests(QueryTestCase):
 
         print(f"expected_num_covers is {expected_num_covers}, num_covers is {num_covers}")
 
-        self.print_cover_lists(raw_cover_list, artwork_cover_list)
+        self.print_cover_lists_simple(raw_cover_list, artwork_cover_list)
 
         try:
             self.assertEqual(expected_num_covers, num_covers)
@@ -675,61 +856,86 @@ class AdhocQueryTests(QueryTestCase):
                 'BooksSeries.json',
                 'SetExceptions.json',]
 
-    def test_set_covers(self):
+    def test_num_covers_in_artist_sets(self):
+        # Brian Cronin
+        artist_id = 139
 
-        # Ray Bradbury, Bruce Pennington settings
-        author_id = 15
-        artist_id = 2
-        expected_num_covers = 7
+        original_cover_list = OriginalRawQuerys.artist_set_cover_list(artist_id, return_dict=True)
+        expected_num_covers = len(original_cover_list)
 
-        # Ray Bradbury, Josh Kirby settings
-        author_id = 15
-        artist_id = 35
-        expected_num_covers = 2
+        all_list = CoverQuerys.artist_set_covers(artist_id=artist_id)
+        num_covers = len(all_list)
 
-        # Frank Herbert , Gerry Grace settings
-        author_id = 5
-        artist_id = 28
-        expected_num_covers = 5
+        if expected_num_covers != 0 or num_covers != 0:
+            print("==============================================")
+            print(f"Test Total Covers in sets for artist {artist_id}")
+            print("==============================================")
+            print(f"Expected: {expected_num_covers}, actual: {num_covers}")
 
-        # Elizabeth Moon
-        # author_id = 104
-        # expected_num_covers = 9
-
-        print("==============================================")
-        print(f"Test Set Covers for author {author_id}, artist {artist_id}")
-        print("==============================================")
-        original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
-        print("original_cover_list is")
-        print_dict_list(original_cover_list)
-        original_num_covers = len(original_cover_list)
-        print(f"original number of covers is {original_num_covers}")
-        set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author_id, artist_id=artist_id)
-        num_covers = len(set_cover_list)
-
-        print(f"Expected: {expected_num_covers}, original: {original_num_covers}, actual: {num_covers}")
-        print_dict_list(list(set_cover_list))
-        try: self.assertEqual(expected_num_covers, original_num_covers)
+        try: self.assertEqual(expected_num_covers, num_covers)
         except AssertionError as e:
             # use list to avoid remaining elements truncated
             # otherwise repr is used to represent queryset
             print("================================================================================")
-            print(f"Expected: {expected_num_covers}, actual: {num_covers}")
-            print("set_cover_list is")
-            print_dict_list(list(set_cover_list))
+            print(f"covers {list(all_list)}")
             print("================================================================================")
             raise
 
-    def test_author_books(self):
-        author_id = 5
-        print ("==============================================")
-        print (f"Test List of Books for author {author_id}")
-        print ("==============================================")
-        author = get_object_or_404(Author, pk=author_id)
-        book_list = CoverQuerys.books_for_author(author)
-        print(f"number of books is {len(book_list)}")
-        print(f"book_list is {book_list}")
+    # def test_set_covers(self):
+    #
+    #     # Ray Bradbury, Bruce Pennington settings
+    #     author_id = 15
+    #     artist_id = 2
+    #     expected_num_covers = 7
+    #
+    #     # Ray Bradbury, Josh Kirby settings
+    #     author_id = 15
+    #     artist_id = 35
+    #     expected_num_covers = 2
+    #
+    #     # Frank Herbert , Gerry Grace settings
+    #     author_id = 5
+    #     artist_id = 28
+    #     expected_num_covers = 5
+    #
+    #     # Elizabeth Moon
+    #     # author_id = 104
+    #     # expected_num_covers = 9
+    #
+    #     print("==============================================")
+    #     print(f"Test Set Covers for author {author_id}, artist {artist_id}")
+    #     print("==============================================")
+    #     original_cover_list = OriginalRawQuerys.author_artist_set_cover_list(author_id, artist_id, return_dict=True)
+    #     print("original_cover_list is")
+    #     print_dict_list(original_cover_list)
+    #     original_num_covers = len(original_cover_list)
+    #     print(f"original number of covers is {original_num_covers}")
+    #     set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author_id, artist_id=artist_id)
+    #     num_covers = len(set_cover_list)
+    #
+    #     print(f"Expected: {expected_num_covers}, original: {original_num_covers}, actual: {num_covers}")
+    #     print_dict_list(list(set_cover_list))
+    #     try: self.assertEqual(expected_num_covers, original_num_covers)
+    #     except AssertionError as e:
+    #         # use list to avoid remaining elements truncated
+    #         # otherwise repr is used to represent queryset
+    #         print("================================================================================")
+    #         print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+    #         print("set_cover_list is")
+    #         print_dict_list(list(set_cover_list))
+    #         print("================================================================================")
+    #         raise
 
-        for book in book_list:
-            print (f"book is '{book}'")
+    # def test_author_books(self):
+    #     author_id = 5
+    #     print ("==============================================")
+    #     print (f"Test List of Books for author {author_id}")
+    #     print ("==============================================")
+    #     author = get_object_or_404(Author, pk=author_id)
+    #     book_list = CoverQuerys.books_for_author(author)
+    #     print(f"number of books is {len(book_list)}")
+    #     print(f"book_list is {book_list}")
+    #
+    #     for book in book_list:
+    #         print (f"book is '{book}'")
 

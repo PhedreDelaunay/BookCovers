@@ -64,6 +64,56 @@ class OriginalRawQuerys:
         return cover_list
 
     @staticmethod
+    def artist_set_list(artist_id, return_dict=False):
+        print (f"artist_set_list: artist_id={artist_id}")
+        strArtistSetList = ("SELECT sets.*, artists.name FROM sets, artists "
+                "WHERE sets.artist_id = %s AND sets.artist_id = artists.artist_id")
+
+        #print(f"strArtistSetList is\n{strArtistSetList}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strArtistSetList, [artist_id])
+            if return_dict:
+                set_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                set_list = cursor.fetchall()
+            #print(f"Original artist set list is\n{set_list}\n")
+
+        return set_list
+
+    @staticmethod
+    def artist_set_cover_list(artist_id, return_dict=False):
+        """
+        gets all covers in all sets for this artist, ordered by author and volume
+        :param artist_id:
+        :param return_dict:
+        :return:
+        """
+        #print (f"artist_cover_set_list: artist_id={artist_id}")
+
+        # get all books for sets for an artist, ordered by author and volume
+        strArtistSetCovers = ("SELECT artists.cover_filepath, authors.name, BC.*, BSL.volume, sets.author_id "
+                              "FROM artists, covers as BC, series as BS, books_series as BSL, sets, artworks as AW, authors "
+                              "WHERE (sets.artist_id = %s)"
+                              "AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id "
+                              "AND BC.flags < 256  AND BC.is_variant = False AND BC.book_id = BSL.book_id "
+                              "AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id "
+                              "AND BC.artwork_id = AW.artwork_id "
+                              "AND authors.author_id = sets.author_id "
+                              "AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) "
+                              "ORDER BY authors.name, BSL.volume")
+
+        #print(f"strAASetCovers is\n{strAASetCovers}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strArtistSetCovers, [artist_id])
+            if return_dict:
+                set_cover_list = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                set_cover_list = cursor.fetchall()
+            #print(f"Original artist set cover list is\n{set_cover_list}\n")
+
+        return set_cover_list
+
+    @staticmethod
     def author_list(return_dict=False):
         """
         list all authors with a book cover to display
@@ -231,13 +281,14 @@ class OriginalRawQuerys:
     @staticmethod
     def author_set_cover_list(author_id, return_dict=False):
         """
-        gets all covers in all sets for this author
+        gets all covers in all sets for this author, ordered by artist and volume
         :param author_id:
         :param return_dict:
         :return:
         """
         #print (f"author_cover_set_list: author_id={author_id}")
 
+        # get all books for sets for an author, ordered by artist and volume
         strAuthorSetCovers = ("SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id "
                         "FROM artists, covers as BC, series as BS, books_series as BSL, sets, artworks as AW "
                         "WHERE (sets.author_id = %s)"
