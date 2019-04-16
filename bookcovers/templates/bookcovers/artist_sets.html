@@ -1,0 +1,22 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+
+
+{% block menu_pagers %}
+{% include 'bookcovers/subject_pager.html' %}
+{% endblock %}
+{% block content %}
+    <h2 style="display:inline";>{{ view.author.name }}</h2>
+    <a style="display:inline;" href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">View all {{ view.subject.title }}</a>
+    {% for cover in cover_list %}
+        {% ifchanged cover.artwork__artist__name %}
+            <BR><h3 style="display:inline";>{{ cover.artwork__artist__name }}</h3><BR>
+        {% endifchanged %}
+        <a href="{% url 'bookcovers:set_edition' cover.edition_id %}">
+            <IMG src="{% static cover.artwork__artist__cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
+                 alt="{{ cover.book__title }}"
+                 title="{{ cover.book__title }}">
+        </a>
+    {% endfor %}
+{% endblock %}
