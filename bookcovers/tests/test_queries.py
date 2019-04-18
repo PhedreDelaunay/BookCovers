@@ -371,7 +371,7 @@ class AuthorSetQueryTests(SetQueryTest):
             # keys in dictionary returned from raw sql query
             expected_keys = ["cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
             # keys in dictionary returned from django query
-            actual_keys = ['artwork__artist__cover_filepath', 'cover_id', 'book__pk', 'artwork_id', 'edition_id', 'cover_filename']
+            actual_keys = ['cover_filepath', 'cover_id', 'book__pk', 'artwork_id', 'edition_id', 'cover_filename']
 
             #  for each cover: check expected cover data matches actual cover data
             for raw_cover, cover in zip(raw_cover_list, cover_list):

@@ -13,7 +13,7 @@
         {% ifchanged cover.author_name %}
             <BR><h3 style="display:inline";>{{ cover.author_name }}</h3><BR>
         {% endifchanged %}
-        <a href="{% url 'bookcovers:set_edition' cover.edition_id %}">
+        <a href="{% url 'bookcovers:artwork_set_edition' cover.edition_id %}">
             <IMG src="{% static cover.cover_filepath|add:'Thumbnails/'|add:cover.cover_filename %}"
                  alt="{{ cover.book__title }}"
                  title="{{ cover.book__title }}">

@@ -167,7 +167,7 @@ class BookPager(MenuPager):
             if self.item_id:
                 kwargs = {'pk': self.item_id}
                 #self.entry = get_object_or_404(subject_model, **kwargs)
-                print (f"self.item_id is '{self.item_id}'")
+                print (f"BookPager: item_model is '{item_model}' self.item_id is '{self.item_id}'")
 
         # item is artwork or book
         kwargs = {item_id_key: self.item_id}

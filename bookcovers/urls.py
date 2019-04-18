@@ -7,6 +7,8 @@ from bookcovers.views import Artwork
 from bookcovers.views import ArtworkList
 from bookcovers.views import ArtistSets
 from bookcovers.views import ArtworkEdition
+from bookcovers.views import ArtworkSetEdition
+from bookcovers.views import ArtworkSetEditions
 from bookcovers.views import Edition
 from bookcovers.views import Book
 from bookcovers.views import AuthorSets
@@ -34,9 +36,9 @@ urlpatterns = [
     path('author/<int:author_id>/', AuthorBooks.as_view(), name='author_books'),
     # ex: /bookcovers/author/Robert-Heinlein/
     path('author/<slug:slug>/', AuthorBooks.as_view(), name='author_books'),
-    # ex: /bookcovers/author/Robert%20Heinelein/
+    # ex: /bookcovers/author/Robert%20Heinlein/
     path('author/<name>/', AuthorBooks.as_view(), name='author_books'),
-    # ex: /bookcovers/artist/Ray%20Bradbury/sets/
+    # ex: /bookcovers/author/Ray%20Bradbury/sets/
     path('author/<name>/sets/', AuthorSets.as_view(), name='author_sets'),
     # ex: /bookcovers/artists/
     path('artists/', ArtistList.as_view(), name='artists'),
@@ -56,7 +58,7 @@ urlpatterns = [
     path('books/<int:book_id>/', Books.as_view(), name='books'),
     # ex: /bookcovers/book/edition/6/
     path('book/edition/<int:edition_id>/', BookEdition.as_view(), name="book_edition"),
-    # ex: /bookcovers/set/edition/6/
+    # ex: /bookcovers/book/set/edition/6/
     path('book/set/edition/<int:edition_id>/', SetEdition.as_view(), name="set_edition"),
     # ex: /bookcovers/book/set/editions/6/
     path('book/set/editions/<int:edition_id>/', SetEditions.as_view(), name="set_editions"),
@@ -66,6 +68,10 @@ urlpatterns = [
     path('artworks/<int:artwork_id>/', ArtworkList.as_view(), name='artwork_list'),
     # ex: /bookcovers/artwork/edition/7/
     path('artwork/edition/<int:edition_id>/', ArtworkEdition.as_view(), name="artwork_edition"),
+    # ex: /bookcovers/artwork/set/edition/6/
+    path('artwork/set/edition/<int:edition_id>/', ArtworkSetEdition.as_view(), name="artwork_set_edition"),
+    # ex: /bookcovers/artwork/set/editions/6/
+    path('artwork/set/editions/<int:edition_id>/', ArtworkSetEditions.as_view(), name="artwork_set_editions"),
     # ex: /bookcovers/edition/6
     path('edition/<pk>/', Edition.as_view(), name="edition"),
     #path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),

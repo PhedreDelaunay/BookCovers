@@ -1,1 +1,1 @@
-<a href="{% url 'bookcovers:author_sets' view.author %}">all sets</a>    include set pager here
+<a href="{% url 'bookcovers:'|add:view.subject.set_view_name view.subject.object %}">all sets</a>    include set pager here

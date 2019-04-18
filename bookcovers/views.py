@@ -124,10 +124,7 @@ class Artwork(ArtistMixin, DetailView):
         print (f"Artwork:setup artwork id is '{self.artwork_id}'")
 
     def get_object(self, queryset=None):
-        # order matters, get book pager (and hence book) first to ascertain the author
-        # TODO book_pager sets self.artwork but this is not obvious, make more explicit
-        self.book_pager = self.create_book_pager(artwork_id=self.artwork_id)
-        self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
+        self.create_pagers(artwork_id=self.artwork_id)
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
         edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition__pk'])
         print(f"ArtworkCover: get_object artwork.name={self.artwork.name}")
@@ -149,9 +146,11 @@ class ArtworkEdition(Artwork):
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
         print (f"ArtworkEdition: artist is '{edition.theCover.artwork.artist_id}'")
-        self.book_pager = self.create_book_pager(edition.theCover.artwork.pk)
-        self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
+        #self.book_pager = self.create_book_pager(edition.theCover.artwork.pk)
+        #self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
         # TODO book_pager sets self.artwork but this is not obvious, make more explicit
+        self.create_pagers(artwork_id=edition.theCover.artwork.pk)
+        # up to here use create_pagers throughout
         print(f"ArtworkEdition: get_object artwork.name={self.artwork.name}")
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
         return edition
@@ -173,7 +172,7 @@ class ArtworkList(ArtistMixin, ListView):
 
     def get_queryset(self):
         # order matters, get book pager (and artwork) first to ascertain the artist
-        self.book_pager = self.create_book_pager(self.artwork_id)
+        self.book_pager = self.create_book_pager(artwork_id=self.artwork_id)
         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
         print (f"ArtworkList: get_queryset artwork.name={self.artwork.name}")
         queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
@@ -353,7 +352,7 @@ class AuthorSets(AuthorMixin, ListView):
         queryset = CoverQuerys.author_set_covers(author_id=self.author.author_id, return_dict=True)
         return queryset
 
-# http:<host>/bookcovers/set/edition/<edition_id>
+# http:<host>/bookcovers/book/set/edition/<edition_id>
 class SetEdition(Book):
     template_name = 'bookcovers/set_edition.html'
 
@@ -375,7 +374,7 @@ class SetEdition(Book):
         self.detail['object'] = edition
         return edition
 
-# http:<host>/bookcovers/set/editions/<edition_id>
+# http:<host>/bookcovers/book/set/editions/<edition_id>
 class SetEditions(AuthorMixin, ListView):
     """
         displays all the covers for the set
@@ -393,12 +392,72 @@ class SetEditions(AuthorMixin, ListView):
         print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
         print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         # order matters, get book pager (and book) first to ascertain the author
-        # up to here http://127.0.0.1:8000/bookcovers/book/set/edition/95/ pager returns wrong author
         self.book_pager = self.create_book_pager(book_id=edition.book_id)
         self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
         queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
         return queryset
+
+# http:<host>/bookcovers/artwork/set/edition/<edition_id>
+# up to here was inherited from Book which is an AuthorMixin
+# if meaningful make base class of Book without mixin and then inherit with mixin
+class ArtworkSetEdition(ArtistMixin, DetailView):
+    template_name = 'bookcovers/set_edition.html'
+    context_object_name = "edition"
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        self.detail['list_view_name'] = 'artwork_set_editions'
+        self.detail['view_name'] = 'artwork_set_edition'
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"ArtworkSetEdition:get_object author id is '{edition.book.author_id}'")
+        print (f"ArtworkSetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        self.book_pager = self.create_book_pager(artwork_id=edition.theCover.artwork.pk)
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        # TODO book_pager sets self.book and detail object but this is not obvious, make more explicit
+        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        self.detail['object'] = edition
+        return edition
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print ("ArtworkSetEdition: get_context")
+        context['cover_list'] = self.cover_list
+        return context
+
+# http:<host>/bookcovers/artwork/set/editions/<edition_id>
+# up to here  want to factor out repetition between book and artwork.
+# also ArtworkSetEdtion get_object and ArtworkSetEdtions get_queryset the same - create a method to call
+# if meaningful make base class of SetEditions without mixin and then inherit with mixin
+class ArtworkSetEditions(ArtistMixin, ListView):
+    """
+        displays all the covers for the set
+    """
+    template_name = 'bookcovers/set_editions.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        print (f"ArtworkSetEditions::setup: edition_id is {self.edition_id}")
+
+    def get_queryset(self):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"ArtworkSetEditions:get_object author id is '{edition.book.author_id}'")
+        print (f"ArtworkSetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        # order matters, get book pager (and book) first to ascertain the author
+        # up to here http://127.0.0.1:8000/bookcovers/book/set/edition/95/ pager returns wrong author
+        self.book_pager = self.create_book_pager(artwork_id=edition.theCover.artwork.pk)
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        return queryset
+
+
 
 class Edition(DetailView):
     model=Editions
