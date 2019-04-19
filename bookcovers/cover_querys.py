@@ -337,7 +337,6 @@ class CoverQuerys:
                         'artwork__artist__cover_filepath')
 
         print (f"all_covers_for_artwork: covers.query is\n{covers.query}")
-
         return covers
 
     @staticmethod
@@ -350,12 +349,12 @@ class CoverQuerys:
         # use .values to return ValuesQuerySet which looks like list of dictionaries
         #artist_set_list = Sets.objects.filter(author_id=author).values()
 
-        artist_set_list = Sets.objects.filter(artist_id=artist_id) \
-                     .values("set_id", "series_id", "author_id", "artist_id", "imprint_id",
-                             "description", "panorama_id", 'artist__name')
+        artist_set_list = Sets.objects.filter(artist_id=artist_id). \
+                            values("set_id", "series_id", "author_id", "artist_id", "imprint_id",
+                                    "description", "panorama_id", 'artist__name'). \
+                            order_by('author__name')
+
         # SELECT sets.*, artists.name FROM sets, artists WHERE sets.artist_id = %d AND sets.artist_id = artists.artist_id
-
-
         return artist_set_list
 
     @staticmethod
@@ -570,10 +569,11 @@ class CoverQuerys:
         # get set record if necessary
         if not author_id or not artist_id:
             set = get_object_or_404(Sets, pk=set_id)
+            artist_id = set.artist_id
         else:
             # assumes there is only 1 unique set for this author and artist
             set = get_object_or_404(Sets, author=author_id, artist_id=artist_id)
             print(f"author_artist_set_cover_list: set is {set.pk}, series is {set.series_id}")
 
         set_cover_list = CoverQuerys.series_covers_by_artist(series_id=set.series_id, artist_id=artist_id)
-        return set_cover_list
+        return (set, set_cover_list)

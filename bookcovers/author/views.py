@@ -164,7 +164,7 @@ class SetEdition(Book):
         print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
         print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         self.create_pagers(book_id=edition.book.pk)
-        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
         self.detail['object'] = edition
         return edition
@@ -187,7 +187,7 @@ class SetEditions(AuthorMixin, ListView):
         print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
         print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         self.create_pagers(book_id=edition.book.pk)
-        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+        set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
         return queryset
 

@@ -1,14 +1,14 @@
 from django.shortcuts import get_object_or_404
 
-from bookcovers.pagers import AuthorPager
 from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import BookPager
+from bookcovers.pagers import SetPager
 
 from bookcovers.cover_querys import CoverQuerys
-from bookcovers.models import Author
 from bookcovers.models import Artists
 from bookcovers.models import Artworks
-from bookcovers.models import Books
+from bookcovers.models import Editions
+from bookcovers.models import Sets
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
@@ -16,7 +16,7 @@ class ArtistMixin(TopLevelPagerMixin):
     subject_list = {
         'title': 'artists',
         'view_name': 'artists',
-        'ojbect': None,
+        'object': None,
     }
     subject = {
         'name': 'artist',
@@ -28,7 +28,7 @@ class ArtistMixin(TopLevelPagerMixin):
     detail = {
         'to_page_view_name': 'artwork',
         'view_name': 'artwork',
-        'list_view_name': 'artwork_list',
+        'list_view_name': 'artworks',
         'object': None,
     }
 
@@ -81,6 +81,20 @@ class ArtistMixin(TopLevelPagerMixin):
         print (f"ArtworkMixin: create_book_pager: artwork_id={self.artwork.pk}")
         print(f"ArtworkMixin: create_book_pager: artwork.name={self.artwork.name}")
         return book_pager
+
+    def create_set_pager(self, set_id):
+        # book cover pager
+        page_number = self.request.GET.get('page')
+        print(f"ArtworkMixin: create_set_pager - page number is '{page_number}'")
+
+        pager = SetPager(page_number=page_number, item_id=set_id)
+        set_pager = pager.pager(set_query=CoverQuerys.artist_set_list,
+                                 item_id_key="set_id",
+                                 item_model=Sets,
+                                 subject_id_key='artist_id',
+                                 subject_model=Artists)
+        self.set = pager.get_entry()
+        return set_pager
 
     def create_pagers(self, artwork_id):
         # order matters, get book pager (and hence artwork) first to ascertain the artist

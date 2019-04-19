@@ -6,8 +6,6 @@ from bookcovers.pagers import BookPager
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Author
-from bookcovers.models import Artists
-from bookcovers.models import Artworks
 from bookcovers.models import Books
 
 from bookcovers.view_mixin import TopLevelPagerMixin
@@ -17,6 +15,7 @@ class AuthorMixin(TopLevelPagerMixin):
     subject_list = {
         'title': 'authors',
         'view_name': 'authors',
+        'object': None,
     }
     subject = {
         'name': 'author',

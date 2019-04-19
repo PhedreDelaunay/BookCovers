@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 
 from bookcovers.models import Editions
+from bookcovers.models import Sets
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.views import SubjectList
 
@@ -37,7 +38,6 @@ class ArtistArtworks(ArtistMixin, ListView):
     """
     template_name = 'bookcovers/artist_artworks.html'
     context_object_name = 'cover_list'      # template context
-
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -98,62 +98,15 @@ class ArtworkEdition(Artwork):
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
         return edition
 
-# http:<host>/bookcovers/artwork/set/edition/<edition_id>
-# if meaningful make base class of Book without mixin and then inherit with mixin
-class ArtworkSetEdition(Artwork):
-    template_name = 'bookcovers/set_edition.html'
-    context_object_name = "edition"
-
-    def setup(self, request, *args, **kwargs):
-        super().setup(request, *args, **kwargs)
-        self.edition_id = kwargs.get("edition_id", None)
-        self.detail['list_view_name'] = 'artwork_set_editions'
-        self.detail['view_name'] = 'artwork_set_edition'
-
-    def get_object(self, queryset=None):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"ArtworkSetEdition:get_object author id is '{edition.book.author_id}'")
-        print (f"ArtworkSetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(artwork_id=edition.theCover.artwork.pk)
-        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
-                                                                   artist_id=edition.theCover.artwork.artist_id)
-        self.detail['object'] = edition
-        return edition
-
-
-# http:<host>/bookcovers/artwork/set/editions/<edition_id>
-# up to here  want to factor out repetition between book and artwork.
-# also ArtworkSetEdtion get_object and ArtworkSetEdtions get_queryset the same - create a method to call
-# if meaningful make base class of SetEditions without mixin and then inherit with mixin
-class ArtworkSetEditions(ArtistMixin, ListView):
-    """
-        displays all the covers for the set
-    """
-    template_name = 'bookcovers/set_editions.html'
-    context_object_name = 'cover_list'      # template context
-
-    def setup(self, request, *args, **kwargs):
-        super().setup(request, *args, **kwargs)
-        self.edition_id = kwargs.get("edition_id", None)
-        print (f"ArtworkSetEditions::setup: edition_id is {self.edition_id}")
-
-    def get_queryset(self):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"ArtworkSetEditions:get_object author id is '{edition.book.author_id}'")
-        print (f"ArtworkSetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(artwork_id=edition.theCover.artwork.pk)
-        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
-                                                                   artist_id=edition.theCover.artwork.artist_id)
-        return queryset
 
 # http:<host>/bookcovers/artworks/<artwork_id>
-class ArtworkList(ArtistMixin, ListView):
+class Artworks(ArtistMixin, ListView):
     """
         displays all book covers using the same artwork, eg
         'Dune' and 'The Three Stigmata of Palmer Eldritch' by BP
         or all book covers by same artist for the same title, eg two versions of "Decision at Doona" by BP
     """
-    template_name = 'bookcovers/artwork_list.html'
+    template_name = 'bookcovers/artworks.html'
     context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
@@ -165,6 +118,7 @@ class ArtworkList(ArtistMixin, ListView):
         print (f"ArtworkList: get_queryset artwork.name={self.artwork.name}")
         queryset = CoverQuerys.all_covers_for_artwork(self.artwork)
         return queryset
+
 
 
 # http:<host>/bookcovers/artist/<artist%20name>/sets
@@ -189,8 +143,8 @@ class ArtistSets(ArtistMixin, ListView):
         queryset = CoverQuerys.artist_set_covers(artist_id=self.artist.artist_id, return_dict=True)
         return queryset
 
+
 # http:<host>/bookcovers/artwork/set/edition/<edition_id>
-# if meaningful make base class of Book without mixin and then inherit with mixin
 class ArtworkSetEdition(Artwork):
     template_name = 'bookcovers/set_edition.html'
     context_object_name = "edition"
@@ -203,19 +157,39 @@ class ArtworkSetEdition(Artwork):
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"ArtworkSetEdition:get_object author id is '{edition.book.author_id}'")
-        print (f"ArtworkSetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(artwork_id=edition.theCover.artwork.pk)
-        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+        print(f"ArtworkSetEdition::get_object: author id is '{edition.book.author_id}'")
+        print(f"ArtworkSetEdition::get_object: artist id is '{edition.theCover.artwork.artist_id}'")
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
+        self.set_pager = self.create_set_pager(set_id=set.pk)
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.detail['object'] = edition
+        self.detail['to_page_view_name'] = 'artwork_set'
+        self.web_title = edition.theCover.artwork.artist.name
         return edition
 
+# http:<host>/bookcovers/artwork/set/<set_id>
+class ArtworkSet(ArtworkSetEdition):
+    template_name = 'bookcovers/set_edition.html'
+    context_object_name = "edition"
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.set_id = kwargs.get("set_id", None)
+        print (f"ArtworkSet::setup set_id is '{self.set_id}'")
+
+    def get_object(self, queryset=None):
+        self.set_pager = self.create_set_pager(set_id=self.set_id)
+        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
+        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition_id'])
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        self.detail['object'] = edition
+        self.detail['to_page_view_name'] = 'artwork_set'
+        self.web_title = edition.theCover.artwork.artist.name
+        return edition
 
 # http:<host>/bookcovers/artwork/set/editions/<edition_id>
-# up to here  want to factor out repetition between book and artwork.
-# also ArtworkSetEdtion get_object and ArtworkSetEdtions get_queryset the same - create a method to call
-# if meaningful make base class of SetEditions without mixin and then inherit with mixin
 class ArtworkSetEditions(ArtistMixin, ListView):
     """
         displays all the covers for the set
@@ -230,9 +204,15 @@ class ArtworkSetEditions(ArtistMixin, ListView):
 
     def get_queryset(self):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
-        print (f"ArtworkSetEditions:get_object author id is '{edition.book.author_id}'")
-        print (f"ArtworkSetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(artwork_id=edition.theCover.artwork.pk)
-        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+        print(f"ArtworkSetEditions::get_queryset author id is '{edition.book.author_id}'")
+        print(f"ArtworkSetEditions:get_queryset artist id is '{edition.theCover.artwork.artist_id}'")
+        set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
+
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        self.artwork = edition.theCover.artwork
+        self.set_pager = self.create_set_pager(set_id=set.pk)
+        self.detail['to_page_view_name'] = 'artwork_set'
         return queryset
+
+

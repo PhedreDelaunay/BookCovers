@@ -303,6 +303,9 @@ class Sets(models.Model):
     description = models.CharField(max_length=50, blank=True, null=True)
     panorama_id = models.IntegerField(blank=True, null=True)
 
+    def get_creator(self):
+        return (self.author, self.artist)
+
     class Meta:
         db_table = 'sets'
 

@@ -66,8 +66,10 @@ class OriginalRawQuerys:
     @staticmethod
     def artist_set_list(artist_id, return_dict=False):
         print (f"artist_set_list: artist_id={artist_id}")
-        strArtistSetList = ("SELECT sets.*, artists.name FROM sets, artists "
-                "WHERE sets.artist_id = %s AND sets.artist_id = artists.artist_id")
+        strArtistSetList = ("SELECT sets.*, artists.name FROM sets, artists, authors "
+                "WHERE sets.artist_id = %s AND sets.artist_id = artists.artist_id "
+                "and sets.author_id = authors.author_id "
+                "ORDER BY authors.name")
 
         #print(f"strArtistSetList is\n{strArtistSetList}\n")
         with connection.cursor() as cursor:

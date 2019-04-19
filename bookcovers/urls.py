@@ -2,9 +2,10 @@ from django.urls import path
 # from bookcovers.artist.views import ArtistList
 # from bookcovers.artist.views import ArtistArtworks
 # from bookcovers.artist.views import Artwork
-# from bookcovers.artist.views import ArtworkList
+# from bookcovers.artist.views import Artworks
 # from bookcovers.artist.views import ArtistSets
 # from bookcovers.artist.views import ArtworkEdition
+# from bookcovers.artist.views import ArtworkSet
 # from bookcovers.artist.views import ArtworkSetEdition
 # from bookcovers.artist.views import ArtworkSetEditions
 #
@@ -69,9 +70,11 @@ urlpatterns = [
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
     # ex: /bookcovers/artworks/6/
-    path('artworks/<int:artwork_id>/', ArtworkList.as_view(), name='artwork_list'),
+    path('artworks/<int:artwork_id>/', Artworks.as_view(), name='artworks'),
     # ex: /bookcovers/artwork/edition/7/
     path('artwork/edition/<int:edition_id>/', ArtworkEdition.as_view(), name="artwork_edition"),
+    # /bookcovers/artwork/set/3/
+    path('artwork/set/<int:set_id>/', ArtworkSet.as_view(), name="artwork_set"),
     # ex: /bookcovers/artwork/set/edition/6/
     path('artwork/set/edition/<int:edition_id>/', ArtworkSetEdition.as_view(), name="artwork_set_edition"),
     # ex: /bookcovers/artwork/set/editions/6/

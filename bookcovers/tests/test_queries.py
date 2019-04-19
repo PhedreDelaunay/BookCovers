@@ -163,7 +163,7 @@ class SetQueryTest(QueryTestCase):
         print(f"expected number of covers is {expected_num_covers}")
         print(f"original_cover_list is {original_cover_list}")
 
-        set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author, artist_id=artist)
+        set, set_cover_list = CoverQuerys.author_artist_set_cover_list(author_id=author, artist_id=artist)
         actual_num_covers = len(set_cover_list)
         print(f"actual number of covers is {actual_num_covers}")
         print(f"set_cover_list is {set_cover_list}")
@@ -687,7 +687,7 @@ class ArtistSetQueryTests(SetQueryTest):
             expected_num_sets = len(raw_set_list)
 
             artist_set_list = CoverQuerys.artist_set_list(artist_id)
-            # print(f"artist {artist_id}, set list {artist_set_list}")
+            #print(f"artist {artist_id}, set list {artist_set_list}")
             actual_num_sets = len(artist_set_list)
 
             self.assertEqual(expected_num_sets, actual_num_sets)
@@ -878,6 +878,50 @@ class AdhocQueryTests(QueryTestCase):
             # otherwise repr is used to represent queryset
             print("================================================================================")
             print(f"covers {list(all_list)}")
+            print("================================================================================")
+            raise
+
+
+    def test_artwork_set(self):
+        # Ray Bradbury, Josh Kirby settings
+        author_id = 15
+        artist_id = 35
+        expected_num_covers = 2
+        set_id = 4
+
+        # Frank Herbert , Gerry Grace settings
+        author_id = 5
+        artist_id = 28
+        expected_num_covers = 5
+        set_id = 14
+
+        # Elizabeth Moon
+        # author_id = 104
+        # expected_num_covers = 9
+        # set_id = 16
+
+        # Ray Bradbury, Bruce Pennington settings
+        author_id = 15
+        artist_id = 2
+        expected_num_covers = 7
+        set_id = 3
+
+        print("==============================================")
+        print(f"Test Set Covers for set {set_id}")
+        print("==============================================")
+        set, set_cover_list = CoverQuerys.author_artist_set_cover_list(set_id=set_id)
+        num_covers = len(set_cover_list)
+
+        print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+        print_dict_list(list(set_cover_list))
+        try: self.assertEqual(expected_num_covers, num_covers)
+        except AssertionError as e:
+            # use list to avoid remaining elements truncated
+            # otherwise repr is used to represent queryset
+            print("================================================================================")
+            print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+            print("set_cover_list is")
+            print_dict_list(list(set_cover_list))
             print("================================================================================")
             raise
 

@@ -130,9 +130,9 @@ class ArtworkEditionPageTest(PageTestCases.PageTestCase):
 class ArtworkListPageTest(PageTestCases.PageTestCase):
     # /bookcovers/artworks/6/
     def setUp(self):
-        self.reverse_url = reverse('bookcovers:artwork_list', kwargs={'artwork_id': 6})
+        self.reverse_url = reverse('bookcovers:artworks', kwargs={'artwork_id': 6})
         self.expected_response_code = 200
-        self.template_url = 'bookcovers/artwork_list.html'
+        self.template_url = 'bookcovers/artworks.html'
 
 
 class ArtworkSetEditionPageTest(PageTestCases.PageTestCase):
