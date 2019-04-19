@@ -63,6 +63,16 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        # getframe_expr = 'sys._getframe({}).f_code.co_name'
+        # caller = eval(getframe_expr.format(11))
+        # callers_caller = eval(getframe_expr.format(12))
+        # print(f"I was called from '{caller}'")
+        # print(f"{caller}, was called from '{callers_caller}'")
+        # technical_500_response, was called from 'handle_uncaught_exception
+        # render, was called from 'author_book_sets'
+        print(self.__dict__)
+
     class Meta:
         db_table = 'authors'
         # sort alphabetically in admin
@@ -134,6 +144,9 @@ class Artworks(models.Model):
         return self.artist
 
     def get_first_cover_filename(self):
+        # can use first
+        # https: // docs.djangoproject.com / en / 2.2 / ref / models / querysets /  # django.db.models.query.QuerySet.first
+        # should covers be theCovers?
         if self.covers:
             cover = self.covers.filter(flags__lt=256).order_by('edition__print_year')[0]
             # print("cover is {}".format(cover))
@@ -209,7 +222,7 @@ class Covers(models.Model):
     is_variant = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.cover_filename
+        return f"{self.cover_id}, {self.cover_filename}"
 
     class Meta:
         db_table = 'covers'

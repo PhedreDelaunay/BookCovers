@@ -52,6 +52,8 @@ class ArtistMixin(TopLevelPagerMixin):
         'name': 'artist',
         'title': 'artworks',
         'view_name': 'artist_artworks',
+        'set_view_name': 'artist_sets',
+        'object': None,
     }
     detail = {
         'to_page_view_name': 'artwork',
@@ -107,7 +109,15 @@ class ArtistMixin(TopLevelPagerMixin):
                                  subject_model=Artists)
         self.artwork = pager.get_entry()
         print (f"ArtworkMixin: create_book_pager: artwork_id={self.artwork.pk}")
+        print(f"ArtworkMixin: create_book_pager: artwork.name={self.artwork.name}")
         return book_pager
+
+    def create_pagers(self, artwork_id):
+        # order matters, get book pager (and hence artwork) first to ascertain the artist
+        self.book_pager = self.create_book_pager(artwork_id=artwork_id)
+        # TODO book_pager sets self.artwork but this is not obvious, make more explicit
+        print (f"ArtworkMixin::create_pagers: artist is '{self.artwork.artist.pk}, {self.artwork.artist_id}'")
+        self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
 
 class AuthorMixin(TopLevelPagerMixin):
     subject_list = {
@@ -118,6 +128,8 @@ class AuthorMixin(TopLevelPagerMixin):
         'name': 'author',
         'title': 'books',
         'view_name': 'author_books',
+        'set_view_name': 'author_sets',
+        'object': None,
     }
     detail = {
         'to_page_view_name': 'book',
@@ -171,3 +183,11 @@ class AuthorMixin(TopLevelPagerMixin):
         self.book = pager.get_entry()
         print (f"AuthorkMixin: create-book_pager: book_id={self.book.pk}")
         return book_pager
+
+    def create_pagers(self, book_id):
+        # order matters, get book pager (and hence book) first to ascertain the author
+        self.book_pager = self.create_book_pager(book_id=book_id)
+        # TODO book_pager sets self.book but this is not obvious, make more explicit
+        print (f"AuthorMixin::create_pagers: author is '{self.book.author.pk}, {self.book.author}'")
+        self.the_pager = self.create_top_level_pager(author_id=self.book.author_id)
+
