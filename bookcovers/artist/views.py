@@ -89,6 +89,8 @@ class ArtworkEdition(Artwork):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
+        self.detail['to_page_view_name'] = 'artwork'
+        self.detail['list_view_name'] = 'artworks'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -154,6 +156,7 @@ class ArtworkSetEdition(Artwork):
         self.edition_id = kwargs.get("edition_id", None)
         self.detail['list_view_name'] = 'artwork_set_editions'
         self.detail['view_name'] = 'artwork_set_edition'
+        self.detail['to_page_view_name'] = 'artwork_set'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -164,7 +167,6 @@ class ArtworkSetEdition(Artwork):
         self.set_pager = self.create_set_pager(set_id=set.pk)
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.detail['object'] = edition
-        self.detail['to_page_view_name'] = 'artwork_set'
         self.web_title = edition.theCover.artwork.artist.name
         return edition
 
