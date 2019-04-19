@@ -148,6 +148,9 @@ class ArtistSets(ArtistMixin, ListView):
 
 # http:<host>/bookcovers/artwork/set/edition/<edition_id>
 class ArtworkSetEdition(Artwork):
+    """
+        displays detail for the edition and thumbnails for the associated editions in the set given the edition id
+    """
     template_name = 'bookcovers/set_edition.html'
     context_object_name = "edition"
 
@@ -156,7 +159,7 @@ class ArtworkSetEdition(Artwork):
         self.edition_id = kwargs.get("edition_id", None)
         self.detail['list_view_name'] = 'artwork_set_editions'
         self.detail['view_name'] = 'artwork_set_edition'
-        self.detail['to_page_view_name'] = 'artwork_set'
+        self.detail['to_page_view_name'] = 'artwork_set_detail'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -170,11 +173,11 @@ class ArtworkSetEdition(Artwork):
         self.web_title = edition.theCover.artwork.artist.name
         return edition
 
-# http:<host>/bookcovers/artwork/set/<set_id>
-class ArtworkSet(ArtworkSetEdition):
-    template_name = 'bookcovers/set_edition.html'
-    context_object_name = "edition"
-
+# http:<host>/bookcovers/artwork/set/detail/<set_id>
+class ArtworkSetDetail(ArtworkSetEdition):
+    """
+        displays detail for the edition and thumbnails for the associated editions in the set given the set id
+    """
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.set_id = kwargs.get("set_id", None)
@@ -187,14 +190,13 @@ class ArtworkSet(ArtworkSetEdition):
         edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.detail['object'] = edition
-        self.detail['to_page_view_name'] = 'artwork_set'
         self.web_title = edition.theCover.artwork.artist.name
         return edition
 
 # http:<host>/bookcovers/artwork/set/editions/<edition_id>
 class ArtworkSetEditions(ArtistMixin, ListView):
     """
-        displays all the covers for the set
+        displays all the covers for the set given the edition id
     """
     template_name = 'bookcovers/set_editions.html'
     context_object_name = 'cover_list'      # template context
@@ -203,6 +205,8 @@ class ArtworkSetEditions(ArtistMixin, ListView):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
         print (f"ArtworkSetEditions::setup: edition_id is {self.edition_id}")
+        self.detail['view_name'] = 'artwork_set_edition'
+        self.detail['to_page_view_name'] = 'artwork_set_list'
 
     def get_queryset(self):
         edition = get_object_or_404(Editions, edition_id=self.edition_id)
@@ -214,7 +218,24 @@ class ArtworkSetEditions(ArtistMixin, ListView):
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.artwork = edition.theCover.artwork
         self.set_pager = self.create_set_pager(set_id=set.pk)
-        self.detail['to_page_view_name'] = 'artwork_set'
         return queryset
 
+# http:<host>/bookcovers/artwork/set/list/<set_id>
+class ArtworkSetList(ArtworkSetEditions):
+    """
+        displays all the covers for the set given the set id
+    """
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.set_id = kwargs.get("set_id", None)
+        print (f"ArtworkSetList::setup set_id is '{self.set_id}'")
 
+    def get_queryset(self):
+        self.set_pager = self.create_set_pager(set_id=self.set_id)
+        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
+        set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
+        edition = get_object_or_404(Editions, edition_id=queryset[0]['edition_id'])
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        self.detail['object'] = edition
+        self.web_title = edition.theCover.artwork.artist.name
+        return queryset
