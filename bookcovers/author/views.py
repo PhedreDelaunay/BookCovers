@@ -1,0 +1,213 @@
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
+from django.views.generic import ListView
+from django.views.generic import DetailView
+
+from bookcovers.models import Editions
+from bookcovers.cover_querys import CoverQuerys
+from bookcovers.views import SubjectList
+
+from .view_mixin import AuthorMixin
+
+# AuthorList -> AuthorBooks -> Book
+# http:<host>/bookcovers/authors/
+class AuthorList(SubjectList):
+    template_name = 'bookcovers/author_list.html'
+
+    def __init__(self):
+        self.title = "Authors"
+
+    def get_queryset(self):
+        queryset = CoverQuerys.author_list()
+        return queryset
+
+
+# http:<host>/bookcovers/author/<author_id>/
+# http:<host>/bookcovers/author/<author%20name>/
+# http:<host>/bookcovers/author/<author-slug>/
+class AuthorBooks(AuthorMixin, ListView):
+    """
+    displays a list of books by this author as thumbnails
+    :param request:
+    one of
+    :param author_id:   ex: /bookcovers/author/4/
+    :param name:        ex: /bookcovers/author/Robert%20Heinlein/
+    :param slug:        ex: /bookcovers/author/Robert-Heinlein/
+    :return:
+    """
+    template_name = 'bookcovers/author_books.html'
+    context_object_name = 'cover_list'      # template context
+
+    # setup is called when the class instance is created
+    # note: not in 2.1, added in 2.2
+    # /Users/tarbetn/Virtualenvs/djabbic/lib/python3.7/site-packages/django/views/generic/base.py
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.author_id = kwargs.get("author_id", None)
+        self.name = kwargs.get("name", None)
+        self.slug = kwargs.get("slug", None)
+        #self._author = None
+        print (f"AuthorBooks::setup: author_id='{self.author_id}', name='{self.name}', slug='{self.slug}'")
+
+    def set_list(self):
+        set_list = CoverQuerys.author_set_list(author_id=self.author.pk)
+        return set_list
+
+    def get_queryset(self):
+        self.the_pager = self.create_top_level_pager(author_id=self.author_id, name=self.name, slug=self.slug)
+        self.author = self.the_pager.get_entry()
+        print (f"AuthorBooks:get_queryset: author is '{self.author.name}'")
+        self.web_title = self.author.name
+        queryset = CoverQuerys.all_covers_of_all_books_for_author(author=self.author, all=False)
+        return queryset
+
+    # def dispatch(self, request, *args, **kwargs):
+    #
+    #     #print(**kwargs)
+    #
+    #     self.author_id = kwargs['author_id']
+    #     print(f"in dispatch function {self.author_id}")
+    #     # needed to have an HttpResponse
+    #     return super(AuthorBooks, self).dispatch(request, *args, **kwargs)
+
+# http:<host>/bookcovers/book/<book_id>
+# http:<host>/bookcovers/book/<the%20title> - not implemented
+class Book(AuthorMixin, DetailView):
+    template_name = 'bookcovers/book.html'
+    context_object_name = "edition"
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.book_id = kwargs.get("book_id", None)
+        self.detail['list_view_name'] = 'books'
+        # why does AuthorMixin not reset between views?
+        # cos it is class variable not instance variable
+
+    def get_object(self, queryset=None):
+        self.create_pagers(book_id=self.book_id)
+        self.cover_list = CoverQuerys.all_covers_for_title(self.book)
+        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition_id'])
+        return edition
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print ("Book: get_context")
+        context['cover_list'] = self.cover_list
+        return context
+
+
+# http:<host>/bookcovers/book/edition/<edition_id>
+class BookEdition(Book):
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        self.detail['view_name'] = 'book_edition'
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        self.create_pagers(book_id=edition.book.pk)
+        self.cover_list = CoverQuerys.all_covers_for_title(self.book)
+        return edition
+
+# http:<host>/bookcovers/books/<book_id>
+class Books(AuthorMixin, ListView):
+    """
+        displays all the book covers for the same book title
+    """
+    template_name = 'bookcovers/books.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.book_id = kwargs.get("book_id", None)
+
+    def get_queryset(self):
+        self.create_pagers(book_id=self.book_id)
+        print (f"Books: get_queryset book.title={self.book.title}")
+        queryset = CoverQuerys.all_covers_for_title(self.book)
+        return queryset
+
+# http:<host>/bookcovers/author/<author%20name>/sets
+class AuthorSets(AuthorMixin, ListView):
+    """
+    displays thumbnails of books by this author ordered in sets by artist
+    """
+    template_name = 'bookcovers/author_sets.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.name = kwargs.get("name", None)
+        print (f"AuthorSets::setup: author={self.name}")
+
+    def get_queryset(self):
+        self.the_pager = self.create_top_level_pager(name=self.name)
+        self.author = self.the_pager.get_entry()
+        self.web_title = self.author.name
+        print (f"AuthorSets:get_queryset: author is '{self.author.name}'")
+        queryset = CoverQuerys.author_set_covers(author_id=self.author.author_id, return_dict=True)
+        return queryset
+
+# http:<host>/bookcovers/book/set/edition/<edition_id>
+class SetEdition(Book):
+    template_name = 'bookcovers/set_edition.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        self.detail['list_view_name'] = 'set_editions'
+        self.detail['view_name'] = 'set_edition'
+
+    def get_object(self, queryset=None):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
+        print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        self.create_pagers(book_id=edition.book.pk)
+        self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        self.detail['object'] = edition
+        return edition
+
+# http:<host>/bookcovers/book/set/editions/<edition_id>
+class SetEditions(AuthorMixin, ListView):
+    """
+        displays all the covers for the set
+    """
+    template_name = 'bookcovers/set_editions.html'
+    context_object_name = 'cover_list'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        print (f"SetEditions::setup: edition_id is {self.edition_id}")
+
+    def get_queryset(self):
+        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
+        print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
+        self.create_pagers(book_id=edition.book.pk)
+        queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        return queryset
+
+
+class Edition(DetailView):
+    model=Editions
+    context_object_name="edition"
+    print ("Edition")
+    template_name = 'bookcovers/edition.html'
+
+
+#=========================================
+# the simplest of generic class views simply provide the model
+# this on its own lists all authors with context_object_name = author_list
+#    model = Author
+
+# To list a subset of the model object specify the list of objects 
+# using queryset
+# sort authors
+#    queryset = Author.objects.order_by('name')
+#    context_object_name = 'author_list'
+#=========================================
+

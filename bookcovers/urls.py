@@ -1,22 +1,26 @@
 from django.urls import path
-from bookcovers.views import AuthorList
-from bookcovers.views import ArtistList
-from bookcovers.views import AuthorBooks
-from bookcovers.views import ArtistArtworks
-from bookcovers.views import Artwork
-from bookcovers.views import ArtworkList
-from bookcovers.views import ArtistSets
-from bookcovers.views import ArtworkEdition
-from bookcovers.views import ArtworkSetEdition
-from bookcovers.views import ArtworkSetEditions
-from bookcovers.views import Edition
-from bookcovers.views import Book
-from bookcovers.views import AuthorSets
-from bookcovers.views import BookEdition
-from bookcovers.views import Books
-from bookcovers.views import SetEdition
-from bookcovers.views import SetEditions
+# from bookcovers.artist.views import ArtistList
+# from bookcovers.artist.views import ArtistArtworks
+# from bookcovers.artist.views import Artwork
+# from bookcovers.artist.views import ArtworkList
+# from bookcovers.artist.views import ArtistSets
+# from bookcovers.artist.views import ArtworkEdition
+# from bookcovers.artist.views import ArtworkSetEdition
+# from bookcovers.artist.views import ArtworkSetEditions
+#
+# from bookcovers.author.views import AuthorList
+# from bookcovers.author.views import AuthorBooks
+# from bookcovers.author.views import Book
+# from bookcovers.author.views import Books
+# from bookcovers.author.views import AuthorSets
+# from bookcovers.author.views import BookEdition
+# from bookcovers.author.views import SetEdition
+# from bookcovers.author.views import SetEditions
 
+from .artist.views import *
+from .author.views import *
+
+from bookcovers.views import Edition
 from . import views
 
 # Reference:
