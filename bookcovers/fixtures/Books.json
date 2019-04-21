@@ -1,6 +1,6 @@
 [
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1,
     "fields": {
         "author": 1,
@@ -13,7 +13,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 2,
     "fields": {
         "author": 2,
@@ -26,7 +26,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 3,
     "fields": {
         "author": 3,
@@ -39,7 +39,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 4,
     "fields": {
         "author": 4,
@@ -52,7 +52,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 5,
     "fields": {
         "author": 5,
@@ -65,7 +65,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 6,
     "fields": {
         "author": 6,
@@ -78,7 +78,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 7,
     "fields": {
         "author": 5,
@@ -91,7 +91,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 8,
     "fields": {
         "author": 5,
@@ -104,7 +104,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 9,
     "fields": {
         "author": 7,
@@ -117,7 +117,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 10,
     "fields": {
         "author": 7,
@@ -130,7 +130,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 11,
     "fields": {
         "author": 7,
@@ -143,7 +143,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 12,
     "fields": {
         "author": 8,
@@ -156,7 +156,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 13,
     "fields": {
         "author": 7,
@@ -169,7 +169,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 14,
     "fields": {
         "author": 9,
@@ -182,7 +182,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 15,
     "fields": {
         "author": 10,
@@ -195,7 +195,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 16,
     "fields": {
         "author": 7,
@@ -208,7 +208,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 17,
     "fields": {
         "author": 5,
@@ -221,7 +221,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 18,
     "fields": {
         "author": 5,
@@ -234,7 +234,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 19,
     "fields": {
         "author": 7,
@@ -247,7 +247,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 20,
     "fields": {
         "author": 11,
@@ -260,7 +260,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 21,
     "fields": {
         "author": 4,
@@ -273,7 +273,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 22,
     "fields": {
         "author": 12,
@@ -286,7 +286,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 23,
     "fields": {
         "author": 13,
@@ -299,7 +299,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 24,
     "fields": {
         "author": 8,
@@ -312,7 +312,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 25,
     "fields": {
         "author": 11,
@@ -325,7 +325,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 26,
     "fields": {
         "author": 7,
@@ -338,7 +338,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 27,
     "fields": {
         "author": 14,
@@ -351,7 +351,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 28,
     "fields": {
         "author": 14,
@@ -364,7 +364,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 29,
     "fields": {
         "author": 15,
@@ -377,7 +377,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 30,
     "fields": {
         "author": 15,
@@ -390,7 +390,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 31,
     "fields": {
         "author": 16,
@@ -403,7 +403,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 32,
     "fields": {
         "author": 7,
@@ -416,7 +416,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 34,
     "fields": {
         "author": 4,
@@ -429,7 +429,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 35,
     "fields": {
         "author": 7,
@@ -442,7 +442,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 36,
     "fields": {
         "author": 17,
@@ -455,7 +455,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 37,
     "fields": {
         "author": 18,
@@ -468,7 +468,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 38,
     "fields": {
         "author": 18,
@@ -481,7 +481,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 39,
     "fields": {
         "author": 19,
@@ -494,7 +494,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 40,
     "fields": {
         "author": 20,
@@ -507,7 +507,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 41,
     "fields": {
         "author": 7,
@@ -520,7 +520,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 42,
     "fields": {
         "author": 7,
@@ -533,7 +533,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 43,
     "fields": {
         "author": 21,
@@ -546,7 +546,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 44,
     "fields": {
         "author": 22,
@@ -559,7 +559,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 45,
     "fields": {
         "author": 23,
@@ -572,7 +572,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 46,
     "fields": {
         "author": 24,
@@ -585,7 +585,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 47,
     "fields": {
         "author": 14,
@@ -598,7 +598,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 48,
     "fields": {
         "author": 14,
@@ -611,7 +611,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 49,
     "fields": {
         "author": 14,
@@ -624,7 +624,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 50,
     "fields": {
         "author": 23,
@@ -637,7 +637,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 51,
     "fields": {
         "author": 25,
@@ -650,7 +650,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 52,
     "fields": {
         "author": 26,
@@ -663,7 +663,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 53,
     "fields": {
         "author": 27,
@@ -676,7 +676,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 54,
     "fields": {
         "author": 28,
@@ -689,7 +689,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 55,
     "fields": {
         "author": 7,
@@ -702,7 +702,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 56,
     "fields": {
         "author": 29,
@@ -715,7 +715,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 57,
     "fields": {
         "author": 29,
@@ -728,7 +728,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 58,
     "fields": {
         "author": 29,
@@ -741,7 +741,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 59,
     "fields": {
         "author": 29,
@@ -754,7 +754,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 60,
     "fields": {
         "author": 30,
@@ -767,7 +767,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 61,
     "fields": {
         "author": 14,
@@ -780,7 +780,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 62,
     "fields": {
         "author": 14,
@@ -793,7 +793,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 63,
     "fields": {
         "author": 14,
@@ -806,7 +806,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 64,
     "fields": {
         "author": 5,
@@ -819,7 +819,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 65,
     "fields": {
         "author": 32,
@@ -832,7 +832,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 66,
     "fields": {
         "author": 23,
@@ -845,7 +845,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 67,
     "fields": {
         "author": 9,
@@ -858,7 +858,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 68,
     "fields": {
         "author": 33,
@@ -871,7 +871,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 70,
     "fields": {
         "author": 34,
@@ -884,7 +884,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 71,
     "fields": {
         "author": 25,
@@ -897,7 +897,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 72,
     "fields": {
         "author": 35,
@@ -910,7 +910,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 73,
     "fields": {
         "author": 14,
@@ -923,7 +923,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 74,
     "fields": {
         "author": 36,
@@ -936,7 +936,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 75,
     "fields": {
         "author": 38,
@@ -949,7 +949,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 76,
     "fields": {
         "author": 37,
@@ -962,7 +962,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 77,
     "fields": {
         "author": 37,
@@ -975,7 +975,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 78,
     "fields": {
         "author": 37,
@@ -988,7 +988,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 79,
     "fields": {
         "author": 27,
@@ -1001,7 +1001,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 80,
     "fields": {
         "author": 10,
@@ -1014,7 +1014,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 81,
     "fields": {
         "author": 23,
@@ -1027,7 +1027,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 82,
     "fields": {
         "author": 23,
@@ -1040,7 +1040,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 83,
     "fields": {
         "author": 34,
@@ -1053,7 +1053,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 84,
     "fields": {
         "author": 23,
@@ -1066,7 +1066,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 85,
     "fields": {
         "author": 15,
@@ -1079,7 +1079,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 86,
     "fields": {
         "author": 15,
@@ -1092,7 +1092,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 87,
     "fields": {
         "author": 39,
@@ -1105,7 +1105,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 88,
     "fields": {
         "author": 41,
@@ -1118,7 +1118,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 89,
     "fields": {
         "author": 42,
@@ -1131,7 +1131,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 90,
     "fields": {
         "author": 43,
@@ -1144,7 +1144,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 91,
     "fields": {
         "author": 44,
@@ -1157,7 +1157,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 92,
     "fields": {
         "author": 45,
@@ -1170,7 +1170,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 93,
     "fields": {
         "author": 4,
@@ -1183,7 +1183,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 94,
     "fields": {
         "author": 46,
@@ -1196,7 +1196,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 95,
     "fields": {
         "author": 47,
@@ -1209,7 +1209,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 96,
     "fields": {
         "author": 48,
@@ -1222,7 +1222,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 97,
     "fields": {
         "author": 49,
@@ -1235,7 +1235,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 98,
     "fields": {
         "author": 50,
@@ -1248,7 +1248,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 99,
     "fields": {
         "author": 51,
@@ -1261,7 +1261,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 100,
     "fields": {
         "author": 52,
@@ -1274,7 +1274,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 101,
     "fields": {
         "author": 18,
@@ -1287,7 +1287,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 102,
     "fields": {
         "author": 53,
@@ -1300,7 +1300,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 103,
     "fields": {
         "author": 49,
@@ -1313,7 +1313,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 104,
     "fields": {
         "author": 54,
@@ -1326,7 +1326,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 105,
     "fields": {
         "author": 55,
@@ -1339,7 +1339,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 106,
     "fields": {
         "author": 56,
@@ -1352,7 +1352,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 107,
     "fields": {
         "author": 57,
@@ -1365,7 +1365,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 108,
     "fields": {
         "author": 58,
@@ -1378,7 +1378,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 109,
     "fields": {
         "author": 60,
@@ -1391,7 +1391,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 110,
     "fields": {
         "author": 61,
@@ -1404,7 +1404,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 111,
     "fields": {
         "author": 62,
@@ -1417,7 +1417,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 112,
     "fields": {
         "author": 63,
@@ -1430,7 +1430,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 113,
     "fields": {
         "author": 64,
@@ -1443,7 +1443,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 114,
     "fields": {
         "author": 42,
@@ -1456,7 +1456,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 115,
     "fields": {
         "author": 65,
@@ -1469,7 +1469,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 116,
     "fields": {
         "author": 66,
@@ -1482,7 +1482,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 117,
     "fields": {
         "author": 67,
@@ -1495,7 +1495,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 118,
     "fields": {
         "author": 68,
@@ -1508,7 +1508,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 119,
     "fields": {
         "author": 50,
@@ -1521,7 +1521,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 120,
     "fields": {
         "author": 69,
@@ -1534,7 +1534,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 121,
     "fields": {
         "author": 70,
@@ -1547,7 +1547,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 122,
     "fields": {
         "author": 27,
@@ -1560,7 +1560,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 123,
     "fields": {
         "author": 71,
@@ -1573,7 +1573,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 124,
     "fields": {
         "author": 72,
@@ -1586,7 +1586,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 125,
     "fields": {
         "author": 73,
@@ -1599,7 +1599,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 126,
     "fields": {
         "author": 76,
@@ -1612,7 +1612,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 127,
     "fields": {
         "author": 77,
@@ -1625,7 +1625,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 128,
     "fields": {
         "author": 78,
@@ -1638,7 +1638,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 129,
     "fields": {
         "author": 79,
@@ -1651,7 +1651,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 130,
     "fields": {
         "author": 54,
@@ -1664,7 +1664,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 131,
     "fields": {
         "author": 80,
@@ -1677,7 +1677,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 132,
     "fields": {
         "author": 81,
@@ -1690,7 +1690,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 133,
     "fields": {
         "author": 11,
@@ -1703,7 +1703,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 134,
     "fields": {
         "author": 82,
@@ -1716,7 +1716,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 135,
     "fields": {
         "author": 83,
@@ -1729,7 +1729,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 136,
     "fields": {
         "author": 73,
@@ -1742,7 +1742,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 137,
     "fields": {
         "author": 73,
@@ -1755,7 +1755,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 138,
     "fields": {
         "author": 74,
@@ -1768,7 +1768,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 139,
     "fields": {
         "author": 75,
@@ -1781,7 +1781,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 140,
     "fields": {
         "author": 37,
@@ -1794,7 +1794,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 141,
     "fields": {
         "author": 84,
@@ -1807,7 +1807,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 142,
     "fields": {
         "author": 85,
@@ -1820,7 +1820,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 143,
     "fields": {
         "author": 86,
@@ -1833,7 +1833,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 144,
     "fields": {
         "author": 15,
@@ -1846,7 +1846,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 146,
     "fields": {
         "author": 18,
@@ -1859,7 +1859,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 147,
     "fields": {
         "author": 18,
@@ -1872,7 +1872,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 148,
     "fields": {
         "author": 18,
@@ -1885,7 +1885,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 149,
     "fields": {
         "author": 15,
@@ -1898,7 +1898,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 150,
     "fields": {
         "author": 87,
@@ -1911,7 +1911,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 151,
     "fields": {
         "author": 87,
@@ -1924,7 +1924,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 152,
     "fields": {
         "author": 87,
@@ -1937,7 +1937,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 153,
     "fields": {
         "author": 6,
@@ -1950,7 +1950,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 154,
     "fields": {
         "author": 6,
@@ -1963,7 +1963,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 155,
     "fields": {
         "author": 88,
@@ -1976,7 +1976,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 156,
     "fields": {
         "author": 89,
@@ -1989,7 +1989,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 157,
     "fields": {
         "author": 90,
@@ -2002,7 +2002,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 158,
     "fields": {
         "author": 90,
@@ -2015,7 +2015,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 159,
     "fields": {
         "author": 90,
@@ -2028,7 +2028,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 160,
     "fields": {
         "author": 90,
@@ -2041,7 +2041,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 161,
     "fields": {
         "author": 90,
@@ -2054,7 +2054,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 162,
     "fields": {
         "author": 18,
@@ -2067,7 +2067,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 163,
     "fields": {
         "author": 18,
@@ -2080,7 +2080,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 164,
     "fields": {
         "author": 18,
@@ -2093,7 +2093,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 165,
     "fields": {
         "author": 92,
@@ -2106,7 +2106,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 166,
     "fields": {
         "author": 92,
@@ -2119,7 +2119,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 167,
     "fields": {
         "author": 93,
@@ -2132,7 +2132,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 168,
     "fields": {
         "author": 25,
@@ -2145,7 +2145,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 169,
     "fields": {
         "author": 94,
@@ -2158,7 +2158,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 170,
     "fields": {
         "author": 95,
@@ -2171,7 +2171,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 171,
     "fields": {
         "author": 95,
@@ -2184,7 +2184,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 172,
     "fields": {
         "author": 95,
@@ -2197,7 +2197,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 173,
     "fields": {
         "author": 5,
@@ -2210,7 +2210,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 174,
     "fields": {
         "author": 96,
@@ -2223,7 +2223,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 175,
     "fields": {
         "author": 96,
@@ -2236,7 +2236,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 176,
     "fields": {
         "author": 33,
@@ -2249,7 +2249,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 177,
     "fields": {
         "author": 97,
@@ -2262,7 +2262,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 178,
     "fields": {
         "author": 98,
@@ -2275,7 +2275,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 179,
     "fields": {
         "author": 90,
@@ -2288,7 +2288,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 180,
     "fields": {
         "author": 90,
@@ -2301,7 +2301,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 181,
     "fields": {
         "author": 37,
@@ -2314,7 +2314,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 182,
     "fields": {
         "author": 99,
@@ -2327,7 +2327,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 183,
     "fields": {
         "author": 100,
@@ -2340,7 +2340,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 184,
     "fields": {
         "author": 34,
@@ -2353,7 +2353,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 185,
     "fields": {
         "author": 101,
@@ -2366,7 +2366,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 186,
     "fields": {
         "author": 102,
@@ -2379,7 +2379,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 187,
     "fields": {
         "author": 29,
@@ -2392,7 +2392,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 188,
     "fields": {
         "author": 103,
@@ -2405,7 +2405,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 189,
     "fields": {
         "author": 103,
@@ -2418,7 +2418,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 190,
     "fields": {
         "author": 15,
@@ -2431,7 +2431,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 191,
     "fields": {
         "author": 90,
@@ -2444,7 +2444,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 192,
     "fields": {
         "author": 4,
@@ -2457,7 +2457,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 193,
     "fields": {
         "author": 107,
@@ -2470,7 +2470,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 194,
     "fields": {
         "author": 23,
@@ -2483,7 +2483,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 195,
     "fields": {
         "author": 177,
@@ -2496,7 +2496,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 196,
     "fields": {
         "author": 177,
@@ -2509,7 +2509,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 197,
     "fields": {
         "author": 27,
@@ -2522,7 +2522,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 198,
     "fields": {
         "author": 27,
@@ -2535,7 +2535,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 199,
     "fields": {
         "author": 18,
@@ -2548,7 +2548,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 200,
     "fields": {
         "author": 18,
@@ -2561,7 +2561,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 201,
     "fields": {
         "author": 18,
@@ -2574,7 +2574,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 202,
     "fields": {
         "author": 18,
@@ -2587,7 +2587,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 203,
     "fields": {
         "author": 108,
@@ -2600,7 +2600,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 204,
     "fields": {
         "author": 108,
@@ -2613,7 +2613,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 205,
     "fields": {
         "author": 14,
@@ -2626,7 +2626,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 206,
     "fields": {
         "author": 109,
@@ -2639,7 +2639,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 207,
     "fields": {
         "author": 36,
@@ -2652,7 +2652,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 208,
     "fields": {
         "author": 13,
@@ -2665,7 +2665,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 209,
     "fields": {
         "author": 110,
@@ -2678,7 +2678,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 210,
     "fields": {
         "author": 110,
@@ -2691,7 +2691,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 211,
     "fields": {
         "author": 111,
@@ -2704,7 +2704,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 212,
     "fields": {
         "author": 111,
@@ -2717,7 +2717,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 213,
     "fields": {
         "author": 111,
@@ -2730,7 +2730,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 214,
     "fields": {
         "author": 111,
@@ -2743,7 +2743,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 215,
     "fields": {
         "author": 108,
@@ -2756,7 +2756,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 216,
     "fields": {
         "author": 104,
@@ -2769,7 +2769,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 217,
     "fields": {
         "author": 104,
@@ -2782,7 +2782,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 218,
     "fields": {
         "author": 104,
@@ -2795,7 +2795,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 219,
     "fields": {
         "author": 104,
@@ -2808,7 +2808,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 220,
     "fields": {
         "author": 104,
@@ -2821,7 +2821,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 221,
     "fields": {
         "author": 104,
@@ -2834,7 +2834,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 222,
     "fields": {
         "author": 104,
@@ -2847,7 +2847,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 223,
     "fields": {
         "author": 112,
@@ -2860,7 +2860,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 224,
     "fields": {
         "author": 113,
@@ -2873,7 +2873,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 225,
     "fields": {
         "author": 114,
@@ -2886,7 +2886,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 226,
     "fields": {
         "author": 178,
@@ -2899,7 +2899,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 227,
     "fields": {
         "author": 40,
@@ -2912,7 +2912,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 228,
     "fields": {
         "author": 30,
@@ -2925,7 +2925,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 229,
     "fields": {
         "author": 115,
@@ -2938,7 +2938,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 230,
     "fields": {
         "author": 116,
@@ -2951,7 +2951,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 231,
     "fields": {
         "author": 117,
@@ -2964,7 +2964,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 232,
     "fields": {
         "author": 118,
@@ -2977,7 +2977,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 233,
     "fields": {
         "author": 119,
@@ -2990,7 +2990,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 234,
     "fields": {
         "author": 119,
@@ -3003,7 +3003,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 235,
     "fields": {
         "author": 119,
@@ -3016,7 +3016,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 236,
     "fields": {
         "author": 120,
@@ -3029,7 +3029,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 237,
     "fields": {
         "author": 121,
@@ -3042,7 +3042,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 238,
     "fields": {
         "author": 122,
@@ -3055,7 +3055,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 239,
     "fields": {
         "author": 59,
@@ -3068,7 +3068,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 240,
     "fields": {
         "author": 51,
@@ -3081,7 +3081,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 241,
     "fields": {
         "author": 92,
@@ -3094,7 +3094,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 242,
     "fields": {
         "author": 92,
@@ -3107,7 +3107,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 243,
     "fields": {
         "author": 92,
@@ -3120,7 +3120,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 244,
     "fields": {
         "author": 123,
@@ -3133,7 +3133,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 245,
     "fields": {
         "author": 124,
@@ -3146,7 +3146,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 246,
     "fields": {
         "author": 10,
@@ -3159,7 +3159,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 247,
     "fields": {
         "author": 11,
@@ -3172,7 +3172,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 248,
     "fields": {
         "author": 4,
@@ -3185,7 +3185,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 249,
     "fields": {
         "author": 4,
@@ -3198,7 +3198,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 250,
     "fields": {
         "author": 25,
@@ -3211,7 +3211,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 251,
     "fields": {
         "author": 125,
@@ -3224,7 +3224,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 252,
     "fields": {
         "author": 126,
@@ -3237,7 +3237,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 253,
     "fields": {
         "author": 179,
@@ -3250,7 +3250,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 254,
     "fields": {
         "author": 106,
@@ -3263,7 +3263,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 255,
     "fields": {
         "author": 105,
@@ -3276,7 +3276,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 256,
     "fields": {
         "author": 18,
@@ -3289,7 +3289,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 257,
     "fields": {
         "author": 39,
@@ -3302,7 +3302,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 258,
     "fields": {
         "author": 128,
@@ -3315,7 +3315,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 259,
     "fields": {
         "author": 128,
@@ -3328,7 +3328,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 260,
     "fields": {
         "author": 464,
@@ -3341,7 +3341,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 261,
     "fields": {
         "author": 180,
@@ -3354,7 +3354,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 262,
     "fields": {
         "author": 105,
@@ -3367,7 +3367,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 263,
     "fields": {
         "author": 182,
@@ -3380,7 +3380,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 264,
     "fields": {
         "author": 129,
@@ -3393,7 +3393,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 265,
     "fields": {
         "author": 130,
@@ -3406,7 +3406,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 266,
     "fields": {
         "author": 18,
@@ -3419,7 +3419,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 267,
     "fields": {
         "author": 131,
@@ -3432,7 +3432,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 268,
     "fields": {
         "author": 24,
@@ -3445,7 +3445,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 269,
     "fields": {
         "author": 23,
@@ -3458,7 +3458,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 270,
     "fields": {
         "author": 131,
@@ -3471,7 +3471,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 271,
     "fields": {
         "author": 132,
@@ -3484,7 +3484,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 272,
     "fields": {
         "author": 6,
@@ -3497,7 +3497,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 273,
     "fields": {
         "author": 133,
@@ -3510,7 +3510,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 274,
     "fields": {
         "author": 134,
@@ -3523,7 +3523,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 275,
     "fields": {
         "author": 4,
@@ -3536,7 +3536,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 276,
     "fields": {
         "author": 135,
@@ -3549,7 +3549,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 277,
     "fields": {
         "author": 106,
@@ -3562,7 +3562,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 278,
     "fields": {
         "author": 136,
@@ -3575,7 +3575,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 279,
     "fields": {
         "author": 137,
@@ -3588,7 +3588,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 280,
     "fields": {
         "author": 138,
@@ -3601,7 +3601,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 281,
     "fields": {
         "author": 139,
@@ -3614,7 +3614,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 282,
     "fields": {
         "author": 140,
@@ -3627,7 +3627,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 283,
     "fields": {
         "author": 141,
@@ -3640,7 +3640,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 284,
     "fields": {
         "author": 183,
@@ -3653,7 +3653,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 285,
     "fields": {
         "author": 118,
@@ -3666,7 +3666,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 286,
     "fields": {
         "author": 36,
@@ -3679,7 +3679,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 287,
     "fields": {
         "author": 15,
@@ -3692,7 +3692,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 288,
     "fields": {
         "author": 142,
@@ -3705,7 +3705,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 289,
     "fields": {
         "author": 24,
@@ -3718,7 +3718,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 290,
     "fields": {
         "author": 27,
@@ -3731,7 +3731,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 291,
     "fields": {
         "author": 143,
@@ -3744,7 +3744,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 292,
     "fields": {
         "author": 144,
@@ -3757,7 +3757,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 293,
     "fields": {
         "author": 145,
@@ -3770,7 +3770,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 294,
     "fields": {
         "author": 6,
@@ -3783,7 +3783,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 295,
     "fields": {
         "author": 146,
@@ -3796,7 +3796,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 296,
     "fields": {
         "author": 131,
@@ -3809,7 +3809,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 297,
     "fields": {
         "author": 9,
@@ -3822,7 +3822,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 298,
     "fields": {
         "author": 9,
@@ -3835,7 +3835,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 299,
     "fields": {
         "author": 147,
@@ -3848,7 +3848,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 300,
     "fields": {
         "author": 148,
@@ -3861,7 +3861,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 301,
     "fields": {
         "author": 64,
@@ -3874,7 +3874,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 302,
     "fields": {
         "author": 136,
@@ -3887,7 +3887,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 303,
     "fields": {
         "author": 23,
@@ -3900,7 +3900,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 304,
     "fields": {
         "author": 23,
@@ -3913,7 +3913,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 305,
     "fields": {
         "author": 10,
@@ -3926,7 +3926,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 306,
     "fields": {
         "author": 10,
@@ -3939,7 +3939,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 307,
     "fields": {
         "author": 10,
@@ -3952,7 +3952,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 308,
     "fields": {
         "author": 132,
@@ -3965,7 +3965,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 309,
     "fields": {
         "author": 149,
@@ -3978,7 +3978,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 310,
     "fields": {
         "author": 150,
@@ -3991,7 +3991,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 311,
     "fields": {
         "author": 151,
@@ -4004,7 +4004,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 312,
     "fields": {
         "author": 152,
@@ -4017,7 +4017,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 313,
     "fields": {
         "author": 153,
@@ -4030,7 +4030,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 314,
     "fields": {
         "author": 154,
@@ -4043,7 +4043,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 315,
     "fields": {
         "author": 155,
@@ -4056,7 +4056,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 316,
     "fields": {
         "author": 8,
@@ -4069,7 +4069,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 317,
     "fields": {
         "author": 156,
@@ -4082,7 +4082,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 318,
     "fields": {
         "author": 148,
@@ -4095,7 +4095,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 319,
     "fields": {
         "author": 157,
@@ -4108,7 +4108,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 320,
     "fields": {
         "author": 59,
@@ -4121,7 +4121,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 321,
     "fields": {
         "author": 158,
@@ -4134,7 +4134,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 322,
     "fields": {
         "author": 18,
@@ -4147,7 +4147,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 323,
     "fields": {
         "author": 134,
@@ -4160,7 +4160,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 324,
     "fields": {
         "author": 134,
@@ -4173,7 +4173,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 325,
     "fields": {
         "author": 159,
@@ -4186,7 +4186,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 326,
     "fields": {
         "author": 184,
@@ -4199,7 +4199,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 327,
     "fields": {
         "author": 18,
@@ -4212,7 +4212,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 328,
     "fields": {
         "author": 160,
@@ -4225,7 +4225,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 329,
     "fields": {
         "author": 91,
@@ -4238,7 +4238,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 330,
     "fields": {
         "author": 161,
@@ -4251,7 +4251,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 331,
     "fields": {
         "author": 161,
@@ -4264,7 +4264,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 332,
     "fields": {
         "author": 161,
@@ -4277,7 +4277,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 333,
     "fields": {
         "author": 161,
@@ -4290,7 +4290,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 334,
     "fields": {
         "author": 112,
@@ -4303,7 +4303,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 335,
     "fields": {
         "author": 162,
@@ -4316,7 +4316,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 336,
     "fields": {
         "author": 126,
@@ -4329,7 +4329,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 337,
     "fields": {
         "author": 18,
@@ -4342,7 +4342,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 338,
     "fields": {
         "author": 105,
@@ -4355,7 +4355,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 339,
     "fields": {
         "author": 163,
@@ -4368,7 +4368,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 340,
     "fields": {
         "author": 164,
@@ -4381,7 +4381,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 341,
     "fields": {
         "author": 165,
@@ -4394,7 +4394,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 342,
     "fields": {
         "author": 19,
@@ -4407,7 +4407,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 343,
     "fields": {
         "author": 185,
@@ -4420,7 +4420,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 344,
     "fields": {
         "author": 114,
@@ -4433,7 +4433,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 345,
     "fields": {
         "author": 36,
@@ -4446,7 +4446,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 346,
     "fields": {
         "author": 118,
@@ -4459,7 +4459,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 347,
     "fields": {
         "author": 29,
@@ -4472,7 +4472,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 348,
     "fields": {
         "author": 167,
@@ -4485,7 +4485,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 349,
     "fields": {
         "author": 29,
@@ -4498,7 +4498,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 350,
     "fields": {
         "author": 168,
@@ -4511,7 +4511,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 351,
     "fields": {
         "author": 148,
@@ -4524,7 +4524,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 352,
     "fields": {
         "author": 169,
@@ -4537,7 +4537,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 353,
     "fields": {
         "author": 14,
@@ -4550,7 +4550,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 354,
     "fields": {
         "author": 23,
@@ -4563,7 +4563,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 355,
     "fields": {
         "author": 23,
@@ -4576,7 +4576,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 356,
     "fields": {
         "author": 435,
@@ -4589,7 +4589,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 357,
     "fields": {
         "author": 170,
@@ -4602,7 +4602,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 358,
     "fields": {
         "author": 10,
@@ -4615,7 +4615,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 359,
     "fields": {
         "author": 172,
@@ -4628,7 +4628,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 360,
     "fields": {
         "author": 185,
@@ -4641,7 +4641,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 361,
     "fields": {
         "author": 7,
@@ -4654,7 +4654,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 362,
     "fields": {
         "author": 27,
@@ -4667,7 +4667,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 363,
     "fields": {
         "author": 115,
@@ -4680,7 +4680,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 364,
     "fields": {
         "author": 115,
@@ -4693,7 +4693,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 365,
     "fields": {
         "author": 34,
@@ -4706,7 +4706,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 366,
     "fields": {
         "author": 4,
@@ -4719,7 +4719,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 367,
     "fields": {
         "author": 112,
@@ -4732,7 +4732,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 368,
     "fields": {
         "author": 173,
@@ -4745,7 +4745,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 369,
     "fields": {
         "author": 174,
@@ -4758,7 +4758,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 370,
     "fields": {
         "author": 175,
@@ -4771,7 +4771,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 371,
     "fields": {
         "author": 120,
@@ -4784,7 +4784,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 372,
     "fields": {
         "author": 120,
@@ -4797,7 +4797,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 373,
     "fields": {
         "author": 4,
@@ -4810,7 +4810,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 374,
     "fields": {
         "author": 23,
@@ -4823,7 +4823,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 375,
     "fields": {
         "author": 176,
@@ -4836,7 +4836,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 376,
     "fields": {
         "author": 8,
@@ -4849,7 +4849,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 377,
     "fields": {
         "author": 8,
@@ -4862,7 +4862,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 378,
     "fields": {
         "author": 8,
@@ -4875,7 +4875,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 379,
     "fields": {
         "author": 8,
@@ -4888,7 +4888,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 380,
     "fields": {
         "author": 8,
@@ -4901,7 +4901,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 381,
     "fields": {
         "author": 8,
@@ -4914,7 +4914,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 382,
     "fields": {
         "author": 126,
@@ -4927,7 +4927,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 383,
     "fields": {
         "author": 18,
@@ -4940,7 +4940,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 384,
     "fields": {
         "author": 34,
@@ -4953,7 +4953,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 385,
     "fields": {
         "author": 29,
@@ -4966,7 +4966,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 386,
     "fields": {
         "author": 34,
@@ -4979,7 +4979,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 387,
     "fields": {
         "author": 187,
@@ -4992,7 +4992,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 388,
     "fields": {
         "author": 186,
@@ -5005,7 +5005,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 389,
     "fields": {
         "author": 186,
@@ -5018,7 +5018,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 390,
     "fields": {
         "author": 188,
@@ -5031,7 +5031,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 391,
     "fields": {
         "author": 64,
@@ -5044,7 +5044,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 392,
     "fields": {
         "author": 189,
@@ -5057,7 +5057,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 393,
     "fields": {
         "author": 189,
@@ -5070,7 +5070,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 394,
     "fields": {
         "author": 23,
@@ -5083,7 +5083,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 395,
     "fields": {
         "author": 23,
@@ -5096,7 +5096,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 396,
     "fields": {
         "author": 93,
@@ -5109,7 +5109,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 397,
     "fields": {
         "author": 134,
@@ -5122,7 +5122,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 398,
     "fields": {
         "author": 123,
@@ -5135,7 +5135,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 399,
     "fields": {
         "author": 105,
@@ -5148,7 +5148,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 400,
     "fields": {
         "author": 23,
@@ -5161,7 +5161,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 401,
     "fields": {
         "author": 11,
@@ -5174,7 +5174,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 402,
     "fields": {
         "author": 120,
@@ -5187,7 +5187,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 403,
     "fields": {
         "author": 98,
@@ -5200,7 +5200,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 404,
     "fields": {
         "author": 98,
@@ -5213,7 +5213,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 405,
     "fields": {
         "author": 98,
@@ -5226,7 +5226,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 406,
     "fields": {
         "author": 87,
@@ -5239,7 +5239,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 407,
     "fields": {
         "author": 136,
@@ -5252,7 +5252,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 408,
     "fields": {
         "author": 190,
@@ -5265,7 +5265,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 409,
     "fields": {
         "author": 92,
@@ -5278,7 +5278,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 410,
     "fields": {
         "author": 191,
@@ -5291,7 +5291,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 411,
     "fields": {
         "author": 172,
@@ -5304,7 +5304,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 412,
     "fields": {
         "author": 7,
@@ -5317,7 +5317,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 413,
     "fields": {
         "author": 7,
@@ -5330,7 +5330,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 414,
     "fields": {
         "author": 37,
@@ -5343,7 +5343,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 415,
     "fields": {
         "author": 92,
@@ -5356,7 +5356,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 416,
     "fields": {
         "author": 92,
@@ -5369,7 +5369,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 417,
     "fields": {
         "author": 192,
@@ -5382,7 +5382,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 418,
     "fields": {
         "author": 18,
@@ -5395,7 +5395,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 419,
     "fields": {
         "author": 21,
@@ -5408,7 +5408,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 420,
     "fields": {
         "author": 193,
@@ -5421,7 +5421,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 421,
     "fields": {
         "author": 195,
@@ -5434,7 +5434,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 422,
     "fields": {
         "author": 196,
@@ -5447,7 +5447,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 423,
     "fields": {
         "author": 197,
@@ -5460,7 +5460,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 424,
     "fields": {
         "author": 34,
@@ -5473,7 +5473,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 425,
     "fields": {
         "author": 198,
@@ -5486,7 +5486,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 426,
     "fields": {
         "author": 112,
@@ -5499,7 +5499,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 427,
     "fields": {
         "author": 98,
@@ -5512,7 +5512,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 428,
     "fields": {
         "author": 199,
@@ -5525,7 +5525,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 429,
     "fields": {
         "author": 200,
@@ -5538,7 +5538,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 430,
     "fields": {
         "author": 23,
@@ -5551,7 +5551,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 431,
     "fields": {
         "author": 93,
@@ -5564,7 +5564,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 432,
     "fields": {
         "author": 201,
@@ -5577,7 +5577,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 433,
     "fields": {
         "author": 202,
@@ -5590,7 +5590,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 434,
     "fields": {
         "author": 27,
@@ -5603,7 +5603,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 435,
     "fields": {
         "author": 194,
@@ -5616,7 +5616,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 436,
     "fields": {
         "author": 194,
@@ -5629,7 +5629,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 437,
     "fields": {
         "author": 194,
@@ -5642,7 +5642,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 438,
     "fields": {
         "author": 194,
@@ -5655,7 +5655,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 439,
     "fields": {
         "author": 30,
@@ -5668,7 +5668,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 440,
     "fields": {
         "author": 24,
@@ -5681,7 +5681,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 441,
     "fields": {
         "author": 144,
@@ -5694,7 +5694,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 442,
     "fields": {
         "author": 27,
@@ -5707,7 +5707,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 443,
     "fields": {
         "author": 204,
@@ -5720,7 +5720,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 444,
     "fields": {
         "author": 194,
@@ -5733,7 +5733,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 445,
     "fields": {
         "author": 373,
@@ -5746,7 +5746,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 446,
     "fields": {
         "author": 90,
@@ -5759,7 +5759,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 447,
     "fields": {
         "author": 205,
@@ -5772,7 +5772,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 448,
     "fields": {
         "author": 206,
@@ -5785,7 +5785,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 449,
     "fields": {
         "author": 207,
@@ -5798,7 +5798,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 450,
     "fields": {
         "author": 208,
@@ -5811,7 +5811,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 451,
     "fields": {
         "author": 162,
@@ -5824,7 +5824,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 452,
     "fields": {
         "author": 60,
@@ -5837,7 +5837,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 453,
     "fields": {
         "author": 131,
@@ -5850,7 +5850,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 454,
     "fields": {
         "author": 210,
@@ -5863,7 +5863,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 455,
     "fields": {
         "author": 211,
@@ -5876,7 +5876,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 456,
     "fields": {
         "author": 71,
@@ -5889,7 +5889,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 457,
     "fields": {
         "author": 71,
@@ -5902,7 +5902,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 458,
     "fields": {
         "author": 212,
@@ -5915,7 +5915,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 459,
     "fields": {
         "author": 213,
@@ -5928,7 +5928,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 460,
     "fields": {
         "author": 214,
@@ -5941,7 +5941,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 461,
     "fields": {
         "author": 215,
@@ -5954,7 +5954,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 462,
     "fields": {
         "author": 216,
@@ -5967,7 +5967,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 463,
     "fields": {
         "author": 217,
@@ -5980,7 +5980,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 464,
     "fields": {
         "author": 218,
@@ -5993,7 +5993,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 465,
     "fields": {
         "author": 71,
@@ -6006,7 +6006,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 466,
     "fields": {
         "author": 79,
@@ -6019,7 +6019,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 467,
     "fields": {
         "author": 148,
@@ -6032,7 +6032,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 468,
     "fields": {
         "author": 463,
@@ -6045,7 +6045,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 469,
     "fields": {
         "author": 221,
@@ -6058,7 +6058,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 470,
     "fields": {
         "author": 222,
@@ -6071,7 +6071,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 471,
     "fields": {
         "author": 223,
@@ -6084,7 +6084,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 472,
     "fields": {
         "author": 224,
@@ -6097,7 +6097,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 473,
     "fields": {
         "author": 226,
@@ -6110,7 +6110,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 474,
     "fields": {
         "author": 227,
@@ -6123,7 +6123,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 475,
     "fields": {
         "author": 192,
@@ -6136,7 +6136,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 476,
     "fields": {
         "author": 71,
@@ -6149,7 +6149,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 477,
     "fields": {
         "author": 54,
@@ -6162,7 +6162,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 478,
     "fields": {
         "author": 212,
@@ -6175,7 +6175,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 479,
     "fields": {
         "author": 228,
@@ -6188,7 +6188,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 480,
     "fields": {
         "author": 226,
@@ -6201,7 +6201,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 481,
     "fields": {
         "author": 212,
@@ -6214,7 +6214,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 482,
     "fields": {
         "author": 229,
@@ -6227,7 +6227,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 483,
     "fields": {
         "author": 230,
@@ -6240,7 +6240,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 484,
     "fields": {
         "author": 231,
@@ -6253,7 +6253,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 485,
     "fields": {
         "author": 232,
@@ -6266,7 +6266,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 486,
     "fields": {
         "author": 233,
@@ -6279,7 +6279,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 487,
     "fields": {
         "author": 234,
@@ -6292,7 +6292,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 488,
     "fields": {
         "author": 235,
@@ -6305,7 +6305,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 489,
     "fields": {
         "author": 236,
@@ -6318,7 +6318,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 490,
     "fields": {
         "author": 237,
@@ -6331,7 +6331,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 491,
     "fields": {
         "author": 238,
@@ -6344,7 +6344,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 492,
     "fields": {
         "author": 239,
@@ -6357,7 +6357,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 493,
     "fields": {
         "author": 240,
@@ -6370,7 +6370,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 494,
     "fields": {
         "author": 241,
@@ -6383,7 +6383,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 495,
     "fields": {
         "author": 236,
@@ -6396,7 +6396,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 496,
     "fields": {
         "author": 242,
@@ -6409,7 +6409,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 497,
     "fields": {
         "author": 75,
@@ -6422,7 +6422,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 498,
     "fields": {
         "author": 226,
@@ -6435,7 +6435,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 499,
     "fields": {
         "author": 243,
@@ -6448,7 +6448,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 500,
     "fields": {
         "author": 244,
@@ -6461,7 +6461,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 501,
     "fields": {
         "author": 92,
@@ -6474,7 +6474,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 502,
     "fields": {
         "author": 245,
@@ -6487,7 +6487,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 503,
     "fields": {
         "author": 75,
@@ -6500,7 +6500,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 504,
     "fields": {
         "author": 75,
@@ -6513,7 +6513,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 505,
     "fields": {
         "author": 75,
@@ -6526,7 +6526,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 506,
     "fields": {
         "author": 207,
@@ -6539,7 +6539,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 507,
     "fields": {
         "author": 246,
@@ -6552,7 +6552,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 508,
     "fields": {
         "author": 147,
@@ -6565,7 +6565,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 509,
     "fields": {
         "author": 85,
@@ -6578,7 +6578,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 510,
     "fields": {
         "author": 147,
@@ -6591,7 +6591,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 511,
     "fields": {
         "author": 147,
@@ -6604,7 +6604,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 512,
     "fields": {
         "author": 247,
@@ -6617,7 +6617,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 513,
     "fields": {
         "author": 248,
@@ -6630,7 +6630,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 514,
     "fields": {
         "author": 249,
@@ -6643,7 +6643,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 515,
     "fields": {
         "author": 4,
@@ -6656,7 +6656,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 516,
     "fields": {
         "author": 250,
@@ -6669,7 +6669,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 517,
     "fields": {
         "author": 251,
@@ -6682,7 +6682,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 518,
     "fields": {
         "author": 44,
@@ -6695,7 +6695,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 519,
     "fields": {
         "author": 252,
@@ -6708,7 +6708,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 520,
     "fields": {
         "author": 23,
@@ -6721,7 +6721,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 521,
     "fields": {
         "author": 23,
@@ -6734,7 +6734,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 522,
     "fields": {
         "author": 65,
@@ -6747,7 +6747,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 523,
     "fields": {
         "author": 189,
@@ -6760,7 +6760,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 524,
     "fields": {
         "author": 253,
@@ -6773,7 +6773,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 525,
     "fields": {
         "author": 254,
@@ -6786,7 +6786,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 526,
     "fields": {
         "author": 255,
@@ -6799,7 +6799,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 527,
     "fields": {
         "author": 255,
@@ -6812,7 +6812,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 528,
     "fields": {
         "author": 255,
@@ -6825,7 +6825,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 529,
     "fields": {
         "author": 255,
@@ -6838,7 +6838,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 530,
     "fields": {
         "author": 255,
@@ -6851,7 +6851,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 531,
     "fields": {
         "author": 255,
@@ -6864,7 +6864,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 532,
     "fields": {
         "author": 256,
@@ -6877,7 +6877,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 533,
     "fields": {
         "author": 257,
@@ -6890,7 +6890,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 534,
     "fields": {
         "author": 258,
@@ -6903,7 +6903,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 535,
     "fields": {
         "author": 147,
@@ -6916,7 +6916,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 536,
     "fields": {
         "author": 259,
@@ -6929,7 +6929,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 537,
     "fields": {
         "author": 260,
@@ -6942,7 +6942,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 538,
     "fields": {
         "author": 261,
@@ -6955,7 +6955,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 539,
     "fields": {
         "author": 262,
@@ -6968,7 +6968,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 540,
     "fields": {
         "author": 232,
@@ -6981,7 +6981,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 541,
     "fields": {
         "author": 263,
@@ -6994,7 +6994,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 542,
     "fields": {
         "author": 264,
@@ -7007,7 +7007,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 543,
     "fields": {
         "author": 265,
@@ -7020,7 +7020,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 544,
     "fields": {
         "author": 266,
@@ -7033,7 +7033,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 545,
     "fields": {
         "author": 267,
@@ -7046,7 +7046,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 546,
     "fields": {
         "author": 67,
@@ -7059,7 +7059,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 547,
     "fields": {
         "author": 189,
@@ -7072,7 +7072,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 548,
     "fields": {
         "author": 269,
@@ -7085,7 +7085,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 549,
     "fields": {
         "author": 270,
@@ -7098,7 +7098,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 550,
     "fields": {
         "author": 271,
@@ -7111,7 +7111,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 551,
     "fields": {
         "author": 272,
@@ -7124,7 +7124,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 552,
     "fields": {
         "author": 273,
@@ -7137,7 +7137,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 553,
     "fields": {
         "author": 274,
@@ -7150,7 +7150,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 554,
     "fields": {
         "author": 252,
@@ -7163,7 +7163,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 555,
     "fields": {
         "author": 275,
@@ -7176,7 +7176,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 556,
     "fields": {
         "author": 147,
@@ -7189,7 +7189,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 557,
     "fields": {
         "author": 276,
@@ -7202,7 +7202,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 558,
     "fields": {
         "author": 277,
@@ -7215,7 +7215,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 559,
     "fields": {
         "author": 278,
@@ -7228,7 +7228,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 560,
     "fields": {
         "author": 279,
@@ -7241,7 +7241,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 561,
     "fields": {
         "author": 280,
@@ -7254,7 +7254,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 562,
     "fields": {
         "author": 281,
@@ -7267,7 +7267,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 563,
     "fields": {
         "author": 282,
@@ -7280,7 +7280,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 564,
     "fields": {
         "author": 44,
@@ -7293,7 +7293,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 565,
     "fields": {
         "author": 283,
@@ -7306,7 +7306,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 566,
     "fields": {
         "author": 284,
@@ -7319,7 +7319,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 567,
     "fields": {
         "author": 285,
@@ -7332,7 +7332,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 568,
     "fields": {
         "author": 286,
@@ -7345,7 +7345,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 569,
     "fields": {
         "author": 287,
@@ -7358,7 +7358,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 570,
     "fields": {
         "author": 288,
@@ -7371,7 +7371,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 571,
     "fields": {
         "author": 289,
@@ -7384,7 +7384,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 572,
     "fields": {
         "author": 292,
@@ -7397,7 +7397,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 573,
     "fields": {
         "author": 290,
@@ -7410,7 +7410,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 574,
     "fields": {
         "author": 291,
@@ -7423,7 +7423,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 575,
     "fields": {
         "author": 293,
@@ -7436,7 +7436,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 576,
     "fields": {
         "author": 294,
@@ -7449,7 +7449,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 577,
     "fields": {
         "author": 294,
@@ -7462,7 +7462,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 578,
     "fields": {
         "author": 295,
@@ -7475,7 +7475,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 579,
     "fields": {
         "author": 296,
@@ -7488,7 +7488,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 580,
     "fields": {
         "author": 297,
@@ -7501,7 +7501,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 581,
     "fields": {
         "author": 298,
@@ -7514,7 +7514,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 582,
     "fields": {
         "author": 198,
@@ -7527,7 +7527,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 583,
     "fields": {
         "author": 299,
@@ -7540,7 +7540,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 584,
     "fields": {
         "author": 300,
@@ -7553,7 +7553,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 585,
     "fields": {
         "author": 301,
@@ -7566,7 +7566,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 586,
     "fields": {
         "author": 302,
@@ -7579,7 +7579,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 587,
     "fields": {
         "author": 303,
@@ -7592,7 +7592,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 588,
     "fields": {
         "author": 304,
@@ -7605,7 +7605,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 589,
     "fields": {
         "author": 305,
@@ -7618,7 +7618,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 590,
     "fields": {
         "author": 306,
@@ -7631,7 +7631,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 591,
     "fields": {
         "author": 307,
@@ -7644,7 +7644,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 592,
     "fields": {
         "author": 308,
@@ -7657,7 +7657,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 593,
     "fields": {
         "author": 23,
@@ -7670,7 +7670,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 594,
     "fields": {
         "author": 309,
@@ -7683,7 +7683,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 595,
     "fields": {
         "author": 48,
@@ -7696,7 +7696,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 596,
     "fields": {
         "author": 23,
@@ -7709,7 +7709,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 597,
     "fields": {
         "author": 310,
@@ -7722,7 +7722,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 598,
     "fields": {
         "author": 263,
@@ -7735,7 +7735,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 599,
     "fields": {
         "author": 311,
@@ -7748,7 +7748,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 600,
     "fields": {
         "author": 312,
@@ -7761,7 +7761,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 601,
     "fields": {
         "author": 313,
@@ -7774,7 +7774,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 602,
     "fields": {
         "author": 310,
@@ -7787,7 +7787,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 603,
     "fields": {
         "author": 6,
@@ -7800,7 +7800,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 604,
     "fields": {
         "author": 48,
@@ -7813,7 +7813,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 605,
     "fields": {
         "author": 23,
@@ -7826,7 +7826,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 606,
     "fields": {
         "author": 314,
@@ -7839,7 +7839,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 607,
     "fields": {
         "author": 315,
@@ -7852,7 +7852,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 608,
     "fields": {
         "author": 316,
@@ -7865,7 +7865,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 609,
     "fields": {
         "author": 317,
@@ -7878,7 +7878,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 610,
     "fields": {
         "author": 318,
@@ -7891,7 +7891,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 611,
     "fields": {
         "author": 318,
@@ -7904,7 +7904,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 612,
     "fields": {
         "author": 6,
@@ -7917,7 +7917,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 613,
     "fields": {
         "author": 319,
@@ -7930,7 +7930,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 614,
     "fields": {
         "author": 319,
@@ -7943,7 +7943,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 615,
     "fields": {
         "author": 319,
@@ -7956,7 +7956,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 616,
     "fields": {
         "author": 50,
@@ -7969,7 +7969,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 617,
     "fields": {
         "author": 203,
@@ -7982,7 +7982,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 618,
     "fields": {
         "author": 310,
@@ -7995,7 +7995,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 619,
     "fields": {
         "author": 322,
@@ -8008,7 +8008,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 620,
     "fields": {
         "author": 323,
@@ -8021,7 +8021,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 621,
     "fields": {
         "author": 131,
@@ -8034,7 +8034,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 622,
     "fields": {
         "author": 324,
@@ -8047,7 +8047,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 623,
     "fields": {
         "author": 324,
@@ -8060,7 +8060,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 624,
     "fields": {
         "author": 325,
@@ -8073,7 +8073,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 625,
     "fields": {
         "author": 326,
@@ -8086,7 +8086,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 626,
     "fields": {
         "author": 324,
@@ -8099,7 +8099,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 627,
     "fields": {
         "author": 327,
@@ -8112,7 +8112,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 628,
     "fields": {
         "author": 303,
@@ -8125,7 +8125,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 629,
     "fields": {
         "author": 4,
@@ -8138,7 +8138,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 630,
     "fields": {
         "author": 11,
@@ -8151,7 +8151,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 631,
     "fields": {
         "author": 147,
@@ -8164,7 +8164,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 632,
     "fields": {
         "author": 303,
@@ -8177,7 +8177,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 633,
     "fields": {
         "author": 324,
@@ -8190,7 +8190,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 634,
     "fields": {
         "author": 328,
@@ -8203,7 +8203,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 635,
     "fields": {
         "author": 329,
@@ -8216,7 +8216,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 636,
     "fields": {
         "author": 330,
@@ -8229,7 +8229,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 637,
     "fields": {
         "author": 331,
@@ -8242,7 +8242,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 638,
     "fields": {
         "author": 332,
@@ -8255,7 +8255,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 639,
     "fields": {
         "author": 333,
@@ -8268,7 +8268,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 640,
     "fields": {
         "author": 334,
@@ -8281,7 +8281,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 641,
     "fields": {
         "author": 333,
@@ -8294,7 +8294,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 642,
     "fields": {
         "author": 335,
@@ -8307,7 +8307,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 643,
     "fields": {
         "author": 335,
@@ -8320,7 +8320,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 644,
     "fields": {
         "author": 336,
@@ -8333,7 +8333,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 645,
     "fields": {
         "author": 337,
@@ -8346,7 +8346,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 646,
     "fields": {
         "author": 338,
@@ -8359,7 +8359,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 647,
     "fields": {
         "author": 339,
@@ -8372,7 +8372,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 648,
     "fields": {
         "author": 340,
@@ -8385,7 +8385,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 649,
     "fields": {
         "author": 341,
@@ -8398,7 +8398,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 650,
     "fields": {
         "author": 342,
@@ -8411,7 +8411,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 651,
     "fields": {
         "author": 343,
@@ -8424,7 +8424,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 652,
     "fields": {
         "author": 344,
@@ -8437,7 +8437,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 653,
     "fields": {
         "author": 96,
@@ -8450,7 +8450,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 654,
     "fields": {
         "author": 23,
@@ -8463,7 +8463,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 655,
     "fields": {
         "author": 345,
@@ -8476,7 +8476,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 656,
     "fields": {
         "author": 346,
@@ -8489,7 +8489,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 657,
     "fields": {
         "author": 347,
@@ -8502,7 +8502,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 658,
     "fields": {
         "author": 14,
@@ -8515,7 +8515,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 659,
     "fields": {
         "author": 347,
@@ -8528,7 +8528,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 660,
     "fields": {
         "author": 96,
@@ -8541,7 +8541,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 661,
     "fields": {
         "author": 349,
@@ -8554,7 +8554,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 662,
     "fields": {
         "author": 350,
@@ -8567,7 +8567,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 663,
     "fields": {
         "author": 351,
@@ -8580,7 +8580,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 664,
     "fields": {
         "author": 119,
@@ -8593,7 +8593,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 665,
     "fields": {
         "author": 103,
@@ -8606,7 +8606,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 666,
     "fields": {
         "author": 189,
@@ -8619,7 +8619,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 667,
     "fields": {
         "author": 352,
@@ -8632,7 +8632,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 668,
     "fields": {
         "author": 353,
@@ -8645,7 +8645,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 669,
     "fields": {
         "author": 347,
@@ -8658,7 +8658,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 670,
     "fields": {
         "author": 23,
@@ -8671,7 +8671,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 671,
     "fields": {
         "author": 23,
@@ -8684,7 +8684,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 672,
     "fields": {
         "author": 23,
@@ -8697,7 +8697,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 673,
     "fields": {
         "author": 354,
@@ -8710,7 +8710,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 674,
     "fields": {
         "author": 355,
@@ -8723,7 +8723,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 675,
     "fields": {
         "author": 356,
@@ -8736,7 +8736,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 676,
     "fields": {
         "author": 357,
@@ -8749,7 +8749,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 677,
     "fields": {
         "author": 162,
@@ -8762,7 +8762,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 678,
     "fields": {
         "author": 86,
@@ -8775,7 +8775,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 679,
     "fields": {
         "author": 86,
@@ -8788,7 +8788,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 680,
     "fields": {
         "author": 86,
@@ -8801,7 +8801,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 681,
     "fields": {
         "author": 318,
@@ -8814,7 +8814,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 682,
     "fields": {
         "author": 359,
@@ -8827,7 +8827,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 683,
     "fields": {
         "author": 360,
@@ -8840,7 +8840,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 684,
     "fields": {
         "author": 361,
@@ -8853,7 +8853,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 685,
     "fields": {
         "author": 362,
@@ -8866,7 +8866,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 686,
     "fields": {
         "author": 363,
@@ -8879,7 +8879,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 687,
     "fields": {
         "author": 97,
@@ -8892,7 +8892,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 688,
     "fields": {
         "author": 97,
@@ -8905,7 +8905,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 689,
     "fields": {
         "author": 364,
@@ -8918,7 +8918,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 690,
     "fields": {
         "author": 365,
@@ -8931,7 +8931,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 691,
     "fields": {
         "author": 350,
@@ -8944,7 +8944,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 692,
     "fields": {
         "author": 109,
@@ -8957,7 +8957,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 693,
     "fields": {
         "author": 318,
@@ -8970,7 +8970,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 694,
     "fields": {
         "author": 30,
@@ -8983,7 +8983,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 695,
     "fields": {
         "author": 318,
@@ -8996,7 +8996,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 696,
     "fields": {
         "author": 318,
@@ -9009,7 +9009,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 697,
     "fields": {
         "author": 367,
@@ -9022,7 +9022,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 698,
     "fields": {
         "author": 91,
@@ -9035,7 +9035,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 699,
     "fields": {
         "author": 103,
@@ -9048,7 +9048,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 700,
     "fields": {
         "author": 350,
@@ -9061,7 +9061,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 701,
     "fields": {
         "author": 207,
@@ -9074,7 +9074,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 702,
     "fields": {
         "author": 368,
@@ -9087,7 +9087,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 703,
     "fields": {
         "author": 369,
@@ -9100,7 +9100,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 704,
     "fields": {
         "author": 333,
@@ -9113,7 +9113,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 705,
     "fields": {
         "author": 30,
@@ -9126,7 +9126,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 706,
     "fields": {
         "author": 33,
@@ -9139,7 +9139,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 707,
     "fields": {
         "author": 425,
@@ -9152,7 +9152,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 708,
     "fields": {
         "author": 369,
@@ -9165,7 +9165,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 709,
     "fields": {
         "author": 369,
@@ -9178,7 +9178,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 710,
     "fields": {
         "author": 370,
@@ -9191,7 +9191,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 711,
     "fields": {
         "author": 371,
@@ -9204,7 +9204,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 712,
     "fields": {
         "author": 162,
@@ -9217,7 +9217,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 713,
     "fields": {
         "author": 345,
@@ -9230,7 +9230,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 714,
     "fields": {
         "author": 318,
@@ -9243,7 +9243,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 715,
     "fields": {
         "author": 372,
@@ -9256,7 +9256,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 716,
     "fields": {
         "author": 11,
@@ -9269,7 +9269,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 717,
     "fields": {
         "author": 373,
@@ -9282,7 +9282,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 718,
     "fields": {
         "author": 128,
@@ -9295,7 +9295,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 719,
     "fields": {
         "author": 375,
@@ -9308,7 +9308,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 720,
     "fields": {
         "author": 310,
@@ -9321,7 +9321,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 721,
     "fields": {
         "author": 301,
@@ -9334,7 +9334,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 722,
     "fields": {
         "author": 23,
@@ -9347,7 +9347,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 723,
     "fields": {
         "author": 376,
@@ -9360,7 +9360,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 724,
     "fields": {
         "author": 377,
@@ -9373,7 +9373,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 725,
     "fields": {
         "author": 302,
@@ -9386,7 +9386,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 726,
     "fields": {
         "author": 378,
@@ -9399,7 +9399,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 727,
     "fields": {
         "author": 318,
@@ -9412,7 +9412,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 728,
     "fields": {
         "author": 91,
@@ -9425,7 +9425,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 729,
     "fields": {
         "author": 379,
@@ -9438,7 +9438,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 730,
     "fields": {
         "author": 380,
@@ -9451,7 +9451,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 731,
     "fields": {
         "author": 381,
@@ -9464,7 +9464,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 732,
     "fields": {
         "author": 382,
@@ -9477,7 +9477,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 733,
     "fields": {
         "author": 383,
@@ -9490,7 +9490,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 734,
     "fields": {
         "author": 384,
@@ -9503,7 +9503,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 735,
     "fields": {
         "author": 385,
@@ -9516,7 +9516,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 736,
     "fields": {
         "author": 386,
@@ -9529,7 +9529,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 737,
     "fields": {
         "author": 387,
@@ -9542,7 +9542,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 738,
     "fields": {
         "author": 91,
@@ -9555,7 +9555,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 739,
     "fields": {
         "author": 388,
@@ -9568,7 +9568,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 740,
     "fields": {
         "author": 389,
@@ -9581,7 +9581,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 741,
     "fields": {
         "author": 390,
@@ -9594,7 +9594,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 742,
     "fields": {
         "author": 391,
@@ -9607,7 +9607,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 743,
     "fields": {
         "author": 392,
@@ -9620,7 +9620,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 744,
     "fields": {
         "author": 426,
@@ -9633,7 +9633,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 745,
     "fields": {
         "author": 393,
@@ -9646,7 +9646,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 746,
     "fields": {
         "author": 394,
@@ -9659,7 +9659,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 747,
     "fields": {
         "author": 103,
@@ -9672,7 +9672,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 748,
     "fields": {
         "author": 395,
@@ -9685,7 +9685,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 749,
     "fields": {
         "author": 394,
@@ -9698,7 +9698,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 750,
     "fields": {
         "author": 378,
@@ -9711,7 +9711,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 751,
     "fields": {
         "author": 112,
@@ -9724,7 +9724,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 752,
     "fields": {
         "author": 280,
@@ -9737,7 +9737,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 753,
     "fields": {
         "author": 396,
@@ -9750,7 +9750,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 754,
     "fields": {
         "author": 397,
@@ -9763,7 +9763,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 755,
     "fields": {
         "author": 398,
@@ -9776,7 +9776,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 756,
     "fields": {
         "author": 399,
@@ -9789,7 +9789,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 757,
     "fields": {
         "author": 29,
@@ -9802,7 +9802,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 758,
     "fields": {
         "author": 401,
@@ -9815,7 +9815,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 759,
     "fields": {
         "author": 402,
@@ -9828,7 +9828,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 760,
     "fields": {
         "author": 396,
@@ -9841,7 +9841,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 761,
     "fields": {
         "author": 335,
@@ -9854,7 +9854,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 762,
     "fields": {
         "author": 403,
@@ -9867,7 +9867,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 763,
     "fields": {
         "author": 404,
@@ -9880,7 +9880,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 764,
     "fields": {
         "author": 390,
@@ -9893,7 +9893,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 765,
     "fields": {
         "author": 405,
@@ -9906,7 +9906,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 766,
     "fields": {
         "author": 406,
@@ -9919,7 +9919,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 767,
     "fields": {
         "author": 310,
@@ -9932,7 +9932,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 768,
     "fields": {
         "author": 407,
@@ -9945,7 +9945,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 769,
     "fields": {
         "author": 408,
@@ -9958,7 +9958,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 770,
     "fields": {
         "author": 409,
@@ -9971,7 +9971,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 771,
     "fields": {
         "author": 410,
@@ -9984,7 +9984,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 772,
     "fields": {
         "author": 411,
@@ -9997,7 +9997,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 773,
     "fields": {
         "author": 412,
@@ -10010,7 +10010,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 774,
     "fields": {
         "author": 413,
@@ -10023,7 +10023,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 775,
     "fields": {
         "author": 395,
@@ -10036,7 +10036,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 776,
     "fields": {
         "author": 414,
@@ -10049,7 +10049,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 777,
     "fields": {
         "author": 415,
@@ -10062,7 +10062,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 778,
     "fields": {
         "author": 416,
@@ -10075,7 +10075,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 779,
     "fields": {
         "author": 417,
@@ -10088,7 +10088,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 780,
     "fields": {
         "author": 418,
@@ -10101,7 +10101,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 781,
     "fields": {
         "author": 419,
@@ -10114,7 +10114,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 782,
     "fields": {
         "author": 420,
@@ -10127,7 +10127,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 783,
     "fields": {
         "author": 421,
@@ -10140,7 +10140,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 784,
     "fields": {
         "author": 392,
@@ -10153,7 +10153,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 785,
     "fields": {
         "author": 392,
@@ -10166,7 +10166,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 786,
     "fields": {
         "author": 422,
@@ -10179,7 +10179,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 787,
     "fields": {
         "author": 324,
@@ -10192,7 +10192,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 788,
     "fields": {
         "author": 423,
@@ -10205,7 +10205,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 789,
     "fields": {
         "author": 324,
@@ -10218,7 +10218,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 790,
     "fields": {
         "author": 225,
@@ -10231,7 +10231,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 791,
     "fields": {
         "author": 207,
@@ -10244,7 +10244,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 792,
     "fields": {
         "author": 335,
@@ -10257,7 +10257,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 793,
     "fields": {
         "author": 427,
@@ -10270,7 +10270,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 794,
     "fields": {
         "author": 18,
@@ -10283,7 +10283,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 795,
     "fields": {
         "author": 25,
@@ -10296,7 +10296,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 796,
     "fields": {
         "author": 112,
@@ -10309,7 +10309,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 797,
     "fields": {
         "author": 407,
@@ -10322,7 +10322,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 798,
     "fields": {
         "author": 136,
@@ -10335,7 +10335,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 799,
     "fields": {
         "author": 161,
@@ -10348,7 +10348,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 800,
     "fields": {
         "author": 9,
@@ -10361,7 +10361,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 801,
     "fields": {
         "author": 428,
@@ -10374,7 +10374,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 802,
     "fields": {
         "author": 407,
@@ -10387,7 +10387,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 803,
     "fields": {
         "author": 429,
@@ -10400,7 +10400,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 804,
     "fields": {
         "author": 154,
@@ -10413,7 +10413,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 805,
     "fields": {
         "author": 136,
@@ -10426,7 +10426,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 806,
     "fields": {
         "author": 430,
@@ -10439,7 +10439,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 807,
     "fields": {
         "author": 136,
@@ -10452,7 +10452,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 808,
     "fields": {
         "author": 11,
@@ -10465,7 +10465,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 809,
     "fields": {
         "author": 112,
@@ -10478,7 +10478,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 810,
     "fields": {
         "author": 59,
@@ -10491,7 +10491,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 811,
     "fields": {
         "author": 39,
@@ -10504,7 +10504,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 812,
     "fields": {
         "author": 184,
@@ -10517,7 +10517,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 813,
     "fields": {
         "author": 432,
@@ -10530,7 +10530,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 814,
     "fields": {
         "author": 431,
@@ -10543,7 +10543,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 815,
     "fields": {
         "author": 268,
@@ -10556,7 +10556,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 816,
     "fields": {
         "author": 110,
@@ -10569,7 +10569,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 817,
     "fields": {
         "author": 18,
@@ -10582,7 +10582,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 818,
     "fields": {
         "author": 358,
@@ -10595,7 +10595,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 819,
     "fields": {
         "author": 374,
@@ -10608,7 +10608,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 820,
     "fields": {
         "author": 11,
@@ -10621,7 +10621,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 821,
     "fields": {
         "author": 37,
@@ -10634,7 +10634,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 822,
     "fields": {
         "author": 136,
@@ -10647,7 +10647,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 823,
     "fields": {
         "author": 110,
@@ -10660,7 +10660,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 824,
     "fields": {
         "author": 174,
@@ -10673,7 +10673,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 825,
     "fields": {
         "author": 374,
@@ -10686,7 +10686,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 826,
     "fields": {
         "author": 433,
@@ -10699,7 +10699,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 827,
     "fields": {
         "author": 110,
@@ -10712,7 +10712,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 828,
     "fields": {
         "author": 434,
@@ -10725,7 +10725,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 829,
     "fields": {
         "author": 34,
@@ -10738,7 +10738,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 830,
     "fields": {
         "author": 207,
@@ -10751,7 +10751,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 831,
     "fields": {
         "author": 103,
@@ -10764,7 +10764,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 832,
     "fields": {
         "author": 34,
@@ -10777,7 +10777,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 833,
     "fields": {
         "author": 129,
@@ -10790,7 +10790,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 834,
     "fields": {
         "author": 34,
@@ -10803,7 +10803,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 835,
     "fields": {
         "author": 18,
@@ -10816,7 +10816,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 836,
     "fields": {
         "author": 127,
@@ -10829,7 +10829,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 837,
     "fields": {
         "author": 148,
@@ -10842,7 +10842,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 838,
     "fields": {
         "author": 64,
@@ -10855,7 +10855,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 839,
     "fields": {
         "author": 23,
@@ -10868,7 +10868,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 840,
     "fields": {
         "author": 350,
@@ -10881,7 +10881,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 841,
     "fields": {
         "author": 189,
@@ -10894,7 +10894,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 842,
     "fields": {
         "author": 204,
@@ -10907,7 +10907,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 843,
     "fields": {
         "author": 172,
@@ -10920,7 +10920,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 844,
     "fields": {
         "author": 172,
@@ -10933,7 +10933,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 845,
     "fields": {
         "author": 172,
@@ -10946,7 +10946,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 846,
     "fields": {
         "author": 172,
@@ -10959,7 +10959,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 847,
     "fields": {
         "author": 436,
@@ -10972,7 +10972,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 848,
     "fields": {
         "author": 96,
@@ -10985,7 +10985,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 849,
     "fields": {
         "author": 207,
@@ -10998,7 +10998,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 850,
     "fields": {
         "author": 106,
@@ -11011,7 +11011,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 851,
     "fields": {
         "author": 437,
@@ -11024,7 +11024,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 852,
     "fields": {
         "author": 129,
@@ -11037,7 +11037,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 853,
     "fields": {
         "author": 128,
@@ -11050,7 +11050,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 854,
     "fields": {
         "author": 139,
@@ -11063,7 +11063,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 855,
     "fields": {
         "author": 113,
@@ -11076,7 +11076,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 856,
     "fields": {
         "author": 113,
@@ -11089,7 +11089,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 857,
     "fields": {
         "author": 438,
@@ -11102,7 +11102,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 858,
     "fields": {
         "author": 34,
@@ -11115,7 +11115,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 859,
     "fields": {
         "author": 439,
@@ -11128,7 +11128,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 860,
     "fields": {
         "author": 136,
@@ -11141,7 +11141,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 861,
     "fields": {
         "author": 404,
@@ -11154,7 +11154,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 862,
     "fields": {
         "author": 440,
@@ -11167,7 +11167,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 863,
     "fields": {
         "author": 154,
@@ -11180,7 +11180,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 864,
     "fields": {
         "author": 441,
@@ -11193,7 +11193,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 865,
     "fields": {
         "author": 441,
@@ -11206,7 +11206,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 866,
     "fields": {
         "author": 59,
@@ -11219,7 +11219,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 867,
     "fields": {
         "author": 204,
@@ -11232,7 +11232,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 868,
     "fields": {
         "author": 152,
@@ -11245,7 +11245,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 869,
     "fields": {
         "author": 189,
@@ -11258,7 +11258,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 870,
     "fields": {
         "author": 189,
@@ -11271,7 +11271,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 871,
     "fields": {
         "author": 161,
@@ -11284,7 +11284,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 872,
     "fields": {
         "author": 442,
@@ -11297,7 +11297,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 873,
     "fields": {
         "author": 442,
@@ -11310,7 +11310,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 874,
     "fields": {
         "author": 438,
@@ -11323,7 +11323,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 875,
     "fields": {
         "author": 110,
@@ -11336,7 +11336,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 876,
     "fields": {
         "author": 148,
@@ -11349,7 +11349,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 877,
     "fields": {
         "author": 433,
@@ -11362,7 +11362,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 878,
     "fields": {
         "author": 183,
@@ -11375,7 +11375,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 879,
     "fields": {
         "author": 19,
@@ -11388,7 +11388,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 880,
     "fields": {
         "author": 166,
@@ -11401,7 +11401,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 881,
     "fields": {
         "author": 15,
@@ -11414,7 +11414,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 882,
     "fields": {
         "author": 444,
@@ -11427,7 +11427,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 883,
     "fields": {
         "author": 34,
@@ -11440,7 +11440,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 884,
     "fields": {
         "author": 350,
@@ -11453,7 +11453,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 885,
     "fields": {
         "author": 135,
@@ -11466,7 +11466,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 886,
     "fields": {
         "author": 5,
@@ -11479,7 +11479,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 887,
     "fields": {
         "author": 446,
@@ -11492,7 +11492,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 888,
     "fields": {
         "author": 447,
@@ -11505,7 +11505,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 889,
     "fields": {
         "author": 448,
@@ -11518,7 +11518,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 890,
     "fields": {
         "author": 449,
@@ -11531,7 +11531,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 891,
     "fields": {
         "author": 450,
@@ -11544,7 +11544,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 892,
     "fields": {
         "author": 451,
@@ -11557,7 +11557,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 893,
     "fields": {
         "author": 6,
@@ -11570,7 +11570,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 894,
     "fields": {
         "author": 452,
@@ -11583,7 +11583,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 895,
     "fields": {
         "author": 456,
@@ -11596,7 +11596,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 896,
     "fields": {
         "author": 457,
@@ -11609,7 +11609,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 897,
     "fields": {
         "author": 18,
@@ -11622,7 +11622,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 898,
     "fields": {
         "author": 59,
@@ -11635,7 +11635,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 899,
     "fields": {
         "author": 98,
@@ -11648,7 +11648,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 900,
     "fields": {
         "author": 18,
@@ -11661,7 +11661,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 901,
     "fields": {
         "author": 458,
@@ -11674,7 +11674,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 902,
     "fields": {
         "author": 459,
@@ -11687,7 +11687,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 903,
     "fields": {
         "author": 27,
@@ -11700,7 +11700,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 904,
     "fields": {
         "author": 462,
@@ -11713,7 +11713,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 905,
     "fields": {
         "author": 461,
@@ -11726,7 +11726,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 906,
     "fields": {
         "author": 460,
@@ -11739,7 +11739,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 907,
     "fields": {
         "author": 467,
@@ -11752,7 +11752,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 908,
     "fields": {
         "author": 104,
@@ -11765,7 +11765,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 909,
     "fields": {
         "author": 5,
@@ -11778,7 +11778,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 910,
     "fields": {
         "author": 465,
@@ -11791,7 +11791,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 911,
     "fields": {
         "author": 463,
@@ -11804,7 +11804,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 912,
     "fields": {
         "author": 466,
@@ -11817,7 +11817,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 913,
     "fields": {
         "author": 27,
@@ -11830,7 +11830,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 914,
     "fields": {
         "author": 117,
@@ -11843,7 +11843,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 915,
     "fields": {
         "author": 15,
@@ -11856,7 +11856,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 916,
     "fields": {
         "author": 468,
@@ -11869,7 +11869,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 917,
     "fields": {
         "author": 142,
@@ -11882,7 +11882,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 918,
     "fields": {
         "author": 4,
@@ -11895,7 +11895,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 919,
     "fields": {
         "author": 8,
@@ -11908,7 +11908,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 920,
     "fields": {
         "author": 104,
@@ -11921,7 +11921,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 921,
     "fields": {
         "author": 104,
@@ -11934,7 +11934,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 922,
     "fields": {
         "author": 23,
@@ -11947,7 +11947,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 923,
     "fields": {
         "author": 23,
@@ -11960,7 +11960,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 924,
     "fields": {
         "author": 64,
@@ -11973,7 +11973,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 925,
     "fields": {
         "author": 451,
@@ -11986,7 +11986,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 926,
     "fields": {
         "author": 8,
@@ -11999,7 +11999,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 927,
     "fields": {
         "author": 469,
@@ -12012,7 +12012,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 928,
     "fields": {
         "author": 470,
@@ -12025,7 +12025,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 929,
     "fields": {
         "author": 395,
@@ -12038,7 +12038,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 930,
     "fields": {
         "author": 395,
@@ -12051,7 +12051,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 931,
     "fields": {
         "author": 395,
@@ -12064,7 +12064,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 932,
     "fields": {
         "author": 395,
@@ -12077,7 +12077,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 933,
     "fields": {
         "author": 104,
@@ -12090,7 +12090,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 934,
     "fields": {
         "author": 441,
@@ -12103,7 +12103,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 935,
     "fields": {
         "author": 441,
@@ -12116,7 +12116,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 936,
     "fields": {
         "author": 441,
@@ -12129,7 +12129,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 937,
     "fields": {
         "author": 404,
@@ -12142,7 +12142,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 938,
     "fields": {
         "author": 472,
@@ -12155,7 +12155,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 939,
     "fields": {
         "author": 6,
@@ -12168,7 +12168,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 940,
     "fields": {
         "author": 204,
@@ -12181,7 +12181,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 941,
     "fields": {
         "author": 204,
@@ -12194,7 +12194,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 942,
     "fields": {
         "author": 473,
@@ -12207,7 +12207,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 943,
     "fields": {
         "author": 114,
@@ -12220,7 +12220,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 944,
     "fields": {
         "author": 150,
@@ -12233,7 +12233,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 945,
     "fields": {
         "author": 150,
@@ -12246,7 +12246,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 946,
     "fields": {
         "author": 92,
@@ -12259,7 +12259,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 947,
     "fields": {
         "author": 92,
@@ -12272,7 +12272,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 948,
     "fields": {
         "author": 117,
@@ -12285,7 +12285,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 949,
     "fields": {
         "author": 117,
@@ -12298,7 +12298,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 950,
     "fields": {
         "author": 474,
@@ -12311,7 +12311,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 951,
     "fields": {
         "author": 14,
@@ -12324,7 +12324,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 952,
     "fields": {
         "author": 92,
@@ -12337,7 +12337,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 953,
     "fields": {
         "author": 92,
@@ -12350,7 +12350,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 954,
     "fields": {
         "author": 34,
@@ -12363,7 +12363,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 955,
     "fields": {
         "author": 92,
@@ -12376,7 +12376,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 956,
     "fields": {
         "author": 34,
@@ -12389,7 +12389,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 957,
     "fields": {
         "author": 128,
@@ -12402,7 +12402,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 958,
     "fields": {
         "author": 475,
@@ -12415,7 +12415,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 959,
     "fields": {
         "author": 23,
@@ -12428,7 +12428,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 960,
     "fields": {
         "author": 476,
@@ -12441,7 +12441,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 961,
     "fields": {
         "author": 476,
@@ -12454,7 +12454,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 962,
     "fields": {
         "author": 477,
@@ -12467,7 +12467,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 963,
     "fields": {
         "author": 478,
@@ -12480,7 +12480,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 964,
     "fields": {
         "author": 204,
@@ -12493,7 +12493,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 965,
     "fields": {
         "author": 226,
@@ -12506,7 +12506,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 966,
     "fields": {
         "author": 263,
@@ -12519,7 +12519,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 967,
     "fields": {
         "author": 479,
@@ -12532,7 +12532,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 968,
     "fields": {
         "author": 324,
@@ -12545,7 +12545,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 969,
     "fields": {
         "author": 480,
@@ -12558,7 +12558,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 970,
     "fields": {
         "author": 481,
@@ -12571,7 +12571,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 971,
     "fields": {
         "author": 347,
@@ -12584,7 +12584,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 972,
     "fields": {
         "author": 373,
@@ -12597,7 +12597,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 973,
     "fields": {
         "author": 5,
@@ -12610,7 +12610,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 974,
     "fields": {
         "author": 482,
@@ -12623,7 +12623,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 975,
     "fields": {
         "author": 483,
@@ -12636,7 +12636,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 976,
     "fields": {
         "author": 484,
@@ -12649,7 +12649,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 977,
     "fields": {
         "author": 23,
@@ -12662,7 +12662,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 978,
     "fields": {
         "author": 485,
@@ -12675,7 +12675,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 979,
     "fields": {
         "author": 485,
@@ -12688,7 +12688,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 980,
     "fields": {
         "author": 486,
@@ -12701,7 +12701,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 981,
     "fields": {
         "author": 487,
@@ -12714,7 +12714,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 982,
     "fields": {
         "author": 487,
@@ -12727,7 +12727,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 983,
     "fields": {
         "author": 150,
@@ -12740,7 +12740,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 984,
     "fields": {
         "author": 27,
@@ -12753,7 +12753,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 985,
     "fields": {
         "author": 150,
@@ -12766,7 +12766,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 986,
     "fields": {
         "author": 150,
@@ -12779,7 +12779,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 987,
     "fields": {
         "author": 150,
@@ -12792,7 +12792,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 988,
     "fields": {
         "author": 106,
@@ -12805,7 +12805,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 989,
     "fields": {
         "author": 86,
@@ -12818,7 +12818,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 990,
     "fields": {
         "author": 204,
@@ -12831,7 +12831,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 991,
     "fields": {
         "author": 204,
@@ -12844,7 +12844,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 992,
     "fields": {
         "author": 442,
@@ -12857,7 +12857,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 993,
     "fields": {
         "author": 150,
@@ -12870,7 +12870,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 994,
     "fields": {
         "author": 488,
@@ -12883,7 +12883,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 995,
     "fields": {
         "author": 489,
@@ -12896,7 +12896,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 996,
     "fields": {
         "author": 490,
@@ -12909,7 +12909,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 997,
     "fields": {
         "author": 490,
@@ -12922,7 +12922,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 998,
     "fields": {
         "author": 491,
@@ -12935,7 +12935,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 999,
     "fields": {
         "author": 491,
@@ -12948,7 +12948,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1000,
     "fields": {
         "author": 491,
@@ -12961,7 +12961,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1001,
     "fields": {
         "author": 491,
@@ -12974,7 +12974,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1002,
     "fields": {
         "author": 491,
@@ -12987,7 +12987,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1003,
     "fields": {
         "author": 324,
@@ -13000,7 +13000,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1004,
     "fields": {
         "author": 492,
@@ -13013,7 +13013,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1005,
     "fields": {
         "author": 493,
@@ -13026,7 +13026,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1006,
     "fields": {
         "author": 494,
@@ -13039,7 +13039,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1007,
     "fields": {
         "author": 367,
@@ -13052,7 +13052,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1008,
     "fields": {
         "author": 495,
@@ -13065,7 +13065,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1009,
     "fields": {
         "author": 150,
@@ -13078,7 +13078,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1010,
     "fields": {
         "author": 496,
@@ -13091,7 +13091,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1011,
     "fields": {
         "author": 497,
@@ -13104,7 +13104,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1012,
     "fields": {
         "author": 497,
@@ -13117,7 +13117,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1013,
     "fields": {
         "author": 497,
@@ -13130,7 +13130,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1014,
     "fields": {
         "author": 147,
@@ -13143,7 +13143,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1015,
     "fields": {
         "author": 498,
@@ -13156,7 +13156,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1016,
     "fields": {
         "author": 499,
@@ -13169,7 +13169,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1017,
     "fields": {
         "author": 500,
@@ -13182,7 +13182,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1018,
     "fields": {
         "author": 25,
@@ -13195,7 +13195,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1019,
     "fields": {
         "author": 204,
@@ -13208,7 +13208,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1020,
     "fields": {
         "author": 18,
@@ -13221,7 +13221,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1021,
     "fields": {
         "author": 18,
@@ -13234,7 +13234,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1022,
     "fields": {
         "author": 150,
@@ -13247,7 +13247,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1023,
     "fields": {
         "author": 25,
@@ -13260,7 +13260,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1024,
     "fields": {
         "author": 95,
@@ -13273,7 +13273,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1025,
     "fields": {
         "author": 501,
@@ -13286,7 +13286,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1026,
     "fields": {
         "author": 502,
@@ -13299,7 +13299,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1027,
     "fields": {
         "author": 9,
@@ -13312,7 +13312,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1028,
     "fields": {
         "author": 503,
@@ -13325,7 +13325,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1029,
     "fields": {
         "author": 504,
@@ -13338,7 +13338,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1030,
     "fields": {
         "author": 504,
@@ -13351,7 +13351,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1031,
     "fields": {
         "author": 505,
@@ -13364,7 +13364,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1032,
     "fields": {
         "author": 505,
@@ -13377,7 +13377,7 @@
     }
 },
 {
-    "model": "bookcovers.books",
+    "model": "bookcovers.book",
     "pk": 1033,
     "fields": {
         "author": 7,

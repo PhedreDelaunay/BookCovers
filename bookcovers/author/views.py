@@ -1,9 +1,8 @@
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic import DetailView
 
-from bookcovers.models import Editions
+from bookcovers.models import Edition
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.views import SubjectList
 
@@ -86,7 +85,7 @@ class Book(AuthorMixin, DetailView):
     def get_object(self, queryset=None):
         self.create_pagers(book_id=self.book_id)
         self.cover_list = CoverQuerys.all_covers_for_title(self.book)
-        edition = get_object_or_404(Editions, edition_id=self.cover_list[0]['edition_id'])
+        edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
         return edition
 
     def get_context_data(self, **kwargs):
@@ -105,7 +104,7 @@ class BookEdition(Book):
         self.detail['view_name'] = 'book_edition'
 
     def get_object(self, queryset=None):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        edition = get_object_or_404(Edition, edition_id=self.edition_id)
         self.create_pagers(book_id=edition.book.pk)
         self.cover_list = CoverQuerys.all_covers_for_title(self.book)
         return edition
@@ -160,7 +159,7 @@ class SetEdition(Book):
         self.detail['view_name'] = 'set_edition'
 
     def get_object(self, queryset=None):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        edition = get_object_or_404(Edition, edition_id=self.edition_id)
         print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
         print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         self.create_pagers(book_id=edition.book.pk)
@@ -183,7 +182,7 @@ class SetEditions(AuthorMixin, ListView):
         print (f"SetEditions::setup: edition_id is {self.edition_id}")
 
     def get_queryset(self):
-        edition = get_object_or_404(Editions, edition_id=self.edition_id)
+        edition = get_object_or_404(Edition, edition_id=self.edition_id)
         print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
         print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         self.create_pagers(book_id=edition.book.pk)
@@ -191,23 +190,4 @@ class SetEditions(AuthorMixin, ListView):
                                                                    artist_id=edition.theCover.artwork.artist_id)
         return queryset
 
-
-class Edition(DetailView):
-    model=Editions
-    context_object_name="edition"
-    print ("Edition")
-    template_name = 'bookcovers/edition.html'
-
-
-#=========================================
-# the simplest of generic class views simply provide the model
-# this on its own lists all authors with context_object_name = author_list
-#    model = Author
-
-# To list a subset of the model object specify the list of objects 
-# using queryset
-# sort authors
-#    queryset = Author.objects.order_by('name')
-#    context_object_name = 'author_list'
-#=========================================
 

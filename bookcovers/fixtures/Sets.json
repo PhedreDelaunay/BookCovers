@@ -1,6 +1,6 @@
 [
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 1,
     "fields": {
         "series": 2,
@@ -12,7 +12,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 2,
     "fields": {
         "series": 2,
@@ -24,7 +24,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 3,
     "fields": {
         "series": 35,
@@ -36,7 +36,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 4,
     "fields": {
         "series": 35,
@@ -48,7 +48,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 5,
     "fields": {
         "series": 35,
@@ -60,7 +60,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 6,
     "fields": {
         "series": 1,
@@ -72,7 +72,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 7,
     "fields": {
         "series": 36,
@@ -84,7 +84,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 8,
     "fields": {
         "series": 36,
@@ -96,7 +96,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 9,
     "fields": {
         "series": 36,
@@ -108,7 +108,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 10,
     "fields": {
         "series": 36,
@@ -120,7 +120,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 11,
     "fields": {
         "series": 36,
@@ -132,7 +132,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 12,
     "fields": {
         "series": 37,
@@ -144,7 +144,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 13,
     "fields": {
         "series": 37,
@@ -156,7 +156,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 14,
     "fields": {
         "series": 1,
@@ -168,7 +168,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 15,
     "fields": {
         "series": 37,
@@ -180,7 +180,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 16,
     "fields": {
         "series": 19,
@@ -192,7 +192,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 17,
     "fields": {
         "series": 37,
@@ -204,7 +204,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 18,
     "fields": {
         "series": 12,
@@ -216,7 +216,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 19,
     "fields": {
         "series": 12,
@@ -228,7 +228,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 20,
     "fields": {
         "series": 40,
@@ -240,7 +240,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 21,
     "fields": {
         "series": 36,
@@ -252,7 +252,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 22,
     "fields": {
         "series": 4,
@@ -264,7 +264,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 23,
     "fields": {
         "series": 45,
@@ -276,7 +276,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 24,
     "fields": {
         "series": 46,
@@ -288,7 +288,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 25,
     "fields": {
         "series": 13,
@@ -300,7 +300,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 26,
     "fields": {
         "series": 19,
@@ -312,7 +312,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 27,
     "fields": {
         "series": 49,
@@ -324,7 +324,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 28,
     "fields": {
         "series": 50,
@@ -336,7 +336,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 29,
     "fields": {
         "series": 35,
@@ -348,7 +348,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 30,
     "fields": {
         "series": 18,
@@ -360,7 +360,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 31,
     "fields": {
         "series": 14,
@@ -372,7 +372,7 @@
     }
 },
 {
-    "model": "bookcovers.sets",
+    "model": "bookcovers.set",
     "pk": 32,
     "fields": {
         "series": 55,

@@ -1,11 +1,11 @@
 from django.contrib import admin
 
 from bookcovers.models import Author
-from bookcovers.models import Artists
-from bookcovers.models import Artworks
-from bookcovers.models import Books
-from bookcovers.models import Covers
-from bookcovers.models import Editions
+from bookcovers.models import Artist
+from bookcovers.models import Artwork
+from bookcovers.models import Book
+from bookcovers.models import Cover
+from bookcovers.models import Edition
 
 # Register your models here.
 
@@ -58,9 +58,9 @@ class ArtistAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['name',]
 
-admin.site.register(Artists, ArtistAdmin)
-admin.site.register(Artworks)
+admin.site.register(Artist, ArtistAdmin)
+admin.site.register(Artwork)
 admin.site.register(Author, AuthorAdmin)
-admin.site.register(Books)
-admin.site.register(Covers, CoverAdmin)
-admin.site.register(Editions)
+admin.site.register(Book)
+admin.site.register(Cover, CoverAdmin)
+admin.site.register(Edition)

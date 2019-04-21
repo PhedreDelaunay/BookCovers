@@ -1,6 +1,6 @@
 [
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 1,
     "fields": {
         "series_id": 1,
@@ -9,7 +9,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 2,
     "fields": {
         "series_id": 1,
@@ -18,7 +18,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 3,
     "fields": {
         "series_id": 1,
@@ -27,7 +27,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 4,
     "fields": {
         "series_id": 1,
@@ -36,7 +36,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 5,
     "fields": {
         "series_id": 1,
@@ -45,7 +45,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 6,
     "fields": {
         "series_id": 2,
@@ -54,7 +54,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 7,
     "fields": {
         "series_id": 2,
@@ -63,7 +63,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 8,
     "fields": {
         "series_id": 2,
@@ -72,7 +72,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 9,
     "fields": {
         "series_id": 2,
@@ -81,7 +81,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 10,
     "fields": {
         "series_id": 3,
@@ -90,7 +90,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 11,
     "fields": {
         "series_id": 4,
@@ -99,7 +99,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 12,
     "fields": {
         "series_id": 4,
@@ -108,7 +108,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 13,
     "fields": {
         "series_id": 4,
@@ -117,7 +117,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 14,
     "fields": {
         "series_id": 5,
@@ -126,7 +126,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 15,
     "fields": {
         "series_id": 5,
@@ -135,7 +135,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 16,
     "fields": {
         "series_id": 5,
@@ -144,7 +144,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 17,
     "fields": {
         "series_id": 5,
@@ -153,7 +153,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 18,
     "fields": {
         "series_id": 5,
@@ -162,7 +162,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 19,
     "fields": {
         "series_id": 5,
@@ -171,7 +171,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 20,
     "fields": {
         "series_id": 6,
@@ -180,7 +180,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 21,
     "fields": {
         "series_id": 7,
@@ -189,7 +189,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 22,
     "fields": {
         "series_id": 7,
@@ -198,7 +198,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 23,
     "fields": {
         "series_id": 7,
@@ -207,7 +207,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 24,
     "fields": {
         "series_id": 8,
@@ -216,7 +216,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 25,
     "fields": {
         "series_id": 8,
@@ -225,7 +225,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 26,
     "fields": {
         "series_id": 9,
@@ -234,7 +234,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 27,
     "fields": {
         "series_id": 9,
@@ -243,7 +243,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 28,
     "fields": {
         "series_id": 9,
@@ -252,7 +252,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 29,
     "fields": {
         "series_id": 9,
@@ -261,7 +261,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 30,
     "fields": {
         "series_id": 9,
@@ -270,7 +270,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 31,
     "fields": {
         "series_id": 9,
@@ -279,7 +279,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 32,
     "fields": {
         "series_id": 9,
@@ -288,7 +288,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 33,
     "fields": {
         "series_id": 9,
@@ -297,7 +297,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 34,
     "fields": {
         "series_id": 9,
@@ -306,7 +306,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 35,
     "fields": {
         "series_id": 9,
@@ -315,7 +315,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 36,
     "fields": {
         "series_id": 9,
@@ -324,7 +324,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 37,
     "fields": {
         "series_id": 10,
@@ -333,7 +333,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 38,
     "fields": {
         "series_id": 10,
@@ -342,7 +342,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 39,
     "fields": {
         "series_id": 10,
@@ -351,7 +351,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 40,
     "fields": {
         "series_id": 10,
@@ -360,7 +360,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 41,
     "fields": {
         "series_id": 10,
@@ -369,7 +369,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 42,
     "fields": {
         "series_id": 10,
@@ -378,7 +378,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 43,
     "fields": {
         "series_id": 11,
@@ -387,7 +387,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 44,
     "fields": {
         "series_id": 11,
@@ -396,7 +396,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 45,
     "fields": {
         "series_id": 12,
@@ -405,7 +405,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 46,
     "fields": {
         "series_id": 12,
@@ -414,7 +414,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 47,
     "fields": {
         "series_id": 12,
@@ -423,7 +423,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 48,
     "fields": {
         "series_id": 12,
@@ -432,7 +432,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 49,
     "fields": {
         "series_id": 12,
@@ -441,7 +441,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 50,
     "fields": {
         "series_id": 12,
@@ -450,7 +450,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 51,
     "fields": {
         "series_id": 13,
@@ -459,7 +459,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 52,
     "fields": {
         "series_id": 13,
@@ -468,7 +468,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 53,
     "fields": {
         "series_id": 13,
@@ -477,7 +477,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 54,
     "fields": {
         "series_id": 14,
@@ -486,7 +486,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 55,
     "fields": {
         "series_id": 14,
@@ -495,7 +495,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 56,
     "fields": {
         "series_id": 14,
@@ -504,7 +504,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 57,
     "fields": {
         "series_id": 14,
@@ -513,7 +513,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 58,
     "fields": {
         "series_id": 14,
@@ -522,7 +522,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 59,
     "fields": {
         "series_id": 14,
@@ -531,7 +531,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 60,
     "fields": {
         "series_id": 15,
@@ -540,7 +540,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 61,
     "fields": {
         "series_id": 15,
@@ -549,7 +549,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 62,
     "fields": {
         "series_id": 15,
@@ -558,7 +558,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 63,
     "fields": {
         "series_id": 15,
@@ -567,7 +567,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 64,
     "fields": {
         "series_id": 16,
@@ -576,7 +576,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 65,
     "fields": {
         "series_id": 16,
@@ -585,7 +585,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 66,
     "fields": {
         "series_id": 16,
@@ -594,7 +594,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 67,
     "fields": {
         "series_id": 16,
@@ -603,7 +603,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 68,
     "fields": {
         "series_id": 17,
@@ -612,7 +612,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 69,
     "fields": {
         "series_id": 17,
@@ -621,7 +621,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 70,
     "fields": {
         "series_id": 17,
@@ -630,7 +630,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 71,
     "fields": {
         "series_id": 18,
@@ -639,7 +639,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 72,
     "fields": {
         "series_id": 18,
@@ -648,7 +648,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 73,
     "fields": {
         "series_id": 18,
@@ -657,7 +657,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 74,
     "fields": {
         "series_id": 18,
@@ -666,7 +666,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 75,
     "fields": {
         "series_id": 19,
@@ -675,7 +675,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 76,
     "fields": {
         "series_id": 19,
@@ -684,7 +684,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 77,
     "fields": {
         "series_id": 19,
@@ -693,7 +693,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 78,
     "fields": {
         "series_id": 19,
@@ -702,7 +702,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 79,
     "fields": {
         "series_id": 19,
@@ -711,7 +711,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 80,
     "fields": {
         "series_id": 19,
@@ -720,7 +720,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 81,
     "fields": {
         "series_id": 19,
@@ -729,7 +729,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 82,
     "fields": {
         "series_id": 20,
@@ -738,7 +738,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 83,
     "fields": {
         "series_id": 21,
@@ -747,7 +747,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 84,
     "fields": {
         "series_id": 22,
@@ -756,7 +756,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 85,
     "fields": {
         "series_id": 22,
@@ -765,7 +765,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 86,
     "fields": {
         "series_id": 22,
@@ -774,7 +774,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 87,
     "fields": {
         "series_id": 22,
@@ -783,7 +783,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 88,
     "fields": {
         "series_id": 23,
@@ -792,7 +792,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 89,
     "fields": {
         "series_id": 23,
@@ -801,7 +801,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 90,
     "fields": {
         "series_id": 23,
@@ -810,7 +810,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 91,
     "fields": {
         "series_id": 24,
@@ -819,7 +819,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 92,
     "fields": {
         "series_id": 25,
@@ -828,7 +828,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 93,
     "fields": {
         "series_id": 26,
@@ -837,7 +837,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 94,
     "fields": {
         "series_id": 26,
@@ -846,7 +846,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 95,
     "fields": {
         "series_id": 26,
@@ -855,7 +855,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 96,
     "fields": {
         "series_id": 27,
@@ -864,7 +864,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 97,
     "fields": {
         "series_id": 28,
@@ -873,7 +873,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 98,
     "fields": {
         "series_id": 28,
@@ -882,7 +882,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 99,
     "fields": {
         "series_id": 28,
@@ -891,7 +891,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 100,
     "fields": {
         "series_id": 29,
@@ -900,7 +900,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 101,
     "fields": {
         "series_id": 29,
@@ -909,7 +909,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 102,
     "fields": {
         "series_id": 30,
@@ -918,7 +918,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 103,
     "fields": {
         "series_id": 30,
@@ -927,7 +927,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 104,
     "fields": {
         "series_id": 31,
@@ -936,7 +936,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 105,
     "fields": {
         "series_id": 31,
@@ -945,7 +945,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 106,
     "fields": {
         "series_id": 32,
@@ -954,7 +954,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 107,
     "fields": {
         "series_id": 33,
@@ -963,7 +963,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 108,
     "fields": {
         "series_id": 34,
@@ -972,7 +972,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 109,
     "fields": {
         "series_id": 34,
@@ -981,7 +981,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 110,
     "fields": {
         "series_id": 35,
@@ -990,7 +990,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 111,
     "fields": {
         "series_id": 35,
@@ -999,7 +999,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 112,
     "fields": {
         "series_id": 35,
@@ -1008,7 +1008,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 113,
     "fields": {
         "series_id": 35,
@@ -1017,7 +1017,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 114,
     "fields": {
         "series_id": 35,
@@ -1026,7 +1026,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 115,
     "fields": {
         "series_id": 35,
@@ -1035,7 +1035,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 116,
     "fields": {
         "series_id": 35,
@@ -1044,7 +1044,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 117,
     "fields": {
         "series_id": 35,
@@ -1053,7 +1053,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 118,
     "fields": {
         "series_id": 36,
@@ -1062,7 +1062,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 119,
     "fields": {
         "series_id": 36,
@@ -1071,7 +1071,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 120,
     "fields": {
         "series_id": 36,
@@ -1080,7 +1080,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 121,
     "fields": {
         "series_id": 36,
@@ -1089,7 +1089,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 122,
     "fields": {
         "series_id": 36,
@@ -1098,7 +1098,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 123,
     "fields": {
         "series_id": 36,
@@ -1107,7 +1107,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 124,
     "fields": {
         "series_id": 36,
@@ -1116,7 +1116,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 125,
     "fields": {
         "series_id": 36,
@@ -1125,7 +1125,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 126,
     "fields": {
         "series_id": 36,
@@ -1134,7 +1134,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 127,
     "fields": {
         "series_id": 37,
@@ -1143,7 +1143,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 128,
     "fields": {
         "series_id": 37,
@@ -1152,7 +1152,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 129,
     "fields": {
         "series_id": 37,
@@ -1161,7 +1161,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 130,
     "fields": {
         "series_id": 37,
@@ -1170,7 +1170,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 131,
     "fields": {
         "series_id": 37,
@@ -1179,7 +1179,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 132,
     "fields": {
         "series_id": 37,
@@ -1188,7 +1188,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 133,
     "fields": {
         "series_id": 38,
@@ -1197,7 +1197,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 134,
     "fields": {
         "series_id": 39,
@@ -1206,7 +1206,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 135,
     "fields": {
         "series_id": 39,
@@ -1215,7 +1215,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 136,
     "fields": {
         "series_id": 40,
@@ -1224,7 +1224,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 137,
     "fields": {
         "series_id": 41,
@@ -1233,7 +1233,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 138,
     "fields": {
         "series_id": 41,
@@ -1242,7 +1242,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 139,
     "fields": {
         "series_id": 42,
@@ -1251,7 +1251,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 140,
     "fields": {
         "series_id": 45,
@@ -1260,7 +1260,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 141,
     "fields": {
         "series_id": 45,
@@ -1269,7 +1269,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 142,
     "fields": {
         "series_id": 45,
@@ -1278,7 +1278,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 143,
     "fields": {
         "series_id": 46,
@@ -1287,7 +1287,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 144,
     "fields": {
         "series_id": 46,
@@ -1296,7 +1296,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 145,
     "fields": {
         "series_id": 46,
@@ -1305,7 +1305,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 146,
     "fields": {
         "series_id": 47,
@@ -1314,7 +1314,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 147,
     "fields": {
         "series_id": 47,
@@ -1323,7 +1323,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 148,
     "fields": {
         "series_id": 48,
@@ -1332,7 +1332,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 149,
     "fields": {
         "series_id": 48,
@@ -1341,7 +1341,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 150,
     "fields": {
         "series_id": 48,
@@ -1350,7 +1350,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 151,
     "fields": {
         "series_id": 49,
@@ -1359,7 +1359,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 152,
     "fields": {
         "series_id": 49,
@@ -1368,7 +1368,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 153,
     "fields": {
         "series_id": 49,
@@ -1377,7 +1377,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 154,
     "fields": {
         "series_id": 49,
@@ -1386,7 +1386,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 155,
     "fields": {
         "series_id": 49,
@@ -1395,7 +1395,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 156,
     "fields": {
         "series_id": 50,
@@ -1404,7 +1404,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 157,
     "fields": {
         "series_id": 50,
@@ -1413,7 +1413,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 158,
     "fields": {
         "series_id": 51,
@@ -1422,7 +1422,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 159,
     "fields": {
         "series_id": 51,
@@ -1431,7 +1431,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 160,
     "fields": {
         "series_id": 52,
@@ -1440,7 +1440,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 161,
     "fields": {
         "series_id": 52,
@@ -1449,7 +1449,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 162,
     "fields": {
         "series_id": 52,
@@ -1458,7 +1458,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 163,
     "fields": {
         "series_id": 46,
@@ -1467,7 +1467,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 164,
     "fields": {
         "series_id": 53,
@@ -1476,7 +1476,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 165,
     "fields": {
         "series_id": 54,
@@ -1485,7 +1485,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 166,
     "fields": {
         "series_id": 55,
@@ -1494,7 +1494,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 167,
     "fields": {
         "series_id": 55,
@@ -1503,7 +1503,7 @@
     }
 },
 {
-    "model": "bookcovers.booksseries",
+    "model": "bookcovers.bookseries",
     "pk": 168,
     "fields": {
         "series_id": 55,

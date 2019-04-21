@@ -3,8 +3,8 @@ from django.core.paginator import Paginator
 
 from django.apps import apps
 
-from bookcovers.models import Artists
-from bookcovers.models import Artworks
+from bookcovers.models import Artist
+from bookcovers.models import Artwork
 from bookcovers.models import Author
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.record_helper import *
@@ -111,8 +111,8 @@ class ArtistPager(SubjectPager):
         super(ArtistPager, self).__init__(page_number=self.page_number, subject_id=artist_id, name=name, slug=slug)
 
         self.pager(cover_query=CoverQuerys.artist_list,
-                               subject_id_key="artist_id",
-                               subject_model=Artists)
+                   subject_id_key="artist_id",
+                   subject_model=Artist)
 
     def get_page_number(self):
         return self.page_number

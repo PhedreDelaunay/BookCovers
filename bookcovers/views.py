@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic import DetailView
 
-from bookcovers.models import Editions
+from bookcovers.models import Edition
 
 import math
 
@@ -54,13 +54,13 @@ class SubjectList(ListView):
         print ("num_rows is {0}".format(num_rows))
         return num_rows
 
+
 class Edition(DetailView):
-    model=Editions
+    model=Edition
     context_object_name="edition"
     print ("Edition")
     # this no longer works due to use of views in detail.html
     template_name = 'bookcovers/edition.html'
-
 
 #=========================================
 # the simplest of generic class views simply provide the model

@@ -1,6 +1,6 @@
 [
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 1,
     "fields": {
         "author_aka_id": 4,
@@ -9,7 +9,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 2,
     "fields": {
         "author_aka_id": 11,
@@ -18,7 +18,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 3,
     "fields": {
         "author_aka_id": 20,
@@ -27,7 +27,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 4,
     "fields": {
         "author_aka_id": 185,
@@ -36,7 +36,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 5,
     "fields": {
         "author_aka_id": 58,
@@ -45,7 +45,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 6,
     "fields": {
         "author_aka_id": 59,
@@ -54,7 +54,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 7,
     "fields": {
         "author_aka_id": 105,
@@ -63,7 +63,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 8,
     "fields": {
         "author_aka_id": 484,
@@ -72,7 +72,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 9,
     "fields": {
         "author_aka_id": 153,
@@ -81,7 +81,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 10,
     "fields": {
         "author_aka_id": 445,
@@ -90,7 +90,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 11,
     "fields": {
         "author_aka_id": 180,
@@ -99,7 +99,7 @@
     }
 },
 {
-    "model": "bookcovers.authorakas",
+    "model": "bookcovers.authoraka",
     "pk": 12,
     "fields": {
         "author_aka_id": 181,

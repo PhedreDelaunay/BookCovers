@@ -1,12 +1,9 @@
-from django.shortcuts import get_object_or_404
-
 from bookcovers.pagers import AuthorPager
-from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import BookPager
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Author
-from bookcovers.models import Books
+from bookcovers.models import Book
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
@@ -70,7 +67,7 @@ class AuthorMixin(TopLevelPagerMixin):
         pager = BookPager(page_number=page_number, item_id=book_id)
         book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
                                  item_id_key="book_id",
-                                 item_model=Books,
+                                 item_model=Book,
                                  subject_id_key='author_id',
                                  subject_model=Author)
         self.book = pager.get_entry()

@@ -5,10 +5,10 @@ from bookcovers.pagers import BookPager
 from bookcovers.pagers import SetPager
 
 from bookcovers.cover_querys import CoverQuerys
-from bookcovers.models import Artists
-from bookcovers.models import Artworks
-from bookcovers.models import Editions
-from bookcovers.models import Sets
+from bookcovers.models import Artist
+from bookcovers.models import Artwork
+from bookcovers.models import Edition
+from bookcovers.models import Set
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
@@ -74,9 +74,9 @@ class ArtistMixin(TopLevelPagerMixin):
         pager = BookPager(page_number=page_number, item_id=artwork_id)
         book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
                                  item_id_key="artwork_id",
-                                 item_model=Artworks,
+                                 item_model=Artwork,
                                  subject_id_key='artist_id',
-                                 subject_model=Artists)
+                                 subject_model=Artist)
         self.artwork = pager.get_entry()
         print (f"ArtworkMixin: create_book_pager: artwork_id={self.artwork.pk}")
         print(f"ArtworkMixin: create_book_pager: artwork.name={self.artwork.name}")
@@ -89,10 +89,10 @@ class ArtistMixin(TopLevelPagerMixin):
 
         pager = SetPager(page_number=page_number, item_id=set_id)
         set_pager = pager.pager(set_query=CoverQuerys.artist_set_list,
-                                 item_id_key="set_id",
-                                 item_model=Sets,
-                                 subject_id_key='artist_id',
-                                 subject_model=Artists)
+                                item_id_key="set_id",
+                                item_model=Set,
+                                subject_id_key='artist_id',
+                                subject_model=Artist)
         self.set = pager.get_entry()
         return set_pager
 

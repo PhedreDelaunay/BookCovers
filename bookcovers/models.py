@@ -13,7 +13,7 @@ from django.db import models
 # but also because objects’ representations are used throughout Django’s automatically-generated admin.
 
 
-class Artists(models.Model):
+class Artist(models.Model):
     artist_id = models.AutoField(primary_key=True)
     name = models.CharField(unique=True, max_length=255, blank=True, null=True)
     fullname = models.CharField(max_length=255, blank=True, null=True)
@@ -32,9 +32,9 @@ class Artists(models.Model):
         db_table = 'artists'
 
 
-class ArtistAkas(models.Model):
+class ArtistAka(models.Model):
     artist_aka_id = models.IntegerField()
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtist_akas", related_query_name="theArtist_aka")
     #artist = models.IntegerField(db_column='artist_id')
 
@@ -78,7 +78,7 @@ class Author(models.Model):
         # sort alphabetically in admin
         ordering = ('name',)
 
-class AuthorAkas(models.Model):
+class AuthorAka(models.Model):
     # pk=id is implied
     author_aka_id = models.IntegerField()
     author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
@@ -91,13 +91,14 @@ class AuthorAkas(models.Model):
     class Meta:
         db_table = 'author_akas'
 
+
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # if a model has a ForeignKey, instances of the foreign-key model will have access to a Manager 
 # that returns all instances of the first model. 
 # By default, this Manager is named FOO_set, where FOO is the source model name, lowercased
 # You can override the FOO_set name by setting the related_name parameter in the ForeignKey definition
 # related_query_name creates a relation from the related object back to this one. This allows querying and filtering from the related object.
-class Books(models.Model):
+class Book(models.Model):
     book_id = models.AutoField(primary_key=True)
     author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theBooks", related_query_name="theBook")
@@ -120,14 +121,14 @@ class Books(models.Model):
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now theArtworks
-class Artworks(models.Model):
+class Artwork(models.Model):
     artwork_id = models.AutoField(primary_key=True)
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtworks", related_query_name="theArtwork")
     #artist_id = models.IntegerField(blank=True, null=True)
     year = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+    book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
                              related_name="theArtworks", related_query_name="theArtwork")
     #book_id = models.IntegerField(blank=True, null=True)
     original = models.CharField(max_length=128, blank=True, null=True)
@@ -156,7 +157,7 @@ class Artworks(models.Model):
     class Meta:
         db_table = 'artworks'
 
-class Countries(models.Model):
+class Country(models.Model):
     country_id = models.AutoField(primary_key=True)
     country = models.CharField(max_length=50, blank=True, null=True)
     display_order = models.IntegerField(blank=True, null=True)
@@ -167,10 +168,10 @@ class Countries(models.Model):
     class Meta:
         db_table = 'countries'
 
-class Editions(models.Model):
+class Edition(models.Model):
     edition_id = models.AutoField(primary_key=True)
     print_run_id = models.IntegerField(blank=True, null=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+    book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
                              related_name="theEditions", related_query_name="theEdition")
     imprint_id = models.IntegerField(blank=True, null=True)
     genre_id = models.IntegerField(blank=True, null=True)
@@ -180,7 +181,7 @@ class Editions(models.Model):
     catalog_number = models.CharField(max_length=50, blank=True, null=True)
     print_year = models.SmallIntegerField(blank=True, null=True)
     #country_id = models.IntegerField(blank=True, null=True)
-    country = models.ForeignKey(Countries, models.DO_NOTHING, blank=True, null=True,
+    country = models.ForeignKey(Country, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theEditions", related_query_name="theEdition")
     purchase_year = models.IntegerField(blank=True, null=True)
     purchase_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3)
@@ -195,7 +196,7 @@ class Editions(models.Model):
     class Meta:
         db_table = 'editions'
 
-class Covers(models.Model):
+class Cover(models.Model):
     '''
     flags
     1 = Full Cover (displayed by front cover on edition page)
@@ -208,13 +209,13 @@ class Covers(models.Model):
     1024 = index ?unused
     '''
     cover_id = models.AutoField(primary_key=True)
-    book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True,
+    book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
                              related_name="theCovers", related_query_name="theCover")
     #artwork_id = models.IntegerField(blank=True, null=True)
-    artwork = models.ForeignKey(Artworks, models.DO_NOTHING, blank=True, null=True,
+    artwork = models.ForeignKey(Artwork, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theCovers", related_query_name="theCover")
     #edition_id = models.IntegerField(unique=True, blank=True, null=True)
-    edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True,
+    edition = models.OneToOneField(Edition, on_delete=models.DO_NOTHING, blank=True, null=True,
                                    related_name='theCover', related_query_name="theCover")
     flags = models.IntegerField(blank=True, null=True)
     cover_filename = models.CharField(max_length=50, blank=True, null=True)
@@ -227,16 +228,16 @@ class Covers(models.Model):
     class Meta:
         db_table = 'covers'
 
-class PrintRuns(models.Model):
+class PrintRun(models.Model):
     print_run_id = models.IntegerField()
     order = models.IntegerField()
     #edition_id = models.IntegerField(blank=True, null=True)
-    edition = models.OneToOneField(Editions, on_delete=models.DO_NOTHING, blank=True, null=True,
+    edition = models.OneToOneField(Edition, on_delete=models.DO_NOTHING, blank=True, null=True,
                                    related_name='thePrintRun', related_query_name="thePrintRun")
     #cover_id = models.IntegerField(blank=True, null=True)
     # one cover can be used by multiple print runs
-    cover = models.ForeignKey(Covers, models.DO_NOTHING, blank=True, null=True,
-                                related_name="thePrintRuns", related_query_name="thePrintRun")
+    cover = models.ForeignKey(Cover, models.DO_NOTHING, blank=True, null=True,
+                              related_name="thePrintRuns", related_query_name="thePrintRun")
     print = models.CharField(max_length=255, blank=True, null=True)
     cover_price = models.CharField(max_length=255, blank=True, null=True)
     num_pages = models.IntegerField(blank=True, null=True)
@@ -247,7 +248,7 @@ class PrintRuns(models.Model):
         db_table = 'print_runs'
         unique_together = (('print_run_id', 'order'),)
 
-class Currencies(models.Model):
+class Currency(models.Model):
     currency_id = models.AutoField(primary_key=True)
     currency = models.CharField(max_length=50, blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
@@ -257,7 +258,7 @@ class Currencies(models.Model):
         db_table = 'currencies'
 
 
-class Formats(models.Model):
+class Format(models.Model):
     format_id = models.AutoField(primary_key=True)
     format = models.CharField(max_length=50, blank=True, null=True)
 
@@ -268,7 +269,7 @@ class Formats(models.Model):
         db_table = 'formats'
 
 
-class Genres(models.Model):
+class Genre(models.Model):
     genre_id = models.AutoField(primary_key=True)
     genre = models.CharField(max_length=50, blank=True, null=True)
     description = models.CharField(max_length=50, blank=True, null=True)
@@ -280,6 +281,7 @@ class Genres(models.Model):
     class Meta:
         db_table = 'genres'
 
+# A series is a collection, eg the Book of the New Sun,  Corgi SF Collectors Library
 class Series(models.Model):
     series_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, blank=True, null=True)
@@ -288,13 +290,16 @@ class Series(models.Model):
     class Meta:
         db_table = 'series'
 
-class Sets(models.Model):
+# A set is a set of covers for a series, eg
+# Bruce Pennington covers for the Book of the New Sun
+# Peter Andrew Jones covers for the Book of the New Sun
+class Set(models.Model):
     set_id = models.AutoField(primary_key=True)
     series = models.ForeignKey(Series, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theSets", related_query_name="theSet")
     author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theSets", related_query_name="theSet")
-    artist = models.ForeignKey(Artists, models.DO_NOTHING, blank=True, null=True,
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
                                related_name="theSets", related_query_name="theSet")
     # series_id = models.IntegerField(blank=True, null=True)
     # author_id = models.IntegerField(blank=True, null=True)
@@ -309,24 +314,25 @@ class Sets(models.Model):
     class Meta:
         db_table = 'sets'
 
+# Set Exceptions are covers to exclude from a set
 class SetExceptions(models.Model):
     #set_id = models.IntegerField()
     #cover_id = models.IntegerField()
-    set = models.ForeignKey(Sets, models.DO_NOTHING,
-                             related_name="theSetExceptions", related_query_name="theSetException")
-    cover = models.ForeignKey(Covers, models.DO_NOTHING,
-                             related_name="theSetExceptions", related_query_name="theSetException")
+    set = models.ForeignKey(Set, models.DO_NOTHING,
+                            related_name="theSetExceptions", related_query_name="theSetException")
+    cover = models.ForeignKey(Cover, models.DO_NOTHING,
+                              related_name="theSetExceptions", related_query_name="theSetException")
 
     class Meta:
         db_table = 'set_exceptions'
 
 # linking table listing all books in a series
-class BooksSeries(models.Model):
+class BookSeries(models.Model):
     # series_id = models.IntegerField()
     # book_id = models.IntegerField()
     series = models.ForeignKey(Series, models.DO_NOTHING,
                                 related_name="theBooksSeries", related_query_name="theBooksSeries")
-    book = models.ForeignKey(Books, models.DO_NOTHING,
+    book = models.ForeignKey(Book, models.DO_NOTHING,
                              related_name="theBooksSeries", related_query_name="theBooksSeries")
     volume = models.IntegerField(blank=True, null=True)
 

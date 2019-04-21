@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.shortcuts import get_object_or_404
 from django.conf import settings
 
-from bookcovers.models import Artists
+from bookcovers.models import Artist
 from bookcovers.cover_querys import CoverQuerys
 
 # Using the unittest framework to identify missing images
@@ -59,5 +59,5 @@ class ImageTests(TestCase):
         for artist in artist_list:
             artist_id = artist['artist_id']
             # print ("artist_id is {}".format(artist_id))
-            the_artist = get_object_or_404(Artists, pk=artist_id)
+            the_artist = get_object_or_404(Artist, pk=artist_id)
             self.cover_images_exist(the_artist)

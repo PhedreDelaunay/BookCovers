@@ -6,11 +6,11 @@ from django.conf import settings
 from django.db.models import F
 from django.db.models import Q
 
-from bookcovers.models import Artists
+from bookcovers.models import Artist
 from bookcovers.models import Author
-from bookcovers.models import Books
-from bookcovers.models import Covers
-from bookcovers.models import Artworks
+from bookcovers.models import Book
+from bookcovers.models import Cover
+from bookcovers.models import Artwork
 
 from bookcovers.original_raw_querys import OriginalRawQuerys
 from bookcovers.cover_querys import CoverQuerys
@@ -458,7 +458,7 @@ class BookQueryTests(QueryTestCase):
     def setUp(self):
         self.book_list_query = CoverQuerys.book_list
 
-        self.subject_model = Books
+        self.subject_model = Book
         self.subject_name = "book"
         self.pk_name = "book_id"
         self.subject_query = CoverQuerys.book_list
@@ -501,7 +501,7 @@ class BookQueryTests(QueryTestCase):
         test list of covers for each book title in db
         """
         cover_list_test = CoverListQueryTest(list_query=self.book_list_query,
-                                             model=Books,
+                                             model=Book,
                                              item_desc="book",
                                              primary_key="book_id",
                                              raw_cover_query=OriginalRawQuerys.author_covers_for_title,
@@ -530,7 +530,7 @@ class ArtistQueryTests(QueryTestCase):
         self.artist_list_query = CoverQuerys.artist_list
 
     def test_artist_name(self):
-        artist = Artists.objects.get(pk=83)
+        artist = Artist.objects.get(pk=83)
         expected_artist_name = "Anthony Roberts"
         self.assertEqual(expected_artist_name, artist.name)
 
@@ -562,7 +562,7 @@ class ArtistQueryTests(QueryTestCase):
         test list of book covers for each artist in db
         """
         cover_list_test = CoverListQueryTest(list_query=self.artist_list_query,
-                                             model=Artists,
+                                             model=Artist,
                                              item_desc="artist",
                                              primary_key="artist_id",
                                              raw_cover_query=OriginalRawQuerys.artist_cover_list,
@@ -753,7 +753,7 @@ class ArtworkQueryTests(QueryTestCase):
                 'Countries.json']
 
     def setUp(self):
-        self.subject_model = Artworks
+        self.subject_model = Artwork
         self.subject_name = "artwork"
         self.pk_name = "artwork_id"
         self.subject_query = CoverQuerys.book_list
@@ -787,22 +787,22 @@ class ArtworkQueryTests(QueryTestCase):
         print (f"num books is {len(book_list)}")
 
     def validate_list_of_covers_for_book(self, book_id):
-        the_book = get_object_or_404(Books, pk=book_id)
+        the_book = get_object_or_404(Book, pk=book_id)
         # test covers per artist that did a cover for this book
-        artist_list = Artists.objects.filter(theArtwork__book__pk=book_id)
+        artist_list = Artist.objects.filter(theArtwork__book__pk=book_id)
         print (f"the_book is '{the_book}' artist_list is '{artist_list}''")
         for artist in artist_list:
             # we now have a book id and an artist id from which we can get the artwork id
             try:
-                artwork = get_object_or_404(Artworks, book_id=book_id, artist_id=artist.pk)
+                artwork = get_object_or_404(Artwork, book_id=book_id, artist_id=artist.pk)
                 print("==============================================")
                 print(f"artwork is'{artwork}")
                 print("==============================================")
                 self.artwork_cover_list_matches(the_book, artist, artwork, self.original_raw_query)
-            except Artworks.MultipleObjectsReturned:
+            except Artwork.MultipleObjectsReturned:
                 # There is at least one instance in which the artist has created different covers for the same book
                 # Bruce Pennington, Decision at Doona
-                artwork_list = Artworks.objects.filter(book_id=book_id, artist_id=artist.pk)
+                artwork_list = Artwork.objects.filter(book_id=book_id, artist_id=artist.pk)
                 # yes, this means we will test it twice
                 for artwork in artwork_list:
                     print("==============================================")

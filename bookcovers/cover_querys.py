@@ -6,17 +6,17 @@ from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
 from bookcovers.models import Author
-from bookcovers.models import AuthorAkas
-from bookcovers.models import Artists
-from bookcovers.models import ArtistAkas
-from bookcovers.models import Artworks
-from bookcovers.models import Books
-from bookcovers.models import Covers
-from bookcovers.models import Editions
-from bookcovers.models import Countries
-from bookcovers.models import Sets
+from bookcovers.models import AuthorAka
+from bookcovers.models import Artist
+from bookcovers.models import ArtistAka
+from bookcovers.models import Artwork
+from bookcovers.models import Book
+from bookcovers.models import Cover
+from bookcovers.models import Edition
+from bookcovers.models import Country
+from bookcovers.models import Set
 from bookcovers.models import SetExceptions
-from bookcovers.models import BooksSeries
+from bookcovers.models import BookSeries
 
 import math
 
@@ -30,11 +30,11 @@ class CoverQuerys:
 
     @staticmethod
     def artist_list():
-        inner_queryset = Artworks.objects. \
+        inner_queryset = Artwork.objects. \
             filter(theCover__flags__lt=256). \
             values_list('artwork_id', flat=True)
 
-        artist_list = Artists.objects. \
+        artist_list = Artist.objects. \
             filter(theArtwork__in=inner_queryset). \
             values('artist_id', 'name'). \
             order_by('name'). \
@@ -52,7 +52,7 @@ class CoverQuerys:
         :return:
         """
         print("artist is {}".format(artist.name))
-        aka_inner_queryset = Artists.objects.filter(theArtist_aka__artist_aka_id=artist.pk)
+        aka_inner_queryset = Artist.objects.filter(theArtist_aka__artist_aka_id=artist.pk)
         # print (aka_inner_queryset.query)
         # print (aka_inner_queryset)
 
@@ -98,7 +98,7 @@ class CoverQuerys:
     #    filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
     #    filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
 
-        cover_list = Artworks.objects. \
+        cover_list = Artwork.objects. \
             filter(Q(artist=artist) | Q(artist__in=aka_inner_queryset)). \
             filter(Q(theCover__flags__lt=256) & Q(theCover__is_variant=False) & Q(theCover__book=F('book'))). \
             values('theCover__cover_id',
@@ -138,7 +138,7 @@ class CoverQuerys:
         # If True, this will mean the returned results are single values, rather than one-tuples.
 
         # covers -> editions is one-to-one
-        inner_queryset = Editions.objects \
+        inner_queryset = Edition.objects \
             .filter(theCover__flags__lt=256) \
             .values_list('edition_id', flat=True)
         # https://docs.djangoproject.com/en/2.0/ref/models/querysets/
@@ -172,7 +172,7 @@ class CoverQuerys:
         print("author is {}".format(author.name))
         aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author.pk)
 
-        book_list = Books.objects \
+        book_list = Book.objects \
             .filter(Q(author=author) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id','title','copyright_year') \
@@ -197,7 +197,7 @@ class CoverQuerys:
         aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author_id)
 
         # this returns all covers for all books
-        all_cover_list = Books.objects \
+        all_cover_list = Book.objects \
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
@@ -215,7 +215,7 @@ class CoverQuerys:
 
         # this eliminates duplicate cover entries, where the same file is used for multiple cover records
         # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
-        dedup_cover_list = Books.objects \
+        dedup_cover_list = Book.objects \
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
             .values('book_id',
@@ -277,7 +277,7 @@ class CoverQuerys:
         #                    "AND C.country_id = BE.country_id "
         #                    "ORDER BY C.display_order, BE.print_year")
 
-        inner_queryset = Books.objects.filter(book_id=book.book_id).values_list('theEdition__edition_id', flat=True)
+        inner_queryset = Book.objects.filter(book_id=book.book_id).values_list('theEdition__edition_id', flat=True)
 
 
         # title_cover_list = Covers.objects \
@@ -294,7 +294,7 @@ class CoverQuerys:
         #     .order_by('edition__country__display_order','edition__print_year')
 
         # pk is book_id
-        title_cover_list = Covers.objects \
+        title_cover_list = Cover.objects \
             .filter(book=book, flags__lt=256) \
             .filter(edition__in=inner_queryset) \
             .values('cover_filename',
@@ -323,7 +323,7 @@ class CoverQuerys:
         # Decision at Doona, book_id=82, artist_id=2, artwork_id=74, 452, edition_id=89,640
         # Dune, book_id=7, artist_id=2; artwork_id=6 edition|-id=6, book_id=6 artwork_id=6, edition_id=7
 
-        covers = Covers.objects \
+        covers = Cover.objects \
                 .filter(Q(artwork_id=artwork.pk) |
                         Q(artwork__artist_id=artwork.artist_id, artwork__book_id=artwork.book_id)) \
                 .filter(flags__lt = 256) \
@@ -349,7 +349,7 @@ class CoverQuerys:
         # use .values to return ValuesQuerySet which looks like list of dictionaries
         #artist_set_list = Sets.objects.filter(author_id=author).values()
 
-        artist_set_list = Sets.objects.filter(artist_id=artist_id). \
+        artist_set_list = Set.objects.filter(artist_id=artist_id). \
                             values("set_id", "series_id", "author_id", "artist_id", "imprint_id",
                                     "description", "panorama_id", 'artist__name'). \
                             order_by('author__name')
@@ -365,12 +365,12 @@ class CoverQuerys:
         :param return_dict:
         :return:
         """
-        series_list = Sets.objects.filter(artist=artist_id).values_list('series_id', flat=True).distinct()
+        series_list = Set.objects.filter(artist=artist_id).values_list('series_id', flat=True).distinct()
         # if len(series_list) > 0:
         #     print(f"artist_set_covers: series - {list(series_list)})")
         #     print(f"artist_set_covers: length {len(series_list)}")
 
-        inner_queryset_cover_list = BooksSeries.objects. \
+        inner_queryset_cover_list = BookSeries.objects. \
             filter(series__in=series_list). \
             filter(book__theCover__artwork__artist__pk=artist_id). \
             values_list('book__theCover__pk', flat=True). \
@@ -383,7 +383,7 @@ class CoverQuerys:
         inner_queryset_exceptions = SetExceptions.objects. \
             values_list('cover', flat=True)
 
-        cover_list = Covers.objects. \
+        cover_list = Cover.objects. \
             filter(cover_id__in=inner_queryset_cover_list). \
             filter(book__theBooksSeries__series_id__in=series_list). \
             exclude(cover_id__in=inner_queryset_exceptions). \
@@ -417,7 +417,7 @@ class CoverQuerys:
 
     @staticmethod
     def book_list():
-        book_list = Books.objects.filter(theCover__flags__lt=256).values('book_id').order_by('book_id')
+        book_list = Book.objects.filter(theCover__flags__lt=256).values('book_id').order_by('book_id')
         print (f"book_list.query is {book_list.query}")
 
         return book_list
@@ -433,7 +433,7 @@ class CoverQuerys:
         # use .values to return ValuesQuerySet which looks like list of dictionaries
         #set_list = Sets.objects.filter(author_id=author).values()
 
-        author_set_list = Sets.objects.filter(author_id=author_id) \
+        author_set_list = Set.objects.filter(author_id=author_id) \
                      .values("set_id", "series_id", "author_id", "artist_id", "imprint_id",
                              "description", "panorama_id", 'artist__name')
         # SELECT sets.set_id, sets.series_id, sets.author_id, sets.artist_id, sets.imprint_id, sets.description, sets.panorama_id
@@ -448,13 +448,13 @@ class CoverQuerys:
         :param return_dict:
         :return:
         """
-        series_list = Sets.objects.filter(author=author_id).values_list('series_id', flat=True).distinct()
+        series_list = Set.objects.filter(author=author_id).values_list('series_id', flat=True).distinct()
         # if len(series_list) > 0:
         #     print(f"author_set_covers: {list(series_list)})")
         #     print(f"author_set_covers: length {len(series_list)}")
 
         # set includes artist,  we want covers with that artist
-        inner_queryset_cover_list = BooksSeries.objects. \
+        inner_queryset_cover_list = BookSeries.objects. \
             filter(series__in=series_list). \
             filter(series__theSet__artist__pk=F('book__theCover__artwork__artist__pk')). \
             values_list('book__theCover__pk', flat=True). \
@@ -467,7 +467,7 @@ class CoverQuerys:
         inner_queryset_exceptions = SetExceptions.objects. \
             values_list('cover', flat=True)
 
-        cover_list = Covers.objects. \
+        cover_list = Cover.objects. \
             filter(cover_id__in=inner_queryset_cover_list). \
             filter(book__theBooksSeries__series_id__in=series_list). \
             exclude(cover_id__in=inner_queryset_exceptions). \
@@ -517,14 +517,14 @@ class CoverQuerys:
 
         # this gives us list of covers in correct order but still includes exceptions
         # if you exclude here too many records are excluded
-        inner_queryset_cover_list = BooksSeries.objects. \
+        inner_queryset_cover_list = BookSeries.objects. \
             filter(series=series_id). \
             filter(book__theCover__artwork__artist__pk=artist_id). \
             values_list('book__theCover__pk', flat=True)
         print(f"series_covers: inner -{list(inner_queryset_cover_list)}")
         print(f"series_covers: inner -length {len(inner_queryset_cover_list)}")
 
-        cover_list = Covers.objects. \
+        cover_list = Cover.objects. \
             filter(book__theBooksSeries__series=series_id).\
             exclude(cover_id__in=inner_queryset_exceptions). \
             filter(cover_id__in=inner_queryset_cover_list). \
@@ -568,11 +568,11 @@ class CoverQuerys:
     def author_artist_set_cover_list(set_id=None, author_id=None, artist_id=None):
         # get set record if necessary
         if not author_id or not artist_id:
-            set = get_object_or_404(Sets, pk=set_id)
+            set = get_object_or_404(Set, pk=set_id)
             artist_id = set.artist_id
         else:
             # assumes there is only 1 unique set for this author and artist
-            set = get_object_or_404(Sets, author=author_id, artist_id=artist_id)
+            set = get_object_or_404(Set, author=author_id, artist_id=artist_id)
             print(f"author_artist_set_cover_list: set is {set.pk}, series is {set.series_id}")
 
         set_cover_list = CoverQuerys.series_covers_by_artist(series_id=set.series_id, artist_id=artist_id)
