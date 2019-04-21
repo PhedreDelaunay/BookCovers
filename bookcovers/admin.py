@@ -2,17 +2,56 @@ from django.contrib import admin
 
 from bookcovers.models import Author
 from bookcovers.models import Artists
+from bookcovers.models import Artworks
+from bookcovers.models import Books
+from bookcovers.models import Covers
+from bookcovers.models import Editions
 
 # Register your models here.
 
 # https://djangobook.com/customizing-change-lists-forms/
 
+
+class CoverAdmin(admin.ModelAdmin):
+    # add a search bar
+    #search_fields = ['cover_filename',]
+
+    list_display = (
+        'cover_id',
+        'cover_filename',
+        'book',
+        'artwork',
+    )
+
+    list_select_related = (
+        'book',
+        'artwork',
+    )
+    # just book
+    # without book: 7.98 ms (105 queries including 102 similar and 8 duplicates )
+    # with book: 1.16 ms (5 queries including 2 similar and 2 duplicates )
+    # book and author
+    # without artwork: 8.05 ms (105 queries including 102 similar and 6 duplicates )
+    # with artwork:  1.50 ms (5 queries including 2 similar and 2 duplicates )
+    # without book and artwork: 13.56 ms (205 queries including 202 similar and 12 duplicates )
+
+    readonly_fields = (
+        'edition',
+    )
+    # no book or edition: 50.27 ms (801 queries including 793 similar and 297 duplicates )
+    # book and edition: 1.51 ms (9 queries including 2 similar and 2 duplicates )
+    # edition only: 1.74 ms (9 queries )
+
+#  https://medium.com/@hakibenita/things-you-must-know-about-django-admin-as-your-app-gets-bigger-6be0b0ee9614
+# https://hakibenita.com/things-you-must-know-about-django-admin-as-your-app-gets-bigger
+# https://stackoverflow.com/questions/9919780/how-do-i-add-a-link-from-the-django-admin-page-of-one-object-to-the-admin-page-o
+# https://avilpage.com/2017/11/django-tips-tricks-hyperlink-foreignkey-admin.html
+# https://docs.djangoproject.com/en/2.2/ref/contrib/admin/#reversing-admin-urls
 class AuthorAdmin(admin.ModelAdmin):
     # list_display = ('name')
     # add a search bar
     search_fields = ['name',]
 
-admin.site.register(Author, AuthorAdmin)
 
 class ArtistAdmin(admin.ModelAdmin):
     # list_display = ('name')
@@ -20,3 +59,8 @@ class ArtistAdmin(admin.ModelAdmin):
     search_fields = ['name',]
 
 admin.site.register(Artists, ArtistAdmin)
+admin.site.register(Artworks)
+admin.site.register(Author, AuthorAdmin)
+admin.site.register(Books)
+admin.site.register(Covers, CoverAdmin)
+admin.site.register(Editions)
