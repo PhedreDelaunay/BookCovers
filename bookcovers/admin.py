@@ -58,9 +58,17 @@ class ArtistAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['name',]
 
+class EditionAdmin(admin.ModelAdmin):
+
+    list_select_related = (
+        'book',
+    )
+    # without book: 17.51 ms (105 queries including 102 similar and 12 duplicates )
+    # with book: 1.14 ms (5 queries including 2 similar and 2 duplicates )
+
 admin.site.register(Artist, ArtistAdmin)
 admin.site.register(Artwork)
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Book)
 admin.site.register(Cover, CoverAdmin)
-admin.site.register(Edition)
+admin.site.register(Edition, EditionAdmin)
