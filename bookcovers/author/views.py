@@ -157,15 +157,39 @@ class SetEdition(Book):
         self.edition_id = kwargs.get("edition_id", None)
         self.detail['list_view_name'] = 'set_editions'
         self.detail['view_name'] = 'set_edition'
+        self.detail['to_page_view_name'] = 'book_set_detail'
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)
         print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
         print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(book_id=edition.book.pk)
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
+        self.set_pager = self.create_set_pager(set_id=set.pk)
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
         self.detail['object'] = edition
+        self.author = edition.book.author
+        self.web_title = edition.book.author.name
+        return edition
+
+# http:<host>/bookcovers/book/set/detail/<set_id>
+class BookSetDetail(SetEdition):
+    """
+        displays detail for the edition and thumbnails for the associated editions in the set given the set id
+    """
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.set_id = kwargs.get("set_id", None)
+        print (f"BookSetDetail::setup set_id is '{self.set_id}'")
+
+    def get_object(self, queryset=None):
+        self.set_pager = self.create_set_pager(set_id=self.set_id)
+        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
+        edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
+        self.detail['object'] = edition
+        self.web_title = edition.theCover.book.author.name
         return edition
 
 # http:<host>/bookcovers/book/set/editions/<edition_id>
@@ -180,6 +204,8 @@ class SetEditions(AuthorMixin, ListView):
         super().setup(request, *args, **kwargs)
         self.edition_id = kwargs.get("edition_id", None)
         print (f"SetEditions::setup: edition_id is {self.edition_id}")
+        self.detail['view_name'] = 'set_edition'
+        self.detail['to_page_view_name'] = 'book_set_list'
 
     def get_queryset(self):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)
@@ -188,6 +214,29 @@ class SetEditions(AuthorMixin, ListView):
         self.create_pagers(book_id=edition.book.pk)
         set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
+
+        self.book = edition.book
+        self.set_pager = self.create_set_pager(set_id=set.pk)
         return queryset
 
 
+# http:<host>/bookcovers/book/set/list/<set_id>
+class BookSetList(SetEditions):
+    """
+        displays all the covers for the set given the set id
+    """
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.set_id = kwargs.get("set_id", None)
+        print (f"ArtworkSetList::setup set_id is '{self.set_id}'")
+
+    def get_queryset(self):
+        self.set_pager = self.create_set_pager(set_id=self.set_id)
+        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
+        set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
+        edition = get_object_or_404(Edition, edition_id=queryset[0]['edition_id'])
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
+        self.detail['object'] = edition
+        self.author = edition.book.author
+        self.web_title = self.author.name
+        return queryset

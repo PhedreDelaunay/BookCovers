@@ -7,6 +7,8 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+import collections
+
 # https://docs.djangoproject.com/en/2.0/intro/tutorial02/
 # It’s important to add __str__() methods to your models, 
 # not only for your own convenience when dealing with the interactive prompt, 
@@ -309,7 +311,9 @@ class Set(models.Model):
     panorama_id = models.IntegerField(blank=True, null=True)
 
     def get_creator(self):
-        return (self.author, self.artist)
+        Creators = collections.namedtuple('Creators', 'author artist')
+        creators = Creators(author=self.author, artist=self.artist)
+        return (creators)
 
     class Meta:
         db_table = 'sets'

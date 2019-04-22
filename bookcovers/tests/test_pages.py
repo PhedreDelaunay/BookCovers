@@ -144,10 +144,26 @@ class ArtworkSetEditionPageTest(PageTestCases.PageTestCase):
 
     # TODO test for thumnbails, no thumbnails
 
+class ArtworkSetDetailPageTest(PageTestCases.PageTestCase):
+    # ex: /bookcovers/artwork/set/detail/3/
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:artwork_set_detail', kwargs={'set_id': 3})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/set_edition.html'
+
+    # TODO test for thumnbails, no thumbnails
+
 class ArtworkSetEditionsPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/set/editions/6/
     def setUp(self):
         self.reverse_url = reverse('bookcovers:artwork_set_editions', kwargs={'edition_id': 6})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/set_editions.html'
+
+class ArtworkSetListPageTest(PageTestCases.PageTestCase):
+    # ex: /bookcovers/artwork/set/list/3/
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:artwork_set_list', kwargs={'set_id': 3})
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_editions.html'
 
@@ -242,10 +258,26 @@ class BookSetEditionPageTest(PageTestCases.PageTestCase):
 
     # TODO test for thumnbails, no thumbnails
 
+class BookSetDetailPageTest(PageTestCases.PageTestCase):
+    # ex: /bookcovers/book/set/detail/3/
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:book_set_detail', kwargs={'set_id': 3})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/set_edition.html'
+
+    # TODO test for thumnbails, no thumbnails
+
 class BookSetEditionsPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/book/set/editions/6/
     def setUp(self):
         self.reverse_url = reverse('bookcovers:set_editions', kwargs={'edition_id': 6})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/set_editions.html'
+
+class BookSetListPageTest(PageTestCases.PageTestCase):
+    # ex: /bookcovers/book/set/editions/6/
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:book_set_list', kwargs={'set_id': 3})
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_editions.html'
 

@@ -179,7 +179,7 @@ class ArtworkSetDetail(ArtworkSetEdition):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.set_id = kwargs.get("set_id", None)
-        print (f"ArtworkSet::setup set_id is '{self.set_id}'")
+        print (f"ArtworkSetDetail::setup set_id is '{self.set_id}'")
 
     def get_object(self, queryset=None):
         self.set_pager = self.create_set_pager(set_id=self.set_id)
@@ -235,5 +235,6 @@ class ArtworkSetList(ArtworkSetEditions):
         edition = get_object_or_404(Edition, edition_id=queryset[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.detail['object'] = edition
+        self.artist = edition.theCover.artwork.artist
         self.web_title = edition.theCover.artwork.artist.name
         return queryset

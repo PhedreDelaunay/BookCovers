@@ -1,6 +1,3 @@
-{%  if view.subject.name == "author" %}
-<a href="{% url 'bookcovers:'|add:view.subject.set_view_name view.subject.object %}">all sets</a>
-{%  else %}
 {% if view.set_pager.paginator.num_pages > 1 %}
 <a href="{% url 'bookcovers:'|add:view.subject.set_view_name view.subject.object %}">all sets</a>
 <div class="pagination">
@@ -26,5 +23,4 @@
 </div>
 {% else %}
 <a href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">View all {{ view.subject.title }}</a>
-{% endif %}
 {% endif %}

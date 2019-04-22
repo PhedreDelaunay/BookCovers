@@ -1,9 +1,11 @@
 from bookcovers.pagers import AuthorPager
 from bookcovers.pagers import BookPager
+from bookcovers.pagers import SetPager
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Author
 from bookcovers.models import Book
+from bookcovers.models import Set
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
@@ -73,6 +75,20 @@ class AuthorMixin(TopLevelPagerMixin):
         self.book = pager.get_entry()
         print (f"AuthorkMixin: create-book_pager: book_id={self.book.pk}")
         return book_pager
+
+    def create_set_pager(self, set_id):
+        # book cover pager
+        page_number = self.request.GET.get('page')
+        print(f"AuthorMixin: create_set_pager - page number is '{page_number}'")
+
+        pager = SetPager(page_number=page_number, item_id=set_id)
+        set_pager = pager.pager(set_query=CoverQuerys.author_set_list,
+                                item_id_key="set_id",
+                                item_model=Set,
+                                subject_id_key='author_id',
+                                subject_model=Author)
+        self.set = pager.get_entry()
+        return set_pager
 
     def create_pagers(self, book_id):
         # order matters, get book pager (and hence book) first to ascertain the author

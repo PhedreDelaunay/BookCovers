@@ -235,14 +235,12 @@ class SetPager(MenuPager):
 
         # item is set
         kwargs = {item_id_key: self.item_id}
+        print(f"SetPager::pager kwargs is '{kwargs}'")
         item = get_object_or_404(item_model, **kwargs)
         creators = item.get_creator()
-        # kwargs = {subject_id_key: creators[1].pk}
-        # for key, value in kwargs.items():
-        #     print (f"key '{key}': '{value}'")
-        #
-        # subject = get_object_or_404(subject_model, **kwargs)
-        set_list = set_query(creators[1].pk)
+        print (f"SetPager::pager creators is '{creators.author}, {creators.artist}'")
+        creator=subject_model._meta.model_name
+        set_list = set_query(getattr(creators, creator).pk)
         print (f"SetPager::pager set_list is'{set_list}'")
 
         print (f"SetPager page_number is {self.page_number}")
