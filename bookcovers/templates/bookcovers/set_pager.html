@@ -1,6 +1,6 @@
 {% if view.set_pager.paginator.num_pages > 1 %}
-<a href="{% url 'bookcovers:'|add:view.subject.set_view_name view.subject.object %}">all sets</a>
 <div class="pagination">
+<a href="{% url 'bookcovers:'|add:view.subject.set_view_name view.subject.object %}">all sets</a>
     <span class="step-links">
         {% if view.set_pager.has_previous %}
             <a href="{% url 'bookcovers:'|add:view.detail.to_page_view_name view.set.pk %}?page=1">&laquo; first</a>
