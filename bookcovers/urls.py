@@ -68,9 +68,9 @@ urlpatterns = [
     # /bookcovers/book/set/list/3/
     path('book/set/list/<int:set_id>/', BookSetList.as_view(), name="book_set_list"),
     # ex: /bookcovers/book/set/edition/6/
-    path('book/set/edition/<int:edition_id>/', SetEdition.as_view(), name="set_edition"),
+    path('book/set/edition/<int:edition_id>/', BookSetEdition.as_view(), name="set_edition"),
     # ex: /bookcovers/book/set/editions/6/
-    path('book/set/editions/<int:edition_id>/', SetEditions.as_view(), name="set_editions"),
+    path('book/set/editions/<int:edition_id>/', BookSetEditions.as_view(), name="set_editions"),
     # ex: /bookcovers/artwork/12/
     path('artwork/<int:artwork_id>/', Artwork.as_view(), name='artwork'),
     # ex: /bookcovers/artworks/6/

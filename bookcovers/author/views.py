@@ -149,7 +149,7 @@ class AuthorSets(AuthorMixin, ListView):
         return queryset
 
 # http:<host>/bookcovers/book/set/edition/<edition_id>
-class SetEdition(Book):
+class BookSetEdition(Book):
     template_name = 'bookcovers/set_edition.html'
 
     def setup(self, request, *args, **kwargs):
@@ -173,7 +173,7 @@ class SetEdition(Book):
         return edition
 
 # http:<host>/bookcovers/book/set/detail/<set_id>
-class BookSetDetail(SetEdition):
+class BookSetDetail(BookSetEdition):
     """
         displays detail for the edition and thumbnails for the associated editions in the set given the set id
     """
@@ -193,7 +193,7 @@ class BookSetDetail(SetEdition):
         return edition
 
 # http:<host>/bookcovers/book/set/editions/<edition_id>
-class SetEditions(AuthorMixin, ListView):
+class BookSetEditions(AuthorMixin, ListView):
     """
         displays all the covers for the set
     """
@@ -221,7 +221,7 @@ class SetEditions(AuthorMixin, ListView):
 
 
 # http:<host>/bookcovers/book/set/list/<set_id>
-class BookSetList(SetEditions):
+class BookSetList(BookSetEditions):
     """
         displays all the covers for the set given the set id
     """
