@@ -3,6 +3,9 @@
  <h2>{{ view.web_title }}</h2>
 detail view is '{{ view.detail.view_name }}'
 {% for cover in cover_list %}
+    {% ifchanged cover.display_order %}
+<BR>
+    {% endifchanged %}
     {% if cover.cover_filepath == "BookCovers/Images/Unknown/" %}
         {% with wauthor=cover.book__author__name|cut:" " %}
             <a href="{% url 'bookcovers:'|add:view.detail.view_name cover.edition_id %}">
@@ -15,6 +18,6 @@ detail view is '{{ view.detail.view_name }}'
             <IMG class="cover_list" src="{% static cover.cover_filepath|add:cover.cover_filename %}"
                 alt="{{ cover.book_title }}"
                 title="{{ cover.book_title }}"/></a>
-   {% endif %}
+    {% endif %}
 {% endfor %}
 {# TODO would be good to display for alt and title book and cover artist #}
