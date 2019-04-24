@@ -150,6 +150,9 @@ class AuthorSets(AuthorMixin, ListView):
 
 # http:<host>/bookcovers/book/set/edition/<edition_id>
 class BookSetEdition(Book):
+    """
+        given the edition id, displays detail for the edition and thumbnails for the associated editions in the set
+    """
     template_name = 'bookcovers/set_edition.html'
 
     def setup(self, request, *args, **kwargs):
@@ -175,7 +178,7 @@ class BookSetEdition(Book):
 # http:<host>/bookcovers/book/set/detail/<set_id>
 class BookSetDetail(BookSetEdition):
     """
-        displays detail for the edition and thumbnails for the associated editions in the set given the set id
+        given the set id, displays detail for the edition and thumbnails for the associated editions in the set
     """
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -195,7 +198,7 @@ class BookSetDetail(BookSetEdition):
 # http:<host>/bookcovers/book/set/editions/<edition_id>
 class BookSetEditions(AuthorMixin, ListView):
     """
-        displays all the covers for the set
+        given the edition id, displays all the covers for the set
     """
     template_name = 'bookcovers/set_editions.html'
     context_object_name = 'cover_list'      # template context
@@ -211,10 +214,9 @@ class BookSetEditions(AuthorMixin, ListView):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)
         print (f"SetEditions:get_object author id is '{edition.book.author_id}'")
         print (f"SetEditions:get_object artist id is '{edition.theCover.artwork.artist_id}'")
-        self.create_pagers(book_id=edition.book.pk)
         set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
-
+        self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
         self.book = edition.book
         self.set_pager = self.create_set_pager(set_id=set.pk)
         return queryset
@@ -223,7 +225,7 @@ class BookSetEditions(AuthorMixin, ListView):
 # http:<host>/bookcovers/book/set/list/<set_id>
 class BookSetList(BookSetEditions):
     """
-        displays all the covers for the set given the set id
+        given the set id, displays all the covers for the set
     """
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)

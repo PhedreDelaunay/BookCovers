@@ -147,10 +147,9 @@ class ArtistSets(ArtistMixin, ListView):
 # http:<host>/bookcovers/artwork/set/edition/<edition_id>
 class ArtworkSetEdition(Artwork):
     """
-        displays detail for the edition and thumbnails for the associated editions in the set given the edition id
+        given the edition id, displays detail for the edition and thumbnails for the associated editions in the set
     """
     template_name = 'bookcovers/set_edition.html'
-    context_object_name = "edition"
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -174,7 +173,7 @@ class ArtworkSetEdition(Artwork):
 # http:<host>/bookcovers/artwork/set/detail/<set_id>
 class ArtworkSetDetail(ArtworkSetEdition):
     """
-        displays detail for the edition and thumbnails for the associated editions in the set given the set id
+        given the set id, displays detail for the edition and thumbnails for the associated editions in the set
     """
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -194,10 +193,9 @@ class ArtworkSetDetail(ArtworkSetEdition):
 # http:<host>/bookcovers/artwork/set/editions/<edition_id>
 class ArtworkSetEditions(ArtistMixin, ListView):
     """
-        displays all the covers for the set given the edition id
+        given the edition id, displays all the covers for the set
     """
     template_name = 'bookcovers/set_editions.html'
-    context_object_name = 'cover_list'      # template context
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
@@ -221,7 +219,7 @@ class ArtworkSetEditions(ArtistMixin, ListView):
 # http:<host>/bookcovers/artwork/set/list/<set_id>
 class ArtworkSetList(ArtworkSetEditions):
     """
-        displays all the covers for the set given the set id
+        given the set idm displays all the covers for the set
     """
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
