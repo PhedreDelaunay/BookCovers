@@ -20,6 +20,7 @@ from django.urls import path
 
 from .artist.views import *
 from .author.views import *
+from bookcovers.views import PrintHistory
 
 from bookcovers.views import Edition
 from . import views
@@ -85,7 +86,9 @@ urlpatterns = [
     path('artwork/set/edition/<int:edition_id>/', ArtworkSetEdition.as_view(), name="artwork_set_edition"),
     # ex: /bookcovers/artwork/set/editions/6/
     path('artwork/set/editions/<int:edition_id>/', ArtworkSetEditions.as_view(), name="artwork_set_editions"),
-    # ex: /bookcovers/edition/6
+    # ex: /bookcovers/print_run/7/
+    path('print_run/<int:print_run_id>/', PrintHistory.as_view(), name="print_history"),
+    # ex: /bookcovers/edition/6/
     path('edition/<pk>/', Edition.as_view(), name="edition"),
     #path('edition/<int:edition_id>/', views.book_cover_detail, name="edition"),
 ]

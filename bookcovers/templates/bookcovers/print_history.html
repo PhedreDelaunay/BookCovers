@@ -1,0 +1,39 @@
+{% extends "bookcovers/base.html" %}
+
+{% load static %}
+
+
+{% block menu_pagers %}
+{#  include 'bookcovers/subject_pager.html' #}
+{% endblock %}
+{% block content %}
+    <h2 style="display:inline";>{{ view.book.title }}</h2>
+    <TABLE><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
+    {% for print in print_history %}
+        {% ifchanged print.cover_filename %}
+        <TR><TD>
+            {% if print.cover_filepath %}
+                <IMG src="{% static print.cover_filepath|add:'Thumbnails/'|add:print.cover_filename %}"
+                     alt="{{ print.book__title }}"
+                     title="{{ print.book__title }}">
+            {% else %}
+                NO IMAGE
+            {% endif %}
+        </TD>
+            {%  else %}
+            <TD>SAME IMAGE</TD>
+        {% endifchanged %}
+        <TD>
+        {%  if print.edition %}
+            link to {{ print.print }}
+        {%  else %}
+            {{ print.print }}
+        {%  endif %}
+        </TD>
+        <TD>
+            {{  print.cover_price }}
+        </TD>
+        </TR>
+    {% endfor %}
+    </TABLE>
+{% endblock %}

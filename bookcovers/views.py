@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 
 from bookcovers.models import Edition
+from bookcovers.cover_querys import CoverQuerys
 
 import math
 
@@ -54,6 +55,20 @@ class SubjectList(ListView):
         print ("num_rows is {0}".format(num_rows))
         return num_rows
 
+class PrintHistory(ListView):
+    """
+        displays print runs
+    """
+    template_name = 'bookcovers/print_history.html'
+    context_object_name = 'print_history'      # template context
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.print_run_id = kwargs.get("print_run_id", None)
+
+    def get_queryset(self):
+        queryset = CoverQuerys.print_history(self.print_run_id)
+        return queryset
 
 class Edition(DetailView):
     model=Edition
