@@ -510,7 +510,7 @@ class BookQueryTests(QueryTestCase):
                                                             "country_id", "display_order"],
                                              actual_keys=["cover_filepath", "cover_filename",
                                                           "edition__print_year",
-                                                          "edition__country", "edition__country__display_order"]
+                                                          "edition__country", "display_order"]
                                              )
 
         cover_list_test.validate_all_lists_of_covers()
@@ -643,7 +643,7 @@ class ArtistSetQueryTests(SetQueryTest):
                 raise
 
     def test_c_artist_sets_covers(self):
-        """tests all the covers in all the sets for this artist"""
+        """tests all the covers in all the sets for each artist"""
         artist_list = self.artist_list_query()
         for artist in artist_list:
             artist_id = artist["artist_id"]
@@ -655,7 +655,7 @@ class ArtistSetQueryTests(SetQueryTest):
             num_covers = len(cover_list)
 
             if expected_num_covers != 0 or num_covers != 0:
-                print (f"test_c: {raw_cover_list}")
+                #print (f"test_c: {raw_cover_list}")
                 print("==============================================")
                 print(f"Test all Covers in all Sets for Artist {artist_id}, {artist['name']}")
                 print("==============================================")
@@ -842,6 +842,80 @@ class ArtworkQueryTests(QueryTestCase):
         raw_cover_list = original_raw_query(book.pk, artwork.artist.pk, return_dict=True)
         return raw_cover_list
 
+
+# python manage.py test bookcovers.tests.test_queries.PrintRunQueryTests --settings=djabbic.testsettings
+class PrintRunQueryTests(QueryTestCase):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'AuthorAkas.json',
+                'Countries.json',
+                'Sets.json',
+                'Series.json',
+                'BooksSeries.json',
+                'SetExceptions.json',
+                'PrintRuns.json']
+
+    def test_a_total_num_print_runs(self):
+        max_print_run_id = CoverQuerys.highest_print_run()
+        print(max_print_run_id['print_run_id__max'])
+        highest = max_print_run_id['print_run_id__max'] + 1
+
+        for print_run_id in range(highest):
+            original_print_run = OriginalRawQuerys.print_history(print_run_id=print_run_id)
+            expected_num_runs = len(original_print_run)
+
+            print_run = CoverQuerys.print_history(print_run_id=print_run_id)
+            num_runs = len(print_run)
+
+            print("==============================================")
+            print(f"Test Total Runs in Print History for {print_run_id}")
+            print("==============================================")
+            print(f"Expected: {expected_num_runs}, actual: {num_runs}")
+
+            try: self.assertEqual(expected_num_runs, num_runs)
+            except AssertionError as e:
+                # use list to avoid remaining elements truncated
+                # otherwise repr is used to represent queryset
+                print("================================================================================")
+                print(f"covers {list(all_list)}")
+                print("================================================================================")
+                raise
+
+    def test_b_print_runs(self):
+        """tests all the runs in all the print_runs"""
+        max_print_run_id = CoverQuerys.highest_print_run()
+        print(max_print_run_id['print_run_id__max'])
+        highest = max_print_run_id['print_run_id__max'] + 1
+
+        for print_run_id in range(highest):
+            original_print_run = OriginalRawQuerys.print_history(print_run_id=print_run_id)
+            expected_num_runs = len(original_print_run)
+
+            print_run = CoverQuerys.print_history(print_run_id=print_run_id)
+            num_runs = len(print_run)
+
+            if expected_num_runs != 0 or num_runs != 0:
+                print("==============================================")
+                print(f"Test Runs for print run id {print_run_id}")
+                print("==============================================")
+                #print(f"Expected: {expected_num_runs}, actual: {num_runs}")
+
+            self.assertEqual(expected_num_runs, num_runs)
+
+            # keys in dictionary returned from raw sql query
+            expected_keys = ["print_run_id", "edition_id", "cover_id", "print", "cover_price", "cover_filename", "cover_filepath"]
+            # keys in dictionary returned from django query
+            actual_keys = ['print_run_id', 'edition_id', 'cover_id', 'print', 'cover_price','cover_filename', 'cover_filepath']
+
+            #  for each cover: check expected cover data matches actual cover data
+            for raw_run, run in zip(original_print_run, print_run):
+                self.record_matches(raw_run, expected_keys, run, actual_keys)
+
+
 # python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
 class AdhocQueryTests(QueryTestCase):
     fixtures = ['Artists.json',
@@ -854,7 +928,8 @@ class AdhocQueryTests(QueryTestCase):
                 'Sets.json',
                 'Series.json',
                 'BooksSeries.json',
-                'SetExceptions.json',]
+                'SetExceptions.json',
+                'PrintRuns.json',]
 
     def test_num_covers_in_artist_sets(self):
         # Brian Cronin
@@ -982,4 +1057,18 @@ class AdhocQueryTests(QueryTestCase):
     #
     #     for book in book_list:
     #         print (f"book is '{book}'")
+
+    def test_print_run(self):
+        print_run_id = 7
+
+        print ("==============================================")
+        print (f"Test Print Run for {print_run_id}")
+        print ("==============================================")
+        original_print_run = OriginalRawQuerys.print_history(print_run_id=print_run_id)
+        print_dict_list(original_print_run)
+        print (f"num entries is {len(original_print_run)}")
+
+        print_run = CoverQuerys.print_history(print_run_id=print_run_id)
+        print(f"print_run is {print_run}")
+
 

@@ -24,6 +24,6 @@ view.detail.object is '{{  view.detail.object.pk }}'
     <B>author: </B><a href="{% url 'bookcovers:author_books' edition.book.author.author_id %}" title="Select author for all books by this author">{{ edition.book.author.name }}</a><BR/>
     <B>title: </B><a href="{% url 'bookcovers:books' edition.book.book_id %}" title="Select title for all covers for this book">{{ edition.book.title}}</a><BR/>
     Copyright: {{ edition.book.copyright_year }}<BR/>
-    This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID=7','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ edition.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
+    This edition<A href="#"onClick="window.open('PrintHistory.php?bookID=7&bookEditionID=6&bookPrintRunID={{ edition.thePrintRun.print_run_id }}','printRun','width=540,height=400,scrollbars=yes,resizable=yes')">{{ edition.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
 </td></tr>
 </table>

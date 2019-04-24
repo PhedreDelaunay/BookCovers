@@ -346,6 +346,33 @@ class OriginalRawQuerys:
         return set_cover_list
 
     @staticmethod
+    def print_history(print_run_id, return_dict=True):
+        """
+        gets the print runs for the given print_run_id
+        :param print_run_id:
+        :param return_dict:
+        :return:
+        """
+
+        #print (f"print_history: print_run_id={print_run_id}")
+
+        strPrintHistory = ("SELECT BPR.*, BC.cover_filename, artists.cover_filepath "
+                            "FROM print_runs AS BPR "
+                            "LEFT JOIN covers AS BC ON BPR.cover_id = BC.cover_id "
+                            "LEFT JOIN artworks ON BC.artwork_id = artworks.artwork_id "
+                            "LEFT JOIN artists on artworks.artist_id = artists.artist_id "
+                            "WHERE BPR.print_run_id = %s")
+
+        #print(f"strPrintHistory is\n{strPrintHistory}\n")
+        with connection.cursor() as cursor:
+            cursor.execute(strPrintHistory, [print_run_id])
+            if return_dict:
+                print_history = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                print_history = cursor.fetchall()
+        return print_history
+
+    @staticmethod
     def adhoc_query(sql_query, return_dict=False):
         """
         runs an adhoc query without parameters

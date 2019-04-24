@@ -231,6 +231,7 @@ class Cover(models.Model):
         db_table = 'covers'
 
 class PrintRun(models.Model):
+    id = models.AutoField(primary_key=True)
     print_run_id = models.IntegerField()
     order = models.IntegerField()
     #edition_id = models.IntegerField(blank=True, null=True)

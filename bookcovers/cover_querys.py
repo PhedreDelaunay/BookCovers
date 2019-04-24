@@ -2,21 +2,19 @@ import pprint
 
 from django.db.models import F
 from django.db.models import Q
-from django.db.models import Count
 from django.shortcuts import get_object_or_404
+from django.db.models import Max
 
 from bookcovers.models import Author
-from bookcovers.models import AuthorAka
 from bookcovers.models import Artist
-from bookcovers.models import ArtistAka
 from bookcovers.models import Artwork
 from bookcovers.models import Book
 from bookcovers.models import Cover
 from bookcovers.models import Edition
-from bookcovers.models import Country
 from bookcovers.models import Set
 from bookcovers.models import SetExceptions
 from bookcovers.models import BookSeries
+from bookcovers.models import PrintRun
 
 import math
 
@@ -40,8 +38,8 @@ class CoverQuerys:
             order_by('name'). \
             distinct()
 
-        print(artist_list.query)
-        print(artist_list.count())
+        # print(artist_list.query)
+        # print(artist_list.count())
 
         return artist_list
 
@@ -160,9 +158,8 @@ class CoverQuerys:
             .order_by('name') \
             .distinct()
 
-
-        print(author_list.query)
-        print(author_list.count())
+        # print(author_list.query)
+        # print(author_list.count())
 
         return author_list
 
@@ -301,11 +298,11 @@ class CoverQuerys:
                     'book__author__name',       # needed for unknown artists
                     'edition_id',
                     'edition__country',
-                    'edition__country__display_order',
                     'edition__print_year',
+                    display_order=F('edition__country__display_order'),
                     book_title=F('book__title'),
                     cover_filepath=F('artwork__artist__cover_filepath')) \
-            .order_by('edition__country__display_order','edition__print_year')
+            .order_by('display_order','edition__print_year')
 
         return title_cover_list
 
@@ -577,3 +574,29 @@ class CoverQuerys:
 
         set_cover_list = CoverQuerys.series_covers_by_artist(series_id=set.series_id, artist_id=artist_id)
         return (set, set_cover_list)
+
+    @staticmethod
+    def print_history(print_run_id):
+
+        print_run = PrintRun.objects. \
+                    filter(print_run_id = print_run_id) . \
+                    values('print_run_id',
+                           'edition_id',
+                           'cover_id',
+                           'print',
+                           'cover_price',
+                           cover_filename=F('cover__cover_filename'),
+                           cover_filepath=F('cover__artwork__artist__cover_filepath'),
+                           ). \
+                    order_by ('order')
+        return print_run
+
+    @staticmethod
+    def print_run_ids():
+        print_run_ids = PrintRun.objects.values('print_run_id').distinct()
+        return print_run_ids
+
+    @staticmethod
+    def highest_print_run():
+        print_run_id = PrintRun.objects.all().aggregate(Max('print_run_id'))
+        return print_run_id
