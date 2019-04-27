@@ -288,3 +288,11 @@ class BooksPageTest(PageTestCases.PageTestCase):
         self.reverse_url = reverse('bookcovers:books', kwargs={'book_id': 93})
         self.expected_response_code = 200
         self.template_url = 'bookcovers/books.html'
+
+
+class PrintHistoryPageTest(PageTestCases.PageTestCase):
+    # ex: /bookcovers/print_run/7/
+    def setUp(self):
+        self.reverse_url = reverse('bookcovers:print_history', kwargs={'print_run_id': 7})
+        self.expected_response_code = 200
+        self.template_url = 'bookcovers/print_history.html'
