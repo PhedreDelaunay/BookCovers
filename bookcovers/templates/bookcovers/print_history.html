@@ -1,6 +1,7 @@
 {% extends "bookcovers/base.html" %}
 
 {% load static %}
+{% load bookcover_tags %}
 
 
 {% block menu_pagers %}
@@ -8,32 +9,76 @@
 {% endblock %}
 {% block content %}
     <h2 style="display:inline";>{{ view.book.title }}</h2>
-    <TABLE><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
+    <TABLE border=1"><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
+
+
     {% for print in print_history %}
         {% ifchanged print.cover_filename %}
-        <TR><TD>
+            <TR>
+            <TD>
             {% if print.cover_filepath %}
                 <IMG src="{% static print.cover_filepath|add:'Thumbnails/'|add:print.cover_filename %}"
                      alt="{{ print.book__title }}"
                      title="{{ print.book__title }}">
-            {% else %}
-                NO IMAGE
+                </TD>
+                <TD>{# edition #}
+                    {% set "False" as break %}
+                    {% for cover in print_history %}
+                        {% if forloop.counter >= forloop.parentloop.counter %}
+                            {%  if break == "False" %}
+                                {% ifchanged cover.cover_filename %}
+                                    {% if forloop.counter == forloop.parentloop.counter %}
+                                        {{ cover.print }}<BR>
+                                    {% else %}
+                                         {% set "True" as break %}
+                                    {% endif %}
+                                {% else %}
+                                    {{ cover.print }}<BR>
+                                {% endifchanged %}
+                            {% endif %}
+                            {# break by ignoring unwanted iterations #}
+                        {% endif %}
+                    {% endfor %}
+                </TD>
+                <TD>{# cover price #}
+                    {% set "False" as break %}
+                    {% for cover in print_history %}
+                        {% if forloop.counter >= forloop.parentloop.counter %}
+                            {%  if break == "False" %}
+                                {% ifchanged cover.cover_filename %}
+                                     {% if forloop.counter == forloop.parentloop.counter %}
+                                        {{ cover.cover_price }}<BR>
+                                    {% else %}
+                                        {% set "True" as break %}
+                                     {% endif %}
+                                {%  else %}
+                                    {% if cover.cover_price %}
+                                        {{ cover.cover_price }}
+                                    {% endif %}
+                                    <BR>
+                                {% endifchanged %}
+                            {%  endif %}
+                        {% endif %}
+                        {# break by ignoring unwanted iterations #}
+                    {% endfor %}
+                </TD>
+                {% else %}
+                </TD></TD>
+                <TD>{# edition #}{{ print.print }}</TD>
+                <TD>{# cover price #}{% if print.cover_price %}{{ print.cover_price }}{% endif %}</TD>
             {% endif %}
-        </TD>
-            {%  else %}
-            <TD>SAME IMAGE</TD>
+
+        {% else %}
+            {# ignore records with cover_filepath we looped over them above #}
+            {% if not print.cover_filepath %}
+                <TD></TD>
+                <TD>{# edition #}{{ print.print }}</TD>
+                <TD>{# cover price #}{% if print.cover_price %}{{ print.cover_price }}{% endif %}</TD>
+            {% endif %}
         {% endifchanged %}
-        <TD>
-        {%  if print.edition %}
-            link to {{ print.print }}
-        {%  else %}
-            {{ print.print }}
-        {%  endif %}
-        </TD>
-        <TD>
-            {{  print.cover_price }}
-        </TD>
+        {#  continue - here we have looped over all the records with the same cover #}
         </TR>
+
     {% endfor %}
     </TABLE>
 {% endblock %}
