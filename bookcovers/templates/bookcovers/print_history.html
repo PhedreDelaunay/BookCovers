@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content %}
     <h2 style="display:inline";>{{ view.book.title }}</h2>
-    <TABLE border=1"><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
+    <TABLE border="1" rules="rows"><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
 
 
     {% for print in print_history %}
@@ -25,15 +25,17 @@
                     {% set "False" as break %}
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
-                            {%  if break == "False" %}
+                            {% if break == "False" %}
                                 {% ifchanged cover.cover_filename %}
                                     {% if forloop.counter == forloop.parentloop.counter %}
-                                        {{ cover.print }}<BR>
+                                        {{ cover.print|edition:cover.edition_id }}
+                                        <BR>
                                     {% else %}
                                          {% set "True" as break %}
                                     {% endif %}
                                 {% else %}
-                                    {{ cover.print }}<BR>
+                                    {{ cover.print|edition:cover.edition_id }}
+                                    <BR>
                                 {% endifchanged %}
                             {% endif %}
                             {# break by ignoring unwanted iterations #}
@@ -44,7 +46,7 @@
                     {% set "False" as break %}
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
-                            {%  if break == "False" %}
+                            {% if break == "False" %}
                                 {% ifchanged cover.cover_filename %}
                                      {% if forloop.counter == forloop.parentloop.counter %}
                                         {{ cover.cover_price }}<BR>
@@ -62,22 +64,25 @@
                         {# break by ignoring unwanted iterations #}
                     {% endfor %}
                 </TD>
-                {% else %}
+                </TR><TR></TR>
+            {% else %}
                 </TD></TD>
-                <TD>{# edition #}{{ print.print }}</TD>
+                <TD>{# edition #}{{ print.print|edition:print.edition_id }}</TD>
                 <TD>{# cover price #}{% if print.cover_price %}{{ print.cover_price }}{% endif %}</TD>
+                </TR><TR></TR>
             {% endif %}
 
         {% else %}
             {# ignore records with cover_filepath we looped over them above #}
             {% if not print.cover_filepath %}
                 <TD></TD>
-                <TD>{# edition #}{{ print.print }}</TD>
+                <TD>{# edition #}{{ print.print|edition:print.edition_id }}</TD>
                 <TD>{# cover price #}{% if print.cover_price %}{{ print.cover_price }}{% endif %}</TD>
+                </TR><TR></TR>
             {% endif %}
         {% endifchanged %}
         {#  continue - here we have looped over all the records with the same cover #}
-        </TR>
+
 
     {% endfor %}
     </TABLE>
