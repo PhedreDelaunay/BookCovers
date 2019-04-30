@@ -19,16 +19,26 @@ def set(value):
 # renders the edition line for print history
 # usage:
 # {{ cover.print|edition:cover.edition_id }}
-@register.filter(needs_autoescape=True)
-def edition(text, edition_id, autoescape=True):
-    if autoescape:
-        esc = conditional_escape
-    else:
-        esc = lambda x: x
-
+@register.filter()
+def edition(text, edition_id):
     if edition_id:
         reverse_url = reverse('bookcovers:book_edition', kwargs={'edition_id': edition_id})
-        render_string = "<a href=\"" + reverse_url + "\">" + esc(text) + "</a>"
+        render_string = "<a href=\"" + reverse_url + "\">" + text + "</a>"
     else:
-        render_string = esc(text)
+        render_string = text
     return mark_safe(render_string)
+
+# @register.filter(needs_autoescape=True)
+# def edition(text, edition_id, autoescape=True):
+#     if autoescape:
+#         esc = conditional_escape
+#     else:
+#         esc = lambda x: x
+#
+#     if edition_id:
+#         reverse_url = reverse('bookcovers:book_edition', kwargs={'edition_id': edition_id})
+#         # TODO some entries have <I></I>, either don't escape or remove html from DB
+#         render_string = "<a href=\"" + reverse_url + "\">" + esc(text) + "</a>"
+#     else:
+#         render_string = esc(text)
+#     return mark_safe(render_string)
