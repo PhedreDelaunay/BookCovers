@@ -11,24 +11,26 @@ from bookcovers.view_mixin import TopLevelPagerMixin
 
 
 class AuthorMixin(TopLevelPagerMixin):
-    subject_list = {
-        'title': 'authors',
-        'view_name': 'authors',
-        'object': None,
-    }
-    subject = {
-        'name': 'author',
-        'title': 'books',
-        'view_name': 'author_books',
-        'set_view_name': 'author_sets',
-        'object': None,
-    }
-    detail = {
-        'to_page_view_name': 'book',
-        'view_name': 'book_edition',
-        'list_view_name': 'books',
-        'object': None,
-    }
+
+    def __init__(self):
+        self.subject_list = {
+            'title': 'authors',
+            'view_name': 'authors',
+            'object': None,
+        }
+        self.subject = {
+            'name': 'author',
+            'title': 'books',
+            'view_name': 'author_books',
+            'set_view_name': 'author_sets',
+            'object': None,
+        }
+        self.detail = {
+            'to_page_view_name': 'book',
+            'view_name': 'book_edition',
+            'list_view_name': 'books',
+            'object': None,
+        }
 
     @property
     def author(self):
@@ -36,9 +38,9 @@ class AuthorMixin(TopLevelPagerMixin):
 
     @author.setter
     def author(self, value):
-        print (f"author_setter: value is {value}")
         self._author = value
         self.subject['object'] = self._author
+        print (f"author_setter: set subject object author is {value}")
 
     @property
     def book(self):
@@ -46,12 +48,12 @@ class AuthorMixin(TopLevelPagerMixin):
 
     @book.setter
     def book(self, value):
-        print(f"book_setter: value is {value}")
         self._book = value
         self.set_book_attributes(self._book)
 
     def set_book_attributes(self, book):
         self.detail['object'] = book
+        print(f"set_book_attributes: set detail object book is {book}")
         self.author = book.author
         self.book_id = book.pk
         self.web_title = book.title
