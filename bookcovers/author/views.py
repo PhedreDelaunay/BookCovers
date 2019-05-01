@@ -170,9 +170,7 @@ class BookSetEdition(Book):
                                                                    artist_id=edition.theCover.artwork.artist_id)
         self.set_pager = self.create_set_pager(set_id=set.pk)
         self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
-        self.detail['object'] = edition
-        self.author = edition.book.author
-        self.web_title = edition.book.author.name
+        self.edition = edition
         return edition
 
 # http:<host>/bookcovers/book/set/detail/<set_id>
@@ -191,11 +189,7 @@ class BookSetDetail(BookSetEdition):
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
         edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
-        # TODO create an edition equivalent of book in view_mixin
-        self.author = edition.book.author
-        self.detail['object'] = edition
-        print (f"BookSetDetail::get_object: set detail object edition = {edition}")
-        self.web_title = edition.theCover.book.author.name
+        self.edition = edition
         return edition
 
 # http:<host>/bookcovers/book/set/editions/<edition_id>
@@ -241,8 +235,5 @@ class BookSetList(BookSetEditions):
         set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
         edition = get_object_or_404(Edition, edition_id=queryset[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
-        self.author = edition.book.author
-        self.detail['object'] = edition
-        print (f"BookSetList::get_object: set detail object edition = {edition}")
-        self.web_title = self.author.name
+        self.edition = edition
         return queryset
