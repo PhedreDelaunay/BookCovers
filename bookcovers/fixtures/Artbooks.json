@@ -1,0 +1,607 @@
+[
+{
+    "model": "bookcovers.artbook",
+    "pk": 1,
+    "fields": {
+        "author": 357,
+        "artist": 6,
+        "title": "Lightship",
+        "subtitle": "Master of SF Illustration",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 2,
+    "fields": {
+        "author": 231,
+        "artist": 6,
+        "title": "Transluminal",
+        "subtitle": "The Paintings of Jim Burns",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 3,
+    "fields": {
+        "author": 231,
+        "artist": 6,
+        "title": "Hyperluminal",
+        "subtitle": "The Art of Jim Burns",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 4,
+    "fields": {
+        "author": 421,
+        "artist": 45,
+        "title": "Ground Zero",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 5,
+    "fields": {
+        "author": null,
+        "artist": 15,
+        "title": "Michael Whelan's Works of Wonder",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 6,
+    "fields": {
+        "author": 220,
+        "artist": 50,
+        "title": "Alien Horizons",
+        "subtitle": "The Fantastic Art of Bob Eggleton",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 7,
+    "fields": {
+        "author": 421,
+        "artist": 79,
+        "title": "Hardware",
+        "subtitle": "The Definitive SF Works of Chris Foss",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 8,
+    "fields": {
+        "author": 243,
+        "artist": 30,
+        "title": "The Science Fiction and Fantasy World of Tim White",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 9,
+    "fields": {
+        "author": 243,
+        "artist": 30,
+        "title": "Chiaroscuro",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 10,
+    "fields": {
+        "author": null,
+        "artist": 7,
+        "title": "The Science Fiction Art of Vincent Di Fate",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 11,
+    "fields": {
+        "author": 348,
+        "artist": 21,
+        "title": "Journeyman",
+        "subtitle": "The Art of Chris Moore",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 12,
+    "fields": {
+        "author": 390,
+        "artist": 66,
+        "title": "As He Sees It",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 13,
+    "fields": {
+        "author": null,
+        "artist": 41,
+        "title": "Mark Harrison's Dreamlands",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 14,
+    "fields": {
+        "author": 209,
+        "artist": 173,
+        "title": "The Deceiving Eye",
+        "subtitle": "The Art of Richard Hescox",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 15,
+    "fields": {
+        "author": 42,
+        "artist": 96,
+        "title": "Hardyware",
+        "subtitle": "The Art of David A. Hardy",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 16,
+    "fields": {
+        "author": 219,
+        "artist": 174,
+        "title": "The Art of John Berkey",
+        "subtitle": null,
+        "notes": "x 2"
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 17,
+    "fields": {
+        "author": 247,
+        "artist": 154,
+        "title": "Mass",
+        "subtitle": "The Art of John Harris",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 18,
+    "fields": {
+        "author": 242,
+        "artist": 161,
+        "title": "The Art of Matthew Stawicki",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 19,
+    "fields": {
+        "author": null,
+        "artist": 61,
+        "title": "Amazona",
+        "subtitle": "The Art of Chris Achilleos",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 20,
+    "fields": {
+        "author": 213,
+        "artist": 81,
+        "title": "Mythopoeikon",
+        "subtitle": "The Paintings, Etchings, Book-Jacket & Record-Sleeve Illustrations of Patrick Woodroffe",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 21,
+    "fields": {
+        "author": null,
+        "artist": 40,
+        "title": "Inner Visions",
+        "subtitle": "The Art of Ron Walotsky",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 22,
+    "fields": {
+        "author": 421,
+        "artist": 175,
+        "title": "Science Fiction Postcards",
+        "subtitle": "100 Book Covers in One Box",
+        "notes": "Penguin"
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 23,
+    "fields": {
+        "author": 66,
+        "artist": 175,
+        "title": "Visions of the Future",
+        "subtitle": "An exciting and novel selection of science fiction art of today",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 24,
+    "fields": {
+        "author": 233,
+        "artist": 175,
+        "title": "Great Masters of Fantasy Art",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 25,
+    "fields": {
+        "author": 364,
+        "artist": 175,
+        "title": "Sztuka Science Fiction Art",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 26,
+    "fields": {
+        "author": 217,
+        "artist": 175,
+        "title": "The Chesley Awards",
+        "subtitle": "for Science Fiction & Fantasy Art - A Retrospective",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 27,
+    "fields": {
+        "author": 421,
+        "artist": 2,
+        "title": "Illustrations",
+        "subtitle": "Issue Nine",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 28,
+    "fields": {
+        "author": 376,
+        "artist": 175,
+        "title": "Bradbury An Illustrated Life",
+        "subtitle": "A Journey to Far Metaphor",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 29,
+    "fields": {
+        "author": 419,
+        "artist": 175,
+        "title": "The Frank Collection",
+        "subtitle": "A Showcase of the World's Finest Fantastic Art",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 30,
+    "fields": {
+        "author": 421,
+        "artist": 175,
+        "title": "Parallel Lines",
+        "subtitle": "The Science Fiction Illustrations of Peter Elson & Chris Moore",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 31,
+    "fields": {
+        "author": 422,
+        "artist": 35,
+        "title": "A Cosmic Cornucopia",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 32,
+    "fields": {
+        "author": 356,
+        "artist": 175,
+        "title": "Tomorrow and Beyond",
+        "subtitle": "Masterpieces of Science Fiction Art",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 33,
+    "fields": {
+        "author": 372,
+        "artist": 175,
+        "title": "Infinite Worlds",
+        "subtitle": "The Fantastic Visions of Science Fiction Art",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 34,
+    "fields": {
+        "author": 224,
+        "artist": 13,
+        "title": "The Art of Stephen Youll",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 35,
+    "fields": {
+        "author": 417,
+        "artist": 175,
+        "title": "Science Fiction of the 20th Century",
+        "subtitle": "An Illustrated  History",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 36,
+    "fields": {
+        "author": 220,
+        "artist": 70,
+        "title": "Only Visiting this Planet",
+        "subtitle": "The Art of Danny Flynn",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 37,
+    "fields": {
+        "author": null,
+        "artist": 106,
+        "title": "Solar Wind",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 38,
+    "fields": {
+        "author": 220,
+        "artist": 2,
+        "title": "Ultraterranium",
+        "subtitle": "The Paintings of Bruce Pennington",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 39,
+    "fields": {
+        "author": 220,
+        "artist": 2,
+        "title": "The Bruce Pennington Portfolio",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 40,
+    "fields": {
+        "author": 425,
+        "artist": 175,
+        "title": "Collecting Science Fiction and Fantasy",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 41,
+    "fields": {
+        "author": 68,
+        "artist": null,
+        "title": "The Mammoth Encyclopedia of Science Fiction",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 42,
+    "fields": {
+        "author": null,
+        "artist": 176,
+        "title": "Revelations",
+        "subtitle": "The Art of Max Bertolini",
+        "notes": "taken to charity shop"
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 43,
+    "fields": {
+        "author": null,
+        "artist": null,
+        "title": "The Art of Paul Bonner",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 44,
+    "fields": {
+        "author": 49,
+        "artist": null,
+        "title": "Perceptualistics",
+        "subtitle": "Art by Jael",
+        "notes": "taken to charity shop"
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 45,
+    "fields": {
+        "author": 307,
+        "artist": 175,
+        "title": "The Target Book",
+        "subtitle": "A History of the Target Doctor Who Books",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 46,
+    "fields": {
+        "author": 112,
+        "artist": 175,
+        "title": "The New Visions",
+        "subtitle": "A Collection of Modern Science Fiction Art",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 47,
+    "fields": {
+        "author": 255,
+        "artist": 175,
+        "title": "Worlds of Tomorrow",
+        "subtitle": "The Amazing Universe of Science Fiction Art",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 48,
+    "fields": {
+        "author": 314,
+        "artist": 175,
+        "title": "Fantasy Art of the New Millenium",
+        "subtitle": "The BEST in Fantasy and SF art worldwide",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 49,
+    "fields": {
+        "author": null,
+        "artist": 50,
+        "title": "Greetings from Earth",
+        "subtitle": "The Art of Bob Eggleton",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 50,
+    "fields": {
+        "author": 220,
+        "artist": 175,
+        "title": "Heroic Dreams",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 51,
+    "fields": {
+        "author": 274,
+        "artist": 175,
+        "title": "Fantasy Art Now",
+        "subtitle": "The Very Best in Contemporary Fantasy Art & Illustration",
+        "notes": "index covers and then take to charity shop"
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 52,
+    "fields": {
+        "author": 285,
+        "artist": 179,
+        "title": "The Fantasy Techniques of Tim Hildebrandt",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 53,
+    "fields": {
+        "author": 219,
+        "artist": 3,
+        "title": "The Art of Richard Powers",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 54,
+    "fields": {
+        "author": 427,
+        "artist": 175,
+        "title": "Encyclopedia of Science Fiction",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 55,
+    "fields": {
+        "author": 252,
+        "artist": 175,
+        "title": "Science Fiction",
+        "subtitle": "The Illustrated Encyclopedia",
+        "notes": null
+    }
+}
+]

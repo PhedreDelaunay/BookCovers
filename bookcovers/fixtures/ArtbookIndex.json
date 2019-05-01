@@ -1,0 +1,1315 @@
+[
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 1,
+    "fields": {
+        "artbook": 15,
+        "page": 17,
+        "book_title": "The Boys' Book of ASTRONOMY",
+        "book_author": "Patrick Moore",
+        "cover_year": "1958",
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 2,
+    "fields": {
+        "artbook": 15,
+        "page": 17,
+        "book_title": "Operation Vanguard",
+        "book_author": "Werner Buedeler",
+        "cover_year": "1957",
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 3,
+    "fields": {
+        "artbook": 15,
+        "page": 33,
+        "book_title": "Reality Dust",
+        "book_author": "Stephen Baxter",
+        "cover_year": "2000",
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 4,
+    "fields": {
+        "artbook": 15,
+        "page": 38,
+        "book_title": "Islands in the Sky",
+        "book_author": "Arthur C Clarke",
+        "cover_year": "1971",
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 5,
+    "fields": {
+        "artbook": 15,
+        "page": 39,
+        "book_title": "More than Superhuman",
+        "book_author": "A.E. Van Vogt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "NEL"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 6,
+    "fields": {
+        "artbook": 15,
+        "page": 39,
+        "book_title": "A Sense of Wonder",
+        "book_author": "John Wyndham, Murray Leinster, Jack Williamson",
+        "cover_year": "<= 1974",
+        "cover": null,
+        "publisher": "NEL"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 7,
+    "fields": {
+        "artbook": 15,
+        "page": 39,
+        "book_title": "Science Fiction Blues",
+        "book_author": "Brian Aldiss",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Avernus 1988"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 8,
+    "fields": {
+        "artbook": 15,
+        "page": 39,
+        "book_title": "Dragonsong",
+        "book_author": "Anne McCaffrey",
+        "cover_year": "1976",
+        "cover": null,
+        "publisher": "Sidgwick & Jackson"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 9,
+    "fields": {
+        "artbook": 15,
+        "page": 40,
+        "book_title": "The Snows of Olympus",
+        "book_author": "Arthur C Clarke",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "1994"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 10,
+    "fields": {
+        "artbook": 15,
+        "page": 42,
+        "book_title": "From the Earth to the Moon",
+        "book_author": "Jules Verne",
+        "cover_year": "1995",
+        "cover": "\"Space Gun\"",
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 11,
+    "fields": {
+        "artbook": 15,
+        "page": 43,
+        "book_title": "Making History",
+        "book_author": "Paul J. McAuley",
+        "cover_year": "1996",
+        "cover": null,
+        "publisher": "2000"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 12,
+    "fields": {
+        "artbook": 20,
+        "page": 141,
+        "book_title": "The Broken Sword",
+        "book_author": "Poul Anderson",
+        "cover_year": "June 1973",
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 13,
+    "fields": {
+        "artbook": 20,
+        "page": 141,
+        "book_title": "The Still Small Voice of Trumpets",
+        "book_author": "Lloyd Biggle Jr.",
+        "cover_year": "April 1975",
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 14,
+    "fields": {
+        "artbook": 20,
+        "page": 140,
+        "book_title": "A Song for Lya",
+        "book_author": "George R. R. Martin",
+        "cover_year": "October 1975",
+        "cover": null,
+        "publisher": "Avon Books"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 15,
+    "fields": {
+        "artbook": 20,
+        "page": 138,
+        "book_title": "Waldo",
+        "book_author": "Robert Heinlein",
+        "cover_year": "June 1974",
+        "cover": null,
+        "publisher": "Pan Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 16,
+    "fields": {
+        "artbook": 20,
+        "page": 139,
+        "book_title": "The Net",
+        "book_author": "Jean Renvoize",
+        "cover_year": "January 1974",
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 17,
+    "fields": {
+        "artbook": 20,
+        "page": 140,
+        "book_title": "Chamiel",
+        "book_author": "Edward Pearson",
+        "cover_year": "June 1973",
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 18,
+    "fields": {
+        "artbook": 20,
+        "page": 137,
+        "book_title": "The Jargoon Pard",
+        "book_author": "Andre Norton",
+        "cover_year": "January 1975",
+        "cover": null,
+        "publisher": "Victor Gollancz Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 19,
+    "fields": {
+        "artbook": 20,
+        "page": 137,
+        "book_title": "A for Andromeda",
+        "book_author": "Fred Hoyle & John Elliot",
+        "cover_year": "April 1975",
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 20,
+    "fields": {
+        "artbook": 20,
+        "page": 137,
+        "book_title": "Andromeda",
+        "book_author": "Fred Hoyle & John Elliot",
+        "cover_year": "April 1975",
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 21,
+    "fields": {
+        "artbook": 20,
+        "page": 136,
+        "book_title": "The Green Gene",
+        "book_author": "Peter Dickinson",
+        "cover_year": "December 1973",
+        "cover": null,
+        "publisher": "Granada"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 22,
+    "fields": {
+        "artbook": 20,
+        "page": 136,
+        "book_title": "The New Adam",
+        "book_author": "Stanley G. Weinbaum",
+        "cover_year": "August 1973",
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 23,
+    "fields": {
+        "artbook": 20,
+        "page": 136,
+        "book_title": "The Judgement of Eve",
+        "book_author": "Edgar Pangborn",
+        "cover_year": "October 1975",
+        "cover": null,
+        "publisher": "Avon Books"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 24,
+    "fields": {
+        "artbook": 20,
+        "page": 135,
+        "book_title": "The Best of Isaac Asimov",
+        "book_author": "Isaac Asimov",
+        "cover_year": "March 1973",
+        "cover": "Nightfall",
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 25,
+    "fields": {
+        "artbook": 20,
+        "page": 135,
+        "book_title": "Nine Princes in Amber",
+        "book_author": "Roger Zelazny",
+        "cover_year": "November 1973",
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 26,
+    "fields": {
+        "artbook": 20,
+        "page": 135,
+        "book_title": "The Thin Man",
+        "book_author": "Dashiell Hammett",
+        "cover_year": "February 1973",
+        "cover": null,
+        "publisher": "Ballantine"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 27,
+    "fields": {
+        "artbook": 20,
+        "page": 135,
+        "book_title": "The Dain Curse",
+        "book_author": "Dashiell Hammett",
+        "cover_year": "February 1973",
+        "cover": null,
+        "publisher": "Ballantine"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 28,
+    "fields": {
+        "artbook": 20,
+        "page": 134,
+        "book_title": "Dangerous Visions 1",
+        "book_author": "Harlan Ellison",
+        "cover_year": "June 1973",
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 29,
+    "fields": {
+        "artbook": 20,
+        "page": 134,
+        "book_title": "Dangerous Visions 2",
+        "book_author": "Harlan Ellison",
+        "cover_year": "June 1973",
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 30,
+    "fields": {
+        "artbook": 20,
+        "page": 133,
+        "book_title": "The Billion Year Spree",
+        "book_author": "Brian Aldiss",
+        "cover_year": "October 1974",
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 31,
+    "fields": {
+        "artbook": 20,
+        "page": 131,
+        "book_title": "New Life for Old",
+        "book_author": "Laurence James",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 32,
+    "fields": {
+        "artbook": 20,
+        "page": 130,
+        "book_title": "Planet of the Blind",
+        "book_author": "Laurence James",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 33,
+    "fields": {
+        "artbook": 20,
+        "page": 129,
+        "book_title": "New Worlds 8",
+        "book_author": "Hilary Bailey",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 34,
+    "fields": {
+        "artbook": 20,
+        "page": 127,
+        "book_title": "The Book of Mars",
+        "book_author": "Jane Hipolit and Willis E. McNelly",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 35,
+    "fields": {
+        "artbook": 20,
+        "page": 126,
+        "book_title": "The Green Hills of Earth",
+        "book_author": "Robert Heinlein",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Pan Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 36,
+    "fields": {
+        "artbook": 20,
+        "page": 125,
+        "book_title": "Day of Wrath",
+        "book_author": "Brian M. Stableford",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books LTd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 37,
+    "fields": {
+        "artbook": 20,
+        "page": 124,
+        "book_title": "Day Million",
+        "book_author": "Frederik Pohl",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Pan Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 38,
+    "fields": {
+        "artbook": 20,
+        "page": 123,
+        "book_title": "The Best of Robert Heinlein",
+        "book_author": "Robert Heinlein",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 39,
+    "fields": {
+        "artbook": 20,
+        "page": 122,
+        "book_title": "The Best of John Wyndham",
+        "book_author": "John Wyndham",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 40,
+    "fields": {
+        "artbook": 20,
+        "page": 121,
+        "book_title": "The Forever War",
+        "book_author": "Joe Haldeman",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 41,
+    "fields": {
+        "artbook": 20,
+        "page": 120,
+        "book_title": "Our Haunted Planet",
+        "book_author": "John A. Keel",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 42,
+    "fields": {
+        "artbook": 20,
+        "page": 119,
+        "book_title": "The Warlord of the Air",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 43,
+    "fields": {
+        "artbook": 20,
+        "page": 118,
+        "book_title": "Five Weeks in a Balloon",
+        "book_author": "Jules Verne",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "New English Library"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 44,
+    "fields": {
+        "artbook": 20,
+        "page": 115,
+        "book_title": "The Radio Planet",
+        "book_author": "Ralph Milney-Farley",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Ace Books"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 45,
+    "fields": {
+        "artbook": 20,
+        "page": 113,
+        "book_title": "The Seedbearers",
+        "book_author": "Peter Timlett",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 46,
+    "fields": {
+        "artbook": 20,
+        "page": 112,
+        "book_title": "The Guns of Avalon",
+        "book_author": "Roger Zelazny",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 47,
+    "fields": {
+        "artbook": 20,
+        "page": 111,
+        "book_title": "To Your Scattered Bodies Go",
+        "book_author": "Philip Jose Farmer",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Granada Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 48,
+    "fields": {
+        "artbook": 20,
+        "page": 110,
+        "book_title": "Sos the Rope",
+        "book_author": "Piers Anthony",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 49,
+    "fields": {
+        "artbook": 20,
+        "page": 109,
+        "book_title": "The Gray Prince",
+        "book_author": "Jack Vance",
+        "cover_year": "1975",
+        "cover": null,
+        "publisher": "Avon Books"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 50,
+    "fields": {
+        "artbook": 20,
+        "page": 107,
+        "book_title": "Candy Man",
+        "book_author": "Vincent King",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 51,
+    "fields": {
+        "artbook": 20,
+        "page": 106,
+        "book_title": "The Door into Summer",
+        "book_author": "Robert Heinlein",
+        "cover_year": null,
+        "cover": "back page 102",
+        "publisher": "Pan Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 52,
+    "fields": {
+        "artbook": 20,
+        "page": 106,
+        "book_title": "A Feast Unknown",
+        "book_author": "Philip Jose Farmer",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 53,
+    "fields": {
+        "artbook": 20,
+        "page": 105,
+        "book_title": "Var the Stick",
+        "book_author": "Piers Anthony",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld LTd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 54,
+    "fields": {
+        "artbook": 20,
+        "page": 90,
+        "book_title": "Seven Footprints to Satan",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Avon Books"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 55,
+    "fields": {
+        "artbook": 20,
+        "page": 93,
+        "book_title": "Seven Footprints to Satan",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 56,
+    "fields": {
+        "artbook": 20,
+        "page": 101,
+        "book_title": "The Graveyard",
+        "book_author": null,
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 57,
+    "fields": {
+        "artbook": 20,
+        "page": 98,
+        "book_title": "Neq the Sword",
+        "book_author": "Piers Anthony",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 58,
+    "fields": {
+        "artbook": 20,
+        "page": 99,
+        "book_title": "Red Harvest",
+        "book_author": "Dashiell Hammett",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Ballantine"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 59,
+    "fields": {
+        "artbook": 20,
+        "page": 97,
+        "book_title": "Line of Duty",
+        "book_author": "Ernest Tidyman",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 60,
+    "fields": {
+        "artbook": 20,
+        "page": 96,
+        "book_title": "Four fo the Future",
+        "book_author": "Harry Harrison",
+        "cover_year": null,
+        "cover": "The Stagnation of the Heart",
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 61,
+    "fields": {
+        "artbook": 20,
+        "page": 95,
+        "book_title": "Red Harvest",
+        "book_author": "Dashiell Hammett",
+        "cover_year": null,
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 62,
+    "fields": {
+        "artbook": 20,
+        "page": 91,
+        "book_title": "Burn Witch Burn!",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 63,
+    "fields": {
+        "artbook": 20,
+        "page": 89,
+        "book_title": "The Satyr's Head and Other Tales of Terror",
+        "book_author": "David A. Sutton",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Transworld Ltd (Corgi)"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 64,
+    "fields": {
+        "artbook": 20,
+        "page": 87,
+        "book_title": "The Face of Heaven",
+        "book_author": "Brian M. Stableford",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 65,
+    "fields": {
+        "artbook": 20,
+        "page": 86,
+        "book_title": "The Moon Pool",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 66,
+    "fields": {
+        "artbook": 20,
+        "page": 85,
+        "book_title": "Dwellers in the Mirage",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 67,
+    "fields": {
+        "artbook": 20,
+        "page": 83,
+        "book_title": "The Face in the Abyss",
+        "book_author": "A. Merritt",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Futura Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 68,
+    "fields": {
+        "artbook": 20,
+        "page": 83,
+        "book_title": "Universe Five",
+        "book_author": "Terry Carr",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Popular Library"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 69,
+    "fields": {
+        "artbook": 20,
+        "page": 82,
+        "book_title": "Three Hearts and Three Lions",
+        "book_author": "Poul Anderson",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 70,
+    "fields": {
+        "artbook": 20,
+        "page": 82,
+        "book_title": "The Half-Angels",
+        "book_author": "Andrew Lovesey",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 71,
+    "fields": {
+        "artbook": 20,
+        "page": 80,
+        "book_title": "Continuum 1",
+        "book_author": "Roger Elwood",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "W.H. Allen Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 72,
+    "fields": {
+        "artbook": 20,
+        "page": 81,
+        "book_title": "Continuum 2",
+        "book_author": "Roger Elwood",
+        "cover_year": null,
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 73,
+    "fields": {
+        "artbook": 20,
+        "page": 80,
+        "book_title": "Continuum 3",
+        "book_author": "Roger Elwood",
+        "cover_year": null,
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 74,
+    "fields": {
+        "artbook": 20,
+        "page": 80,
+        "book_title": "Continuum 4",
+        "book_author": "Roger Elwood",
+        "cover_year": null,
+        "cover": null,
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 75,
+    "fields": {
+        "artbook": 20,
+        "page": 79,
+        "book_title": "In the Kingdom of the Beasts",
+        "book_author": "Brian M. Stableford",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 76,
+    "fields": {
+        "artbook": 20,
+        "page": 79,
+        "book_title": "The Ice Schooner",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 77,
+    "fields": {
+        "artbook": 20,
+        "page": 79,
+        "book_title": "The Glass Key",
+        "book_author": "Dashiell Hammett",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Ballantine"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 78,
+    "fields": {
+        "artbook": 20,
+        "page": 79,
+        "book_title": "Winter's Children",
+        "book_author": "Michael Coney",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Sphere Books LTd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 79,
+    "fields": {
+        "artbook": 20,
+        "page": 78,
+        "book_title": "Trullion, Alastor 2262",
+        "book_author": "Jack Vance",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Granada"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 80,
+    "fields": {
+        "artbook": 20,
+        "page": 78,
+        "book_title": "One-Eye",
+        "book_author": "Stuart Gordon",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Granada"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 81,
+    "fields": {
+        "artbook": 20,
+        "page": 77,
+        "book_title": "The Big Knockover",
+        "book_author": "Dashiell Hammett",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Ballantine"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 82,
+    "fields": {
+        "artbook": 20,
+        "page": 74,
+        "book_title": "The Sword and the Stallion",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 83,
+    "fields": {
+        "artbook": 20,
+        "page": 73,
+        "book_title": "A Cure for Cancer",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 84,
+    "fields": {
+        "artbook": 20,
+        "page": 72,
+        "book_title": "The English Assassin",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 85,
+    "fields": {
+        "artbook": 20,
+        "page": 71,
+        "book_title": "The Oak and the Ram",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 86,
+    "fields": {
+        "artbook": 20,
+        "page": 70,
+        "book_title": "The Bull and the Spear",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 87,
+    "fields": {
+        "artbook": 20,
+        "page": 69,
+        "book_title": "The Sleeping Sorceress",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 88,
+    "fields": {
+        "artbook": 20,
+        "page": 67,
+        "book_title": "The Sailor on the Seas of Fate",
+        "book_author": "Michael Moorcock",
+        "cover_year": null,
+        "cover": null,
+        "publisher": "Quartet Books Ltd"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 89,
+    "fields": {
+        "artbook": 44,
+        "page": 8,
+        "book_title": "Come Thirteen",
+        "book_author": "David Silva",
+        "cover_year": "1988",
+        "cover": null,
+        "publisher": "Lynx"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 90,
+    "fields": {
+        "artbook": 44,
+        "page": 9,
+        "book_title": "The Book of the River",
+        "book_author": "Ian Watson",
+        "cover_year": "1986",
+        "cover": null,
+        "publisher": "DAW"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 91,
+    "fields": {
+        "artbook": 44,
+        "page": 9,
+        "book_title": "Venus Plus X",
+        "book_author": "Theodore Sturgeon",
+        "cover_year": "1988",
+        "cover": null,
+        "publisher": "Carroll & Graff"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 92,
+    "fields": {
+        "artbook": 44,
+        "page": 9,
+        "book_title": "Probe",
+        "book_author": "Carole Nelson Douglas",
+        "cover_year": "1985",
+        "cover": null,
+        "publisher": "Tor"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 93,
+    "fields": {
+        "artbook": 44,
+        "page": 12,
+        "book_title": "The Mask of the Sun",
+        "book_author": "Fred Saberhagen",
+        "cover_year": "1991",
+        "cover": null,
+        "publisher": "Tor"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 94,
+    "fields": {
+        "artbook": 44,
+        "page": 20,
+        "book_title": "The Angriff Technique",
+        "book_author": "Tonita S. Gardner",
+        "cover_year": "1988",
+        "cover": "Chain Reaction",
+        "publisher": "Lynx"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 95,
+    "fields": {
+        "artbook": 44,
+        "page": 22,
+        "book_title": "Shadrach in the Furnace",
+        "book_author": "Robert Silverberg",
+        "cover_year": "1986",
+        "cover": null,
+        "publisher": "Baen"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 96,
+    "fields": {
+        "artbook": 44,
+        "page": 23,
+        "book_title": "Sword and Sorceress III",
+        "book_author": "Marion Zimmer Bradley",
+        "cover_year": "1986",
+        "cover": null,
+        "publisher": "DAW"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 97,
+    "fields": {
+        "artbook": 44,
+        "page": 24,
+        "book_title": "The Cat who Went to Heaven",
+        "book_author": "Elizabeth Jane Coatsworth",
+        "cover_year": "1990",
+        "cover": null,
+        "publisher": "Aladdin"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 98,
+    "fields": {
+        "artbook": 44,
+        "page": 25,
+        "book_title": "Letters to Jenny",
+        "book_author": "Piers Anthony",
+        "cover_year": "1993",
+        "cover": null,
+        "publisher": "Tor"
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 99,
+    "fields": {
+        "artbook": 50,
+        "page": 79,
+        "book_title": "Nine Princesses of Amber",
+        "book_author": "Roger Zelazny",
+        "cover_year": null,
+        "cover": "Michael Embden",
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 100,
+    "fields": {
+        "artbook": 50,
+        "page": 79,
+        "book_title": "The Guns of Avalon",
+        "book_author": "Roger Zelazn;y",
+        "cover_year": null,
+        "cover": "Michael Embden",
+        "publisher": null
+    }
+},
+{
+    "model": "bookcovers.artbookindex",
+    "pk": 101,
+    "fields": {
+        "artbook": 50,
+        "page": 52,
+        "book_title": "Doc Savage",
+        "book_author": null,
+        "cover_year": null,
+        "cover": "Richard Clifton-Dey",
+        "publisher": null
+    }
+}
+]

@@ -31,7 +31,8 @@ class PageTestCases:
                     'Sets.json',
                     'Series.json',
                     'SetExceptions.json',
-                    'BooksSeries.json',]
+                    'BooksSeries.json',
+                    'PrintRuns.json',]
 
         def check_status_code(self, reverse_url):
             print ("----------------------------------")
@@ -142,7 +143,7 @@ class ArtworkSetEditionPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_edition.html'
 
-    # TODO test for thumnbails, no thumbnails
+     # TODO test for thumnbails, no thumbnails
 
 class ArtworkSetDetailPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/set/detail/3/

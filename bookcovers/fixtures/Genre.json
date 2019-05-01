@@ -1,0 +1,182 @@
+[
+{
+    "model": "bookcovers.genre",
+    "pk": 1,
+    "fields": {
+        "genre": "unchecked",
+        "description": "Science Fiction / Science Fantasy",
+        "notes": "not double checked"
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 2,
+    "fields": {
+        "genre": "Science Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 3,
+    "fields": {
+        "genre": "Science Fantasy",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 4,
+    "fields": {
+        "genre": "General Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 5,
+    "fields": {
+        "genre": "Horror",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 6,
+    "fields": {
+        "genre": "Humour",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 8,
+    "fields": {
+        "genre": "SF",
+        "description": "Science Fiction",
+        "notes": "assigned by me"
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 9,
+    "fields": {
+        "genre": "Fantasy",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 10,
+    "fields": {
+        "genre": "Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 11,
+    "fields": {
+        "genre": "Historical Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 12,
+    "fields": {
+        "genre": "True Life Story",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 13,
+    "fields": {
+        "genre": "Non Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 14,
+    "fields": {
+        "genre": "Eco Thriller",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 15,
+    "fields": {
+        "genre": "Science Fiction/Fantasy",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 16,
+    "fields": {
+        "genre": "Fiction/Fantasy & Horror",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 17,
+    "fields": {
+        "genre": "Children/Fiction",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 18,
+    "fields": {
+        "genre": "Fiction/Fantasy",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 19,
+    "fields": {
+        "genre": "Cosmology",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 20,
+    "fields": {
+        "genre": "Science Fiction/Film tie-in",
+        "description": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.genre",
+    "pk": 21,
+    "fields": {
+        "genre": "not specified",
+        "description": "no genre specified on book",
+        "notes": null
+    }
+}
+]

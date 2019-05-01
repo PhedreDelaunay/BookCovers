@@ -1,0 +1,54 @@
+[
+{
+    "model": "bookcovers.panorama",
+    "pk": 1,
+    "fields": {
+        "filename": "DunePanorama.jpg",
+        "order": 0,
+        "set": 14,
+        "author": 5,
+        "artist": 28,
+        "imprint_id": 0,
+        "description": "Gerry Grace, Dune"
+    }
+},
+{
+    "model": "bookcovers.panorama",
+    "pk": 2,
+    "fields": {
+        "filename": "FoundationPanorama.jpg",
+        "order": 1,
+        "set": 15,
+        "author": 18,
+        "artist": 45,
+        "imprint_id": 0,
+        "description": "Fred Gambino, Foundation"
+    }
+},
+{
+    "model": "bookcovers.panorama",
+    "pk": 3,
+    "fields": {
+        "filename": "FoundationPanorama.jpg",
+        "order": 2,
+        "set": 12,
+        "author": 18,
+        "artist": 79,
+        "imprint_id": 0,
+        "description": "Chris Foss, Foundation"
+    }
+},
+{
+    "model": "bookcovers.panorama",
+    "pk": 4,
+    "fields": {
+        "filename": "fullTheNakedGod.jpg",
+        "order": 0,
+        "set": null,
+        "author": 204,
+        "artist": 6,
+        "imprint_id": 0,
+        "description": "Jim Burns, The Naked God"
+    }
+}
+]

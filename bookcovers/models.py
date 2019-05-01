@@ -234,7 +234,7 @@ class PrintRun(models.Model):
     id = models.AutoField(primary_key=True)
     print_run_id = models.IntegerField()
     order = models.IntegerField()
-    #edition_id = models.IntegerField(blank=True, null=True)
+    #edition_id = models.IntegerField(blank=True, null  =True)
     edition = models.OneToOneField(Edition, on_delete=models.DO_NOTHING, blank=True, null=True,
                                    related_name='thePrintRun', related_query_name="thePrintRun")
     #cover_id = models.IntegerField(blank=True, null=True)
@@ -343,3 +343,54 @@ class BookSeries(models.Model):
 
     class Meta:
         db_table = 'books_series'
+
+
+class Panorama(models.Model):
+    panorama_id = models.AutoField(primary_key=True)
+    filename = models.CharField(max_length=50, blank=True, null=True)
+    order = models.IntegerField(blank=True, null=True)
+    #set_id = models.IntegerField(blank=True, null=True)
+    #author_id = models.IntegerField(blank=True, null=True)
+    #artist_id = models.IntegerField(blank=True, null=True)
+    set = models.ForeignKey(Set, models.DO_NOTHING, blank=True, null=True,
+                            related_name="thePanoramas", related_query_name="thePanorama")
+    author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
+                               related_name="thePanoramas", related_query_name="thePanorama")
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
+                               related_name="thePanoramas", related_query_name="thePanorama")
+    imprint_id = models.IntegerField(blank=True, null=True)
+    description = models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        db_table = 'panoramas'
+
+class Artbook(models.Model):
+    artbook_id = models.AutoField(primary_key=True)
+    # author_id = models.IntegerField(blank=True, null=True)
+    # artist_id = models.IntegerField(blank=True, null=True)
+    author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtbooks", related_query_name="theArtbook")
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtbooks", related_query_name="theArtbook")
+    title = models.CharField(max_length=100, blank=True, null=True)
+    subtitle = models.CharField(max_length=255, blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        db_table = 'artbooks'
+
+
+class ArtbookIndex(models.Model):
+    artbook_index_id = models.AutoField(primary_key=True)
+    #artbook_id = models.IntegerField(blank=True, null=True)
+    artbook = models.ForeignKey(Artbook, models.DO_NOTHING,
+                               related_name="theArtbooks", related_query_name="theArtbook")
+    page = models.IntegerField(blank=True, null=True)
+    book_title = models.CharField(max_length=255, blank=True, null=True)
+    book_author = models.CharField(max_length=255, blank=True, null=True)
+    cover_year = models.CharField(max_length=50, blank=True, null=True)
+    cover = models.CharField(max_length=255, blank=True, null=True)
+    publisher = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        db_table = 'artbook_index'

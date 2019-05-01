@@ -1,0 +1,29 @@
+[
+{
+    "model": "bookcovers.currency",
+    "pk": 1,
+    "fields": {
+        "currency": "Sterling",
+        "country": "Britain",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.currency",
+    "pk": 2,
+    "fields": {
+        "currency": "Dollars",
+        "country": "New Zealand",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.currency",
+    "pk": 3,
+    "fields": {
+        "currency": "Euro",
+        "country": "Netherlands",
+        "notes": null
+    }
+}
+]
