@@ -191,7 +191,8 @@ class BookSetDetail(BookSetEdition):
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
         edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(author_id=edition.book.author_id)
-        self.book = edition.book
+        # TODO create an edition equivalent of book in view_mixin
+        self.author = edition.book.author
         self.detail['object'] = edition
         print (f"BookSetDetail::get_object: set detail object edition = {edition}")
         self.web_title = edition.theCover.book.author.name

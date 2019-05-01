@@ -12,24 +12,26 @@ from bookcovers.models import Set
 from bookcovers.view_mixin import TopLevelPagerMixin
 
 class ArtistMixin(TopLevelPagerMixin):
-    subject_list = {
-        'title': 'artists',
-        'view_name': 'artists',
-        'object': None,
-    }
-    subject = {
-        'name': 'artist',
-        'title': 'artworks',
-        'view_name': 'artist_artworks',
-        'set_view_name': 'artist_sets',
-        'object': None,
-    }
-    detail = {
-        'to_page_view_name': 'artwork',
-        'view_name': 'artwork',
-        'list_view_name': 'artworks',
-        'object': None,
-    }
+
+    def __init__(self):
+        self.subject_list = {
+            'title': 'artists',
+            'view_name': 'artists',
+            'object': None,
+        }
+        self.subject = {
+            'name': 'artist',
+            'title': 'artworks',
+            'view_name': 'artist_artworks',
+            'set_view_name': 'artist_sets',
+            'object': None,
+        }
+        self.detail = {
+            'to_page_view_name': 'artwork',
+            'view_name': 'artwork',
+            'list_view_name': 'artworks',
+            'object': None,
+        }
 
     @property
     def artist(self):
@@ -37,9 +39,9 @@ class ArtistMixin(TopLevelPagerMixin):
 
     @artist.setter
     def artist(self, value):
-        print (f"artist_setter: value is {value}")
         self._artist = value
         self.subject['object'] = self._artist
+        print (f"artist_setter: set subject object artist is {value}")
 
     @property
     def artwork(self):
@@ -47,13 +49,13 @@ class ArtistMixin(TopLevelPagerMixin):
 
     @artwork.setter
     def artwork(self, value):
-        print(f"artwork_setter: value is {value}")
         self._artwork = value
         self.set_artwork_attributes(self._artwork)
 
     def set_artwork_attributes(self, artwork):
         self.web_title = self.artwork.name
-        self.detail['object'] = self.artwork
+        self.detail['object'] = artwork
+        print(f"set_artwork_attributes: set detail object artwork is {artwork}")
         self.artist = self.artwork.artist
 
     # def get_artwork(self, artwork_id):

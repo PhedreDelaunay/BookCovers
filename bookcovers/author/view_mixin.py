@@ -39,6 +39,7 @@ class AuthorMixin(TopLevelPagerMixin):
     @author.setter
     def author(self, value):
         self._author = value
+        self.author_id = self._author.pk
         self.subject['object'] = self._author
         print (f"author_setter: set subject object author is {value}")
 
@@ -53,11 +54,10 @@ class AuthorMixin(TopLevelPagerMixin):
 
     def set_book_attributes(self, book):
         self.detail['object'] = book
+        self.book_id = book.pk
         print(f"set_book_attributes: set detail object book is {book}")
         self.author = book.author
-        self.book_id = book.pk
         self.web_title = book.title
-        self.author_id = book.author_id
 
     def create_top_level_pager(self, author_id=None, name=None, slug=None):
         author_pager = AuthorPager(self.request, author_id=author_id, name=name, slug=slug)
