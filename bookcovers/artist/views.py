@@ -166,10 +166,7 @@ class ArtworkSetEdition(Artwork):
                                                                    artist_id=edition.theCover.artwork.artist_id)
         self.set_pager = self.create_set_pager(set_id=set.pk)
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
-        # TODO create edition equivalent of artwork
-        self.artist = edition.theCover.artwork.artist
-        self.detail['object'] = edition
-        self.web_title = edition.theCover.artwork.artist.name
+        self.edition = edition
         return edition
 
 # http:<host>/bookcovers/artwork/set/detail/<set_id>
@@ -188,10 +185,7 @@ class ArtworkSetDetail(ArtworkSetEdition):
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
         edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
-        # TODO create edition equivalent of artwork
-        self.artist = edition.theCover.artwork.artist
-        self.detail['object'] = edition
-        self.web_title = edition.theCover.artwork.artist.name
+        self.edition = edition
         return edition
 
 # http:<host>/bookcovers/artwork/set/editions/<edition_id>
@@ -236,7 +230,5 @@ class ArtworkSetList(ArtworkSetEditions):
         set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
         edition = get_object_or_404(Edition, edition_id=queryset[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
-        self.detail['object'] = edition
-        self.artist = edition.theCover.artwork.artist
-        self.web_title = edition.theCover.artwork.artist.name
+        self.edition = edition
         return queryset
