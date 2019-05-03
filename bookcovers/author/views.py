@@ -4,7 +4,7 @@ from django.views.generic import DetailView
 
 from bookcovers.models import Edition
 from bookcovers.cover_querys import CoverQuerys
-from bookcovers.views import SubjectList
+from bookcovers.base_views import SubjectList
 
 from .view_mixin import AuthorMixin
 
@@ -79,6 +79,7 @@ class Book(AuthorMixin, DetailView):
         super().setup(request, *args, **kwargs)
         self.book_id = kwargs.get("book_id", None)
         self.detail['list_view_name'] = 'books'
+        # up to here.  now instance variable so should only need to set exceptions in views
         # why does AuthorMixin not reset between views?
         # cos it is class variable not instance variable
 
@@ -161,6 +162,7 @@ class BookSetEdition(Book):
         self.detail['list_view_name'] = 'set_editions'
         self.detail['view_name'] = 'set_edition'
         self.detail['to_page_view_name'] = 'book_set_detail'
+        # up to here - can this be set as part of setting edition in view_mixin?
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)

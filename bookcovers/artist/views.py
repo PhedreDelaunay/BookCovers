@@ -4,7 +4,7 @@ from django.views.generic import DetailView
 
 from bookcovers.models import Edition
 from bookcovers.cover_querys import CoverQuerys
-from bookcovers.views import SubjectList
+from bookcovers.base_views import SubjectList
 
 from .view_mixin import ArtistMixin
 
