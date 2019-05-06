@@ -762,7 +762,7 @@ class ArtworkQueryTests(QueryTestCase):
         # keys in dictionary returned from raw sql query
         self.expected_keys = ["cover_filepath", "cover_filename", "cover_id", "book_id", "edition_id", "artist_id", "artwork_id"]
         # keys in dictionary returned from django query
-        self.actual_keys = ["artwork__artist__cover_filepath", "cover_filename", "cover_id",
+        self.actual_keys = ["cover_filepath", "cover_filename", "cover_id",
                             "book__pk", "edition__pk", "artwork__artist__pk", "artwork__pk"]
 
     def test_artworks_cover_list(self):

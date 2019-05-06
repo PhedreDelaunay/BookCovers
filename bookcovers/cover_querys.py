@@ -331,7 +331,8 @@ class CoverQuerys:
                         'edition__pk',
                         'artwork__artist__pk',
                         'cover_filename',
-                        'artwork__artist__cover_filepath')
+                        cover_filepath=F('artwork__artist__cover_filepath'), \
+                        author=F('book__author__name'))
 
         print (f"all_covers_for_artwork: covers.query is\n{covers.query}")
         return covers
