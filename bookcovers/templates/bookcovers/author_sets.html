@@ -1,3 +1,4 @@
+{# ex: /bookcovers/author/H.P.%20Lovecraft/sets/ #}
 {% extends "bookcovers/base.html" %}
 
 {% load static %}
@@ -18,5 +19,7 @@
                  alt="{{ cover.book__title }}"
                  title="{{ cover.book__title }}">
         </a>
+     {% empty %}
+        <BR><BR>No sets found for {{ view.author.name }}
     {% endfor %}
 {% endblock %}

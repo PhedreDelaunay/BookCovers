@@ -1,3 +1,4 @@
+{# ex: /bookcovers/artist/John%20Richards/sets/ #}
 {% extends "bookcovers/base.html" %}
 
 {% load static %}
@@ -18,5 +19,8 @@
                  alt="{{ cover.book__title }}"
                  title="{{ cover.book__title }}">
         </a>
+    {% empty %}
+        <BR><BR>No sets found for {{ view.artist.name }}
     {% endfor %}
+
 {% endblock %}

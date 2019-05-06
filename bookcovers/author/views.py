@@ -69,7 +69,7 @@ class AuthorBooks(AuthorMixin, ListView):
     #     # needed to have an HttpResponse
     #     return super(AuthorBooks, self).dispatch(request, *args, **kwargs)
 
-# http:<host>/bookcovers/book/<book_id>
+# http:<host>/bookcovers/book/<book_id>/
 # http:<host>/bookcovers/book/<the%20title> - not implemented
 class Book(AuthorMixin, DetailView):
     template_name = 'bookcovers/book.html'
@@ -92,7 +92,7 @@ class Book(AuthorMixin, DetailView):
         return context
 
 
-# http:<host>/bookcovers/book/edition/<edition_id>
+# http:<host>/bookcovers/book/edition/<edition_id>/
 class BookEdition(Book):
 
     def setup(self, request, *args, **kwargs):
