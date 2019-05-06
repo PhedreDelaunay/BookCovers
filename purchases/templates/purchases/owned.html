@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h1>Owned</h1>
+{% for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+    <a href="{% url 'purchases:owned_alpha' letter%}">{{ letter }}</a>
+{% endfor %}
+
+{%  if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+Num Entries {{ books|length }}
+</div>
+{%  else %}
+    <BR><b>{{ view.kwargs.letter }}</b><BR>
+{%  endif %}
+<BR>
+<table>
+<tr><td><b>Author</b></td><td><b>Title</b></td><td><b>Artist</b></td><td><b>Publisher/Year</b></td></tr>
+{% for book in books %}
+    <tr><td>{{ book.author_name|title }}</td><td>{{ book.title }}</td><td>{{ book.artist_name }}</td>
+        <td>{{ book.publisher_year }}</td></tr>
+{% empty %}
+    No authors found beginning with {{ view.kwargs.letter }}
+{% endfor %}
+</table>
+
+
+
+
+<body>
+
+</html>
