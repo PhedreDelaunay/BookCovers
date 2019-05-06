@@ -68,10 +68,12 @@ class ArtistMixin(TopLevelPagerMixin):
         self.set_edition_attributes(self._edition)
 
     def set_edition_attributes(self, edition):
+        print(f"set_edition_attributes: set detail object edition is {edition}")
+        self.artwork = edition.theCover.artwork
+        self.artist = self.artwork.artist
+        self.web_title = self.artist.name
+        # must set after artwork attributes
         self.detail['object'] = edition
-        print(f"set_artwork_attributes: set detail object edition is {edition}")
-        self.artist = edition.theCover.artwork.artist
-        self.web_title = edition.theCover.artwork.artist.name
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
         artist_pager = ArtistPager(self.request,  artist_id=artist_id, name=name, slug=slug)

@@ -69,10 +69,13 @@ class AuthorMixin(TopLevelPagerMixin):
         self.set_edition_attributes(self._edition)
 
     def set_edition_attributes(self, edition):
+        self.detail['view_name'] = 'set_edition'
+        self.detail['list_view_name'] = 'set_editions'
         self.detail['object'] = edition
+
         print(f"set_edition_attributes: set detail object edition is {edition}")
         self.author = edition.book.author
-        self.web_title = edition.book.author.name
+        self.web_title = self.author.name
 
     def create_top_level_pager(self, author_id=None, name=None, slug=None):
         author_pager = AuthorPager(self.request, author_id=author_id, name=name, slug=slug)

@@ -157,11 +157,10 @@ class ArtworkSetEdition(Artwork):
         self.detail['list_view_name'] = 'artwork_set_editions'
         self.detail['view_name'] = 'artwork_set_edition'
         self.detail['to_page_view_name'] = 'artwork_set_detail'
+        print (f"ArtworkSetEdition::setup edition_id is '{self.edition_id}'")
 
     def get_object(self, queryset=None):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)
-        print(f"ArtworkSetEdition::get_object: author id is '{edition.book.author_id}'")
-        print(f"ArtworkSetEdition::get_object: artist id is '{edition.theCover.artwork.artist_id}'")
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
         self.set_pager = self.create_set_pager(set_id=set.pk)
