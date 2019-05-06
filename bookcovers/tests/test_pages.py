@@ -116,8 +116,15 @@ class ArtworkPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/artwork_cover.html'
 
-        # TODO test for thumnbails, no thumbnails
+    def test_thumbnails(self):
+         # ex /bookcovers/artwork/12/
+        response = self.client.get(reverse('bookcovers:artwork', kwargs={'artwork_id':12}))
+        self.assertContains(response, 'class="thumbnail', count=2, status_code=200, msg_prefix='artwork 12 ', html=False)
 
+    def test_no_thumbnails(self):
+        # ex /bookcovers/artwork/446/
+        response = self.client.get(reverse('bookcovers:artwork', kwargs={'artwork_id': 446}))
+        self.assertNotContains(response,'class="thumbnail', status_code=200, msg_prefix='artwork 446:', html=False)
 
 class ArtworkEditionPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/edition/7/
@@ -126,7 +133,15 @@ class ArtworkEditionPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/artwork_cover.html'
 
-        # TODO test for thumnbails, no thumbnails
+    def test_thumbnails(self):
+         # ex /bookcovers/artwork/edition/6/
+        response = self.client.get(reverse('bookcovers:artwork_edition', kwargs={'edition_id': 6}))
+        self.assertContains(response, 'class="thumbnail', count=2, status_code=200, msg_prefix='edition 6 ', html=False)
+
+    def test_no_thumbnails(self):
+        # ex /bookcovers/artwork/edition/185/
+        response = self.client.get(reverse('bookcovers:artwork_edition', kwargs={'edition_id': 185}))
+        self.assertNotContains(response,'class="thumbnail', status_code=200, msg_prefix='edition 185:', html=False)
 
 class ArtworkListPageTest(PageTestCases.PageTestCase):
     # /bookcovers/artworks/6/
@@ -143,7 +158,27 @@ class ArtworkSetEditionPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_edition.html'
 
-     # TODO test for thumnbails, no thumbnails
+    def test_detail_edition_id(self):
+        # ex: /artwork/set/edition/105/
+        sets_reverse_url = reverse('bookcovers:artwork_set_editions', kwargs={'edition_id': 105})
+        response = self.client.get(reverse('bookcovers:artwork_set_edition', kwargs={'edition_id': 105}))
+        self.assertContains(response, f'href="{sets_reverse_url}">', count=1, status_code=200, msg_prefix='',
+                            html=False)
+
+    def test_set_pager(self):
+        # ex: /artwork/set/edition/105/
+        num_pager_options = 4
+        sets_reverse_url = reverse('bookcovers:artwork_set_detail', kwargs={'set_id': 18})
+        #print (f'reverse_url is "{reverse_url}"')
+        response = self.client.get(reverse('bookcovers:artwork_set_edition', kwargs={'edition_id': 105}))
+        self.assertContains(response, f'href="{sets_reverse_url}', count=num_pager_options, status_code=200, msg_prefix='',
+                            html=False)
+
+    def test_thumbnails(self):
+         # ex /bookcovers/artwork/set/edition/101/
+        response = self.client.get(reverse('bookcovers:artwork_set_edition', kwargs={'edition_id': 101}))
+        self.assertContains(response, 'class="thumbnail', count=4, status_code=200, msg_prefix='Edition 101 ', html=False)
+
 
 class ArtworkSetDetailPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/set/detail/3/
@@ -152,7 +187,10 @@ class ArtworkSetDetailPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_edition.html'
 
-    # TODO test for thumnbails, no thumbnails
+    def test_thumbnails(self):
+         # ex /bookcovers/artwork/set/detail/3/
+        response = self.client.get(reverse('bookcovers:artwork_set_detail', kwargs={'set_id': 3}))
+        self.assertContains(response, 'class="thumbnail', count=7, status_code=200, msg_prefix='Set 3', html=False)
 
 class ArtworkSetEditionsPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/set/editions/6/
@@ -160,6 +198,16 @@ class ArtworkSetEditionsPageTest(PageTestCases.PageTestCase):
         self.reverse_url = reverse('bookcovers:artwork_set_editions', kwargs={'edition_id': 6})
         self.expected_response_code = 200
         self.template_url = 'bookcovers/set_editions.html'
+
+    def test_set_pager(self):
+        # ex: /artwork/set/editions/105/
+        num_pager_options = 4
+        sets_reverse_url = reverse('bookcovers:artwork_set_list', kwargs={'set_id': 18})
+        #print (f'reverse_url is "{reverse_url}"')
+        response = self.client.get(reverse('bookcovers:artwork_set_editions', kwargs={'edition_id': 105}))
+        self.assertContains(response, f'href="{sets_reverse_url}', count=num_pager_options, status_code=200,
+                            msg_prefix='Edition 105',
+                            html=False)
 
 class ArtworkSetListPageTest(PageTestCases.PageTestCase):
     # ex: /bookcovers/artwork/set/list/3/
@@ -190,7 +238,6 @@ class AuthorPageTest(PageTestCases.PageTestCase):
     def test_page_contains_sets_link(self):
         # ex: /bookcovers/author/Ray%20Bradbury/
         sets_reverse_url = reverse('bookcovers:author_sets', kwargs={'name':'Ray Bradbury'})
-        #print (f'reverse_url is "{reverse_url}"')
         response = self.client.get(reverse('bookcovers:author_books', kwargs={'name':'Ray Bradbury'}))
         self.assertContains(response, f'href="{sets_reverse_url}">', count=1, status_code=200, msg_prefix='', html=False)
 
