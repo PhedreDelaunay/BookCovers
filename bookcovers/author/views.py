@@ -102,6 +102,7 @@ class BookEdition(Book):
     def get_object(self, queryset=None):
         edition = get_object_or_404(Edition, edition_id=self.edition_id)
         self.create_pagers(book_id=edition.book.pk)
+        # TODO create_pagers sets self.book but this is not obvious, make more explicit
         self.cover_list = CoverQuerys.all_covers_for_title(self.book)
         return edition
 

@@ -1,4 +1,4 @@
-{#  Displays multiple book covers #}
+{#  Included to display multiple book covers #}
 {% load static %}
  <h2>{{ view.web_title }}</h2>
 detail view is '{{ view.detail.view_name }}'
@@ -8,7 +8,7 @@ detail view is '{{ view.detail.view_name }}'
 <BR>
     {% endifchanged %}
     {% if cover.cover_filepath == "BookCovers/Images/Unknown/" %}
-        {% with wauthor=cover.book__author__name|cut:" " %}
+        {% with wauthor=cover.book__author__name|cut:" "|cut:"." %}
             <a href="{% url 'bookcovers:'|add:view.detail.view_name cover.edition_id %}">
                     <IMG class="cover_list" src="{% static cover.cover_filepath|add:wauthor|add:'/'|add:cover.cover_filename %}"
                          alt="{{ cover.book_title }}"

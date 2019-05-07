@@ -8,7 +8,7 @@ view.detail.object is '{{  view.detail.object.pk }}'
      <a href="{% url 'bookcovers:'|add:view.detail.list_view_name view.detail.object.pk %}">
 {% endif %}
     {% if edition.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
-        {% with wauthor=edition.book.author.name|cut:" " %}
+        {% with wauthor=edition.book.author.name|cut:" "|cut:"." %}
             <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:wauthor|add:'/'|add:edition.theCover.cover_filename %}"
                 alt="{{ cover.book__title }}"
                 title="{{ cover.book__title }}">
