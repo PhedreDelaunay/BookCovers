@@ -6,6 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from django.utils.functional import cached_property
 
 import collections
 
@@ -80,6 +81,7 @@ class Author(models.Model):
         # sort alphabetically in admin
         ordering = ('name',)
 
+
 class AuthorAka(models.Model):
     # pk=id is implied
     author_aka_id = models.IntegerField()
@@ -114,6 +116,7 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
+    @cached_property
     def get_creator(self):
         return self.author
 
@@ -143,21 +146,23 @@ class Artwork(models.Model):
     def __str__(self):
         return self.name
 
+    @cached_property
     def get_creator(self):
         return self.artist
 
-    def get_first_cover_filename(self):
-        # can use first
-        # https: // docs.djangoproject.com / en / 2.2 / ref / models / querysets /  # django.db.models.query.QuerySet.first
-        # should covers be theCovers?
-        if self.covers:
-            cover = self.covers.filter(flags__lt=256).order_by('edition__print_year')[0]
-            # print("cover is {}".format(cover))
-            cover_filename = cover.cover_filename
-        return cover_filename
+    # def get_first_cover_filename(self):
+    #     # can use first
+    #     # https://docs.djangoproject.com/en/2.2/ref/models/querysets/#django.db.models.query.QuerySet.first
+    #     # should covers be theCovers?
+    #     if self.covers:
+    #         cover = self.covers.filter(flags__lt=256).order_by('edition__print_year')[0]
+    #         # print("cover is {}".format(cover))
+    #         cover_filename = cover.cover_filename
+    #     return cover_filename
 
     class Meta:
         db_table = 'artworks'
+
 
 class Country(models.Model):
     country_id = models.AutoField(primary_key=True)
@@ -169,6 +174,7 @@ class Country(models.Model):
 
     class Meta:
         db_table = 'countries'
+
 
 class Edition(models.Model):
     edition_id = models.AutoField(primary_key=True)
@@ -197,6 +203,7 @@ class Edition(models.Model):
 
     class Meta:
         db_table = 'editions'
+
 
 class Cover(models.Model):
     '''
@@ -230,6 +237,7 @@ class Cover(models.Model):
     class Meta:
         db_table = 'covers'
 
+
 class PrintRun(models.Model):
     id = models.AutoField(primary_key=True)
     print_run_id = models.IntegerField()
@@ -250,6 +258,7 @@ class PrintRun(models.Model):
     class Meta:
         db_table = 'print_runs'
         unique_together = (('print_run_id', 'order'),)
+
 
 class Currency(models.Model):
     currency_id = models.AutoField(primary_key=True)
@@ -284,6 +293,7 @@ class Genre(models.Model):
     class Meta:
         db_table = 'genres'
 
+
 # A series is a collection, eg the Book of the New Sun,  Corgi SF Collectors Library
 class Series(models.Model):
     series_id = models.AutoField(primary_key=True)
@@ -292,6 +302,7 @@ class Series(models.Model):
 
     class Meta:
         db_table = 'series'
+
 
 # A set is a set of covers for a series, eg
 # Bruce Pennington covers for the Book of the New Sun
@@ -311,6 +322,7 @@ class Set(models.Model):
     description = models.CharField(max_length=50, blank=True, null=True)
     panorama_id = models.IntegerField(blank=True, null=True)
 
+    @cached_property
     def get_creator(self):
         Creators = collections.namedtuple('Creators', 'author artist')
         creators = Creators(author=self.author, artist=self.artist)
@@ -318,6 +330,7 @@ class Set(models.Model):
 
     class Meta:
         db_table = 'sets'
+
 
 # Set Exceptions are covers to exclude from a set
 class SetExceptions(models.Model):
@@ -330,6 +343,7 @@ class SetExceptions(models.Model):
 
     class Meta:
         db_table = 'set_exceptions'
+
 
 # linking table listing all books in a series
 class BookSeries(models.Model):
@@ -363,6 +377,7 @@ class Panorama(models.Model):
 
     class Meta:
         db_table = 'panoramas'
+
 
 class Artbook(models.Model):
     artbook_id = models.AutoField(primary_key=True)
