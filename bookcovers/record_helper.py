@@ -16,7 +16,7 @@ def get_subject_record(model, subject_id=None, name=None, slug=None):
         kwargs = {'name': name}
     elif slug:
         slug = transform_slug(slug)
-        kwargs = {'name': slug}
+        kwargs = {'slug': slug}
     # TODO default or exception if no value supplied
 
     for key, value in kwargs.items():

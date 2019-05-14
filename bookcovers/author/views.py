@@ -158,7 +158,8 @@ class BookSetEdition(Book):
         self.detail['to_page_view_name'] = 'book_set_detail'
 
     def get_object(self, queryset=None):
-        edition = get_object_or_404(Edition, edition_id=self.edition_id)
+        edition = get_object_or_404(Edition.objects.select_related('book__author'), edition_id=self.edition_id)
+        #edition = get_object_or_404(Edition, edition_id=self.edition_id)
         print (f"SetEdition:get_object author id is '{edition.book.author_id}'")
         print (f"SetEdition:get_object artist id is '{edition.theCover.artwork.artist_id}'")
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,

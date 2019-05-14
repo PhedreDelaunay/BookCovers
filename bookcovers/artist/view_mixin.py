@@ -1,19 +1,21 @@
 from django.shortcuts import get_object_or_404
 
 from bookcovers.pagers import ArtistPager
-from bookcovers.pagers import BookPager
+from bookcovers.pagers import ArtworkPager
 from bookcovers.pagers import SetPager
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Artist
-from bookcovers.models import Artwork
 from bookcovers.models import Set
+from bookcovers.models import Edition
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
 class ArtistMixin(TopLevelPagerMixin):
 
     def __init__(self):
+        super().__init__()
+
         self.subject_list = {
             'title': 'artists',
             'view_name': 'artists',
@@ -56,7 +58,8 @@ class ArtistMixin(TopLevelPagerMixin):
         self.detail['object'] = artwork
         self.web_title = artwork.name
         print(f"set_artwork_attributes: set detail object artwork is {artwork}")
-        self.artist = artwork.artist
+        #self.artist = artwork.artist
+        self.artist = artwork.get_creator
 
     @property
     def edition(self):
@@ -76,42 +79,47 @@ class ArtistMixin(TopLevelPagerMixin):
         self.detail['object'] = edition
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
-        artist_pager = ArtistPager(self.request,  artist_id=artist_id, name=name, slug=slug)
+        print(f"ArtistMixin:create_top_level_pagert: artist_id={artist_id} name='{name}' slug='{slug}'")
+        artist_pager = ArtistPager(self.request, self.query_cache,  artist_id=artist_id, name=name, slug=slug)
         return artist_pager
 
-    def create_book_pager(self, artwork_id):
+    def create_artwork_pager(self, artwork_id):
         # book cover pager
         page_number = self.request.GET.get('page')
         print(f"ArtworkMixin: create_book_pager - page number is '{page_number}'")
 
-        pager = BookPager(page_number=page_number, item_id=artwork_id)
-        book_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
-                                 item_id_key="artwork_id",
-                                 item_model=Artwork,
-                                 subject_id_key='artist_id',
-                                 subject_model=Artist)
+        pager = ArtworkPager(self.query_cache, page_number=page_number, item_id=artwork_id)
+        artwork_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
+                                 item_id_key="artwork_id")
+        # subject_id_key = 'artist_id',
+        # subject_model = Artist
         self.artwork = pager.get_entry()
         print (f"ArtworkMixin: create_book_pager: artwork_id={self.artwork.pk}")
         print(f"ArtworkMixin: create_book_pager: artwork.name={self.artwork.name}")
-        return book_pager
+        return artwork_pager
 
     def create_set_pager(self, set_id):
         # book cover pager
         page_number = self.request.GET.get('page')
         print(f"ArtworkMixin: create_set_pager - page number is '{page_number}'")
 
-        pager = SetPager(page_number=page_number, item_id=set_id)
+        pager = SetPager(self.query_cache, page_number=page_number, item_id=set_id)
         set_pager = pager.pager(set_query=CoverQuerys.artist_set_list,
                                 item_id_key="set_id",
                                 item_model=Set,
-                                subject_id_key='artist_id',
                                 subject_model=Artist)
         self.set = pager.get_entry()
         return set_pager
 
     def create_pagers(self, artwork_id):
         # order matters, get book pager (and hence artwork) first to ascertain the artist
-        self.book_pager = self.create_book_pager(artwork_id=artwork_id)
+        self.book_pager = self.create_artwork_pager(artwork_id=artwork_id)
         # TODO book_pager sets self.artwork but this is not obvious, make more explicit
         print (f"ArtworkMixin::create_pagers: artist is '{self.artwork.artist.pk}, {self.artwork.artist_id}'")
         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
+
+    def get_edition(self, edition_id):
+        edition = get_object_or_404(Edition.objects.select_related('theCover','thePrintRun','book',
+                                    'theCover__artwork','theCover__artwork__artist','book__author'),
+                                    edition_id=edition_id)
+        return edition

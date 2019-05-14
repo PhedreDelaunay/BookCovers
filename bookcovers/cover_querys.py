@@ -510,8 +510,8 @@ class CoverQuerys:
 
         inner_queryset_exceptions = SetExceptions.objects. \
             values_list('cover', flat=True)
-        print(f"series_covers: {list(inner_queryset_exceptions)}")
-        print(f"series_covers: length {len(inner_queryset_exceptions)}")
+        #print(f"series_covers: {list(inner_queryset_exceptions)}")
+        #print(f"series_covers: length {len(inner_queryset_exceptions)}")
 
         # this gives us list of covers in correct order but still includes exceptions
         # if you exclude here too many records are excluded
@@ -519,8 +519,8 @@ class CoverQuerys:
             filter(series=series_id). \
             filter(book__theCover__artwork__artist__pk=artist_id). \
             values_list('book__theCover__pk', flat=True)
-        print(f"series_covers: inner -{list(inner_queryset_cover_list)}")
-        print(f"series_covers: inner -length {len(inner_queryset_cover_list)}")
+        #print(f"series_covers: inner -{list(inner_queryset_cover_list)}")
+        #print(f"series_covers: inner -length {len(inner_queryset_cover_list)}")
 
         cover_list = Cover.objects. \
             filter(book__theBooksSeries__series=series_id).\
@@ -529,8 +529,8 @@ class CoverQuerys:
             filter(is_variant=False, flags__lt=256)
 
         #print (f"set_covers: {cover_list.query}")
-        print (f"series_covers: {list(cover_list)}")
-        print (f"series_covers: length {len(cover_list)}")
+        #print (f"series_covers: {list(cover_list)}")
+        #print (f"series_covers: length {len(cover_list)}")
 
         if return_dict:
             # series_cover_list = cover_list. \
@@ -557,7 +557,7 @@ class CoverQuerys:
                 order_by('artwork__artist', 'book__theBooksSeries__volume'). \
                 select_related('book','artwork')
 
-        CoverQuerys.print_dict_list(list(series_cover_list))
+        #CoverQuerys.print_dict_list(list(series_cover_list))
         # print(f"series_covers: length {len(series_cover_list)}")
 
         return series_cover_list

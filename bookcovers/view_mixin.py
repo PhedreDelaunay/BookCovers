@@ -2,6 +2,9 @@
 # the view is available in the template for generic class based views
 # so can provide data as attributes rather than manipulating context
 
+
+from bookcovers.query_cache import QueryCache
+
 # Base mixin used by all web pages to provide html title
 class TitleMixin():
     @property
@@ -13,6 +16,9 @@ class TitleMixin():
         self._web_title = value
 
 class TopLevelPagerMixin(TitleMixin):
+
+    def __init__(self):
+        self.query_cache = QueryCache()
 
     @property
     def the_pager(self):

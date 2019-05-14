@@ -43,7 +43,7 @@ class ArtistArtworks(ArtistMixin, ListView):
         self.name = kwargs.get("name", None)
         self.slug = kwargs.get("slug", None)
         self._artist = None
-        print (f"in setup: artist_id={self.artist_id}")
+        print (f"ArtistArtworks::setup: artist_id={self.artist_id} name='{self.name}' slug='{self.slug}'")
 
     def set_list(self):
         set_list = CoverQuerys.artist_set_list(artist_id=self.artist.pk)
@@ -71,8 +71,8 @@ class Artwork(ArtistMixin, DetailView):
     def get_object(self, queryset=None):
         self.create_pagers(artwork_id=self.artwork_id)
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
-        edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition__pk'])
-        print(f"ArtworkCover: get_object artwork.name={self.artwork.name}")
+        edition = self.get_edition(edition_id=self.cover_list[0]['edition__pk'])
+        print(f"Artwork: get_object artwork.name={self.artwork.name}")
         return edition
 
     def get_context_data(self, **kwargs):
@@ -91,11 +91,55 @@ class ArtworkEdition(Artwork):
         self.detail['list_view_name'] = 'artworks'
 
     def get_object(self, queryset=None):
-        edition = get_object_or_404(Edition, edition_id=self.edition_id)
-        print (f"ArtworkEdition: artist is '{edition.theCover.artwork.artist_id}'")
+        edition = self.get_edition(edition_id=self.edition_id)
         self.create_pagers(artwork_id=edition.theCover.artwork.pk)
         print(f"ArtworkEdition: get_object artwork.name={self.artwork.name}")
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
+        return edition
+
+
+# http:<host>/bookcovers/artwork/set/edition/<edition_id>
+class ArtworkSetEdition(Artwork):
+    """
+        given the edition id, displays detail for the edition and thumbnails for the associated editions in the set
+    """
+    template_name = 'bookcovers/set_edition.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.edition_id = kwargs.get("edition_id", None)
+        self.detail['list_view_name'] = 'artwork_set_editions'
+        self.detail['view_name'] = 'artwork_set_edition'
+        self.detail['to_page_view_name'] = 'artwork_set_detail'
+        print (f"ArtworkSetEdition::setup edition_id is '{self.edition_id}'")
+
+    def get_object(self, queryset=None):
+        edition = self.get_edition(edition_id=self.edition_id)
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
+                                                                   artist_id=edition.theCover.artwork.artist_id)
+        self.set_pager = self.create_set_pager(set_id=set.pk)
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        self.edition = edition
+        return edition
+
+
+# http:<host>/bookcovers/artwork/detail/set/<set_id>
+class ArtworkSetDetail(ArtworkSetEdition):
+    """
+        given the set id, displays detail for the edition and thumbnails for the associated editions in the set
+    """
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.set_id = kwargs.get("set_id", None)
+        print (f"ArtworkSetDetail::setup set_id is '{self.set_id}'")
+
+    def get_object(self, queryset=None):
+        self.set_pager = self.create_set_pager(set_id=self.set_id)
+        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
+        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
+        edition = self.get_edition(edition_id=self.cover_list[0]['edition_id'])
+        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
+        self.edition = edition
         return edition
 
 
@@ -144,49 +188,6 @@ class ArtistSets(ArtistMixin, ListView):
         return queryset
 
 
-# http:<host>/bookcovers/artwork/set/edition/<edition_id>
-class ArtworkSetEdition(Artwork):
-    """
-        given the edition id, displays detail for the edition and thumbnails for the associated editions in the set
-    """
-    template_name = 'bookcovers/set_edition.html'
-
-    def setup(self, request, *args, **kwargs):
-        super().setup(request, *args, **kwargs)
-        self.edition_id = kwargs.get("edition_id", None)
-        self.detail['list_view_name'] = 'artwork_set_editions'
-        self.detail['view_name'] = 'artwork_set_edition'
-        self.detail['to_page_view_name'] = 'artwork_set_detail'
-        print (f"ArtworkSetEdition::setup edition_id is '{self.edition_id}'")
-
-    def get_object(self, queryset=None):
-        edition = get_object_or_404(Edition, edition_id=self.edition_id)
-        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
-                                                                   artist_id=edition.theCover.artwork.artist_id)
-        self.set_pager = self.create_set_pager(set_id=set.pk)
-        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
-        self.edition = edition
-        return edition
-
-# http:<host>/bookcovers/artwork/set/detail/<set_id>
-class ArtworkSetDetail(ArtworkSetEdition):
-    """
-        given the set id, displays detail for the edition and thumbnails for the associated editions in the set
-    """
-    def setup(self, request, *args, **kwargs):
-        super().setup(request, *args, **kwargs)
-        self.set_id = kwargs.get("set_id", None)
-        print (f"ArtworkSetDetail::setup set_id is '{self.set_id}'")
-
-    def get_object(self, queryset=None):
-        self.set_pager = self.create_set_pager(set_id=self.set_id)
-        # TODO create_set_pager sets self.set but this is not obvious, make more explicit
-        set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
-        edition = get_object_or_404(Edition, edition_id=self.cover_list[0]['edition_id'])
-        self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
-        self.edition = edition
-        return edition
-
 # http:<host>/bookcovers/artwork/set/editions/<edition_id>
 class ArtworkSetEditions(ArtistMixin, ListView):
     """
@@ -202,7 +203,7 @@ class ArtworkSetEditions(ArtistMixin, ListView):
         self.detail['to_page_view_name'] = 'artwork_set_list'
 
     def get_queryset(self):
-        edition = get_object_or_404(Edition, edition_id=self.edition_id)
+        edition = self.get_edition(edition_id=self.edition_id)
         print(f"ArtworkSetEditions::get_queryset author id is '{edition.book.author_id}'")
         print(f"ArtworkSetEditions:get_queryset artist id is '{edition.theCover.artwork.artist_id}'")
         set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
@@ -213,7 +214,7 @@ class ArtworkSetEditions(ArtistMixin, ListView):
         self.set_pager = self.create_set_pager(set_id=set.pk)
         return queryset
 
-# http:<host>/bookcovers/artwork/set/list/<set_id>
+# http:<host>/bookcovers/artwork/list/set/<set_id>
 class ArtworkSetList(ArtworkSetEditions):
     """
         given the set idm displays all the covers for the set
@@ -227,7 +228,7 @@ class ArtworkSetList(ArtworkSetEditions):
         self.set_pager = self.create_set_pager(set_id=self.set_id)
         # TODO create_set_pager sets self.set but this is not obvious, make more explicit
         set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
-        edition = get_object_or_404(Edition, edition_id=queryset[0]['edition_id'])
+        edition = self.get_edition(edition_id=queryset[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.edition = edition
         return queryset
