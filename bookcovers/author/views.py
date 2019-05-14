@@ -169,7 +169,7 @@ class BookSetEdition(Book):
         self.edition = edition
         return edition
 
-# http:<host>/bookcovers/book/set/detail/<set_id>
+# http:<host>/bookcovers/book/detail/set/<set_id>
 class BookSetDetail(BookSetEdition):
     """
         given the set id, displays detail for the edition and thumbnails for the associated editions in the set
@@ -214,7 +214,7 @@ class BookSetEditions(AuthorMixin, ListView):
         return queryset
 
 
-# http:<host>/bookcovers/book/set/list/<set_id>
+# http:<host>/bookcovers/book/list/set/<set_id>
 class BookSetList(BookSetEditions):
     """
         given the set id, displays all the covers for the set
