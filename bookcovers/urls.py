@@ -64,9 +64,9 @@ urlpatterns = [
     path('books/<int:book_id>/', Books.as_view(), name='books'),
     # ex: /bookcovers/book/edition/6/
     path('book/edition/<int:edition_id>/', BookEdition.as_view(), name="book_edition"),
-    # /bookcovers/book/set/detail/3/
+    # /bookcovers/book/detail/set/3/
     path('book/detail/set/<int:set_id>/', BookSetDetail.as_view(), name="book_set_detail"),
-    # /bookcovers/book/set/list/3/
+    # /bookcovers/book/list/set/3/
     path('book/list/set/<int:set_id>/', BookSetList.as_view(), name="book_set_list"),
     # ex: /bookcovers/book/set/edition/6/
     path('book/set/edition/<int:edition_id>/', BookSetEdition.as_view(), name="set_edition"),
@@ -78,9 +78,9 @@ urlpatterns = [
     path('artworks/<int:artwork_id>/', Artworks.as_view(), name='artworks'),
     # ex: /bookcovers/artwork/edition/7/
     path('artwork/edition/<int:edition_id>/', ArtworkEdition.as_view(), name="artwork_edition"),
-    # /bookcovers/artwork/set/detail/3/
+    # /bookcovers/artwork/detail/set/3/
     path('artwork/detail/set/<int:set_id>/', ArtworkSetDetail.as_view(), name="artwork_set_detail"),
-    # /bookcovers/artwork/set/list/3/
+    # /bookcovers/artwork/list/set/3/
     path('artwork/list/set/<int:set_id>/', ArtworkSetList.as_view(), name="artwork_set_list"),
     # ex: /bookcovers/artwork/set/edition/6/
     path('artwork/set/edition/<int:edition_id>/', ArtworkSetEdition.as_view(), name="artwork_set_edition"),
