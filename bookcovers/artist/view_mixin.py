@@ -117,9 +117,3 @@ class ArtistMixin(TopLevelPagerMixin):
         # TODO book_pager sets self.artwork but this is not obvious, make more explicit
         print (f"ArtworkMixin::create_pagers: artist is '{self.artwork.artist.pk}, {self.artwork.artist_id}'")
         self.the_pager = self.create_top_level_pager(artist_id=self.artwork.artist_id)
-
-    def get_edition(self, edition_id):
-        edition = get_object_or_404(Edition.objects.select_related('theCover','thePrintRun','book',
-                                    'theCover__artwork','theCover__artwork__artist','book__author'),
-                                    edition_id=edition_id)
-        return edition

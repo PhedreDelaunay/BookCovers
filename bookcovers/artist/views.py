@@ -71,7 +71,7 @@ class Artwork(ArtistMixin, DetailView):
     def get_object(self, queryset=None):
         self.create_pagers(artwork_id=self.artwork_id)
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
-        edition = self.get_edition(edition_id=self.cover_list[0]['edition__pk'])
+        edition = self.query_cache.edition(edition_id=self.cover_list[0]['edition__pk'])
         print(f"Artwork: get_object artwork.name={self.artwork.name}")
         return edition
 
@@ -91,7 +91,7 @@ class ArtworkEdition(Artwork):
         self.detail['list_view_name'] = 'artworks'
 
     def get_object(self, queryset=None):
-        edition = self.get_edition(edition_id=self.edition_id)
+        edition = self.query_cache.edition(edition_id=self.edition_id)
         self.create_pagers(artwork_id=edition.theCover.artwork.pk)
         print(f"ArtworkEdition: get_object artwork.name={self.artwork.name}")
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
@@ -114,7 +114,7 @@ class ArtworkSetEdition(Artwork):
         print (f"ArtworkSetEdition::setup edition_id is '{self.edition_id}'")
 
     def get_object(self, queryset=None):
-        edition = self.get_edition(edition_id=self.edition_id)
+        edition = self.query_cache.edition(edition_id=self.edition_id)
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
                                                                    artist_id=edition.theCover.artwork.artist_id)
         self.set_pager = self.create_set_pager(set_id=set.pk)
@@ -137,7 +137,7 @@ class ArtworkSetDetail(ArtworkSetEdition):
         self.set_pager = self.create_set_pager(set_id=self.set_id)
         # TODO create_set_pager sets self.set but this is not obvious, make more explicit
         set, self.cover_list = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
-        edition = self.get_edition(edition_id=self.cover_list[0]['edition_id'])
+        edition = self.query_cache.edition(edition_id=self.cover_list[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.edition = edition
         return edition
@@ -203,7 +203,7 @@ class ArtworkSetEditions(ArtistMixin, ListView):
         self.detail['to_page_view_name'] = 'artwork_set_list'
 
     def get_queryset(self):
-        edition = self.get_edition(edition_id=self.edition_id)
+        edition = self.query_cache.edition(edition_id=self.edition_id)
         print(f"ArtworkSetEditions::get_queryset author id is '{edition.book.author_id}'")
         print(f"ArtworkSetEditions:get_queryset artist id is '{edition.theCover.artwork.artist_id}'")
         set, queryset = CoverQuerys.author_artist_set_cover_list(author_id=edition.book.author_id,
@@ -228,7 +228,7 @@ class ArtworkSetList(ArtworkSetEditions):
         self.set_pager = self.create_set_pager(set_id=self.set_id)
         # TODO create_set_pager sets self.set but this is not obvious, make more explicit
         set, queryset = CoverQuerys.author_artist_set_cover_list(set_id=self.set.pk)
-        edition = self.get_edition(edition_id=queryset[0]['edition_id'])
+        edition = self.query_cache.edition(edition_id=queryset[0]['edition_id'])
         self.the_pager = self.create_top_level_pager(artist_id=edition.theCover.artwork.artist_id)
         self.edition = edition
         return queryset

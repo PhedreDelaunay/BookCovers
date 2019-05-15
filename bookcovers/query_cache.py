@@ -4,6 +4,7 @@ from bookcovers.models import Artwork
 from bookcovers.models import Author
 from bookcovers.models import Book
 from bookcovers.models import Set
+from bookcovers.models import Edition
 
 class QueryCache:
     @staticmethod
@@ -45,12 +46,16 @@ class QueryCache:
 
         return kwargs
 
-    def artwork(self, artwork_id):
-        if artwork_id != self._artwork_id or self._artwork is None:
-            self._artwork_id = artwork_id
-            self._artwork = get_object_or_404(Artwork.objects.select_related('artist'), artwork_id=artwork_id)
+    def artwork(self, artwork=None, artwork_id=None):
+        if artwork is not None:
+            self._artwork = artwork
+            self._artwork_id = artwork.artwork_id
+        else:
+            if artwork_id != self._artwork_id or self._artwork is None:
+                self._artwork_id = artwork_id
+                self._artwork = get_object_or_404(Artwork.objects.select_related('artist'), artwork_id=artwork_id)
         print(f"QueryCache::artwork: now artwork is {hex(id(self._artwork))}")
-        self.artist(self._artwork.artist)
+        self.artist(artist= self._artwork.artist)
         return self._artwork
 
     def artist(self, artist=None, pk=None, name=None, slug=None):
@@ -65,12 +70,16 @@ class QueryCache:
                 self._artist_id = self._artist.pk
         return self._artist
 
-    def book(self, book_id):
-        if book_id != self._book_id or self._book is None:
-            self._book_id = book_id
-            self._book = get_object_or_404(Book.objects.select_related('author'), book_id=book_id)
+    def book(self, book=None, book_id=None):
+        if book is not None:
+            self._book = book
+            self._book_id = book.book_id
+        else:
+            if book_id != self._book_id or self._book is None:
+                self._book_id = book_id
+                self._book = get_object_or_404(Book.objects.select_related('author'), book_id=book_id)
         print(f"QueryCache::book: now book is {hex(id(self._book))}")
-        self.author(self._book.author)
+        self.author(author=self._book.author)
         return self._book
 
     def author(self, author=None, pk=None, name=None, slug=None):
@@ -85,6 +94,7 @@ class QueryCache:
                 self._author_id =  self._author.pk
         return self._author
 
+    # TODO further optimization can be achieved by adding query by author and artist
     def set(self, set_id):
         print(f"QueryCache::set: set is {hex(id(self._set))}")
         print(f"QueryCache:set: set_id={set_id}")
@@ -92,6 +102,15 @@ class QueryCache:
             self._set_id = set_id
             self._set = get_object_or_404(Set.objects.select_related('author','artist'), set_id=set_id)
         print(f"QueryCache::set: now set is {hex(id(self._set))}")
-        self.author(self._set.author)
-        self.artist(self._set.artist)
+        self.author(author=self._set.author)
+        self.artist(artist=self._set.artist)
         return self._set
+
+    def edition(self, edition_id):
+        edition = get_object_or_404(Edition.objects.select_related('theCover','thePrintRun','book',
+                                    'theCover__artwork','theCover__artwork__artist','book__author'),
+                                    edition_id=edition_id)
+        #self.author(edition.book.author)
+        self.book(book=edition.book)
+        self.artwork(artwork=edition.theCover.artwork)
+        return edition
