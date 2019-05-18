@@ -294,6 +294,14 @@ class BookEditionPageTest(PageTestCases.PageTestCase):
         self.expected_response_code = 200
         self.template_url = 'bookcovers/book.html'
 
+    def test_edition_without_onetone_cover(self):
+        self.reverse_url = reverse('bookcovers:book_edition', kwargs={'edition_id': 103})
+        self.check_status_code(reverse_url=self.reverse_url)
+
+    def test_edition_without_print_run(self):
+        self.reverse_url = reverse('bookcovers:book_edition', kwargs={'edition_id': 32})
+        self.check_status_code(reverse_url=self.reverse_url)
+
     # TODO test for thumnbails, no thumbnails
 
 

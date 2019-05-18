@@ -1,0 +1,33 @@
+{% load static %}
+{% load bookcover_tags %}
+
+<table><tr>
+    <td>
+{#  list view is '{{ view.detail.list_view_name }}' #}
+{#  view.detail.object is '{{  view.detail.object.pk }}' #}
+{% if cover_list|length > 1 %}
+     <a href="{% url 'bookcovers:'|add:view.detail.list_view_name view.detail.object.pk %}">
+{% endif %}
+    {% if edition.theCover.artwork.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
+        {% with wauthor=edition.book.author.name|cut:" "|cut:"." %}
+            <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:wauthor|add:'/'|add:edition.theCover.cover_filename %}"
+                alt="{{ cover.book__title }}"
+                title="{{ cover.book__title }}">
+        {% endwith %}
+    {% else %}
+        <IMG src="{% static edition.theCover.artwork.artist.cover_filepath|add:edition.theCover.cover_filename %}"
+            alt="{{ edition.book.title }}"
+            title="{{ edition.book.title }}">
+    {% endif %}
+{% if cover_list|length > 1 %}
+    </a>
+{%  endif %}
+</td>
+    <td>
+        <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_artworks' edition.theCover.artwork.artist.artist_id %}" title="Select artist for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
+        <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level }}<BR/>
+        <B>Evidence: </B>{{ edition.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
+        {% include 'bookcovers/book_detail.html' %}
+</td>
+</tr>
+</table>

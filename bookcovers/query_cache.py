@@ -1,10 +1,12 @@
 from django.shortcuts import get_object_or_404
+
 from bookcovers.models import Artist
 from bookcovers.models import Artwork
 from bookcovers.models import Author
 from bookcovers.models import Book
 from bookcovers.models import Set
 from bookcovers.models import Edition
+from bookcovers.models import Cover
 
 class QueryCache:
     @staticmethod
@@ -110,7 +112,9 @@ class QueryCache:
         edition = get_object_or_404(Edition.objects.select_related('theCover','thePrintRun','book',
                                     'theCover__artwork','theCover__artwork__artist','book__author'),
                                     edition_id=edition_id)
-        #self.author(edition.book.author)
         self.book(book=edition.book)
-        self.artwork(artwork=edition.theCover.artwork)
+        try:
+            self.artwork(artwork=edition.theCover.artwork)
+        except Cover.DoesNotExist:
+            self._artwork = None
         return edition

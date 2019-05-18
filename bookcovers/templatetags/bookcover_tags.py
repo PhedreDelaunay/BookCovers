@@ -42,3 +42,8 @@ def edition(text, edition_id):
 #     else:
 #         render_string = esc(text)
 #     return mark_safe(render_string)
+
+
+@register.filter()
+def hascover(edition):
+    return hasattr(edition, 'theCover')
