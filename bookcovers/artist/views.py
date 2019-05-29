@@ -1,8 +1,7 @@
-from django.shortcuts import get_object_or_404
+
 from django.views.generic import ListView
 from django.views.generic import DetailView
 
-from bookcovers.models import Edition
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.base_views import SubjectList
 

@@ -47,3 +47,7 @@ def edition(text, edition_id):
 @register.filter()
 def hascover(edition):
     return hasattr(edition, 'theCover')
+
+@register.filter()
+def hasprintrun(edition):
+    return hasattr(edition, 'thePrintRun')
