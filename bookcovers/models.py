@@ -122,6 +122,8 @@ class Book(models.Model):
 
     class Meta:
         db_table = 'books'
+        # sort alphabetically in admin
+        ordering = ('title',)
 
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
@@ -375,6 +377,9 @@ class Panorama(models.Model):
     imprint_id = models.IntegerField(blank=True, null=True)
     description = models.CharField(max_length=50, blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.panorama_id}, {self.description}"
+
     class Meta:
         db_table = 'panoramas'
 
@@ -399,12 +404,20 @@ class ArtbookIndex(models.Model):
     artbook_index_id = models.AutoField(primary_key=True)
     #artbook_id = models.IntegerField(blank=True, null=True)
     artbook = models.ForeignKey(Artbook, models.DO_NOTHING,
-                               related_name="theArtbooks", related_query_name="theArtbook")
+                               related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
+    artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
+                                  related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     page = models.IntegerField(blank=True, null=True)
     book_title = models.CharField(max_length=255, blank=True, null=True)
-    book_author = models.CharField(max_length=255, blank=True, null=True)
+    book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
+                             related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
+    book_author_name = models.CharField(max_length=255, blank=True, null=True)
+    book_author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     cover_year = models.CharField(max_length=50, blank=True, null=True)
-    cover = models.CharField(max_length=255, blank=True, null=True)
+    cover_title = models.CharField(max_length=255, blank=True, null=True)
+    cover = models.ForeignKey(Cover, models.DO_NOTHING, blank=True, null=True,
+                              related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     publisher = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:

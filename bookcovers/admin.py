@@ -6,6 +6,8 @@ from bookcovers.models import Artwork
 from bookcovers.models import Book
 from bookcovers.models import Cover
 from bookcovers.models import Edition
+from bookcovers.models import ArtbookIndex
+from bookcovers.models import Artbook
 
 # Register your models here.
 
@@ -66,9 +68,27 @@ class EditionAdmin(admin.ModelAdmin):
     # without book: 17.51 ms (105 queries including 102 similar and 12 duplicates )
     # with book: 1.14 ms (5 queries including 2 similar and 2 duplicates )
 
+class ArtbookIndexAdmin(admin.ModelAdmin):
+    list_display = (
+        'book_title',
+        'book_author_name',
+    )
+    # add a search bar
+    search_fields = ['book_title',]
+
+class ArtbookAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'subtitle',
+    )
+    # add a search bar
+    search_fields = ['title', ]
+
 admin.site.register(Artist, ArtistAdmin)
 admin.site.register(Artwork)
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Book)
 admin.site.register(Cover, CoverAdmin)
 admin.site.register(Edition, EditionAdmin)
+admin.site.register(ArtbookIndex, ArtbookIndexAdmin)
+admin.site.register(Artbook, ArtbookAdmin)
