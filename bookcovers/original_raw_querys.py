@@ -373,6 +373,55 @@ class OriginalRawQuerys:
         return print_history
 
     @staticmethod
+    def panorama_list(return_dict=True):
+        """
+        gets the panoramas
+        :param return_dict:
+        :return:
+        """
+
+        # strPanoramaList = ('SELECT BP.*, '
+        #                    'artists.name as artist_name, artists.cover_filepath, authors.name as author_name '
+        #                    'FROM panoramas as BP, artists, authors '
+        #                    'WHERE BP.artist_id = artists.artist_id AND BP.author_id = authors.author_id '
+        #                    'ORDER BY "BP.order"')
+        # without quotes around BP.order we get the error
+        # "django.db.utils.OperationalError: near "order": syntax error"
+        # without quotes around BP.order the results are not ordered - presumably being interpreted as a literal
+
+        strPanoramaList = ('SELECT *, '
+                           'artists.name as artist_name, artists.cover_filepath, authors.name as author_name '
+                           'FROM panoramas, artists, authors '
+                           'WHERE panoramas.artist_id = artists.artist_id AND panoramas.author_id = authors.author_id '
+                           'ORDER BY "order"')
+
+        with connection.cursor() as cursor:
+            cursor.execute(strPanoramaList)
+            if return_dict:
+                panoramas = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                panoramas = cursor.fetchall()
+        return panoramas
+
+    @staticmethod
+    def panorama(current_entry, total_entrys, return_dict=True):
+        strSQL = ("SELECT *, artists.name, artists.cover_filepath, authors.name "
+                "FROM panoramas, artists, authors "
+                "WHERE panoramas.artist_id = artists.artist_id AND panoramas.author_id = authors.author_id "
+                "ORDER BY \"order\"")
+
+        strPSQL = strSQL + f"LIMIT {current_entry}, {total_entrys}"
+        print (f"strPSQL is {strPSQL}")
+
+        with connection.cursor() as cursor:
+            cursor.execute(strPSQL)
+            if return_dict:
+                panorama = OriginalRawQuerys.dictfetchall(cursor)
+            else:
+                panorama = cursor.fetchall()
+        return panorama
+
+    @staticmethod
     def adhoc_query(sql_query, return_dict=False):
         """
         runs an adhoc query without parameters

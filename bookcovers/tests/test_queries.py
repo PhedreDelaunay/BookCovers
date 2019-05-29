@@ -1,15 +1,12 @@
-import itertools
 
 from django.test import TestCase
 from django.shortcuts import get_object_or_404
-from django.conf import settings
-from django.db.models import F
 from django.db.models import Q
+from django.forms.models import model_to_dict
 
 from bookcovers.models import Artist
 from bookcovers.models import Author
 from bookcovers.models import Book
-from bookcovers.models import Cover
 from bookcovers.models import Artwork
 
 from bookcovers.original_raw_querys import OriginalRawQuerys
@@ -871,16 +868,13 @@ class PrintRunQueryTests(QueryTestCase):
             print_run = CoverQuerys.print_history(print_run_id=print_run_id)
             num_runs = len(print_run)
 
-            print("==============================================")
-            print(f"Test Total Runs in Print History for {print_run_id}")
-            print("==============================================")
-            print(f"Expected: {expected_num_runs}, actual: {num_runs}")
-
             try: self.assertEqual(expected_num_runs, num_runs)
             except AssertionError as e:
                 # use list to avoid remaining elements truncated
                 # otherwise repr is used to represent queryset
                 print("================================================================================")
+                print(f"Test Total Runs in Print History for {print_run_id}")
+                print(f"Expected: {expected_num_runs}, actual: {num_runs}")
                 print(f"covers {list(all_list)}")
                 print("================================================================================")
                 raise
@@ -898,13 +892,15 @@ class PrintRunQueryTests(QueryTestCase):
             print_run = CoverQuerys.print_history(print_run_id=print_run_id)
             num_runs = len(print_run)
 
-            if expected_num_runs != 0 or num_runs != 0:
-                print("==============================================")
+            try: self.assertEqual(expected_num_runs, num_runs)
+            except AssertionError as e:
+                print ("================================================================================")
                 print(f"Test Runs for print run id {print_run_id}")
-                print("==============================================")
-                #print(f"Expected: {expected_num_runs}, actual: {num_runs}")
-
-            self.assertEqual(expected_num_runs, num_runs)
+                print(f"Expected: {expected_num_runs}, actual: {num_runs}")
+                print (f"Expected: {expected_record}")
+                print (f"Actual: {actual_record}")
+                print ("================================================================================")
+                raise
 
             # keys in dictionary returned from raw sql query
             expected_keys = ["print_run_id", "edition_id", "cover_id", "print", "cover_price", "cover_filename", "cover_filepath"]
@@ -914,6 +910,69 @@ class PrintRunQueryTests(QueryTestCase):
             #  for each cover: check expected cover data matches actual cover data
             for raw_run, run in zip(original_print_run, print_run):
                 self.record_matches(raw_run, expected_keys, run, actual_keys)
+
+class PanoramaQueryTests(QueryTestCase):
+    fixtures = ['Artists.json',
+                'Artworks.json',
+                'Authors.json',
+                'Books.json',
+                'Editions.json',
+                'Covers.json',
+                'AuthorAkas.json',
+                'Countries.json',
+                'Sets.json',
+                'Series.json',
+                'BooksSeries.json',
+                'SetExceptions.json',
+                'PrintRuns.json',
+                'Panoramas.json',]
+
+    def test_panoramas(self):
+        """tests all panoramas"""
+
+        # return list as dictionary
+        raw_panorama_list = OriginalRawQuerys.panorama_list(return_dict=True)
+        #print_dict_list(raw_panorama_list)
+        expected_num_panoramas = len(raw_panorama_list)
+
+        panorama_list = CoverQuerys.panorama_list()
+        print(f"expected number of panoramas is {expected_num_panoramas}, number of panoramas is {len(panorama_list)}")
+        #print(f"panorama_list is {panorama_list}")
+        num_panoramas = len(panorama_list)
+
+        self.assertEqual(expected_num_panoramas, num_panoramas)
+
+        # keys in dictionary returned from raw sql query
+        expected_keys = ['panorama_id', 'order', 'description', 'filename', 'cover_filepath', 'author_name', 'artist_name']
+        # keys in dictionary returned from django query
+        actual_keys = ['panorama_id', 'order', 'description', 'cover_filename', 'cover_filepath', 'author_name', 'artist_name']
+
+
+        for expected, panorama in zip(raw_panorama_list, panorama_list):
+            self.record_matches(expected, expected_keys, panorama , actual_keys)
+
+    def test_panorama(self):
+        """tests individual panorama queries"""
+        raw_panorama_list = OriginalRawQuerys.panorama_list(return_dict=True)
+        num_panoramas = len(raw_panorama_list)
+
+        print ("==============================================")
+        print (f"Test Individual Panoramas. num panoramas {{ num_panoramas }}")
+        print ("==============================================")
+
+        # keys in dictionary returned from raw sql query
+        expected_keys = ['panorama_id', 'order', 'description', 'filename', 'cover_filepath']
+        # keys in dictionary returned from django query
+        actual_keys = ['panorama_id', 'order', 'description', 'cover_filename', 'cover_filepath']
+
+        for panorama_entry in range(num_panoramas):
+            raw_panorama = OriginalRawQuerys.panorama(panorama_entry, num_panoramas)
+            print (f"raw_panorama is {raw_panorama[0]}")
+            panorama_id = raw_panorama[0]['panorama_id']
+            panorama = CoverQuerys.panorama(panorama_id)
+            print (f"panorama is {panorama}")
+            self.record_matches(raw_panorama[0], expected_keys, panorama, actual_keys)
+
 
 
 # python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
@@ -929,7 +988,8 @@ class AdhocQueryTests(QueryTestCase):
                 'Series.json',
                 'BooksSeries.json',
                 'SetExceptions.json',
-                'PrintRuns.json',]
+                'PrintRuns.json',
+                'Panoramas.json',]
 
     def test_num_covers_in_artist_sets(self):
         # Brian Cronin
@@ -1058,17 +1118,17 @@ class AdhocQueryTests(QueryTestCase):
     #     for book in book_list:
     #         print (f"book is '{book}'")
 
-    def test_print_run(self):
-        print_run_id = 7
-
-        print ("==============================================")
-        print (f"Test Print Run for {print_run_id}")
-        print ("==============================================")
-        original_print_run = OriginalRawQuerys.print_history(print_run_id=print_run_id)
-        print_dict_list(original_print_run)
-        print (f"num entries is {len(original_print_run)}")
-
-        print_run = CoverQuerys.print_history(print_run_id=print_run_id)
-        print(f"print_run is {print_run}")
+    # def test_print_run(self):
+    #     print_run_id = 7
+    #
+    #     print ("==============================================")
+    #     print (f"Test Print Run for {print_run_id}")
+    #     print ("==============================================")
+    #     original_print_run = OriginalRawQuerys.print_history(print_run_id=print_run_id)
+    #     print_dict_list(original_print_run)
+    #     print (f"num entries is {len(original_print_run)}")
+    #
+    #     print_run = CoverQuerys.print_history(print_run_id=print_run_id)
+    #     print(f"print_run is {print_run}")
 
 

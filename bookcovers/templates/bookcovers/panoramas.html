@@ -1,0 +1,12 @@
+{# ex: /bookcovers/panoramas/ #}
+{% extends "bookcovers/base.html" %}
+
+{% block title %}{{ view.web_title }}{% endblock %}
+{% load static %}
+{% block content %}
+{% for panorama in panorama_list %}
+    <a href="{% url 'bookcovers:panorama' panorama.panorama_id %}">
+        <IMG class="thumnail_link" src="{% static panorama.cover_filepath|add:'/Thumbnails/'|add:panorama.cover_filename %}"/></a>
+<BR>
+{% endfor %}
+{% endblock %}

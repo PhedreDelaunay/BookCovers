@@ -1,0 +1,18 @@
+{# Used to display individual panorama #}
+{# ex: /bookcovers/panorama/2/ #}
+{% extends "bookcovers/base.html" %}
+
+{% block title %}{{ view.web_title }}{% endblock %}
+
+{% block menu_pagers %}
+{# include 'bookcovers/subject_pager.html' #}
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<h2>{{ panorama.description }}</h2><BR>
+<IMG src="{% static panorama.cover_filepath|add:panorama.cover_filename %}"/></a>
+
+
+{% endblock %}

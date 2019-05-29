@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 
 from bookcovers.models import Edition
+from bookcovers.models import Panorama
 from bookcovers.cover_querys import CoverQuerys
 
 import math
@@ -34,8 +35,29 @@ class Edition(DetailView):
     model=Edition
     context_object_name="edition"
     print ("Edition")
-    # this no longer works due to use of views in detail.html
     template_name = 'bookcovers/edition.html'
+
+class Panoramas(ListView):
+    model=Panorama
+    context_object_name="panorama_list"
+    web_title = "Panoramas"
+    print ("Panoramas")
+    template_name = 'bookcovers/panoramas.html'
+
+    def get_queryset(self):
+        queryset = CoverQuerys.panorama_list()
+        return queryset
+
+
+class Panorama(DetailView):
+    model=Panorama
+    context_object_name="panorama"
+    print ("Panorama")
+    template_name = 'bookcovers/panorama.html'
+
+    def get_object(self, queryset=None):
+        panorama = CoverQuerys.panorama(self.kwargs.get("pk"))
+        return panorama
 
 #=========================================
 # the simplest of generic class views simply provide the model

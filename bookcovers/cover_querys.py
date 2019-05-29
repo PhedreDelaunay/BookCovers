@@ -15,6 +15,7 @@ from bookcovers.models import Set
 from bookcovers.models import SetExceptions
 from bookcovers.models import BookSeries
 from bookcovers.models import PrintRun
+from bookcovers.models import Panorama
 
 import math
 
@@ -578,7 +579,6 @@ class CoverQuerys:
 
     @staticmethod
     def print_history(print_run_id):
-
         print_run = PrintRun.objects. \
                     filter(print_run_id = print_run_id) . \
                     values('print_run_id',
@@ -591,6 +591,33 @@ class CoverQuerys:
                            ). \
                     order_by ('order')
         return print_run
+
+    @staticmethod
+    def panorama_list():
+        panoramas = Panorama.objects. \
+                    values('panorama_id',
+                           'order',
+                           'description',
+                           cover_filename=F('filename'),
+                           cover_filepath=F('artist__cover_filepath'),
+                           author_name=F('author__name'),
+                           artist_name=F('artist__name'),
+                            ). \
+                    order_by('order')
+        return panoramas
+
+    @staticmethod
+    def panorama(panorama_id):
+        #panorama = get_object_or_404(Panorama.objects.select_related('artist__cover_filepath'), pk=panorama_id)
+        #panorama = get_object_or_404(Panorama, pk=panorama_id)
+        panorama = get_object_or_404(Panorama.objects.
+                                     values('panorama_id',
+                                            'order',
+                                            'description',
+                                            cover_filename=F('filename'),
+                                            cover_filepath=F('artist__cover_filepath')),
+                                    pk=panorama_id)
+        return panorama
 
     @staticmethod
     def print_run_ids():
