@@ -5,14 +5,14 @@
 {% block title %}{{ view.web_title }}{% endblock %}
 
 {% block menu_pagers %}
-{# include 'bookcovers/subject_pager.html' #}
+{% include 'bookcovers/subject_pager.html' %}
 {% endblock %}
 
 {% load static %}
 
 {% block content %}
 <h2>{{ panorama.description }}</h2><BR>
-<IMG src="{% static panorama.cover_filepath|add:panorama.cover_filename %}"/></a>
+<IMG src="{% static panorama.artist.cover_filepath|add:panorama.filename %}"/></a>
 
 
 {% endblock %}

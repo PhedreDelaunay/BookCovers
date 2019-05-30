@@ -6,6 +6,7 @@ from django.views.generic import DetailView
 from bookcovers.models import Edition
 from bookcovers.models import Panorama
 from bookcovers.cover_querys import CoverQuerys
+from bookcovers.pagers import PanoramaPager
 
 import math
 
@@ -37,7 +38,7 @@ class Edition(DetailView):
     print ("Edition")
     template_name = 'bookcovers/edition.html'
 
-class Panoramas(ListView):
+class PanoramaList(ListView):
     model=Panorama
     context_object_name="panorama_list"
     web_title = "Panoramas"
@@ -55,8 +56,26 @@ class Panorama(DetailView):
     print ("Panorama")
     template_name = 'bookcovers/panorama.html'
 
+    subject_list = {
+        'title': 'panoramas',
+        'view_name': 'panoramas',
+        'object': None,
+    }
+
+    subject = {
+        'name': 'panorama',
+        'title': 'panoramas',
+        'view_name': 'panorama',
+        'set_view_name': None,
+        'object': None,
+    }
     def get_object(self, queryset=None):
-        panorama = CoverQuerys.panorama(self.kwargs.get("pk"))
+        panorama_id = self.kwargs.get("pk")
+        panorama = CoverQuerys.panorama(pk=panorama_id)
+        print (f"Panorama::get_object: panorama is '{panorama_id}'")
+        query_cache = None
+        self.the_pager = PanoramaPager(self.request, query_cache, panorama_id=panorama_id)
+        panorama = self.the_pager.get_entry()
         return panorama
 
 #=========================================

@@ -961,9 +961,9 @@ class PanoramaQueryTests(QueryTestCase):
         print ("==============================================")
 
         # keys in dictionary returned from raw sql query
-        expected_keys = ['panorama_id', 'order', 'description', 'filename', 'cover_filepath']
+        expected_keys = ['panorama_id', 'order', 'description', 'filename']
         # keys in dictionary returned from django query
-        actual_keys = ['panorama_id', 'order', 'description', 'cover_filename', 'cover_filepath']
+        actual_keys = ['panorama_id', 'order', 'description', 'filename']
 
         for panorama_entry in range(num_panoramas):
             raw_panorama = OriginalRawQuerys.panorama(panorama_entry, num_panoramas)
@@ -971,9 +971,28 @@ class PanoramaQueryTests(QueryTestCase):
             panorama_id = raw_panorama[0]['panorama_id']
             panorama = CoverQuerys.panorama(panorama_id)
             print (f"panorama is {panorama}")
-            self.record_matches(raw_panorama[0], expected_keys, panorama, actual_keys)
 
+            # test cover filepath from related artist model
+            expected_value = raw_panorama[0]['cover_filepath']
+            actual_value = panorama.artist.cover_filepath
+            #print(f"cover_filepath: expected_value is '{expected_value}', actual_value is '{actual_value}'")
+            self.assertEqual(expected_value, actual_value)
 
+            self.entry_matches(raw_panorama[0], expected_keys, panorama, actual_keys)
+
+    def entry_matches(self, expected_record, expected_keys, actual_record, actual_keys):
+        # https://docs.python.org/3/library/functions.html#zip
+        for expected_key, actual_key in zip(expected_keys, actual_keys):
+            expected_value = expected_record[expected_key]
+            actual_value = getattr(actual_record, actual_key)
+            #print(f"expected_value is '{expected_value}', actual_value is '{actual_value}'")
+            try: self.assertEqual(expected_value, actual_value)
+            except AssertionError as e:
+                print ("================================================================================")
+                print (f"Expected: {expected_record}")
+                print (f"Actual: {actual_record}")
+                print ("================================================================================")
+                raise
 
 # python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
 class AdhocQueryTests(QueryTestCase):

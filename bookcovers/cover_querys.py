@@ -607,16 +607,8 @@ class CoverQuerys:
         return panoramas
 
     @staticmethod
-    def panorama(panorama_id):
-        #panorama = get_object_or_404(Panorama.objects.select_related('artist__cover_filepath'), pk=panorama_id)
-        #panorama = get_object_or_404(Panorama, pk=panorama_id)
-        panorama = get_object_or_404(Panorama.objects.
-                                     values('panorama_id',
-                                            'order',
-                                            'description',
-                                            cover_filename=F('filename'),
-                                            cover_filepath=F('artist__cover_filepath')),
-                                    pk=panorama_id)
+    def panorama(pk=None):
+        panorama = get_object_or_404(Panorama.objects.select_related('artist'), pk=pk)
         return panorama
 
     @staticmethod

@@ -21,7 +21,7 @@ from django.urls import path
 from .artist.views import *
 from .author.views import *
 from bookcovers.views import PrintHistory
-from bookcovers.views import Panoramas
+from bookcovers.views import PanoramaList
 from bookcovers.views import Panorama
 from bookcovers.views import Edition
 from . import views
@@ -92,7 +92,7 @@ urlpatterns = [
     # ex: /bookcovers/edition/6/
     path('edition/<pk>/', Edition.as_view(), name="edition"),
     # ex: /bookcovers/panoramas/
-    path('panoramas/', Panoramas.as_view(), name="panoramas"),
+    path('panoramas/', PanoramaList.as_view(), name="panoramas"),
     # ex: /bookcovers/panorama/2/
     path('panorama/<pk>/', Panorama.as_view(), name='panorama'),
     # https://docs.djangoproject.com/en/2.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.pk_url_kwarg

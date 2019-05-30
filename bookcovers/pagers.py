@@ -4,8 +4,8 @@ from django.core.paginator import Paginator
 
 from bookcovers.models import Artist
 from bookcovers.models import Author
+from bookcovers.models import Panorama
 from bookcovers.cover_querys import CoverQuerys
-from bookcovers.record_helper import *
 
 # just in case
 # TODO read this
@@ -78,8 +78,10 @@ class SubjectPager(MenuPager):
             self.entry = get_object_or_404(subject_model, **kwargs)
         else:
             self.entry = self.get_subject(**self.subject_kwargs)
+            print(f"entry is {self.entry}")
             #self.entry = get_subject_record(model=subject_model, subject_id=self.subject_id, name=self.name, slug=self.slug)
             # Which page is the requested entry?
+            print (f"SubjectPager: self.entry.pk is {self.entry.pk}")
             page_number = [count for count, record in enumerate(subject_list, 1) if record[subject_id_key] == self.entry.pk]
             self.page_number = int(page_number[0])
             print (f"SubjectPager figured out that page is {self.page_number}")
@@ -162,6 +164,42 @@ class AuthorPager(SubjectPager):
         author = self.query_cache.author(author=None, **kwargs)
         return author
 
+    def get_page_number(self):
+        return self.page_number
+
+class PanoramaPager(SubjectPager):
+
+    def __init__(self, request, query_cache, panorama_id=None, name=None, slug=None):
+        """
+        :param request:
+        :param query_cache:
+        one of
+        :param panorama_id:    panorama id
+        :param name:           panorama name  - not implemented
+        :param slug:           panorama slug - not implemented
+        """
+        print(f"PanoramaPager::init: panorama_id={panorama_id} name='{name}' slug='{slug}'")
+        self.subject = 'panorama'
+        self.page_number = request.GET.get(self.subject)
+        print(f"PanoramaPager: page_number is '{self.page_number}'")
+        super().__init__(query_cache, page_number=self.page_number, subject_id=panorama_id, name=name, slug=slug)
+
+        self.pager(cover_query=CoverQuerys.panorama_list,
+                   subject_id_key="panorama_id",
+                   subject_model=Panorama)
+
+    def get_subject(self, **kwargs):
+        """
+        subject is panorama
+        :param kwargs:
+        :return:
+        """
+        #panorama = CoverQuerys.panorama(**kwargs)
+        panorama = get_object_or_404(Panorama, **kwargs)
+        print(f"panorama is {panorama}")
+        return panorama
+
+    # todo move these to base class
     def get_page_number(self):
         return self.page_number
 

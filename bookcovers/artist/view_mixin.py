@@ -1,4 +1,3 @@
-from django.shortcuts import get_object_or_404
 
 from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import ArtworkPager
