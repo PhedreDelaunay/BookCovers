@@ -71,10 +71,12 @@ class EditionAdmin(admin.ModelAdmin):
 class ArtbookIndexAdmin(admin.ModelAdmin):
     list_display = (
         'book_title',
+        'artwork_title',
         'book_author_name',
+        'artbook'
     )
     # add a search bar
-    search_fields = ['book_title',]
+    search_fields = ['book_title','artwork_title']
 
 class ArtbookAdmin(admin.ModelAdmin):
     list_display = (
