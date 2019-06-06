@@ -1,0 +1,65 @@
+[
+{
+    "model": "bookcovers.usedas",
+    "pk": 1,
+    "fields": {
+        "used_type": "Book Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 2,
+    "fields": {
+        "used_type": "Back Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 3,
+    "fields": {
+        "used_type": "Illustration"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 4,
+    "fields": {
+        "used_type": "Magazine Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 5,
+    "fields": {
+        "used_type": "Unpublished"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 6,
+    "fields": {
+        "used_type": "Personal Work"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 7,
+    "fields": {
+        "used_type": "Private Commission"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 8,
+    "fields": {
+        "used_type": "Jigsaw"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 9,
+    "fields": {
+        "used_type": "Magic the Gathering"
+    }
+}
+]

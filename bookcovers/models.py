@@ -396,8 +396,23 @@ class Artbook(models.Model):
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     notes = models.CharField(max_length=255, blank=True, null=True)
 
+
+    def __str__(self):
+        return self.title
+
     class Meta:
         db_table = 'artbooks'
+
+
+class UsedAs(models.Model):
+    used_as_id = models.AutoField(primary_key=True)
+    used_type = models.CharField(unique=True, max_length=255, blank=False, null=False)
+
+    def __str__(self):
+        return self.used_type
+
+    class Meta:
+        db_table = 'used_as'
 
 
 class ArtbookIndex(models.Model):
@@ -415,10 +430,15 @@ class ArtbookIndex(models.Model):
     book_author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     cover_year = models.CharField(max_length=50, blank=True, null=True)
-    cover_title = models.CharField(max_length=255, blank=True, null=True)
     cover = models.ForeignKey(Cover, models.DO_NOTHING, blank=True, null=True,
                               related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     publisher = models.CharField(max_length=255, blank=True, null=True)
+    publish_year = models.CharField(max_length=50, blank=True, null=True)
+    artwork_title = models.CharField(max_length=255, blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+    used_as = models.ForeignKey(UsedAs, models.DO_NOTHING, blank=True, null=True,
+                               related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
 
     class Meta:
         db_table = 'artbook_index'
+
