@@ -17,6 +17,12 @@ class MenuPager():
         # Show 1 cover work per page
         self.per_page = 1
 
+    def get_entry(self):
+        return self.entry
+
+    def get_page_number(self):
+        return self.page_number
+
 
 class SubjectPager(MenuPager):
     """
@@ -66,20 +72,18 @@ class SubjectPager(MenuPager):
         :param subject_model:       model for item; Artists, Authors
         :return:
         """
-        # TODO can queries be cached between pages?
         subject_list = cover_query()
 
         paginator = Paginator(object_list=subject_list, per_page=self.per_page)
 
         # have we got here by paging?
         if self.page_number:
-            print(f"subject_list[{self.page_number}-1] is {subject_list[int(self.page_number)-1]}")
+            #print(f"subject_list[{self.page_number}-1] is {subject_list[int(self.page_number)-1]}")
             kwargs = {'pk': subject_list[int(self.page_number) - 1][subject_id_key]}
-            self.entry = get_object_or_404(subject_model, **kwargs)
+            self.entry = self.get_subject(**kwargs)
         else:
             self.entry = self.get_subject(**self.subject_kwargs)
             print(f"entry is {self.entry}")
-            #self.entry = get_subject_record(model=subject_model, subject_id=self.subject_id, name=self.name, slug=self.slug)
             # Which page is the requested entry?
             print (f"SubjectPager: self.entry.pk is {self.entry.pk}")
             page_number = [count for count, record in enumerate(subject_list, 1) if record[subject_id_key] == self.entry.pk]
@@ -89,9 +93,6 @@ class SubjectPager(MenuPager):
         print (f"SubjectPager: pager entry is '{self.entry}'")
         self.subject_pager = paginator.get_page(self.page_number)
         return self.subject_pager
-
-    def get_entry(self):
-        return self.entry
 
     @property
     def subject_pager(self):
@@ -132,8 +133,6 @@ class ArtistPager(SubjectPager):
         artist = self.query_cache.artist(artist=None, **kwargs)
         return artist
 
-    def get_page_number(self):
-        return self.page_number
 
 class AuthorPager(SubjectPager):
 
@@ -164,8 +163,6 @@ class AuthorPager(SubjectPager):
         author = self.query_cache.author(author=None, **kwargs)
         return author
 
-    def get_page_number(self):
-        return self.page_number
 
 class PanoramaPager(SubjectPager):
 
@@ -194,8 +191,8 @@ class PanoramaPager(SubjectPager):
         :param kwargs:
         :return:
         """
-        #panorama = CoverQuerys.panorama(**kwargs)
-        panorama = get_object_or_404(Panorama, **kwargs)
+        panorama = self.query_cache.panorama(**kwargs)
+        #panorama = get_object_or_404(Panorama, **kwargs)
         print(f"panorama is {panorama}")
         return panorama
 
@@ -203,9 +200,10 @@ class PanoramaPager(SubjectPager):
     def get_page_number(self):
         return self.page_number
 
-class BookPager(MenuPager):
+
+class SecondLevelPager(MenuPager):
     """
-    Pager for second level book list,
+    Pager for second level items
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
     def __init__(self, query_cache, page_number=None, item_id=None):
@@ -219,16 +217,6 @@ class BookPager(MenuPager):
         self.page_number = page_number
         self.item_id = item_id
 
-    def get_item(self, book_id):
-        # item is book
-        book = self.query_cache.book(book_id=book_id)
-        print(f"BookPager::get_item: book_id = '{book_id}'")
-        return book
-
-    def get_list(self, item, list_query):
-        book_cover_list = list_query(item.get_creator)
-        return book_cover_list
-
     def pager(self, book_cover_query, item_id_key):
         """
         :param book_cover_query:    query to get list of book covers to page
@@ -239,11 +227,11 @@ class BookPager(MenuPager):
         item = self.get_item(self.item_id)
         list = self.get_list(item, book_cover_query)
 
-        print (f"BookPager page_number is {self.page_number}")
+        print (f"SecondLevelPager page_number is {self.page_number}")
         # have we got here by paging?
         if self.page_number:
             item_id = list[int(self.page_number) - 1][item_id_key]
-            print(f"BookPager::pager now item_id is '{item_id}'")
+            print(f"SecondLevelPager::pager now item_id is '{item_id}'")
             self.entry = self.get_item(item_id)
         else:
             self.entry = item
@@ -257,11 +245,25 @@ class BookPager(MenuPager):
             self.page_number = int(page_number[0])
             print (f"BookPager figured out that page_number is {self.page_number}")
 
-        book_pager = paginator.get_page(self.page_number)
-        return book_pager
+        second_level_pager = paginator.get_page(self.page_number)
+        return second_level_pager
 
-    def get_entry(self):
-        return self.entry
+    def get_list(self, item, list_query):
+        book_cover_list = list_query(item.get_creator)
+        print (f"SecondLevelPager::pager: book_cover_list is '{book_cover_list}'")
+        return book_cover_list
+
+
+class BookPager(SecondLevelPager):
+    """
+    Pager for second level book list,
+    ie book covers for artwork (from artist) or book covers for book title (from author)
+    """
+    def get_item(self, book_id):
+        # item is book
+        book = self.query_cache.book(book_id=book_id)
+        print(f"BookPager::get_item: book_id = '{book_id}'")
+        return book
 
 
 class ArtworkPager(BookPager):
@@ -273,7 +275,7 @@ class ArtworkPager(BookPager):
 
 # up to here - refactor to use get_item make second level page and derive BookPager, ArtworkPager, SetPager
 # with get_item, get_list and other methods called from pager method
-class SetPager(BookPager):
+class SetPager(SecondLevelPager):
     """
     Pager for second level set list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
@@ -338,6 +340,3 @@ class SetPager(BookPager):
 
         set_pager = paginator.get_page(self.page_number)
         return set_pager
-
-    def get_entry(self):
-        return self.entry

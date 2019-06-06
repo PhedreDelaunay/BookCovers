@@ -6,7 +6,6 @@ from bookcovers.pagers import SetPager
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Artist
 from bookcovers.models import Set
-from bookcovers.models import Edition
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 

@@ -7,6 +7,7 @@ from bookcovers.models import Book
 from bookcovers.models import Set
 from bookcovers.models import Edition
 from bookcovers.models import Cover
+from bookcovers.models import Panorama
 
 class QueryCache:
     @staticmethod
@@ -32,6 +33,9 @@ class QueryCache:
         self._set_id = None
         self._set = None
         print(f"QueryCache:init: self._set_id={self._set_id}")
+
+        self._panorama_id = None
+        self._panorama = None
 
     def get_subject_identifier(self, subject_id=None, name=None, slug=None):
         if subject_id:
@@ -118,3 +122,9 @@ class QueryCache:
         except Cover.DoesNotExist:
             self._artwork = None
         return edition
+
+    def panorama(self, pk=None):
+        if pk != self._panorama_id or self._panorama is None:
+            self._panorama_id = pk
+            self._panorama = get_object_or_404(Panorama.objects.select_related('artist'), pk=pk)
+        return self._panorama

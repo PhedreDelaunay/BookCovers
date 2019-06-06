@@ -2,7 +2,6 @@
 from django.test import TestCase
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
-from django.forms.models import model_to_dict
 
 from bookcovers.models import Artist
 from bookcovers.models import Author
@@ -11,6 +10,7 @@ from bookcovers.models import Artwork
 
 from bookcovers.original_raw_querys import OriginalRawQuerys
 from bookcovers.cover_querys import CoverQuerys
+from bookcovers.query_cache import QueryCache
 
 def print_dict_list(list_of_dicts):
     for dict in list_of_dicts:
@@ -927,6 +927,9 @@ class PanoramaQueryTests(QueryTestCase):
                 'PrintRuns.json',
                 'Panoramas.json',]
 
+    def setUp(self):
+        self.query_cache = QueryCache()
+
     def test_panoramas(self):
         """tests all panoramas"""
 
@@ -969,7 +972,7 @@ class PanoramaQueryTests(QueryTestCase):
             raw_panorama = OriginalRawQuerys.panorama(panorama_entry, num_panoramas)
             print (f"raw_panorama is {raw_panorama[0]}")
             panorama_id = raw_panorama[0]['panorama_id']
-            panorama = CoverQuerys.panorama(panorama_id)
+            panorama = self.query_cache.panorama(panorama_id)
             print (f"panorama is {panorama}")
 
             # test cover filepath from related artist model

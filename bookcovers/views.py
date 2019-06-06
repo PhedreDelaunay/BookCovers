@@ -7,8 +7,7 @@ from bookcovers.models import Edition
 from bookcovers.models import Panorama
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.pagers import PanoramaPager
-
-import math
+from bookcovers.query_cache import QueryCache
 
 # Create your views here.
 
@@ -55,6 +54,7 @@ class Panorama(DetailView):
     context_object_name="panorama"
     print ("Panorama")
     template_name = 'bookcovers/panorama.html'
+    query_cache = QueryCache()
 
     subject_list = {
         'title': 'panoramas',
@@ -71,10 +71,8 @@ class Panorama(DetailView):
     }
     def get_object(self, queryset=None):
         panorama_id = self.kwargs.get("pk")
-        panorama = CoverQuerys.panorama(pk=panorama_id)
         print (f"Panorama::get_object: panorama is '{panorama_id}'")
-        query_cache = None
-        self.the_pager = PanoramaPager(self.request, query_cache, panorama_id=panorama_id)
+        self.the_pager = PanoramaPager(self.request, self.query_cache, panorama_id=panorama_id)
         panorama = self.the_pager.get_entry()
         return panorama
 
