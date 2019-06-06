@@ -87,7 +87,7 @@ class ArtistMixin(TopLevelPagerMixin):
         print(f"ArtworkMixin: create_book_pager - page number is '{page_number}'")
 
         pager = ArtworkPager(self.query_cache, page_number=page_number, item_id=artwork_id)
-        artwork_pager = pager.pager(book_cover_query=CoverQuerys.artist_cover_list,
+        artwork_pager = pager.pager(list_query=CoverQuerys.artist_cover_list,
                                  item_id_key="artwork_id")
         # subject_id_key = 'artist_id',
         # subject_model = Artist
@@ -101,11 +101,9 @@ class ArtistMixin(TopLevelPagerMixin):
         page_number = self.request.GET.get('page')
         print(f"ArtworkMixin: create_set_pager - page number is '{page_number}'")
 
-        pager = SetPager(self.query_cache, page_number=page_number, item_id=set_id)
-        set_pager = pager.pager(set_query=CoverQuerys.artist_set_list,
-                                item_id_key="set_id",
-                                item_model=Set,
-                                subject_model=Artist)
+        pager = SetPager(self.query_cache, page_number=page_number, item_id=set_id, subject_model=Artist)
+        set_pager = pager.pager(list_query=CoverQuerys.artist_set_list,
+                                item_id_key="set_id")
         self.set = pager.get_entry()
         return set_pager
 

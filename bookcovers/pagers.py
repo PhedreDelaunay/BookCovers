@@ -206,26 +206,29 @@ class SecondLevelPager(MenuPager):
     Pager for second level items
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
-    def __init__(self, query_cache, page_number=None, item_id=None):
+    def __init__(self, query_cache, page_number=None, item_id=None, subject_model=None):
         """
         :param query_cache:
         :param page_number:  current page if set
-        :param item_id:      artwork or book id
+        :param item_id:      artwork, book, set id
+        :param subject_model    model for subject; Artists, Authors
+                                        set needs to know if author or artist
         """
         super().__init__()
         self.query_cache = query_cache
         self.page_number = page_number
         self.item_id = item_id
+        self.subject_model = subject_model
 
-    def pager(self, book_cover_query, item_id_key):
+    def pager(self, list_query, item_id_key):
         """
-        :param book_cover_query:    query to get list of book covers to page
+        :param list_query:    query to get list of artworks, books, sets to page
         :param item_id_key:         string key of item id; artwork_id, book_id
         :return:
         """
         # item is artwork or book
         item = self.get_item(self.item_id)
-        list = self.get_list(item, book_cover_query)
+        list = self.get_list(item, list_query)
 
         print (f"SecondLevelPager page_number is {self.page_number}")
         # have we got here by paging?
@@ -243,7 +246,7 @@ class SecondLevelPager(MenuPager):
             # Which page is the requested entry?
             page_number = [count for count, record in enumerate(list, 1) if record[item_id_key] == item.pk]
             self.page_number = int(page_number[0])
-            print (f"BookPager figured out that page_number is {self.page_number}")
+            print (f"SecondLevelPager figured out that page_number is {self.page_number}")
 
         second_level_pager = paginator.get_page(self.page_number)
         return second_level_pager
@@ -273,8 +276,7 @@ class ArtworkPager(BookPager):
         print(f"ArtworkPager::get_item: artwork_id = '{artwork_id}'")
         return artwork
 
-# up to here - refactor to use get_item make second level page and derive BookPager, ArtworkPager, SetPager
-# with get_item, get_list and other methods called from pager method
+
 class SetPager(SecondLevelPager):
     """
     Pager for second level set list,
@@ -286,57 +288,9 @@ class SetPager(SecondLevelPager):
         print(f"SetPager::get_item: set_id = '{set_id}'")
         return item
 
-    # need to know if author or artist
-    # BookPager originally took subject_model as parameter, maybe add it to init
-    # def get_list(self, item, list_query):
-    #     creators = item.get_creator
-    #     print (f"SetPager::pager creators is '{creators.author}, {creators.artist}'")
-    #     creator=subject_model._meta.model_name
-    #     set_list = set_query(getattr(creators, creator).pk)
-    #     return book_cover_list
-
-
-    def pager(self, set_query, item_id_key, item_model, subject_model):
-        """
-        :param set_query:    query to get list of sets to page
-        :param item_id_key:         string key of item id; set_id
-        :param item_model:          model for item; Sets
-        :param subject_model:       model for subject; Artists, Authors
-        :return:
-        """
-
-        # item is set
-        item = self.get_item(self.item_id)
-
+    def get_list(self, item, list_query):
         creators = item.get_creator
-        print (f"SetPager::pager creators is '{creators.author}, {creators.artist}'")
-        creator=subject_model._meta.model_name
-        set_list = set_query(getattr(creators, creator).pk)
-        #print (f"SetPager::pager set_list is'{set_list}'")
-
-        print (f"SetPager page_number is {self.page_number}")
-        # have we got here by paging?
-        if self.page_number:
-            # print(f"set_list[{self.page_number}-1] is {set_list[int(self.page_number)-1]}")
-            # kwargs = {'pk': set_list[int(self.page_number) - 1][item_id_key]}
-            # self.entry = get_object_or_404(item_model, **kwargs)
-            item_id = set_list[int(self.page_number) - 1][item_id_key]
-            print(f"SetPager::pager now item_id is '{item_id}'")
-            self.entry = self.get_item(item_id)
-        else:
-            self.entry = item
-
-        # /Users/tarbetn/Projects/BookCovers/bookcovers/pagers.py:262: UnorderedObjectListWarning:
-        # Pagination may yield inconsistent results with an unordered object_list: <class 'bookcovers.models.Set'> QuerySet.
-        #   paginator = Paginator(set_list, 1)
-        # Show 1 set per page
-        paginator = Paginator(set_list, 1)
-
-        if not self.page_number:
-            # Which page is the requested entry?
-            page_number = [count for count, record in enumerate(set_list, 1) if record[item_id_key] == item.pk]
-            self.page_number = int(page_number[0])
-            print (f"SetPager figured out that page_number is {self.page_number}")
-
-        set_pager = paginator.get_page(self.page_number)
-        return set_pager
+        print (f"SetPager::get_list creators is '{creators.author}, {creators.artist}'")
+        creator=self.subject_model._meta.model_name
+        set_list = list_query(getattr(creators, creator).pk)
+        return set_list

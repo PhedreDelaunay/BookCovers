@@ -88,7 +88,7 @@ class AuthorMixin(TopLevelPagerMixin):
         print(f"AuthorMixin: create_book_pager - page_number is '{page_number}'")
 
         pager = BookPager(self.query_cache, page_number=page_number, item_id=book_id)
-        book_pager = pager.pager(book_cover_query=CoverQuerys.books_for_author,
+        book_pager = pager.pager(list_query=CoverQuerys.books_for_author,
                                  item_id_key="book_id")
         # subject_id_key = 'author_id',
         # subject_model = Author
@@ -101,11 +101,9 @@ class AuthorMixin(TopLevelPagerMixin):
         page_number = self.request.GET.get('page')
         print(f"AuthorMixin: create_set_pager - page number is '{page_number}'")
 
-        pager = SetPager(self.query_cache, page_number=page_number, item_id=set_id)
-        set_pager = pager.pager(set_query=CoverQuerys.author_set_list,
-                                item_id_key="set_id",
-                                item_model=Set,
-                                subject_model=Author)
+        pager = SetPager(self.query_cache, page_number=page_number, item_id=set_id, subject_model=Author)
+        set_pager = pager.pager(list_query=CoverQuerys.author_set_list,
+                                item_id_key="set_id")
         self.set = pager.get_entry()
         return set_pager
 
