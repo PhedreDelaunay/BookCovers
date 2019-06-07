@@ -5,7 +5,6 @@ from bookcovers.pagers import SetPager
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.models import Artist
-from bookcovers.models import Set
 
 from bookcovers.view_mixin import TopLevelPagerMixin
 
@@ -78,7 +77,8 @@ class ArtistMixin(TopLevelPagerMixin):
 
     def create_top_level_pager(self, artist_id=None, name=None, slug=None):
         print(f"ArtistMixin:create_top_level_pagert: artist_id={artist_id} name='{name}' slug='{slug}'")
-        artist_pager = ArtistPager(self.request, self.query_cache,  artist_id=artist_id, name=name, slug=slug)
+        page_number = self.request.GET.get('artist')
+        artist_pager = ArtistPager(self.query_cache, page_number=page_number, artist_id=artist_id, name=name, slug=slug)
         return artist_pager
 
     def create_artwork_pager(self, artwork_id):

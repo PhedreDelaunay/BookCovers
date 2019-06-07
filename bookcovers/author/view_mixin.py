@@ -79,7 +79,8 @@ class AuthorMixin(TopLevelPagerMixin):
         self.web_title = self.author.name
 
     def create_top_level_pager(self, author_id=None, name=None, slug=None):
-        author_pager = AuthorPager(self.request, self.query_cache, author_id=author_id, name=name, slug=slug)
+        page_number = self.request.GET.get('author')
+        author_pager = AuthorPager(self.query_cache, page_number=page_number, author_id=author_id, name=name, slug=slug)
         return author_pager
 
     def create_book_pager(self, book_id):

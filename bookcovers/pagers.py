@@ -105,18 +105,9 @@ class SubjectPager(MenuPager):
 
 class ArtistPager(SubjectPager):
 
-    def __init__(self, request, query_cache, artist_id=None, name=None, slug=None):
-        """
-        :param request:
-        :param query_cache:
-        one of
-        :param artist_id:      artist id
-        :param name:           artist name
-        :param slug:           artist slug
-        """
+    def __init__(self, query_cache, page_number=None, artist_id=None, name=None, slug=None):
         print(f"ArtistPager::init: artist_id={artist_id} name='{name}' slug='{slug}'")
-        self.subject = 'artist'
-        self.page_number = request.GET.get(self.subject)
+        self.page_number = page_number
         print(f"ArtistPager: page_number is '{self.page_number}'")
         super().__init__(query_cache, page_number=self.page_number, subject_id=artist_id, name=name, slug=slug)
 
@@ -136,17 +127,8 @@ class ArtistPager(SubjectPager):
 
 class AuthorPager(SubjectPager):
 
-    def __init__(self, request, query_cache, author_id=None, name=None, slug=None):
-        """
-        :param request:
-        :param query_cache:
-        one of
-        :param author_id:      author id
-        :param name:           author name
-        :param slug:           author slug
-        """
-        self.subject = 'author'
-        self.page_number = request.GET.get(self.subject)
+    def __init__(self, query_cache, page_number=None, author_id=None, name=None, slug=None):
+        self.page_number = page_number
         print(f"AuthorPager: page_number is '{self.page_number}'")
         super().__init__(query_cache, page_number=self.page_number, subject_id=author_id, name=name, slug=slug)
 
@@ -166,18 +148,10 @@ class AuthorPager(SubjectPager):
 
 class PanoramaPager(SubjectPager):
 
-    def __init__(self, request, query_cache, panorama_id=None, name=None, slug=None):
-        """
-        :param request:
-        :param query_cache:
-        one of
-        :param panorama_id:    panorama id
-        :param name:           panorama name  - not implemented
-        :param slug:           panorama slug - not implemented
-        """
+    def __init__(self, query_cache, page_number=None, panorama_id=None, name=None, slug=None):
         print(f"PanoramaPager::init: panorama_id={panorama_id} name='{name}' slug='{slug}'")
-        self.subject = 'panorama'
-        self.page_number = request.GET.get(self.subject)
+
+        self.page_number = page_number
         print(f"PanoramaPager: page_number is '{self.page_number}'")
         super().__init__(query_cache, page_number=self.page_number, subject_id=panorama_id, name=name, slug=slug)
 
@@ -306,7 +280,7 @@ class SetPager(SecondLevelPager):
         """
         :param query_cache:
         :param page_number:  current page if set
-        :param item_id:      artwork, book, set id
+        :param item_id:      set id
         :param subject_model    model for subject; Artists, Authors
                                         set needs to know if author or artist
         """

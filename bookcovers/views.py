@@ -72,7 +72,8 @@ class Panorama(DetailView):
     def get_object(self, queryset=None):
         panorama_id = self.kwargs.get("pk")
         print (f"Panorama::get_object: panorama is '{panorama_id}'")
-        self.the_pager = PanoramaPager(self.request, self.query_cache, panorama_id=panorama_id)
+        page_number = self.request.GET.get('panorama')
+        self.the_pager = PanoramaPager(self.query_cache, page_number=page_number, panorama_id=panorama_id)
         panorama = self.the_pager.get_entry()
         return panorama
 
