@@ -265,13 +265,12 @@ class SecondLevelPager(MenuPager):
 class BookPager(SecondLevelPager):
     """
     Pager for second level book list,
-    ie book covers for artwork (from artist) or book covers for book title (from author)
+    ie book covers for book title from author list
     """
-    # def __init__(self, query_cache, page_number=None, item_id=None):
-    #     super().__init__(query_cache, page_number=page_number, item_id=item_id)
-    #
-    #     self.pager(list_query=CoverQuerys.books_for_author,
-    #                item_id_key="book_id")
+    def __init__(self, query_cache, page_number=None, item_id=None):
+        super().__init__(query_cache, page_number=page_number, item_id=item_id)
+        self.pager(list_query=CoverQuerys.books_for_author,
+                                 item_id_key="book_id")
 
     def get_item(self, book_id):
         # item is book
@@ -280,7 +279,16 @@ class BookPager(SecondLevelPager):
         return book
 
 
-class ArtworkPager(BookPager):
+class ArtworkPager(SecondLevelPager):
+    """
+    Pager for second level book list,
+    ie book covers for artwork from artist list
+    """
+    def __init__(self, query_cache, page_number=None, item_id=None):
+        super().__init__(query_cache, page_number=page_number, item_id=item_id)
+        self.pager(list_query=CoverQuerys.artist_cover_list,
+                                item_id_key="artwork_id")
+
     def get_item(self, artwork_id):
         # item is artwork
         artwork = self.query_cache.artwork(artwork_id=artwork_id)
