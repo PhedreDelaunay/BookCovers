@@ -206,19 +206,16 @@ class SecondLevelPager(MenuPager):
     Pager for second level items
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
-    def __init__(self, query_cache, page_number=None, item_id=None, subject_model=None):
+    def __init__(self, query_cache, page_number=None, item_id=None):
         """
         :param query_cache:
         :param page_number:  current page if set
         :param item_id:      artwork, book, set id
-        :param subject_model    model for subject; Artists, Authors
-                                        set needs to know if author or artist
         """
         super().__init__()
         self.query_cache = query_cache
         self.page_number = page_number
         self.item_id = item_id
-        self.subject_model = subject_model
 
     def pager(self, list_query, item_id_key):
         """
@@ -248,8 +245,16 @@ class SecondLevelPager(MenuPager):
             self.page_number = int(page_number[0])
             print (f"SecondLevelPager figured out that page_number is {self.page_number}")
 
-        second_level_pager = paginator.get_page(self.page_number)
-        return second_level_pager
+        self.the_pager = paginator.get_page(self.page_number)
+        return self.the_pager
+
+    @property
+    def the_pager(self):
+        return self._the_pager
+
+    @the_pager.setter
+    def the_pager(self, value):
+        self._the_pager = value
 
     def get_list(self, item, list_query):
         book_cover_list = list_query(item.get_creator)
@@ -262,6 +267,12 @@ class BookPager(SecondLevelPager):
     Pager for second level book list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
+    # def __init__(self, query_cache, page_number=None, item_id=None):
+    #     super().__init__(query_cache, page_number=page_number, item_id=item_id)
+    #
+    #     self.pager(list_query=CoverQuerys.books_for_author,
+    #                item_id_key="book_id")
+
     def get_item(self, book_id):
         # item is book
         book = self.query_cache.book(book_id=book_id)
@@ -282,6 +293,19 @@ class SetPager(SecondLevelPager):
     Pager for second level set list,
     ie book covers for artwork (from artist) or book covers for book title (from author)
     """
+
+    def __init__(self, query_cache, list_query, page_number=None, item_id=None, subject_model=None):
+        """
+        :param query_cache:
+        :param page_number:  current page if set
+        :param item_id:      artwork, book, set id
+        :param subject_model    model for subject; Artists, Authors
+                                        set needs to know if author or artist
+        """
+        super().__init__(query_cache, page_number=page_number, item_id=item_id)
+        self.subject_model = subject_model
+        self.pager(list_query, item_id_key="set_id")
+
     def get_item(self, set_id):
         # item is a set
         item = self.query_cache.set(set_id=set_id)
