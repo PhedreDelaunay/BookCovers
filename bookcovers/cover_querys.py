@@ -183,7 +183,7 @@ class CoverQuerys:
     def all_covers_of_all_books_for_author(author, author_id=None, all=True):
         """
         gets all covers of all books for this author
-        :param author: author object to fetch covers for
+        :param author: author object to fetch covers for, required to get real name
         :param all: True = return all covers for all books
                     False = eliminates duplicate cover entries, where the same file is used for multiple cover records
         :return: dict queryset to fetch all covers of all books for this author
@@ -236,13 +236,17 @@ class CoverQuerys:
         # https://stackoverflow.com/questions/3897499/check-if-value-already-exists-within-list-of-dictionaries
         # use list comprehension to test if there are any unknown artists in this author's cover collection
         if any(cover['theCover__artwork__artist__cover_filepath'] == 'BookCovers/Images/Unknown/' for cover in cover_list):
-            print (f"author {author.name}: has unknown cover")
+            #print (f"author {author.name}: has unknown cover")
+            print (f"author {author_id}: has unknown cover")
 
             try:
-                real_author = Author.objects.get(Q(theAuthor_aka__real_name=1) & (Q(theAuthor_aka__author_aka_id=author_id) | Q(theAuthor_aka__author_id=author_id)))
+                real_author = Author.objects.get(Q(theAuthor_aka__real_name=1) &
+                                                 (Q(theAuthor_aka__author_aka_id=author_id)
+                                                    | Q(theAuthor_aka__author_id=author_id)))
                 print (f"real author name is {real_author.name}")
             except Author.DoesNotExist as e:
                 real_author = author
+                # TODO if author none fetch author then don't need to in test?
 
             author_directory = real_author.name.replace(" ", "").replace(".","")
             for cover in cover_list:
