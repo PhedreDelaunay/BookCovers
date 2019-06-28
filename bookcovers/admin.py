@@ -73,7 +73,9 @@ class ArtbookIndexAdmin(admin.ModelAdmin):
         'book_title',
         'artwork_title',
         'book_author_name',
-        'artbook'
+        'artbook',
+        'page',
+        'used_as',
     )
     # add a search bar
     search_fields = ['book_title','artwork_title']
