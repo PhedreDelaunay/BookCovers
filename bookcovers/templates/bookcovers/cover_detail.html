@@ -1,4 +1,5 @@
 {% load static %}
+{% load bookcover_tags %}
 
 <table><tr>
     <td>
@@ -25,7 +26,12 @@
     <td>
         <B>Artwork</B><BR/><B>artist: </B><a href="{% url 'bookcovers:artist_artworks' edition.theCover.artwork.artist.artist_id %}" title="Select artist for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
         <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level }}<BR/>
-        <B>Evidence: </B>{{ edition.theCover.artwork.evidence }}<BR/><BR/><B>Book</B><BR/>
+        <B>Evidence: </B>{{ edition.theCover.artwork.evidence }}<BR/><BR/>
+         {% if edition.theCover|hasfullcover %}
+            <IMG class="thumbnail" src="{% static edition.theCover.artwork.artist.cover_filepath|add:'Full/Thumbnails/'|add:edition.theCover.cover_filename %}"
+                    alt="{{ edition.book.title }}"
+                    title="{{ edition.book.title }}">
+        {%  endif %}<BR>
         {% include 'bookcovers/book_detail.html' %}
 </td>
 </tr>

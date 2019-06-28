@@ -51,3 +51,7 @@ def hascover(edition):
 @register.filter()
 def hasprintrun(edition):
     return hasattr(edition, 'thePrintRun')
+
+@register.filter()
+def hasfullcover(cover):
+    return cover.flags & 0b1
