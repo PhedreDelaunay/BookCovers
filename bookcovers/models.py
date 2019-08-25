@@ -33,7 +33,8 @@ class Artist(models.Model):
 
     class Meta:
         db_table = 'artists'
-
+        # sort alphabetically in admin
+        ordering = ('name',)
 
 class ArtistAka(models.Model):
     artist_aka_id = models.IntegerField()
@@ -413,7 +414,8 @@ class UsedAs(models.Model):
 
     class Meta:
         db_table = 'used_as'
-
+        # sort alphabetically in admin
+        ordering = ('used_type',)
 
 class ArtbookIndex(models.Model):
     artbook_index_id = models.AutoField(primary_key=True)

@@ -16,6 +16,7 @@ from bookcovers.models import SetExceptions
 from bookcovers.models import BookSeries
 from bookcovers.models import PrintRun
 from bookcovers.models import Panorama
+from bookcovers.models import ArtbookIndex
 
 import math
 
@@ -624,3 +625,11 @@ class CoverQuerys:
     def highest_print_run():
         print_run_id = PrintRun.objects.all().aggregate(Max('print_run_id'))
         return print_run_id
+
+    @staticmethod
+    def artbooks_index_artbooks():
+
+        artbook_list = ArtbookIndex.objects \
+            .order_by('book_author_name')
+
+        return artbook_list

@@ -3,11 +3,14 @@ from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic import DetailView
 
+
 from bookcovers.models import Edition
 from bookcovers.models import Panorama
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.pagers import PanoramaPager
 from bookcovers.query_cache import QueryCache
+
+from bookcovers.models import ArtbookIndex
 
 # Create your views here.
 
@@ -31,11 +34,13 @@ class PrintHistory(ListView):
         queryset = CoverQuerys.print_history(self.print_run_id)
         return queryset
 
+
 class Edition(DetailView):
     model=Edition
     context_object_name="edition"
     print ("Edition")
     template_name = 'bookcovers/edition.html'
+
 
 class PanoramaList(ListView):
     model=Panorama
@@ -69,6 +74,7 @@ class Panorama(DetailView):
         'set_view_name': None,
         'object': None,
     }
+
     def get_object(self, queryset=None):
         panorama_id = self.kwargs.get("pk")
         print (f"Panorama::get_object: panorama is '{panorama_id}'")
@@ -82,10 +88,20 @@ class Panorama(DetailView):
 # this on its own lists all authors with context_object_name = author_list
 #    model = Author
 
-# To list a subset of the model object specify the list of objects 
+# To list a subset of the model object specify the list of objects
 # using queryset
 # sort authors
 #    queryset = Author.objects.order_by('name')
 #    context_object_name = 'author_list'
 #=========================================
 
+class IndexAuthors(ListView):
+    model=ArtbookIndex
+    template_name = 'bookcovers/artbooks.html'
+    # we need to pass a variable with app_label and model_name to the view
+    # https://docs.djangoproject.com/en/2.2/ref/contrib/admin/#admin-reverse-urls
+    opts = model._meta
+
+    def get_queryset(self):
+        queryset = CoverQuerys.artbooks_index_artbooks()
+        return queryset

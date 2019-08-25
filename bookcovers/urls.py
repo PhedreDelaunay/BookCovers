@@ -24,6 +24,7 @@ from bookcovers.views import PrintHistory
 from bookcovers.views import PanoramaList
 from bookcovers.views import Panorama
 from bookcovers.views import Edition
+from bookcovers.views import IndexAuthors
 from . import views
 
 # Reference:
@@ -96,6 +97,7 @@ urlpatterns = [
     # ex: /bookcovers/panorama/2/
     path('panorama/<pk>/', Panorama.as_view(), name='panorama'),
     # https://docs.djangoproject.com/en/2.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.pk_url_kwarg
+    path('artbooks/', IndexAuthors.as_view(), name='artbooks'),
 ]
 
 # https://docs.djangoproject.com/en/2.0/intro/tutorial01/

@@ -1,0 +1,15 @@
+{# ex: /bookcovers/artbooks/ #}
+{# https://docs.djangoproject.com/en/2.2/ref/contrib/admin/#reversing-admin-urls #}
+{#  https://django.readthedocs.io/en/2.2.x/ref/contrib/admin/ #}
+{#  The opts variable can be any object which has an app_label and model_name attributes and is usually supplied by the admin views for the current model. #}
+
+{% extends "bookcovers/base.html" %}
+
+{% block title %}{{ view.web_title }}{% endblock %}
+{% load admin_urls %}
+{% block content %}
+{% for artbook in object_list %}
+<a href="{% url view.opts|admin_urlname:'change' artbook.pk %}">change author</a> {{ artbook.book_author }},{{ artbook.book_author_name }}, {{ artbook.artist }},{{ artbook.used_as.used_type }}
+<BR>
+{% endfor %}
+{% endblock %}

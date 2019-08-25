@@ -8,6 +8,7 @@ from bookcovers.models import Cover
 from bookcovers.models import Edition
 from bookcovers.models import ArtbookIndex
 from bookcovers.models import Artbook
+from bookcovers.models import UsedAs
 
 # Register your models here.
 
@@ -72,6 +73,7 @@ class ArtbookIndexAdmin(admin.ModelAdmin):
     list_display = (
         'book_title',
         'artwork_title',
+        'artist_id',
         'book_author_name',
         'artbook',
         'page',
@@ -96,3 +98,4 @@ admin.site.register(Cover, CoverAdmin)
 admin.site.register(Edition, EditionAdmin)
 admin.site.register(ArtbookIndex, ArtbookIndexAdmin)
 admin.site.register(Artbook, ArtbookAdmin)
+admin.site.register(UsedAs)
