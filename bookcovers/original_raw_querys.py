@@ -291,7 +291,7 @@ class OriginalRawQuerys:
         #print (f"author_cover_set_list: author_id={author_id}")
 
         # get all books for sets for an author, ordered by artist and volume
-        strAuthorSetCovers = ("SELECT artists.cover_filepath, BC.*, BSL.volume, sets.artist_id "
+        strAuthorSetCovers = ("SELECT artists.cover_filepath, artists.name, BC.*, BSL.volume, sets.artist_id "
                         "FROM artists, covers as BC, series as BS, books_series as BSL, sets, artworks as AW "
                         "WHERE (sets.author_id = %s)"
                         "AND BS.series_id = sets.series_id AND BSL.series_id = BS.series_id "
@@ -299,7 +299,7 @@ class OriginalRawQuerys:
                         "AND sets.artist_id = AW.artist_id AND AW.artist_id = artists.artist_id "
                         "AND BC.artwork_id = AW.artwork_id "
                         "AND BC.cover_id NOT IN (SELECT BSE.cover_id FROM set_exceptions as BSE WHERE BSE.set_id = sets.set_id) "
-                        "ORDER BY sets.artist_id, BSL.volume")
+                        "ORDER BY artists.name, BSL.volume")
 
         #print(f"strAASetCovers is\n{strAASetCovers}\n")
         with connection.cursor() as cursor:
