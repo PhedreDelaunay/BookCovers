@@ -51,7 +51,7 @@ class CoverAdmin(admin.ModelAdmin):
 # https://avilpage.com/2017/11/django-tips-tricks-hyperlink-foreignkey-admin.html
 # https://docs.djangoproject.com/en/2.2/ref/contrib/admin/#reversing-admin-urls
 class AuthorAdmin(admin.ModelAdmin):
-    # list_display = ('name')
+    list_display = ('name', 'flags',)
     # add a search bar
     search_fields = ['name',]
 
