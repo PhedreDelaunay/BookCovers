@@ -43,6 +43,8 @@ class QueryTestCase(TestCase):
 
     def print_cover_lists(self, raw_cover_list, cover_list):
         for raw_cover in raw_cover_list:
+            # for key,value in raw_cover.items():
+            #     print (f"{key}: {value}")
             print(f"raw author_id: {raw_cover['author_id']} , book_id: {raw_cover['book_id']}, cover_id: {raw_cover['cover_id']}, "
                   f"edition_id: {raw_cover['edition_id']}, artwork_id: {raw_cover['artwork_id']},")
         for cover in cover_list:
@@ -363,7 +365,7 @@ class AuthorSetQueryTests(SetQueryTest):
                 print(f"Expected: {expected_num_covers}, actual: {num_covers}")
 
             self.assertEqual(expected_num_covers, num_covers)
-            #self.print_cover_lists(raw_cover_list, cover_list)
+            #self.print_cover_lists_simple(raw_cover_list, cover_list)
 
             # keys in dictionary returned from raw sql query
             expected_keys = ["cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
@@ -409,7 +411,7 @@ class AuthorSetQueryTests(SetQueryTest):
 
     def test_e_author_sets_list_covers(self):
         print ("===========================================")
-        print (f"Test Covers in each individual Set for each authoro")
+        print (f"Test Covers in each individual Set for each author")
         print ("===========================================")
 
         author_list = self.author_list_query()
@@ -1014,18 +1016,18 @@ class AdhocQueryTests(QueryTestCase):
                 'Panoramas.json',
                 'AuthorAkas',]
 
-    def test_author_aka_list_of_covers(self):
-        # Robert Heinlein
-        author_id = 4
-
-        raw_cover_list = OriginalRawQuerys.author_cover_list(author_id, True)
-        print_dict_list(raw_cover_list)
-        print(f"num entries is {len(raw_cover_list)}")
-
-        author = Author.objects.get(pk=author_id)
-        django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id)
-        print_dict_list(django_cover_list)
-        print(f"num entries is {len(django_cover_list)}")
+    # def test_author_aka_list_of_covers(self):
+    #     # Robert Heinlein
+    #     author_id = 4
+    #
+    #     raw_cover_list = OriginalRawQuerys.author_cover_list(author_id, True)
+    #     print_dict_list(raw_cover_list)
+    #     print(f"num entries is {len(raw_cover_list)}")
+    #
+    #     author = Author.objects.get(pk=author_id)
+    #     django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id)
+    #     print_dict_list(django_cover_list)
+    #     print(f"num entries is {len(django_cover_list)}")
 
     # def test_num_covers_in_artist_sets(self):
     #     # Brian Cronin
@@ -1095,6 +1097,39 @@ class AdhocQueryTests(QueryTestCase):
     #         print_dict_list(list(set_cover_list))
     #         print("================================================================================")
     #         raise
+
+
+    def test_author_sets_covers(self):
+        """tests acovers in all the sets for this author
+           used to debug discrepancies found in the full test
+        """
+
+        # Isaac Asimov
+        author_id = 18
+
+        raw_cover_list = OriginalRawQuerys.author_set_cover_list(author_id, return_dict=True)
+        expected_num_covers = len(raw_cover_list)
+
+        cover_list = CoverQuerys.author_set_covers(author_id=author_id)
+        num_covers = len(cover_list)
+
+        if expected_num_covers != 0 or num_covers != 0:
+            print("==============================================")
+            print(f"Test all Covers in all Sets for Author {author_id}")
+            print("==============================================")
+            print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+
+        self.assertEqual(expected_num_covers, num_covers)
+        self.print_cover_lists_simple(raw_cover_list, cover_list)
+
+        # keys in dictionary returned from raw sql query
+        expected_keys = ["cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
+        # keys in dictionary returned from django query
+        actual_keys = ['cover_filepath', 'cover_id', 'book__pk', 'artwork_id', 'edition_id', 'cover_filename']
+
+        #  for each cover: check expected cover data matches actual cover data
+        for raw_cover, cover in zip(raw_cover_list, cover_list):
+            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
 
     # def test_set_covers(self):
