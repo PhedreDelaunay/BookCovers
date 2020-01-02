@@ -431,7 +431,7 @@ class ArtbookIndex(models.Model):
     book_author_name = models.CharField(max_length=255, blank=True, null=True)
     book_author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
-    cover_year = models.CharField(max_length=50, blank=True, null=True)
+    artwork_year = models.CharField(max_length=50, blank=True, null=True)
     cover = models.ForeignKey(Cover, models.DO_NOTHING, blank=True, null=True,
                               related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     publisher = models.CharField(max_length=255, blank=True, null=True)
@@ -440,6 +440,7 @@ class ArtbookIndex(models.Model):
     notes = models.CharField(max_length=255, blank=True, null=True)
     used_as = models.ForeignKey(UsedAs, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
+    copyright = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         db_table = 'artbook_index'
