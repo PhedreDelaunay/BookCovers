@@ -39,7 +39,7 @@ class PageTestCases:
             print (f"check_status_code: {type(self).__name__}")
             print ("----------------------------------")
             response = self.client.get(reverse_url)
-            self.assertEquals(response.status_code, self.expected_response_code, msg=f"reverse_url: {reverse_url}")
+            self.assertEqual(response.status_code, self.expected_response_code, msg=f"reverse_url: {reverse_url}")
 
         def check_template(self, reverse_url, template_url):
             print ("----------------------------------")
@@ -47,7 +47,7 @@ class PageTestCases:
             print ("----------------------------------")
             response = self.client.get(reverse_url)
             print (f"response.status_code is {response.status_code}")
-            self.assertEquals(response.status_code, self.expected_response_code)
+            self.assertEqual(response.status_code, self.expected_response_code)
             self.assertTemplateUsed(response, template_url)
 
         def test_status_code(self):
