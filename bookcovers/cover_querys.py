@@ -195,7 +195,7 @@ class CoverQuerys:
         print (f"author_id is {author_id}")
         aka_inner_queryset = Author.objects.filter(theAuthor_aka__author_aka_id=author_id)
 
-        # this returns all covers for all books
+        # this returns all covers for all books by this author
         all_cover_list = Book.objects \
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
             .filter(Q(theCover__flags__lt=256)) \
@@ -210,9 +210,10 @@ class CoverQuerys:
                       'book_id',
                       'theCover__artwork__year')
 
-        # .filter(Q(theCover__flags__lt=256) & Q(pk=F('theCover__book'))) \
+        # .exclude(Q(pk=F('theCover__book__pk')) & Q(theCover__edition__pk__isnull=True)) \
 
         # this eliminates duplicate cover entries, where the same file is used for multiple cover records
+        # TODO: not anymore, gives the same result as above
         # eg John Wyndham, The Chrysalids, by Brian Cronin covers: 645, 646
         dedup_cover_list = Book.objects \
             .filter(Q(author=author_id) | Q(author__in=aka_inner_queryset)) \
@@ -257,7 +258,7 @@ class CoverQuerys:
             #print (f"author {author.name}: has no unknown covers")
             print (f"author {author_id}: has no unknown covers")
 
-        print (list(cover_list))
+        #print (list(cover_list))
         #print(f"django author cover_list query is\n{cover_list.query}")
         # print("len(cover_list) is {}".format(len(cover_list)))
 
