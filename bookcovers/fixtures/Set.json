@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
         "series": 2,
-        "author_id": 29,
-        "artist_id": 2,
+        "author": 29,
+        "artist": 2,
         "imprint_id": null,
         "description": "BP, New Sun",
         "panorama_id": null
@@ -16,8 +16,8 @@
     "pk": 2,
     "fields": {
         "series": 2,
-        "author_id": 29,
-        "artist_id": 4,
+        "author": 29,
+        "artist": 4,
         "imprint_id": null,
         "description": "PAJ, New Sun",
         "panorama_id": null
@@ -28,8 +28,8 @@
     "pk": 3,
     "fields": {
         "series": 35,
-        "author_id": 15,
-        "artist_id": 2,
+        "author": 15,
+        "artist": 2,
         "imprint_id": null,
         "description": "BP, Corgi, Bradbury",
         "panorama_id": null
@@ -40,8 +40,8 @@
     "pk": 4,
     "fields": {
         "series": 35,
-        "author_id": 15,
-        "artist_id": 35,
+        "author": 15,
+        "artist": 35,
         "imprint_id": null,
         "description": "Josh Kirby, Corgi, Bradbury",
         "panorama_id": null
@@ -52,8 +52,8 @@
     "pk": 5,
     "fields": {
         "series": 35,
-        "author_id": 15,
-        "artist_id": 34,
+        "author": 15,
+        "artist": 34,
         "imprint_id": null,
         "description": "John Richards, Corgi, Bradbury",
         "panorama_id": null
@@ -64,8 +64,8 @@
     "pk": 6,
     "fields": {
         "series": 1,
-        "author_id": 5,
-        "artist_id": 2,
+        "author": 5,
+        "artist": 2,
         "imprint_id": null,
         "description": "BP, Dune",
         "panorama_id": null
@@ -76,8 +76,8 @@
     "pk": 7,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 36,
+        "author": 90,
+        "artist": 36,
         "imprint_id": null,
         "description": "john griffiths, John Wyndham",
         "panorama_id": null
@@ -88,8 +88,8 @@
     "pk": 8,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 23,
+        "author": 90,
+        "artist": 23,
         "imprint_id": null,
         "description": "Harry Willock, John Wyndham",
         "panorama_id": null
@@ -100,8 +100,8 @@
     "pk": 9,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 26,
+        "author": 90,
+        "artist": 26,
         "imprint_id": null,
         "description": "Peter Lord, John Wyndham",
         "panorama_id": null
@@ -112,8 +112,8 @@
     "pk": 10,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 17,
+        "author": 90,
+        "artist": 17,
         "imprint_id": null,
         "description": "Mark Salwowski, John Wyndham",
         "panorama_id": null
@@ -124,8 +124,8 @@
     "pk": 11,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 24,
+        "author": 90,
+        "artist": 24,
         "imprint_id": null,
         "description": "Spencer Wilson, John Wyndham",
         "panorama_id": null
@@ -136,8 +136,8 @@
     "pk": 12,
     "fields": {
         "series": 37,
-        "author_id": 18,
-        "artist_id": 79,
+        "author": 18,
+        "artist": 79,
         "imprint_id": null,
         "description": "Chris Foss, Foundation",
         "panorama_id": 3
@@ -148,8 +148,8 @@
     "pk": 13,
     "fields": {
         "series": 37,
-        "author_id": 18,
-        "artist_id": 30,
+        "author": 18,
+        "artist": 30,
         "imprint_id": null,
         "description": "Tim White, Foundation",
         "panorama_id": null
@@ -160,8 +160,8 @@
     "pk": 14,
     "fields": {
         "series": 1,
-        "author_id": 5,
-        "artist_id": 28,
+        "author": 5,
+        "artist": 28,
         "imprint_id": 0,
         "description": "Gerry Grace, Dune",
         "panorama_id": 1
@@ -172,8 +172,8 @@
     "pk": 15,
     "fields": {
         "series": 37,
-        "author_id": 18,
-        "artist_id": 45,
+        "author": 18,
+        "artist": 45,
         "imprint_id": 0,
         "description": "Fred Gambino, Foundation",
         "panorama_id": 2
@@ -184,8 +184,8 @@
     "pk": 16,
     "fields": {
         "series": 19,
-        "author_id": 104,
-        "artist_id": 45,
+        "author": 104,
+        "artist": 45,
         "imprint_id": 0,
         "description": "Fred Gambino, Serrano",
         "panorama_id": null
@@ -196,8 +196,8 @@
     "pk": 17,
     "fields": {
         "series": 37,
-        "author_id": 18,
-        "artist_id": 13,
+        "author": 18,
+        "artist": 13,
         "imprint_id": 0,
         "description": "Stephen Youll, Foundation",
         "panorama_id": null
@@ -208,8 +208,8 @@
     "pk": 18,
     "fields": {
         "series": 12,
-        "author_id": 18,
-        "artist_id": 2,
+        "author": 18,
+        "artist": 2,
         "imprint_id": 2,
         "description": "NEL, Lucky Starr",
         "panorama_id": null
@@ -220,8 +220,8 @@
     "pk": 19,
     "fields": {
         "series": 12,
-        "author_id": 18,
-        "artist_id": 70,
+        "author": 18,
+        "artist": 70,
         "imprint_id": 0,
         "description": "Danny Flynn, Lucky Starr",
         "panorama_id": null
@@ -232,8 +232,8 @@
     "pk": 20,
     "fields": {
         "series": 40,
-        "author_id": null,
-        "artist_id": null,
+        "author": null,
+        "artist": null,
         "imprint_id": null,
         "description": null,
         "panorama_id": 0
@@ -244,8 +244,8 @@
     "pk": 21,
     "fields": {
         "series": 36,
-        "author_id": 90,
-        "artist_id": 139,
+        "author": 90,
+        "artist": 139,
         "imprint_id": null,
         "description": "Brian Cronin, John Wyndham",
         "panorama_id": 0
@@ -256,8 +256,8 @@
     "pk": 22,
     "fields": {
         "series": 4,
-        "author_id": 93,
-        "artist_id": 2,
+        "author": 93,
+        "artist": 2,
         "imprint_id": null,
         "description": "BP, The Sunset Warrior",
         "panorama_id": 0
@@ -268,8 +268,8 @@
     "pk": 23,
     "fields": {
         "series": 45,
-        "author_id": 34,
-        "artist_id": 17,
+        "author": 34,
+        "artist": 17,
         "imprint_id": 0,
         "description": "Mark Salwowski, Ender",
         "panorama_id": 0
@@ -280,8 +280,8 @@
     "pk": 24,
     "fields": {
         "series": 46,
-        "author_id": 34,
-        "artist_id": 71,
+        "author": 34,
+        "artist": 71,
         "imprint_id": 0,
         "description": "Bob Warner, Ender's Shadow",
         "panorama_id": 0
@@ -292,8 +292,8 @@
     "pk": 25,
     "fields": {
         "series": 13,
-        "author_id": 33,
-        "artist_id": 11,
+        "author": 33,
+        "artist": 11,
         "imprint_id": 0,
         "description": "Mick Posen, Snow Queen",
         "panorama_id": 0
@@ -304,8 +304,8 @@
     "pk": 26,
     "fields": {
         "series": 19,
-        "author_id": 104,
-        "artist_id": 142,
+        "author": 104,
+        "artist": 142,
         "imprint_id": 0,
         "description": "Gary Ruddell, Serrano",
         "panorama_id": 0
@@ -316,8 +316,8 @@
     "pk": 27,
     "fields": {
         "series": 49,
-        "author_id": 92,
-        "artist_id": 84,
+        "author": 92,
+        "artist": 84,
         "imprint_id": 0,
         "description": "Paul Damon, The Chronicles of Corum",
         "panorama_id": 0
@@ -328,8 +328,8 @@
     "pk": 28,
     "fields": {
         "series": 50,
-        "author_id": 150,
-        "artist_id": 81,
+        "author": 150,
+        "artist": 81,
         "imprint_id": 0,
         "description": "Patrick Woodroffe, Of Man and Manta",
         "panorama_id": 0
@@ -340,8 +340,8 @@
     "pk": 29,
     "fields": {
         "series": 35,
-        "author_id": 15,
-        "artist_id": 42,
+        "author": 15,
+        "artist": 42,
         "imprint_id": 0,
         "description": "Peter Goodfellow, Panther, Bradbury",
         "panorama_id": 0
@@ -352,8 +352,8 @@
     "pk": 30,
     "fields": {
         "series": 18,
-        "author_id": 111,
-        "artist_id": 13,
+        "author": 111,
+        "artist": 13,
         "imprint_id": 0,
         "description": "Stephen Youll, Seafort Saga",
         "panorama_id": 0
@@ -364,8 +364,8 @@
     "pk": 31,
     "fields": {
         "series": 14,
-        "author_id": 103,
-        "artist_id": 13,
+        "author": 103,
+        "artist": 13,
         "imprint_id": 0,
         "description": "Stephen Youll, The Last Rune",
         "panorama_id": 0
@@ -376,8 +376,8 @@
     "pk": 32,
     "fields": {
         "series": 55,
-        "author_id": 497,
-        "artist_id": 30,
+        "author": 497,
+        "artist": 30,
         "imprint_id": 0,
         "description": "Tim White, H.P. Lovecraft Omnibus",
         "panorama_id": 0

@@ -1,12 +1,4 @@
 [
-  {
-    "model": "bookcovers.country",
-    "pk": 0,
-    "fields": {
-        "country": "Unknown",
-        "display_order": 4
-    }
-},
 {
     "model": "bookcovers.country",
     "pk": 1,
@@ -29,6 +21,14 @@
     "fields": {
         "country": "Australia",
         "display_order": 3
+    }
+},
+{
+    "model": "bookcovers.country",
+    "pk": 4,
+    "fields": {
+        "country": "Unknown",
+        "display_order": 4
     }
 }
 ]

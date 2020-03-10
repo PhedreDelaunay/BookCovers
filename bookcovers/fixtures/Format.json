@@ -1,0 +1,30 @@
+[
+{
+    "model": "bookcovers.format",
+    "pk": 1,
+    "fields": {
+        "format": "Paperback"
+    }
+},
+{
+    "model": "bookcovers.format",
+    "pk": 2,
+    "fields": {
+        "format": "Trade Paperback"
+    }
+},
+{
+    "model": "bookcovers.format",
+    "pk": 3,
+    "fields": {
+        "format": "Hardback"
+    }
+},
+{
+    "model": "bookcovers.format",
+    "pk": 4,
+    "fields": {
+        "format": "Magazine"
+    }
+}
+]

@@ -21,18 +21,18 @@ from bookcovers.cover_querys import CoverQuerys
 class PageTestCases:
 
     class PageTestCase(TestCase):
-        fixtures = ['Artists.json',
-                    'Artworks.json',
-                    'Authors.json',
-                    'Books.json',
-                    'Editions.json',
-                    'Covers.json',
-                    'Countries.json',
-                    'Sets.json',
+        fixtures = ['Artist.json',
+                    'Artwork.json',
+                    'Author.json',
+                    'Book.json',
+                    'Edition.json',
+                    'Cover.json',
+                    'Country.json',
+                    'Set.json',
                     'Series.json',
                     'SetExceptions.json',
-                    'BooksSeries.json',
-                    'PrintRuns.json',]
+                    'BookSeries.json',
+                    'PrintRun.json',]
 
         def check_status_code(self, reverse_url):
             print ("----------------------------------")

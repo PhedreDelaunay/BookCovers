@@ -84,7 +84,7 @@
         "book": 6,
         "artwork": 6,
         "edition": 7,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "Stigmata_Dune_FullCover.jpg",
         "private_notes": "Kim Harries",
         "is_variant": true
@@ -175,7 +175,7 @@
         "book": 11,
         "artwork": 12,
         "edition": 31,
-        "flags": 128,
+        "flags": 132,
         "cover_filename": "TheChangeling_FrontCover.jpg",
         "private_notes": null,
         "is_variant": true
@@ -214,7 +214,7 @@
         "book": 12,
         "artwork": 14,
         "edition": 33,
-        "flags": 128,
+        "flags": 132,
         "cover_filename": "TheStoneGodAwakens1979_FrontCover.jpg",
         "private_notes": null,
         "is_variant": true
@@ -1358,7 +1358,7 @@
         "book": 159,
         "artwork": 100,
         "edition": 122,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheSeedsOfTime1975.jpg",
         "private_notes": null,
         "is_variant": true
@@ -1618,7 +1618,7 @@
         "book": 8,
         "artwork": 117,
         "edition": 141,
-        "flags": 3,
+        "flags": 7,
         "cover_filename": "ChildrenOfDune_34.jpg",
         "private_notes": null,
         "is_variant": true
@@ -2021,7 +2021,7 @@
         "book": 189,
         "artwork": 148,
         "edition": 174,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheKeepOfFire_1999.jpg",
         "private_notes": null,
         "is_variant": true
@@ -2177,7 +2177,7 @@
         "book": 191,
         "artwork": 159,
         "edition": 186,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheChrysalids.jpg",
         "private_notes": null,
         "is_variant": true
@@ -2424,7 +2424,7 @@
         "book": 25,
         "artwork": 22,
         "edition": 14,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TimeEnoughForLove_FrontCover.jpg",
         "private_notes": null,
         "is_variant": true
@@ -4946,7 +4946,7 @@
         "book": 728,
         "artwork": 379,
         "edition": 571,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "Distress_1996.jpg",
         "private_notes": null,
         "is_variant": true
@@ -4972,7 +4972,7 @@
         "book": 171,
         "artwork": 114,
         "edition": 573,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheNovice_atom.jpg",
         "private_notes": null,
         "is_variant": true
@@ -5102,10 +5102,10 @@
         "book": 6,
         "artwork": 390,
         "edition": 581,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheThreeStigmataOfPalmerEldritch.jpg",
         "private_notes": null,
-        "is_variant": false
+        "is_variant": true
     }
 },
 {
@@ -5687,7 +5687,7 @@
         "book": 5,
         "artwork": 119,
         "edition": 557,
-        "flags": 3,
+        "flags": 7,
         "cover_filename": "DuneMessiah_54.jpg",
         "private_notes": null,
         "is_variant": true
@@ -6246,7 +6246,7 @@
         "book": 922,
         "artwork": 477,
         "edition": 661,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "Dragonsong_1993.jpg",
         "private_notes": null,
         "is_variant": true
@@ -6779,7 +6779,7 @@
         "book": 941,
         "artwork": 518,
         "edition": 695,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheNakedGod_1999.jpg",
         "private_notes": null,
         "is_variant": true
@@ -7013,7 +7013,7 @@
         "book": 596,
         "artwork": 421,
         "edition": 712,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "FreedomsChoice_6.jpg",
         "private_notes": null,
         "is_variant": true
@@ -7299,7 +7299,7 @@
         "book": 281,
         "artwork": 558,
         "edition": 308,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "PlanetOfTheApes_DelRey.jpg",
         "private_notes": "NULL",
         "is_variant": true
@@ -7429,7 +7429,7 @@
         "book": 122,
         "artwork": 355,
         "edition": 744,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "2001ASpaceOdyssey_1984.jpg",
         "private_notes": null,
         "is_variant": true
@@ -8248,7 +8248,7 @@
         "book": 508,
         "artwork": 460,
         "edition": 800,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "Neuromancer7.jpg",
         "private_notes": "edition 800, leaving it out means it doesn't show up in title list but does in cover list",
         "is_variant": true
@@ -8326,7 +8326,7 @@
         "book": 191,
         "artwork": 632,
         "edition": 806,
-        "flags": 0,
+        "flags": 4,
         "cover_filename": "TheChrysalids.jpg",
         "private_notes": "edition 806, leaving it out means it doesn't show up in title list but does in cover list",
         "is_variant": true

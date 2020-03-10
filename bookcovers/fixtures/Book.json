@@ -1213,7 +1213,7 @@
     "pk": 96,
     "fields": {
         "author": 48,
-        "title": "King Rat",
+        "title": "Available 303",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -1343,7 +1343,7 @@
     "pk": 106,
     "fields": {
         "author": 56,
-        "title": "Mask",
+        "title": "Available 304",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -1460,7 +1460,7 @@
     "pk": 115,
     "fields": {
         "author": 65,
-        "title": "Emma",
+        "title": "Available 305",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -1811,7 +1811,7 @@
     "pk": 142,
     "fields": {
         "author": 85,
-        "title": "Caravans",
+        "title": "Available 306",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -6543,7 +6543,7 @@
     "pk": 507,
     "fields": {
         "author": 246,
-        "title": "Bright Lights, Big City",
+        "title": "Available 308",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -6569,7 +6569,7 @@
     "pk": 509,
     "fields": {
         "author": 85,
-        "title": "The Source",
+        "title": "Available 307",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -6686,7 +6686,7 @@
     "pk": 518,
     "fields": {
         "author": 44,
-        "title": "The Cloning of Joanna May",
+        "title": "Available 300",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -7167,8 +7167,8 @@
     "pk": 555,
     "fields": {
         "author": 275,
-        "title": "How the Cadillac got its Fins",
-        "subtitle": "And Other Tales from the Annals of Business & Marketing",
+        "title": "Available 309",
+        "subtitle": null,
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,
@@ -7310,7 +7310,7 @@
     "pk": 566,
     "fields": {
         "author": 284,
-        "title": "The Manuscript in a Red Box",
+        "title": "Available 310",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -7479,7 +7479,7 @@
     "pk": 579,
     "fields": {
         "author": 296,
-        "title": "Sophie's World",
+        "title": "Available 311",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -7497,7 +7497,7 @@
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,
-        "quick_notes": "Biography of Audrey Hepburn"
+        "quick_notes": null
     }
 },
 {
@@ -7687,7 +7687,7 @@
     "pk": 595,
     "fields": {
         "author": 48,
-        "title": "Shogun",
+        "title": "Available 301",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -7804,7 +7804,7 @@
     "pk": 604,
     "fields": {
         "author": 48,
-        "title": "Tai-Pan",
+        "title": "Available 302",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -8415,7 +8415,7 @@
     "pk": 651,
     "fields": {
         "author": 343,
-        "title": "Never Trust a Rabbit",
+        "title": "Available 312",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -8433,7 +8433,7 @@
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,
-        "quick_notes": "A complete biography by Carole C. Carlson"
+        "quick_notes": null
     }
 },
 {
@@ -9091,7 +9091,7 @@
     "pk": 703,
     "fields": {
         "author": 369,
-        "title": "Pennington's Seventeenth Summer",
+        "title": "Available 313",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -9156,7 +9156,7 @@
     "pk": 708,
     "fields": {
         "author": 369,
-        "title": "The Beethoven Medal",
+        "title": "Available 314",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -9169,7 +9169,7 @@
     "pk": 709,
     "fields": {
         "author": 369,
-        "title": "Pennington's Heir",
+        "title": "Available 315",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -9429,8 +9429,8 @@
     "pk": 729,
     "fields": {
         "author": 379,
-        "title": "Game Over",
-        "subtitle": "Nintendo's Battle to Dominate an Industry",
+        "title": "Available 316",
+        "subtitle": null,
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,
@@ -9611,7 +9611,7 @@
     "pk": 743,
     "fields": {
         "author": 392,
-        "title": "K-PAX",
+        "title": "Available 317",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -9754,7 +9754,7 @@
     "pk": 754,
     "fields": {
         "author": 397,
-        "title": "The Da Vinci Code",
+        "title": "Available 320",
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
@@ -10018,7 +10018,7 @@
         "subtitle": null,
         "copyright_year": null,
         "copyright": null,
-        "synopsis": "Boy and tiger share a boat",
+        "synopsis": null,
         "quick_notes": null
     }
 },
@@ -10144,8 +10144,8 @@
     "pk": 784,
     "fields": {
         "author": 392,
-        "title": "K-PAX II",
-        "subtitle": "on a beam of light",
+        "title": "Available 318",
+        "subtitle": null,
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,
@@ -10157,8 +10157,8 @@
     "pk": 785,
     "fields": {
         "author": 392,
-        "title": "K-PAX III",
-        "subtitle": "the worlds of prot",
+        "title": "Available 319",
+        "subtitle": null,
         "copyright_year": null,
         "copyright": null,
         "synopsis": null,

@@ -603,5 +603,49 @@
         "subtitle": "The Illustrated Encyclopedia",
         "notes": null
     }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 56,
+    "fields": {
+        "author": 77,
+        "artist": 12,
+        "title": "Knightsbridge: The Art of Keith Parkinson",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 57,
+    "fields": {
+        "author": 77,
+        "artist": 12,
+        "title": "Kingsgate: The Art of Keith Parkinson",
+        "subtitle": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 58,
+    "fields": {
+        "author": 577,
+        "artist": 15,
+        "title": "Wonderworks",
+        "subtitle": "Science Fiction & Fantasy Art by Michael Whelan",
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artbook",
+    "pk": 59,
+    "fields": {
+        "author": 293,
+        "artist": 67,
+        "title": "Reflections",
+        "subtitle": "The Art of Stephen Bradbury",
+        "notes": null
+    }
 }
 ]

@@ -10,14 +10,14 @@ from bookcovers.cover_querys import CoverQuerys
 # Using the unittest framework to identify missing images
 
 class ImageTests(TestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'ArtistAkas.json',
-                'Countries.json']
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'ArtistAka.json',
+                'Country.json']
 
     # test that cover images are there
     def image_exists(self,absolute_image_filepath):

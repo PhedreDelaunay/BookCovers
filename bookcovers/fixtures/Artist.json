@@ -289,7 +289,7 @@
     "pk": 20,
     "fields": {
         "name": "S.R. Boldero",
-        "fullname": null,
+        "fullname": "Stephen Richard Boldero",
         "cover_filepath": "BookCovers/Images/SRBoldero/",
         "website": null,
         "date_of_birth": null,
@@ -2727,6 +2727,516 @@
         "birthplace": null,
         "nationality": null,
         "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 183,
+    "fields": {
+        "name": "Dave Pether",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 184,
+    "fields": {
+        "name": "Robin Hidden",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 185,
+    "fields": {
+        "name": "Chris Collingwood",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 186,
+    "fields": {
+        "name": "Bob Layzell",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 187,
+    "fields": {
+        "name": "Julek Heller",
+        "fullname": null,
+        "cover_filepath": "BookCovers/Images/JulekHeller/",
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 188,
+    "fields": {
+        "name": "David Jackson",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 189,
+    "fields": {
+        "name": "Gordon Crabb",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 190,
+    "fields": {
+        "name": "Alan Craddock",
+        "fullname": null,
+        "cover_filepath": "BookCovers/Images/AlanCraddock/",
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 191,
+    "fields": {
+        "name": "Ian Craig",
+        "fullname": null,
+        "cover_filepath": "BookCovers/Images/IanCraig/",
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 192,
+    "fields": {
+        "name": "Michael Embden",
+        "fullname": null,
+        "cover_filepath": "BookCovers/Images/MichaelEmbden/",
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 193,
+    "fields": {
+        "name": "Alan Daniels",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 194,
+    "fields": {
+        "name": "Colin Hay",
+        "fullname": null,
+        "cover_filepath": "BookCovers/Images/ColinHay/",
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 195,
+    "fields": {
+        "name": "Brent Armstrong",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": "Canada",
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 196,
+    "fields": {
+        "name": "Gary Chalk",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 197,
+    "fields": {
+        "name": "Gareth Colman",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 198,
+    "fields": {
+        "name": "Lucinda Cowell",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 199,
+    "fields": {
+        "name": "Roger Dean",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 200,
+    "fields": {
+        "name": "Emyln Duffy",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 201,
+    "fields": {
+        "name": "C. Foster",
+        "fullname": "Robert Foster",
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 202,
+    "fields": {
+        "name": "George W. Harrison",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 203,
+    "fields": {
+        "name": "David Higgins",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 204,
+    "fields": {
+        "name": "Peter Jepson",
+        "fullname": "Peter B. Jepson",
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": "https://antiquesatlas.com/antique/peter_jepson_b_1936_watercolour_pastel_leopard/as237a938\r\nPETER JEPSON, who was born in North West London in 1936, took up painting after his National Service as a hobby and it became his life. He eventually became a full time painter and his subjects were an eclectic mix painted exclusively in oil. He then developed this mixed media technique using pastel and watercolours and turned to wildlife painting.\r\n\r\nHe had a one man exhibition in New York in 1993 and subsequently had some good sales of his paintings at Christies in London. He was selected a Member of the British Society of Painters in 1990, and is a Fellow of the Society of Artists."
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 205,
+    "fields": {
+        "name": "Mike Little",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 206,
+    "fields": {
+        "name": "Brigid Marlin",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 207,
+    "fields": {
+        "name": "Kristine Nason",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 208,
+    "fields": {
+        "name": "Michael Payne",
+        "fullname": "Roy Michael Payne",
+        "cover_filepath": null,
+        "website": "http://www.submarinerart.com/artist-michael-payne/",
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": null
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 209,
+    "fields": {
+        "name": "Chris Yates",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 210,
+    "fields": {
+        "name": "David Schleinkofer",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 211,
+    "fields": {
+        "name": "Edward Soyka",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 212,
+    "fields": {
+        "name": "Michael Herring",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 213,
+    "fields": {
+        "name": "Walter Bachinsky",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 214,
+    "fields": {
+        "name": "Brad Holland",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 215,
+    "fields": {
+        "name": "John Gampert",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
+    }
+},
+{
+    "model": "bookcovers.artist",
+    "pk": 216,
+    "fields": {
+        "name": "Vernon Kramer",
+        "fullname": null,
+        "cover_filepath": null,
+        "website": null,
+        "date_of_birth": null,
+        "date_of_death": null,
+        "birthplace": null,
+        "nationality": null,
+        "notes": ""
     }
 }
 ]

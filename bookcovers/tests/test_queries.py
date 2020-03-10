@@ -123,7 +123,6 @@ class CoverListQueryTest(QueryTestCase):
             self.assertEqual(expected_num_covers, num_covers)
         except AssertionError as e:
             print("==============Expected (original raw)================")
-            print(f"Original query is\n{raw_cover_list.query}\n")
             print(f"Original {self.item_desc} cover list is\n{raw_cover_list}\n")
             print("=========================Actual=====================")
             print(f"{self.item_desc} cover_list query is:\n{cover_list.query}")
@@ -180,17 +179,17 @@ class SetQueryTest(QueryTestCase):
 
 # python manage.py test bookcovers.tests.test_queries.AuthorQueryTests --settings=djabbic.testsettings
 class AuthorQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'AuthorAka.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json',]
 
     def setUp(self):
@@ -245,6 +244,29 @@ class AuthorQueryTests(QueryTestCase):
 
         cover_list_test.validate_all_lists_of_covers()
 
+
+    def test_all_covers_of_all_books_for_author(self):
+        # John Wyndham
+        author_id = 90
+
+        list = CoverQuerys.author_list()
+        for item in list:
+            author_id = item['author_id']
+            author = Author.objects.get(pk=author_id)
+            # all covers
+            true_django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id, all=True)
+            # remove duplicates
+            false_django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id, all=False)
+            all_num_covers = len(true_django_cover_list)
+            dedup_num_covers = len(false_django_cover_list)
+            print(f"True num entries is {all_num_covers}")
+            print(f"False num entries is {dedup_num_covers}")
+            self.assertEqual(all_num_covers, dedup_num_covers)
+
+            # print_dict_list(true_django_cover_list)
+            # print_dict_list(false_django_cover_list)
+
+
     def test_authors_book_list(self):
         """
         test list of books for each author in db
@@ -281,17 +303,17 @@ class AuthorQueryTests(QueryTestCase):
 
 # python manage.py test bookcovers.tests.test_queries.AuthorSetQueryTests --settings=djabbic.testsettings
 class AuthorSetQueryTests(SetQueryTest):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'AuthorAka.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json',]
 
     def setUp(self):
@@ -446,13 +468,13 @@ class AuthorSetQueryTests(SetQueryTest):
 
 
 class BookQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'Countries.json']
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'Country.json']
 
     def setUp(self):
         self.book_list_query = CoverQuerys.book_list
@@ -516,14 +538,14 @@ class BookQueryTests(QueryTestCase):
 
 
 class ArtistQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'ArtistAkas.json',
-                'Countries.json']
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'ArtistAka.json',
+                'Country.json']
 
     def setUp(self):
         self.artist_list_query = CoverQuerys.artist_list
@@ -564,7 +586,7 @@ class ArtistQueryTests(QueryTestCase):
                                              model=Artist,
                                              item_desc="artist",
                                              primary_key="artist_id",
-                                             raw_cover_query=OriginalRawQuerys.artist_cover_list,
+                                                 raw_cover_query=OriginalRawQuerys.artist_cover_list,
                                              django_cover_query=CoverQuerys.artist_cover_list,
                                              expected_keys=["book_id", "cover_filename", "artwork_id", "year"],
                                              actual_keys=["book", "theCover__cover_filename", "artwork_id", "year"]
@@ -575,17 +597,17 @@ class ArtistQueryTests(QueryTestCase):
 
 # python manage.py test bookcovers.tests.test_queries.AuthorSetQueryTests --settings=djabbic.testsettings
 class ArtistSetQueryTests(SetQueryTest):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'AuthorAka.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json', ]
 
     def setUp(self):
@@ -743,13 +765,13 @@ class ArtistSetQueryTests(SetQueryTest):
 
 
 class ArtworkQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'Countries.json']
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'Country.json']
 
     def setUp(self):
         self.subject_model = Artwork
@@ -844,19 +866,19 @@ class ArtworkQueryTests(QueryTestCase):
 
 # python manage.py test bookcovers.tests.test_queries.PrintRunQueryTests --settings=djabbic.testsettings
 class PrintRunQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'AuthorAka.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json',
-                'PrintRuns.json']
+                'PrintRun.json']
 
     def test_a_total_num_print_runs(self):
         max_print_run_id = CoverQuerys.highest_print_run()
@@ -914,20 +936,20 @@ class PrintRunQueryTests(QueryTestCase):
                 self.record_matches(raw_run, expected_keys, run, actual_keys)
 
 class PanoramaQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'AuthorAkas.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'AuthorAka.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json',
-                'PrintRuns.json',
-                'Panoramas.json',]
+                'PrintRun.json',
+                'Panorama.json',]
 
     def setUp(self):
         self.query_cache = QueryCache()
@@ -1001,20 +1023,38 @@ class PanoramaQueryTests(QueryTestCase):
 
 # python manage.py test bookcovers.tests.test_queries.AdhocQueryTests --settings=djabbic.testsettings
 class AdhocQueryTests(QueryTestCase):
-    fixtures = ['Artists.json',
-                'Artworks.json',
-                'Authors.json',
-                'Books.json',
-                'Editions.json',
-                'Covers.json',
-                'Countries.json',
-                'Sets.json',
+    fixtures = ['Artist.json',
+                'Artwork.json',
+                'Author.json',
+                'Book.json',
+                'Edition.json',
+                'Cover.json',
+                'Country.json',
+                'Set.json',
                 'Series.json',
-                'BooksSeries.json',
+                'BookSeries.json',
                 'SetExceptions.json',
-                'PrintRuns.json',
-                'Panoramas.json',
-                'AuthorAkas',]
+                'PrintRun.json',
+                'Panorama.json',
+                'AuthorAka',]
+
+    def test_all_covers_of_all_books_for_author(self):
+        # John Wyndham
+        author_id = 90
+
+        author = Author.objects.get(pk=author_id)
+        # all covers
+        true_django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id, all=True)
+        # remove duplicates
+        false_django_cover_list = CoverQuerys.all_covers_of_all_books_for_author(author=author, author_id=author_id, all=False)
+        print(f"False num entries is {len(false_django_cover_list)}")
+        print(f"True num entries is {len(true_django_cover_list)}")
+        print_dict_list(true_django_cover_list)
+
+        print(f"False num entries is {len(false_django_cover_list)}")
+        print_dict_list(false_django_cover_list)
+
+
 
     # def test_author_aka_list_of_covers(self):
     #     # Robert Heinlein
@@ -1099,37 +1139,37 @@ class AdhocQueryTests(QueryTestCase):
     #         raise
 
 
-    def test_author_sets_covers(self):
-        """tests acovers in all the sets for this author
-           used to debug discrepancies found in the full test
-        """
-
-        # Isaac Asimov
-        author_id = 18
-
-        raw_cover_list = OriginalRawQuerys.author_set_cover_list(author_id, return_dict=True)
-        expected_num_covers = len(raw_cover_list)
-
-        cover_list = CoverQuerys.author_set_covers(author_id=author_id)
-        num_covers = len(cover_list)
-
-        if expected_num_covers != 0 or num_covers != 0:
-            print("==============================================")
-            print(f"Test all Covers in all Sets for Author {author_id}")
-            print("==============================================")
-            print(f"Expected: {expected_num_covers}, actual: {num_covers}")
-
-        self.assertEqual(expected_num_covers, num_covers)
-        self.print_cover_lists_simple(raw_cover_list, cover_list)
-
-        # keys in dictionary returned from raw sql query
-        expected_keys = ["cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
-        # keys in dictionary returned from django query
-        actual_keys = ['cover_filepath', 'cover_id', 'book__pk', 'artwork_id', 'edition_id', 'cover_filename']
-
-        #  for each cover: check expected cover data matches actual cover data
-        for raw_cover, cover in zip(raw_cover_list, cover_list):
-            self.record_matches(raw_cover, expected_keys, cover, actual_keys)
+    # def test_author_sets_covers(self):
+    #     """tests acovers in all the sets for this author
+    #        used to debug discrepancies found in the full test
+    #     """
+    #
+    #     # Isaac Asimov
+    #     author_id = 18
+    #
+    #     raw_cover_list = OriginalRawQuerys.author_set_cover_list(author_id, return_dict=True)
+    #     expected_num_covers = len(raw_cover_list)
+    #
+    #     cover_list = CoverQuerys.author_set_covers(author_id=author_id)
+    #     num_covers = len(cover_list)
+    #
+    #     if expected_num_covers != 0 or num_covers != 0:
+    #         print("==============================================")
+    #         print(f"Test all Covers in all Sets for Author {author_id}")
+    #         print("==============================================")
+    #         print(f"Expected: {expected_num_covers}, actual: {num_covers}")
+    #
+    #     self.assertEqual(expected_num_covers, num_covers)
+    #     self.print_cover_lists_simple(raw_cover_list, cover_list)
+    #
+    #     # keys in dictionary returned from raw sql query
+    #     expected_keys = ["cover_filepath", "cover_id", "book_id", "artwork_id", "edition_id", "cover_filename"]
+    #     # keys in dictionary returned from django query
+    #     actual_keys = ['cover_filepath', 'cover_id', 'book__pk', 'artwork_id', 'edition_id', 'cover_filename']
+    #
+    #     #  for each cover: check expected cover data matches actual cover data
+    #     for raw_cover, cover in zip(raw_cover_list, cover_list):
+    #         self.record_matches(raw_cover, expected_keys, cover, actual_keys)
 
 
     # def test_set_covers(self):

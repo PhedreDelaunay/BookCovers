@@ -61,5 +61,103 @@
     "fields": {
         "used_type": "Magic the Gathering"
     }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 10,
+    "fields": {
+        "used_type": "Album Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 11,
+    "fields": {
+        "used_type": "Calendar Art"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 12,
+    "fields": {
+        "used_type": "Jewellery"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 13,
+    "fields": {
+        "used_type": "Card Game"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 14,
+    "fields": {
+        "used_type": "Game Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 15,
+    "fields": {
+        "used_type": "Art print"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 16,
+    "fields": {
+        "used_type": "Artbook Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 17,
+    "fields": {
+        "used_type": "CD Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 18,
+    "fields": {
+        "used_type": "Box Cover"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 19,
+    "fields": {
+        "used_type": "Card"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 20,
+    "fields": {
+        "used_type": "Pencil Drawing"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 21,
+    "fields": {
+        "used_type": "Preparatory work"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 22,
+    "fields": {
+        "used_type": "Interior artwork"
+    }
+},
+{
+    "model": "bookcovers.usedas",
+    "pk": 23,
+    "fields": {
+        "used_type": "Portfolio"
+    }
 }
 ]
