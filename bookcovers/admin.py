@@ -90,18 +90,18 @@ class ArtbookAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['title', ]
 
-class ArtworksAdmin(admin.ModelAdmin):
+class ArtworkAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['name', ]
 
-class BooksAdmin(admin.ModelAdmin):
+class BookAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['title', ]
 
 admin.site.register(Artist, ArtistAdmin)
-admin.site.register(Artwork)
+admin.site.register(Artwork, ArtworkAdmin)
 admin.site.register(Author, AuthorAdmin)
-admin.site.register(Book)
+admin.site.register(Book, BookAdmin)
 admin.site.register(Cover, CoverAdmin)
 admin.site.register(Edition, EditionAdmin)
 admin.site.register(ArtbookIndex, ArtbookIndexAdmin)
