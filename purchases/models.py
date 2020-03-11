@@ -37,3 +37,6 @@ class Owned(models.Model):
 
     def __str__(self):
         return f"{self.author_name}: {self.title}"
+
+    class Meta:
+        db_table = 'purchases_owned'
