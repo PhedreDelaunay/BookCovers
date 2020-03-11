@@ -403,6 +403,7 @@ class Artbook(models.Model):
 
     class Meta:
         db_table = 'artbooks'
+        ordering = ('title',)
 
 
 class UsedAs(models.Model):
@@ -444,5 +445,4 @@ class ArtbookIndex(models.Model):
 
     class Meta:
         db_table = 'artbook_index'
-        ordering = ('title',)
 
