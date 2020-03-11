@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <title>Science Fiction and Fantasy Cover Art</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bookcovers/style.css' %}">
+    {% block content_script %}{% endblock %}
+</head>
+
+<body>
+    {% include 'bookcovers/main_menu.html' %}
+</body>
+</html>

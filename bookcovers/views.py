@@ -2,6 +2,7 @@
 from django.http import HttpResponse
 from django.views.generic import ListView
 from django.views.generic import DetailView
+from django.shortcuts import render
 
 
 from bookcovers.models import Edition
@@ -15,8 +16,10 @@ from bookcovers.models import ArtbookIndex
 # Create your views here.
 
 def index(request):
-    print ("index: hello page")
-    return HttpResponse("Hello Django World")
+    # simplest possible view
+    #return HttpResponse("Hello Django World")
+
+    return render(request, 'bookcovers/index.html')
 
 
 class PrintHistory(ListView):
