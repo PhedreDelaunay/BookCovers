@@ -444,4 +444,5 @@ class ArtbookIndex(models.Model):
 
     class Meta:
         db_table = 'artbook_index'
+        ordering = ('title',)
 
