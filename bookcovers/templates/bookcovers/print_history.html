@@ -10,11 +10,11 @@
 {% endblock %}
 {% block content %}
     <h2 style="display:inline";>{{ view.book.title }}</h2>
-    <TABLE rules="rows"><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
-
+    {#  <TABLE rules="rows"><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR> #}
+    <TABLE><TR><TD><B>Cover</B></TD><TD><B>Edition</B></TD><TD><B>Cover Price</B></TD></TR>
 
     {% for print in print_history %}
-        {% ifchanged print.cover_filename %}
+        {% ifchanged print.cover_filepath print.cover_filename %}
             <TR>
             <TD>
             {% if print.cover_filepath %}
@@ -24,10 +24,17 @@
                 </TD>
                 <TD>{# edition #}
                     {% set "False" as break %}
+                    {% comment %}
+                    There is no true loop break so need to emulate it:
+                    loop over all records starting at beginning
+                    compare current loop counter with parent loop counter to identify current location
+                    ignore earlier iterations until at same print/cover record as parent
+                    ignore later iterations by testing value of variable break
+                    {%  endcomment %}
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
                             {% if break == "False" %}
-                                {% ifchanged cover.cover_filename %}
+                                {% ifchanged cover.cover_filepath print.cover_filename %}
                                     {% if forloop.counter == forloop.parentloop.counter %}
                                         {{ cover.print|edition:cover.edition_id }}
                                         <BR>
@@ -35,6 +42,7 @@
                                          {% set "True" as break %}
                                     {% endif %}
                                 {% else %}
+                                    {# cover_filename the same #}
                                     {{ cover.print|edition:cover.edition_id }}
                                     <BR>
                                 {% endifchanged %}
@@ -48,7 +56,7 @@
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
                             {% if break == "False" %}
-                                {% ifchanged cover.cover_filename %}
+                                {% ifchanged cover.cover_filepath print.cover_filename %}
                                      {% if forloop.counter == forloop.parentloop.counter %}
                                         {{ cover.cover_price }}<BR>
                                     {% else %}
