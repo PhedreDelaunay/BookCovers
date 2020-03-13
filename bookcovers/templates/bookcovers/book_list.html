@@ -1,7 +1,7 @@
 {#  Included to display multiple book covers #}
 {% load static %}
  <h2>{{ view.web_title }}</h2>
-detail view is '{{ view.detail.view_name }}'
+{# detail view is '{{ view.detail.view_name }}' #}
 {% for cover in cover_list %}
     {# display_order can be country.display_order #}
     {% ifchanged cover.display_order %}
