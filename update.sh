@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# 13-Mar-2020
+cp bookcovers/templates/bookcovers/book_list.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/templates/bookcovers/thumbnail_list.html ~/djabbic/bookcovers/templates/bookcovers/
+
 # 12/13-Mar-2020
-cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
+# cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 11-Mar-2020
 # Views: Add template for index and remove link to home from main menu as no value at the moment"
