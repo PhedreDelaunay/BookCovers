@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 12-Mar-2020
+# 12/13-Mar-2020
 cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 11-Mar-2020
