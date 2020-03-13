@@ -18,9 +18,17 @@
             <TR>
             <TD>
             {% if print.cover_filepath %}
-                <IMG src="{% static print.cover_filepath|add:'Thumbnails/'|add:print.cover_filename %}"
-                     alt="{{ print.book__title }}"
-                     title="{{ print.book__title }}">
+                {% if print.cover_filepath == "BookCovers/Images/Unknown/" %}
+                    {% with wauthor=print.author_name|cut:" "|cut:"." %}
+                        <IMG src="{% static print.cover_filepath|add:wauthor|add:'/Thumbnails/'|add:'/'|add:print.cover_filename %}"
+                             alt="{{ print.title }}"
+                             title="{{ print.title }}"/>
+                    {% endwith %}
+                {% else %}
+                    <IMG src="{% static print.cover_filepath|add:'Thumbnails/'|add:print.cover_filename %}"
+                         alt="{{ print.title }}"
+                         title="{{ print.title }}">
+                {%  endif %}
                 </TD>
                 <TD>{# edition #}
                     {% set "False" as break %}

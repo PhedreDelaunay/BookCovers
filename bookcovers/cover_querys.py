@@ -594,6 +594,8 @@ class CoverQuerys:
                            'cover_price',
                            cover_filename=F('cover__cover_filename'),
                            cover_filepath=F('cover__artwork__artist__cover_filepath'),
+                           author_name=F('cover__book__author__name'),
+                           title=F('cover__book__title'),
                            ). \
                     order_by ('order')
         return print_run

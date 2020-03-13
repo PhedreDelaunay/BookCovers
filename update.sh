@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # 13-Mar-2020
-cp bookcovers/templates/bookcovers/book_list.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/thumbnail_list.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/cover_querys.py ~/djabbic/bookcovers/
+#cp bookcovers/templates/bookcovers/book_list.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/thumbnail_list.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 12/13-Mar-2020
 # cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
