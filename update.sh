@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# 12-Mar-2020
+cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/
+
+# 11-Mar-2020
+# Views: Add template for index and remove link to home from main menu as no value at the moment"
+# cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
+# cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
+# cp bookcovers/views.py ~/djabbic/bookcovers/
+ 
+# Models: Order artbooks by title
+# Models: correct ordering applied to ArtbookIndex instead of Artbook
+cp bookcovers/models.py ~/djabbic/bookcovers/
+
+# Models: Owned model is named purchases_owned in db 
+# NOT COPIED yet cos not dealing with purchases
+# cp purchases/models.py ~/djabbic/purchases/
+
+# 10-Mar-2020
+#cp bookcovers/admin.py ~/djabbic/bookcovers/
+#cp bookcovers/cover_querys.py ~/djabbic/bookcovers/
+#cp bookcovers/tests/test_images.py ~/djabbic/bookcovers/
+#cp bookcovers/tests/test_pagers.py ~/djabbic/bookcovers/
+#cp bookcovers/tests/test_pages.py ~/djabbic/bookcovers/
+#cp bookcovers/tests/test_queries.py ~/djabbic/bookcovers/
+#cp bookcovers/fixtures/* ~/djabbic/bookcovers/fixtures
+
+
+# ~/init/djabbic restart
+# ~/init/nginx restart	
