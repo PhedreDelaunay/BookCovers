@@ -34,7 +34,7 @@
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
                             {% if break == "False" %}
-                                {% ifchanged cover.cover_filepath print.cover_filename %}
+                                {% ifchanged cover.cover_filepath cover.cover_filename %}
                                     {% if forloop.counter == forloop.parentloop.counter %}
                                         {{ cover.print|edition:cover.edition_id }}
                                         <BR>
@@ -56,7 +56,7 @@
                     {% for cover in print_history %}
                         {% if forloop.counter >= forloop.parentloop.counter %}
                             {% if break == "False" %}
-                                {% ifchanged cover.cover_filepath print.cover_filename %}
+                                {% ifchanged cover.cover_filepath cover.cover_filename %}
                                      {% if forloop.counter == forloop.parentloop.counter %}
                                         {{ cover.cover_price }}<BR>
                                     {% else %}
