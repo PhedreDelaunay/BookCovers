@@ -1,0 +1,15 @@
+{# ex: /bookcovers/index/57 #}
+
+{% extends "bookcovers/base.html" %}
+
+{% block title %}{{ view.web_title }}{% endblock %}
+{% block content %}
+{% for item in object_list %}
+    pk: {{ item.pk }},
+    page: {{ item.page }}
+    artist: {{ item.artist.name }},
+    book: {{ item.book_title }}, {{ item.book_author_id }}, {{ item.book_author_name }},
+    cover: {{ item.cover_filename }}
+<BR>
+{% endfor %}
+{% endblock %}

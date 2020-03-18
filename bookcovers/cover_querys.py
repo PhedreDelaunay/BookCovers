@@ -16,6 +16,7 @@ from bookcovers.models import SetExceptions
 from bookcovers.models import BookSeries
 from bookcovers.models import PrintRun
 from bookcovers.models import Panorama
+from bookcovers.models import Artbook
 from bookcovers.models import ArtbookIndex
 
 import math
@@ -630,9 +631,20 @@ class CoverQuerys:
         return print_run_id
 
     @staticmethod
-    def artbooks_index_artbooks():
+    def artbooks():
+        # only select artbooks that have been indexed
+        inner_queryset_artbook_list = ArtbookIndex.objects.values('artbook_id').distinct()
+        artbooks = Artbook.objects.filter(artbook_id__in=inner_queryset_artbook_list)
+        return artbooks
 
+    @staticmethod
+    def artbook_index(artbook_id):
+        artbook_index = ArtbookIndex.objects.filter(artbook=artbook_id).order_by('page'). \
+            select_related('artist', 'book', 'cover')
+        return artbook_index
+
+    @staticmethod
+    def artbooks_index_artbooks():
         artbook_list = ArtbookIndex.objects \
             .order_by('book_author_name')
-
         return artbook_list

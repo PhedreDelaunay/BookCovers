@@ -12,6 +12,7 @@ from bookcovers.pagers import PanoramaPager
 from bookcovers.query_cache import QueryCache
 
 from bookcovers.models import ArtbookIndex
+from bookcovers.models import Artbook
 
 # Create your views here.
 
@@ -98,9 +99,28 @@ class Panorama(DetailView):
 #    context_object_name = 'author_list'
 #=========================================
 
+class Artbooks(ListView):
+    model=Artbook
+    template_name = 'bookcovers/artbooks.html'
+    queryset = CoverQuerys.artbooks()
+
+# http:<host>/bookcovers/index/<artbook_id>
+# This class name cannot be same as model name else future class Index Authors thinks model=this class
+class ArtbookIndice(ListView):
+    model=ArtbookIndex
+    template_name = 'bookcovers/artbook_index.html'
+
+    def setup(self, request, *args, **kwargs):
+        super().setup(request, *args, **kwargs)
+        self.artbook_id = kwargs.get("artbook_id", None)
+
+    def get_queryset(self):
+        queryset = CoverQuerys.artbook_index(self.artbook_id)
+        return queryset
+
 class IndexAuthors(ListView):
     model=ArtbookIndex
-    template_name = 'bookcovers/artbooks.html'
+    template_name = 'bookcovers/artbook_index_change_author.html'
     # we need to pass a variable with app_label and model_name to the view
     # https://docs.djangoproject.com/en/2.2/ref/contrib/admin/#admin-reverse-urls
     opts = model._meta
@@ -108,3 +128,4 @@ class IndexAuthors(ListView):
     def get_queryset(self):
         queryset = CoverQuerys.artbooks_index_artbooks()
         return queryset
+
