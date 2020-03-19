@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 {% load static %}
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Science Fiction Cover Art - {% block title %}{{ view.web_title }}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'bookcovers/style.css' %}">
     {% block content_script %}{% endblock %}

@@ -5,5 +5,7 @@
 <B>title: </B><a href="{% url 'bookcovers:books' edition.book.book_id %}" title="Select title for all covers for this book">{{ edition.book.title}}</a><BR/>
 Copyright: {{ edition.book.copyright_year }}<BR/>
 {%  if edition|hasprintrun %}
-This edition<A href="{% url 'bookcovers:print_history' edition.thePrintRun.print_run_id %}" title="Select date for print history">{{ edition.print_year }}</A><BR/><B>price:</B> UK Â£1.95<BR/><B>pages:</B> 485
+This edition<A href="{% url 'bookcovers:print_history' edition.thePrintRun.print_run_id %}" title="Select date for print history">{{ edition.print_year }}</A><BR/>
+    <B>price: </B>{{ edition.thePrintRun.cover_price }}<BR/>
+    <B>pages:</B> 485
 {% endif %}
