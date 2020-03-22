@@ -1,16 +1,20 @@
 #!/bin/bash
 
+# 20-Mar-2020
+# order artworks by name
+cp bookcovers/models.py ~/djabbic/bookcovers/
+
 # 19-Mar-2020
 # fix price display
-cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 18-Mar-2020
-cp bookcovers/cover_querys.py ~/djabbic/bookcovers/
-cp bookcovers/templates/bookcovers/artbook_index.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/artbooks.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/urls.py ~/djabbic/bookcovers/
-cp bookcovers/views.py ~/djabbic/bookcovers/
+#cp bookcovers/cover_querys.py ~/djabbic/bookcovers/
+#cp bookcovers/templates/bookcovers/artbook_index.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/artbooks.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/urls.py ~/djabbic/bookcovers/
+#cp bookcovers/views.py ~/djabbic/bookcovers/
 
 # 13-Mar-2020
 # cp bookcovers/templates/bookcovers/print_history.html ~/djabbic/bookcovers/templates/bookcovers/

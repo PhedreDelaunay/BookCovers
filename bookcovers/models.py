@@ -165,6 +165,7 @@ class Artwork(models.Model):
 
     class Meta:
         db_table = 'artworks'
+        ordering = ('name',)
 
 
 class Country(models.Model):
