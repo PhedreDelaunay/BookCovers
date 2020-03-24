@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# 24-Mar-2020 fix num pages display and then remove it completely
+cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+~/init/djabbic restart
+
 # 20-Mar-2020
 # order artworks by name
-cp bookcovers/models.py ~/djabbic/bookcovers/
+#cp bookcovers/models.py ~/djabbic/bookcovers/
 
 # 19-Mar-2020
 # fix price display
