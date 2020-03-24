@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# 24-Mar-2020 fix num pages display and then remove it completely
-cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+
+# 24-Mar-2020 
+# fix image not displaying full size when text is long (eg http://www.djabbic.space/bookcovers/artwork/edition/796/ The Darkness on Diamondia
+cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
+
+#fix num pages display and then remove it completely
+#cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 ~/init/djabbic restart
 
 # 20-Mar-2020
