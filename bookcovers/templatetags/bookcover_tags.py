@@ -1,4 +1,5 @@
-# https://docs.djangoproject.com/en/2.2/howto/custom-template-tags/
+# https://docs.djangoproject.com/en/3.0/howto/custom-template-tags/
+# https://stackoverflow.com/questions/5586774/django-template-filters-tags-simple-tags-and-inclusion-tags
 # remember to restart dev server when adding a new tag
 from django import template
 from django.urls import reverse
@@ -27,6 +28,11 @@ def edition(text, edition_id):
     else:
         render_string = text
     return mark_safe(render_string)
+
+@register.filter(ineeds_autoescape=True)
+def evidence(text):
+    the_evidence = text.replace(";", ",<BR>")
+    return mark_safe(the_evidence)
 
 # @register.filter(needs_autoescape=True)
 # def edition(text, edition_id, autoescape=True):
