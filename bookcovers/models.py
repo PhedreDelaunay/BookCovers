@@ -447,5 +447,5 @@ class ArtbookIndex(models.Model):
     class Meta:
         db_table = 'artbook_index'
         # sort by page number in admin
-        ordering = ('page',)
+        ordering = ('artbook__title','page',)
 

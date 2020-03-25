@@ -3,12 +3,12 @@
 
 # 25-Mar-2020
 # search in artbook index by artbook title and order by page
-cp bookcovers/admin.py ~/djabbic/bookcovers/
 cp bookcovers/models.py ~/djabbic/bookcovers/
-# replace ; with <BR> in evidence with filter in template
-cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/bookcover_tags.py
-cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 ~/init/djabbic restart
+#cp bookcovers/admin.py ~/djabbic/bookcovers/
+# replace ; with <BR> in evidence with filter in template
+#cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/bookcover_tags.py
+#cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 24-Mar-2020 
 # fix image not displaying full size when text is long (eg http://www.djabbic.space/bookcovers/artwork/edition/796/ The Darkness on Diamondia
