@@ -1,13 +1,21 @@
 #!/bin/bash
+# Remember to collectstatic if changing style.css
 
+# 25-Mar-2020
+# search in artbook index by artbook title and order by page
+cp bookcovers/admin.py ~/djabbic/bookcovers/
+cp bookcovers/models.py ~/djabbic/bookcovers/
+# replace ; with <BR> in evidence with filter in template
+cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/bookcover_tags.py
+cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+~/init/djabbic restart
 
 # 24-Mar-2020 
 # fix image not displaying full size when text is long (eg http://www.djabbic.space/bookcovers/artwork/edition/796/ The Darkness on Diamondia
-cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
+# cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
 
 #fix num pages display and then remove it completely
 #cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
-~/init/djabbic restart
 
 # 20-Mar-2020
 # order artworks by name
