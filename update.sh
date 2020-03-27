@@ -1,10 +1,14 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 27-Mar-2020
+# fix replacing text in evidence when there is no evidence
+cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/
+~/init/djabbic restart
+ 
 # 25-Mar-2020
 # search in artbook index by artbook title and order by page
-cp bookcovers/models.py ~/djabbic/bookcovers/
-~/init/djabbic restart
+#cp bookcovers/models.py ~/djabbic/bookcovers/
 #cp bookcovers/admin.py ~/djabbic/bookcovers/
 # replace ; with <BR> in evidence with filter in template
 #cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/bookcover_tags.py

@@ -31,7 +31,10 @@ def edition(text, edition_id):
 
 @register.filter(ineeds_autoescape=True)
 def evidence(text):
-    the_evidence = text.replace(";", ",<BR>")
+    if text:
+        the_evidence = text.replace(";", ",<BR>")
+    else:
+        the_evidence = text
     return mark_safe(the_evidence)
 
 # @register.filter(needs_autoescape=True)
