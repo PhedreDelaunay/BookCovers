@@ -1,10 +1,16 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 16-Apr-2020
+# display artist's signature
+cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/
+cp bookcovers/templates/bookcovers/artist_artworks.html ~/djabbic/bookcovers/templates/bookcovers/
+
+~/init/djabbic restart
+
 # 27-Mar-2020
 # fix replacing text in evidence when there is no evidence
-cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/
-~/init/djabbic restart
+#cp bookcovers/templatetags/bookcover_tags.py ~/djabbic/bookcovers/templatetags/
  
 # 25-Mar-2020
 # search in artbook index by artbook title and order by page
