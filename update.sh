@@ -2,9 +2,10 @@
 # Remember to collectstatic if changing style.css
 
 # 17-Apr-2020
-# add PrintRun to admin
-cp bookcovers/admin.py ~/djabbic/bookcovers/
+cp bookcovers/models.py ~/djabbic/bookcovers/
 ~/init/djabbic restart
+# add PrintRun to admin
+#cp bookcovers/admin.py ~/djabbic/bookcovers/
 # make function and template for artist's signature
 #cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
 #cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/

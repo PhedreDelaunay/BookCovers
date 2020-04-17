@@ -179,6 +179,27 @@ class Country(models.Model):
     class Meta:
         db_table = 'countries'
 
+class Genre(models.Model):
+    genre_id = models.AutoField(primary_key=True)
+    genre = models.CharField(max_length=50, blank=True, null=True)
+    description = models.CharField(max_length=50, blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.genre
+
+    class Meta:
+        db_table = 'genres'
+
+class Format(models.Model):
+    format_id = models.AutoField(primary_key=True)
+    format = models.CharField(max_length=50, blank=True, null=True)
+
+    def __str__(self):
+        return self.format
+
+    class Meta:
+        db_table = 'formats'
 
 class Edition(models.Model):
     edition_id = models.AutoField(primary_key=True)
@@ -186,13 +207,14 @@ class Edition(models.Model):
     book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
                              related_name="theEditions", related_query_name="theEdition")
     imprint_id = models.IntegerField(blank=True, null=True)
-    genre_id = models.IntegerField(blank=True, null=True)
-    format_id = models.IntegerField(blank=True, null=True)
+    # genre_id = models.IntegerField(blank=True, null=True)
+    # format_id = models.IntegerField(blank=True, null=True)
+    genre = models.ForeignKey(Genre, models.DO_NOTHING, blank=True, null=True)
+    format = models.ForeignKey(Format, models.DO_NOTHING, blank=True, null=True)
     isbn = models.CharField(max_length=20, blank=True, null=True)
     isbn13 = models.CharField(max_length=20, blank=True, null=True)
     catalog_number = models.CharField(max_length=50, blank=True, null=True)
     print_year = models.SmallIntegerField(blank=True, null=True)
-    #country_id = models.IntegerField(blank=True, null=True)
     country = models.ForeignKey(Country, models.DO_NOTHING, blank=True, null=True,
                                 related_name="theEditions", related_query_name="theEdition")
     purchase_year = models.IntegerField(blank=True, null=True)
@@ -274,28 +296,10 @@ class Currency(models.Model):
         db_table = 'currencies'
 
 
-class Format(models.Model):
-    format_id = models.AutoField(primary_key=True)
-    format = models.CharField(max_length=50, blank=True, null=True)
-
-    def __str__(self):
-        return self.format
-
-    class Meta:
-        db_table = 'formats'
 
 
-class Genre(models.Model):
-    genre_id = models.AutoField(primary_key=True)
-    genre = models.CharField(max_length=50, blank=True, null=True)
-    description = models.CharField(max_length=50, blank=True, null=True)
-    notes = models.TextField(blank=True, null=True)
 
-    def __str__(self):
-        return self.genre
 
-    class Meta:
-        db_table = 'genres'
 
 
 # A series is a collection, eg the Book of the New Sun,  Corgi SF Collectors Library
