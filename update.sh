@@ -3,10 +3,10 @@
 
 # 17-Apr-2020
 # make function and template for artist's signature
-cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
-cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/
-cp bookcovers/templates/bookcovers/artist_artworks.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/artist_sets.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
+#cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/
+#cp bookcovers/templates/bookcovers/artist_artworks.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/artist_sets.html ~/djabbic/bookcovers/templates/bookcovers/
 cp bookcovers/templates/bookcovers/artist_title.html ~/djabbic/bookcovers/templates/bookcovers/
 ~/init/djabbic restart
 

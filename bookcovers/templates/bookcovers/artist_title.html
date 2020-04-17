@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<!-- artist_title:  displays artist's signature and name -->
+{% load static %}
+
+{% if view.signature %}
+    <IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:view.signature_filename %}">
+{% endif %}
+ <h2 style="display:inline";>{{ view.artist }}</h2>
