@@ -8,7 +8,9 @@
 {% include 'bookcovers/subject_pager.html' %}
 {% endblock %}
 {% block content %}
-    <h2 style="display:inline";>{{ view.artist.name }}</h2>
+    {%  include 'bookcovers/artist_title.html' %}
+    {% if view.set_list %}<a style="display:inline;" href="{% url 'bookcovers:artist_sets' view.artist %}">View covers in pretty sets by author</a>
+    {% endif %}
     <a style="display:inline;" href="{% url 'bookcovers:'|add:view.subject.view_name view.subject.object.pk %}">View all {{ view.subject.title }}</a>
     {% for cover in cover_list %}
         {% ifchanged cover.author_name %}

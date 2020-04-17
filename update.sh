@@ -1,12 +1,20 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
-# 16-Apr-2020
-# display artist's signature
+# 17-Apr-2020
+# make function and template for artist's signature
+cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
 cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/
 cp bookcovers/templates/bookcovers/artist_artworks.html ~/djabbic/bookcovers/templates/bookcovers/
-
+cp bookcovers/templates/bookcovers/artist_sets.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/templates/bookcovers/artist_title.html ~/djabbic/bookcovers/templates/bookcovers/
 ~/init/djabbic restart
+
+# 16-Apr-2020
+# display artist's signature
+#cp bookcovers/artist/views.py ~/djabbic/bookcovers/artist/
+#cp bookcovers/templates/bookcovers/artist_artworks.html ~/djabbic/bookcovers/templates/bookcovers/
+
 
 # 27-Mar-2020
 # fix replacing text in evidence when there is no evidence

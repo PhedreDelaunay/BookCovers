@@ -9,9 +9,7 @@
 {% include 'bookcovers/subject_pager.html' %}
 {% endblock %}
 {% block content %}
-    {% if view.signature %}<IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:view.signature_filename %}">
-    {% endif %}
-    <h2 style="display:inline";>{{ view.artist }}</h2>
+    {%  include 'bookcovers/artist_title.html' %}
     {% if view.set_list %}<a style="display:inline;" href="{% url 'bookcovers:artist_sets' view.artist %}">View covers in pretty sets by author</a>
     {% endif %}<BR>
     {% for cover in cover_list %}

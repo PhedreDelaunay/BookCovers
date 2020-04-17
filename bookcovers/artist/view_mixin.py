@@ -1,3 +1,8 @@
+import os
+
+from django.core.files.storage import default_storage
+from django.conf import settings
+# https://docs.djangoproject.com/en/3.0/topics/settings/#using-settings-in-python-code
 
 from bookcovers.pagers import ArtistPager
 from bookcovers.pagers import ArtworkPager
@@ -32,6 +37,25 @@ class ArtistMixin(TopLevelPagerMixin):
             'object': None,
         }
 
+        self.signature_filename = "signature.jpg"
+        self.signature = False
+
+    @property
+    def signature(self):
+        return self._signature
+
+    @signature.setter
+    def signature(self, value):
+        self._signature = value
+
+    def signature_exists(self):
+        # https://docs.djangoproject.com/en/3.0/topics/files/
+        absolute_image_filepath = os.path.join(settings.STATIC_ROOT, self.artist.cover_filepath, self.signature_filename)
+        path_exists = default_storage.exists(absolute_image_filepath)
+        if path_exists:
+            self.signature = True
+        print (f"signature_exists: absolute_image_filepath is { absolute_image_filepath}, path_exists is {path_exists} ")
+
     @property
     def artist(self):
         return self._artist
@@ -54,8 +78,7 @@ class ArtistMixin(TopLevelPagerMixin):
     def set_artwork_attributes(self, artwork):
         self.detail['object'] = artwork
         self.web_title = artwork.name
-        print(f"set_artwork_attributes: set detail object artwork is {artwork}")
-        #self.artist = artwork.artist
+        #print(f"set_artwork_attributes: set detail object artwork is {artwork}")
         self.artist = artwork.get_creator
 
     @property

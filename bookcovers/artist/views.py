@@ -1,16 +1,9 @@
 
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.core.files.storage import default_storage
-from django.conf import settings
-# https://docs.djangoproject.com/en/3.0/topics/settings/#using-settings-in-python-code
-import os
-
-
 
 from bookcovers.cover_querys import CoverQuerys
 from bookcovers.base_views import SubjectList
-
 from .view_mixin import ArtistMixin
 
 # ArtistList -> ArtistArtworks -> Artwork
@@ -41,14 +34,12 @@ class ArtistArtworks(ArtistMixin, ListView):
     """
     template_name = 'bookcovers/artist_artworks.html'
     context_object_name = 'cover_list'      # template context
-    signature_filename = "signature.jpg"
 
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.artist_id = kwargs.get("artist_id", None)
         self.name = kwargs.get("name", None)
         self.slug = kwargs.get("slug", None)
-        self.signature = False
         self._artist = None
         # TODO why can't we use artist setter here?
         #print (f"ArtistArtworks::setup: artist_id={self.artist_id} name='{self.name}' slug='{self.slug}'")
@@ -61,14 +52,7 @@ class ArtistArtworks(ArtistMixin, ListView):
         self.the_pager = self.create_top_level_pager(artist_id=self.artist_id, name=self.name, slug=self.slug)
         # get the artist to display
         self.artist = self.the_pager.get_entry()
-
-        # https://docs.djangoproject.com/en/3.0/topics/files/
-        absolute_image_filepath = os.path.join(settings.STATIC_ROOT, self.artist.cover_filepath, self.signature_filename)
-        path_exists = default_storage.exists(absolute_image_filepath)
-        if path_exists:
-            self.signature = True
-        print (f" absolute_image_filepath is { absolute_image_filepath}, path_exists is {path_exists} ")
-
+        self.signature_exists()
         self.web_title = self.artist.name
         queryset = CoverQuerys.artist_cover_list(artist=self.artist)
         return queryset
@@ -198,8 +182,9 @@ class ArtistSets(ArtistMixin, ListView):
         self.the_pager = self.create_top_level_pager(name=self.name)
         self.artist = self.the_pager.get_entry()
         # TODO pagers set objects but it is not obvious
+        self.signature_exists()
         self.web_title = self.artist.name
-        print (f"ArtistSets:get_queryset: artist is '{self.artist.name}'")
+        #print (f"ArtistSets:get_queryset: artist is '{self.artist.name}'")
         queryset = CoverQuerys.artist_set_covers(artist_id=self.artist.artist_id, return_dict=True)
         return queryset
 
