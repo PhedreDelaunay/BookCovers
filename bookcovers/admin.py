@@ -9,6 +9,7 @@ from bookcovers.models import Edition
 from bookcovers.models import ArtbookIndex
 from bookcovers.models import Artbook
 from bookcovers.models import UsedAs
+from bookcovers.models import PrintRun
 
 # Register your models here.
 
@@ -98,6 +99,9 @@ class BookAdmin(admin.ModelAdmin):
     # add a search bar
     search_fields = ['title', ]
 
+class PrintRunAdmin(admin.ModelAdmin):
+    list_display = ('print_run_id', 'order',)
+
 admin.site.register(Artist, ArtistAdmin)
 admin.site.register(Artwork, ArtworkAdmin)
 admin.site.register(Author, AuthorAdmin)
@@ -106,4 +110,5 @@ admin.site.register(Cover, CoverAdmin)
 admin.site.register(Edition, EditionAdmin)
 admin.site.register(ArtbookIndex, ArtbookIndexAdmin)
 admin.site.register(Artbook, ArtbookAdmin)
+admin.site.register(PrintRun, PrintRunAdmin)
 admin.site.register(UsedAs)
