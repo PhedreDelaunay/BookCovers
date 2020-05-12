@@ -1,9 +1,20 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 12-May-2020
+cp bookcovers/query_cache.py ~/djabbic/bookcovers/
+cp bookcovers/cover_querys.py ~/djabbic/bookcovers/
+cp bookcovers/debug_helper.py ~/djabbic/bookcovers/
+cp bookcovers/views.py ~/djabbic/bookcovers/
+cp bookcovers/fixtures/ArtbookIndex.json ~/djabbic/bookcovers/
+cp bookcovers/fixtures/Book.json ~/djabbic/bookcovers/
+cp bookcovers/templates/bookcovers/artbook_index.html ~/djabbic/bookcovers/templates/bookcovers/
+# don't display pages
+cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+~/init/djabbic restart
+
 # 17-Apr-2020
 cp bookcovers/models.py ~/djabbic/bookcovers/
-~/init/djabbic restart
 # add PrintRun to admin
 #cp bookcovers/admin.py ~/djabbic/bookcovers/
 # make function and template for artist's signature
