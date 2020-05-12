@@ -113,6 +113,7 @@ class ArtbookIndice(ListView):
     def setup(self, request, *args, **kwargs):
         super().setup(request, *args, **kwargs)
         self.artbook_id = kwargs.get("artbook_id", None)
+        self.artbook = CoverQuerys.artbook(self.artbook_id)
 
     def get_queryset(self):
         queryset = CoverQuerys.artbook_index(self.artbook_id)

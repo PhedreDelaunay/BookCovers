@@ -1199,11 +1199,11 @@
     "model": "bookcovers.book",
     "pk": 95,
     "fields": {
-        "author": 47,
-        "title": "Available 3",
-        "subtitle": null,
-        "copyright_year": null,
-        "copyright": null,
+        "author": 27,
+        "title": "Arthur C. Clarke's July 20, 2019",
+        "subtitle": "A Day in the Life of the 21st Century",
+        "copyright_year": 1986,
+        "copyright": "Copyright © 1986 by Serendib, BV and OMNI Publications International, Ltd",
         "synopsis": null,
         "quick_notes": null
     }

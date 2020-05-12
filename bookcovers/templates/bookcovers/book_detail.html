@@ -7,5 +7,5 @@ Copyright: {{ edition.book.copyright_year }}<BR/>
 {%  if edition|hasprintrun %}
 This edition<A href="{% url 'bookcovers:print_history' edition.thePrintRun.print_run_id %}" title="Select date for print history">{{ edition.print_year }}</A><BR/>
     <B>price: </B>{{ edition.thePrintRun.cover_price }}<BR/>
-    <B>pages:</B> {{ edition.thePrintRun.num_pages }}
+    <!--<B>pages:</B> {{ edition.thePrintRun.num_pages }}-->
 {% endif %}

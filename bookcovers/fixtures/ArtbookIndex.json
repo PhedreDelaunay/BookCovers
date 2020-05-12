@@ -4982,9 +4982,9 @@
     "fields": {
         "artbook": 9,
         "artist": 30,
-        "page": null,
-        "book_title": "Arthur C. Clarke's July 20, 2019:",
-        "book": null,
+        "page": 15,
+        "book_title": "Arthur C. Clarke's July 20, 2019",
+        "book": 95,
         "book_author_name": "Arthur C. Clarke",
         "book_author": 27,
         "artwork_year": null,

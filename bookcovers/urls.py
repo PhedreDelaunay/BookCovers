@@ -100,7 +100,7 @@ urlpatterns = [
     path('panorama/<pk>/', Panorama.as_view(), name='panorama'),
     # ex: /bookcovers/artbooks
     path('artbooks/', Artbooks.as_view(), name='artbooks'),
-    # ex: /bookcovers/index/57/
+    # ex: /bookcovers/index/57
     path('index/<int:artbook_id>', ArtbookIndice.as_view(), name='artbook_index'),
     path('index_authors/', IndexAuthors.as_view(), name='change_author'),
 ]

@@ -2,14 +2,46 @@
 
 {% extends "bookcovers/base.html" %}
 
+{% load static %}
+
 {% block title %}{{ view.web_title }}{% endblock %}
 {% block content %}
+    Artbook is {{ view.artbook.title }}<BR>
+Artist is {{ view.artbook.artist.name }}<BR><BR>
+<h3>Page Book/Artwork</h3>
+    {# TODO don't want to display item.artist.name if artbook.artist.name is not various #}
 {% for item in object_list %}
-    pk: {{ item.pk }},
-    page: {{ item.page }}
+    <!-- pk: {{ item.pk }}, -->
+    {{ item.page }}
+    {% if item.cover_id %}
+        <!-- cover: {{ item.cover_id }}, {{ item.cover.cover_filename }} -->
+        <IMG src="{% static item.artist.cover_filepath|add:'Thumbnails/'|add:item.cover.cover_filename %}"
+                         alt="{{ item.book.title }}"
+                         title="{{ item.book.title }}">
+    {% endif %}
+
+    {% if view.artbook.artist.name == "Various" %}
     artist: {{ item.artist.name }},
-    book: {{ item.book_title }}, {{ item.book_author_id }}, {{ item.book_author_name }},
-    cover: {{ item.cover_filename }}
+    {% endif %}
+    book:
+    {% if item.book %}
+        {{ item.book.title }},
+        {{ item.book.author.name }},
+    {% elif item.book_title %}
+        <!-- No book record -->
+        {{ item.book_title }},
+        {% if item.book_author %}
+            {{ item.book_author_id }},
+            {{ item.book_author.name}},
+        {% else %}
+            <!-- No author record -->
+            {{ item.book_author_name }},
+        {% endif %}
+    {% else %}
+        <!-- No book -->
+        artwork title: {{ item.artwork_title }}
+    {% endif %}
+
 <BR>
 {% endfor %}
 {% endblock %}
