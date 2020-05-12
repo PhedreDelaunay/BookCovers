@@ -18,17 +18,11 @@ from bookcovers.models import PrintRun
 from bookcovers.models import Panorama
 from bookcovers.models import Artbook
 from bookcovers.models import ArtbookIndex
-
-import math
+from bookcovers.debug_helper import DebugHelper
 
 
 class CoverQuerys:
-
-    @staticmethod
-    def print_dict_list(list_of_dicts):
-        for dict in list_of_dicts:
-            print(f"{dict}")
-
+    """Gathers all queries into one place, along with query_cache"""
     @staticmethod
     def artist_list():
         inner_queryset = Artwork.objects. \
@@ -40,10 +34,8 @@ class CoverQuerys:
             values('artist_id', 'name'). \
             order_by('name'). \
             distinct()
-
         # print(artist_list.query)
         # print(artist_list.count())
-
         return artist_list
 
     @staticmethod
@@ -120,7 +112,6 @@ class CoverQuerys:
                 cover['book__author__name'] = f"{author_directory}/"
         #print(f"artist_cover_list.query is '{cover_list.query}'")
         # print("len(cover_list) is {}".format(len(cover_list)))
-
         return cover_list
 
     @staticmethod
@@ -163,7 +154,6 @@ class CoverQuerys:
 
         # print(author_list.query)
         # print(author_list.count())
-
         return author_list
 
 
@@ -178,7 +168,6 @@ class CoverQuerys:
             .values('book_id','title','copyright_year') \
             .distinct() \
             .order_by('copyright_year')
-
         return book_list
 
     @staticmethod
@@ -262,7 +251,6 @@ class CoverQuerys:
         #print (list(cover_list))
         #print(f"django author cover_list query is\n{cover_list.query}")
         # print("len(cover_list) is {}".format(len(cover_list)))
-
         return cover_list
 
     @staticmethod
@@ -311,7 +299,6 @@ class CoverQuerys:
                     book_title=F('book__title'),
                     cover_filepath=F('artwork__artist__cover_filepath')) \
             .order_by('display_order','edition__print_year')
-
         return title_cover_list
 
     @staticmethod
@@ -417,7 +404,6 @@ class CoverQuerys:
                 select_related('book', 'artwork')
         # if len(series_list) > 0:
         #     print (f"artist_set_covers: {list(set_cover_list)}")
-
         return set_cover_list
 
 
@@ -425,7 +411,6 @@ class CoverQuerys:
     def book_list():
         book_list = Book.objects.filter(theCover__flags__lt=256).values('book_id').order_by('book_id')
         print (f"book_list.query is {book_list.query}")
-
         return book_list
 
 
@@ -503,7 +488,6 @@ class CoverQuerys:
                 select_related('book','artwork')
         # if len(series_list) > 0:
         #     print (f"author_set_covers: {list(set_cover_list)}")
-
         return set_cover_list
 
     @staticmethod
@@ -565,9 +549,8 @@ class CoverQuerys:
                 order_by('artwork__artist', 'book__theBooksSeries__volume'). \
                 select_related('book','artwork')
 
-        #CoverQuerys.print_dict_list(list(series_cover_list))
+        #DebugHelper.print_dict_list(list(series_cover_list))
         # print(f"series_covers: length {len(series_cover_list)}")
-
         return series_cover_list
 
     @staticmethod
@@ -631,6 +614,11 @@ class CoverQuerys:
         return print_run_id
 
     @staticmethod
+    def artbook(pk):
+        artbook = get_object_or_404(Artbook.objects.select_related('artist'), pk=pk)
+        return artbook
+
+    @staticmethod
     def artbooks():
         # only select artbooks that have been indexed
         inner_queryset_artbook_list = ArtbookIndex.objects.values('artbook_id').distinct()
@@ -639,8 +627,10 @@ class CoverQuerys:
 
     @staticmethod
     def artbook_index(artbook_id):
+        # adding book__author and book_author reduced num queries from 107 (Chiaroscuro) and 12ms to 2 queries and 1.34ms
         artbook_index = ArtbookIndex.objects.filter(artbook=artbook_id).order_by('page'). \
-            select_related('artist', 'book', 'cover')
+            select_related('artist', 'book', 'book__author', 'cover', 'book_author')
+
         return artbook_index
 
     @staticmethod
