@@ -13,11 +13,22 @@ Artist is {{ view.artbook.artist.name }}<BR><BR>
 {% for item in object_list %}
     <!-- pk: {{ item.pk }}, -->
     {{ item.page }}
+     {# TODO at some point need to identify if just thumbnail or link  #}
     {% if item.cover_id %}
         <!-- cover: {{ item.cover_id }}, {{ item.cover.cover_filename }} -->
-        <IMG src="{% static item.artist.cover_filepath|add:'Thumbnails/'|add:item.cover.cover_filename %}"
-                         alt="{{ item.book.title }}"
-                         title="{{ item.book.title }}">
+
+        {% if item.artist.cover_filepath == "BookCovers/Images/Unknown/" %}
+                <a href="{% url 'bookcovers:artwork' cover.artwork_id %}">
+                    <IMG src="{% static item.artist.cover_filepath|add:item.cover.book__author__name|add:'/Thumbnails/'|add:item.cover.cover_filename %}"
+                        alt="{{  item.book.title }}"
+                         title="{{ item.book.title }}"></a>
+        {% else %}
+            {#  up to here -  #}
+             <a href="{% url 'bookcovers:artwork' item.cover.artwork_id %}">
+                <IMG src="{% static item.artist.cover_filepath|add:'Thumbnails/'|add:item.cover.cover_filename %}"
+                    alt="{{  item.book.title  }}"
+                     title="{{  item.book.title  }}"></a>
+        {% endif %}
     {% endif %}
 
     {% if view.artbook.artist.name == "Various" %}
