@@ -1,3 +1,4 @@
+/* bookcovers/static/recipes/style.css */
 
 /* we want paginators in line */
 .pagination {
@@ -122,16 +123,28 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
 }
 
 /* flex and flex-column used to display artist and author lists in columns */
+
 .row {
     display: flex;
 }
-.flex-column {
+.subject-flex-column {
     flex: auto;
     padding: 10px;
 }
+
+/*
+.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
+.subject-flex-column{-ms-flex-direction:column!important;flex-direction:column!important}
+ */
+
+
 ul {
   list-style: none;
 }
 p.greyed {
     color: rgb(180,180,180);
+}
+
+ul#menu li {
+  display:inline;
 }

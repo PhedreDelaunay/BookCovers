@@ -1,3 +1,5 @@
+# bookcovers/author/views.py
+
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic import DetailView
@@ -10,11 +12,14 @@ from .view_mixin import AuthorMixin
 
 # AuthorList -> AuthorBooks -> Book
 # http:<host>/bookcovers/authors/
+# http://<host>/bookcovers/authors/?screen_width=1552
 class AuthorList(SubjectList):
     template_name = 'bookcovers/author_list.html'
 
     def __init__(self):
         self.title = "Authors"
+        self.column_width = 285
+        self.authors = "active"
 
     def get_queryset(self):
         queryset = CoverQuerys.author_list()
@@ -46,7 +51,7 @@ class AuthorBooks(AuthorMixin, ListView):
         self.name = kwargs.get("name", None)
         self.slug = kwargs.get("slug", None)
         #self._author = None
-        print (f"AuthorBooks::setup: author_id='{self.author_id}', name='{self.name}', slug='{self.slug}'")
+        #print (f"AuthorBooks::setup: author_id='{self.author_id}', name='{self.name}', slug='{self.slug}'")
 
     def set_list(self):
         set_list = CoverQuerys.author_set_list(author_id=self.author.pk)

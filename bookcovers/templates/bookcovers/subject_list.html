@@ -1,5 +1,64 @@
+<!-- bookcovers/templates/bookcovers/subject_list.html -->
+
 {% extends "bookcovers/base.html" %}
 
+{% block content %}
+
+    <h2>{{ title }}-{{ column_length }}</h2>
+    <div class="row">
+    {% for item in item_list %}
+        {% if forloop.first %}<div class="subject-flex-column"><ul>{% endif %}
+        <li><a href="{% block link_item %}{% endblock %}">{{ item.name }}</li>
+        {% if forloop.last %}</div>
+        {% elif forloop.counter|divisibleby:column_length %}
+            </ul></div><div class="subject-flex-column"><ul>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+
+    <script LANGUAGE="JavaScript" TYPE="text/javascript">
+        var widthWithoutScrollbar = document.body.clientWidth;
+        //alert('screen width is: '+ widthWithoutScrollbar);
+        // first time through make request again with screen width on query string
+        // so server side can determine the number of columns and column length
+        if (widthWithoutScrollbar != {{ screen_width }}) {
+            window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?screen_width=' + widthWithoutScrollbar;
+        }
+
+    // https://davidwalsh.name/javascript-debounce-function
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var resizeFunction = debounce(function() {
+        // Action to be taken when resize has finished
+        location.reload();
+    }, 100);
+
+    // Attaching the event listener function to window's resize event
+    window.addEventListener("resize", resizeFunction);
+
+    </script>
+{% endblock %}
+
+
+{%  comment ordered list with bootstrap csss %}
 {% block content %}
     <h2>{{ title }}</h2>
     <div class="row">
@@ -13,3 +72,4 @@
     {% endfor %}
     </div>
 {% endblock %}
+{%  endcomment %}

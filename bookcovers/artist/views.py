@@ -7,12 +7,15 @@ from bookcovers.base_views import SubjectList
 from .view_mixin import ArtistMixin
 
 # ArtistList -> ArtistArtworks -> Artwork
-# http:<host>/bookcovers/artists/
+# http://<host>/bookcovers/artists/
+# http://<host>/bookcovers/artists/?screen_width=1552
 class ArtistList(SubjectList):
     template_name = 'bookcovers/artist_list.html'
 
     def __init__(self):
         self.title = "Artists"
+        self.column_width = 250
+        self.artists = "active"
 
     def get_queryset(self):
         queryset = CoverQuerys.artist_list()
@@ -22,6 +25,7 @@ class ArtistList(SubjectList):
 # http:<host>/bookcovers/artist/<artist_id>
 # http:<host>/bookcovers/artist/<artist%20name>
 # http:<host>/bookcovers/artist/<artist-slug>
+# http://127.0.0.1:8000/bookcovers/artist/Adams/?artist=115
 class ArtistArtworks(ArtistMixin, ListView):
     """
     displays list of books with covers by this artist as thumbnails

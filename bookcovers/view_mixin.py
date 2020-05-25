@@ -1,3 +1,5 @@
+# bookcovers/view_mixin.py
+
 # https://reinout.vanrees.org/weblog/2011/08/24/class-based-views-walkthrough.html
 # the view is available in the template for generic class based views
 # so can provide data as attributes rather than manipulating context

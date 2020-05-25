@@ -1,3 +1,4 @@
+# bookcovers/base_views.py
 
 from django.views.generic import ListView
 
@@ -19,15 +20,39 @@ class SubjectList(ListView):
     # in template use item_list instead of object_list
     context_object_name = 'item_list'
 
+    # setup is called when the class instance is created
+    # note: not in 2.1, added in 2.2
+    def setup(self, request, *args, **kwargs):
+        print (request)
+        super().setup(request, *args, **kwargs)
+        self.screen_width = request.GET.get('screen_width')
+        if not self.screen_width:
+            self.screen_width = 0
+        print(f"SubjectList::setup: screen_width='{ self.screen_width }'")
+        if int(self.screen_width) > 0:
+            num_cols = int(self.screen_width)/self.column_width
+            self.num_columns = int(num_cols)
+            print (f"num_cols is { num_cols }, num_columns is { self.num_columns }")
+            result = float(self.screen_width)/self.column_width
+            num_cols = int(result)
+            decimal = result - num_cols
+            if decimal > 0.98:
+                num_cols += 1
+            self.num_columns = num_cols
+            print(
+                f"result is { result }, num_cols is { num_cols }, decimal is { decimal }, num_columns is { self.num_columns }")
+
+
+
     # https://reinout.vanrees.org/weblog/2014/05/19/context.html
     # this is the old way of doing things as can reference view in template
     def get_context_data(self,**kwargs):
-        print ("entering get_context_data")
         context = super(SubjectList,self).get_context_data(**kwargs)
         context['title'] = self.title
         print ("title is '{0}'".format(self.title))
         column_length=self.get_num_rows(self.get_queryset(), self.num_columns)
         context['column_length'] = column_length
+        context['screen_width'] = self.screen_width
         return context
 
     @property
