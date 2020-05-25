@@ -1,8 +1,25 @@
+<!-- bookcovers/templates/bookcovers/menu.html -->
+
+artists: {{ view.artists }}
+authors: {{ view.authors }}
+panoramas: {{ view.panoramas }}
+<ul id="menu" class="nav nav-tabs">
+<!--<TD><a href="{% url 'bookcovers:index' %}">Home</a></TD> -->
+  <li class="nav-item" display:inline-block>
+      <a class="nav-link {{ view.artists }}" href="{% url 'bookcovers:artists' %}">Artists</a></li>
+  <li class="nav-item" display:inline-block>
+      <a class="nav-link {{ view.authors }}" href="{% url 'bookcovers:authors' %}">Authors</a></li>
+  <li class="nav-item" display:inline-block>
+      <a class="nav-link {{ view.panoramas }}" href="{% url 'bookcovers:panoramas' %}">Panoramas</a></li>
+</ul>
+
+
+{% comment %}
 <table>
 <TR>
-<!--<TD><a href="{% url 'bookcovers:index' %}">Home</a></TD> -->
 <TD><a href="{% url 'bookcovers:artists' %}">Artists</a></TD>
 <TD><a href="{% url 'bookcovers:authors' %}">Authors</a></TD>
 <TD><a href="{% url 'bookcovers:panoramas' %}">Panoramas</a></TD>
 </TR>
 </table>
+{% endcomment %}

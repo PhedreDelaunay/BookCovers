@@ -39,6 +39,7 @@ class ArtistMixin(TopLevelPagerMixin):
 
         self.signature_filename = "signature.jpg"
         self.signature = False
+        self.artists = "active"
 
     @property
     def signature(self):

@@ -1,3 +1,4 @@
+# bookcovers/views.py
 
 from django.http import HttpResponse
 from django.views.generic import ListView
@@ -52,6 +53,7 @@ class PanoramaList(ListView):
     web_title = "Panoramas"
     print ("Panoramas")
     template_name = 'bookcovers/panoramas.html'
+    panoramas = "active"
 
     def get_queryset(self):
         queryset = CoverQuerys.panorama_list()
@@ -63,6 +65,7 @@ class Panorama(DetailView):
     context_object_name="panorama"
     print ("Panorama")
     template_name = 'bookcovers/panorama.html'
+    panoramas = "active"
     query_cache = QueryCache()
 
     subject_list = {

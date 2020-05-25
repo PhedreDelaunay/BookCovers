@@ -33,6 +33,8 @@ class AuthorMixin(TopLevelPagerMixin):
             'object': None,
         }
 
+        self.authors = "active"
+
     @property
     def author(self):
         return self._author
