@@ -3,10 +3,16 @@
 
 # 31-May-2020
 # add navbar 
-cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
-cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/subject_list.html ~/djabbic/bookcovers/templates/bookcovers/
+# tabbed navigation top menu
+cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
+cp bookcovers/author/view_mixin.py ~/djabbic/bookcovers/author/
+cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/views.py ~/djabbic/bookcovers/
 ~/init/djabbic restart
+#cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
+#cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/subject_list.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 25-May-2020
 # redraw screen for actual browser width to reflow flexible columns 
@@ -20,13 +26,6 @@ cp bookcovers/templates/bookcovers/subject_list.html ~/djabbic/bookcovers/templa
 #cp bookcovers/templates/bookcovers/artbook_index.html ~/djabbic/bookcovers/templates/bookcovers/
 
 
-# trial of tabbed navigation top menu
-#cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
-#cp bookcovers/author/view_mixin.py ~/djabbic/bookcovers/author/
-#cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
-#cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
-#cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
-#cp bookcovers/views.py ~/djabbic/bookcovers/
 
 # 12-May-2020
 #cp bookcovers/query_cache.py ~/djabbic/bookcovers/
