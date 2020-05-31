@@ -122,8 +122,8 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
   }
 }
 
-/* flex and flex-column used to display artist and author lists in columns */
-
+/* flex and flex-column used to display artist and author lists in columns
+renamed subject-flex-column to not clash with bootstrap flex-column */
 .row {
     display: flex;
 }
@@ -147,4 +147,23 @@ p.greyed {
 
 ul#menu li {
   display:inline;
+}
+
+/* navbar */
+/* this stops the navbar covering the top of the content */
+ body {
+    padding-top: 60px;
+    padding-left: 5px;
+}
+.nav-link:hover {
+    background: #ca89f5;
+}
+.nav-item.active {
+    background: #afaed4;
+}
+/* remove padding from navbar so that it is same height as hover and active */
+.navbar { padding-top: 0.0rem; padding-bottom: 0.0rem; }
+
+img {
+	padding-bottom:3px !IMPORTANT;
 }
