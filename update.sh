@@ -1,6 +1,11 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 6-Jul-2020
+# display book title from book record in artbook index admin page
+cp bookcovers/admin.py ~/djabbic/bookcovers/
+~/init/djabbic restart
+
 # 31-May-2020
 # add navbar 
 # tabbed navigation top menu
@@ -9,7 +14,6 @@ cp bookcovers/author/view_mixin.py ~/djabbic/bookcovers/author/
 cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
 cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
 cp bookcovers/views.py ~/djabbic/bookcovers/
-~/init/djabbic restart
 #cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
 #cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
 #cp bookcovers/templates/bookcovers/subject_list.html ~/djabbic/bookcovers/templates/bookcovers/
