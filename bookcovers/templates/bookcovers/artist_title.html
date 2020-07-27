@@ -4,4 +4,8 @@
 {% if view.signature %}
     <IMG src="{% static view.artist.cover_filepath|add:'Thumbnails/'|add:view.signature_filename %}">
 {% endif %}
+{% if view.artist.website %}
+    <h2 style="display:inline";><a target="_blank" href="{{ view.artist.website }}">{{ view.artist }}</a></h2>
+{% else %}
  <h2 style="display:inline";>{{ view.artist }}</h2>
+{% endif %}

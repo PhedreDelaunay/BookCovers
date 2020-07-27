@@ -6,7 +6,10 @@
 cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
 cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+# remove "Include Duplicates" from author page
 cp bookcovers/templates/bookcovers/author_books.html ~/djabbic/bookcovers/templates/bookcovers/
+# link to Artist's website
+cp bookcovers/templates/bookcovers/artist_title.html ~/djabbic/bookcovers/templates/bookcovers/
 ~/init/djabbic restart
 
 # 6-Jul-2020
