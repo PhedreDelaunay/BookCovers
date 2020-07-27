@@ -78,7 +78,7 @@ mostCovers = 2;
          {% endifchanged %}
     {% endfor %}
     {% endcomment %}
-    <BR>Include duplicates<BR>
+    <BR>
     {% comment "test for unknown artist" %}
     {% for cover in cover_list %}
         {% if cover.cover__artwork__artist__cover_filepath == "BookCovers/Images/Unknown/" %}
