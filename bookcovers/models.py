@@ -53,6 +53,11 @@ class ArtistAka(models.Model):
 #        return self.get(fullname=fullname)
 
 class Author(models.Model):
+    '''
+    flags
+    256 - Index author - not all set, not used as filter (yet)
+    512 - not SF author - sometimes set for artists/authors of artbooks
+    '''
     author_id = models.AutoField(primary_key=True)
     name = models.CharField(unique=True, max_length=255, blank=True, null=True)
     fullname = models.CharField(max_length=100, blank=True, null=True)

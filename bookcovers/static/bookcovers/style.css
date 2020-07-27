@@ -1,4 +1,4 @@
-/* bookcovers/static/recipes/style.css */
+/* bookcovers/static/bookcovers/style.css */
 
 /* we want paginators in line */
 .pagination {
@@ -34,6 +34,12 @@
 .thumbnail_link:hover img
 {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* Artist and Book titles on detail page */
+.detail_title {
+  color: mediumpurple;
+  font-size: 20px;
 }
 
 /* modal image for full thumbnails
@@ -145,11 +151,8 @@ p.greyed {
     color: rgb(180,180,180);
 }
 
-ul#menu li {
-  display:inline;
-}
 
-/* navbar */
+/* navbar - bookcovers */
 /* this stops the navbar covering the top of the content */
  body {
     padding-top: 60px;

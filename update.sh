@@ -1,19 +1,25 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 27-Jul-2020
+# display titles in details page in purple
+cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
+cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+~/init/djabbic restart
+
 # 6-Jul-2020
 # display book title from book record in artbook index admin page
-cp bookcovers/admin.py ~/djabbic/bookcovers/
-~/init/djabbic restart
+#cp bookcovers/admin.py ~/djabbic/bookcovers/
 
 # 31-May-2020
 # add navbar 
 # tabbed navigation top menu
-cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
-cp bookcovers/author/view_mixin.py ~/djabbic/bookcovers/author/
-cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/views.py ~/djabbic/bookcovers/
+#cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
+#cp bookcovers/author/view_mixin.py ~/djabbic/bookcovers/author/
+#cp bookcovers/templates/bookcovers/base.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/index.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/views.py ~/djabbic/bookcovers/
 #cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
 #cp bookcovers/templates/bookcovers/main_menu.html ~/djabbic/bookcovers/templates/bookcovers/
 #cp bookcovers/templates/bookcovers/subject_list.html ~/djabbic/bookcovers/templates/bookcovers/
@@ -43,7 +49,7 @@ cp bookcovers/views.py ~/djabbic/bookcovers/
 #cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 17-Apr-2020
-cp bookcovers/models.py ~/djabbic/bookcovers/
+#cp bookcovers/models.py ~/djabbic/bookcovers/
 # add PrintRun to admin
 #cp bookcovers/admin.py ~/djabbic/bookcovers/
 # make function and template for artist's signature
