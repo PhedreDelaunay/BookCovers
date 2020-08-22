@@ -63,12 +63,19 @@ class ArtistAdmin(admin.ModelAdmin):
     search_fields = ['name',]
 
 class EditionAdmin(admin.ModelAdmin):
-
+    list_display = (
+        'book',
+        'edition_id'
+    )
     list_select_related = (
         'book',
     )
     # without book: 17.51 ms (105 queries including 102 similar and 12 duplicates )
     # with book: 1.14 ms (5 queries including 2 similar and 2 duplicates )
+
+    # add a search bar
+    #search_fields = ['book',]
+    #   Related Field got invalid lookup: icontains
 
 class ArtbookIndexAdmin(admin.ModelAdmin):
     list_display = (

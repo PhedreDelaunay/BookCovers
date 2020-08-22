@@ -1,16 +1,23 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 22-Aug-2020
+# display book title and edition_id in edition  admin page
+cp bookcovers/admin.py ~/djabbic/bookcovers/
+# display print year from print run not edition cos allows text so can say eg >1963
+# use edition print year for sorting
+cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+~/init/djabbic restart
+
 # 27-Jul-2020
 # display titles in details page in purple
-cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
-cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
-cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/static/bookcovers/style.css ~/djabbic/bookcovers/static/bookcovers/
+#cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/cover_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 # remove "Include Duplicates" from author page
-cp bookcovers/templates/bookcovers/author_books.html ~/djabbic/bookcovers/templates/bookcovers/
+#cp bookcovers/templates/bookcovers/author_books.html ~/djabbic/bookcovers/templates/bookcovers/
 # link to Artist's website
-cp bookcovers/templates/bookcovers/artist_title.html ~/djabbic/bookcovers/templates/bookcovers/
-~/init/djabbic restart
+#cp bookcovers/templates/bookcovers/artist_title.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 6-Jul-2020
 # display book title from book record in artbook index admin page
