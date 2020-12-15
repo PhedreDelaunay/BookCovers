@@ -55,7 +55,7 @@ class ArtistMixin(TopLevelPagerMixin):
         path_exists = default_storage.exists(absolute_image_filepath)
         if path_exists:
             self.signature = True
-        print (f"signature_exists: absolute_image_filepath is { absolute_image_filepath}, path_exists is {path_exists} ")
+        #print (f"signature_exists: absolute_image_filepath is { absolute_image_filepath}, path_exists is {path_exists} ")
 
     @property
     def artist(self):

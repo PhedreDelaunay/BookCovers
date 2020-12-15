@@ -25,6 +25,8 @@ class PageTestCases:
                     'Artwork.json',
                     'Author.json',
                     'Book.json',
+                    'Format.json',
+                    'Genre.json',
                     'Edition.json',
                     'Cover.json',
                     'Country.json',
@@ -78,8 +80,11 @@ class ArtistPageTest(PageTestCases.PageTestCase):
     def test_page_contains_sets_link(self):
         # ex: /bookcovers/artist/Bruce%20Pennington/
         sets_reverse_url = reverse('bookcovers:artist_sets', kwargs={'name':'Bruce Pennington'})
-        #print (f'reverse_url is "{reverse_url}"')
+        print (f'sets_reverse_url is "{sets_reverse_url}"')
+        artist_reverse_url=reverse('bookcovers:artist_artworks', kwargs={'name':'Bruce Pennington'})
+        print (f'artist_reverse_url is "{artist_reverse_url}"')
         response = self.client.get(reverse('bookcovers:artist_artworks', kwargs={'name':'Bruce Pennington'}))
+        #print (f'response is "${response}"')
         self.assertContains(response, f'href="{sets_reverse_url}">', count=1, status_code=200, msg_prefix='', html=False)
 
     # test sets link does not appear in artist

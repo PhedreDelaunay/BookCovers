@@ -382,10 +382,10 @@ class CoverQuerys:
             exclude(cover_id__in=inner_queryset_exceptions). \
             filter(is_variant=False, flags__lt=256). \
             order_by('book__author', 'book__theBooksSeries__volume')
-        # if len(series_list) > 0:
-        #     print (f"artist_set_covers: {cover_list.query}")
-        #     print (f"artist_set_covers: {list(cover_list)}")
-        #     print (f"artist_set_covers: length {len(cover_list)}")
+        if len(series_list) > 0:
+            print (f"artist_set_covers: {cover_list.query}")
+            print (f"artist_set_covers: {list(cover_list)}")
+            print (f"artist_set_covers: length {len(cover_list)}")
 
         if return_dict:
             set_cover_list = cover_list. \

@@ -112,7 +112,7 @@ class Book(models.Model):
     book_id = models.AutoField(primary_key=True)
     author = models.ForeignKey(Author, models.DO_NOTHING, blank=True, null=True,
                                related_name="theBooks", related_query_name="theBook")
-    title = models.CharField(unique=True, max_length=50, blank=True, null=True)
+    title = models.CharField(max_length=50, blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     copyright_year = models.IntegerField(blank=True, null=True)
     copyright = models.CharField(max_length=255, blank=True, null=True)
@@ -130,7 +130,7 @@ class Book(models.Model):
         db_table = 'books'
         # sort alphabetically in admin
         ordering = ('title',)
-
+        unique_together = ('author', 'title',)
 
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now theArtworks
@@ -299,11 +299,6 @@ class Currency(models.Model):
 
     class Meta:
         db_table = 'currencies'
-
-
-
-
-
 
 
 

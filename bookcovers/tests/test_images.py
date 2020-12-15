@@ -14,6 +14,8 @@ class ImageTests(TestCase):
                 'Artwork.json',
                 'Author.json',
                 'Book.json',
+                'Format.json',
+                'Genre.json',
                 'Edition.json',
                 'Cover.json',
                 'ArtistAka.json',

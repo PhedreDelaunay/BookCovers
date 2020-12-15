@@ -1,13 +1,25 @@
 #!/bin/bash
 # Remember to collectstatic if changing style.css
 
+# 15-Dec-2020
+
+cp bookcovers/artist/view_mixin.py ~/djabbic/bookcovers/artist/
+cp bookcovers/fixtures/Edition.json ~/djabbic/bookcovers/
+cp bookcovers/models.py ~/djabbic/bookcovers/
+cp bookcovers/tests/test_images.py ~/djabbic/bookcovers/
+cp bookcovers/tests/test_pagers.py ~/djabbic/bookcovers/
+cp bookcovers/tests/test_pages.py ~/djabbic/bookcovers/
+cp bookcovers/migrations/0002_auto_20200705_1149.py/
+cp bookcovers/migrations/0003_auto_20201209_0716.py/
+cp bookcovers/migrations/0004_auto_20201209_0724.py/
+#~/init/djabbic restart
+
 # 22-Aug-2020
 # display book title and edition_id in edition  admin page
-cp bookcovers/admin.py ~/djabbic/bookcovers/
+#cp bookcovers/admin.py ~/djabbic/bookcovers/
 # display print year from print run not edition cos allows text so can say eg >1963
 # use edition print year for sorting
-cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
-~/init/djabbic restart
+#cp bookcovers/templates/bookcovers/book_detail.html ~/djabbic/bookcovers/templates/bookcovers/
 
 # 27-Jul-2020
 # display titles in details page in purple
