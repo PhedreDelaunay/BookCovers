@@ -99,6 +99,8 @@ class ArtworkEdition(Artwork):
         self.create_pagers(artwork_id=edition.theCover.artwork.pk)
         print(f"ArtworkEdition: get_object artwork.name={self.artwork.name}")
         self.cover_list = CoverQuerys.all_covers_for_artwork(self.artwork)
+        #for cover in self.cover_list:
+        #    print (f"{edition.theCover.artwork.confidence_level},{edition.theCover.artwork.get_confidence_level_display()}")
         return edition
 
 

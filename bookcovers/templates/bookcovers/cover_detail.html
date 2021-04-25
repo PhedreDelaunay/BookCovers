@@ -25,7 +25,8 @@
 </td>
     <td>
         <h3 class="detail_title">Artwork</h3><B>Artist: </B><a href="{% url 'bookcovers:artist_artworks' edition.theCover.artwork.artist.artist_id %}" title="Select artist for all the covers for this artist">{{ edition.theCover.artwork.artist.name }}</a>
-        <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}<BR/><B>Are you sure? </B>{{ edition.theCover.artwork.confidence_level_display }}<BR/>
+        <BR/><B>Year: </B>{{ edition.theCover.artwork.year }}
+        <BR/><B>Are you sure? </B>{{ edition.theCover.artwork.get_confidence_level_display }}<BR/>
         <B>Evidence: </B>{{ edition.theCover.artwork.evidence|evidence }}<BR/><BR/>
          {% if edition.theCover|hasfullcover %}
              {% include 'bookcovers/cover_full_modal.html' %}
