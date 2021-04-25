@@ -135,6 +135,18 @@ class Book(models.Model):
 # https://docs.djangoproject.com/en/2.0/topics/db/queries/#backwards-related-objects
 # override the FOO_set name (artworks_set) by setting the related_name so that Manager name is now theArtworks
 class Artwork(models.Model):
+    CONFIDENCE_YES = 1
+    CONFIDENCE_HIGHLY_LIKELY = 2
+    CONFIDENCE_MAYBE = 3
+    CONFIDENCE_NOT_REALLY = 4
+    CONFIDENCE_NO = 5
+    CONFIDENCE_LEVEL = [
+        (CONFIDENCE_YES, 'Yes'),
+        (CONFIDENCE_HIGHLY_LIKELY, 'Highly likely'),
+        (CONFIDENCE_MAYBE, 'Maybe'),
+        (CONFIDENCE_NOT_REALLY, 'Not really'),
+        (CONFIDENCE_NO, 'No'),
+    ]
     artwork_id = models.AutoField(primary_key=True)
     artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
                                related_name="theArtworks", related_query_name="theArtwork")
@@ -146,7 +158,7 @@ class Artwork(models.Model):
     #book_id = models.IntegerField(blank=True, null=True)
     original = models.CharField(max_length=128, blank=True, null=True)
     evidence = models.CharField(max_length=255, blank=True, null=True)
-    confidence_level = models.IntegerField(blank=True, null=True)
+    confidence_level = models.IntegerField(choices=CONFIDENCE_LEVEL, blank=True,  default=CONFIDENCE_YES, null=True)
     copyright = models.CharField(max_length=128, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
     notes = models.CharField(max_length=255, blank=True, null=True)
