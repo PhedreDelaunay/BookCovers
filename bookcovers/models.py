@@ -443,6 +443,7 @@ class ArtbookIndex(models.Model):
     artist = models.ForeignKey(Artist, models.DO_NOTHING, blank=True, null=True,
                                   related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
     page = models.IntegerField(blank=True, null=True)
+    order = models.IntegerField(blank=True, null=True)
     book_title = models.CharField(max_length=255, blank=True, null=True)
     book = models.ForeignKey(Book, models.DO_NOTHING, blank=True, null=True,
                              related_name="theArtbookIndexes", related_query_name="theArtbookIndex")
@@ -465,3 +466,14 @@ class ArtbookIndex(models.Model):
         # sort by page number in admin
         ordering = ('artbook__title','page',)
 
+
+class Links(models.Model):
+    link_id = models.AutoField(primary_key=True)
+    link = models.CharField(max_length=255)
+    artwork = models.ForeignKey(Artwork, models.DO_NOTHING, blank=True, null=True,
+                                related_name="theLinks", related_query_name="theLink")
+    artbookIndex = models.ForeignKey(ArtbookIndex, models.DO_NOTHING, blank=True, null=True,
+                                related_name="theLinks", related_query_name="theLink")
+
+    class Meta:
+        db_table = 'links'
